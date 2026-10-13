@@ -1,0 +1,11 @@
+{
+ "fullName": "lyogavin/airllm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install airllm",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "35838a96a565",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.206Z"
+}

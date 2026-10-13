@@ -1,0 +1,11 @@
+{
+ "fullName": "zenbu-labs/terminal-code",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://tode.sh/install | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8fc8173549ed",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:41.792Z"
+}

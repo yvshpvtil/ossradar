@@ -1,0 +1,11 @@
+{
+ "fullName": "arielshad/3d-asset-server",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "fcb6ef5ecefe",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.019Z"
+}

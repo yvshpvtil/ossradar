@@ -1,0 +1,11 @@
+{
+ "fullName": "MobAI-App/simslim",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install mobai-app/tap/simslim",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b826bca4e23a",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:41.578Z"
+}

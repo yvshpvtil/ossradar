@@ -1,0 +1,11 @@
+{
+ "fullName": "anbeime/skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "88faf75ae64b",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.431Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "zenstory-ai/drama-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add zenstory-ai/drama-skills -y -g",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b699004c1eea",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:41.533Z"
+}

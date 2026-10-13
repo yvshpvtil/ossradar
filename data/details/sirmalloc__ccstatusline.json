@@ -1,0 +1,15 @@
+{
+ "fullName": "sirmalloc/ccstatusline",
+ "whoItsFor": null,
+ "useCases": [
+  "Real-time Metrics - Display model name, git branch, token usage, Sonnet/Opus/Fable weekly usage, extra usage limits, voice input state, sess",
+  "Fully Customizable - Choose what to display and customize colors for each element",
+  "Powerline Support - Beautiful Powerline-style rendering with arrow separators, caps, and custom fonts"
+ ],
+ "installCommand": "npx -y ccstatusline@latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8473e26c218b",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.442Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "xmanrui/dsh-im",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y github:xmanrui/dsh-im install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "50974414f663",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:41.789Z"
+}

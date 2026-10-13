@@ -1,0 +1,11 @@
+{
+ "fullName": "ag-ui-protocol/ag-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx create-ag-ui-app my-agent-app",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0def9b02035d",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.243Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "CopilotKit/CopilotKit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx --yes copilotkit@latest onboard start",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "586c12c792d4",
+ "version": 1,
+ "generatedAt": "2026-10-13T22:49:42.186Z"
+}
