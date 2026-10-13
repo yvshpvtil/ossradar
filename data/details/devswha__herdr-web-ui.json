@@ -1,0 +1,11 @@
+{
+ "fullName": "devswha/herdr-web-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://herdrweb.dev/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "96eb1723709c",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.958Z"
+}

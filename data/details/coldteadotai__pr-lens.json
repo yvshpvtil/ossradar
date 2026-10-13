@@ -1,0 +1,11 @@
+{
+ "fullName": "coldteadotai/pr-lens",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add coldteadotai/pr-lens",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e7683efb3fd2",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.332Z"
+}

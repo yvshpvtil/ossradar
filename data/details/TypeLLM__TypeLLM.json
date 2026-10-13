@@ -1,0 +1,11 @@
+{
+ "fullName": "TypeLLM/TypeLLM",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U typellm",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a248d3692579",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.376Z"
+}

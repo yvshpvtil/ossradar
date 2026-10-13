@@ -1,0 +1,11 @@
+{
+ "fullName": "jev-chat/jev-chat-windows",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "074b806a0a15",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.535Z"
+}

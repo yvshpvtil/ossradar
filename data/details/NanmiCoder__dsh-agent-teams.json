@@ -1,0 +1,11 @@
+{
+ "fullName": "NanmiCoder/dsh-agent-teams",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global @deepseek-ai/dsh@0.2.0-rc.2",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "9880b355a412",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:51.327Z"
+}

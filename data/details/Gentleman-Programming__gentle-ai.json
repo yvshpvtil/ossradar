@@ -1,0 +1,11 @@
+{
+ "fullName": "Gentleman-Programming/gentle-ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install gentleman-programming/tap/gentle-ai",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "25daeca5d2fd",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:51.222Z"
+}

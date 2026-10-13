@@ -1,0 +1,11 @@
+{
+ "fullName": "BytePioneer-AI/codex-host",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @codexhost/cli",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "acf13382d5b2",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.867Z"
+}

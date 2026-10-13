@@ -1,0 +1,11 @@
+{
+ "fullName": "darrenprx/lolPing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "93c4fc54add8",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.046Z"
+}

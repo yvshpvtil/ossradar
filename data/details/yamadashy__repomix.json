@@ -1,0 +1,14 @@
+{
+ "fullName": "yamadashy/repomix",
+ "whoItsFor": null,
+ "useCases": [
+  "One-click access to Repomix for any GitHub repository",
+  "More exciting features coming soon!"
+ ],
+ "installCommand": "npx repomix@latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6071af56fa23",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.743Z"
+}

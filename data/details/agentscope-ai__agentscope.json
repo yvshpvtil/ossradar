@@ -1,0 +1,11 @@
+{
+ "fullName": "agentscope-ai/agentscope",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install agentscope",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "159a070752ea",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:51.564Z"
+}

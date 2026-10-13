@@ -1,0 +1,15 @@
+{
+ "fullName": "LibreChat-AI/LibreChat",
+ "whoItsFor": null,
+ "useCases": [
+  "UI & Experience inspired by ChatGPT with enhanced design and features",
+  "AI Model Selection:",
+  "Anthropic (Claude), AWS Bedrock, OpenAI, Azure OpenAI, Google, Vertex AI, OpenAI Responses API (incl. Azure)"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "30b92eac4816",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:51.100Z"
+}

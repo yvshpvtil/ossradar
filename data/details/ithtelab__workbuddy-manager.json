@@ -1,0 +1,11 @@
+{
+ "fullName": "ithtelab/workbuddy-manager",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name workbuddy-manager -p 7864:7864 -v /opt/workbuddy-manager/data:/app/data ghcr.io/ithtelab/workbuddy-manager:latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8b21d95273a5",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.956Z"
+}

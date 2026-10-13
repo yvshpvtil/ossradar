@@ -1,0 +1,11 @@
+{
+ "fullName": "open-multi-agent/open-multi-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @open-multi-agent/core",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e0f01a8e5d04",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.109Z"
+}

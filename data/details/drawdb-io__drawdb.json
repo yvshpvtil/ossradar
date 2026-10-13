@@ -1,0 +1,11 @@
+{
+ "fullName": "drawdb-io/drawdb",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "35fc5ad7f988",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:51.230Z"
+}

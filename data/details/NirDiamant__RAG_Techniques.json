@@ -1,0 +1,15 @@
+{
+ "fullName": "NirDiamant/RAG_Techniques",
+ "whoItsFor": null,
+ "useCases": [
+  "State-of-the-art RAG enhancements",
+  "Comprehensive documentation for each technique",
+  "Practical implementation guidelines"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "2c4db67e4e37",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:49:50.153Z"
+}
