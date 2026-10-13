@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { Leaderboard } from "@/components/Leaderboard";
 import { CATEGORIES } from "@/lib/categories";
 import { getData } from "@/lib/data";
@@ -14,7 +15,12 @@ export default function Home() {
     <>
       <section className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
-        <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{SITE.tagline}</p>
+        <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
+          <strong className="text-zinc-900 dark:text-zinc-100">{SITE.ossExplainer}</strong> {SITE.tagline}
+        </p>
+        <div className="mt-4 max-w-xl">
+          <NewsletterForm compact id="hero" />
+        </div>
         <p className="mt-2 text-xs text-zinc-500">
           Tracking {data.repos.length} repos · updated {formatDate(data.generatedAt)} ·{" "}
           {data.snapshotCount} daily snapshot{data.snapshotCount === 1 ? "" : "s"} so far

@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE.name,
     title: SITE.name,
-    description: SITE.tagline,
+    description: `${SITE.ossExplainer} ${SITE.tagline}`,
     url: "/",
   },
-  twitter: { card: "summary_large_image", title: SITE.name, description: SITE.tagline },
+  twitter: { card: "summary_large_image", title: SITE.name, description: `${SITE.ossExplainer} ${SITE.tagline}` },
 };
 
 export const viewport: Viewport = {
