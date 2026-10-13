@@ -23,11 +23,13 @@ const pill = (active: boolean) =>
 export function Leaderboard({
   repos,
   showCategoryFilter = true,
+  defaultPeriod = "today",
 }: {
   repos: LeaderRepo[];
   showCategoryFilter?: boolean;
+  defaultPeriod?: Period;
 }) {
-  const [period, setPeriod] = useState<Period>("today");
+  const [period, setPeriod] = useState<Period>(defaultPeriod);
   const [category, setCategory] = useState<CategorySlug | "all">("all");
   const [limit, setLimit] = useState(PAGE);
 
@@ -87,10 +89,11 @@ export function Leaderboard({
               <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm text-zinc-400 sm:pt-0">{i + 1}</span>
               <Image
                 src={`${r.ownerAvatar}${r.ownerAvatar.includes("?") ? "&" : "?"}s=48`}
-                alt=""
+                alt={`${r.owner} avatar`}
                 width={24}
                 height={24}
                 unoptimized
+                loading="lazy"
                 className="mt-0.5 hidden shrink-0 rounded-full sm:mt-0 sm:block"
               />
               <div className="min-w-0 flex-1">

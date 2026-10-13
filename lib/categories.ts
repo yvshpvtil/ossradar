@@ -62,7 +62,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   {
     slug: "mcp",
     topics: ["mcp", "model-context-protocol", "mcp-server", "mcp-client", "mcp-servers", "modelcontextprotocol"],
-    keywords: ["model context protocol", "mcp server", "mcp-server", "mcp client"],
+    keywords: ["model context protocol", "mcp server", "mcp-server", "mcp client", " mcp "],
   },
   {
     slug: "coding-agents",
@@ -72,7 +72,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   {
     slug: "local-llms",
     topics: ["local-llm", "ollama", "llama-cpp", "llamacpp", "gguf", "quantization", "local-ai", "offline-ai", "mlx", "on-device"],
-    keywords: ["local llm", "run locally", "locally", "on-device", "ollama", "llama.cpp", "gguf", "offline"],
+    keywords: ["local llm", "run locally", "runs locally", "on-device", "ollama", "llama.cpp", "gguf", "offline llm", "consumer hardware", "local model"],
   },
   {
     slug: "rag-vector",
@@ -82,7 +82,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   {
     slug: "ai-agents",
     topics: ["ai-agents", "ai-agent", "agents", "agent", "multi-agent", "autonomous-agents", "agentic", "agentic-ai", "agent-framework", "browser-use", "computer-use"],
-    keywords: ["agent", "agentic", "autonomous"],
+    keywords: ["ai agent", "agents", "agentic", "autonomous", "multi-agent", "web agent", "智能体"],
   },
   {
     slug: "llm-tooling",
@@ -92,18 +92,28 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   {
     slug: "devops",
     topics: ["devops", "kubernetes", "k8s", "docker", "ci-cd", "cicd", "terraform", "infrastructure-as-code", "observability", "monitoring", "sre", "platform-engineering", "gitops", "self-hosted", "homelab", "cloud-native", "helm"],
-    keywords: ["kubernetes", "docker", "devops", "ci/cd", "terraform", "observability", "monitoring", "deploy", "infrastructure"],
+    keywords: ["kubernetes", "docker", "devops", "ci/cd", "terraform", "observability", "monitoring", "deploy", "infrastructure", "self-hosted"],
   },
 ];
 
+/**
+ * Score-based categorization. Previously the first matching topic won, which dumped any repo
+ * that merely tagged itself "mcp" into MCP even when it was clearly a coding agent. Now every
+ * rule is scored (topic hit = 2, keyword hit in name/description = 3, since the description is
+ * what the author actually says the repo is). Highest score wins; ties go to rule order.
+ */
 export function categorize(input: { topics: string[]; description: string; name: string }): CategorySlug {
   const topics = new Set(input.topics.map((t) => t.toLowerCase()));
   const text = ` ${input.name.replace(/[-_]/g, " ")} ${input.description} `.toLowerCase();
+  let best: CategorySlug = "other";
+  let bestScore = 0;
   for (const rule of RULES) {
-    if (rule.topics.some((t) => topics.has(t))) return rule.slug;
+    const score =
+      rule.topics.filter((t) => topics.has(t)).length * 2 + rule.keywords.filter((k) => text.includes(k)).length * 3;
+    if (score > bestScore) {
+      best = rule.slug;
+      bestScore = score;
+    }
   }
-  for (const rule of RULES) {
-    if (rule.keywords.some((k) => text.includes(k))) return rule.slug;
-  }
-  return "other";
+  return best;
 }

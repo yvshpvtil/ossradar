@@ -15,6 +15,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { categorize } from "../lib/categories";
+import { isOffTopic } from "../lib/blocklist";
 import type { HistoryPoint, Repo, RepoData, Snapshot } from "../lib/types";
 import { summarize, summarizerId } from "./summarize";
 
@@ -263,7 +264,17 @@ async function main() {
     return { item, v };
   });
   candidates.sort((a, b) => b.v.delta7d - a.v.delta7d || b.item.stargazers_count - a.item.stargazers_count);
-  const selected = candidates.slice(0, MAX_REPOS);
+  const selected = candidates
+    .filter(({ item }) =>
+      !isOffTopic({
+        fullName: item.full_name,
+        owner: item.full_name.split("/")[0],
+        name: item.name,
+        topics: item.topics ?? [],
+        description: item.description ?? "",
+      }),
+    )
+    .slice(0, MAX_REPOS);
 
   const summaryCache = readJson<Record<string, SummaryCacheEntry>>(SUMMARY_CACHE, {});
   const repos: Repo[] = [];

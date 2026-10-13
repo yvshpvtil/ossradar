@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Sponsor",
   description: `Put your product in front of developers tracking the fastest-rising open-source AI and dev tools. Weekly sponsorships from $${SITE.sponsorPriceUsd}.`,
   alternates: { canonical: "/sponsor" },
+  openGraph: { url: "/sponsor" },
 };
 
 export default function SponsorPage() {

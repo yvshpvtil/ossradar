@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "About",
   description: `How ${SITE.name} finds and ranks the fastest-rising open-source AI and developer-tool repos.`,
   alternates: { canonical: "/about" },
+  openGraph: { url: "/about" },
 };
 
 export default function AboutPage() {

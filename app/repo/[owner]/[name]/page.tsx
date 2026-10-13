@@ -9,6 +9,31 @@ import { categoryLabel } from "@/lib/categories";
 import { getRepo, getRepos, getSimilarRepos } from "@/lib/data";
 import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { getData, getReposByCategory, rankRepos } from "@/lib/data";
+import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
+import type { Repo } from "@/lib/types";
+
+function ageText(iso: string): string {
+  const d = Math.max(0, Math.round((new Date(getData().generatedAt).getTime() - new Date(iso).getTime()) / 86_400_000));
+  if (d < 1) return "less than a day";
+  if (d < 60) return `${d} day${d === 1 ? "" : "s"}`;
+  if (d < 730) return `${Math.round(d / 30)} months`;
+  return `${Math.round(d / 365)} years`;
+}
+
+function categoryRank(repo: Repo) {
+  const ranked = rankRepos(getReposByCategory(repo.category), "week");
+  return { rank: ranked.findIndex((r) => r.fullName === repo.fullName) + 1, total: ranked.length };
+}
+
+function aboutText(repo: Repo): string {
+  const { rank, total } = categoryRank(repo);
+  const cat = categoryLabel(repo.category);
+  const lang = repo.language ? `a ${repo.language} project` : "a project";
+  const est = repo.velocityEstimated ? " (early estimate)" : "";
+  return `${repo.fullName} is ${lang} in the ${cat} category, created ${ageText(repo.createdAt)} ago. It has ${formatNumber(repo.stars)} GitHub stars and ${formatNumber(repo.forks)} forks, and gained ${formatDelta(repo.delta7d)} stars over the last 7 days${est}, ranking #${rank} of ${total} ${cat} repos tracked by ${SITE.name} this week.`;
+}
 
 export function generateStaticParams() {
   return getRepos().map((r) => ({ owner: r.owner, name: r.name }));
@@ -18,12 +43,17 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) return {};
-  const title = `${repo.fullName}: ${formatDelta(repo.delta7d)} stars this week`;
+  const title = `${repo.fullName}: ${formatDelta(repo.delta7d)} GitHub stars this week`;
+  const description = clip(
+    `${repo.description || repo.oneLiner} ${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`,
+  );
+  const url = repoPath(repo);
   return {
     title,
-    description: repo.oneLiner,
-    alternates: { canonical: `/repo/${repo.owner}/${repo.name}` },
-    openGraph: { title, description: repo.oneLiner, url: `/repo/${repo.owner}/${repo.name}` },
+    description,
+    alternates: { canonical: url },
+    openGraph: { type: "article", title, description, url },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -49,28 +79,40 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
     name: repo.name,
+    alternateName: repo.fullName,
+    url: `${SITE.url}${repoPath(repo)}`,
     description: repo.description || repo.oneLiner,
     codeRepository: repo.url,
     programmingLanguage: repo.language ?? undefined,
-    author: { "@type": "Person", name: repo.owner },
+    author: { "@type": "Person", name: repo.owner, url: `https://github.com/${repo.owner}` },
     dateCreated: repo.createdAt,
+    dateModified: repo.pushedAt,
+    keywords: repo.topics.join(", ") || undefined,
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType: "https://schema.org/LikeAction",
+      userInteractionCount: repo.stars,
+    },
   };
+  const crumbs = breadcrumbLd([
+    { name: "Leaderboard", path: "/" },
+    { name: categoryLabel(repo.category), path: `/category/${repo.category}` },
+    { name: repo.fullName, path: repoPath(repo) },
+  ]);
 
   return (
     <article className="grid gap-8 lg:grid-cols-[1fr_260px]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={crumbs} />
       <div className="min-w-0">
-        <nav className="mb-4 text-sm text-zinc-500">
+        <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
           <Link href="/" className="hover:underline">Leaderboard</Link> /{" "}
           <Link href={`/category/${repo.category}`} className="hover:underline">{categoryLabel(repo.category)}</Link>
         </nav>
         <header className="flex items-center gap-3">
           <Image
             src={`${repo.ownerAvatar}${repo.ownerAvatar.includes("?") ? "&" : "?"}s=96`}
-            alt=""
+            alt={`${repo.owner} avatar`}
             width={48}
             height={48}
             unoptimized
@@ -123,6 +165,15 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         </section>
 
         {repo.velocityEstimated && <EstimateNote className="mt-4" />}
+
+        <section className="mt-6">
+          <h2 className="mb-2 text-lg font-semibold">About {repo.name}</h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">{aboutText(repo)}</p>
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            See more <Link className="underline" href={`/category/${repo.category}`}>trending {categoryLabel(repo.category)} repos</Link> or the{" "}
+            <Link className="underline" href="/trending/ai-repos-this-week">top AI repos this week</Link>.
+          </p>
+        </section>
 
         <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-3">
           <div><dt className="text-zinc-500">Language</dt><dd>{repo.language ?? "n/a"}</dd></div>

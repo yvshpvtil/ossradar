@@ -1,4 +1,7 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { JsonLd } from "@/components/JsonLd";
+import { websiteLd } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SponsorSlot } from "@/components/SponsorSlot";
@@ -24,7 +27,9 @@ export const metadata: Metadata = {
     title: SITE.name,
     description: `${SITE.ossExplainer} ${SITE.tagline}`,
     url: "/",
+    locale: "en_US",
   },
+  robots: { index: true, follow: true, "max-image-preview": "large" },
   twitter: { card: "summary_large_image", title: SITE.name, description: `${SITE.ossExplainer} ${SITE.tagline}` },
 };
 
@@ -46,6 +51,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SponsorSlot />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">{children}</main>
         <Footer />
+        <JsonLd data={websiteLd} />
+        <Analytics />
       </body>
     </html>
   );

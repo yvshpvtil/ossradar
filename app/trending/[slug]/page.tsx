@@ -1,0 +1,65 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { EstimateNote } from "@/components/EstBadge";
+import { JsonLd } from "@/components/JsonLd";
+import { Leaderboard } from "@/components/Leaderboard";
+import { CATEGORIES } from "@/lib/categories";
+import { getData } from "@/lib/data";
+import { formatDate } from "@/lib/format";
+import { LANDINGS, getLanding } from "@/lib/landing";
+import { toLeaderRepo } from "@/lib/leader";
+import { breadcrumbLd, itemListLd } from "@/lib/seo";
+
+export function generateStaticParams() {
+  return LANDINGS.map((l) => ({ slug: l.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps<"/trending/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const l = getLanding(slug);
+  if (!l) return {};
+  const url = `/trending/${l.slug}`;
+  return {
+    title: l.title,
+    description: l.description,
+    alternates: { canonical: url },
+    openGraph: { title: l.title, description: l.description, url },
+    twitter: { card: "summary_large_image", title: l.title, description: l.description },
+  };
+}
+
+export default async function TrendingPage({ params }: PageProps<"/trending/[slug]">) {
+  const { slug } = await params;
+  const l = getLanding(slug);
+  if (!l) notFound();
+  const repos = l.select();
+  const path = `/trending/${l.slug}`;
+  return (
+    <>
+      <JsonLd data={itemListLd(l.h1, repos)} />
+      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: l.title, path }])} />
+      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
+        <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{l.title}</span>
+      </nav>
+      <section className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">{l.h1}</h1>
+        <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{l.intro}</p>
+        <p className="mt-1 text-xs text-zinc-500">{repos.length} repos · updated {formatDate(getData().generatedAt)}</p>
+      </section>
+      {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
+      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod={l.slug === "github-repos-today" ? "today" : "week"} />
+      <section className="mt-10 text-sm">
+        <h2 className="mb-2 text-lg font-semibold">More views</h2>
+        <ul className="flex flex-wrap gap-x-4 gap-y-1">
+          {LANDINGS.filter((x) => x.slug !== l.slug).map((x) => (
+            <li key={x.slug}><Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/trending/${x.slug}`}>{x.title}</Link></li>
+          ))}
+          {CATEGORIES.map((c) => (
+            <li key={c.slug}><Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/category/${c.slug}`}>{c.label} repos</Link></li>
+          ))}
+        </ul>
+      </section>
+    </>
+  );
+}

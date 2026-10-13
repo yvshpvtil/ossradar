@@ -3,7 +3,10 @@ import { EstimateNote } from "@/components/EstBadge";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Leaderboard } from "@/components/Leaderboard";
 import { CATEGORIES } from "@/lib/categories";
-import { getData } from "@/lib/data";
+import { JsonLd } from "@/components/JsonLd";
+import { getData, rankRepos } from "@/lib/data";
+import { LANDINGS } from "@/lib/landing";
+import { itemListLd } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 import { toLeaderRepo } from "@/lib/leader";
 import { SITE } from "@/lib/site";
@@ -13,6 +16,7 @@ export default function Home() {
   const anyEstimated = data.repos.some((r) => r.velocityEstimated);
   return (
     <>
+      <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
       <section className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
@@ -42,6 +46,16 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+      <section className="mt-8">
+        <h2 className="mb-3 text-lg font-semibold">Popular views</h2>
+        <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          {LANDINGS.map((l) => (
+            <li key={l.slug}>
+              <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/trending/${l.slug}`}>{l.title}</Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );
