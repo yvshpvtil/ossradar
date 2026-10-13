@@ -1,0 +1,24 @@
+name: Submit a repo
+description: Suggest an open-source AI or developer-tool repo for OSS Radar to track.
+title: "Submit: owner/repo"
+labels: ["submission"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repo
+      description: "owner/name or full URL, e.g. https://github.com/owner/name"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it does (optional)
+      description: One or two lines. Helps us categorize it.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Checks
+      options:
+        - label: It's open source and related to AI or developer tools
+          required: true

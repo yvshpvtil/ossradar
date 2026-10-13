@@ -279,6 +279,21 @@ async function main() {
     }
   }
 
+  // Hand-approved submissions (from /submit -> GitHub issue) in data/submitted.json: always tracked.
+  let submitted: string[] = [];
+  try {
+    submitted = (JSON.parse(readFileSync("data/submitted.json", "utf8")) as string[]).map((s) => s.toLowerCase());
+  } catch {}
+  for (let i = 0; i < submitted.length; i += 20) {
+    try {
+      const q = submitted.slice(i, i + 20).map((r) => `repo:${r}`).join(" ");
+      for (const item of await search(q)) found.set(item.full_name, item);
+      await sleep(2200);
+    } catch (e) {
+      console.warn("  submitted lookup failed:", e);
+    }
+  }
+
   const prior = loadSnapshots(today);
   console.log(`Found ${found.size} unique repos; ${prior.length} prior snapshot(s).`);
 
@@ -298,6 +313,9 @@ async function main() {
       }),
     )
     .slice(0, MAX_REPOS);
+  for (const c of candidates) {
+    if (submitted.includes(c.item.full_name.toLowerCase()) && !selected.includes(c)) selected.push(c);
+  }
 
   // Hourly series: append (or replace) the column for the current hour, trim to the last 48h.
   const hourKey = `${now.toISOString().slice(0, 13)}:00:00Z`;
