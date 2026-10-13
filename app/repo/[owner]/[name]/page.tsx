@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EstBadge, EstimateNote } from "@/components/EstBadge";
-import { Sparkline } from "@/components/Sparkline";
 import { SponsorSlot } from "@/components/SponsorSlot";
 import { WatchButton } from "@/components/WatchButton";
 import { BadgeEmbed } from "@/components/BadgeEmbed";
@@ -16,6 +15,8 @@ import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
+import { getHourlyStars } from "@/lib/hourly";
+import { StarChart } from "@/components/StarChart";
 import { getLanguage, languageSlug } from "@/lib/languages";
 import { RepoDetailsView } from "@/components/RepoDetailsView";
 import { ShareButton } from "@/components/ShareButton";
@@ -80,6 +81,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const repo = getRepo(owner, name);
   if (!repo) notFound();
   const similar = getSimilarRepos(repo);
+  const hourlyPts = getHourlyStars(repo.fullName);
   const details = getDetails(repo.fullName);
   const appLd = details && {
     "@context": "https://schema.org",
@@ -173,17 +175,26 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         {details && <RepoDetailsView d={details} />}
 
         <section className="mt-8 rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
-          <h2 className="mb-2 text-sm font-semibold">Star history (last {repo.history.length} snapshot{repo.history.length === 1 ? "" : "s"})</h2>
-          <Sparkline points={repo.history} width={640} height={120} className="h-auto w-full text-indigo-500" title={`Star history for ${repo.fullName}`} />
-          {repo.history.length < 2 ? (
-            <p className="mt-2 text-xs text-zinc-500">
-              Only one snapshot so far. The chart fills in as OSS Radar collects daily snapshots.
-            </p>
-          ) : (
-            <p className="mt-2 text-xs text-zinc-500">
-              {formatNumber(repo.history[0].stars)} → {formatNumber(repo.stars)} stars from {formatDate(repo.history[0].date)} to{" "}
-              {formatDate(repo.history[repo.history.length - 1].date)}
-            </p>
+          <h2 className="mb-1 text-sm font-semibold">Star history</h2>
+          <p className="mb-3 text-xs text-zinc-500">GitHub stars over time. A steeper line means the repo is gaining attention faster.</p>
+          {hourlyPts.length >= 2 && (
+            <>
+              <h3 className="mb-1 text-xs font-medium text-zinc-600 dark:text-zinc-400">Last {hourlyPts.length} hours · +{formatNumber(hourlyPts[hourlyPts.length - 1].stars - hourlyPts[0].stars)} stars</h3>
+              <StarChart
+                points={hourlyPts.map((p) => ({ x: p.t, stars: p.stars }))}
+                label={(t) => new Date(t).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", timeZone: "UTC" }) + " UTC"}
+                title={`Hourly star count for ${repo.fullName}`}
+              />
+            </>
+          )}
+          {repo.history.length >= 2 && (
+            <div className={hourlyPts.length >= 2 ? "mt-5" : ""}>
+              <h3 className="mb-1 text-xs font-medium text-zinc-600 dark:text-zinc-400">Daily, since {formatDate(repo.history[0].date)} · {formatNumber(repo.history[0].stars)} → {formatNumber(repo.stars)}</h3>
+              <StarChart points={repo.history.map((p) => ({ x: p.date, stars: p.stars }))} label={(d) => formatDate(d)} title={`Daily star count for ${repo.fullName}`} />
+            </div>
+          )}
+          {hourlyPts.length < 2 && repo.history.length < 2 && (
+            <p className="text-xs text-zinc-500">Not enough history yet. OSS Radar records stars every hour, so this chart fills in over the next few hours.</p>
           )}
         </section>
 
