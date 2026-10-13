@@ -1,0 +1,21 @@
+{
+ "fullName": "wshobson/agents",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.12",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add wshobson/agents --skill python-testing-patterns",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8ebadeed8357",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.493Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "NVIDIA/SkillSpector",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-format input: Scan Git repos, URLs, zip files, directories, or single files",
+  "71 vulnerability patterns across 17 categories: prompt injection, data exfiltration, privilege escalation, supply chain, excessive agency, o",
+  "Two-stage analysis: Fast static analysis + optional LLM semantic evaluation"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "uv tool install git+https://github.com/NVIDIA/skillspector.git",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c7f9b673e352",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.972Z"
+}

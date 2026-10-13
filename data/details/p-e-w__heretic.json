@@ -1,0 +1,21 @@
+{
+ "fullName": "p-e-w/heretic",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": 16,
+  "diskGB": null,
+  "runtime": "Python 3.10+",
+  "modelSizes": "20B, 4B"
+ },
+ "installCommand": "pip install -U heretic-llm",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "59a085290697",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.789Z"
+}

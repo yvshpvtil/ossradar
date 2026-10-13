@@ -1,0 +1,21 @@
+{
+ "fullName": "AgentMemoryRepo/agentmemoryrepo",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add AgentMemoryRepo/agentmemoryrepo --skill agent-memory-repo",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e8a49b31e897",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.866Z"
+}

@@ -1,0 +1,21 @@
+{
+ "fullName": "NousResearch/hermes-official-plugins",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6944af89ec21",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.952Z"
+}

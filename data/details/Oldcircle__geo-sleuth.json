@@ -1,0 +1,21 @@
+{
+ "fullName": "Oldcircle/geo-sleuth",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": false,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.10+",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add Oldcircle/geo-sleuth",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "09ea702831d8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.496Z"
+}

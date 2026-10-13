@@ -1,0 +1,21 @@
+{
+ "fullName": "cobusgreyling/loop-engineering",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx @cobusgreyling/loop init . --pattern daily-triage --tool claude",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d7ce9d5a6b0d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.630Z"
+}

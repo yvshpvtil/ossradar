@@ -1,0 +1,21 @@
+{
+ "fullName": "jnMetaCode/agency-agents-zh",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g agency-orchestrator",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8cf2291c97d5",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.255Z"
+}

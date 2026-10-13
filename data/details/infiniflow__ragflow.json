@@ -1,0 +1,21 @@
+{
+ "fullName": "infiniflow/ragflow",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": 16,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker",
+  "modelSizes": null
+ },
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "9ccc37b1a6cb",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:34.006Z"
+}

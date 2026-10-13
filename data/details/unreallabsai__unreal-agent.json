@@ -1,0 +1,21 @@
+{
+ "fullName": "unreallabsai/unreal-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d758ee9a2b07",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.425Z"
+}

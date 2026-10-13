@@ -1,0 +1,21 @@
+{
+ "fullName": "linguo2625469/workbuddy2api-panel",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "docker run -d --name workbuddy2api \\",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "74d616f26751",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.916Z"
+}

@@ -1,0 +1,21 @@
+{
+ "fullName": "every-app/open-seo",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add every-app/open-seo --skill simple-issue-description",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e1052dfe21c8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.357Z"
+}

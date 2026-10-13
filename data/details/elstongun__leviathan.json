@@ -1,0 +1,21 @@
+{
+ "fullName": "elstongun/leviathan",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python",
+  "modelSizes": null
+ },
+ "installCommand": "cargo install leviathan-index       # or: cargo install --git https://github.com/elstongun/leviathan",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6b750c61dbb4",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.390Z"
+}

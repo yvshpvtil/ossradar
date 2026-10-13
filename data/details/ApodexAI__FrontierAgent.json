@@ -1,0 +1,21 @@
+{
+ "fullName": "ApodexAI/FrontierAgent",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.12, Docker",
+  "modelSizes": "35B"
+ },
+ "installCommand": "uv tool install --python 3.12 git+https://github.com/ApodexAI/FrontierAgent.git",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "5786693d6b86",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.602Z"
+}

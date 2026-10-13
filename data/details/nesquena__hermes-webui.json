@@ -1,0 +1,21 @@
+{
+ "fullName": "nesquena/hermes-webui",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.11+, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "docker pull ghcr.io/nesquena/hermes-webui:latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4cc636cf6d8d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.250Z"
+}

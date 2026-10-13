@@ -1,0 +1,21 @@
+{
+ "fullName": "OthmanAdi/planning-with-files",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.10+",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add OthmanAdi/planning-with-files --skill planning-with-files -g",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c6bb0b0c5977",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.820Z"
+}

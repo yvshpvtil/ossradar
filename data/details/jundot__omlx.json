@@ -1,0 +1,21 @@
+{
+ "fullName": "jundot/omlx",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.11",
+  "modelSizes": "27B, 35B, 122B"
+ },
+ "installCommand": "brew install jundot/omlx/omlx --with-custom-kernel   # With native custom kernels (needs full Xcode)",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cc7df5956ade",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.442Z"
+}

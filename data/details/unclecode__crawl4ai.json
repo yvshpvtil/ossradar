@@ -1,0 +1,25 @@
+{
+ "fullName": "unclecode/crawl4ai",
+ "whoItsFor": null,
+ "useCases": [
+  "Clean Markdown: headings, lists, tables and code blocks, in a structure an LLM reads well.",
+  "Fit Markdown: filters remove menus, footers and boilerplate: `PruningContentFilterLXML`, `BM25ContentFilter` (for a query) and `LLMContentFi",
+  "Citations: page links become a numbered reference list."
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker",
+  "modelSizes": null
+ },
+ "installCommand": "pip install -U crawl4ai",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3ea281496f8a",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.196Z"
+}

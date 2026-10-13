@@ -1,0 +1,21 @@
+{
+ "fullName": "OpenHands/OpenHands",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 24+, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @openhands/agent-canvas",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d4a1a44ea490",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:33.105Z"
+}

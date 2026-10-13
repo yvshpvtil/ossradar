@@ -1,0 +1,21 @@
+{
+ "fullName": "JohnHeibel/PDoomVideo",
+ "whoItsFor": null,
+ "useCases": [],
+ "requirements": {
+  "os": "Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4664bdd28400",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:47:32.692Z"
+}
