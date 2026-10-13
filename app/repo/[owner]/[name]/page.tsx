@@ -16,6 +16,7 @@ import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
+import { getLanguage, languageSlug } from "@/lib/languages";
 import { RepoDetailsView } from "@/components/RepoDetailsView";
 import { ShareButton } from "@/components/ShareButton";
 
@@ -200,7 +201,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         </section>
 
         <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-3">
-          <div><dt className="text-zinc-500">Language</dt><dd>{repo.language ?? "n/a"}</dd></div>
+          <div><dt className="text-zinc-500">Language</dt><dd>{repo.language && getLanguage(languageSlug(repo.language)) ? <Link className="underline" href={`/language/${languageSlug(repo.language)}`}>{repo.language}</Link> : (repo.language ?? "n/a")}</dd></div>
           <div><dt className="text-zinc-500">Category</dt><dd><Link className="hover:underline" href={`/category/${repo.category}`}>{categoryLabel(repo.category)}</Link></dd></div>
           <div><dt className="text-zinc-500">Created</dt><dd>{formatDate(repo.createdAt)}</dd></div>
           <div><dt className="text-zinc-500">Last push</dt><dd>{formatDate(repo.pushedAt)}</dd></div>

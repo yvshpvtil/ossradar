@@ -1,0 +1,93 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { EstimateNote } from "@/components/EstBadge";
+import { Leaderboard } from "@/components/Leaderboard";
+import { JsonLd } from "@/components/JsonLd";
+import { rankRepos } from "@/lib/data";
+import { formatNumber } from "@/lib/format";
+import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
+import { toLeaderRepo } from "@/lib/leader";
+import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
+import { SITE } from "@/lib/site";
+
+export function generateStaticParams() {
+  return getLanguages().map((l) => ({ slug: l.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps<"/language/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const lang = getLanguage(slug);
+  if (!lang) return {};
+  const title = `Trending ${lang.name} repos on GitHub: ${lang.count} rising projects`;
+  const description = clip(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained. ${lang.count} tracked, updated hourly on ${SITE.name}.`);
+  return {
+    title,
+    description,
+    alternates: { canonical: `/language/${slug}` },
+    openGraph: { title, description, url: `/language/${slug}` },
+    twitter: { card: "summary_large_image", title, description },
+  };
+}
+
+export default async function LanguagePage({ params }: PageProps<"/language/[slug]">) {
+  const { slug } = await params;
+  const lang = getLanguage(slug);
+  if (!lang) notFound();
+  const repos = getReposByLanguage(lang.name);
+  const ranked = rankRepos(repos, "week");
+  const top = ranked.slice(0, 3);
+  const weekTotal = repos.reduce((n, r) => n + r.delta7d, 0);
+  const path = `/language/${slug}`;
+  const others = getLanguages();
+  return (
+    <>
+      <JsonLd data={itemListLd(`Fastest-rising ${lang.name} repos`, ranked)} />
+      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: lang.name, path }])} />
+      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
+        <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{lang.name}</span>
+      </nav>
+      <section className="mb-6">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Language</p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {lang.name} repos</h1>
+        <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
+          Open-source AI and developer tools written mainly in {lang.name} (the main language GitHub detects in the code), ranked by how many stars they gained.
+        </p>
+        {top.length > 0 && (
+          <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+            {repos.length} {lang.name} repos gained about {formatNumber(weekTotal)} stars in the last 7 days. Leading this week:{" "}
+            {top.map((r, i) => (
+              <span key={r.fullName}>
+                {i > 0 && (i === top.length - 1 ? " and " : ", ")}
+                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link>
+              </span>
+            ))}
+            .
+          </p>
+        )}
+        <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
+      </section>
+      <nav aria-label="Languages" className="-mx-4 mb-6 overflow-x-auto px-4 [scrollbar-width:none]">
+        <ul className="flex gap-2 pb-1 lg:flex-wrap">
+          {others.map((l) => (
+            <li key={l.slug}>
+              <Link
+                href={`/language/${l.slug}`}
+                aria-current={l.slug === slug ? "page" : undefined}
+                className={`inline-block shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-sm ${
+                  l.slug === slug
+                    ? "border-indigo-600 bg-indigo-600 text-white dark:border-indigo-500 dark:bg-indigo-500"
+                    : "border-zinc-200 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900"
+                }`}
+              >
+                {l.name} <span className="tabular-nums opacity-70">{l.count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
+      <Leaderboard repos={repos.map(toLeaderRepo)} />
+    </>
+  );
+}
