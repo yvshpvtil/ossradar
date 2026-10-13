@@ -32,9 +32,9 @@ export function proxy(req: NextRequest) {
   } else if (parts[0] === "trending") {
     if (!parts[1] || !getLanding(parts[1])) return notFound();
   } else if (parts[0] === "language") {
-    if (!parts[1] || parts.length > 2 || !getLanguage(parts[1])) return notFound();
+    if (!parts[1] || (parts.length > 2 && parts[2] !== "opengraph-image") || !getLanguage(parts[1])) return notFound();
   } else if (parts[0] === "topic") {
-    if (!parts[1] || parts.length > 2 || !hasTopicPage(parts[1])) return notFound();
+    if (!parts[1] || (parts.length > 2 && parts[2] !== "opengraph-image") || !hasTopicPage(parts[1])) return notFound();
   } else if (parts[0] === "daily" && parts.length > 1) {
     // Archive days are completed UTC days from FIRST_ARCHIVE_DAY up to yesterday (snapshot files aren't readable here).
     const d = parts[1];
