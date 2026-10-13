@@ -39,6 +39,14 @@ export default function AboutPage() {
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">About the estimates</h2>
       <EstimateNote />
 
+      <h2 id="api" className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Free data API</h2>
+      <p>
+        The current leaderboard is available as JSON (a plain data format most programming languages can read) at{" "}
+        <a className="underline" href="/api/v1/trending"><code>/api/v1/trending</code></a>: the top 100 repos by stars gained in the last
+        24 hours, with 7-day gains, stars, forks, language, category and topics. It updates hourly, needs no key, and is free to use with a
+        link back to {SITE.name}.
+      </p>
+
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Who&apos;s behind it</h2>
       <p>
         Built by <a className="underline" href={SITE.github}>{SITE.owner}</a>. Want your product in front of this
