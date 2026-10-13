@@ -1,0 +1,11 @@
+{
+ "fullName": "Leonxlnx/unlazy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Leonxlnx/unlazy",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a26b3cd46e69",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.716Z"
+}

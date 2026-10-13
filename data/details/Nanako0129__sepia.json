@@ -1,0 +1,11 @@
+{
+ "fullName": "Nanako0129/sepia",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Nanako0129/sepia -g     # -g = user scope; the default is project",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f29fa8830c48",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:14.529Z"
+}

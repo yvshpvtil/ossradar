@@ -1,0 +1,15 @@
+{
+ "fullName": "bytedance/UI-TARS-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Natural language control powered by Vision-Language Model",
+  "Screenshot and visual recognition support",
+  "Precise mouse and keyboard control"
+ ],
+ "installCommand": "npx @agent-tars/cli@latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f6fd363370f2",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.440Z"
+}

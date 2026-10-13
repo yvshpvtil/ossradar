@@ -1,0 +1,11 @@
+{
+ "fullName": "getagentseal/codeburn",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx codeburn",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "41ef93d0ce3b",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.267Z"
+}

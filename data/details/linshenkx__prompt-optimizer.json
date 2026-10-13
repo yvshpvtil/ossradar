@@ -1,0 +1,11 @@
+{
+ "fullName": "linshenkx/prompt-optimizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 8081:80 --restart unless-stopped --name prompt-optimizer linshen/prompt-optimizer",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "7e36c689b1ac",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.434Z"
+}

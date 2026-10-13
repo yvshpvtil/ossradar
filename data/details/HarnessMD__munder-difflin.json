@@ -1,0 +1,11 @@
+{
+ "fullName": "HarnessMD/munder-difflin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install        # postinstall rebuilds node-pty against Electron's ABI",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c2eb24fc1d50",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.008Z"
+}

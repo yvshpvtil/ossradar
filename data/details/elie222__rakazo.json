@@ -1,0 +1,15 @@
+{
+ "fullName": "elie222/rakazo",
+ "whoItsFor": null,
+ "useCases": [
+  "Persistent bots with their own conversations, memory, routines, and history",
+  "Voice mode: speak replies, dictate, and call a bot. Bring your own ElevenLabs, OpenAI, Cartesia, or Fish Audio key",
+  "Shared Team Computers and isolated Private computers"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ca2b8f6e446d",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.202Z"
+}

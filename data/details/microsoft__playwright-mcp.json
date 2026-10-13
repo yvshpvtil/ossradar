@@ -1,0 +1,15 @@
+{
+ "fullName": "microsoft/playwright-mcp",
+ "whoItsFor": null,
+ "useCases": [
+  "Fast and lightweight. Uses Playwright's accessibility tree, not pixel-based input.",
+  "LLM-friendly. No vision models needed, operates purely on structured data.",
+  "Deterministic tool application. Avoids ambiguity common with screenshot-based approaches."
+ ],
+ "installCommand": "npx @playwright/mcp@latest --config path/to/config.json",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "34ec08ab1c98",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:14.811Z"
+}

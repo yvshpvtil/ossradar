@@ -1,0 +1,15 @@
+{
+ "fullName": "ollaya-dev/ollaya",
+ "whoItsFor": null,
+ "useCases": [
+  "One binary. `ollaya serve` runs the daemon; `ollaya run`, `pull`, `list`, `ps`, `show`, `rm`,",
+  "TypeSafe-compatible. `POST /v1/systemone`, `/v1/decisions` and `GET /v1/models` are",
+  "Native API. `/api/decide` adds routing information and timings. `/api/pull` streams"
+ ],
+ "installCommand": "curl -fsSL https://ollaya.dev/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "9e3ce6697508",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:14.963Z"
+}

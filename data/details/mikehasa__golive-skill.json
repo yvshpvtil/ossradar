@@ -1,0 +1,11 @@
+{
+ "fullName": "mikehasa/golive-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add https://github.com/mikehasa/golive-skill --skill golive --global",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cffcdb240c87",
+ "version": 1,
+ "generatedAt": "2026-10-13T16:42:15.383Z"
+}
