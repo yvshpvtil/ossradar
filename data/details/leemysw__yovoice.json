@@ -1,0 +1,15 @@
+{
+ "fullName": "leemysw/yovoice",
+ "whoItsFor": null,
+ "useCases": [
+  "Voice and expression — use a reference voice, match a reference performance, adjust emotions, or describe the delivery in words.",
+  "A complete audio workflow — import or record reference audio, trim clips, preview speech, and export your work.",
+  "Voice design and cloning — VoxCPM2 offers text-guided voice design, controllable cloning, and transcript-assisted cloning with automatic mul"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a36073264a2e",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.380Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "wy-coliney/jev-browser-use",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add wy-coliney/jev-browser-use -g -a codex -y",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f73815e0839f",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:23.331Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "whirlchat/whirl",
+ "whoItsFor": null,
+ "useCases": [
+  "Every top model in one conversation, routed through",
+  "Living artifacts: documents, charts, and full interactive pages that",
+  "Integrations with your own tools over MCP (OAuth included), plus"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "dd2b82a1ce92",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.640Z"
+}

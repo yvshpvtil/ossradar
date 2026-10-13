@@ -1,0 +1,11 @@
+{
+ "fullName": "Appllama/appllama-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills@latest add appllama/appllama-skills",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6a83e827f4d8",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.334Z"
+}

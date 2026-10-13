@@ -1,0 +1,11 @@
+{
+ "fullName": "HarnessRouter/harnessrouter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name harnessrouter \\",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b629c32ebfde",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.360Z"
+}

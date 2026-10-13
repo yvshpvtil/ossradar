@@ -1,0 +1,15 @@
+{
+ "fullName": "vxcontrol/pentagi",
+ "whoItsFor": null,
+ "useCases": [
+  "Secure & Isolated. All operations are performed in a sandboxed Docker environment with complete isolation.",
+  "Fully Autonomous. AI-powered agent that automatically determines and executes penetration testing steps with optional execution monitoring a",
+  "Professional Pentesting Tools. Built-in suite of 20+ professional security tools including nmap, metasploit, sqlmap, and more."
+ ],
+ "installCommand": "npx swagger-typescript-api \\",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c61b927f7613",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.930Z"
+}

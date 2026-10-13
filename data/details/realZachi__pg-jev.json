@@ -1,0 +1,11 @@
+{
+ "fullName": "realZachi/pg-jev",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add realZachi/pg-jev",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "aa616d795017",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:23.129Z"
+}

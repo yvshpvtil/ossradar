@@ -1,0 +1,11 @@
+{
+ "fullName": "simstudioai/sim",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx sim-setup",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a6bd67f4d851",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.075Z"
+}

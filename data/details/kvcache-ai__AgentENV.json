@@ -1,0 +1,11 @@
+{
+ "fullName": "kvcache-ai/AgentENV",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull ghcr.io/kvcache-ai/aenv-server:latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "5ee02d31df31",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.832Z"
+}

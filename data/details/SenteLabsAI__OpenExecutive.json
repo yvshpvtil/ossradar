@@ -1,0 +1,15 @@
+{
+ "fullName": "SenteLabsAI/OpenExecutive",
+ "whoItsFor": null,
+ "useCases": [
+  "Chief Strategy Officer — competitive analysis, M&A, market positioning, OKRs",
+  "Chief Financial Officer — financial modeling, fundraising, unit economics, cash flow",
+  "Chief HR/People Officer — hiring, compensation, performance, culture"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6e866134aef6",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.583Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "fuxicodex/Fuxi",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://downloads.fuxicode.com/bootstrap.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b909af0c1a57",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:21.729Z"
+}

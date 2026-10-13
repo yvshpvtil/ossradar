@@ -1,0 +1,11 @@
+{
+ "fullName": "duolahypercho/codex-router",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install codex-router",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c3b2aa5e7c12",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.138Z"
+}

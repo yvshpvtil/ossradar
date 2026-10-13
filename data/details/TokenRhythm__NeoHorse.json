@@ -1,0 +1,11 @@
+{
+ "fullName": "TokenRhythm/NeoHorse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"sglang==0.5.17\"",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d9f6c6503ce8",
+ "version": 1,
+ "generatedAt": "2026-10-13T19:52:22.914Z"
+}
