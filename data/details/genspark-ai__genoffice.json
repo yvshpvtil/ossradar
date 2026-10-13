@@ -1,0 +1,25 @@
+{
+ "fullName": "genspark-ai/genoffice",
+ "whoItsFor": "Knowledge workers and developers who want to create and edit real .docx, .xlsx, .pptx, and PDF files locally with an AI assistant, using their own API key. Coding-agent users (Claude Code, Codex, Cursor) can also drive it through the genoffice CLI and skill.",
+ "useCases": [
+  "Edit Word documents with AI suggestions shown as tracked changes that can be rolled back",
+  "Build Excel workbooks with live formulas, summary sheets, and charts from a single prompt",
+  "Generate and edit PowerPoint decks from a one-line prompt, or convert PDFs to Word on-device"
+ ],
+ "requirements": {
+  "os": "macOS (Apple Silicon and Intel), Windows (x64 and Arm), Linux (deb, rpm, AppImage)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "675af338c638",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:08.639Z"
+}

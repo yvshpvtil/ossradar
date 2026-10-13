@@ -1,0 +1,25 @@
+{
+ "fullName": "kaankiziltug/logo-design-skill",
+ "whoItsFor": "Designers, founders and developers who use Claude, Gemini CLI, Codex or other Agent Skills-compatible AI agents to create logos and brand identities from a brief through to production SVG files.",
+ "useCases": [
+  "Turn a client brief into concepts, then refine and test them through a checkpoint before building the full kit",
+  "Audit an SVG logo against design principles and test it at 16 px, in one colour, reversed and on competitor shelves",
+  "Export a favicon, app-icon and web-manifest set from a finished logo"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/kaankiziltug/logo-design-skill.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "cc316b346378",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:46.008Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "AlexsJones/llmfit",
+ "whoItsFor": "Developers and ML practitioners who want to know which open-source LLMs their hardware can comfortably run locally, before downloading anything.",
+ "useCases": [
+  "Pick a local model that fits your system's RAM and GPU VRAM before downloading it",
+  "Compare models across fit, speed, quality, and context on your own machine",
+  "Feed recommendations into scripts, agents, or dashboards via `llmfit recommend --json` or the REST API"
+ ],
+ "requirements": {
+  "os": "macOS (Apple Silicon & Intel), Linux (x86_64 & ARM64), Windows (x86_64)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Rust toolchain (cargo) for building from source",
+  "modelSizes": null
+ },
+ "installCommand": "brew install AlexsJones/llmfit/llmfit",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "80b656da22c6",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:10.092Z"
+}

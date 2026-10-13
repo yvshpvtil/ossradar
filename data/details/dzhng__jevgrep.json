@@ -1,0 +1,25 @@
+{
+ "fullName": "dzhng/jevgrep",
+ "whoItsFor": "Developers and coding agents working in unfamiliar repositories who know what a piece of code should do but not where it lives. The README positions it as a first stop before direct reads or rg searches.",
+ "useCases": [
+  "Find where authentication is checked before a request reaches a handler",
+  "Locate how database connections are created, pooled, and closed",
+  "Find which tests cover retry behavior when a request times out"
+ ],
+ "requirements": {
+  "os": "macOS, Linux, or Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22+",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @dzhng/jevgrep",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "44117ba9a632",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:19.731Z"
+}

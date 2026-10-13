@@ -1,0 +1,25 @@
+{
+ "fullName": "titanwings/distilly",
+ "whoItsFor": "Developers and teams who want to turn a person's messages, documents, interviews, or public material into a reusable Agent Skill. It fits people preserving a colleague's know-how, modeling a mentor or relative's way of communicating, or building a source-grounded profile of a public figure.",
+ "useCases": [
+  "Preserve a departing colleague's workflows, judgment, and technical standards as an agent skill",
+  "Build a Person Profile of a mentor, teammate, or family member from their chat history and documents",
+  "Create a source-grounded profile of a public figure or author to ask how they might answer a question"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.9",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/titanwings/distilly <DISTILLY_SKILL_DIR>",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "0b8fe4e41b68",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:02.400Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "agentscope-ai/QwenPaw",
+ "whoItsFor": "Individuals who want a personal AI assistant that runs on their own machine or in the cloud, keeps data local, and can be reached through chat apps such as DingTalk, Lark, Discord, or Telegram.",
+ "useCases": [
+  "Recurring automation such as news digests, report generation, and multi-channel broadcasting",
+  "Reading, editing, reviewing, and testing code in local projects",
+  "Reading, writing, and converting PDF, Word, Excel, and PowerPoint files"
+ ],
+ "requirements": {
+  "os": "macOS, Linux, Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python >= 3.11, < 3.14",
+  "modelSizes": "2B, 4B, 9B, 35B-A3B, 27B"
+ },
+ "installCommand": "pip install qwenpaw",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "ad1d11d69403",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:11.566Z"
+}

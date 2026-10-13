@@ -1,0 +1,25 @@
+{
+ "fullName": "affaan-m/ECC",
+ "whoItsFor": "Developers and teams using Claude Code, Codex, Cursor, OpenCode, or similar agent harnesses who want a prebuilt set of agents, skills, hooks, rules, and memory to improve agent workflows.",
+ "useCases": [
+  "Add planning, TDD, and code-review workflows to Claude Code or Codex sessions",
+  "Scan agent configs, hooks, MCP settings, and secrets with AgentShield",
+  "Persist session context and learned instincts across coding sessions"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 18 or newer; Git and Claude Code 2.1 or newer on PATH for Claude plugin setup",
+  "modelSizes": null
+ },
+ "installCommand": "npx ecc-universal@2.2.3 setup",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "aa1712fc6bb0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:12.679Z"
+}

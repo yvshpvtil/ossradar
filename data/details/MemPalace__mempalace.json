@@ -1,0 +1,25 @@
+{
+ "fullName": "MemPalace/mempalace",
+ "whoItsFor": "Developers who use AI coding agents such as Claude Code, Gemini CLI, or Cursor and want their past conversations and project files kept as searchable, local-only memory.",
+ "useCases": [
+  "Search past Claude Code or other agent conversations by meaning",
+  "Mine project files into a local, verbatim, searchable store",
+  "Load relevant context at the start of a new AI coding session"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python, or Docker",
+  "modelSizes": null
+ },
+ "installCommand": "uv tool install mempalace",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a9157bf8a1b2",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:34.593Z"
+}

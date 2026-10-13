@@ -1,0 +1,25 @@
+{
+ "fullName": "Donchitos/Claude-Code-Game-Studios",
+ "whoItsFor": "Developers using Claude Code who want a structured, multi-agent team to plan and build a game, from brainstorming through release. The README describes it as a template you clone to start your own project.",
+ "useCases": [
+  "Structure a solo game project with design docs, sprints, and QA gates",
+  "Run specialized agents for design, programming, art, audio, and narrative within one Claude Code session",
+  "Coordinate multi-agent workflows for combat, UI, release, and live-ops work"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Git, Claude Code, Python 3, Bash (jq recommended)",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "0a5878b62b92",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:53.208Z"
+}

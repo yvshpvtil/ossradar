@@ -1,0 +1,25 @@
+{
+ "fullName": "feitangyuan/onetake",
+ "whoItsFor": "Product marketers and developers who want motion films for app launches, teasers, or feature demos made with a coding agent. The README is aimed at people installing it as a Claude Agent Skill, so it targets creators using AI to produce polished promo video.",
+ "useCases": [
+  "Make a 15-second product launch video for an app",
+  "Rebuild a feature demo from screenshots without a screen recording",
+  "Fix a motion video that feels like a slideshow by adding continuity between beats"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "python3 with playwright (chromium), numpy, scipy, Pillow, matplotlib (opencv-python for reference analysis), ffmpeg, node",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/feitangyuan/onetake.git ~/.claude/skills/onetake",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "2695764122bc",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:54.579Z"
+}

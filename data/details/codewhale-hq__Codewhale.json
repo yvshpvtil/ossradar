@@ -1,0 +1,25 @@
+{
+ "fullName": "codewhale-hq/Codewhale",
+ "whoItsFor": "Developers who want an open-source coding agent for the terminal that can use hosted or local models of their choice, with approvals and a record of every file change and command.",
+ "useCases": [
+  "Fix failing tests in a project and explain what changed",
+  "Run one headless coding task from a script or CI job with `codewhale exec`",
+  "Get an advisory review of a pull request with `codewhale review --pr N`"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://codewhale.net/install.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a60b09b346f0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:07.143Z"
+}

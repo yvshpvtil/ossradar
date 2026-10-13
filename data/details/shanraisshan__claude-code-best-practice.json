@@ -1,0 +1,25 @@
+{
+ "fullName": "shanraisshan/claude-code-best-practice",
+ "whoItsFor": "Developers and teams using Claude Code who want practical guidance on subagents, commands, skills, hooks, MCP servers, settings, and memory. It is aimed at people moving from casual prompting toward agentic engineering workflows.",
+ "useCases": [
+  "Look up best-practice guides for configuring Claude Code subagents, commands, skills, and MCP servers",
+  "Find example implementations of Claude Code hooks, status lines, and orchestration workflows",
+  "Track newer Claude Code features such as Agent Teams, Routines, Scheduled Tasks, and Git Worktrees"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "1ba2c4100c98",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:24.264Z"
+}

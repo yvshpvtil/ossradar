@@ -98,3 +98,210 @@ export async function summarize(input: SummaryInput): Promise<string> {
 
 /** Whether summaries come from an LLM (used to decide if cached one-liners can be reused). */
 export const summarizerId = process.env.ANTHROPIC_API_KEY ? `anthropic:${MODEL}` : "template";
+
+/* ------------------------------------------------------------------------------------------
+ * Repo details enrichment: README → structured "who it's for / use cases / requirements".
+ * Used by scripts/enrich.ts. Extractors, in order of preference:
+ *   1. Anthropic API (ANTHROPIC_API_KEY set)
+ *   2. Claude Code CLI (DETAILS_EXTRACTOR=claude-cli, for local backfills)
+ *   3. Heuristic README parser (always available, never invents values)
+ * Unknown values are null; the UI renders them as "Not stated in README".
+ * ---------------------------------------------------------------------------------------- */
+import type { RepoDetails, RepoRequirements } from "../lib/types";
+
+export const DETAILS_VERSION = 1;
+
+const EMPTY_REQ: RepoRequirements = {
+  os: null,
+  ramMinGB: null,
+  ramRecommendedGB: null,
+  gpuRequired: null,
+  vramMinGB: null,
+  diskGB: null,
+  runtime: null,
+  modelSizes: null,
+};
+
+const num = (s: string | undefined) => (s == null ? null : Number.parseFloat(s));
+
+function stripMd(readme: string): string {
+  return readme
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1");
+}
+
+/** Deterministic README parser: only reports what the README literally states. */
+export function heuristicDetails(readme: string, description: string): Omit<RepoDetails, "fullName" | "extractor" | "generatedAt" | "version" | "readmeHash"> {
+  const text = stripMd(readme);
+  const req: RepoRequirements = { ...EMPTY_REQ };
+
+  const ram = [...text.matchAll(/(\d{1,3}(?:\.\d)?)\s*(?:GB|GiB|G)\b\s*(?:of\s+)?(?:system\s+)?(?:RAM|memory)\b/gi)]
+    .filter((m) => !/v?ram/i.test(m[0]) || !/vram|gpu memory/i.test(m[0]))
+    .map((m) => ({ v: num(m[1])!, ctx: text.slice(Math.max(0, (m.index ?? 0) - 40), (m.index ?? 0) + m[0].length + 10) }))
+    .filter((m) => !/vram|gpu/i.test(m.ctx));
+  if (ram.length) {
+    const min = ram.find((r) => /min|at least|require/i.test(r.ctx)) ?? ram[0];
+    req.ramMinGB = min.v;
+    const rec = ram.find((r) => /recommend/i.test(r.ctx));
+    if (rec) req.ramRecommendedGB = rec.v;
+  }
+  const vram = [...text.matchAll(/(\d{1,3}(?:\.\d)?)\s*(?:GB|GiB|G)\b\s*(?:of\s+)?(?:VRAM|GPU memory|video memory)/gi)].map((m) => num(m[1])!);
+  if (vram.length) req.vramMinGB = Math.min(...vram);
+
+  if (/\b(requires?|needs?)\b[^.\n]{0,40}\b(NVIDIA|CUDA|GPU)\b/i.test(text)) req.gpuRequired = true;
+  else if (/\b(no GPU (required|needed)|runs? on CPU|CPU[- ]only|without a GPU)\b/i.test(text)) req.gpuRequired = false;
+
+  const disk = text.match(/(\d{1,4})\s*(?:GB|GiB)\b\s*(?:of\s+)?(?:free\s+)?(?:disk|storage|disk space)/i);
+  if (disk) req.diskGB = num(disk[1]);
+
+  const rt: string[] = [];
+  const py = text.match(/Python\s*(?:version\s*)?(>=|≥|\d)\s*(\d+\.\d+)?\+?/i);
+  if (py) rt.push(`Python ${py[1] === ">=" || py[1] === "≥" ? `≥ ${py[2] ?? ""}` : text.match(/Python\s*(\d+\.\d+\+?)/i)?.[1] ?? ""}`.trim());
+  const node = text.match(/Node(?:\.js)?\s*(?:>=|≥|v)?\s*(\d{2})(?:\.\d+)*\+?/i);
+  if (node) rt.push(`Node.js ${node[1]}+`);
+  if (/\bdocker (run|compose)\b|docker-compose/i.test(text)) rt.push("Docker");
+  if (rt.length) req.runtime = rt.join(", ");
+
+  const oses = [
+    [/\bmacOS\b|\bmac os\b|apple silicon/i, "macOS"],
+    [/\bwindows\b/i, "Windows"],
+    [/\blinux\b|ubuntu/i, "Linux"],
+  ] as const;
+  const os = oses.filter(([re]) => re.test(text)).map(([, n]) => n);
+  if (os.length) req.os = os.join(", ");
+
+  const sizes = [...new Set([...text.matchAll(/\b(\d{1,3}(?:\.\d)?)\s?B\b(?=[^a-z]|$)/g)].map((m) => `${m[1]}B`))];
+  if (sizes.length && /\b(model|weights|params|parameters|llama|qwen|mistral|gguf)\b/i.test(text)) req.modelSizes = sizes.slice(0, 6).join(", ");
+
+  const code = [...readme.matchAll(/```[a-z]*\n([\s\S]*?)```/gi)].flatMap((m) => m[1].split("\n"));
+  const install = code
+    .map((l) => l.replace(/^\s*\$\s*/, "").trim())
+    .find((l) => /^(pip3? install|uv (pip|tool) install|pipx install|npm (i|install)|npx |pnpm (add|dlx)|yarn (add|dlx)|bun (add|x)|brew install|cargo install|go install|docker (run|pull)|curl .*\| *(ba)?sh)/.test(l));
+
+  const feats: string[] = [];
+  const featBlock = readme.match(/^#{1,4}\s*(?:✨\s*)?(?:key\s+)?(?:features|use cases|what (?:it|you can) do)[^\n]*\n([\s\S]*?)(?=\n#{1,4}\s)/im);
+  if (featBlock) {
+    for (const line of featBlock[1].split("\n")) {
+      const m = line.match(/^\s*[-*]\s+(.+)/);
+      if (m) feats.push(clean(stripMd(m[1]).replace(/\*\*/g, "")).slice(0, 140));
+      if (feats.length === 3) break;
+    }
+  }
+
+  return {
+    whoItsFor: null,
+    useCases: feats,
+    requirements: req,
+    installCommand: install ?? null,
+    source: readme.trim() ? "readme" : description ? "inferred" : "readme",
+  };
+}
+
+const EXTRACT_PROMPT = `You extract structured facts from a GitHub README for a developer directory.
+Return ONLY a JSON object, no prose, with exactly these keys:
+{"whoItsFor": string (1-2 sentences, who should use this),
+ "useCases": [3 short strings],
+ "requirements": {"os": string|null, "ramMinGB": number|null, "ramRecommendedGB": number|null, "gpuRequired": true|false|null, "vramMinGB": number|null, "diskGB": number|null, "runtime": string|null (e.g. "Python ≥ 3.10, Docker"), "modelSizes": string|null (e.g. "7B, 13B")},
+ "installCommand": string|null (one shell command copied verbatim from the README),
+ "source": "readme" | "inferred"}
+Rules: requirements must be stated in the README; if not stated use null. NEVER guess hardware specs.
+whoItsFor and useCases may be inferred from the README's description; set source to "inferred" if the README barely describes the project.`;
+
+function parseJsonObject(text: string): Record<string, unknown> | null {
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) return null;
+  try {
+    return JSON.parse(m[0]);
+  } catch {
+    return null;
+  }
+}
+
+function normalize(raw: Record<string, unknown>, fallback: ReturnType<typeof heuristicDetails>): ReturnType<typeof heuristicDetails> {
+  const r = (raw.requirements ?? {}) as Record<string, unknown>;
+  const n = (v: unknown) => (typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null);
+  const s = (v: unknown) => (typeof v === "string" && v.trim() && !/^(unknown|n\/a|none|not stated)/i.test(v.trim()) ? v.trim().slice(0, 200) : null);
+  return {
+    whoItsFor: typeof raw.whoItsFor === "string" && raw.whoItsFor.trim() ? raw.whoItsFor.trim().slice(0, 420) : null,
+    useCases: Array.isArray(raw.useCases) ? raw.useCases.filter((u): u is string => typeof u === "string").slice(0, 3).map((u) => u.slice(0, 160)) : fallback.useCases,
+    requirements: {
+      os: s(r.os),
+      ramMinGB: n(r.ramMinGB),
+      ramRecommendedGB: n(r.ramRecommendedGB),
+      gpuRequired: typeof r.gpuRequired === "boolean" ? r.gpuRequired : null,
+      vramMinGB: n(r.vramMinGB),
+      diskGB: n(r.diskGB),
+      runtime: s(r.runtime),
+      modelSizes: s(r.modelSizes),
+    },
+    installCommand: s(raw.installCommand) ?? fallback.installCommand,
+    source: raw.source === "inferred" ? "inferred" : "readme",
+  };
+}
+
+async function llmExtract(prompt: string): Promise<string | null> {
+  if (process.env.ANTHROPIC_API_KEY) {
+    if (!anthropicClient) {
+      const { default: Anthropic } = await import("@anthropic-ai/sdk");
+      anthropicClient = new Anthropic();
+    }
+    const res = await anthropicClient.messages.create({
+      model: MODEL,
+      max_tokens: 2000,
+      output_config: { effort: "low" },
+      system: EXTRACT_PROMPT,
+      messages: [{ role: "user", content: prompt }],
+    });
+    if (res.stop_reason === "refusal") return null;
+    return res.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("");
+  }
+  if (process.env.DETAILS_EXTRACTOR === "claude-cli") {
+    const { spawn } = await import("node:child_process");
+    const bin = process.env.CLAUDE_BIN ?? "claude";
+    const stdout = await new Promise<string>((resolve, reject) => {
+      const p = spawn(bin, ["-p", "--model", process.env.CLAUDE_MODEL ?? "haiku", "--output-format", "json", "--tools", ""]);
+      let out = "";
+      let err = "";
+      const timer = setTimeout(() => p.kill("SIGKILL"), 180_000);
+      p.stdout.on("data", (c) => (out += c));
+      p.stderr.on("data", (c) => (err += c));
+      p.on("error", reject);
+      p.on("close", (code) => {
+        clearTimeout(timer);
+        if (code === 0) resolve(out);
+        else reject(new Error(err.slice(0, 200) || `claude exited ${code}`));
+      });
+      p.stdin.end(`${EXTRACT_PROMPT}\n\n${prompt}`);
+    });
+    return (JSON.parse(stdout) as { result?: string }).result ?? null;
+  }
+  return null;
+}
+
+export const detailsExtractorId = process.env.ANTHROPIC_API_KEY
+  ? `anthropic:${MODEL}`
+  : process.env.DETAILS_EXTRACTOR === "claude-cli"
+    ? `claude-cli:${process.env.CLAUDE_MODEL ?? "haiku"}`
+    : "heuristic";
+
+export async function extractDetails(input: { fullName: string; description: string; readme: string }): Promise<{ details: ReturnType<typeof heuristicDetails>; extractor: string }> {
+  const heur = heuristicDetails(input.readme, input.description);
+  if (detailsExtractorId !== "heuristic") {
+    try {
+      const text = await llmExtract(
+        `Repo: ${input.fullName}\nDescription: ${input.description || "(none)"}\n\nREADME (truncated):\n${input.readme.slice(0, 14000) || "(no README)"}`,
+      );
+      const raw = text ? parseJsonObject(text) : null;
+      if (raw) {
+        const d = normalize(raw, heur);
+        if (!input.readme.trim()) d.source = "inferred";
+        return { details: d, extractor: detailsExtractorId };
+      }
+    } catch (err) {
+      console.warn(`extractDetails: LLM failed for ${input.fullName}, using heuristic`, (err as Error).message);
+    }
+  }
+  return { details: heur, extractor: "heuristic" };
+}

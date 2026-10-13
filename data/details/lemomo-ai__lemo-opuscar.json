@@ -1,0 +1,25 @@
+{
+ "fullName": "lemomo-ai/lemo-opuscar",
+ "whoItsFor": "Developers and creators who use a coding agent such as Claude Code and want to make short films without a video model. Anyone who wants to pick one of the 43 film styles and direct an animated short from their own story.",
+ "useCases": [
+  "Direct a short film in a chosen art style from your own story",
+  "Preview the key shots as a storyboard before rendering the full film",
+  "Make explainer-style videos in styles such as whiteboard or infographic"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node 20+, ffmpeg, Python 3.11+ (or uv)",
+  "modelSizes": null
+ },
+ "installCommand": "claude plugin marketplace add lemomo-ai/lemo-opuscar",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "ff406d5ad244",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:10.187Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "anthropics/claude-plugins-official",
+ "whoItsFor": "Developers who use Claude Code and want to find, install, and evaluate official or third-party plugins from a curated marketplace.",
+ "useCases": [
+  "Browse and install Claude Code plugins via /plugin > Discover",
+  "Install a specific plugin with /plugin install {plugin-name}@claude-plugins-official",
+  "Submit a third-party plugin for inclusion in the marketplace"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "/plugin install {plugin-name}@claude-plugins-official",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "365816217d2b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:29.368Z"
+}

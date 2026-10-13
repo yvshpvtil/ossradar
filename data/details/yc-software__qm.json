@@ -1,0 +1,25 @@
+{
+ "fullName": "yc-software/qm",
+ "whoItsFor": "Startups and small teams that want a shared AI agent for their whole company, running in their own cloud with their own models and keys. Engineers and operators who deploy and customize the agent are the primary audience.",
+ "useCases": [
+  "Search internal notes, email, documents, databases, and the web together",
+  "Work in an existing repository: run tests, open PRs, and monitor CI",
+  "Track a project in a shared channel and post updates and follow-ups"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node ≥ 24.15",
+  "modelSizes": null
+ },
+ "installCommand": "npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3342f3b337d7",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:13.667Z"
+}

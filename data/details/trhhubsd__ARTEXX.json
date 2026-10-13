@@ -1,0 +1,25 @@
+{
+ "fullName": "trhhubsd/ARTEXX",
+ "whoItsFor": "Security researchers and developers who want to study how LLM multi-agent penetration-testing systems are built. The README limits use to code study and technical validation in isolated local environments, and prohibits testing online systems.",
+ "useCases": [
+  "Studying an LLM multi-agent pentest architecture with dual exploration and asset graphs",
+  "Validating pentest workflow principles in an isolated local lab environment",
+  "Manually retesting previously reported vulnerabilities after fixes"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "PostgreSQL; Docker (Compose) or Go and Node.js to build from source",
+  "modelSizes": null
+ },
+ "installCommand": "./install.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "83c15f9052b9",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:59.921Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "coreyhaines31/marketingskills",
+ "whoItsFor": "Technical marketers and founders who want AI coding agents such as Claude Code, OpenAI Codex, Cursor, or Windsurf to help with conversion optimization, copywriting, SEO, analytics, and growth engineering.",
+ "useCases": [
+  "Optimize landing pages and signup flows for conversion (CRO)",
+  "Write and edit marketing copy, emails, and ads",
+  "Audit SEO and analytics tracking"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add coreyhaines31/marketingskills",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "574ea3623fbd",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:19.479Z"
+}

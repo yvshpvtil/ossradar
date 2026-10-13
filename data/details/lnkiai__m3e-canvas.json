@@ -1,0 +1,25 @@
+{
+ "fullName": "lnkiai/m3e-canvas",
+ "whoItsFor": "Designers and developers who want to sketch Material 3 Expressive app screens in a browser and hand the design to an AI coding tool as a prompt.",
+ "useCases": [
+  "Sketch phone and desktop app screens with drag-and-drop M3 Expressive components",
+  "Link screens with tap and swipe transitions and preview the flow",
+  "Copy a natural-language prompt describing the design for Claude Code, Codex, Cursor, or similar tools"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "d24670007d0c",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:51.849Z"
+}

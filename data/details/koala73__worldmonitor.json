@@ -1,0 +1,25 @@
+{
+ "fullName": "koala73/worldmonitor",
+ "whoItsFor": "Developers, analysts, and researchers who want a self-hostable, real-time situational awareness dashboard that aggregates news and geopolitical, financial, and infrastructure signals. The README also targets agents and scripts through its MCP server, REST API, CLI, and SDKs.",
+ "useCases": [
+  "Monitor global geopolitical events and cross-stream escalation signals on a 3D globe or flat map",
+  "Track country instability scores, finance markets, and commodities in one dashboard",
+  "Pull live intelligence programmatically via the MCP server, REST API, CLI, or SDKs"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/koala73/worldmonitor.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "12a88a191788",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:24.282Z"
+}

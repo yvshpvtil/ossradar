@@ -1,0 +1,25 @@
+{
+ "fullName": "Vincentwei1021/video-shotcraft",
+ "whoItsFor": "Developers and creators using Claude Code or Codex who want to turn their product pages and copy into a polished, editable promo video built with Remotion code rather than an AI video generator.",
+ "useCases": [
+  "Make a launch or promo film for a product from its real screenshots and copy",
+  "Present a feature by picking shot recipe cards from the 150-shot library",
+  "Edit the delivered film in the Motion Workbench or export it as a JianYing draft"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js and npm, ffmpeg / ffprobe, uv (only for BGM beat analysis)",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add Vincentwei1021/video-shotcraft",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e912acff2169",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:49.401Z"
+}

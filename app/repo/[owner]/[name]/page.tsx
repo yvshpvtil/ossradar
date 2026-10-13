@@ -15,6 +15,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
+import { getDetails } from "@/lib/details";
+import { RepoDetailsView } from "@/components/RepoDetailsView";
 
 function ageText(iso: string): string {
   const d = Math.max(0, Math.round((new Date(getData().generatedAt).getTime() - new Date(iso).getTime()) / 86_400_000));
@@ -76,6 +78,23 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const repo = getRepo(owner, name);
   if (!repo) notFound();
   const similar = getSimilarRepos(repo);
+  const details = getDetails(repo.fullName);
+  const rq = details?.requirements;
+  const appLd = details && {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: repo.name,
+    url: `${SITE.url}${repoPath(repo)}`,
+    sameAs: repo.url,
+    description: details.whoItsFor ?? repo.description ?? repo.oneLiner,
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: rq?.os ?? undefined,
+    memoryRequirements: rq?.ramMinGB != null ? `${rq.ramMinGB} GB RAM` : undefined,
+    storageRequirements: rq?.diskGB != null ? `${rq.diskGB} GB` : undefined,
+    softwareRequirements: rq?.runtime ?? undefined,
+    featureList: details.useCases.length ? details.useCases : undefined,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -106,6 +125,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     <article className="grid gap-8 lg:grid-cols-[1fr_260px]">
       <JsonLd data={jsonLd} />
       <JsonLd data={crumbs} />
+      {appLd && <JsonLd data={appLd} />}
       <div className="min-w-0">
         <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
           <Link href="/" className="hover:underline">Leaderboard</Link> /{" "}
@@ -152,7 +172,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <Stat label="Forks" value={formatNumber(repo.forks)} />
         </section>
 
-        <section className="mt-6 rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
+        {details && <RepoDetailsView d={details} />}
+
+        <section className="mt-8 rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
           <h2 className="mb-2 text-sm font-semibold">Star history (last {repo.history.length} snapshot{repo.history.length === 1 ? "" : "s"})</h2>
           <Sparkline points={repo.history} width={640} height={120} className="h-auto w-full text-indigo-500" title={`Star history for ${repo.fullName}`} />
           {repo.history.length < 2 ? (

@@ -1,0 +1,25 @@
+{
+ "fullName": "datawhalechina/hello-agents",
+ "whoItsFor": "Developers with basic Python skills and a rough understanding of LLM APIs, such as AI developers, software engineers, students, and self-learners who want to build AI-native agents rather than just use low-code tools.",
+ "useCases": [
+  "Learn agent fundamentals and implement classic paradigms like ReAct, Plan-and-Solve, and Reflection",
+  "Compare low-code agent platforms (Coze, Dify, n8n) with frameworks such as AutoGen, AgentScope, and LangGraph",
+  "Build end-to-end projects like a travel planning assistant, a deep research agent, and a simulated town"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "589877fccf3d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:21.722Z"
+}

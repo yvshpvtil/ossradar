@@ -1,0 +1,25 @@
+{
+ "fullName": "upstash/context7",
+ "whoItsFor": "Developers and teams using AI coding assistants (Cursor, Claude Code, and similar) who want current, version-specific library documentation injected into prompts instead of relying on outdated model training data.",
+ "useCases": [
+  "Get up-to-date API examples for a library while writing code with an AI assistant",
+  "Look up version-specific setup steps, such as a framework's latest auth or proxy pattern",
+  "Reduce hallucinated or outdated APIs in generated code"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22.13 or newer (for the ctx7 CLI)",
+  "modelSizes": null
+ },
+ "installCommand": "npx ctx7 setup",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "c0df479ecc40",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:42.807Z"
+}

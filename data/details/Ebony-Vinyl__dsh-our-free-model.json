@@ -1,0 +1,25 @@
+{
+ "fullName": "Ebony-Vinyl/dsh-our-free-model",
+ "whoItsFor": "Users of the DeepSeek Harness (dsh) desktop or web app who want free access to frontier models such as DeepSeek V4.1 Flash and Kimi K3 without signing up or supplying an API key. Developers who want a local OpenAI- or Anthropic-compatible endpoint for their own tools may also use it.",
+ "useCases": [
+  "Chatting with free frontier models such as DeepSeek V4.1 Flash and Kimi K3 from the dsh model picker",
+  "Calling those models from other local tools through the built-in OpenAI- or Anthropic-compatible endpoint",
+  "Chaining models into fallback or round-robin routes so a request continues on another model when one fails"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "DeepSeek Harness (dsh) 0.1.5–0.1.7-rc.2",
+  "modelSizes": null
+ },
+ "installCommand": "dsh plugin --profile web add /绝对路径/dsh-our-free-model",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "cefa44da4a59",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:40.169Z"
+}

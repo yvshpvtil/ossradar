@@ -1,0 +1,25 @@
+{
+ "fullName": "omnirush-ai/omnirush-gui",
+ "whoItsFor": "Developers and power users who want a desktop coding agent that works on their own projects and can access frontier models through an omnirush.ai account. The README is mostly marketing and install instructions, so the exact audience is inferred.",
+ "useCases": [
+  "Running a coding agent against a local project from a desktop app",
+  "Letting the agent clone, branch, commit, push, and open or review pull requests with gh",
+  "Adding skills and MCP servers so the agent can use custom tools"
+ ],
+ "requirements": {
+  "os": "macOS (Apple Silicon) or Linux (x64 or arm64); no Intel Mac build",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "xattr -dr com.apple.quarantine /Applications/omnirush.app",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "efbcb932abf6",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:25.050Z"
+}

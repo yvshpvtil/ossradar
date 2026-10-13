@@ -1,0 +1,25 @@
+{
+ "fullName": "lidge-jun/opencodex",
+ "whoItsFor": "Developers who use OpenAI Codex CLI/App, Claude Code, Claude Desktop, or Grok Build and want to route them to other LLM providers such as Claude, Gemini, Grok, DeepSeek, or Ollama. Also suited to teams that want to manage a ChatGPT account pool for Codex auth.",
+ "useCases": [
+  "Run Claude Code with non-Anthropic models such as Gemini, DeepSeek, or Kimi",
+  "Point Codex CLI or the Codex app at a local Ollama or other OpenAI-compatible endpoint",
+  "Load-balance Codex sessions across a ChatGPT account pool by quota usage"
+ ],
+ "requirements": {
+  "os": "macOS 13+, Windows x64, or Linux x86_64 (desktop app); CLI install is not limited to an OS in the README",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node 18+ (Bun runtime bundled automatically); Docker Compose for the container install",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @bitkyc08/opencodex",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "9c0aaffab551",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:25.870Z"
+}

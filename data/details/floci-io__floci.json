@@ -1,0 +1,25 @@
+{
+ "fullName": "floci-io/floci",
+ "whoItsFor": "Developers and CI pipelines that need AWS-compatible services locally for development and testing, without a cloud account, auth token, or paid feature gates. Teams moving off LocalStack can use it as a drop-in replacement.",
+ "useCases": [
+  "Run AWS SDK, CLI, and Terraform tests against a local endpoint in CI",
+  "Develop Lambda, DynamoDB, and S3 apps without an AWS account",
+  "Replace LocalStack in existing test suites by swapping the image"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker",
+  "modelSizes": null
+ },
+ "installCommand": "floci start",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "085f88baf7d3",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:43.321Z"
+}

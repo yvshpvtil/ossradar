@@ -1,0 +1,25 @@
+{
+ "fullName": "TencentCloud/TencentDB-Agent-Memory",
+ "whoItsFor": "Teams and individual developers running multiple AI agents who want shared, governed memory (chat history, skills, docs, and code knowledge) that persists across agents and frameworks. Also suited to a one-person company building a squad of specialized agents.",
+ "useCases": [
+  "Share Chat Memory, Skills, Wiki, and CodeGraph across a team of AI agents",
+  "Cold-start new agents from existing codebases, docs, and past conversation sessions",
+  "Equip role-specific agents (e.g., Reviewer, Builder) with only the memory assets they need"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node ≥ 22.16",
+  "modelSizes": null
+ },
+ "installCommand": "./start-all.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "85001301661f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:20.936Z"
+}

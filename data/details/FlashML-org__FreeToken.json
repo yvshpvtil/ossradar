@@ -1,0 +1,25 @@
+{
+ "fullName": "FlashML-org/FreeToken",
+ "whoItsFor": "Developers and power users with consumer hardware, such as gaming PCs, laptops, or workstation GPUs, who want to run large open-weight MoE models locally. It is also aimed at people who want to connect those local models to coding and tool-calling agents.",
+ "useCases": [
+  "Running frontier open-weight MoE models (290B+) locally on a gaming PC",
+  "Serving local models to coding agents such as Claude Code, Codex, or OpenCode via Anthropic/OpenAI-compatible APIs",
+  "Local tool-calling agent workflows with cached context reuse across agentic edits"
+ ],
+ "requirements": {
+  "os": "Windows or Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python (for CLI install via uv or pip)",
+  "modelSizes": "290B+ (MoE)"
+ },
+ "installCommand": "uv pip install \"freetoken[accel]\"",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4b70a58596e9",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:54.627Z"
+}

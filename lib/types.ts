@@ -62,3 +62,29 @@ export interface RepoData {
 
 /** Snapshot file shape: full_name -> stars. */
 export type Snapshot = Record<string, number>;
+
+export interface RepoRequirements {
+  os: string | null;
+  ramMinGB: number | null;
+  ramRecommendedGB: number | null;
+  /** true = GPU required, false = runs without GPU, null = not stated. */
+  gpuRequired: boolean | null;
+  vramMinGB: number | null;
+  diskGB: number | null;
+  runtime: string | null;
+  modelSizes: string | null;
+}
+
+/** data/details/<owner>__<repo>.json */
+export interface RepoDetails {
+  fullName: string;
+  whoItsFor: string | null;
+  useCases: string[];
+  requirements: RepoRequirements;
+  installCommand: string | null;
+  source: "readme" | "inferred";
+  extractor: string;
+  readmeHash: string;
+  version: number;
+  generatedAt: string;
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "Significant-Gravitas/AutoGPT",
+ "whoItsFor": "Developers and teams who want to build, run, and schedule AI agents without writing everything from scratch, either through the hosted AutoGPT Platform or by self-hosting. The README is mostly marketing for the hosted product, so the self-hosting path is aimed at developers who can provide their own infrastructure and model API keys.",
+ "useCases": [
+  "Automate daily executive briefs from internal and external signals",
+  "Triage engineering incidents and surface a likely cause",
+  "Monitor sources and return structured reports when something changes"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "d9b3cba04445",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:31.444Z"
+}

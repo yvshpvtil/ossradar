@@ -1,0 +1,25 @@
+{
+ "fullName": "browser-use/jev-ultrafast",
+ "whoItsFor": "Developers who want a fast, low-cost browser agent that completes a natural-language web task by choosing page actions. It requires TypeSafe and text-model API keys and a local Chrome session.",
+ "useCases": [
+  "Searching Google Flights for one-way fares from a natural-language goal",
+  "Opening a specific Wikipedia article from a goal description",
+  "Running a local hotel search and applying filters in the browser"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "uv, Google Chrome",
+  "modelSizes": null
+ },
+ "installCommand": "uv sync",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "086d0e60b213",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:32.435Z"
+}

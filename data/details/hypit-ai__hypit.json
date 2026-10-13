@@ -1,0 +1,25 @@
+{
+ "fullName": "hypit-ai/hypit",
+ "whoItsFor": "Creators, marketers, and developers who make short-form video (ads, TikTok/Reels/Shorts, podcast clips) and want AI coding agents to clone a reference video into an editable, re-runnable workflow and produce many variants.",
+ "useCases": [
+  "Clone a viral TikTok, Reel, or Short into a template and swap the host, hook, or product",
+  "Ship many hook or ad variants of one composition, regenerating only the parts that change",
+  "Build podcast or interview clips with word-level captions, split-screen layouts, and B-roll"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22.15+, pnpm 10.33",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add hypit-ai/hypit -g",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "7d4a45d4e005",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:41.810Z"
+}

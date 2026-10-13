@@ -1,0 +1,25 @@
+{
+ "fullName": "nanaism/yomiyasu",
+ "whoItsFor": "AIコーディングエージェント（Codex、Claude Code、Cursorなど）で技術記事、設計書・仕様書、PR説明文、社内レポートを書く人が、AI生成の日本語を読みやすく推敲するために使うスキルです。",
+ "useCases": [
+  "AI生成の技術記事にある不自然な比喩や曖昧な主述関係を直す",
+  "設計書・仕様書・PR説明文の文章を、読み違いが起きにくい表現に整える",
+  "社内レポートの過剰な太字・箇条書き・文末コロンを整理する"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python（標準ライブラリのみ、バージョンの記載なし）",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add nanaism/yomiyasu",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a4de4d77e4f9",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:27.589Z"
+}

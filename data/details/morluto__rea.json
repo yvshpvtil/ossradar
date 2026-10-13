@@ -1,0 +1,25 @@
+{
+ "fullName": "morluto/rea",
+ "whoItsFor": "Developers, security researchers, and reverse engineers who want their coding agent to inspect native binaries, apps, and runtime behavior, and explain or reproduce how a feature works.",
+ "useCases": [
+  "Explain how an app feature works and build a similar one, citing the evidence",
+  "Inspect native binaries with pseudocode, assembly, strings, symbols, and call references",
+  "Analyze JavaScript/Electron apps, .NET assemblies, Android APKs, and websites"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22.19+, 24.11+, or 26+, plus npm",
+  "modelSizes": null
+ },
+ "installCommand": "npx rea-agents setup",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "d1da02766217",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:12.680Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "t8y2/dbx",
+ "whoItsFor": "Developers and database administrators who manage many different databases and want one lightweight, cross-platform client with desktop, Docker, and CLI options.",
+ "useCases": [
+  "Manage MySQL, PostgreSQL, SQLite, Redis, MongoDB, and other databases from a single client",
+  "Query and explore data with the built-in AI assistant",
+  "Connect AI agents to databases through the MCP Server"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx @dbx-app/mcp-server",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "61a1cb96968f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:07.893Z"
+}

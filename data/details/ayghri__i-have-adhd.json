@@ -1,0 +1,25 @@
+{
+ "fullName": "ayghri/i-have-adhd",
+ "whoItsFor": "Developers using a coding assistant (Claude Code and similar) who get lost in long, verbose answers and want direct, step-by-step output. It is an agent skill, so it fits anyone who installs it as a plugin rather than a standalone tool.",
+ "useCases": [
+  "Get the next action first, with numbered steps for multi-step tasks",
+  "Cut preamble, recaps, and closing pleasantries from coding-agent replies",
+  "Keep answers focused by suppressing tangents and capping lists at five items"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "ab4052b3d1a2",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:07.539Z"
+}

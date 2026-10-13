@@ -1,0 +1,25 @@
+{
+ "fullName": "feder-cr/invisible_playwright_mcp",
+ "whoItsFor": "Developers and teams who need an AI agent to automate real web browsing, such as scraping or checking prices, on sites that block standard automated browsers with anti-bot checks or captchas. It can run from an MCP-compatible assistant or a standalone web UI.",
+ "useCases": [
+  "Checking fares or prices across several dates on travel sites by clicking through calendar widgets",
+  "Browsing sites that block other AI browser agents with captchas or anti-bot checks",
+  "Reading and comparing page content where a person's judgement is needed, rather than calling an API"
+ ],
+ "requirements": {
+  "os": "Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "uv",
+  "modelSizes": null
+ },
+ "installCommand": "uvx invisible-playwright-mcp ui --openrouter-key sk-or-...",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "071da649ee8a",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:14.224Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "CloakHQ/CloakBrowser",
+ "whoItsFor": "Developers and automation engineers who need a Playwright or Puppeteer browser that gets past anti-bot checks such as Cloudflare Turnstile, reCAPTCHA v3, and FingerprintJS. It is aimed at scraping, QA, and monitoring work against protected sites.",
+ "useCases": [
+  "Scraping sites protected by Cloudflare Turnstile or similar bot checks",
+  "Running browser automation that must pass reCAPTCHA v3 or fingerprint-based detection",
+  "Drop-in stealth browser for AI agents and existing Playwright or Puppeteer scripts"
+ ],
+ "requirements": {
+  "os": "Linux x64, Linux ARM64, Windows x64, macOS (Apple Silicon and Intel)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python or Node.js (pip install cloakbrowser / npm install cloakbrowser); Docker optional",
+  "modelSizes": null
+ },
+ "installCommand": "pip install cloakbrowser",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "eff806d590b6",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:43.920Z"
+}

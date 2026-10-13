@@ -1,0 +1,25 @@
+{
+ "fullName": "alchaincyf/huashu-art-motion",
+ "whoItsFor": "Creators and developers who use a coding agent to build art-style motion pieces and explainer-video segments entirely in code. They should be comfortable running Python tooling via uv and ffmpeg.",
+ "useCases": [
+  "Break down a reference animation into cuts, beat grid, and motion heatmaps, then recreate it in code",
+  "Render art-style scenes such as Van Gogh, Bauhaus, or 8-bit as animated, code-drawn frames",
+  "Generate frame-accurate explainer-video clips from a JSON spec in landscape, portrait, or transparent formats"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "uv, ffmpeg, Playwright Chromium",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add alchaincyf/huashu-art-motion",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "77b971c42d23",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:59.001Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "esengine/DeepSeek-Reasonix",
+ "whoItsFor": "Developers who want an open-source AI coding agent that runs on their own machine, in a terminal, desktop app, browser, or editor, and who want to choose their own model provider. It suits tasks that read, edit, and run code inside a project folder with per-step approval.",
+ "useCases": [
+  "Implement a task described in plain language, such as adding retry on failure to an HTTP client",
+  "Read and edit project files and run commands and tests inside a chosen project folder",
+  "Run tasks non-interactively in scripts with `reasonix run \"task\"`"
+ ],
+ "requirements": {
+  "os": "macOS, Windows, or Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Go ≥ 1.25 (CLI build from source); Node ≥ 24 and pnpm 10 (Studio build from source)",
+  "modelSizes": null
+ },
+ "installCommand": "npm i -g reasonix",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "93ca03e3f937",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:15.329Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "microsoft/ai-agents-for-beginners",
+ "whoItsFor": "Developers and students who are new to AI agents and want a structured, hands-on course using Microsoft Agent Framework and Microsoft Foundry.",
+ "useCases": [
+  "Building agents that use tools, plan tasks, and coordinate with other agents",
+  "Adding retrieval and memory to agents with agentic RAG",
+  "Deploying, securing, and running agents in production"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python, Azure account (Microsoft Foundry)",
+  "modelSizes": null
+ },
+ "installCommand": "git clone --filter=blob:none --sparse https://github.com/microsoft/ai-agents-for-beginners.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "6bd737c1d772",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:42.512Z"
+}

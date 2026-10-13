@@ -1,0 +1,25 @@
+{
+ "fullName": "jiwoochris/artex-ko",
+ "whoItsFor": "Security defenders, researchers, and authorized penetration testers who want to study or validate LLM-driven autonomous pentesting, either on systems they own or in explicitly permitted local isolated labs such as OWASP Juice Shop or DVWA.",
+ "useCases": [
+  "Running autonomous recon-to-exploitation pentest jobs against owned or explicitly authorized targets",
+  "Steering an autonomous attack run by giving hints or intervening in the conversation",
+  "Studying autonomous AI attack behavior to build detection signatures and hardening checklists"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker, Docker Compose (source build also needs Go and Node.js)",
+  "modelSizes": null
+ },
+ "installCommand": "docker compose up -d",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "8afb5caec4e7",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:39.367Z"
+}

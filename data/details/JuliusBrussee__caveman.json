@@ -1,0 +1,25 @@
+{
+ "fullName": "JuliusBrussee/caveman",
+ "whoItsFor": "Developers and teams running AI coding agents (Claude Code, Codex, Gemini CLI, Cursor, and others) who want to cut token usage and cost. The proxy suits anyone who wants to shrink input tokens; the skill suits anyone who only wants shorter answers.",
+ "useCases": [
+  "Shorten the agent's replies to save output tokens and cost",
+  "Compress logs, JSON, CSV, and test output before the agent reads them",
+  "Shrink web pages and memory files like CLAUDE.md for the agent"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22.13+",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @caveman-ai/cli && caveman setup --install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "eb8ac45227c0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:42.827Z"
+}

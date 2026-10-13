@@ -1,0 +1,25 @@
+{
+ "fullName": "deeplethe/solid-glass",
+ "whoItsFor": "Developers building React and Tailwind interfaces on shadcn/ui who want a consistent glass-like visual style, especially for AI and agent applications. It is installed as a stylesheet on top of an existing shadcn/ui project.",
+ "useCases": [
+  "Styling a shadcn/ui project with a consistent surface, border, and shadow system in light and dark modes",
+  "Building agent interfaces with status lines, tool-step lists, diffs, and composer boxes",
+  "Adding AI-specific components such as context-usage rings, task notices, and reasoning panels"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "shadcn/ui project with React 19 and Tailwind CSS 4",
+  "modelSizes": null
+ },
+ "installCommand": "npx shadcn@latest add https://deeplethe.github.io/solid-glass/r/solid-glass.json",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5f43513fe719",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:05.540Z"
+}

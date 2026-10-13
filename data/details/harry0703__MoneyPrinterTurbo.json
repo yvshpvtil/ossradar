@@ -1,0 +1,25 @@
+{
+ "fullName": "harry0703/MoneyPrinterTurbo",
+ "whoItsFor": "Creators and developers who want to produce short vertical videos from a topic or keyword without editing by hand, including people automating video production through an API or CLI.",
+ "useCases": [
+  "Generate a complete short video from a topic: script, stock footage, subtitles, and background music",
+  "Batch-produce multiple finished videos from a list of topics",
+  "Plug video generation into an automated pipeline via its API or CLI"
+ ],
+ "requirements": {
+  "os": "Windows, macOS, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11",
+  "modelSizes": null
+ },
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "dfbce78971b8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:45.703Z"
+}

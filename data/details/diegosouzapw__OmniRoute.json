@@ -1,0 +1,25 @@
+{
+ "fullName": "diegosouzapw/OmniRoute",
+ "whoItsFor": "Developers who use AI coding tools such as Claude Code, Codex, Cursor, Cline, or Copilot and want one endpoint that routes to many providers, including free tiers, without hitting quota limits.",
+ "useCases": [
+  "Keep coding agents running by auto-falling back to another provider when a quota runs out",
+  "Cut token usage with RTK and Caveman prompt compression, which the README says saves 15-95%",
+  "Access 1200+ models from hundreds of providers through a single endpoint"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "brew install --cask zoispag/tap/omniroute-tray",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4ffb7a0f6176",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:33.098Z"
+}

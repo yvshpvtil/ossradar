@@ -1,0 +1,25 @@
+{
+ "fullName": "D4Vinci/Scrapling",
+ "whoItsFor": "Developers and data engineers who need to extract data from websites, from one-off scripts to large concurrent crawls, including sites with anti-bot protection or frequently changing layouts.",
+ "useCases": [
+  "Scraping pages whose layout changes, using adaptive selectors that relocate elements after site updates",
+  "Fetching pages protected by anti-bot systems such as Cloudflare Turnstile",
+  "Running concurrent, multi-session crawls with pause/resume and automatic proxy rotation"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python",
+  "modelSizes": null
+ },
+ "installCommand": "pip install scrapling",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "70e901421465",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:22.513Z"
+}

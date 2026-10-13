@@ -1,0 +1,25 @@
+{
+ "fullName": "mcncarl/jianying-headless",
+ "whoItsFor": "Mac users running Jianying (剪映) Professional 11.5.0 on Apple Silicon who want to generate editable Jianying drafts from structured plans, edit copies of multi-track projects, and export MP4 via the local engine, plus AI-agent workflows that hand off editing work.",
+ "useCases": [
+  "Generate editable Jianying drafts from a structured JSON editing plan",
+  "Batch-produce drafts or hand off Agent-assisted edits without overwriting the original project",
+  "Export a verified draft snapshot to MP4 using the local Jianying engine"
+ ],
+ "requirements": {
+  "os": "macOS 26.0+ on Apple Silicon (verified on macOS 26.5.1)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.9, FFmpeg / ffprobe, Xcode Command Line Tools, Jianying Professional 11.5.0 (or 11.4.2)",
+  "modelSizes": null
+ },
+ "installCommand": "python3 tools/build_native_codec.py",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "57da3df1d619",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:54.751Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "Human-Agent-Society/reef",
+ "whoItsFor": "Developers and ML engineers who want agents or models to keep improving from real interaction feedback, using either model-weight training (with GPUs) or harness/prompt optimization (with only a model API endpoint).",
+ "useCases": [
+  "Continually fine-tune a model's weights from scored user or agent interactions using Slime and SGLang",
+  "Automatically refine an agent's harness (prompts, rules, skills) from plain-language requests using a model endpoint",
+  "Run test-time training on hard problems with a measurable objective and correctness checker"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.12 (per badge), uv recommended, git-lfs system package",
+  "modelSizes": null
+ },
+ "installCommand": "uv venv && source .venv/bin/activate && uv pip install reef-infra",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3a01ebdbd03e",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:44.698Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "thedotmack/claude-mem",
+ "whoItsFor": "Developers and power users of AI coding agents (especially Claude Code, plus Codex, Gemini, OpenCode, and others) who want their agent to remember context across sessions without re-explaining their project each time.",
+ "useCases": [
+  "Carry project context and decisions from one Claude Code session into the next automatically",
+  "Search past agent sessions with natural-language queries via MCP search tools",
+  "Back up or sync agent memory to cmem.ai across machines"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js ≥ 20.0.0",
+  "modelSizes": null
+ },
+ "installCommand": "npx claude-mem install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e2b59fd31570",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:46.372Z"
+}

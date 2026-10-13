@@ -1,0 +1,25 @@
+{
+ "fullName": "wheresryan22/anatomy",
+ "whoItsFor": "Developers and technical writers who want to explain a technical concept with an interactive, isometric illustration, using Claude Code, OpenCode, or Codex.",
+ "useCases": [
+  "Explaining how a rate limiter or cache works in docs or blog posts",
+  "Building interactive isometric figures for landing pages",
+  "Creating SVG and WebGL explainers of physical machines or systems"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js ≥ 20.10",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add wheresryan22/anatomy -g -a claude-code",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "06fda9319c69",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:12.679Z"
+}

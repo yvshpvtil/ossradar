@@ -1,0 +1,25 @@
+{
+ "fullName": "storytold/vectorcraft",
+ "whoItsFor": "Illustrators and designers who want an open-source, Illustrator-style vector editor that runs on desktop or in the browser. It also suits developers and AI agents that need to draw and export vector art through the MCP server.",
+ "useCases": [
+  "Drawing and editing vector illustrations and posters with Pen, Pathfinder and Gradient tools",
+  "Opening, editing and exporting SVG, PDF and PNG files",
+  "Letting AI agents create and export artwork through the MCP server"
+ ],
+ "requirements": {
+  "os": "macOS, Windows, Linux or FreeBSD (also runs in the browser via WebAssembly)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Rust toolchain (cargo)",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/storytold/vectorcraft",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "2c6f1eed4900",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:46.169Z"
+}

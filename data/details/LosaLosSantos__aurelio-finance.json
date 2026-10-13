@@ -1,0 +1,25 @@
+{
+ "fullName": "LosaLosSantos/aurelio-finance",
+ "whoItsFor": "People who want to track their net worth, investments, ETFs, cash and debts on their own computer, with an optional AI advisor for questions about their finances.",
+ "useCases": [
+  "Track banks, brokers and cash, plus dated records of what you hold",
+  "See what your funds really hold, by country, sector, company and currency",
+  "Plan recurring investments, real assets, loans, cash flow and savings goals"
+ ],
+ "requirements": {
+  "os": "macOS, Linux, Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Git, Node.js 22 or later, uv",
+  "modelSizes": null
+ },
+ "installCommand": "./start.sh --demo",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e9a557d29ec7",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:56.345Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "bytedance/deer-flow",
+ "whoItsFor": "Developers and teams who want to run a self-hosted, long-horizon 'super agent' that can research, code, and create using sandboxes, sub-agents, memory, and extensible skills.",
+ "useCases": [
+  "Running multi-step research tasks that take minutes to hours",
+  "Coding and building artifacts inside an isolated sandbox",
+  "Orchestrating sub-agents with persistent memory and custom skills"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.12, Node.js ≥ 22",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/bytedance/deer-flow.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "b0b36649c3f0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:55.619Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "guillaumemeyer/watermarks-remover",
+ "whoItsFor": "Developers, writers, and privacy-conscious creators who want to remove AI provenance marks (invisible Unicode, C2PA/EXIF/XMP metadata, and some statistical text watermarks) from content they own before sharing or committing it. Agent users in Claude Code, Codex, or Cursor can install the skill and call the local service.",
+ "useCases": [
+  "Strip invisible Unicode and bidi characters from text, docs, or manuscripts",
+  "Remove C2PA, EXIF, and XMP metadata from images, PDFs, and Office files",
+  "Gate git commits or agent-written files with a pre-commit hook that flags provenance marks"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10 (stdlib only); Docker optional",
+  "modelSizes": null
+ },
+ "installCommand": "python3 install_skill.py --skill remove-ai-marks --target claude-code",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "1014c63c3414",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:08.801Z"
+}

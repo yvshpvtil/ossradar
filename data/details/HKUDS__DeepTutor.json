@@ -1,0 +1,25 @@
+{
+ "fullName": "HKUDS/DeepTutor",
+ "whoItsFor": "Students, self-learners, and educators who want a tutor that adapts to their own study materials and history over time. It also suits teams that want a configurable AI tutoring platform they can host themselves.",
+ "useCases": [
+  "Asking questions and getting answers grounded in your own documents and knowledge bases",
+  "Turning source material into books, courses, quizzes, and question-bank practice",
+  "Reading PDFs and EPUBs alongside the tutor, with page-cited answers"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11; Next.js 16 frontend",
+  "modelSizes": null
+ },
+ "installCommand": "docker run --rm --name deeptutor \\",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "708ea46f9d4b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:35.909Z"
+}

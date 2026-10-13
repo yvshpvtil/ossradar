@@ -1,0 +1,25 @@
+{
+ "fullName": "QingYunA/answer-me-with-html",
+ "whoItsFor": "Developers and people who use AI coding agents (Claude Code, Codex, Cursor, OpenCode and similar) and want complex answers as a readable one-page HTML instead of a wall of text.",
+ "useCases": [
+  "Explain a concept such as the TCP three-way handshake with sequence and state diagrams",
+  "Map out how the modules in a repository fit together, with a folder tree and call graph",
+  "Compare options such as Redis vs Memcached in a table with a verdict"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js ≥ 20",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add QingYunA/answer-me-with-html",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3d27f076909d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:37.732Z"
+}

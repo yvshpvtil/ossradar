@@ -1,0 +1,25 @@
+{
+ "fullName": "yi1108/printfilm",
+ "whoItsFor": "Marketing teams and creators who want to turn a topic or script into short promotional videos or AI short dramas. Also suited to developers or teams who want to self-host an AI image and video pipeline with Docker.",
+ "useCases": [
+  "Turn product selling points into short marketing videos for lead generation",
+  "Produce AI short-drama or comic-series episodes with reusable characters and scenes",
+  "Generate single images or videos on demand, such as text-to-image or e-commerce collages"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker Desktop (or Docker Engine + Compose)",
+  "modelSizes": null
+ },
+ "installCommand": "docker compose --env-file deploy/.env.docker up -d",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "6adcb74dff30",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:12.683Z"
+}

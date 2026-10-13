@@ -1,0 +1,25 @@
+{
+ "fullName": "tt-a1i/archify",
+ "whoItsFor": "Developers and teams using AI coding agents (Claude Code, Codex CLI, Cursor, OpenCode) who want interactive architecture diagrams, or source-backed system maps of a repository, from a description or code.",
+ "useCases": [
+  "Diagram a system from a text description, such as a web request path through an API, cache, and database",
+  "Generate a source-backed architecture map of an existing code repository",
+  "Turn plans, itineraries, or learning maps into shareable interactive HTML"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add tt-a1i/archify -g",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "24c961c46f94",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:55.495Z"
+}

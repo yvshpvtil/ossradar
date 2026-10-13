@@ -1,0 +1,25 @@
+{
+ "fullName": "earthtojake/text-to-cad",
+ "whoItsFor": "Engineers, designers, and makers who already use an AI agent (Claude Code, Codex, Cursor, Gemini, or Grok) and want it to generate, check, and prepare 3D CAD parts for manufacturing.",
+ "useCases": [
+  "Generate 3D models as STEP, GLB, STL, or 3MF files from text prompts",
+  "Run design-for-manufacturing checks and produce engineering drawings",
+  "Send designs to 3D printing, sheet metal, or CNC fabrication services"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11, Node.js ≥ 20, uv",
+  "modelSizes": null
+ },
+ "installCommand": "claude plugin marketplace add earthtojake/text-to-cad#latest",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "6545300e99c6",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:37.469Z"
+}

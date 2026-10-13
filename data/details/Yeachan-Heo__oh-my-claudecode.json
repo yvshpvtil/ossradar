@@ -1,0 +1,25 @@
+{
+ "fullName": "Yeachan-Heo/oh-my-claudecode",
+ "whoItsFor": "Developers who use Claude Code and want multi-agent orchestration without learning its internals. Teams that want coordinated agent workflows (the project is 'Teams-first') can also use it.",
+ "useCases": [
+  "Build a feature end to end from one prompt with /autopilot",
+  "Run parallel agent teams to fix or refactor code with /team",
+  "Get a second-model code review by launching Codex tmux workers with omc team"
+ ],
+ "requirements": {
+  "os": "Linux required only for named autopilot stage profiles (uses flock); README does not state an OS for the rest",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Claude Code; npm for the CLI install; tmux for omc team workers",
+  "modelSizes": null
+ },
+ "installCommand": "npm i -g oh-my-claude-sisyphus@latest",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "7d38a59e91fd",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:38.899Z"
+}

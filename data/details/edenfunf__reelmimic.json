@@ -1,0 +1,25 @@
+{
+ "fullName": "edenfunf/reelmimic",
+ "whoItsFor": "Creators and developers who want to turn a reference video into a new animated video in the same visual style, and who are comfortable running Claude Code or Codex locally with Node.js, Python, and FFmpeg installed.",
+ "useCases": [
+  "Make a music video or short animation that matches the editing rhythm and look of a reference clip",
+  "Produce a narrated comic or explainer in a chosen 2D style such as watercolor, pixel art, or anime cel",
+  "Generate a new video from a reference link or file plus a one-line brief, then review and comment on the result"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22.18+, Python 3.10+, FFmpeg, Chrome, and Claude Code or Codex CLI (logged in)",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/edenfunf/reelmimic.git && cd reelmimic",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "cdfb4dc7eb85",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:44.794Z"
+}

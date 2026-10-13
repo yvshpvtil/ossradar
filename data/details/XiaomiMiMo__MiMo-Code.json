@@ -1,0 +1,25 @@
+{
+ "fullName": "XiaomiMiMo/MiMo-Code",
+ "whoItsFor": "Developers who want a terminal-native AI coding assistant that can read and write code, run commands, manage Git, and keep project memory across sessions. The README also mentions MiMo Desktop and connecting to various LLM providers.",
+ "useCases": [
+  "Read, write, and refactor code from the terminal with an AI agent",
+  "Run shell commands and manage Git workflows through natural-language requests",
+  "Delegate long-horizon or multi-step feature work to subagents and workflows such as deep-research and compose-next"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://mimo.xiaomi.com/install | bash",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "9745a768986e",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:46.089Z"
+}

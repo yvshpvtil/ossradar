@@ -1,0 +1,25 @@
+{
+ "fullName": "lucasmarkes/hairline",
+ "whoItsFor": "Developers building React or DOM-based interfaces who want decorative, interactive isometric line figures that respond to the pointer. Not stated explicitly, so this is inferred from the description.",
+ "useCases": [
+  "Adding an animated hero illustration to a React landing page",
+  "Embedding a pointer-responsive figure in a Svelte or vanilla JS site",
+  "Decorating a product page with a themed isometric line graphic"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "React 18 or later (optional peer, only for @lucasmarkes/hairline/react)",
+  "modelSizes": null
+ },
+ "installCommand": "npm i @lucasmarkes/hairline",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "00105a69a4bf",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:05.938Z"
+}

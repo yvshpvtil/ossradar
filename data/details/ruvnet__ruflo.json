@@ -1,0 +1,25 @@
+{
+ "fullName": "ruvnet/ruflo",
+ "whoItsFor": "Developers who use Claude Code or Codex and want to coordinate multiple AI agents, swarms, and persistent memory across sessions. It is also aimed at teams that need agents to collaborate across machines.",
+ "useCases": [
+  "Coordinate multiple specialized agents as a swarm on a coding task",
+  "Give Claude Code or Codex persistent memory and learning across sessions",
+  "Monitor and control agent workflows, costs, and runs in a terminal or Claude Code console"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Claude Code ≥ 2.1.287 (for the plugin install path)",
+  "modelSizes": null
+ },
+ "installCommand": "npx ruflo@latest init wizard",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "171ab506c78a",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:23.821Z"
+}

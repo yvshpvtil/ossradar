@@ -1,0 +1,25 @@
+{
+ "fullName": "franzenzenhofer/big-arrow-on-the-screen",
+ "whoItsFor": "Developers using AI coding agents such as Claude Code or Codex on macOS who need the agent to point at buttons, windows, or screen coordinates for a human to act on. It also suits anyone who wants to show someone else how to do something on their Mac.",
+ "useCases": [
+  "Pointing a human at a permission dialog's Allow button instead of leaving the agent to print instructions",
+  "Walking someone through a multi-step how-to, such as a Keynote or Finder task",
+  "Highlighting the right window or browser tab for demos, screen recordings, or PNG docs"
+ ],
+ "requirements": {
+  "os": "macOS 14+",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Xcode 16+ (only when building from source)",
+  "modelSizes": null
+ },
+ "installCommand": "brew install franzenzenhofer/tap/bigarrow",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "bf2589bc031a",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:56.988Z"
+}

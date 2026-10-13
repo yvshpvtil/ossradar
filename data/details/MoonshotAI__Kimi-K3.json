@@ -1,0 +1,25 @@
+{
+ "fullName": "MoonshotAI/Kimi-K3",
+ "whoItsFor": "Researchers, ML engineers, and developers who want to evaluate or deploy an open-weight frontier multimodal model with long context and agentic coding capabilities. The README describes a very large MoE model, so this is aimed at teams with substantial inference infrastructure.",
+ "useCases": [
+  "Long-horizon agentic coding across large repositories with terminal tool orchestration",
+  "Deep research and knowledge work producing interactive visualizations, dashboards, and documents",
+  "Multimodal reasoning over text, images, and video with a 1M-token context window"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": "2.8T total parameters (104B activated)"
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "042323c851a5",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:37.718Z"
+}

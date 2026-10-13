@@ -1,0 +1,25 @@
+{
+ "fullName": "stablyai/orca",
+ "whoItsFor": "Developers who run multiple CLI coding agents (Claude Code, Codex, OpenCode, and others) in parallel and want to manage them across isolated git worktrees in one desktop app. Also suits those who want to monitor agents from a phone or run them on remote machines.",
+ "useCases": [
+  "Fan one prompt out to several agents in separate git worktrees and compare or merge the results",
+  "Monitor and send follow-ups to running agents from the mobile companion app",
+  "Run agents on a remote machine over SSH with full file editing, git, and terminals"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "brew install --cask stablyai/orca/orca",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "fff180380dc5",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:05.933Z"
+}

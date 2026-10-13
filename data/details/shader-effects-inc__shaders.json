@@ -1,0 +1,25 @@
+{
+ "fullName": "shader-effects-inc/shaders",
+ "whoItsFor": "Frontend developers and design engineers who want to add WebGPU shader effects (gradients, glass, distortions, cursor effects) to React, Vue, Svelte, Solid, or plain JavaScript sites without writing shader code by hand.",
+ "useCases": [
+  "Add animated gradient or cursor-trail backgrounds to a landing page with a single component",
+  "Compose layered visual effects such as glass, noise, or blur by nesting components inside Shader",
+  "Export a design from the visual editor and paste the generated component tree into a framework project"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install shaders",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "90fc09ea2afc",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:10.045Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "ChromeDevTools/chrome-devtools-mcp",
+ "whoItsFor": "Developers and coding-agent users (Claude, Cursor, Copilot, Antigravity) who want their AI assistant to control and inspect a live Chrome browser for automation, debugging, and performance analysis.",
+ "useCases": [
+  "Record Chrome performance traces and extract actionable performance insights",
+  "Analyze network requests, take screenshots, and check console messages with source-mapped stack traces",
+  "Automate browser actions reliably with Puppeteer while the agent waits for results"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js LTS, Chrome current stable or newer, npm",
+  "modelSizes": null
+ },
+ "installCommand": "npx -y chrome-devtools-mcp@latest",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "6403c29bb384",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:46.655Z"
+}

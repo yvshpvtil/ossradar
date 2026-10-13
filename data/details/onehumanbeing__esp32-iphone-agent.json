@@ -1,0 +1,25 @@
+{
+ "fullName": "onehumanbeing/esp32-iphone-agent",
+ "whoItsFor": "Developers and hobbyists who want an AI model to operate a real iPhone without a Mac, Xcode, an Apple developer account, or a jailbreak. It suits anyone who can run a server on a Mac or Linux computer and flash a $7 ESP32-S3 board.",
+ "useCases": [
+  "Carrying out a text goal on a real iPhone, such as setting a daily 7:00 AM alarm",
+  "Drawing or interacting in canvas-style apps such as Whiteboard",
+  "Automating apps and games that have no automation API, since the agent only sees screen pixels"
+ ],
+ "requirements": {
+  "os": "macOS or Linux (host computer)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10, arduino-cli with ESP32 core 3.x, UxPlay (GStreamer plugins on Linux)",
+  "modelSizes": null
+ },
+ "installCommand": "python3 -m venv .venv && .venv/bin/pip install -e .",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4f35aeecda9c",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:34.954Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "oil-oil/oil-ui",
+ "whoItsFor": "Developers and designers who use AI coding agents (Claude Code, Codex, etc.) and want better UI design output, such as distinct design directions, side-by-side comparisons, and refinement against real screenshots.",
+ "useCases": [
+  "Explore several distinct design directions for a website, app, or dashboard and compare them side by side",
+  "Refine a chosen design against desktop and mobile screenshots with an agent",
+  "Recreate an existing page from a screenshot and add a mobile layout"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add oil-oil/oil-ui",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e2a199fbc7a7",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:53.927Z"
+}

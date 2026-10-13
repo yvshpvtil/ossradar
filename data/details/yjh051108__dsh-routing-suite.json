@@ -1,0 +1,25 @@
+{
+ "fullName": "yjh051108/dsh-routing-suite",
+ "whoItsFor": "Developers running the DSH agent runtime who want runtime injection and task-aware reasoning-mode routing, installed as a bundle of injector, router presets, and a graded task protocol.",
+ "useCases": [
+  "Hot-reload and inject runtime management tools into a running DSH session without restarting",
+  "Route each task to a reasoning mode (spec, react, mixed, or weak) with a per-model persona preset",
+  "Run a graded two-level task protocol with checkpoints, a red-team gate, and an audit endpoint"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "DSH >=0.1.0-rc.6 <0.2.0 (dsh CLI)",
+  "modelSizes": null
+ },
+ "installCommand": "dsh plugin --profile web add github:yjh051108/dsh-routing-suite",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "456a400daa60",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:31.960Z"
+}

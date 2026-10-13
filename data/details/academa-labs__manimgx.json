@@ -1,0 +1,25 @@
+{
+ "fullName": "academa-labs/manimgx",
+ "whoItsFor": "Developers and AI agents who want to produce 3D and math animations using Manim's Python API, but need faster rendering than Manim CE, ManimGL, or Blender.",
+ "useCases": [
+  "Render 1080p60 math animations such as formulas, plots, and transformations from Python scripts",
+  "Build 3D scenes with cameras, surfaces, and meshes that can run in a browser via WebGPU",
+  "Let AI agents generate and render animation videos from prompts"
+ ],
+ "requirements": {
+  "os": "macOS, Linux, or Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.13",
+  "modelSizes": null
+ },
+ "installCommand": "pip install manimgx",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "2232038ecaff",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:41.818Z"
+}

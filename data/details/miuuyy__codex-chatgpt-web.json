@@ -1,0 +1,25 @@
+{
+ "fullName": "miuuyy/codex-chatgpt-web",
+ "whoItsFor": "Developers who already use Codex and have a ChatGPT Web account (including Pro) and want to use ChatGPT Web models inside Codex's model picker without spending Codex quota. Full harness mode is aimed at users who want ChatGPT to reach their local Codex tools via MCP.",
+ "useCases": [
+  "Use GPT-6 Sol or GPT-5.6 Sol from Codex's native model picker with ChatGPT Web's separate usage limits",
+  "Let ChatGPT Web models read and modify files, run terminal commands, and use tools in the current Codex task via MCP (Full harness)",
+  "Keep the Codex interface, tasks, images, and streaming while using ChatGPT Web models"
+ ],
+ "requirements": {
+  "os": "macOS 13+ (arm64/x64), Windows x64, or Linux x64",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://github.com/miuuyy/codex-chatgpt-web/releases/latest/download/install-launcher.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4c2dd9ab6b79",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:36.880Z"
+}

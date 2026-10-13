@@ -1,0 +1,25 @@
+{
+ "fullName": "FareedKhan-dev/kimi-k3-in-c",
+ "whoItsFor": "Developers, researchers and students who want to run or study a very large model on ordinary hardware, or who want to read a small, portable C99 inference engine. The README is built around memory streaming and the path from checkpoint to generated text.",
+ "useCases": [
+  "Running a 2.78T-parameter model for inference on a laptop-class CPU with 8 GB of RAM",
+  "Studying how large-model inference works, from checkpoint headers through attention and expert routing",
+  "Testing and validating a portable C99 inference engine with no BLAS, framework or GPU dependency"
+ ],
+ "requirements": {
+  "os": "Linux x86-64 (reference); macOS arm64 and Windows x86-64 also build and pass every gate",
+  "ramMinGB": 8,
+  "ramRecommendedGB": null,
+  "gpuRequired": false,
+  "vramMinGB": null,
+  "diskGB": 1700,
+  "runtime": "GCC ≥ 9 or Clang ≥ 10, GNU make or CMake; Python 3.9+ for download, pack and analysis tools",
+  "modelSizes": "2.78T"
+ },
+ "installCommand": "git clone https://github.com/FareedKhan-dev/kimi-k3-in-c.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4909b2900fa9",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:20.877Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "yetone/magpie",
+ "whoItsFor": "Developers who use more than one AI coding agent, provider, or subscription account and want to switch models from one place. The README says it isn't needed if you use a single agent on its vendor's own plan.",
+ "useCases": [
+  "Run Claude Code on Kimi or DeepSeek models, or Codex on DeepSeek",
+  "Fail over to another account or model when a subscription quota runs out",
+  "Pick the model for each agent from one menu bar app or CLI"
+ ],
+ "requirements": {
+  "os": "macOS, Windows, Linux, Docker, Termux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Go (for go install), Docker (optional), Bun (downloaded automatically for plugins)",
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://usemagpie.ai/install.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "f5ea9e7bf19f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:43.896Z"
+}

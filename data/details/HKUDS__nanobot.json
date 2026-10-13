@@ -1,0 +1,25 @@
+{
+ "fullName": "HKUDS/nanobot",
+ "whoItsFor": "Developers and technical users who want a self-hosted, customizable personal AI agent they can run in a browser, terminal, or chat app. They need their own model provider account or a local model server.",
+ "useCases": [
+  "Summarize or work with local PDF, Word, Excel, and PowerPoint files",
+  "Chat with the agent through Telegram, Discord, Slack, WeChat, or Email",
+  "Run scheduled automations and long-horizon tasks with saved memory"
+ ],
+ "requirements": {
+  "os": "macOS 13+, glibc 2.17+ Linux, or Windows x64 (for bundled-TUI platform wheels)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11 (Git and Bun for source installs)",
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/HKUDS/nanobot/main/scripts/install.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "acebfde66ea1",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:28.696Z"
+}

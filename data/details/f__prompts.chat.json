@@ -1,0 +1,25 @@
+{
+ "fullName": "f/prompts.chat",
+ "whoItsFor": "Developers and AI practitioners who want a shared, searchable library of prompts for ChatGPT, Claude, Gemini, and other chat models, and organizations that want to self-host a private prompt library.",
+ "useCases": [
+  "Browse and copy community-written prompts for everyday AI tasks",
+  "Self-host a private, branded prompt library for a team or organization",
+  "Use prompts.chat as an MCP server or CLI to pull prompts into AI tools"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npx prompts.chat new my-prompt-library",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3ca0e06a0ec0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:13.091Z"
+}

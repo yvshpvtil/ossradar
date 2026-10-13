@@ -1,0 +1,25 @@
+{
+ "fullName": "heygen-com/hyperframes",
+ "whoItsFor": "Developers and AI coding-agent users who want to generate MP4 videos from HTML, CSS, and animations, either locally with the CLI or through agent skills.",
+ "useCases": [
+  "Create product intro or launch videos from a website or brief",
+  "Turn a GitHub pull request into a changelog or feature-reveal video",
+  "Add captions or motion graphics to existing video footage"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js ≥ 22",
+  "modelSizes": null
+ },
+ "installCommand": "claude plugin marketplace add heygen-com/hyperframes",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "84470d51b750",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:41.623Z"
+}

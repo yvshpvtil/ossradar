@@ -1,0 +1,25 @@
+{
+ "fullName": "decolua/9router",
+ "whoItsFor": "Developers who use AI coding tools such as Claude Code, Codex, Cursor, or Cline and want to avoid rate limits and token costs by routing requests to free or cheap models.",
+ "useCases": [
+  "Keep coding when subscription quotas run out by auto-falling back to cheaper or free models",
+  "Connect Claude Code, Cursor, or Cline to free Claude, GPT, or Gemini models through one local endpoint",
+  "Cut tool-output token usage by 20-40% with the RTK token saver before requests reach providers"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "npm, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g 9router",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "344c786fc7f0",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:49.796Z"
+}

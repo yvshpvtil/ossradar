@@ -1,0 +1,25 @@
+{
+ "fullName": "trycompai/crm",
+ "whoItsFor": "Teams and self-hosters who want a CRM that an AI agent can run and keep up to date, rather than a database with a chat box added. It suits people comfortable deploying a Bun/Postgres monorepo.",
+ "useCases": [
+  "Have an agent research contacts and companies and record only evidence-backed facts",
+  "Self-host a single-tenant CRM with Google or Microsoft sign-in and mailbox sync",
+  "Review what the agent did and answer its questions from each contact's Agent tab"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Bun, Docker",
+  "modelSizes": null
+ },
+ "installCommand": "bun install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "eb0b9d16fc8f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:17.290Z"
+}

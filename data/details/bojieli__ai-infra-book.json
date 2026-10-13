@@ -1,0 +1,25 @@
+{
+ "fullName": "bojieli/ai-infra-book",
+ "whoItsFor": "已经调用过模型 API 或在本地运行过模型、想弄清模型为什么慢以及如何降低成本的开发者。系统、网络、芯片方向的工程师，以及相关研究人员和学生也适合阅读。",
+ "useCases": [
+  "用配套计算工具复算书中的显存、算力和带宽数字",
+  "用 calc.py 估算指定模型在给定输入长度下的逐算子资源需求",
+  "对照配套实验与结果记录，检验推理和训练系统的设计权衡"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10（静态计算仅需标准库）；Git LFS（可选，用于下载论文和大型数据）；本地构建 PDF/EPUB 需 Pandoc、XeLaTeX 和字体",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/bojieli/ai-infra-book.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e0f2c800d74b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:22.382Z"
+}

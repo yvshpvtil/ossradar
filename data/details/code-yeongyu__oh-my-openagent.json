@@ -1,0 +1,25 @@
+{
+ "fullName": "code-yeongyu/oh-my-openagent",
+ "whoItsFor": "Developers who want an AI coding agent that runs multi-model, parallel agent workflows from a single command. The README is mostly marketing copy and does not state concrete setup requirements.",
+ "useCases": [
+  "Automating multi-step coding tasks in a codebase with an agent that plans, implements, and verifies changes",
+  "Running large parallel research or pipeline jobs split across several models",
+  "Migrating existing OpenCode or LazyCodex setups to OmO while keeping provider keys and MCP servers"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://get.omo.dev/install.sh | bash",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "f389055c8895",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:57.753Z"
+}

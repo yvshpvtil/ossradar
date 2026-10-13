@@ -1,0 +1,25 @@
+{
+ "fullName": "Niko1221/Strata",
+ "whoItsFor": "Owners of a gaming PC with an NVIDIA or AMD graphics card (12 GB VRAM or more) and 32 GB or more of RAM, running Windows or Linux, who want a large AI model running privately on their own machine and connected to their apps or coding agents.",
+ "useCases": [
+  "Private local chat and writing, with no data leaving the PC",
+  "Connecting apps and coding agents to localhost via OpenAI- or Anthropic-compatible APIs",
+  "Reading pictures and working through long documents or code"
+ ],
+ "requirements": {
+  "os": "Windows 10/11 or Linux",
+  "ramMinGB": 32,
+  "ramRecommendedGB": 64,
+  "gpuRequired": true,
+  "vramMinGB": 12,
+  "diskGB": 80,
+  "runtime": null,
+  "modelSizes": "125B parameters (quantized variants Q2_0, IQ2_XS, IQ3_XXS, IQ3_S, UD-IQ4_XS, UD-Q4_K_XL, plus Coder)"
+ },
+ "installCommand": "./setup.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "7adf4864bfae",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:28:24.466Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "NVIDIA/NemoClaw",
+ "whoItsFor": "Developers and teams who want to run AI agents (OpenClaw, Hermes, or LangChain Deep Agents) in sandboxed environments with managed inference and tighter security controls. Also relevant to contributors working on the NemoClaw reference stack.",
+ "useCases": [
+  "Run a coding or assistant agent inside an OpenShell sandbox with network policy controls",
+  "Route agent inference through a managed or provider-backed endpoint",
+  "Persist and manage agent sandbox state and lifecycle through the NemoClaw CLI"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3a69b091371f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:51.344Z"
+}

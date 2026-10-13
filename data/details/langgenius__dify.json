@@ -1,0 +1,25 @@
+{
+ "fullName": "langgenius/dify",
+ "whoItsFor": "Developers and teams who want to build, test, and deploy LLM applications such as agentic workflows and RAG pipelines, whether they run Dify Cloud or self-host it.",
+ "useCases": [
+  "Build and test agentic workflows and RAG pipelines on a visual canvas",
+  "Integrate and compare hundreds of proprietary and open-source LLMs through one interface",
+  "Monitor app logs and performance to improve prompts and datasets in production"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": 4,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker, Docker Compose v2.24.0 or later",
+  "modelSizes": null
+ },
+ "installCommand": "docker compose up -d",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "11d3f69f4b32",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:07.658Z"
+}

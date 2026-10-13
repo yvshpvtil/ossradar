@@ -1,0 +1,25 @@
+{
+ "fullName": "firecrawl/anydoc",
+ "whoItsFor": "Developers and teams building pipelines or AI agents that ingest mixed office documents and need consistent, LLM-ready Markdown output, whether in Rust, Node.js, Python, or the browser.",
+ "useCases": [
+  "Converting Word, Excel, PowerPoint, and PDF files into Markdown for LLM or RAG ingestion",
+  "Giving AI agents the ability to read office documents they encounter",
+  "Normalizing mixed-format document batches into one consistent Markdown output"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install @firecrawl/anydoc",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "bedaa9a9693c",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:21.702Z"
+}

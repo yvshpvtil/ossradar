@@ -1,0 +1,25 @@
+{
+ "fullName": "ZhuLinsen/daily_stock_analysis",
+ "whoItsFor": "Individual investors and developers who want an LLM-powered daily analysis of a personal watchlist across A-share, Hong Kong, US, Japan, Korean and Taiwan markets, delivered to chat or email channels.",
+ "useCases": [
+  "Automatically analyze a watchlist each day and push the decision dashboard to WeChat Work, Feishu, Telegram, Discord, Slack or email",
+  "Run manual analyses, review historical reports and backtests in the local web workbench",
+  "Ask multi-turn strategy questions to the built-in agent (moving averages, Chan theory, waves, trends)"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10, Docker (optional)",
+  "modelSizes": null
+ },
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5a60ac804138",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:56.322Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "rtk-ai/rtk",
+ "whoItsFor": "Developers who run AI coding agents such as Claude Code, Cursor, or Codex and want to cut the token cost of shell command output the agent reads. It works as a drop-in proxy for common dev commands.",
+ "useCases": [
+  "Compressing git status, diff, and log output before an AI agent reads it",
+  "Showing only failures from test runners like cargo test, pytest, and jest",
+  "Condensing lint, build, and container output such as tsc, ruff, and docker ps"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "brew install rtk",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "25a23d61598b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:31.102Z"
+}

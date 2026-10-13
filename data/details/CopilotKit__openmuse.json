@@ -1,0 +1,25 @@
+{
+ "fullName": "CopilotKit/openmuse",
+ "whoItsFor": "Developers who want to self-host or build on a personal agent app with a browser, terminal, and file tools. It is alpha software, so it suits people comfortable configuring model keys, CopilotKit Intelligence, and optional Google OAuth.",
+ "useCases": [
+  "Research public web pages in a persistent browser and summarize the results",
+  "Turn an email attachment into a filled PDF form and a reviewed reply",
+  "Track public pages for changes or USD price thresholds with alerts"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node 24 LTS, pnpm 11.19.0",
+  "modelSizes": null
+ },
+ "installCommand": "pnpm install --frozen-lockfile",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "7d91fe9acd82",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:53.800Z"
+}

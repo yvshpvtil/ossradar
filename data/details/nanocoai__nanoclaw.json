@@ -1,0 +1,25 @@
+{
+ "fullName": "nanocoai/nanoclaw",
+ "whoItsFor": "Individual developers and power users who want a personal AI assistant that runs agents in isolated containers, reachable through messaging apps, and that they can read and modify themselves. Teams wanting a hosted product with no code changes are not the target.",
+ "useCases": [
+  "Send a daily briefing or sales-pipeline overview to a messaging app on a schedule",
+  "Review git history weekly and update a README when it drifts",
+  "Compile news from Hacker News and TechCrunch into a Monday morning briefing"
+ ],
+ "requirements": {
+  "os": "macOS or Linux (Windows via WSL2)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js 22+, pnpm 10+, Docker (Docker Desktop on macOS/Windows, Docker Engine on Linux)",
+  "modelSizes": null
+ },
+ "installCommand": "bash nanoclaw.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "338cfaa19b9d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:21.267Z"
+}

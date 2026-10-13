@@ -1,0 +1,25 @@
+{
+ "fullName": "asgeirtj/system_prompts_leaks",
+ "whoItsFor": "Researchers, journalists, and developers who want to study or compare the system prompts behind popular chatbots and coding agents from Anthropic, OpenAI, Google, xAI, and others.",
+ "useCases": [
+  "Compare how different AI labs instruct their models on tone, tools, and safety",
+  "Study Claude Code, Codex, and other agent prompts when building similar tooling",
+  "Track how a chatbot's system prompt changes across model versions"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "3b67973d1e5b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:53.925Z"
+}

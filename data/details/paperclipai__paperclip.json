@@ -1,0 +1,25 @@
+{
+ "fullName": "paperclipai/paperclip",
+ "whoItsFor": "Teams and individuals who want to run a business with a team of AI agents, using one dashboard to assign goals, track work and costs, and manage agent roles. It is also aimed at people coordinating many agent tools (such as Claude Code, Codex, or Cursor) who want a task-manager-style workflow.",
+ "useCases": [
+  "Assign business goals to a team of AI agents and track their work from one dashboard",
+  "Monitor agent spend and enforce company, agent, or project budgets",
+  "Run recurring work such as support, social posts, or reports on a schedule with run history"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js",
+  "modelSizes": null
+ },
+ "installCommand": "npx paperclipai@latest onboard --yes",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a4e05af0e979",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:01.798Z"
+}

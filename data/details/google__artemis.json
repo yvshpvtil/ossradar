@@ -1,0 +1,25 @@
+{
+ "fullName": "google/artemis",
+ "whoItsFor": "QA and mobile test engineers, and developers who want AI coding assistants to drive and verify Android apps on real devices. It also suits teams adding phone automation to pytest or CI pipelines.",
+ "useCases": [
+  "Running natural-language test scenarios on a connected Android phone or emulator",
+  "Letting AI IDEs such as Claude Code or Antigravity control a device and collect Logcat output and screenshots",
+  "Exploratory stability testing and AndroidWorld benchmark runs"
+ ],
+ "requirements": {
+  "os": "macOS, Linux, Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.12, uv",
+  "modelSizes": null
+ },
+ "installCommand": "./start.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "d5f3a7288483",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:37.027Z"
+}

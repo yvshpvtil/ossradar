@@ -1,0 +1,25 @@
+{
+ "fullName": "Ryze-AI-Adgent/open-seo-mcp-skills",
+ "whoItsFor": "Developers and marketers using Claude who want SEO and GEO data (Search Console, GA4, keyword and backlink data) through an MCP server and ready-made skills. It is aimed at people who want to run audits and keyword research from Claude without a paid SEO tool subscription.",
+ "useCases": [
+  "Run a full SEO site audit covering indexation, CTR anomalies, and decaying pages",
+  "Track rank movers between two periods using Search Console data",
+  "Find competitor keywords and backlinks that the user is missing"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "019cdf74f8db",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:28.932Z"
+}

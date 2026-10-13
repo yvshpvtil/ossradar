@@ -1,0 +1,25 @@
+{
+ "fullName": "liseami/CCBaga",
+ "whoItsFor": "People living or traveling abroad who manage their own Claude identities, Claude Code and Claude Desktop local state, and want to verify their browser and network environment. The README states it is not for use that violates Anthropic's terms of service.",
+ "useCases": [
+  "Archive and switch local Claude Code and Claude Desktop identities",
+  "Rotate a companion browser's fingerprint and verify its environment",
+  "Align system timezone and language settings with a selected region"
+ ],
+ "requirements": {
+  "os": "macOS 12 or later on Apple Silicon; Linux x86_64 with GTK 3 and WebKitGTK 4.1; Windows 10/11 x86_64",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Source builds only: stable Rust, Bun, Python 3, Xcode Command Line Tools (macOS)",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add liseami/CCBaga --skill ccbaga-network --global",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e6a223252304",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:34.892Z"
+}

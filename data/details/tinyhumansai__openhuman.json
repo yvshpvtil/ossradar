@@ -1,0 +1,25 @@
+{
+ "fullName": "tinyhumansai/openhuman",
+ "whoItsFor": "Developers who want to run large fleets of AI agents cheaply on small servers or embed an agent harness in Rust, and desktop users who want a local agent app with memory, browser and desktop control, and voice.",
+ "useCases": [
+  "Run hundreds of agents side by side on a small VPS",
+  "Use a desktop agent app with built-in memory, browser control, and voice",
+  "Embed an agent in your own Rust code as a library"
+ ],
+ "requirements": {
+  "os": "macOS, Windows, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.sh | bash",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "63014a51cfe3",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:42.046Z"
+}

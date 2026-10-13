@@ -1,0 +1,25 @@
+{
+ "fullName": "XiaoDuoYa/codex-with-chatgpt",
+ "whoItsFor": "Developers who already pay for a ChatGPT Plus/Pro subscription and use Codex as their coding agent, and want ChatGPT's web quota to handle planning and review while Codex keeps execution. The README targets a non-technical audience as well, via a one-paste install.",
+ "useCases": [
+  "Use ChatGPT web as the planning and review brain for Codex coding sessions",
+  "Let ChatGPT read specific workspace files through a read-only OAuth-protected MCP connection",
+  "Have ChatGPT independently review Codex's git diffs and test results after execution"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js >= 20, git",
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5bfd74edfb57",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:01.496Z"
+}

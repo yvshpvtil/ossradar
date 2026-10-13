@@ -1,0 +1,25 @@
+{
+ "fullName": "sickn33/agentic-awesome-skills",
+ "whoItsFor": "Developers who use Codex, Claude, or other coding agents and want the agent to search a local catalog of 2,687+ SKILL.md playbooks and assemble an exact, reviewable skill set. Core does not rank or recommend skills.",
+ "useCases": [
+  "Search and read the complete local catalog of SKILL.md skill files",
+  "Save the exact skill selection an agent chose and validate its stack manifest",
+  "Preview an install plan before changing a target skill directory"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "npm (Node.js version not stated)",
+  "modelSizes": null
+ },
+ "installCommand": "npx agentic-awesome-skills --path ./my-skills",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5abd4fca0f58",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:46.829Z"
+}

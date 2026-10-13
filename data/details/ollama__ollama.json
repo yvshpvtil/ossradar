@@ -1,0 +1,25 @@
+{
+ "fullName": "ollama/ollama",
+ "whoItsFor": "Developers and engineers who want to run open LLMs locally or on their own servers, and connect them to apps, coding agents, or the Ollama REST and Python/JavaScript APIs.",
+ "useCases": [
+  "Chat with a local open model from the terminal using `ollama run <model>`",
+  "Serve a model over the REST API at localhost:11434 for an app or script",
+  "Connect coding agents such as Claude Code, Codex, or OpenCode to a local model via `ollama launch`"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://ollama.com/install.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "9d1e68b0f5d8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:15.453Z"
+}

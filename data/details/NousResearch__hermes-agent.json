@@ -1,0 +1,25 @@
+{
+ "fullName": "NousResearch/hermes-agent",
+ "whoItsFor": "Developers and power users who want a self-improving, persistent AI agent that runs across terminals and messaging platforms, and can use many LLM providers.",
+ "useCases": [
+  "Run a terminal chat agent that learns skills and remembers context across sessions",
+  "Operate the agent through Telegram, Discord, Slack, or other messaging gateways",
+  "Schedule unattended automations such as daily reports and nightly backups"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4ab412d23539",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:43.853Z"
+}

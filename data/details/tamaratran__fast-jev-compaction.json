@@ -1,0 +1,25 @@
+{
+ "fullName": "tamaratran/fast-jev-compaction",
+ "whoItsFor": "Developers using Claude Code who want compaction to keep exact file paths, errors, and commands instead of a lossy summary, and Node/TypeScript developers who want to prune long agent transcripts in their own apps.",
+ "useCases": [
+  "Replace Claude Code's built-in /compact summary with the original messages, minus stale tool calls and results",
+  "Drop or truncate old tool results from long agent transcripts while keeping user and assistant text verbatim",
+  "Compact message histories in an npm-based app by passing a transcript to compactMessages"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Claude Code 2.1.274+ for the plugin; npm package; TYPESAFE_API_KEY",
+  "modelSizes": null
+ },
+ "installCommand": "npm install fast-jev-compaction",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "9c3b301faf30",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:35.027Z"
+}

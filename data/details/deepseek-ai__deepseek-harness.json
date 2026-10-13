@@ -1,0 +1,25 @@
+{
+ "fullName": "deepseek-ai/deepseek-harness",
+ "whoItsFor": "Developers who want to run or build AI agents on a plugin-based harness, including those who want a local Web UI and those who plan to write or share plugins for it.",
+ "useCases": [
+  "Run the DeepSeek Harness Web UI locally with npx",
+  "Build custom agent capabilities as plugins on the Cordis-based architecture",
+  "Publish and discover community plugins tagged dsh-plugin"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js; pnpm for running from source",
+  "modelSizes": null
+ },
+ "installCommand": "npx @deepseek-ai/dsh web",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "50f2faa256f5",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:12.678Z"
+}

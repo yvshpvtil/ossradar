@@ -1,0 +1,25 @@
+{
+ "fullName": "browser-use/browser-use",
+ "whoItsFor": "Python and TypeScript developers who want to run an open-source AI agent that controls a browser from their own code, or give an existing agent browser access through the CLI.",
+ "useCases": [
+  "Automate multi-step web tasks such as booking appointments, filling forms, and handling CAPTCHAs",
+  "Look up and extract information from websites with an AI agent",
+  "Add custom Python tools to a browser agent for application-specific actions"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11",
+  "modelSizes": null
+ },
+ "installCommand": "uv add browser-use",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "52a26f6339ac",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:57.517Z"
+}

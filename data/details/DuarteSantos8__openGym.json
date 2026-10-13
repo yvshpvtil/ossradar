@@ -1,0 +1,25 @@
+{
+ "fullName": "DuarteSantos8/openGym",
+ "whoItsFor": "Developers and lifting enthusiasts who want a self-hosted gym and body-weight tracker on their own server, with their data kept in a folder they control and no subscription or telemetry.",
+ "useCases": [
+  "Plan weekly routines and run guided workouts with logged sets, rest timers, and PR detection",
+  "Track body weight and progress photos, and review muscle volume, recovery, and 1RM trends",
+  "Import training history from FitNotes, Strong, or Hevy and sync between phone and laptop behind passkey login"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker with Compose",
+  "modelSizes": null
+ },
+ "installCommand": "docker compose up -d",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "c194b55210c8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:03.615Z"
+}

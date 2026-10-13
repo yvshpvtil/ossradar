@@ -1,0 +1,25 @@
+{
+ "fullName": "w16638771062/mccarbon",
+ "whoItsFor": "People who want to estimate the carbon footprint of their own McDonald's dining, using their order history from McDonald's MCP, and see which changes would cut emissions. The offline mock mode also suits anyone who wants to try it without a token.",
+ "useCases": [
+  "Estimate your yearly dining carbon footprint from real McDonald's order history",
+  "Compare meal emissions and simulate swaps such as beef to chicken or delivery to pickup",
+  "Generate a single-file offline HTML carbon report to view or share"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.9",
+  "modelSizes": null
+ },
+ "installCommand": "pip install .",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "1c585ecfcd2c",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:36.266Z"
+}

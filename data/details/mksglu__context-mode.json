@@ -1,0 +1,25 @@
+{
+ "fullName": "mksglu/context-mode",
+ "whoItsFor": "Developers who use AI coding agents such as Claude Code, Gemini CLI, or VS Code Copilot and want to stop MCP tool output from filling the context window while keeping session state across compaction.",
+ "useCases": [
+  "Keeping large MCP tool outputs, such as Playwright snapshots, GitHub issue lists, and access logs, out of the context window",
+  "Preserving session state (file edits, tasks, errors, decisions) across conversation compaction via SQLite FTS5 and BM25 search",
+  "Having the agent write a script that analyzes files and prints only the result, instead of reading every file into context"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js >= 22.5 (or Bun) for Gemini CLI and VS Code Copilot; Claude Code v1.0.33+ for the plugin install",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g context-mode",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "8ccb3099db06",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:25.192Z"
+}

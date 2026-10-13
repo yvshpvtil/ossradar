@@ -1,0 +1,25 @@
+{
+ "fullName": "HelixDB/helix-foundry",
+ "whoItsFor": "Developers and teams who want to connect company tools like databases, Stripe, WorkOS, PostHog, files and APIs into one queryable ontology, running locally with no accounts and no hosting.",
+ "useCases": [
+  "Unify customer and account records across Stripe, WorkOS, and the production database",
+  "Ask natural-language questions of company data with SQL-backed, cited answers",
+  "Explore support tickets, subscriptions, invoices and SSO connections as one connected graph"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker with Compose v2 plugin, git, bash, openssl",
+  "modelSizes": "qwen3:4b (default local model, ~2.5 GB download)"
+ },
+ "installCommand": "./scripts/setup.sh --compose",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "45012f94f2be",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:01.267Z"
+}

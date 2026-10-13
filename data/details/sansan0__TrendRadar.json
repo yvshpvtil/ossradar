@@ -1,0 +1,25 @@
+{
+ "fullName": "sansan0/TrendRadar",
+ "whoItsFor": "Developers, ops folks, and individual users who want to monitor trending topics and public opinion without manual browsing. It suits anyone who wants keyword-filtered hot-topic digests pushed to chat or email channels, and who wants to self-host the data.",
+ "useCases": [
+  "Aggregate multi-platform trending news and RSS feeds, filtered by keyword",
+  "Receive AI-filtered, translated, and summarized news briefs on WeChat, Feishu, DingTalk, Telegram, email, or Slack",
+  "Run AI-driven sentiment and trend analysis over collected data through MCP clients"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker",
+  "modelSizes": null
+ },
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "c9fabdf26acb",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:35.083Z"
+}

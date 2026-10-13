@@ -1,0 +1,25 @@
+{
+ "fullName": "MiniMax-AI/MiniMax-H3",
+ "whoItsFor": "Developers and teams building video generation into products or pipelines, and creators who want H3 prompts written for them. The README also covers the open-weight release for those who want to fine-tune or self-host.",
+ "useCases": [
+  "Generate short videos with native stereo audio from text or first/last-frame images",
+  "Combine up to 12 reference images, video clips, and audio clips in omni-reference mode",
+  "Write H3 prompts with the bundled h3-prompt-writing agent skill"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": "33B (H3-Omni-Transformer)"
+ },
+ "installCommand": "npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "482fa713d68f",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:59.547Z"
+}

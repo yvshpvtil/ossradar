@@ -1,0 +1,25 @@
+{
+ "fullName": "virgiliojr94/book-to-skill",
+ "whoItsFor": "Developers and teams who want to query technical books, internal docs, brand guidelines, research papers, or specs from inside their coding agent instead of searching PDFs or re-reading them. Users of Claude Code, Codex, Copilot CLI, Amp, OpenCode, OpenClaw, or Hermes Agent are the target.",
+ "useCases": [
+  "Turn a technical book PDF into a skill and ask it questions while coding, such as `/my-book replication`",
+  "Fold a team's docs folder (ADRs, runbooks, onboarding guides) into one queryable skill",
+  "Merge a stack of research papers and personal notes into a single unified skill that updates as new material arrives"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add virgiliojr94/book-to-skill",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "ba84edaf0835",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:11.132Z"
+}

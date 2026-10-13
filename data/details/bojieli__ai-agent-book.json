@@ -1,0 +1,25 @@
+{
+ "fullName": "bojieli/ai-agent-book",
+ "whoItsFor": "面向希望系统理解 AI Agent 设计原理与工程实践的开发者和学习者，需要能读懂并修改中等复杂度的 Python 代码，并且用过 ChatGPT、Claude 等 LLM 产品。",
+ "useCases": [
+  "理解 Agent = LLM + 上下文 + 工具 的设计原理，并按章学习上下文工程、记忆、工具、评估等主题",
+  "运行 109 个配套实验，亲手复现各章的 Agent 设计",
+  "借助 coding agent 从头实现一个类似 Claude Code 的 coding agent"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.11–3.13",
+  "modelSizes": null
+ },
+ "installCommand": "uv sync --locked --extra ch1",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "eed8f3398e12",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:58.369Z"
+}

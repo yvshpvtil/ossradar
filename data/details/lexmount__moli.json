@@ -1,0 +1,25 @@
+{
+ "fullName": "lexmount/moli",
+ "whoItsFor": "Developers and AI agent builders who need a lightweight, production-ready headless browser to fetch, extract, and automate web pages through CDP, WebDriver, or the CLI.",
+ "useCases": [
+  "Fetch and extract web pages as Markdown or semantic text for agent retrieval pipelines",
+  "Drive browser automation for AI agents via CDP (e.g. Playwright connectOverCDP)",
+  "Run crawling and evaluation workloads with low memory footprint and no Chromium install"
+ ],
+ "requirements": {
+  "os": "Linux, macOS, Windows",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl --proto '=https' --tlsv1.2 -fsSL \\\n  https://github.com/lexmount/moli/releases/latest/download/moli-installer.sh | sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a375981f11a9",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:41.660Z"
+}

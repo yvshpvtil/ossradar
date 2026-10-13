@@ -1,0 +1,25 @@
+{
+ "fullName": "google-gemini/gemini-cli",
+ "whoItsFor": "Developers who live in the terminal and want a free, lightweight way to use Gemini for coding, codebase Q&A, scripting, and workflow automation. Also suited to teams that want Gemini inside GitHub workflows or MCP-based tooling.",
+ "useCases": [
+  "Query, edit, and debug large codebases with natural language",
+  "Generate new apps from PDFs, images, or sketches and automate ops tasks like PR queries or rebases",
+  "Run non-interactively in scripts for workflow automation"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @google/gemini-cli",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5d945c0df717",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:23.124Z"
+}

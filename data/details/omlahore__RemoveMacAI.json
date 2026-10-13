@@ -1,0 +1,25 @@
+{
+ "fullName": "omlahore/RemoveMacAI",
+ "whoItsFor": "Mac users on macOS 27 with Apple silicon who want to turn off Apple Intelligence, analytics, ads and pop-ups, and Mac admins who need to deploy those settings through an MDM.",
+ "useCases": [
+  "Turn off Apple Intelligence and delete its models to free disk space",
+  "Stop Mac analytics, personalized ads and system pop-ups",
+  "Deploy the same settings to many Macs with a configuration profile"
+ ],
+ "requirements": {
+  "os": "macOS 27 on Apple silicon (macOS 26 and earlier not supported)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/omlahore/RemoveMacAI/main/install.sh | bash -s app",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "90b99e2265b8",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:20.228Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "Jakeschincariol/replica-skill",
+ "whoItsFor": "Developers and founders who want to study an existing app and rebuild its features and flows as their own product. It suits people who want a clone they can rebrand and sell.",
+ "useCases": [
+  "Reverse-engineer an app's screens, flows and data model into a recon map",
+  "Rebuild the clone screen by screen, then test it for bugs and score parity against the original",
+  "Rebrand the clone, write its landing page and store listing, and deploy it to your own domain"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.8",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/Jakeschincariol/replica-skill.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "976a5f2ca16d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:51.588Z"
+}

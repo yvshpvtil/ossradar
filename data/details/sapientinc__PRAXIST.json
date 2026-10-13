@@ -1,0 +1,25 @@
+{
+ "fullName": "sapientinc/PRAXIST",
+ "whoItsFor": "Researchers and ML engineers with an already-runnable project that has a measurable objective and an unknown best path forward, who want an autonomous system to run the iterative research loop.",
+ "useCases": [
+  "Optimize a measurable metric in an existing runnable research project across multiple generations",
+  "Run parallel research peers that explore competing hypotheses and implementations concurrently",
+  "Produce auditable negative-result evidence packages when a research direction does not improve"
+ ],
+ "requirements": {
+  "os": "Linux (continuously release-tested); macOS and other CPython 3.11+ environments are a compatibility target",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "CPython 3.11+",
+  "modelSizes": null
+ },
+ "installCommand": "python3 -m pip install --index-url https://pypi.org/simple \"praxist[agents,codex]\" && praxist setup --interactive --install-skills codex",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "933b816d7541",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:33.023Z"
+}

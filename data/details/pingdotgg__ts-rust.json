@@ -1,0 +1,25 @@
+{
+ "fullName": "pingdotgg/ts-rust",
+ "whoItsFor": "TypeScript developers and teams who want a faster, drop-in replacement for the tsc command line, language server, or API. It also suits Effect projects, which get the Effect language service diagnostics without a second compiler.",
+ "useCases": [
+  "Type checking existing TypeScript projects faster with the tsc-compatible CLI (npx tsc-rs -p tsconfig.json)",
+  "Running Effect language service diagnostics in the same compile as TypeScript checks",
+  "Powering a fast TypeScript language server or type checker that can run in WASM"
+ ],
+ "requirements": {
+  "os": "Linux x64 and arm64, macOS arm64; macOS x64, Windows x64 and Windows arm64 from the first release after 0.2.0",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "npm install -D tsc-rs",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e6d7dd174b3d",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:35.552Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "zai-org/ZCode",
+ "whoItsFor": "Developers who want an AI coding workbench, whether as a desktop app, a browser UI, or a terminal agent. It also suits contributors working on the client, server, or Agent CLI source in this repo.",
+ "useCases": [
+  "Run an AI coding agent from the desktop app to work on local projects",
+  "Start a browser-based coding workspace with `zcode --web` on a chosen project",
+  "Drive an AI coding agent from the terminal TUI"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Git, Node.js 24.14.0, pnpm 10.33.2",
+  "modelSizes": null
+ },
+ "installCommand": "pnpm bootstrap",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "806302f2b5ce",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:21.920Z"
+}

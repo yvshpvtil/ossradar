@@ -1,0 +1,25 @@
+{
+ "fullName": "CopilotKit/OpenBot",
+ "whoItsFor": "Companies and platform teams that want a self-hosted internal AI assistant they can run on their own infrastructure and modify, using any AG-UI-compatible agent.",
+ "useCases": [
+  "Company Q&A over internal knowledge through a Knowledge coworker",
+  "Browser and file automation with per-action policy checks and audit logs",
+  "Expense claim review and meeting follow-up extraction from notes"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Docker, Bun 1.3+",
+  "modelSizes": null
+ },
+ "installCommand": "bun install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "a2c53d7656b1",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:33:45.934Z"
+}

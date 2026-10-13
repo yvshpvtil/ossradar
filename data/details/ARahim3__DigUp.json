@@ -1,0 +1,25 @@
+{
+ "fullName": "ARahim3/DigUp",
+ "whoItsFor": "Mac users on Apple Silicon running macOS 14 or later who want to find files by their content (photos, PDFs, recordings, videos, and code) using on-device search.",
+ "useCases": [
+  "Find a photo or screenshot by describing what it shows, such as 'a dog on the beach'",
+  "Jump to the exact moment in a video or podcast recording where a topic comes up",
+  "Find a clause in a PDF or a function in your code by describing what it does"
+ ],
+ "requirements": {
+  "os": "macOS 14 or later, Apple Silicon",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Xcode 26 (source builds only)",
+  "modelSizes": "740M"
+ },
+ "installCommand": "brew install --cask arahim3/tap/digup",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "aeda58a5af7b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:59.790Z"
+}

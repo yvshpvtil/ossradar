@@ -1,0 +1,25 @@
+{
+ "fullName": "mexicat/pdoom-video",
+ "whoItsFor": "Developers and creative coders who want to study or adapt a deterministic, code-rendered music video pipeline with word-synced karaoke typography. It also suits anyone who needs to regenerate lyric and beat timing data for a song.",
+ "useCases": [
+  "Preview the music video live in the browser with frame-accurate scrubbing",
+  "Render a 1080p60 or 4K60 MP4 offline with motion blur",
+  "Regenerate word-level lyric and beat timing data via forced alignment"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "bun, Google Chrome, ffmpeg with libx264; uv for the analysis tools",
+  "modelSizes": null
+ },
+ "installCommand": "bun install",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "705af58dad34",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:32.629Z"
+}

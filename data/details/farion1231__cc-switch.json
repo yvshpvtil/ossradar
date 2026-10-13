@@ -1,0 +1,25 @@
+{
+ "fullName": "farion1231/cc-switch",
+ "whoItsFor": "Developers who use multiple AI coding agents (Claude Code, Codex, Gemini CLI, OpenCode, and others) and want to switch API providers and manage MCP servers, Skills, and Prompts without hand-editing JSON, TOML, or YAML config files.",
+ "useCases": [
+  "Switch API providers for Claude Code, Codex, or Gemini CLI in one click",
+  "Manage MCP servers, Skills, and Prompts from a single place",
+  "Avoid hand-editing JSON, TOML, or YAML config files for each agent"
+ ],
+ "requirements": {
+  "os": "Windows, macOS, Linux",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "brew install --cask cc-switch",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "d809a7c9f214",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:17.372Z"
+}

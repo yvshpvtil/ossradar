@@ -1,0 +1,25 @@
+{
+ "fullName": "img2threejs/img2threejs",
+ "whoItsFor": "Developers and 3D artists who want to recreate a reference image of an object or character as code-only, animation-ready Three.js models, without photogrammetry or downloaded assets.",
+ "useCases": [
+  "Rebuild a reference photo of a product or weapon as a procedural Three.js model",
+  "Generate animation-ready characters with pivots, sockets, and colliders",
+  "Produce token-efficient, code-only 3D assets viewable live in the browser"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10 (stdlib tooling), Three.js, Claude Code, Codex, or OpenCode",
+  "modelSizes": null
+ },
+ "installCommand": "npx --yes img2threejs@latest install --dry-run",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "053606be1199",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:21.568Z"
+}

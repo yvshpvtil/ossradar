@@ -1,0 +1,25 @@
+{
+ "fullName": "jackwener/OpenCLI",
+ "whoItsFor": "Developers and AI-agent builders who want to drive their logged-in Chrome browser from the command line or let an AI agent navigate, click, fill forms, and extract data from websites. The README also covers writing reusable site-specific adapters.",
+ "useCases": [
+  "Run deterministic CLI commands for sites like Bilibili, Zhihu, Reddit, or HackerNews",
+  "Let an AI agent navigate, fill forms, and extract data via the logged-in browser",
+  "Write and verify reusable adapters that turn a new website into CLI commands"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js >= 20.18.1 (npm install); Chrome/Chromium with the Browser Bridge extension",
+  "modelSizes": null
+ },
+ "installCommand": "npm install -g @jackwener/opencli",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "16708367c09c",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:35.052Z"
+}

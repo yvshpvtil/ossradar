@@ -1,0 +1,25 @@
+{
+ "fullName": "Albert-Weasker/niubigeo",
+ "whoItsFor": "Developers, SEO and GEO practitioners, and marketers who want to see how AI models describe their product and which competitors they name, and who prefer a self-hosted tool that uses their own model API keys.",
+ "useCases": [
+  "Check how different AI models describe your product and which competitors they mention",
+  "Test keywords to see which brands appear in AI answers without naming your own brand",
+  "Repeat or schedule model tests to compare answers, sources, and changes over time"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Node.js ≥ 22.13, Docker (optional)",
+  "modelSizes": null
+ },
+ "installCommand": "git clone --branch v0.3.0 --depth 1 https://github.com/Albert-Weasker/niubigeo.git",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "72b6e813c8d7",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:32.100Z"
+}

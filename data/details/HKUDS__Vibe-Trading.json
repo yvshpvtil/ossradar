@@ -1,0 +1,25 @@
+{
+ "fullName": "HKUDS/Vibe-Trading",
+ "whoItsFor": "Traders, quantitative researchers, and developers who want an AI agent to handle market research, backtesting, and portfolio analysis across multiple markets and brokers.",
+ "useCases": [
+  "Backtest trading strategies and review the results with structured summaries",
+  "Research factors and market data across markets, including fundamentals and valuation",
+  "Send scheduled research or portfolio reports through email, Slack, Discord, or Feishu"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.11",
+  "modelSizes": null
+ },
+ "installCommand": "pip install vibe-trading-ai",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "51a95b40aecb",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:33.100Z"
+}

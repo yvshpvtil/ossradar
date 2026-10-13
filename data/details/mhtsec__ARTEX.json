@@ -1,0 +1,25 @@
+{
+ "fullName": "mhtsec/ARTEX",
+ "whoItsFor": "Security engineers and red teamers who want LLM agents to run penetration tests autonomously, with human-in-the-loop approval for tool calls. It is intended for authorized testing of assets the user controls.",
+ "useCases": [
+  "Autonomous AI-driven penetration testing of in-scope assets",
+  "Visualizing exploration chains and asset test coverage in graphs",
+  "Syncing asset data from ScopeSentry to skip manual reconnaissance"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "PostgreSQL; Docker (optional, for Compose install)",
+  "modelSizes": null
+ },
+ "installCommand": "./install.sh",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e7a24a5326ea",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:35.547Z"
+}

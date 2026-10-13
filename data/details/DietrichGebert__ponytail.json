@@ -1,0 +1,25 @@
+{
+ "fullName": "DietrichGebert/ponytail",
+ "whoItsFor": "Developers using AI coding agents (Claude Code, Codex, Cursor, and others) who want the agent to write less code and avoid unnecessary abstractions, dependencies, and over-engineering.",
+ "useCases": [
+  "Keep an AI coding agent from building custom classes or libraries when a one-line or standard-library solution exists",
+  "Run /ponytail-review to review diffs for bugs, security, and missing tests while flagging code that can be cut",
+  "Run /ponytail-audit to rank whole-repo issues and find the highest-priority fixes"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "69188588d894",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:28:24.464Z"
+}

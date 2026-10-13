@@ -1,0 +1,25 @@
+{
+ "fullName": "Graphify-Labs/graphify",
+ "whoItsFor": "Developers using AI coding assistants such as Claude Code, Cursor, Codex, or Gemini CLI who want to query a codebase's structure and related docs as a knowledge graph instead of grepping files. Also useful for teams mapping large or multi-format projects.",
+ "useCases": [
+  "Ask questions about a codebase by querying a graph instead of re-reading files",
+  "Trace how two concepts or components connect, such as the shortest path between them",
+  "Map docs, PDFs, and images alongside source code into one navigable graph"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10 (uv or pipx recommended)",
+  "modelSizes": null
+ },
+ "installCommand": "uv tool install graphifyy",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "22f8c2e15514",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:35.055Z"
+}

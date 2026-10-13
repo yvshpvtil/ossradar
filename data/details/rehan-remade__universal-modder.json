@@ -1,0 +1,25 @@
+{
+ "fullName": "rehan-remade/universal-modder",
+ "whoItsFor": "Developers and game modders who own PC games and want an AI coding agent (Claude Code, Codex, Cursor, etc.) to reverse-engineer, mod, generate assets for, and test them.",
+ "useCases": [
+  "Add new features or content to a PC game (e.g. new weapons or units) with an AI agent",
+  "Generate sprites, 3D models, or audio for a game mod using fal",
+  "Record and cut showcase videos of in-game mods"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Git, Python 3.10+, ffmpeg (uv recommended; Blender needed for 3D to sprite renders)",
+  "modelSizes": null
+ },
+ "installCommand": "/plugin marketplace add rehan-remade/universal-modder",
+ "source": "inferred",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "9b4baa84edce",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:53.568Z"
+}

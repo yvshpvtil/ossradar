@@ -1,0 +1,25 @@
+{
+ "fullName": "jev-chat/jev-chat-jarvis",
+ "whoItsFor": "People who chat on WhatsApp, QQ, Feishu, or X and want help reading the other person's intent and risk before replying. It suits users on Android, Windows, or macOS, and iOS users who build the keyboard themselves.",
+ "useCases": [
+  "Check what the other person really means and how risky a moment is before replying",
+  "Get ranked reply drafts and tap one to fill it into the message box, then press send yourself",
+  "Use a custom iOS keyboard to see intent, risk, and replies for copied messages"
+ ],
+ "requirements": {
+  "os": "Android 11 or later (Chinese edition needs ARM64); Windows 10 1903 or later, or Windows 11; macOS 13 or later on Apple Silicon; iOS requires building from source with Xcode",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "e5fbc52ea978",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:09.044Z"
+}

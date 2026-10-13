@@ -1,0 +1,25 @@
+{
+ "fullName": "newliver666/apk-reverse",
+ "whoItsFor": "Security researchers and developers who reverse engineer Android APKs and want an agent-guided workflow for debloating, ad removal, dex patching, and repacking. It is written as an Agent Skill for tools like Claude Code or Codex.",
+ "useCases": [
+  "Debloat or remove ads from an Android APK through surgical dex patching and repacking",
+  "Analyze packed or hardened APKs by identifying the packer, unpacking, and recovering a patched, installable build",
+  "Run runtime and server-side analysis of an app's behavior and network protocols"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.9",
+  "modelSizes": null
+ },
+ "installCommand": "npx skills add newliver666/apk-reverse              # install every skill in the repo",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "5ec492162959",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:56.366Z"
+}

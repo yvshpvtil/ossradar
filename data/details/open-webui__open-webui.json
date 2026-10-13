@@ -1,0 +1,25 @@
+{
+ "fullName": "open-webui/open-webui",
+ "whoItsFor": "Developers and teams who want a self-hosted, provider-agnostic web interface for running local models (Ollama) and OpenAI-compatible APIs. The README also targets enterprises needing RBAC, SSO, and observability.",
+ "useCases": [
+  "Chat with local Ollama models or any OpenAI-compatible API (LMStudio, OpenRouter, vLLM) from one interface",
+  "Build RAG over documents with vector databases and web search providers",
+  "Run team-wide AI access with per-group roles, permissions, and usage analytics"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python 3.11 (pip install) or Docker",
+  "modelSizes": null
+ },
+ "installCommand": "pip install open-webui",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "346c3774f88b",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:32:45.325Z"
+}

@@ -1,0 +1,25 @@
+{
+ "fullName": "DeusData/codebase-memory-mcp",
+ "whoItsFor": "Developers using AI coding agents (such as Claude Code or Codex) who want the agent to understand large codebases quickly and cheaply. It is also useful for anyone who wants a local, persistent code knowledge graph with no hosted service.",
+ "useCases": [
+  "Index a repository so an agent can answer structural questions without repeated grep and file-read cycles",
+  "Trace call chains, impact analysis, and dead code detection across a codebase",
+  "Map cross-service HTTP routes and infrastructure-as-code (Dockerfiles, Kubernetes, compose) into one graph"
+ ],
+ "requirements": {
+  "os": "macOS (arm64/amd64), Linux (arm64/amd64), Windows (amd64)",
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": null,
+  "modelSizes": null
+ },
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "ade3a2fdea12",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:31:16.670Z"
+}

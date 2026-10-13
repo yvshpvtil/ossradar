@@ -34,6 +34,14 @@ jobs:
           # Optional: add this repo secret to generate one-liners with Claude instead of the template.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Enrich new repos (README details)
+        run: npm run enrich
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ENRICH_LIMIT: "25"
+
       - name: Commit data if changed
         run: |
           git config user.name "github-actions[bot]"

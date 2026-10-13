@@ -1,0 +1,25 @@
+{
+ "fullName": "zhuyansen/new-term-radar",
+ "whoItsFor": "People who make pages, posts, newsletters, directories or products around new AI terms, such as SEO teams for AI tool sites. Anyone who wants to learn about a new AI model, product or repo name the day it appears.",
+ "useCases": [
+  "Spotting new AI model, product and repo names before keyword tools list them",
+  "Finding the generic search terms and existing demand behind a new AI name for SEO pages",
+  "Checking after 14 days whether flagged names rose in Google Trends"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10",
+  "modelSizes": null
+ },
+ "installCommand": "git clone https://github.com/zhuyansen/new-term-radar",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "dcf156438688",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:29:45.355Z"
+}

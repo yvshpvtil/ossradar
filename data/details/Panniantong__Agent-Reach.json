@@ -1,0 +1,25 @@
+{
+ "fullName": "Panniantong/Agent-Reach",
+ "whoItsFor": "Developers and power users building or running AI agents (Claude Code, OpenClaw, Cursor, etc.) who want those agents to read and search sites like Twitter, Reddit, YouTube, GitHub, Bilibili, and XiaoHongShu without paying for APIs. It is set up as a one-line install that the agent performs itself.",
+ "useCases": [
+  "Have an AI agent read a YouTube video's subtitles or search Bilibili",
+  "Let an agent search Twitter/X or Reddit threads and read posts and comments",
+  "Let an agent read public GitHub repos and issues, or read arbitrary web pages and RSS feeds"
+ ],
+ "requirements": {
+  "os": null,
+  "ramMinGB": null,
+  "ramRecommendedGB": null,
+  "gpuRequired": null,
+  "vramMinGB": null,
+  "diskGB": null,
+  "runtime": "Python ≥ 3.10",
+  "modelSizes": null
+ },
+ "installCommand": "帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md",
+ "source": "readme",
+ "extractor": "claude-cli:haiku",
+ "readmeHash": "4c1687bc7263",
+ "version": 1,
+ "generatedAt": "2026-10-13T13:30:03.350Z"
+}
