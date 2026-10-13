@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   const { slug } = await params;
   const category = getCategory(slug);
   if (!category) return {};
-  const title = `Trending ${category.label} GitHub repos, ranked by star velocity`;
+  const count = getReposByCategory(category.slug).length;
+  const title = `Trending ${category.label} GitHub repos: ${count} rising projects`;
   const description = clip(`Fastest-rising open-source ${category.label} projects on GitHub: ${category.description} Ranked by stars gained, updated hourly, on ${SITE.name}.`);
   return {
     title,
