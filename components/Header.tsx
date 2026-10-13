@@ -12,9 +12,8 @@ export function Header() {
     <header className="border-b border-zinc-200 dark:border-zinc-800">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span aria-hidden className="grid h-7 w-7 place-items-center rounded-full bg-indigo-600 text-sm text-white">
-            ◎
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icon.svg" alt="" aria-hidden width={28} height={28} className="h-7 w-7" />
           OSS Radar
         </Link>
         <nav className="flex items-center gap-1 text-sm sm:gap-3">
