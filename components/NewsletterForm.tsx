@@ -60,6 +60,9 @@ export function NewsletterForm() {
           </button>
         </form>
       )}
+      {state !== "done" && (
+        <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Top 10 rising repos, one email each morning (9:00 IST). Free, unsubscribe anytime.</p>
+      )}
       {state === "error" && <p role="alert" className="mt-2 text-sm text-red-600 dark:text-red-400">{msg}</p>}
     </div>
   );
@@ -78,9 +81,9 @@ function focusSignup(): boolean {
 export function SubscribeButton() {
   return (
     <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900/50">
-      <p className="font-semibold">Get the weekly radar</p>
+      <p className="font-semibold">Get the daily radar</p>
       <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">
-        The fastest-rising AI &amp; dev-tool repos of the week, one line each. Free, no spam.
+        The 10 fastest-rising AI &amp; dev-tool repos, every morning at 9:00 IST (03:30 UTC). One email a day, free, unsubscribe anytime.
       </p>
       <Link
         href="/#subscribe"

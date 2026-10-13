@@ -36,7 +36,7 @@ export default function NewPage() {
       </p>
       <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">{total} new repos · last {NEW_DAYS} days · updated {formatDate(data.generatedAt)}</p>
       <div className="mt-6 max-w-xl rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/50">
-        <p className="mb-2 text-sm font-medium">Get the best new ones in your inbox every week</p>
+        <p className="mb-2 text-sm font-medium">Get the top rising repos in your inbox every morning</p>
         <NewsletterForm />
       </div>
       <div className="mt-8 space-y-8">
