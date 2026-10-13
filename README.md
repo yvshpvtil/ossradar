@@ -53,8 +53,7 @@ GitHub Action (daily 02:30 UTC)
 
 Newsletter signups go through the `SubscriberStore` interface in `lib/subscribers.ts`. The default
 `JsonFileStore` appends to `data/subscribers.json`, which is gitignored. Vercel's filesystem is read-only, so
-there it logs the signup and still returns ok. Set `BEEHIIV_API_KEY` + `BEEHIIV_PUBLICATION_ID` to switch to
-`BeehiivStore`.
+signups go to Kit via `lib/kit.ts`.
 
 The sponsor bar and card (`components/SponsorSlot.tsx`) say "Your product here, sponsor OSS Radar" and link to
 `/sponsor` until you pass a real `sponsor` prop.
@@ -75,7 +74,7 @@ Environment variables (all optional except a GitHub token for `collect`):
 | `GITHUB_TOKEN` | collect | GitHub API auth (falls back to `gh auth token`) |
 | `ANTHROPIC_API_KEY`, `SUMMARY_MODEL` | collect | Use an LLM for one-liners instead of the template |
 | `NEXT_PUBLIC_SITE_URL` | site | Canonical URL (default `https://ossradar.net`) |
-| `BEEHIIV_API_KEY`, `BEEHIIV_PUBLICATION_ID` | `/api/subscribe` | Send signups to Beehiiv |
+| `KIT_API_KEY`, `KIT_FORM_ID` (optional `KIT_V3_API_KEY`) | `/api/subscribe` | Add signups to the Kit form (v4 API, v3 fallback) |
 
 ## TODO
 
@@ -83,8 +82,7 @@ Environment variables (all optional except a GitHub token for `collect`):
   Each commit from the daily workflow triggers a redeploy.
 - [ ] **DNS (Namecheap)**: add `ossradar.net` under Vercel → Domains. Then, in Namecheap Advanced DNS, create the
   records Vercel shows (typically `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`).
-- [ ] **Newsletter provider**: create a Beehiiv publication, set `BEEHIIV_API_KEY` / `BEEHIIV_PUBLICATION_ID` in
-  Vercel, and check `BeehiivStore` against the current Beehiiv API docs.
+- [x] **Newsletter provider**: Kit (form 10039673), env vars set in Vercel.
 - [ ] **Payment link**: create a Stripe or Lemon Squeezy payment link for the $99/week slot and set
   `sponsorPaymentUrl` in `lib/site.ts`. Raise `sponsorPriceUsd` by $25 after each sale.
 - [ ] Set up `hello@ossradar.net`, or change `sponsorEmail` in `lib/site.ts`.
@@ -92,4 +90,4 @@ Environment variables (all optional except a GitHub token for `collect`):
 - [ ] Later: featured listings and a generator for the weekly newsletter issue.
 
 ## Newsletter
-The signup form submits to Beehiiv's free hosted flow (`https://ossradar.beehiiv.com/subscribe?email=...`), so signups land directly in Beehiiv without the paid API. `/api/subscribe` + `lib/subscribers.ts` remain as an adapter for a future API integration.
+The signup form is a native React form posting to `/api/subscribe`, which validates (honeypot + per-IP rate limit) and adds the email to the Kit form (`KIT_API_KEY`, `KIT_FORM_ID`).
