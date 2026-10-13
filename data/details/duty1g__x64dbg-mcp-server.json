@@ -1,0 +1,15 @@
+{
+ "fullName": "duty1g/x64dbg-mcp-server",
+ "whoItsFor": null,
+ "useCases": [
+  "84 MCP Tools: Full debugger control — disassembly, stepping, breakpoints, memory allocation, registers, modules, threads, call stack, patter",
+  "22 Event Callbacks: Full debugger event coverage — init, stop, breakpoint, exception, step, attach/detach, DLL load/unload, threads, and mor",
+  "Zero Dependencies: Pure native plugin, no runtime or framework needed."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "015555a055a3",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.573Z"
+}

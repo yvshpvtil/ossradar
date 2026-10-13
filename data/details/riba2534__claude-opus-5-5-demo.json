@@ -1,0 +1,11 @@
+{
+ "fullName": "riba2534/claude-opus-5-5-demo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install       # 安装依赖（three、esbuild 等）",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f7ccd0acfcdb",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.421Z"
+}

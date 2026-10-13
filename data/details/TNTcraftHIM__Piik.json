@@ -1,0 +1,15 @@
+{
+ "fullName": "TNTcraftHIM/Piik",
+ "whoItsFor": null,
+ "useCases": [
+  "Watch without installing. Friends join by invitation in a desktop or mobile browser.",
+  "Share from Piik App or an existing Piik site. Choose a screen, window, browser tab or camera; available sources and audio depend on the plat",
+  "Direct connections first. Media travels between participants where possible (P2P). A self-hosted server can provide automatic media forwardi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cff0a58601f4",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.164Z"
+}

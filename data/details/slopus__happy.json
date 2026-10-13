@@ -1,0 +1,11 @@
+{
+ "fullName": "slopus/happy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g happy",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "440ae4af79ae",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.431Z"
+}

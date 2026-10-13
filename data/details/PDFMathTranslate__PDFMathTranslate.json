@@ -1,0 +1,11 @@
+{
+ "fullName": "PDFMathTranslate/PDFMathTranslate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install uv",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "45a6fad4f077",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.242Z"
+}

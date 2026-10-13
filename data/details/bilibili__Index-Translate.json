@@ -1,0 +1,11 @@
+{
+ "fullName": "bilibili/Index-Translate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U vllm",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "804fc1d6398f",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.426Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "BerriAI/litellm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install 'litellm[proxy]'",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "533ee956e70e",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.691Z"
+}

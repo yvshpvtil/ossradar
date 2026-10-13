@@ -1,0 +1,11 @@
+{
+ "fullName": "typesafe-ai/skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add typesafe-ai/skills --skill typesafe-ai",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8fa344588377",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.151Z"
+}

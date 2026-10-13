@@ -1,0 +1,15 @@
+{
+ "fullName": "LingCore/WinShun",
+ "whoItsFor": null,
+ "useCases": [
+  "File search",
+  "Speed: press Ctrl twice; a search over three million files takes milliseconds.",
+  "Pinyin: `ndbg` finds 年度报告; a mistyped homophone (年度报高) is retried by sound."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "38f11f9cfc10",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.437Z"
+}

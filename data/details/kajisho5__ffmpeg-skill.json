@@ -1,0 +1,11 @@
+{
+ "fullName": "kajisho5/ffmpeg-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx ffmpeg-skill",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0e222b0175c0",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.638Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "software-mansion-labs/goldie",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g goldie",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e4f38b952391",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.160Z"
+}

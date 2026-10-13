@@ -1,0 +1,11 @@
+{
+ "fullName": "kirodotdev/KiroCrew",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://download.crew.kiro.dev/cli.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "003fc83e8bb1",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:10.313Z"
+}

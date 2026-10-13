@@ -1,0 +1,11 @@
+{
+ "fullName": "penso/herdr-gpui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install penso/tap/herdr-gpui",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "fd7d3f66e749",
+ "version": 1,
+ "generatedAt": "2026-10-13T18:48:09.642Z"
+}
