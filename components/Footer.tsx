@@ -46,6 +46,7 @@ export function Footer() {
         <p>
           Built by <a href={SITE.github} className="hover:underline">{SITE.owner}</a> ·{" "}
           <Link href="/new" className="hover:underline">New repos</Link> ·{" "}
+          <Link href="/daily" className="hover:underline">Daily archive</Link> ·{" "}
           <Link href="/submit" className="hover:underline">Submit a repo</Link> ·{" "}
           <Link href="/about" className="hover:underline">About</Link> ·{" "}
           <Link href="/sponsor" className="hover:underline">Sponsor</Link> ·{" "}

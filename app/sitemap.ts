@@ -4,6 +4,7 @@ import { getData } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { LANDINGS } from "@/lib/landing";
 import { getLanguages } from "@/lib/languages";
+import { getArchiveDays } from "@/lib/daily";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getData();
@@ -12,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE.url, lastModified, changeFrequency: "hourly", priority: 1 },
     { url: `${SITE.url}/new`, lastModified, changeFrequency: "hourly", priority: 0.9 },
     { url: `${SITE.url}/sponsor`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE.url}/daily`, lastModified, changeFrequency: "daily", priority: 0.7 },
+    ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, changeFrequency: "yearly" as const, priority: 0.5 })),
     { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE.url}/about`, changeFrequency: "monthly", priority: 0.4 },
     ...CATEGORIES.map((c) => ({
