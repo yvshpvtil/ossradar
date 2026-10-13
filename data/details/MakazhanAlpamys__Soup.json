@@ -1,0 +1,11 @@
+{
+ "fullName": "MakazhanAlpamys/Soup",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"soup-cli[train]\"   # add [train] to fine-tune; bare `soup-cli` is the light CLI",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "05fb9fafde80",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.383Z"
+}

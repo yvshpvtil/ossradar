@@ -1,0 +1,11 @@
+{
+ "fullName": "unstablebuild/rune",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://rune.build/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b059d22ecc1d",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:52.051Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "EverMind-AI/EverOS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install everos",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6cdcccb90bac",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.434Z"
+}

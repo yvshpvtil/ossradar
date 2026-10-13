@@ -1,0 +1,11 @@
+{
+ "fullName": "run-llama/llama_index",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install llama-index-core",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "88ce08edabec",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:52.262Z"
+}

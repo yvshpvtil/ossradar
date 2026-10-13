@@ -1,0 +1,11 @@
+{
+ "fullName": "sgl-project/sglang",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull lmsysorg/sglang:latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3b52f2ed0651",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.818Z"
+}

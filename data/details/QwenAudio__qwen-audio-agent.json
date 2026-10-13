@@ -1,0 +1,11 @@
+{
+ "fullName": "QwenAudio/qwen-audio-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g qwen-audio-agent",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "622aa801a44f",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:52.600Z"
+}

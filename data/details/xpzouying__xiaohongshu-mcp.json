@@ -1,0 +1,11 @@
+{
+ "fullName": "xpzouying/xiaohongshu-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull xpzouying/xiaohongshu-mcp",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "2ca8cff043d9",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.871Z"
+}

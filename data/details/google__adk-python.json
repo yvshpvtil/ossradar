@@ -1,0 +1,15 @@
+{
+ "fullName": "google/adk-python",
+ "whoItsFor": null,
+ "useCases": [
+  "Workflow Runtime: A graph-based execution engine for composing",
+  "Task API: Structured agent-to-agent delegation with multi-turn task",
+  "Modular Multi-Agent Systems: Design scalable applications by composing"
+ ],
+ "installCommand": "pip install google-adk",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b9655aab4fbb",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.081Z"
+}

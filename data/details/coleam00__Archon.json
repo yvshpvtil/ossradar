@@ -1,0 +1,11 @@
+{
+ "fullName": "coleam00/Archon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://bun.sh/install | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "fbeec77e2aca",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:50.854Z"
+}

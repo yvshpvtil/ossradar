@@ -1,0 +1,11 @@
+{
+ "fullName": "dream-num/univer-workspace",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global univer-workspace-cli@latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cd679d0d85a1",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:52.053Z"
+}

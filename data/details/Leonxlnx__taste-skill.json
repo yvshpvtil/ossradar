@@ -1,0 +1,11 @@
+{
+ "fullName": "Leonxlnx/taste-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add https://github.com/Leonxlnx/taste-skill",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a90cdaa683e5",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:50.888Z"
+}

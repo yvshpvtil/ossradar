@@ -1,0 +1,11 @@
+{
+ "fullName": "repowise-dev/repowise",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install repowise          # or: pipx install repowise / pip install repowise",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4bef007cefc8",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.868Z"
+}

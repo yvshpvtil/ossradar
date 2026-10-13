@@ -1,0 +1,11 @@
+{
+ "fullName": "ardeyouxipianyi/workbuddy2api-hub",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/ardeyouxipianyi/workbuddy2api-hub/main/quick-deploy.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6f43291e5720",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.568Z"
+}

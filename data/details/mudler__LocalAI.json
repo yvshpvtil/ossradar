@@ -1,0 +1,15 @@
+{
+ "fullName": "mudler/LocalAI",
+ "whoItsFor": null,
+ "useCases": [
+  "Text generation (`llama.cpp`, `transformers`, `vllm` ... and more)",
+  "Text to Audio",
+  "Audio to Text"
+ ],
+ "installCommand": "docker run -ti --name local-ai -p 8080:8080 localai/localai:latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3c068e0f7ed0",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.235Z"
+}

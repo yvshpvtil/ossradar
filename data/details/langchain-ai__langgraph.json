@@ -1,0 +1,11 @@
+{
+ "fullName": "langchain-ai/langgraph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U langgraph",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0df5a937a2b4",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.817Z"
+}

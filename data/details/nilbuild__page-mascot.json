@@ -1,0 +1,11 @@
+{
+ "fullName": "nilbuild/page-mascot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i page-mascot",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "56a4fa5ec5e4",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.697Z"
+}

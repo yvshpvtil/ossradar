@@ -1,0 +1,11 @@
+{
+ "fullName": "cloudflare/cf",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g cf",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ac45d3337e76",
+ "version": 1,
+ "generatedAt": "2026-10-13T21:14:51.671Z"
+}
