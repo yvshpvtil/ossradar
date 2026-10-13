@@ -1,0 +1,11 @@
+{
+ "fullName": "op7418/guizang-product-video-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add https://github.com/op7418/guizang-product-video-skill --skill guizang-product-video-skill",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "882ffda8813c",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.414Z"
+}

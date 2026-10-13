@@ -1,0 +1,11 @@
+{
+ "fullName": "semantica-agi/semantica",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install semantica",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "15ce245e167b",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.559Z"
+}

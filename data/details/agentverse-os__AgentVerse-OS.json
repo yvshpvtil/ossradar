@@ -1,0 +1,15 @@
+{
+ "fullName": "agentverse-os/AgentVerse-OS",
+ "whoItsFor": null,
+ "useCases": [
+  "Projects and workspaces. Every project gets its own network, its own gate and an isolated Incus container with Docker inside.",
+  "Agents. A separate app for working with coding agents from any device: Claude Code, Codex, Gemini CLI and pi run inside the",
+  "A Store of 945 apps. The Runtipi, Coolify and Umbrel catalogs merged into one, with source badges. Guided install, login"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "05fd11c65116",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.714Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "xevrion/breakscale",
+ "whoItsFor": null,
+ "useCases": [
+  "33 components. Load balancers, caches, databases, queues and workers, plus CDNs, rate",
+  "23 worked examples. Sixteen teaching scenarios that each isolate one failure mode, and seven",
+  "A real discrete-event engine. Finite server slots, gamma-distributed service times and"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f9605c4e8234",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.384Z"
+}

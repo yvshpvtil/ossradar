@@ -1,0 +1,11 @@
+{
+ "fullName": "Vincentwei1021/video-talkcraft",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Vincentwei1021/video-talkcraft",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "9e316dcd5caf",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.245Z"
+}

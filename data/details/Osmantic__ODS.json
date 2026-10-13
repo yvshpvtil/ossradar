@@ -1,0 +1,11 @@
+{
+ "fullName": "Osmantic/ODS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://install.osmantic.com/ods.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e0c7ebdef14d",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.038Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "talivia-group/talivia",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y @talivia/agent mcp",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1e41d5e2b3fe",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.470Z"
+}

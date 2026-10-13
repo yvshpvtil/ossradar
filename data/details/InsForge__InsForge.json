@@ -1,0 +1,11 @@
+{
+ "fullName": "InsForge/InsForge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/InsForge/InsForge/main/deploy/setup.sh | sh -s ~/insforge",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1ff707924931",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.861Z"
+}

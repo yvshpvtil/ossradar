@@ -1,0 +1,11 @@
+{
+ "fullName": "elliothux/open-compute",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://open-compute.dev/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1cb6d884ba83",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.435Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "spotify/portal-ai-plugins",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @spotify/portal-cli <command>",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4a854f815ad5",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.134Z"
+}

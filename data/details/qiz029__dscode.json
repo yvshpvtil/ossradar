@@ -1,0 +1,11 @@
+{
+ "fullName": "qiz029/dscode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/qiz029/dscode/main/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "41532aefa3be",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.707Z"
+}

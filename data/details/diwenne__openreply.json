@@ -1,0 +1,15 @@
+{
+ "fullName": "diwenne/openreply",
+ "whoItsFor": null,
+ "useCases": [
+  "Keyword to DM. Match one or many keywords per post, whole-word or partial.",
+  "Optional public reply. Post a visible comment reply on top of the DM.",
+  "DM and Story reply triggers. The same keywords can also fire on an inbound DM, which covers text replies to your Stories, since Instagram de"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6cdf49f7ec03",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.084Z"
+}

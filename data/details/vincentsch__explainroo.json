@@ -1,0 +1,11 @@
+{
+ "fullName": "vincentsch/explainroo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ec249a49bae8",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.434Z"
+}

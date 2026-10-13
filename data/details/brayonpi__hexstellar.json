@@ -1,0 +1,11 @@
+{
+ "fullName": "brayonpi/hexstellar",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install hexstellar",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f85254528255",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:13.299Z"
+}

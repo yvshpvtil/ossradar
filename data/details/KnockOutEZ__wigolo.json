@@ -1,0 +1,11 @@
+{
+ "fullName": "KnockOutEZ/wigolo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx wigolo init                              # set up the local engine — any system",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e73b1e0943a9",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.912Z"
+}

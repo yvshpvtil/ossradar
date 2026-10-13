@@ -1,0 +1,11 @@
+{
+ "fullName": "AstrBotDevs/AstrBot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install astrbot --python 3.12",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "5faaf4f9b04e",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.842Z"
+}

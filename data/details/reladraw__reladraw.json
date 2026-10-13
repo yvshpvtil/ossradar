@@ -1,0 +1,11 @@
+{
+ "fullName": "reladraw/reladraw",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g reladraw",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3631dd6e9398",
+ "version": 1,
+ "generatedAt": "2026-10-13T23:46:12.572Z"
+}
