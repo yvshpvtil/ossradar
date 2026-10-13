@@ -5,7 +5,10 @@ import { Leaderboard } from "@/components/Leaderboard";
 import { CATEGORIES, getCategory } from "@/lib/categories";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { getReposByCategory, rankRepos } from "@/lib/data";
+import { getData, getReposByCategory, rankRepos } from "@/lib/data";
+import { HomeSidebar } from "@/components/HomeSidebar";
+import { CategoryChips } from "@/components/CategoryChips";
+import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
 import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
 import { toLeaderRepo } from "@/lib/leader";
@@ -39,10 +42,15 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   const top = ranked.slice(0, 3);
   const weekTotal = repos.reduce((n, r) => n + r.delta7d, 0);
   const path = `/category/${category.slug}`;
+  const all = getData().repos;
+  const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${category.label} repos`, ranked)} />
       <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: category.label, path }])} />
+      <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
+      <HomeSidebar repos={all} newCount={newCount} active={category.slug} />
+      <div className="min-w-0">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
         <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{category.label}</span>
       </nav>
@@ -65,16 +73,11 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
         )}
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained this week · updated hourly</p>
       </section>
+      <CategoryChips repos={all} active={category.slug} />
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} />
-      <section className="mt-10 text-sm">
-        <h2 className="mb-3 text-xl font-semibold tracking-tight">Other categories</h2>
-        <ul className="flex flex-wrap gap-x-4 gap-y-1">
-          {CATEGORIES.filter((c) => c.slug !== category.slug).map((c) => (
-            <li key={c.slug}><Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/category/${c.slug}`}>{c.label}</Link></li>
-          ))}
-        </ul>
-      </section>
+      </div>
+      </div>
     </>
   );
 }
