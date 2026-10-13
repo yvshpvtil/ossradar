@@ -15,6 +15,10 @@ export type LeaderRepo = Pick<
   | "estimated24h"
   | "estimated7d"
   | "ownerAvatar"
+  | "delta1h"
+  | "firstSeen"
+  | "prevRank"
+  | "createdAt"
 > & { spark: number[] };
 
 export function toLeaderRepo(r: Repo): LeaderRepo {
@@ -31,6 +35,10 @@ export function toLeaderRepo(r: Repo): LeaderRepo {
     estimated24h: r.estimated24h,
     estimated7d: r.estimated7d,
     ownerAvatar: r.ownerAvatar,
+    delta1h: r.delta1h ?? null,
+    firstSeen: r.firstSeen ?? "",
+    prevRank: r.prevRank ?? null,
+    createdAt: r.createdAt,
     spark: r.history.map((h) => h.stars),
   };
 }

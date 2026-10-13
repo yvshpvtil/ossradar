@@ -3,6 +3,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
   { href: "/", label: "Leaderboard" },
+  { href: "/watchlist", label: "★ Watchlist" },
   { href: "/sponsor", label: "Sponsor" },
   { href: "/about", label: "About" },
 ];

@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { EstBadge, EstimateNote } from "@/components/EstBadge";
 import { Sparkline } from "@/components/Sparkline";
 import { SponsorSlot } from "@/components/SponsorSlot";
+import { WatchButton } from "@/components/WatchButton";
+import { BadgeEmbed } from "@/components/BadgeEmbed";
 import { categoryLabel } from "@/lib/categories";
 import { getRepo, getRepos, getSimilarRepos } from "@/lib/data";
 import { formatDate, formatDelta, formatNumber } from "@/lib/format";
@@ -140,6 +142,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
               Website
             </a>
           )}
+          <WatchButton fullName={repo.fullName} withLabel />
         </div>
 
         <section className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -154,7 +157,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <Sparkline points={repo.history} width={640} height={120} className="h-auto w-full text-indigo-500" title={`Star history for ${repo.fullName}`} />
           {repo.history.length < 2 ? (
             <p className="mt-2 text-xs text-zinc-500">
-              Only one snapshot so far. The chart fills in as OSS Radar collects daily data.
+              Only one snapshot so far. The chart fills in as OSS Radar collects daily snapshots.
             </p>
           ) : (
             <p className="mt-2 text-xs text-zinc-500">
@@ -165,6 +168,8 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         </section>
 
         {repo.velocityEstimated && <EstimateNote className="mt-4" />}
+
+        <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} />
 
         <section className="mt-6">
           <h2 className="mb-2 text-lg font-semibold">About {repo.name}</h2>

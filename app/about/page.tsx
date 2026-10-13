@@ -16,7 +16,7 @@ export default function AboutPage() {
     <div className="mx-auto max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
       <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">About OSS Radar</h1>
       <p>
-        {SITE.name} (<strong>OSS = Open-Source Software</strong>) is a daily tracker of the fastest-rising open-source AI and developer-tool repositories on GitHub.
+        {SITE.name} (<strong>OSS = Open-Source Software</strong>) is an hourly-updated tracker of the fastest-rising open-source AI and developer-tool repositories on GitHub.
         Instead of ranking by total stars (which rewards age), it ranks by <strong>star velocity</strong>: stars gained in
         the last 24 hours and the last 7 days. Each repo gets a one-line take on what it does and why it matters.
       </p>

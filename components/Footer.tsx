@@ -28,7 +28,7 @@ export function Footer() {
       </div>
       <div className="mx-auto flex max-w-5xl flex-wrap justify-between gap-2 px-4 pb-8 text-xs text-zinc-500">
         <p>
-          Data from the GitHub API, updated daily. Last update {formatDate(data.generatedAt)}. Not affiliated with GitHub.
+          Data from the GitHub API, updated hourly. Last update {formatDate(data.generatedAt)}. Not affiliated with GitHub.
         </p>
         <p>
           Built by <a href={SITE.github} className="hover:underline">{SITE.owner}</a> ·{" "}

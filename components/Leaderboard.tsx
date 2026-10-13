@@ -2,16 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import type { LeaderRepo } from "@/lib/leader";
 import type { CategorySlug } from "@/lib/types";
 import { EstBadge } from "./EstBadge";
 import { Sparkline } from "./Sparkline";
+import { WatchButton } from "./WatchButton";
+import { readSinceLastVisit } from "@/lib/watch";
 
 type Period = "today" | "week";
 const PAGE = 50;
+const WEEK_MS = 7 * 86_400_000;
 
 const pill = (active: boolean) =>
   `rounded-full border px-3 py-1 text-sm transition-colors ${
@@ -24,21 +27,63 @@ export function Leaderboard({
   repos,
   showCategoryFilter = true,
   defaultPeriod = "today",
+  newDate = null,
+  showMovement = false,
+  dataAt,
+  generatedAtMs,
 }: {
   repos: LeaderRepo[];
   showCategoryFilter?: boolean;
   defaultPeriod?: Period;
+  /** Snapshot date whose first-time entries get a "New today" badge (null hides badges). */
+  newDate?: string | null;
+  /** Show rank movement vs. the previous day (only when 2+ days of data exist). */
+  showMovement?: boolean;
+  /** generatedAt of the data; enables the "since your last visit" highlight. */
+  dataAt?: string;
+  /** Reference time for "new this week" (data time, so server and client agree). */
+  generatedAtMs?: number;
 }) {
   const [period, setPeriod] = useState<Period>(defaultPeriod);
   const [category, setCategory] = useState<CategorySlug | "all">("all");
   const [limit, setLimit] = useState(PAGE);
+  const [query, setQuery] = useState("");
+  const [language, setLanguage] = useState("all");
+  const [newWeek, setNewWeek] = useState(false);
+  const [sinceVisit, setSinceVisit] = useState<{ newNames: Set<string>; since: string } | null>(null);
+  const [onlySince, setOnlySince] = useState(false);
+
+  useEffect(() => {
+    if (!dataAt) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount
+    setSinceVisit(readSinceLastVisit(dataAt, repos.map((r) => r.fullName)));
+  }, [dataAt, repos]);
+
+  const refMs = generatedAtMs ?? 0;
+  const languages = useMemo(() => {
+    const c: Record<string, number> = {};
+    for (const r of repos) if (r.language) c[r.language] = (c[r.language] ?? 0) + 1;
+    return Object.entries(c).sort((a, b) => b[1] - a[1]);
+  }, [repos]);
+
+  // Current rank by 24h gain over the whole list, for movement arrows.
+  const todayRank = useMemo(() => {
+    const m = new Map<string, number>();
+    [...repos].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars).forEach((r, i) => m.set(r.fullName, i + 1));
+    return m;
+  }, [repos]);
 
   const ranked = useMemo(() => {
     const key = period === "today" ? "delta24h" : "delta7d";
+    const q = query.trim().toLowerCase();
     return repos
       .filter((r) => category === "all" || r.category === category)
+      .filter((r) => language === "all" || r.language === language)
+      .filter((r) => !newWeek || (refMs && refMs - Date.parse(r.createdAt) <= WEEK_MS))
+      .filter((r) => !onlySince || sinceVisit?.newNames.has(r.fullName))
+      .filter((r) => !q || r.fullName.toLowerCase().includes(q) || r.oneLiner.toLowerCase().includes(q))
       .sort((a, b) => b[key] - a[key] || b.stars - a.stars);
-  }, [repos, period, category]);
+  }, [repos, period, category, language, newWeek, refMs, query, onlySince, sinceVisit]);
 
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
@@ -62,6 +107,37 @@ export function Leaderboard({
             </button>
           ))}
         </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }}
+            placeholder="Search repos…"
+            aria-label="Search repos"
+            className="min-w-0 flex-1 rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm outline-none focus:border-indigo-500 sm:max-w-xs dark:border-zinc-700 dark:bg-zinc-900"
+          />
+          <select
+            value={language}
+            onChange={(e) => { setLanguage(e.target.value); setLimit(PAGE); }}
+            aria-label="Language"
+            className="rounded-md border border-zinc-300 bg-white px-2 py-1.5 text-sm dark:border-zinc-700 dark:bg-zinc-900"
+          >
+            <option value="all">All languages</option>
+            {languages.map(([l, n]) => (
+              <option key={l} value={l}>{l} ({n})</option>
+            ))}
+          </select>
+          {refMs > 0 && (
+            <button className={pill(newWeek)} aria-pressed={newWeek} onClick={() => { setNewWeek((v) => !v); setLimit(PAGE); }}>
+              Created this week
+            </button>
+          )}
+          {sinceVisit && sinceVisit.newNames.size > 0 && (
+            <button className={pill(onlySince)} aria-pressed={onlySince} onClick={() => { setOnlySince((v) => !v); setLimit(PAGE); }}>
+              New since your last visit <span className="opacity-70">{sinceVisit.newNames.size}</span>
+            </button>
+          )}
+        </div>
         {showCategoryFilter && (
           <div className="flex flex-wrap gap-2" aria-label="Category filter">
             <button className={pill(category === "all")} onClick={() => { setCategory("all"); setLimit(PAGE); }}>
@@ -84,9 +160,26 @@ export function Leaderboard({
         {ranked.slice(0, limit).map((r, i) => {
           const delta = period === "today" ? r.delta24h : r.delta7d;
           const est = period === "today" ? r.estimated24h : r.estimated7d;
+          const isNew = newDate != null && r.firstSeen === newDate;
+          const sinceNew = sinceVisit?.newNames.has(r.fullName) ?? false;
+          const cur = todayRank.get(r.fullName);
+          const move = showMovement && r.prevRank != null && cur != null ? r.prevRank - cur : null;
           return (
-            <li key={r.fullName} className="flex items-start gap-3 px-3 py-3 sm:items-center sm:px-4">
-              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm text-zinc-400 sm:pt-0">{i + 1}</span>
+            <li
+              key={r.fullName}
+              className={`flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
+            >
+              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm text-zinc-400 sm:pt-0">
+                {i + 1}
+                {move != null && move !== 0 && (
+                  <span
+                    className={`block text-[10px] leading-tight ${move > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-rose-500"}`}
+                    title={`${move > 0 ? "Up" : "Down"} ${Math.abs(move)} since yesterday (24h ranking)`}
+                  >
+                    {move > 0 ? "▲" : "▼"}{Math.abs(move)}
+                  </span>
+                )}
+              </span>
               <Image
                 src={`${r.ownerAvatar}${r.ownerAvatar.includes("?") ? "&" : "?"}s=48`}
                 alt={`${r.owner} avatar`}
@@ -101,6 +194,16 @@ export function Leaderboard({
                   <span className="text-zinc-500 dark:text-zinc-400">{r.owner}/</span>
                   {r.name}
                 </Link>
+                {isNew && (
+                  <span className="ml-2 rounded bg-emerald-100 px-1.5 py-0.5 align-middle text-[10px] font-semibold uppercase tracking-wide text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300">
+                    New today
+                  </span>
+                )}
+                {sinceNew && !isNew && (
+                  <span className="ml-2 rounded bg-indigo-100 px-1.5 py-0.5 align-middle text-[10px] font-semibold uppercase tracking-wide text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300">
+                    New since last visit
+                  </span>
+                )}
                 <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>
                 <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-zinc-500">
                   <Link href={`/category/${r.category}`} className="hover:underline">
@@ -115,11 +218,15 @@ export function Leaderboard({
                 <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">{formatDelta(delta)}</span>
                 {est && <EstBadge />}
                 <p className="text-[11px] text-zinc-500">{period === "today" ? "stars / 24h" : "stars / 7d"}</p>
+                {period === "today" && r.delta1h != null && r.delta1h > 0 && (
+                  <p className="text-[11px] text-zinc-500">{formatDelta(r.delta1h)} last hr</p>
+                )}
               </div>
+              <WatchButton fullName={r.fullName} />
             </li>
           );
         })}
-        {ranked.length === 0 && <li className="px-4 py-8 text-center text-sm text-zinc-500">No repos in this category yet.</li>}
+        {ranked.length === 0 && <li className="px-4 py-8 text-center text-sm text-zinc-500">No repos match these filters.</li>}
       </ol>
       {ranked.length > limit && (
         <div className="mt-4 text-center">

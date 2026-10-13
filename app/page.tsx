@@ -7,13 +7,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { LANDINGS } from "@/lib/landing";
 import { itemListLd } from "@/lib/seo";
-import { formatDate } from "@/lib/format";
 import { toLeaderRepo } from "@/lib/leader";
 import { SITE } from "@/lib/site";
+import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
+import { UpdatedClock } from "@/components/UpdatedClock";
 
 export default function Home() {
   const data = getData();
   const anyEstimated = data.repos.some((r) => r.velocityEstimated);
+  const now = Date.parse(data.generatedAt);
+  const spotlight = pickRepoOfTheDay(data.repos);
   return (
     <>
       <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
@@ -26,12 +29,19 @@ export default function Home() {
           <NewsletterForm />
         </div>
         <p className="mt-2 text-xs text-zinc-500">
-          Tracking {data.repos.length} repos · updated {formatDate(data.generatedAt)} ·{" "}
+          Tracking {data.repos.length} repos · <UpdatedClock generatedAt={data.generatedAt} /> ·{" "}
           {data.snapshotCount} daily snapshot{data.snapshotCount === 1 ? "" : "s"} so far
         </p>
       </section>
+      {spotlight && <RepoOfTheDay repo={spotlight} now={now} />}
       {anyEstimated && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={data.repos.map(toLeaderRepo)} />
+      <Leaderboard
+        repos={data.repos.map(toLeaderRepo)}
+        newDate={data.snapshotCount > 1 ? data.snapshotDate : null}
+        showMovement={Boolean(data.rankBaseDate)}
+        dataAt={data.generatedAt}
+        generatedAtMs={now}
+      />
       <section className="mt-10">
         <h2 className="mb-3 text-lg font-semibold">Browse by category</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
