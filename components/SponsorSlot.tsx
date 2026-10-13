@@ -38,7 +38,7 @@ export function SponsorSlot({
 
   return (
     <div className="border-b border-amber-300/60 bg-amber-50 text-sm dark:border-amber-500/20 dark:bg-amber-950/30">
-      <div className="mx-auto flex max-w-5xl items-center justify-center gap-2 px-4 py-2 sm:px-6 text-center">
+      <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 sm:px-6 text-center">
         <span className="rounded bg-amber-200/70 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-800 dark:bg-amber-500/20 dark:text-amber-300">
           Sponsor
         </span>

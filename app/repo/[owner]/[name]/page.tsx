@@ -17,6 +17,7 @@ import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { RepoDetailsView } from "@/components/RepoDetailsView";
+import { ShareButton } from "@/components/ShareButton";
 
 function ageText(iso: string): string {
   const d = Math.max(0, Math.round((new Date(getData().generatedAt).getTime() - new Date(iso).getTime()) / 86_400_000));
@@ -158,6 +159,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             </a>
           )}
           <WatchButton fullName={repo.fullName} withLabel />
+          <ShareButton path={repoPath(repo)} title={repo.fullName} className="h-9 px-3.5 text-sm" />
         </div>
 
         <section className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">

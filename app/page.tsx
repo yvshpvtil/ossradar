@@ -11,12 +11,17 @@ import { toLeaderRepo } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
 import { UpdatedClock } from "@/components/UpdatedClock";
+import { TrendingGrid } from "@/components/TrendingGrid";
+import { HomeSidebar } from "@/components/HomeSidebar";
+import { getNewRepos } from "@/lib/newRepos";
 
 export default function Home() {
   const data = getData();
   const anyEstimated = data.repos.some((r) => r.velocityEstimated);
   const now = Date.parse(data.generatedAt);
   const spotlight = pickRepoOfTheDay(data.repos);
+  const trending = rankRepos(data.repos, "today").filter((r) => r.fullName !== spotlight?.fullName).slice(0, 6);
+  const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   return (
     <>
       <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
@@ -33,7 +38,12 @@ export default function Home() {
           {data.snapshotCount} daily snapshot{data.snapshotCount === 1 ? "" : "s"} so far
         </p>
       </section>
+      <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
+      <HomeSidebar repos={data.repos} newCount={newCount} />
+      <div className="min-w-0">
       {spotlight && <RepoOfTheDay repo={spotlight} now={now} />}
+      <TrendingGrid repos={trending} />
+      <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">Leaderboard</h2>
       {anyEstimated && <EstimateNote className="mb-4" />}
       <Leaderboard
         repos={data.repos.map(toLeaderRepo)}
@@ -42,6 +52,8 @@ export default function Home() {
         dataAt={data.generatedAt}
         generatedAtMs={now}
       />
+      </div>
+      </div>
       <section className="mt-10">
         <h2 className="mb-3 text-xl font-semibold tracking-tight">Browse by category</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

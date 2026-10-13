@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import type { LeaderRepo } from "@/lib/leader";
@@ -51,6 +51,21 @@ export function Leaderboard({
   const [newWeek, setNewWeek] = useState(false);
   const [sinceVisit, setSinceVisit] = useState<{ newNames: Set<string>; since: string } | null>(null);
   const [onlySince, setOnlySince] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // "/" or Cmd/Ctrl+K jumps to search, like most directory sites.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      const typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable);
+      if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing)) {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   useEffect(() => {
     if (!dataAt) return;
@@ -107,14 +122,18 @@ export function Leaderboard({
               </button>
             ))}
           </div>
-          <input
+          <div className="relative min-w-0 flex-1 basis-48">
+            <input
+            ref={searchRef}
             type="search"
             value={query}
             onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }}
             placeholder="Search repos…"
-            aria-label="Search repos"
-            className="h-9 min-w-0 flex-1 basis-48 rounded-full border border-zinc-300 bg-white px-4 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900"
+            aria-label="Search repos" aria-keyshortcuts="/ Control+K Meta+K"
+            className="h-9 w-full rounded-full border border-zinc-300 bg-white pl-4 pr-10 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900"
           />
+            <kbd aria-hidden className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-zinc-300 px-1.5 font-mono text-[10px] text-zinc-400 sm:block dark:border-zinc-700">/</kbd>
+          </div>
           <select
             value={language}
             onChange={(e) => { setLanguage(e.target.value); setLimit(PAGE); }}

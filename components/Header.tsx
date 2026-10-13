@@ -3,15 +3,16 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const NAV: { href: string; label: string; desktopOnly?: boolean }[] = [
   { href: "/", label: "Leaderboard", desktopOnly: true },
+  { href: "/new", label: "New" },
   { href: "/watchlist", label: "★ Watchlist" },
-  { href: "/sponsor", label: "Sponsor" },
+  { href: "/sponsor", label: "Sponsor", desktopOnly: true },
   { href: "/about", label: "About" },
 ];
 
 export function Header() {
   return (
     <header className="border-b border-zinc-200 dark:border-zinc-800">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <Link href="/" className="flex shrink-0 items-center gap-2 whitespace-nowrap font-semibold tracking-tight">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/icon.svg" alt="" aria-hidden width={28} height={28} className="h-7 w-7" />
