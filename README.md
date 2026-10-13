@@ -87,6 +87,9 @@ Environment variables (all optional except a GitHub token for `collect`):
   Vercel, and check `BeehiivStore` against the current Beehiiv API docs.
 - [ ] **Payment link**: create a Stripe or Lemon Squeezy payment link for the $99/week slot and set
   `sponsorPaymentUrl` in `lib/site.ts`. Raise `sponsorPriceUsd` by $25 after each sale.
-- [ ] Set up `sponsor@ossradar.net`, or change `sponsorEmail` in `lib/site.ts`.
+- [ ] Set up `hello@ossradar.net`, or change `sponsorEmail` in `lib/site.ts`.
 - [ ] Optional: add `ANTHROPIC_API_KEY` as a repo secret to get LLM one-liners.
 - [ ] Later: featured listings and a generator for the weekly newsletter issue.
+
+## Newsletter
+The signup form submits to Beehiiv's free hosted flow (`https://ossradar.beehiiv.com/subscribe?email=...`), so signups land directly in Beehiiv without the paid API. `/api/subscribe` + `lib/subscribers.ts` remain as an adapter for a future API integration.

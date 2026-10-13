@@ -11,5 +11,5 @@ export const SITE = {
   sponsorPriceStepUsd: 25,
   // TODO: replace with a real payment link (Stripe Payment Link / Lemon Squeezy) before launch.
   sponsorPaymentUrl: "",
-  sponsorEmail: "sponsor@ossradar.net",
+  sponsorEmail: "hello@ossradar.net",
 };
