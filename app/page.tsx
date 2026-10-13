@@ -19,7 +19,7 @@ export default function Home() {
           <strong className="text-zinc-900 dark:text-zinc-100">{SITE.ossExplainer}</strong> {SITE.tagline}
         </p>
         <div className="mt-4 max-w-xl">
-          <NewsletterForm compact id="hero" />
+          <NewsletterForm />
         </div>
         <p className="mt-2 text-xs text-zinc-500">
           Tracking {data.repos.length} repos · updated {formatDate(data.generatedAt)} ·{" "}

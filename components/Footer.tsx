@@ -3,7 +3,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { formatDate } from "@/lib/format";
-import { NewsletterForm } from "./NewsletterForm";
+import { SubscribeButton } from "./NewsletterForm";
 
 export function Footer() {
   const data = getData();
@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="mt-16 border-t border-zinc-200 dark:border-zinc-800">
       <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:grid-cols-3">
         <div className="sm:col-span-2">
-          <NewsletterForm id="footer" />
+          <SubscribeButton />
         </div>
         <div className="text-sm">
           <p className="mb-2 font-semibold">Categories</p>

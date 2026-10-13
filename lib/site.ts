@@ -12,12 +12,5 @@ export const SITE = {
   sponsorPriceStepUsd: 25,
   // TODO: replace with a real payment link (Stripe Payment Link / Lemon Squeezy) before launch.
   sponsorPaymentUrl: "",
-  /**
-   * Beehiiv embedded subscribe form iframe src (free plan: Subscribers > Subscribe forms > Get embed code,
-   * copy the iframe's src). When set, signups happen in-place inside the embed. When empty, the form
-   * falls back to Beehiiv's hosted signup page.
-   */
-  beehiivEmbedUrl: process.env.NEXT_PUBLIC_BEEHIIV_EMBED_URL ?? "",
-  beehiivSubscribeUrl: "https://ossradar.beehiiv.com/subscribe",
   sponsorEmail: "hello@ossradar.net",
 };
