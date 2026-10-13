@@ -1,0 +1,38 @@
+name: Daily newsletter
+
+on:
+  schedule:
+    # Once per day at 03:30 UTC = 09:00 IST (after the :17 data run).
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build only, do not send"
+        type: boolean
+        default: true
+
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build and send
+        run: npx tsx scripts/newsletter.ts
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          # Scheduled runs send; manual runs default to dry run.
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: newsletter
+          path: out/newsletter.html

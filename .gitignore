@@ -42,3 +42,4 @@ next-env.d.ts
 
 # newsletter signups (local JSON store)
 /data/subscribers.json
+/out
