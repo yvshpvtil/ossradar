@@ -1,0 +1,11 @@
+{
+ "fullName": "superdesigndev/treg",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://treg.to/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "805c787036ed",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.236Z"
+}

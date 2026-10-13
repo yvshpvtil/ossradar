@@ -1,0 +1,15 @@
+{
+ "fullName": "HKUDS/LightRAG",
+ "whoItsFor": null,
+ "useCases": [
+  "Deep Contextual Understanding: Through graph-structured indexing, LightRAG captures complex semantic dependencies between entities, overcomi",
+  "Exceptional Comprehensiveness & Diversity: LightRAG’s dual-level retrieval mechanism allows it to integrate detailed facts and abstract conc",
+  "Extreme Retrieval Efficiency & Low Cost: LightRAG does not rely on inefficient community reports or multi-hop reasoning for complex queries."
+ ],
+ "installCommand": "uv tool install \"lightrag-hku[api]\"",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4f795e60ea3e",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.992Z"
+}

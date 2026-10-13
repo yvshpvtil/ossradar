@@ -1,0 +1,15 @@
+{
+ "fullName": "openinterpreter/openinterpreter",
+ "whoItsFor": null,
+ "useCases": [
+  "Runs commands inside native sandboxing on macOS, Linux, and Windows.",
+  "Switches providers and models from the TUI with `/model`.",
+  "Runs any selected OpenAI-compatible provider through Chat Completions with"
+ ],
+ "installCommand": "curl -fsSL https://www.openinterpreter.com/install | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "5953ce152f1a",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.014Z"
+}

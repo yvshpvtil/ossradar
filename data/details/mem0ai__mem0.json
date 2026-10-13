@@ -1,0 +1,15 @@
+{
+ "fullName": "mem0ai/mem0",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-Level Memory: Seamlessly retains User, Session, and Agent state with adaptive personalization",
+  "Developer-Friendly: Intuitive API, cross-platform SDKs, and a fully managed service option",
+  "AI Assistants: Consistent, context-rich conversations"
+ ],
+ "installCommand": "npm install -g @mem0/cli      # or: pip install mem0-cli",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e03e608806bf",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.723Z"
+}

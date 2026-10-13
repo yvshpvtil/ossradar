@@ -1,0 +1,11 @@
+{
+ "fullName": "tradecatlabs/vibe-coding-cn",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r .github/tools/prompts-library/requirements.txt",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1209854c4300",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:37.116Z"
+}

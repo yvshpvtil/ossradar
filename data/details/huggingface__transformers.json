@@ -1,0 +1,11 @@
+{
+ "fullName": "huggingface/transformers",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"transformers[torch]\"",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f91279f14c04",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.012Z"
+}

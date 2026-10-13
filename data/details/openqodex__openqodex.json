@@ -1,0 +1,15 @@
+{
+ "fullName": "openqodex/openqodex",
+ "whoItsFor": null,
+ "useCases": [
+  "`openqodex review` reviews your change in one command.",
+  "It writes `report.html`, `report.md`, `report.json` and `report.sarif`. SARIF is a standard JSON format for scanner results.",
+  "At the end, it prints a receipt. The receipt holds the verdict, one line per finding and the path of `report.html`. Here is an example repor"
+ ],
+ "installCommand": "npx openqodex init",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "7ea0106aa3dc",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.653Z"
+}

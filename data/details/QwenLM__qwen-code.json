@@ -1,0 +1,11 @@
+{
+ "fullName": "QwenLM/qwen-code",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8daa4f69126c",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:35.963Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "DavidHDev/canvas-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx shadcn@latest add @canvas-ui/liquid-react",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "21b047485527",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:37.207Z"
+}

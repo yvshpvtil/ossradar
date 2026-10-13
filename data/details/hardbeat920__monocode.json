@@ -1,0 +1,11 @@
+{
+ "fullName": "hardbeat920/monocode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "75e360ae8f65",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.882Z"
+}

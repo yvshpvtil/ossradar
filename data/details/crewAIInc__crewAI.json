@@ -1,0 +1,15 @@
+{
+ "fullName": "crewAIInc/crewAI",
+ "whoItsFor": null,
+ "useCases": [
+  "Crews for autonomy: Model teams of specialized AI agents with roles, goals, tools, and tasks.",
+  "Flows for control: Build event-driven workflows with state, branching, routing, and production logic.",
+  "Seamless integration: Combine Crews and Flows to create complex, real-world automations."
+ ],
+ "installCommand": "npx skills add crewaiinc/skills",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4c734e241611",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.804Z"
+}

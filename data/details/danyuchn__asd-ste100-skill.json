@@ -1,0 +1,11 @@
+{
+ "fullName": "danyuchn/asd-ste100-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add danyuchn/asd-ste100-skill",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f66052dcc494",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:36.430Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "vercel-labs/fx",
+ "whoItsFor": null,
+ "useCases": [
+  "Small and fast: CI fails a pull request if any benchmarked command, such as `fx help` or `fx status --json`, takes longer than 2 ms on Linux",
+  "Built-in tools: fx finds, reads, and edits files, runs shell commands, searches the web and reads URLs, and delegates work to subagents. A d",
+  "Model choice: sign in to Vercel AI Gateway, use a ChatGPT or Grok subscription, or connect an OpenAI-compatible Chat Completions endpoint su"
+ ],
+ "installCommand": "curl -fsSL https://fx.sh/setup.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "02fee25416ab",
+ "version": 1,
+ "generatedAt": "2026-10-13T17:39:37.194Z"
+}
