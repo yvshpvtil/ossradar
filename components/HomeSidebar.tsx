@@ -18,6 +18,7 @@ export function HomeSidebar({ repos, newCount, active = "all" }: { repos: Repo[]
             <span className="tabular-nums text-xs">{newCount}</span>
           </Link>
           <Link href="/watchlist" className={item}><span>★ Watchlist</span></Link>
+          <Link href="/hacker-news" className={item}><span>On Hacker News</span></Link>
           <Link href="/submit" className={item}><span>+ Submit a repo</span></Link>
         </nav>
         <nav aria-labelledby="side-cats">
