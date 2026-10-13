@@ -169,6 +169,12 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           )}
           <WatchButton fullName={repo.fullName} withLabel />
           <ShareButton path={repoPath(repo)} title={repo.fullName} className="h-9 px-3.5 text-sm" />
+          <Link
+            href={`/compare?r=${[repo, ...similar.slice(0, 1)].map((r) => r.fullName).join(",")}`}
+            className="inline-flex h-9 items-center rounded-md border border-zinc-300 px-3.5 font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+          >
+            Compare
+          </Link>
         </div>
 
         <section className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
