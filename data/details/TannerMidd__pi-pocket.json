@@ -1,0 +1,15 @@
+{
+ "fullName": "TannerMidd/pi-pocket",
+ "whoItsFor": null,
+ "useCases": [
+  "Durable. Every model call, tool call, and subagent is stored as it happens. Restart the server mid-run and the work continues; a cut-off too",
+  "Multiplayer. Share a live session: presence, a side chat Pi does not see, @mentions, pins, reactions, shared notes, and take turns.",
+  "Steer or queue. Redirect Pi while it works, queue follow-ups, or stop it."
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b9e893c61d5c",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.999Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "Dokploy/dokploy",
+ "whoItsFor": null,
+ "useCases": [
+  "Applications: Deploy any type of application (Node.js, PHP, Python, Go, Ruby, etc.).",
+  "Databases: Create and manage databases with support for MySQL, PostgreSQL, MongoDB, MariaDB, libsql, and Redis.",
+  "Backups: Automate backups for databases to an external storage destination."
+ ],
+ "installCommand": "curl -sSL https://dokploy.com/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a360f8a445f8",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.186Z"
+}

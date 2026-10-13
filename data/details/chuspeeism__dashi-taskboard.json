@@ -1,0 +1,11 @@
+{
+ "fullName": "chuspeeism/dashi-taskboard",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "bc4a936dd83f",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.904Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "janhq/jan",
+ "whoItsFor": null,
+ "useCases": [
+  "Local AI Models: Download and run LLMs (Llama, Gemma, Qwen, GPT-oss etc.) from HuggingFace",
+  "Cloud Integration: Connect to GPT models via OpenAI, Claude models via Anthropic, Mistral, Groq, MiniMax, and others",
+  "Custom Assistants: Create specialized AI assistants for your tasks"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d57be3b9a58d",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:18.041Z"
+}

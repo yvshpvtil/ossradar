@@ -1,0 +1,15 @@
+{
+ "fullName": "78/xiaozhi-esp32",
+ "whoItsFor": null,
+ "useCases": [
+  "Wi-Fi, wired Ethernet, USB RNDIS, and ML307/EC801E or NT26 Cat.1 4G networking; supported boards can switch between Wi-Fi and 4G",
+  "Offline voice wake-up with ESP-SR, including customizable wake words",
+  "Two communication transports: WebSocket and MQTT + UDP"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0432c2385cac",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.672Z"
+}

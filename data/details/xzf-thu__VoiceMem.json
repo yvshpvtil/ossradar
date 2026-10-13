@@ -1,0 +1,15 @@
+{
+ "fullName": "xzf-thu/VoiceMem",
+ "whoItsFor": null,
+ "useCases": [
+  "Accurate — Reaches 91.2% on LoCoMo, compared with 61.68% for Mem0, using only Top-5 memories.",
+  "Emotional & Personal — Remembers not only what the user said, but also who the user is and how they feel. Reaches 69.44% on PersonaMem.",
+  "Multimodal — Remembers speech, speakers, sound events, multi-speaker conversations, and music from real-world audio."
+ ],
+ "installCommand": "pip install voicemem",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "df5bfa562220",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.237Z"
+}

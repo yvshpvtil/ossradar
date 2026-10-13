@@ -1,0 +1,11 @@
+{
+ "fullName": "strands-labs/strands-decider",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install strands-decider",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "715db4fba9b0",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.218Z"
+}

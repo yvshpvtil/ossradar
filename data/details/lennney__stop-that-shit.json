@@ -1,0 +1,11 @@
+{
+ "fullName": "lennney/stop-that-shit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add ./skills/stss --global",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "dd383beda1be",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.107Z"
+}

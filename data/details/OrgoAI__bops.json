@@ -1,0 +1,11 @@
+{
+ "fullName": "OrgoAI/bops",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx next typegen        # route types (next-env.d.ts isn't committed)",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "da3547dc58a7",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.530Z"
+}

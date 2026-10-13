@@ -1,0 +1,11 @@
+{
+ "fullName": "Aryanutkarsh/SeeCode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Aryanutkarsh/seecode -g",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "e33c00f0d261",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.603Z"
+}

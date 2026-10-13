@@ -1,0 +1,11 @@
+{
+ "fullName": "AgentSystemLabs/agent-office",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/AgentSystemLabs/agent-office/main/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "20c5f79d3649",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:17.184Z"
+}

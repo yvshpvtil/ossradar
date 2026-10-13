@@ -1,0 +1,11 @@
+{
+ "fullName": "superset-sh/superset",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://superset.sh/cli/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "326e9bebbe99",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.450Z"
+}

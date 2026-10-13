@@ -1,0 +1,11 @@
+{
+ "fullName": "QwenLM/Qwen-MM-Plugins",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "594e249a2a54",
+ "version": 1,
+ "generatedAt": "2026-10-13T20:55:16.941Z"
+}
