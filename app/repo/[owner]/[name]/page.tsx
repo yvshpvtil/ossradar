@@ -17,6 +17,7 @@ import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
+import { hasTopicPage } from "@/lib/topics";
 import { ago, getLatestRelease } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
@@ -250,8 +251,12 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         {repo.topics.length > 0 && (
           <ul className="mt-6 flex flex-wrap gap-1.5">
             {repo.topics.map((t) => (
-              <li key={t} className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300">
-                {t}
+              <li key={t}>
+                {hasTopicPage(t) ? (
+                  <Link href={`/topic/${t}`} className="block rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-950">{t}</Link>
+                ) : (
+                  <span className="block rounded-full bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">{t}</span>
+                )}
               </li>
             ))}
           </ul>

@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { LANDINGS } from "@/lib/landing";
 import { getLanguages } from "@/lib/languages";
 import { getArchiveDays } from "@/lib/daily";
+import { getTopics } from "@/lib/topics";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getData();
@@ -29,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "daily" as const,
       priority: 0.7,
+    })),
+    ...getTopics().map((t) => ({
+      url: `${SITE.url}/topic/${encodeURIComponent(t.slug)}`,
+      lastModified,
+      changeFrequency: "daily" as const,
+      priority: 0.6,
     })),
     ...LANDINGS.map((l) => ({
       url: `${SITE.url}/trending/${l.slug}`,

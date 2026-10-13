@@ -3,6 +3,7 @@ import { getCategory } from "@/lib/categories";
 import { getRepo } from "@/lib/data";
 import { getLanding } from "@/lib/landing";
 import { getLanguage } from "@/lib/languages";
+import { hasTopicPage } from "@/lib/topics";
 
 /** First day that can be archived: the day after the first snapshot (2026-10-13). */
 const FIRST_ARCHIVE_DAY = "2026-10-14";
@@ -32,6 +33,8 @@ export function proxy(req: NextRequest) {
     if (!parts[1] || !getLanding(parts[1])) return notFound();
   } else if (parts[0] === "language") {
     if (!parts[1] || parts.length > 2 || !getLanguage(parts[1])) return notFound();
+  } else if (parts[0] === "topic") {
+    if (!parts[1] || parts.length > 2 || !hasTopicPage(parts[1])) return notFound();
   } else if (parts[0] === "daily" && parts.length > 1) {
     // Archive days are completed UTC days from FIRST_ARCHIVE_DAY up to yesterday (snapshot files aren't readable here).
     const d = parts[1];
@@ -42,5 +45,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/repo/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/daily/:path*"],
+  matcher: ["/repo/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
 };
