@@ -44,8 +44,8 @@ export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; sh
           <li key={name} className="px-4 py-3">
             <div className="flex items-start gap-3">
               <div className="min-w-0 flex-1">
-                <Link href={`/repo/${r.owner}/${r.name}`} className="font-medium hover:underline">
-                  <span className="text-zinc-500 dark:text-zinc-400">{r.owner}/</span>
+                <Link href={`/repo/${r.owner}/${r.name}`} className="block break-words font-medium hover:underline sm:inline">
+                  <span className="block text-xs font-normal text-zinc-500 sm:inline sm:text-[length:inherit] sm:font-medium dark:text-zinc-400">{r.owner}/</span>
                   {r.name}
                 </Link>
                 <p className="line-clamp-1 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>
@@ -82,7 +82,7 @@ function Stat({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="rounded-md bg-zinc-50 px-2 py-1.5 dark:bg-zinc-900">
       <dt className="text-zinc-500">{label}</dt>
-      <dd className="font-mono font-semibold">{value}</dd>
+      <dd className="font-mono font-semibold tabular-nums">{value}</dd>
     </div>
   );
 }

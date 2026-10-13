@@ -62,8 +62,8 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
 function Stat({ label, value, est }: { label: string; value: string; est?: boolean }) {
   return (
     <div className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
-      <p className="text-xs text-zinc-500">{label}</p>
-      <p className="mt-1 font-mono text-lg font-semibold">
+      <p className="text-xs text-zinc-500 dark:text-zinc-400">{label}</p>
+      <p className="mt-1 font-mono text-lg font-semibold tabular-nums">
         {value}
         {est && <EstBadge />}
       </p>
@@ -118,9 +118,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             width={48}
             height={48}
             unoptimized
-            className="rounded-full"
+            className="shrink-0 rounded-full"
           />
-          <h1 className="min-w-0 break-words text-2xl font-bold tracking-tight sm:text-3xl">
+          <h1 className="min-w-0 break-words text-2xl font-bold tracking-tight [overflow-wrap:anywhere] sm:text-3xl">
             <span className="text-zinc-500 dark:text-zinc-400">{repo.owner}/</span>
             {repo.name}
           </h1>
@@ -134,11 +134,11 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         )}
 
         <div className="mt-4 flex flex-wrap gap-2 text-sm">
-          <a href={repo.url} className="rounded-md bg-zinc-900 px-3 py-1.5 text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300" rel="noopener">
+          <a href={repo.url} className="inline-flex h-9 items-center rounded-md bg-zinc-900 px-3.5 font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300" rel="noopener">
             View on GitHub
           </a>
           {repo.homepage && (
-            <a href={repo.homepage} className="rounded-md border border-zinc-300 px-3 py-1.5 hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900" rel="noopener nofollow">
+            <a href={repo.homepage} className="inline-flex h-9 items-center rounded-md border border-zinc-300 px-3.5 font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900" rel="noopener nofollow">
               Website
             </a>
           )}
@@ -172,7 +172,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} />
 
         <section className="mt-6">
-          <h2 className="mb-2 text-lg font-semibold">About {repo.name}</h2>
+          <h2 className="mb-3 text-xl font-semibold tracking-tight">About {repo.name}</h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">{aboutText(repo)}</p>
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             See more <Link className="underline" href={`/category/${repo.category}`}>trending {categoryLabel(repo.category)} repos</Link> or the{" "}
@@ -199,7 +199,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
 
         {similar.length > 0 && (
           <section className="mt-10">
-            <h2 className="mb-3 text-lg font-semibold">Similar rising repos</h2>
+            <h2 className="mb-3 text-xl font-semibold tracking-tight">Similar rising repos</h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {similar.map((s) => (
                 <li key={s.fullName} className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">

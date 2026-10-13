@@ -7,7 +7,6 @@ import { CATEGORIES } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import type { LeaderRepo } from "@/lib/leader";
 import type { CategorySlug } from "@/lib/types";
-import { EstBadge } from "./EstBadge";
 import { Sparkline } from "./Sparkline";
 import { WatchButton } from "./WatchButton";
 import { readSinceLastVisit } from "@/lib/watch";
@@ -17,10 +16,10 @@ const PAGE = 50;
 const WEEK_MS = 7 * 86_400_000;
 
 const pill = (active: boolean) =>
-  `rounded-full border px-3 py-1 text-sm transition-colors ${
+  `inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full border px-3.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/40 ${
     active
       ? "border-indigo-600 bg-indigo-600 text-white"
-      : "border-zinc-300 text-zinc-700 hover:border-zinc-400 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-zinc-500"
+      : "border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:border-zinc-400 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-zinc-500"
   }`;
 
 export function Leaderboard({
@@ -94,33 +93,33 @@ export function Leaderboard({
   return (
     <div>
       <div className="mb-4 flex flex-col gap-3">
-        <div role="tablist" aria-label="Time period" className="flex gap-2">
-          {(["today", "week"] as const).map((p) => (
-            <button
-              key={p}
-              role="tab"
-              aria-selected={period === p}
-              className={pill(period === p)}
-              onClick={() => setPeriod(p)}
-            >
-              {p === "today" ? "Today (24h)" : "This week (7d)"}
-            </button>
-          ))}
-        </div>
         <div className="flex flex-wrap items-center gap-2">
+          <div role="tablist" aria-label="Time period" className="inline-flex h-9 shrink-0 rounded-full border border-zinc-300 bg-zinc-100 p-0.5 dark:border-zinc-700 dark:bg-zinc-900">
+            {(["today", "week"] as const).map((p) => (
+              <button
+                key={p}
+                role="tab"
+                aria-selected={period === p}
+                className={`rounded-full px-3.5 text-sm font-medium transition-colors ${period === p ? "bg-indigo-600 text-white shadow-sm" : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"}`}
+                onClick={() => setPeriod(p)}
+              >
+                {p === "today" ? "Today" : "This week"}
+              </button>
+            ))}
+          </div>
           <input
             type="search"
             value={query}
             onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }}
             placeholder="Search repos…"
             aria-label="Search repos"
-            className="min-w-0 flex-1 rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm outline-none focus:border-indigo-500 sm:max-w-xs dark:border-zinc-700 dark:bg-zinc-900"
+            className="h-9 min-w-0 flex-1 basis-48 rounded-full border border-zinc-300 bg-white px-4 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900"
           />
           <select
             value={language}
             onChange={(e) => { setLanguage(e.target.value); setLimit(PAGE); }}
             aria-label="Language"
-            className="rounded-md border border-zinc-300 bg-white px-2 py-1.5 text-sm dark:border-zinc-700 dark:bg-zinc-900"
+            className="h-9 max-w-full shrink-0 rounded-full border border-zinc-300 bg-white px-3 text-sm text-zinc-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
           >
             <option value="all">All languages</option>
             {languages.map(([l, n]) => (
@@ -134,14 +133,14 @@ export function Leaderboard({
           )}
           {sinceVisit && sinceVisit.newNames.size > 0 && (
             <button className={pill(onlySince)} aria-pressed={onlySince} onClick={() => { setOnlySince((v) => !v); setLimit(PAGE); }}>
-              New since your last visit <span className="opacity-70">{sinceVisit.newNames.size}</span>
+              New since last visit <span className="tabular-nums opacity-70">{sinceVisit.newNames.size}</span>
             </button>
           )}
         </div>
         {showCategoryFilter && (
-          <div className="flex flex-wrap gap-2" aria-label="Category filter">
+          <div className="flex flex-wrap gap-2 border-t border-zinc-200 pt-3 dark:border-zinc-800" aria-label="Category filter">
             <button className={pill(category === "all")} onClick={() => { setCategory("all"); setLimit(PAGE); }}>
-              All <span className="opacity-60">{repos.length}</span>
+              All <span className="tabular-nums opacity-60">{repos.length}</span>
             </button>
             {CATEGORIES.filter((c) => counts[c.slug]).map((c) => (
               <button
@@ -149,7 +148,7 @@ export function Leaderboard({
                 className={pill(category === c.slug)}
                 onClick={() => { setCategory(c.slug); setLimit(PAGE); }}
               >
-                {c.label} <span className="opacity-60">{counts[c.slug]}</span>
+                {c.label} <span className="tabular-nums opacity-60">{counts[c.slug]}</span>
               </button>
             ))}
           </div>
@@ -169,7 +168,7 @@ export function Leaderboard({
               key={r.fullName}
               className={`flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
             >
-              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm text-zinc-400 sm:pt-0">
+              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-400 dark:text-zinc-500 sm:pt-0">
                 {i + 1}
                 {move != null && move !== 0 && (
                   <span
@@ -190,8 +189,8 @@ export function Leaderboard({
                 className="mt-0.5 hidden shrink-0 rounded-full sm:mt-0 sm:block"
               />
               <div className="min-w-0 flex-1">
-                <Link href={`/repo/${r.owner}/${r.name}`} className="font-medium hover:underline">
-                  <span className="text-zinc-500 dark:text-zinc-400">{r.owner}/</span>
+                <Link href={`/repo/${r.owner}/${r.name}`} className="block break-words font-medium hover:underline sm:inline">
+                  <span className="block text-xs font-normal text-zinc-500 sm:inline sm:text-[length:inherit] sm:font-medium dark:text-zinc-400">{r.owner}/</span>
                   {r.name}
                 </Link>
                 {isNew && (
@@ -210,17 +209,19 @@ export function Leaderboard({
                     {CATEGORIES.find((c) => c.slug === r.category)?.label}
                   </Link>
                   {r.language && <span>{r.language}</span>}
-                  <span>★ {formatNumber(r.stars)}</span>
+                  <span className="tabular-nums">★ {formatNumber(r.stars)}</span>
                 </p>
               </div>
               <Sparkline points={r.spark} width={80} height={28} className="hidden shrink-0 text-indigo-500 md:block" />
-              <div className="w-20 shrink-0 text-right">
-                <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">{formatDelta(delta)}</span>
-                {est && <EstBadge />}
-                <p className="text-[11px] text-zinc-500">{period === "today" ? "stars / 24h" : "stars / 7d"}</p>
-                {period === "today" && r.delta1h != null && r.delta1h > 0 && (
-                  <p className="text-[11px] text-zinc-500">{formatDelta(r.delta1h)} last hr</p>
-                )}
+              <div className="w-20 shrink-0 text-right sm:w-24">
+                <p
+                  className="font-mono font-semibold tabular-nums text-emerald-600 dark:text-emerald-400"
+                  title={est ? "Estimated: not enough daily snapshots yet (see note above the list)" : undefined}
+                >
+                  {formatDelta(delta)}
+                  {est && <span className="text-zinc-400" aria-label="estimated">*</span>}
+                </p>
+                <p className="text-[11px] text-zinc-500 dark:text-zinc-400">{period === "today" ? "stars today" : "stars this week"}</p>
               </div>
               <WatchButton fullName={r.fullName} />
             </li>

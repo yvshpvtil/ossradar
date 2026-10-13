@@ -37,7 +37,7 @@ export function RepoOfTheDay({ repo, now }: { repo: Repo; now: number }) {
           className="shrink-0 rounded-full"
         />
         <div className="min-w-0 flex-1">
-          <Link href={`/repo/${repo.owner}/${repo.name}`} className="break-words text-lg font-semibold hover:underline">
+          <Link href={`/repo/${repo.owner}/${repo.name}`} className="break-words text-base font-semibold [overflow-wrap:anywhere] hover:underline sm:text-lg">
             <span className="text-zinc-500 dark:text-zinc-400">{repo.owner}/</span>
             {repo.name}
           </Link>

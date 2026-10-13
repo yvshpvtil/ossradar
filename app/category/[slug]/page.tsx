@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
         <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{category.label}</span>
       </nav>
       <section className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">Trending {category.label} repos</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {category.label} repos</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{category.description}</p>
         {top.length > 0 && (
           <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
@@ -66,7 +66,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} />
       <section className="mt-10 text-sm">
-        <h2 className="mb-2 text-lg font-semibold">Other categories</h2>
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">Other categories</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-1">
           {CATEGORIES.filter((c) => c.slug !== category.slug).map((c) => (
             <li key={c.slug}><Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/category/${c.slug}`}>{c.label}</Link></li>

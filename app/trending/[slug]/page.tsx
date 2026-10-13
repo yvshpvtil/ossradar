@@ -43,14 +43,14 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
         <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{l.title}</span>
       </nav>
       <section className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">{l.h1}</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{l.h1}</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{l.intro}</p>
         <p className="mt-1 text-xs text-zinc-500">{repos.length} repos · updated {formatDate(getData().generatedAt)}</p>
       </section>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod={l.slug === "github-repos-today" ? "today" : "week"} />
       <section className="mt-10 text-sm">
-        <h2 className="mb-2 text-lg font-semibold">More views</h2>
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">More views</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-1">
           {LANDINGS.filter((x) => x.slug !== l.slug).map((x) => (
             <li key={x.slug}><Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/trending/${x.slug}`}>{x.title}</Link></li>

@@ -15,8 +15,8 @@ export default function SponsorPage() {
   // TODO: set SITE.sponsorPaymentUrl (lib/site.ts) to a real Stripe / Lemon Squeezy payment link.
   const paymentUrl = SITE.sponsorPaymentUrl;
   return (
-    <div className="mx-auto max-w-3xl">
-      <h1 className="text-3xl font-bold tracking-tight">Sponsor OSS Radar</h1>
+    <div className="max-w-3xl">
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Sponsor OSS Radar</h1>
       <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
         OSS Radar is read by developers who want to know which open-source AI and developer tools are taking off,
         before everyone else does. One sponsor per week, clearly labeled, never mixed into the rankings.
@@ -72,7 +72,7 @@ export default function SponsorPage() {
       </section>
 
       <section className="mt-8 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">The fine print</h2>
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">The fine print</h2>
         <ul className="list-disc space-y-1 pl-5">
           <li>Sponsorships never affect rankings. The leaderboard is computed from GitHub data only.</li>
           <li>Developer-relevant products only (tools, APIs, infra, hiring for engineering roles). We reserve the right to decline.</li>

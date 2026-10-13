@@ -43,22 +43,22 @@ export default function Home() {
         generatedAtMs={now}
       />
       <section className="mt-10">
-        <h2 className="mb-3 text-lg font-semibold">Browse by category</h2>
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">Browse by category</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {CATEGORIES.map((c) => (
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}
-              className="rounded-lg border border-zinc-200 p-3 hover:border-indigo-400 dark:border-zinc-800 dark:hover:border-indigo-500"
+              className="rounded-lg border border-zinc-200 p-4 transition-colors hover:border-indigo-400 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/20 dark:border-zinc-800 dark:hover:border-indigo-500"
             >
               <p className="font-medium">{c.label}</p>
-              <p className="text-xs text-zinc-500">{c.description}</p>
+              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{c.description}</p>
             </Link>
           ))}
         </div>
       </section>
       <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold">Popular views</h2>
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">Popular views</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
           {LANDINGS.map((l) => (
             <li key={l.slug}>
