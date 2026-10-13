@@ -1,0 +1,11 @@
+{
+ "fullName": "wanshuiyin/Auto-claude-code-research-in-sleep",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @openai/codex && codex login       # one-time ChatGPT login; the reviewer model comes from ~/.codex/config.toml",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "450bcff25f7e",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:13.236Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "miqdadbadjuber/anti-slop",
+ "whoItsFor": null,
+ "useCases": [
+  "38 mandatory rules (R-01 to R-38) in three tiers: Hard Gate, Purpose-Gate, and Quality Locks.",
+  "A Liveliness Toolkit: three dials (ENERGY / RHYTHM / MOTION) and a Design Read, so the result comes out alive rather than merely clean.",
+  "A Delivery Gate: a mandatory PASS/FAIL report in four blocks, run before anything ships."
+ ],
+ "installCommand": "npx antislop-ai",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "7275bfdf921c",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.363Z"
+}

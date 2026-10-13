@@ -1,0 +1,11 @@
+{
+ "fullName": "GTKottman/mortiflix-oss",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6ac855c88ffd",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:13.837Z"
+}

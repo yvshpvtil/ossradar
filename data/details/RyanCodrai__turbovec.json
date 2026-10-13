@@ -1,0 +1,11 @@
+{
+ "fullName": "RyanCodrai/turbovec",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install turbovec",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "2a88cbd33957",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:13.614Z"
+}

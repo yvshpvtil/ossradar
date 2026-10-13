@@ -1,0 +1,11 @@
+{
+ "fullName": "truefoundry/trueforge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @truefoundry/trueforge@latest",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "68d53fe0a546",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:14.046Z"
+}

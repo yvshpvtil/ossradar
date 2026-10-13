@@ -1,0 +1,11 @@
+{
+ "fullName": "shadcn-ui/lint",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -D @shadcn/lint eslint @typescript-eslint/parser",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0856c860fbab",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:13.746Z"
+}

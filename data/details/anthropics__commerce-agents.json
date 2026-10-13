@@ -1,0 +1,11 @@
+{
+ "fullName": "anthropics/commerce-agents",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt       # the seven packages and their pinned dependencies",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1ff0bc6fcbdb",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:14.630Z"
+}

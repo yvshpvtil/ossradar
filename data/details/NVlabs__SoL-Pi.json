@@ -1,0 +1,11 @@
+{
+ "fullName": "NVlabs/SoL-Pi",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global @earendil-works/pi-coding-agent@0.85.1",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "62a84e7e49e3",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.661Z"
+}

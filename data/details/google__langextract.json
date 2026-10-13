@@ -1,0 +1,11 @@
+{
+ "fullName": "google/langextract",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install langextract",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d4b54bf80325",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.579Z"
+}

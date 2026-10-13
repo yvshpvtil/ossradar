@@ -1,0 +1,11 @@
+{
+ "fullName": "StayLameBro/backburner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/StayLameBro/backburner/main/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "92aa732acf88",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.643Z"
+}

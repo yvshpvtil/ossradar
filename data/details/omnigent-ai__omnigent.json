@@ -1,0 +1,11 @@
+{
+ "fullName": "omnigent-ai/omnigent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "100afbaf0e47",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.370Z"
+}

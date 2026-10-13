@@ -1,0 +1,11 @@
+{
+ "fullName": "StarTrail-org/PixelRAG",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install pixelrag",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "b5b26ce2be83",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:14.110Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "n8n-io/n8n",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://get.n8n.io | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6e16f5263757",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:13.374Z"
+}

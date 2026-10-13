@@ -1,0 +1,11 @@
+{
+ "fullName": "xbtlin/ai-berkshire",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @anthropic-ai/claude-code",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "58620d13aa06",
+ "version": 1,
+ "generatedAt": "2026-10-13T14:45:12.366Z"
+}
