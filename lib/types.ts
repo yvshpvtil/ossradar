@@ -40,6 +40,12 @@ export interface Repo {
   /** True when either delta is estimated. */
   velocityEstimated: boolean;
   history: HistoryPoint[];
+  /** Stars gained in the last hour, from data/hourly.json (null until two hourly points exist). */
+  delta1h: number | null;
+  /** UTC date the repo first entered the tracked list. */
+  firstSeen: string;
+  /** Rank by 24h gain on rankBaseDate (null when unknown or not ranked then). */
+  prevRank: number | null;
 }
 
 export interface RepoData {
@@ -47,6 +53,10 @@ export interface RepoData {
   snapshotDate: string;
   /** Number of daily snapshots available when this file was generated. */
   snapshotCount: number;
+  /** Hourly points available in data/hourly.json (max 48). */
+  hourlyPoints: number;
+  /** Previous UTC day used for rank movement, or null with only one day of data. */
+  rankBaseDate: string | null;
   repos: Repo[];
 }
 
