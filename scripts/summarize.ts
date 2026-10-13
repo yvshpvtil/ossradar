@@ -100,29 +100,17 @@ export async function summarize(input: SummaryInput): Promise<string> {
 export const summarizerId = process.env.ANTHROPIC_API_KEY ? `anthropic:${MODEL}` : "template";
 
 /* ------------------------------------------------------------------------------------------
- * Repo details enrichment: README → structured "who it's for / use cases / requirements".
+ * Repo details enrichment: README → structured "who it's for / use cases / install command".
  * Used by scripts/enrich.ts. Extractors, in order of preference:
  *   1. Anthropic API (ANTHROPIC_API_KEY set)
  *   2. Claude Code CLI (DETAILS_EXTRACTOR=claude-cli, for local backfills)
  *   3. Heuristic README parser (always available, never invents values)
- * Unknown values are null; the UI renders them as "Not stated in README".
+ * Unknown values are null.
  * ---------------------------------------------------------------------------------------- */
-import type { RepoDetails, RepoRequirements } from "../lib/types";
+import type { RepoDetails } from "../lib/types";
 
+// Bumping this would re-process every repo; v1 files (which also carry legacy requirements) stay valid.
 export const DETAILS_VERSION = 1;
-
-const EMPTY_REQ: RepoRequirements = {
-  os: null,
-  ramMinGB: null,
-  ramRecommendedGB: null,
-  gpuRequired: null,
-  vramMinGB: null,
-  diskGB: null,
-  runtime: null,
-  modelSizes: null,
-};
-
-const num = (s: string | undefined) => (s == null ? null : Number.parseFloat(s));
 
 function stripMd(readme: string): string {
   return readme
@@ -134,47 +122,6 @@ function stripMd(readme: string): string {
 
 /** Deterministic README parser: only reports what the README literally states. */
 export function heuristicDetails(readme: string, description: string): Omit<RepoDetails, "fullName" | "extractor" | "generatedAt" | "version" | "readmeHash"> {
-  const text = stripMd(readme);
-  const req: RepoRequirements = { ...EMPTY_REQ };
-
-  const ram = [...text.matchAll(/(\d{1,3}(?:\.\d)?)\s*(?:GB|GiB|G)\b\s*(?:of\s+)?(?:system\s+)?(?:RAM|memory)\b/gi)]
-    .filter((m) => !/v?ram/i.test(m[0]) || !/vram|gpu memory/i.test(m[0]))
-    .map((m) => ({ v: num(m[1])!, ctx: text.slice(Math.max(0, (m.index ?? 0) - 40), (m.index ?? 0) + m[0].length + 10) }))
-    .filter((m) => !/vram|gpu/i.test(m.ctx));
-  if (ram.length) {
-    const min = ram.find((r) => /min|at least|require/i.test(r.ctx)) ?? ram[0];
-    req.ramMinGB = min.v;
-    const rec = ram.find((r) => /recommend/i.test(r.ctx));
-    if (rec) req.ramRecommendedGB = rec.v;
-  }
-  const vram = [...text.matchAll(/(\d{1,3}(?:\.\d)?)\s*(?:GB|GiB|G)\b\s*(?:of\s+)?(?:VRAM|GPU memory|video memory)/gi)].map((m) => num(m[1])!);
-  if (vram.length) req.vramMinGB = Math.min(...vram);
-
-  if (/\b(requires?|needs?)\b[^.\n]{0,40}\b(NVIDIA|CUDA|GPU)\b/i.test(text)) req.gpuRequired = true;
-  else if (/\b(no GPU (required|needed)|runs? on CPU|CPU[- ]only|without a GPU)\b/i.test(text)) req.gpuRequired = false;
-
-  const disk = text.match(/(\d{1,4})\s*(?:GB|GiB)\b\s*(?:of\s+)?(?:free\s+)?(?:disk|storage|disk space)/i);
-  if (disk) req.diskGB = num(disk[1]);
-
-  const rt: string[] = [];
-  const py = text.match(/Python\s*(?:version\s*)?(>=|≥|\d)\s*(\d+\.\d+)?\+?/i);
-  if (py) rt.push(`Python ${py[1] === ">=" || py[1] === "≥" ? `≥ ${py[2] ?? ""}` : text.match(/Python\s*(\d+\.\d+\+?)/i)?.[1] ?? ""}`.trim());
-  const node = text.match(/Node(?:\.js)?\s*(?:>=|≥|v)?\s*(\d{2})(?:\.\d+)*\+?/i);
-  if (node) rt.push(`Node.js ${node[1]}+`);
-  if (/\bdocker (run|compose)\b|docker-compose/i.test(text)) rt.push("Docker");
-  if (rt.length) req.runtime = rt.join(", ");
-
-  const oses = [
-    [/\bmacOS\b|\bmac os\b|apple silicon/i, "macOS"],
-    [/\bwindows\b/i, "Windows"],
-    [/\blinux\b|ubuntu/i, "Linux"],
-  ] as const;
-  const os = oses.filter(([re]) => re.test(text)).map(([, n]) => n);
-  if (os.length) req.os = os.join(", ");
-
-  const sizes = [...new Set([...text.matchAll(/\b(\d{1,3}(?:\.\d)?)\s?B\b(?=[^a-z]|$)/g)].map((m) => `${m[1]}B`))];
-  if (sizes.length && /\b(model|weights|params|parameters|llama|qwen|mistral|gguf)\b/i.test(text)) req.modelSizes = sizes.slice(0, 6).join(", ");
-
   const code = [...readme.matchAll(/```[a-z]*\n([\s\S]*?)```/gi)].flatMap((m) => m[1].split("\n"));
   const install = code
     .map((l) => l.replace(/^\s*\$\s*/, "").trim())
@@ -193,7 +140,6 @@ export function heuristicDetails(readme: string, description: string): Omit<Repo
   return {
     whoItsFor: null,
     useCases: feats,
-    requirements: req,
     installCommand: install ?? null,
     source: readme.trim() ? "readme" : description ? "inferred" : "readme",
   };
@@ -203,10 +149,9 @@ const EXTRACT_PROMPT = `You extract structured facts from a GitHub README for a 
 Return ONLY a JSON object, no prose, with exactly these keys:
 {"whoItsFor": string (1-2 sentences, who should use this),
  "useCases": [3 short strings],
- "requirements": {"os": string|null, "ramMinGB": number|null, "ramRecommendedGB": number|null, "gpuRequired": true|false|null, "vramMinGB": number|null, "diskGB": number|null, "runtime": string|null (e.g. "Python ≥ 3.10, Docker"), "modelSizes": string|null (e.g. "7B, 13B")},
  "installCommand": string|null (one shell command copied verbatim from the README),
  "source": "readme" | "inferred"}
-Rules: requirements must be stated in the README; if not stated use null. NEVER guess hardware specs.
+Rules: installCommand must be copied from the README or null; never invent it.
 whoItsFor and useCases may be inferred from the README's description; set source to "inferred" if the README barely describes the project.`;
 
 function parseJsonObject(text: string): Record<string, unknown> | null {
@@ -220,22 +165,10 @@ function parseJsonObject(text: string): Record<string, unknown> | null {
 }
 
 function normalize(raw: Record<string, unknown>, fallback: ReturnType<typeof heuristicDetails>): ReturnType<typeof heuristicDetails> {
-  const r = (raw.requirements ?? {}) as Record<string, unknown>;
-  const n = (v: unknown) => (typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null);
   const s = (v: unknown) => (typeof v === "string" && v.trim() && !/^(unknown|n\/a|none|not stated)/i.test(v.trim()) ? v.trim().slice(0, 200) : null);
   return {
     whoItsFor: typeof raw.whoItsFor === "string" && raw.whoItsFor.trim() ? raw.whoItsFor.trim().slice(0, 420) : null,
     useCases: Array.isArray(raw.useCases) ? raw.useCases.filter((u): u is string => typeof u === "string").slice(0, 3).map((u) => u.slice(0, 160)) : fallback.useCases,
-    requirements: {
-      os: s(r.os),
-      ramMinGB: n(r.ramMinGB),
-      ramRecommendedGB: n(r.ramRecommendedGB),
-      gpuRequired: typeof r.gpuRequired === "boolean" ? r.gpuRequired : null,
-      vramMinGB: n(r.vramMinGB),
-      diskGB: n(r.diskGB),
-      runtime: s(r.runtime),
-      modelSizes: s(r.modelSizes),
-    },
     installCommand: s(raw.installCommand) ?? fallback.installCommand,
     source: raw.source === "inferred" ? "inferred" : "readme",
   };

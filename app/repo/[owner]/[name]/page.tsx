@@ -79,7 +79,6 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   if (!repo) notFound();
   const similar = getSimilarRepos(repo);
   const details = getDetails(repo.fullName);
-  const rq = details?.requirements;
   const appLd = details && {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -88,10 +87,6 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     sameAs: repo.url,
     description: details.whoItsFor ?? repo.description ?? repo.oneLiner,
     applicationCategory: "DeveloperApplication",
-    operatingSystem: rq?.os ?? undefined,
-    memoryRequirements: rq?.ramMinGB != null ? `${rq.ramMinGB} GB RAM` : undefined,
-    storageRequirements: rq?.diskGB != null ? `${rq.diskGB} GB` : undefined,
-    softwareRequirements: rq?.runtime ?? undefined,
     featureList: details.useCases.length ? details.useCases : undefined,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };

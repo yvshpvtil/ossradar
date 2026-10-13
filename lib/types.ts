@@ -80,7 +80,8 @@ export interface RepoDetails {
   fullName: string;
   whoItsFor: string | null;
   useCases: string[];
-  requirements: RepoRequirements;
+  /** Legacy: written by DETAILS_VERSION 1 only; no longer extracted or displayed. */
+  requirements?: RepoRequirements;
   installCommand: string | null;
   source: "readme" | "inferred";
   extractor: string;

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import type { RepoDetails, RepoRequirements } from "./types";
+import type { RepoDetails } from "./types";
 
 const DIR = path.join(process.cwd(), "data", "details");
 
@@ -12,9 +12,4 @@ export function getDetails(fullName: string): RepoDetails | null {
   } catch {
     return null;
   }
-}
-
-/** True when the README states at least one hardware requirement the checker can use. */
-export function hasHardwareSpecs(r: RepoRequirements): boolean {
-  return r.ramMinGB != null || r.ramRecommendedGB != null || r.vramMinGB != null || r.gpuRequired != null || r.os != null;
 }
