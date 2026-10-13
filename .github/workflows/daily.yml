@@ -42,6 +42,13 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ENRICH_LIMIT: "25"
 
+      - name: Hacker News mentions (free HN Algolia API)
+        run: npx tsx scripts/mentions.ts
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          MENTIONS_LIMIT: "120"
+
       - name: Commit data if changed
         run: |
           git config user.name "github-actions[bot]"

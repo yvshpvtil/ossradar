@@ -16,6 +16,8 @@ import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
+import { getHnMentions } from "@/lib/mentions";
+import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
 import { getLanguage, languageSlug } from "@/lib/languages";
 import { RepoDetailsView } from "@/components/RepoDetailsView";
@@ -82,6 +84,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   if (!repo) notFound();
   const similar = getSimilarRepos(repo);
   const hourlyPts = getHourlyStars(repo.fullName);
+  const hn = getHnMentions(repo.fullName);
   const details = getDetails(repo.fullName);
   const appLd = details && {
     "@context": "https://schema.org",
@@ -199,6 +202,8 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         </section>
 
         {repo.velocityEstimated && <EstimateNote className="mt-4" />}
+
+        {hn && <HnMentions m={hn} fullName={repo.fullName} />}
 
         <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} />
 
