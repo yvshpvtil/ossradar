@@ -17,6 +17,7 @@ import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
+import { ago, getLatestRelease } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
 import { getLanguage, languageSlug } from "@/lib/languages";
@@ -85,6 +86,8 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const similar = getSimilarRepos(repo);
   const hourlyPts = getHourlyStars(repo.fullName);
   const hn = getHnMentions(repo.fullName);
+  const release = getLatestRelease(repo.fullName);
+  const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
   const appLd = details && {
     "@context": "https://schema.org",
@@ -220,7 +223,22 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <div><dt className="text-zinc-500">Language</dt><dd>{repo.language && getLanguage(languageSlug(repo.language)) ? <Link className="underline" href={`/language/${languageSlug(repo.language)}`}>{repo.language}</Link> : (repo.language ?? "n/a")}</dd></div>
           <div><dt className="text-zinc-500">Category</dt><dd><Link className="hover:underline" href={`/category/${repo.category}`}>{categoryLabel(repo.category)}</Link></dd></div>
           <div><dt className="text-zinc-500">Created</dt><dd>{formatDate(repo.createdAt)}</dd></div>
-          <div><dt className="text-zinc-500">Last push</dt><dd>{formatDate(repo.pushedAt)}</dd></div>
+          <div>
+            <dt className="text-zinc-500" title="When code was last pushed (uploaded) to the repo">Last code push</dt>
+            <dd>{ago(repo.pushedAt, nowMs)} <span className="text-zinc-500">({formatDate(repo.pushedAt)})</span></dd>
+          </div>
+          {release !== undefined && (
+            <div>
+              <dt className="text-zinc-500" title="A release is a packaged, versioned snapshot the maintainers publish">Latest release</dt>
+              <dd>
+                {release ? (
+                  <><a className="underline" href={release.url} rel="noopener">{release.tag}</a> <span className="text-zinc-500">{ago(release.date, nowMs)}</span></>
+                ) : (
+                  <span className="text-zinc-500">No releases yet</span>
+                )}
+              </dd>
+            </div>
+          )}
         </dl>
 
         {repo.topics.length > 0 && (

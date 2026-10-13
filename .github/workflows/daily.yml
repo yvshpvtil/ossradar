@@ -49,6 +49,14 @@ jobs:
         env:
           MENTIONS_LIMIT: "120"
 
+      - name: Release activity (GitHub API)
+        run: npx tsx scripts/activity.ts
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIVITY_LIMIT: "150"
+
       - name: Commit data if changed
         run: |
           git config user.name "github-actions[bot]"
