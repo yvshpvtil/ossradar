@@ -1,0 +1,11 @@
+{
+ "fullName": "fayazara/robot-heads",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install robot-heads",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "136f52d80b10",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.132Z"
+}

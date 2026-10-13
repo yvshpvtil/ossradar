@@ -1,0 +1,11 @@
+{
+ "fullName": "rocketride-org/rocketride-server",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install rocketride",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "60e95bf9c355",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.746Z"
+}

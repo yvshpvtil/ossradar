@@ -1,0 +1,11 @@
+{
+ "fullName": "vllm-project/vllm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install vllm",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "7a5690629d1d",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.287Z"
+}

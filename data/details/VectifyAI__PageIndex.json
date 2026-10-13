@@ -1,0 +1,11 @@
+{
+ "fullName": "VectifyAI/PageIndex",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U pageindex",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "93086187c45a",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.372Z"
+}

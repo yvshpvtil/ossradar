@@ -1,0 +1,11 @@
+{
+ "fullName": "bespokelabsai/nimble",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add bespokelabsai/nimble --skill nimble",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "183b053c211d",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.177Z"
+}

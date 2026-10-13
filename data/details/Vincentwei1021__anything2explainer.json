@@ -1,0 +1,15 @@
+{
+ "fullName": "Vincentwei1021/anything2explainer",
+ "whoItsFor": null,
+ "useCases": [
+  "Input: a topic (\"explain vector databases\"), or an article / document you want turned into a video. You also pick the length and the languag",
+  "Output: a 1280×720 H.264 MP4 with synchronized voiceover, word-boundary-aligned subtitles, chapter cards, a top HUD and a bottom chapter pro",
+  "How: the agent researches the topic with sources, writes the narration, generates the voiceover and frame-accurate timeline, storyboards eve"
+ ],
+ "installCommand": "brew install ffmpeg          # frame extraction / transcoding, required",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1ac9622b2df6",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.388Z"
+}

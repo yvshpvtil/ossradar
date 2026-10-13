@@ -1,0 +1,15 @@
+{
+ "fullName": "toon-format/toon",
+ "whoItsFor": null,
+ "useCases": [
+  "Token-Efficient & Accurate: Matches JSON's retrieval accuracy with fewer tokens – see Benchmarks.",
+  "JSON Data Model: Encodes the same objects, arrays, and primitives as JSON with deterministic, lossless round-trips.",
+  "LLM-Friendly Guardrails: `[N]` declares how many rows, `{fields}` how wide – so truncated or malformed output can't slip through."
+ ],
+ "installCommand": "npm install @toon-format/toon",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "df5d8e91ca2c",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.928Z"
+}

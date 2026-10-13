@@ -1,0 +1,11 @@
+{
+ "fullName": "unslothai/unsloth",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://unsloth.ai/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "80ef33835009",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.563Z"
+}

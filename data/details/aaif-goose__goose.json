@@ -1,0 +1,11 @@
+{
+ "fullName": "aaif-goose/goose",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6b7d0e19fd92",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.988Z"
+}

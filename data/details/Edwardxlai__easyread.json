@@ -1,0 +1,11 @@
+{
+ "fullName": "Edwardxlai/easyread",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install git+https://github.com/Edwardxlai/easyread",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ce651459090e",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.420Z"
+}

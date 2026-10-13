@@ -1,0 +1,11 @@
+{
+ "fullName": "vinzdg/codenotch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install xcodegen create-dmg   # once",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "69f145d5f2be",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.475Z"
+}

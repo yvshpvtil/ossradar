@@ -1,0 +1,11 @@
+{
+ "fullName": "ccch1mneyyy/dsh-TUI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @deepseek-ai/dsh @deepseek-harness-tui/dsh-tui",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ff906bf60c54",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.497Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "1jehuang/jcode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://jcode.sh/install | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0bb200684f8c",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.734Z"
+}

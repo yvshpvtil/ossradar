@@ -1,0 +1,11 @@
+{
+ "fullName": "openai/mcp-extensions",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d2e050d6ea85",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.148Z"
+}

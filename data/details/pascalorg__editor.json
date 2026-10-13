@@ -1,0 +1,11 @@
+{
+ "fullName": "pascalorg/editor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @pascal-app/cli editor",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "523dcb33bde0",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:46.644Z"
+}

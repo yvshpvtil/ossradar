@@ -1,0 +1,11 @@
+{
+ "fullName": "milind-soni/OpenMausBot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g openmausbot",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6ded4d2d4d12",
+ "version": 1,
+ "generatedAt": "2026-10-13T15:42:45.179Z"
+}
