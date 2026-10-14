@@ -131,6 +131,12 @@ async function search(query: string, page = 1): Promise<SearchItem[]> {
       await sleep(wait);
       continue;
     }
+    if (res.status >= 500) {
+      // GitHub occasionally returns transient 5xx errors on search; back off and retry.
+      console.warn(`  ${res.status} on "${query}", retrying in ${10 * attempt}s`);
+      await sleep(10_000 * attempt);
+      continue;
+    }
     if (res.status === 422) {
       console.warn(`  422 for "${query}": ${await res.text()}`);
       return [];

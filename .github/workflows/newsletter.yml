@@ -2,8 +2,10 @@ name: Daily newsletter
 
 on:
   schedule:
-    # Once per day at 03:30 UTC = 09:00 IST (after the :17 data run).
-    - cron: "30 3 * * *"
+    # Target 02:45 UTC = 08:15 IST (GitHub often starts scheduled jobs 15-60+ min late),
+    # with a backup at 04:30 UTC = 10:00 IST. The script skips if today's broadcast already exists.
+    - cron: "45 2 * * *"
+    - cron: "30 4 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
