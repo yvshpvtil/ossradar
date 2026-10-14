@@ -71,7 +71,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
               <h2 className="min-w-0 break-words font-semibold">
                 {i + 1}. <Link className="hover:underline" href={repoPath(a.repo)}>{a.repo.fullName}</Link>
               </h2>
-              <span className="shrink-0 font-mono text-sm text-emerald-600 dark:text-emerald-400">
+              <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
                 {formatDelta(a.repo.delta7d)}/wk{a.repo.estimated7d && <EstBadge />}
               </span>
             </div>

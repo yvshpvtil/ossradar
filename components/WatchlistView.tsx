@@ -63,7 +63,7 @@ export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; sh
                   <>
                     #{cur}
                     {move != null && move !== 0 && (
-                      <span className={move > 0 ? "ml-1 text-emerald-600 dark:text-emerald-400" : "ml-1 text-rose-500"}>
+                      <span className={move > 0 ? "ml-1 text-emerald-700 dark:text-emerald-400" : "ml-1 text-rose-600"}>
                         {move > 0 ? "▲" : "▼"}{Math.abs(move)}
                       </span>
                     )}

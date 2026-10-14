@@ -12,7 +12,7 @@ export function EstBadge() {
 export function EstimateNote({ className = "" }: { className?: string }) {
   return (
     <p className={`text-xs text-zinc-500 dark:text-zinc-400 ${className}`}>
-      <span className="font-mono text-zinc-400">*</span> / <EstBadge /> Estimated: until we have enough daily snapshots
+      <span className="font-mono text-zinc-500">*</span> / <EstBadge /> Estimated: until we have enough daily snapshots
       for a repo, its gain is total stars ÷ days since creation. Measured numbers replace estimates automatically.
     </p>
   );

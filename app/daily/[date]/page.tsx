@@ -50,7 +50,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
               {e.repo && repoBlurb(e.repo) && <p className="mt-0.5 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{repoBlurb(e.repo)}</p>}
             </div>
             <div className="shrink-0 text-right">
-              <div className="font-semibold tabular-nums text-emerald-600 dark:text-emerald-400">+{formatNumber(e.gained)}</div>
+              <div className="font-semibold tabular-nums text-emerald-700 dark:text-emerald-400">+{formatNumber(e.gained)}</div>
               <div className="text-xs text-zinc-500">{formatNumber(e.stars)} total</div>
             </div>
           </li>

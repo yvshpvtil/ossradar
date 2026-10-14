@@ -22,13 +22,13 @@ export function TrendingGrid({ repos }: { repos: Repo[] }) {
             className="relative cursor-pointer flex w-[78%] shrink-0 snap-start flex-col rounded-xl border border-zinc-200 bg-white p-4 transition-colors hover:border-indigo-300 hover:shadow-sm sm:w-auto dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-indigo-700"
           >
             <div className="flex items-center justify-between text-xs">
-              <span className="font-mono tabular-nums text-zinc-400 dark:text-zinc-500">#{i + 1}</span>
+              <span className="font-mono tabular-nums text-zinc-500 dark:text-zinc-500">#{i + 1}</span>
               <span
-                className="font-mono font-semibold tabular-nums text-emerald-600 dark:text-emerald-400"
+                className="font-mono font-semibold tabular-nums text-emerald-700 dark:text-emerald-400"
                 title={r.estimated24h ? "Estimated: not enough daily snapshots yet" : undefined}
               >
                 ▲ {formatDelta(r.delta24h)}
-                {r.estimated24h && <span className="text-zinc-400">*</span>} today
+                {r.estimated24h && <span className="text-zinc-500">*</span>} today
               </span>
             </div>
             <Link href={`/repo/${r.owner}/${r.name}`} className="mt-2 break-words font-semibold leading-snug hover:underline after:absolute after:inset-0 after:content-['']">

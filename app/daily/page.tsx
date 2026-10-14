@@ -29,7 +29,7 @@ export default function DailyIndex() {
           {live.map((r, i) => (
             <li key={r.fullName}>
               {i + 1}. <Link className="font-medium hover:underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link>{" "}
-              <span className="text-emerald-600 dark:text-emerald-400">+{formatNumber(r.delta24h)}</span>
+              <span className="text-emerald-700 dark:text-emerald-400">+{formatNumber(r.delta24h)}</span>
             </li>
           ))}
         </ol>
