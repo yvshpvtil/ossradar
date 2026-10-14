@@ -1,0 +1,12 @@
+{
+ "fullName": "Jakeschincariol/founder-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Eleven Claude skills that test a business before you launch it. Free, MIT, no signup, no API key, nothing to connect.",
+ "extractor": "heuristic",
+ "readmeHash": "c5189fa9aaa6",
+ "version": 1,
+ "generatedAt": "2026-10-14T19:01:55.961Z"
+}

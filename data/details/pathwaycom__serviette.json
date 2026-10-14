@@ -1,0 +1,12 @@
+{
+ "fullName": "pathwaycom/serviette",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Pathway Live Data Framework's AI Pipelines allow you to quickly put in production AI applications that offer high-accuracy RAG and AI…",
+ "extractor": "heuristic",
+ "readmeHash": "b5b75e6b5675",
+ "version": 1,
+ "generatedAt": "2026-10-14T19:01:56.015Z"
+}
