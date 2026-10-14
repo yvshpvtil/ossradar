@@ -1,0 +1,15 @@
+{
+ "fullName": "FankChen/tracecrate",
+ "whoItsFor": null,
+ "useCases": [
+  "Focus on the recorded evidence: literal search across text/IDs/models, combined kind/status/minimum-duration filters, stable longest-first o",
+  "Read evidence, not invented certainty: reported tokens, explicit errors, elapsed time when present; missing values stay unknown. No cost est",
+  "Spot patterns: explicit tool errors, long tool durations, large outputs, and identical name/input repetitions. Heuristics do not establish c"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cbb6159e062d",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.783Z"
+}

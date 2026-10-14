@@ -1,0 +1,11 @@
+{
+ "fullName": "changexbc/workbuddy-switch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g workbuddy-switch",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "be5542a6a2dd",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:33.772Z"
+}

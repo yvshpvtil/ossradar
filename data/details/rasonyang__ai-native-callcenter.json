@@ -1,0 +1,11 @@
+{
+ "fullName": "rasonyang/ai-native-callcenter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/rasonyang/ai-native-callcenter/releases/latest/download/install.sh | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "bdae7796def1",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.027Z"
+}

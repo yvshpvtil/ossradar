@@ -1,0 +1,15 @@
+{
+ "fullName": "agno-agi/agno",
+ "whoItsFor": null,
+ "useCases": [
+  "Production API. 50+ endpoints with SSE and websockets to build a product on top.",
+  "Storage. Store sessions, memory, knowledge, and traces in your own database.",
+  "100+ integrations. Connect to GitHub, Slack, Postgres, and more using pre-built toolkits."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d784a97ad617",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:35.022Z"
+}

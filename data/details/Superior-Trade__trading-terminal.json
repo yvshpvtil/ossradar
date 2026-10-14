@@ -1,0 +1,11 @@
+{
+ "fullName": "Superior-Trade/trading-terminal",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d7aac7b71ad3",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.023Z"
+}

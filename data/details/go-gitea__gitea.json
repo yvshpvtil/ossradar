@@ -1,0 +1,11 @@
+{
+ "fullName": "go-gitea/gitea",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4c1875884a0d",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.279Z"
+}

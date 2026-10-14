@@ -1,0 +1,11 @@
+{
+ "fullName": "didilili/ai-agents-from-zero",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f8a1ef0ab33d",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.215Z"
+}

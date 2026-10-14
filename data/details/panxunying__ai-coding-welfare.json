@@ -1,0 +1,11 @@
+{
+ "fullName": "panxunying/ai-coding-welfare",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @anthropic-ai/claude-code@latest && claude",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "4962a8f9ea25",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.508Z"
+}

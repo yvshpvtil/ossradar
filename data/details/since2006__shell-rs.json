@@ -1,0 +1,15 @@
+{
+ "fullName": "since2006/shell-rs",
+ "whoItsFor": null,
+ "useCases": [
+  "Groups nest to any depth; drag to rearrange, type to search.",
+  "The remote OS is detected on connect and shown as a badge in the host tree and on tabs (Linux distributions, the BSDs, macOS, Windows).",
+  "Three ways to log in: password; no password (the server's `none` auth, then the SSH agent, then the default keys in `~/.ssh`); or a saved cr"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6bf57164fd6d",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:33.533Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "cv-cat/catbus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add cv-cat/catbus",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ebdb95088649",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.566Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "SyncSo-Inc/syncso",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add SyncSo-Inc/syncso",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "631de96c1015",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.338Z"
+}

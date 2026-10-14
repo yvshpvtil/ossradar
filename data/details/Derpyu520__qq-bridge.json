@@ -1,0 +1,11 @@
+{
+ "fullName": "Derpyu520/qq-bridge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install        # 安装依赖（postinstall 会自动修补 @snowluma/sdk 的 ESM 打包 bug）",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c248e38f7e89",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.545Z"
+}

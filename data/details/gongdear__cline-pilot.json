@@ -1,0 +1,11 @@
+{
+ "fullName": "gongdear/cline-pilot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add https://github.com/gongdear/cline-pilot",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "579c6a271185",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:34.979Z"
+}

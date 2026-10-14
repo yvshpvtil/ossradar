@@ -1,0 +1,11 @@
+{
+ "fullName": "pax-beehive/dsh-hub-cli",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global @dsh-plugin-hub/cli",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a0e47090970d",
+ "version": 1,
+ "generatedAt": "2026-10-14T03:53:33.977Z"
+}
