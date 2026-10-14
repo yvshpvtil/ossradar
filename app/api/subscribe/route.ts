@@ -1,5 +1,6 @@
 import { addToKit } from "@/lib/kit";
 
+const SUCCESS = "You're in! Check your inbox for a welcome email.";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_PER_WINDOW = 5;
@@ -28,7 +29,7 @@ export async function POST(request: Request) {
 
   // Honeypot: pretend success for bots.
   if (typeof body.website === "string" && body.website.length > 0) {
-    return Response.json({ ok: true, message: "You're in! First issue lands tomorrow." });
+    return Response.json({ ok: true, message: SUCCESS });
   }
 
   const ip = (request.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
@@ -43,7 +44,7 @@ export async function POST(request: Request) {
 
   try {
     await addToKit(email, "ossradar.net");
-    return Response.json({ ok: true, message: "You're in! First issue lands tomorrow." });
+    return Response.json({ ok: true, message: SUCCESS });
   } catch (err) {
     console.error("[subscribe] failed", err);
     return Response.json({ ok: false, message: "Couldn't subscribe right now. Please try again later." }, { status: 502 });

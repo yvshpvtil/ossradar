@@ -44,9 +44,12 @@ export function NewsletterForm({ source = "hero", anchor = true }: { source?: st
   return (
     <div id={anchor ? "subscribe" : undefined} className="scroll-mt-24">
       {state === "done" ? (
-        <p role="status" className="rounded-md border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
-          {msg || "You're in! First issue lands tomorrow."}
-        </p>
+        <div role="status" className="rounded-md border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+          <p className="font-semibold">You&apos;re in! Check your inbox for a welcome email.</p>
+          <p className="mt-1 text-emerald-700 dark:text-emerald-400">
+            Don&apos;t see it? Check spam or promotions and mark it &ldquo;Not spam&rdquo;.
+          </p>
+        </div>
       ) : (
         <form onSubmit={onSubmit} className="flex flex-col gap-2 sm:flex-row">
           <label htmlFor={inputId} className="sr-only">Email address</label>
