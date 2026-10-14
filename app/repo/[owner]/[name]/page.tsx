@@ -19,6 +19,7 @@ import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
 import { hasTopicPage } from "@/lib/topics";
+import { isThinRepo } from "@/lib/thin";
 import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
@@ -65,6 +66,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
     title,
     description,
     alternates: { canonical: url },
+    ...(isThinRepo(repo) ? { robots: { index: false, follow: true } } : {}),
     openGraph: { type: "article", title, description, url },
     twitter: { card: "summary_large_image", title, description },
   };

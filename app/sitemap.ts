@@ -8,6 +8,7 @@ import { getArchiveDays } from "@/lib/daily";
 import { getTopics } from "@/lib/topics";
 import { alternativesPath, getAlternativesRepos } from "@/lib/alternatives";
 import type { Repo } from "@/lib/types";
+import { isThinRepo } from "@/lib/thin";
 
 /** Last day the repo's data actually changed (latest snapshot with a different star count), else its last code push. */
 function repoLastmod(r: Repo, fallback: Date): Date {
@@ -54,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily" as const,
       priority: 0.8,
     })),
-    ...data.repos.map((r) => ({
+    ...data.repos.filter((r) => !isThinRepo(r)).map((r) => ({
       url: `${SITE.url}/repo/${r.owner}/${r.name}`,
       lastModified: repoLastmod(r, lastModified),
       changeFrequency: "daily" as const,
