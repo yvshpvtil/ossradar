@@ -1,0 +1,16 @@
+{
+ "fullName": "apowerb/apowerb",
+ "whoItsFor": null,
+ "useCases": [
+  "Google ADK (Agent Development Kit) for agent definition and execution",
+  "LiteLLM for multi-model compatibility (Anthropic, OpenAI, Mistral, Google, Azure AI Foundry, OVHcloud, and more)",
+  "Multi-pattern orchestration: base, parallel, sequential, loop"
+ ],
+ "installCommand": "pip install uv",
+ "source": "readme",
+ "readmeSummary": "Build, run and govern AI agents that work while you don't.",
+ "extractor": "heuristic",
+ "readmeHash": "70838e89fce2",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.142Z"
+}

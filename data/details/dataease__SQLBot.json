@@ -1,0 +1,12 @@
+{
+ "fullName": "dataease/SQLBot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d \\",
+ "source": "readme",
+ "readmeSummary": "SQLBot 是一款基于大语言模型和 RAG 的智能问数系统，由 DataEase 开源项目组匠心出品。借助 SQLBot，用户可以实现对话式数据分析（ChatBI），快速提炼获取所需的数据信息及可视化图表，并且支持进一步开展智能分析。",
+ "extractor": "heuristic",
+ "readmeHash": "798079b815f6",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.521Z"
+}

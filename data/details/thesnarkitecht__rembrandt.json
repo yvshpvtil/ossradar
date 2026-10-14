@@ -1,0 +1,16 @@
+{
+ "fullName": "thesnarkitecht/rembrandt",
+ "whoItsFor": null,
+ "useCases": [
+  "Ask in words: type “warmer and a bit brighter”, “down exposure by ten points”, “shadows +25”",
+  "Edit the photo itself: drag up or down on any part of the picture to lighten or darken that",
+  "AI looks: Enhance, Relight, Sky, Atmosphere, Sunrays, Skin, Motion and Lens Blur with"
+ ],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/thesnarkitecht/rembrandt/main/install.sh | bash -s -- --server",
+ "source": "readme",
+ "readmeSummary": "All files and checksums: Releases. Builds aren't code-signed yet: on macOS use System Settings → Privacy & Security → Open Anyway; on…",
+ "extractor": "heuristic",
+ "readmeHash": "9f248260240e",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.374Z"
+}

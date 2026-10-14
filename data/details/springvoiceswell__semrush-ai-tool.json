@@ -1,0 +1,16 @@
+{
+ "fullName": "springvoiceswell/semrush-ai-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Keyword Research — search volume, CPC, competition, trends, related keywords, question keywords (People Also Ask gold), and batch Keyword Di",
+  "Domain Analytics — organic & paid keywords, traffic estimates, rank history, and visibility for any domain in any regional database (US, UK,",
+  "Competitor Analysis — discover organic and paid competitors, reverse-engineer their keyword portfolios, and find the gaps in yours"
+ ],
+ "installCommand": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Turn any AI assistant into a professional SEO analyst. Connect Claude, Cursor, or any MCP-compatible AI client directly to live Semrush data…",
+ "extractor": "heuristic",
+ "readmeHash": "6c8fc82ee003",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.583Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "AtomicBot-ai/atomic-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://atomicagent.io/install | sh",
+ "source": "readme",
+ "readmeSummary": "Drives your browser, edits files, runs approved commands, and remembers context across sessions.",
+ "extractor": "heuristic",
+ "readmeHash": "97e06a880eb8",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.554Z"
+}

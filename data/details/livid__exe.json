@@ -1,0 +1,12 @@
+{
+ "fullName": "livid/exe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://exe.v2core.com/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "A single Go binary: create persistent Linux VMs on macOS, Linux or Windows, vibecode inside them with models from Ollama Cloud, and publish…",
+ "extractor": "heuristic",
+ "readmeHash": "0af9529fc641",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.323Z"
+}

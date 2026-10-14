@@ -1,0 +1,12 @@
+{
+ "fullName": "YeonwooSung/my-claude-code-mods",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Use Node 22.19.0 or later. Dependencies are pinned in package-lock.json.",
+ "extractor": "heuristic",
+ "readmeHash": "10e8a5f19af1",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.170Z"
+}

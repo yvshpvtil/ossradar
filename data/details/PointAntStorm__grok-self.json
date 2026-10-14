@@ -1,0 +1,16 @@
+{
+ "fullName": "PointAntStorm/grok-self",
+ "whoItsFor": null,
+ "useCases": [
+  "Blazing fast startup — pure Node.js, zero dependencies, installs in seconds",
+  "Interactive chat mode — a friendly REPL with conversation memory, slash commands and multi-line input",
+  "One-shot mode — `grokself \"your question\"` prints the answer and exits; perfect for scripts"
+ ],
+ "installCommand": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && source ~/.zshrc && nvm install --lts",
+ "source": "readme",
+ "readmeSummary": "One-shot prompts · Interactive chat · Streaming replies · Pipe anything in · macOS, Linux & Windows",
+ "extractor": "heuristic",
+ "readmeHash": "48484097df38",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.246Z"
+}

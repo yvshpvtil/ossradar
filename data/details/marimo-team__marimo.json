@@ -1,0 +1,12 @@
+{
+ "fullName": "marimo-team/marimo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install marimo && marimo tutorial intro",
+ "source": "readme",
+ "readmeSummary": "marimo is a reactive Python notebook: run a cell or interact with a UI element, and marimo automatically runs dependent cells (or marks them…",
+ "extractor": "heuristic",
+ "readmeHash": "093ab134d230",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.449Z"
+}

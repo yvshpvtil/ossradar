@@ -1,0 +1,12 @@
+{
+ "fullName": "MaxHu-xuan/task-state-guard",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "服务重启后，running 任务和 pending 投递很容易继续留在界面里，却没人能确认它们 是否真的还在工作。TaskStateGuard 是面向 AI 智能体、后台 worker 和本地工作流的 嵌入式 SQLite 状态对账护栏。",
+ "extractor": "heuristic",
+ "readmeHash": "9c0ac452acff",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.652Z"
+}

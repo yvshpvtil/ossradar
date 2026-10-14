@@ -1,0 +1,12 @@
+{
+ "fullName": "nuglifeleoji/Sentry",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An external runtime failure management layer for LLM agents.",
+ "extractor": "heuristic",
+ "readmeHash": "6a7fbd3845b5",
+ "version": 1,
+ "generatedAt": "2026-10-14T08:55:23.767Z"
+}
