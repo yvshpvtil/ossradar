@@ -1,0 +1,11 @@
+{
+ "fullName": "e2b-dev/E2B",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i e2b",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3f76b95304af",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:21.372Z"
+}

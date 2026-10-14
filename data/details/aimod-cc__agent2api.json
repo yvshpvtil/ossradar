@@ -1,0 +1,11 @@
+{
+ "fullName": "aimod-cc/agent2api",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name agent2api --restart unless-stopped \\",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "7537df59b4e2",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:20.292Z"
+}

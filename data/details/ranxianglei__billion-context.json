@@ -1,0 +1,11 @@
+{
+ "fullName": "ranxianglei/billion-context",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g billion-context --prefix=~/.local",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "31d741ce3a74",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:20.852Z"
+}

@@ -1,0 +1,15 @@
+{
+ "fullName": "FalkorDB/FalkorDB",
+ "whoItsFor": null,
+ "useCases": [
+  "Sparse Matrix Representation: Utilizes sparse matrices to represent adjacency matrices, optimizing storage and performance.",
+  "Linear Algebra Querying: Employs linear algebra for query execution, enhancing computational efficiency.",
+  "Property Graph Model Compliance: Supports nodes and relationships with attributes, adhering to the Property Graph Model."
+ ],
+ "installCommand": "docker run -p 6379:6379 -p 3000:3000 -it --rm -v ./data:/var/lib/falkordb/data falkordb/falkordb",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a2e9034d628f",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:21.839Z"
+}

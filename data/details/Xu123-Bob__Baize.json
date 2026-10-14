@@ -1,0 +1,15 @@
+{
+ "fullName": "Xu123-Bob/Baize",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-backend support: DeepSeek, any OpenAI-compatible endpoint (GLM / Qwen / Kimi / OpenAI), and local Ollama. One-click switching.",
+  "Zero-config startup: Automatically generates configuration files on first run. Users only need to fill in the key once.",
+  "Privacy redaction: Automatically identifies and redacts 30+ categories of sensitive information before sending to the LLM (phone numbers, em"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ce4c49ca2142",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:21.478Z"
+}

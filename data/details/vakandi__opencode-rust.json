@@ -1,0 +1,11 @@
+{
+ "fullName": "vakandi/opencode-rust",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g opencode-rust",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8dc6bf294134",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:20.294Z"
+}

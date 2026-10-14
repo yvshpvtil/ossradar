@@ -1,0 +1,11 @@
+{
+ "fullName": "Clearailhc/clearai-dsh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx clearai-dsh install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "be416631a8dc",
+ "version": 1,
+ "generatedAt": "2026-10-14T02:51:21.197Z"
+}
