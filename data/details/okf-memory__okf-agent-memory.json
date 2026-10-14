@@ -1,0 +1,12 @@
+{
+ "fullName": "okf-memory/okf-agent-memory",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Conversations with AI agents reset when context windows close. Valuable architectural decisions, domain discoveries, and operational facts…",
+ "extractor": "heuristic",
+ "readmeHash": "e168dadd8dd8",
+ "version": 1,
+ "generatedAt": "2026-10-14T19:51:35.994Z"
+}
