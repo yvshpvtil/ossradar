@@ -1,0 +1,16 @@
+{
+ "fullName": "Graphicle-AI/graphicle",
+ "whoItsFor": null,
+ "useCases": [
+  "Code graph. Files, functions, classes, calls and imports, parsed with tree-sitter and no model. `graphicle graph` searches it, explains a sy",
+  "Project memory. Docs (Markdown, PDF, Office, HTML), reviewed decisions and procedures, and past Claude Code and Codex sessions, searchable a",
+  "Cited context on a budget. `graphicle context` and the MCP tools return excerpts with their sources, within a token budget, without calling "
+ ],
+ "installCommand": "brew install graphicle-ai/tap/graphicle",
+ "source": "readme",
+ "readmeSummary": "graphicle setup indexes the repository, builds its code graph and connects the coding agents it finds.",
+ "extractor": "heuristic",
+ "readmeHash": "6a211e61a018",
+ "version": 1,
+ "generatedAt": "2026-10-14T22:49:43.252Z"
+}
