@@ -21,6 +21,7 @@ import { categorize } from "../lib/categories";
 import { isOffTopic } from "../lib/blocklist";
 import type { HistoryPoint, Repo, RepoData, Snapshot } from "../lib/types";
 import { summarize, summarizerId } from "./summarize";
+import { getBlurbOverride } from "../lib/blurbOverrides";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -364,6 +365,7 @@ async function main() {
         category,
         stars: item.stargazers_count,
         delta7d: v.delta7d,
+        override: getBlurbOverride(item.full_name),
         readmeSummary: description ? null : readJson<{ readmeSummary?: string | null }>(path.join("data", "details", `${item.full_name.replace("/", "__")}.json`), {}).readmeSummary ?? null,
       });
       if (summarizerId !== "template") {

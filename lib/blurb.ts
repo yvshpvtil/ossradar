@@ -1,4 +1,5 @@
-/** Short, clean one-line repo descriptions for lists and the newsletter. Pure functions, no I/O. */
+/** Short, clean one-line repo descriptions for lists and the newsletter. */
+import { getBlurbOverride } from "./blurbOverrides";
 
 export const BLURB_MAX = 140;
 
@@ -15,7 +16,7 @@ export function stripWhy(text: string): string {
 }
 
 const collapse = (s: string) => s.replace(/\s+/g, " ").trim();
-const cjkRatio = (s: string) => (s.match(CJK)?.length ?? 0) / Math.max(1, s.replace(/\s/g, "").length);
+export const cjkRatio = (s: string) => (s.match(CJK)?.length ?? 0) / Math.max(1, s.replace(/\s/g, "").length);
 
 /** If text mixes CJK and an English part, keep the English sentences (when there are enough of them). */
 export function preferEnglish(text: string): string {
@@ -45,7 +46,9 @@ export function cleanBlurb(text: string | null | undefined, max = BLURB_MAX): st
 }
 
 /** Best one-liner from repo fields: GitHub description, else our summary (unless it's the empty-description placeholder). */
-export function repoBlurb(r: { description?: string | null; oneLiner?: string | null }, max = BLURB_MAX): string | null {
+export function repoBlurb(r: { fullName?: string; description?: string | null; oneLiner?: string | null }, max = BLURB_MAX): string | null {
+  const o = getBlurbOverride(r.fullName);
+  if (o) return cap(o, max);
   return cleanBlurb(r.description, max) ?? (isPlaceholder(r.oneLiner) || !r.oneLiner ? null : cleanBlurb(stripWhy(r.oneLiner ?? ""), max));
 }
 
@@ -67,4 +70,10 @@ export function readmeBlurb(markdown: string, max = BLURB_MAX): string | null {
     if (c) return c;
   }
   return null;
+}
+
+/** A line that should get an English override: mostly CJK, or a README fragment that starts mid-thought. */
+export function needsOverride(text: string | null | undefined): boolean {
+  if (!text) return true;
+  return cjkRatio(text) > 0.2 || /^(It|That|This|These|They|Then|And|But|So|Also|Here|There)\b/.test(text.trim());
 }

@@ -1,0 +1,338 @@
+{
+ "78/xiaozhi-esp32": {
+  "text": "Voice chatbot for ESP32 boards that uses large models like Qwen and DeepSeek and controls devices through MCP.",
+  "basis": "2e956c27b994",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:05.489Z"
+ },
+ "Adkid-Zephyr/anti-defensive-writing-Skill": {
+  "text": "Skill and prompt pack in Chinese and English that helps AI tools rewrite academic papers to avoid defensive writing.",
+  "basis": "4fe2965a58f1",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:30.741Z"
+ },
+ "DSH-APP/DSHA": {
+  "text": "Android app that runs the DeepSeek Harness agent on phones in a bundled Ubuntu environment, without root or Termux.",
+  "basis": "2a1475664536",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:15.900Z"
+ },
+ "DevnorsAI/devnors-data-python": {
+  "text": "Python SDK for querying Chinese legal cases, laws, company records, keyword indexes, research and parcel tracking via one API.",
+  "basis": "615c09cbb57f",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:24.366Z"
+ },
+ "Folkbench/folkbench": {
+  "text": "Desktop app that switches Claude Code, Codex and other tools between AI API relays, showing their uptime and latency.",
+  "basis": "a71b2c52fbbc",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:55.176Z"
+ },
+ "HD838A/remote-mic-app": {
+  "text": "A macOS app that turns the Xiaomi Bluetooth Remote 2 or 2 Pro into a wireless microphone for voice input on a Mac.",
+  "basis": "e9902998adae",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:25.155Z"
+ },
+ "HanyuanWang/LiveStream-Agent-Studio": {
+  "text": "Local Windows AI agent for Douyin livestream commerce: creator discovery, transcripts, stream reviews and video scripts.",
+  "basis": "13fa5bff8427",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:39.518Z"
+ },
+ "Hisn00w/ASu-skills": {
+  "text": "A plugin of nine AI skills for job seekers covering resumes, job matching, applications and interview prep.",
+  "basis": "cfa203bf3deb",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:02.428Z"
+ },
+ "K0nd1us/QQ-agent": {
+  "text": "A desktop app that runs an LLM-powered QQ group chat bot on your own computer, with long-term memory and web search.",
+  "basis": "c377abda2758",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:14.423Z"
+ },
+ "KKKKhazix/AIHOT": {
+  "text": "A website framework that collects hot topics from your sources and writes daily reports for any industry.",
+  "basis": "45750ed8a7a4",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:08.426Z"
+ },
+ "KevinLiss/ApeAdmin": {
+  "text": "Python admin framework on FastAPI and Vue3 with RBAC, audit logs, plugins and an MCP-SSE gateway for AI agents.",
+  "basis": "9823cf55a7c9",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:28.993Z"
+ },
+ "LINJIANG12/video2book-courses": {
+  "text": "Collection of textbooks, mind-map review notes and transcripts rebuilt by Video2Book from online course audio.",
+  "basis": "be7d51f1aad7",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:30.270Z"
+ },
+ "MeteorNOX/DeepSeek-Balance-Whale-Widget": {
+  "text": "A corner widget for the DeepSeek Harness web UI with a whale character that shows your DeepSeek balance and daily spend.",
+  "basis": "7685cf582c39",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:42.420Z"
+ },
+ "MiniMax-AI/MiniMax-H3": {
+  "text": "Agent skills for MiniMax H3, including a prompt-writing guide and eight style-specific video generation skills.",
+  "basis": "7578ca56755d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:55.805Z"
+ },
+ "NirDiamant/RAG_Techniques": {
+  "text": "A collection of runnable notebook tutorials covering techniques for building Retrieval-Augmented Generation (RAG) systems.",
+  "basis": "acd993df1260",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:40.205Z"
+ },
+ "PDFMathTranslate/PDFMathTranslate": {
+  "text": "Translates scientific PDF papers into other languages while preserving layout, formulas, charts and annotations.",
+  "basis": "50905c9a9b76",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:03.589Z"
+ },
+ "Sam-Hui-dot/mcd-budget-meal": {
+  "text": "A skill that uses McDonald's MCP to check real prices, compare meals against a budget, and swap menu items.",
+  "basis": "d0f3a3f39609",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:13.378Z"
+ },
+ "Snailclimb/JavaGuide": {
+  "text": "A Java and backend interview guide covering CS basics, databases, distributed systems, concurrency and system design.",
+  "basis": "908b1e0c838d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:03.263Z"
+ },
+ "SwotAtmk/infinite-creation": {
+  "text": "Local ComfyUI-based agent workflow that turns a novel or script into a video of any length, fully automatically.",
+  "basis": "acba14f3205b",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:41.835Z"
+ },
+ "agent-for-dummys/Agent-For-Dummies": {
+  "text": "Beginner-friendly illustrated study notes on AI agents, RAG and large language models, readable online or as Markdown.",
+  "basis": "bc88623561a5",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:31.305Z"
+ },
+ "alchaincyf/huashu-art-motion": {
+  "text": "A coding-agent skill that animates artwork with code, offering 35 art styles and 9 explainer-video animation styles.",
+  "basis": "692e47021792",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:03.095Z"
+ },
+ "alchaincyf/huashu-chrome": {
+  "text": "An MCP server and Chrome extension that let any AI agent control your own Chrome browser with your existing logins.",
+  "basis": "9842fd5772e1",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:29.437Z"
+ },
+ "ardeyouxipianyi/workbuddy2api-hub": {
+  "text": "Multi-account proxy gateway that exposes Tencent WorkBuddy and CodeBuddy as OpenAI- and Anthropic-compatible APIs.",
+  "basis": "68904c5459a8",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:17.209Z"
+ },
+ "bbylw/rea-cn": {
+  "text": "An MCP server that lets AI agents reverse-engineer binaries, applications and runtime behavior, citing evidence.",
+  "basis": "d92d4f4b3923",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:40.366Z"
+ },
+ "bojieli/ai-agent-book": {
+  "text": "Open-source book on AI agent design principles and engineering, with full text, a compiled PDF and code for each chapter.",
+  "basis": "c085c561eaeb",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:11:51.296Z"
+ },
+ "bojieli/ai-infra-book": {
+  "text": "Open-source book that derives LLM inference and training system design from hardware limits, with calculation tools.",
+  "basis": "0afee4d74953",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:20.682Z"
+ },
+ "changexbc/workbuddy-switch": {
+  "text": "A desktop app for switching WorkBuddy and CodeBuddy accounts, with credit expiry and token usage monitoring.",
+  "basis": "c3e6eb958c37",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:50.289Z"
+ },
+ "chengyi-ai/native-subtitle-quote-image": {
+  "text": "Agent Skill that extracts exact video frames, keeps burned-in subtitles, and builds 3:4 long images for social media.",
+  "basis": "04abb84074e5",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:06.761Z"
+ },
+ "cookiy-ai/sell-sessions-skill": {
+  "text": "Local tool that lets you pick Claude Code and Codex sessions, scrub secrets and PII, and upload them for sale.",
+  "basis": "6ec9042cc9b2",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:29.506Z"
+ },
+ "csyqlz/VOZEB-PRO": {
+  "text": "Open-source AI creation platform with a creative agent, canvas and short-drama pipeline for images, video and audio.",
+  "basis": "2d5b686eba1c",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:14.802Z"
+ },
+ "cv-cat/catbus": {
+  "text": "A CLI with unified commands and JSON output for Xiaohongshu, Douyin, TikTok, Bilibili, Weibo, Taobao, X and more.",
+  "basis": "560bbcba2de7",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:08.032Z"
+ },
+ "cxm947/FakeLiang": {
+  "text": "Verifies an existing attack graph's paths on a range using a multi-agent LLM framework, saving checkable evidence.",
+  "basis": "beaefd6866a9",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:13.000Z"
+ },
+ "datawhalechina/hello-agents": {
+  "text": "A Chinese-language tutorial on the principles and practice of building AI agents from scratch.",
+  "basis": "dc30c9ec113f",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:04.388Z"
+ },
+ "ddcat-ai/open-ai-canvas": {
+  "text": "Open-source infinite canvas workbench for AI film and video creation with storyboards and multimodal generation.",
+  "basis": "9b7a17fdd9bb",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:51.884Z"
+ },
+ "dmoshehun-prog/learn-from-materials": {
+  "text": "Agent skill that turns PDFs, books, slides and papers into traceable knowledge bases and interactive learning webpages.",
+  "basis": "ba46e3f2e0d8",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:24.724Z"
+ },
+ "dofastted/vm2api": {
+  "text": "Gateway that exposes Claude and ChatGPT subscriptions as standard APIs using isolated virtual machines or containers.",
+  "basis": "84de5ce1f09e",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:22.579Z"
+ },
+ "flizzywine/dsh-tavern": {
+  "text": "A SillyTavern-compatible text roleplay game agent built on DeepSeek Harness that plays imported character cards.",
+  "basis": "c963e70682ab",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:52.553Z"
+ },
+ "fumingyang2004/Tulpa": {
+  "text": "Windows tool that lets desktop AI agents read local QQ and WeChat data via MCP and join QQ group chats as a member.",
+  "basis": "4860105aec26",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:39.333Z"
+ },
+ "fy-agent/fyagent": {
+  "text": "A desktop app that manages models, accounts, skills, MCP servers and prompts for AI tools like Codex and Claude Code.",
+  "basis": "3cfb7fb66db7",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:37.960Z"
+ },
+ "hujjun/mcd-saver-strategist": {
+  "text": "An agent skill that uses McDonald's China MCP to fetch menus and coupons and find the cheapest order combination.",
+  "basis": "f62bafdee262",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:18.197Z"
+ },
+ "ithtelab/workbuddy-manager": {
+  "text": "Web console for managing Tencent CodeBuddy account pools, with a built-in OpenAI-compatible reverse proxy gateway.",
+  "basis": "283a3c6b6664",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:29.559Z"
+ },
+ "jiwoochris/artex-global": {
+  "text": "Korean-language edition of ARTEX, an autonomous penetration-testing framework run by multiple LLM agents.",
+  "basis": "61b0aaddfa7c",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:39.533Z"
+ },
+ "jundizhou/easy-stock": {
+  "text": "AI-assisted desktop workbench for China A-share market analysis, stock research and post-market reviews.",
+  "basis": "c4dc32f794fa",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:21.155Z"
+ },
+ "linguo2625469/workbuddy2api-panel": {
+  "text": "Multi-account gateway that serves Tencent WorkBuddy accounts as an OpenAI-compatible API, with a web admin panel.",
+  "basis": "ac22cf43d9d5",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:11:53.650Z"
+ },
+ "lvzuojing/mcd-wrapped": {
+  "text": "A toolkit built on the McDonald's MCP that probes its tools and generates personal yearly and public data reports.",
+  "basis": "e1e9eb387342",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:06.664Z"
+ },
+ "makecindy/cindy": {
+  "text": "Open-source AI agent client that runs on your computer, using Claude Code or Codex to do work in your files and apps.",
+  "basis": "eb9f174e2fe3",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:49.828Z"
+ },
+ "mhtsec/ARTEX": {
+  "text": "An AI system that runs penetration tests on its own, with a Go backend and a Next.js web interface.",
+  "basis": "2504833adbfb",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:11:51.084Z"
+ },
+ "panxunying/ai-coding-welfare": {
+  "text": "Directory of free relay sites for Claude Code and Codex with auto-updated quotas, models, prices and a setup script.",
+  "basis": "87302e698d3d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:38.227Z"
+ },
+ "sansan0/TrendRadar": {
+  "text": "Aggregates trending topics from multiple platforms and RSS, filters by keyword or AI, and pushes alerts to phones.",
+  "basis": "ff8db3a0ae49",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:13:27.389Z"
+ },
+ "siyuan-note/siyuan": {
+  "text": "A privacy-first, self-hosted knowledge management system with block-level references and Markdown WYSIWYG editing.",
+  "basis": "0faea08b5c19",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:17.909Z"
+ },
+ "sunreview/GetChatGPTPlusPaper": {
+  "text": "Chinese-language tutorial for upgrading a ChatGPT account to Plus with a prepaid card key, no foreign credit card.",
+  "basis": "d89ca9502e00",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:54.173Z"
+ },
+ "techysy/CreditDaddy": {
+  "text": "Manages multiple AI coding tool accounts locally and auto-claims daily credits for Qoder, WorkBuddy, ZCode and more.",
+  "basis": "5b399866b6c2",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:39.172Z"
+ },
+ "tradecatlabs/vibe-coding-cn": {
+  "text": "A Chinese-language Vibe Coding tutorial on AI pair-programming workflows, prompts, skills, context management and Codex.",
+  "basis": "dd020860f51d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:04.743Z"
+ },
+ "trhhubsd/ARTEXX": {
+  "text": "An AI system that runs autonomous penetration tests, with a Go backend and a Next.js web interface.",
+  "basis": "b17e6775c1b3",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:11:54.402Z"
+ },
+ "xqy2006/ModelTrace": {
+  "text": "Local tool that matches an AI model to a known model family and version by fingerprinting its number outputs.",
+  "basis": "2b31985bac53",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "youngyangyang04/llm-master": {
+  "text": "Chinese tutorials and learning roadmap for LLM development, covering RAG, agents, fine-tuning and deployment.",
+  "basis": "b4d0ed911455",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:14:19.674Z"
+ }
+}

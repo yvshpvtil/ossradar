@@ -1,5 +1,6 @@
 import { cleanBlurb, isPlaceholder, stripWhy } from "./blurb";
 import { getDetails } from "./details";
+import { getBlurbOverride } from "./blurbOverrides";
 import type { Repo } from "./types";
 
 /**
@@ -10,8 +11,10 @@ import type { Repo } from "./types";
  */
 export function cleanOneLiner(r: Pick<Repo, "fullName" | "description" | "oneLiner">): string {
   const why = r.oneLiner.match(/\s*(Why it matters:.*)$/i)?.[1] ?? "";
-  let what: string | null;
-  if (isPlaceholder(r.oneLiner)) {
+  let what: string | null = getBlurbOverride(r.fullName);
+  if (what) {
+    // English override from data/blurbs.json wins.
+  } else if (isPlaceholder(r.oneLiner)) {
     what = cleanBlurb(getDetails(r.fullName)?.readmeSummary);
     if (!what) return r.oneLiner;
   } else {

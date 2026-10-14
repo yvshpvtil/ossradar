@@ -20,6 +20,8 @@ export interface SummaryInput {
   delta7d: number;
   /** README first paragraph, used when the description is empty. */
   readmeSummary?: string | null;
+  /** English one-liner from data/blurbs.json, preferred over the description. */
+  override?: string | null;
 }
 
 const MODEL = process.env.SUMMARY_MODEL ?? "claude-opus-5-5";
@@ -50,7 +52,7 @@ const WHY: Record<CategorySlug, string> = {
 };
 
 export function templateSummary(input: SummaryInput): string {
-  const desc = cleanBlurb(clean(input.description)) ?? cleanBlurb(input.readmeSummary);
+  const desc = cleanBlurb(input.override) ?? cleanBlurb(clean(input.description)) ?? cleanBlurb(input.readmeSummary);
   let what = desc
     ? desc
     : `${input.language ?? "Open-source"} project in ${categoryLabel(input.category)}`;
