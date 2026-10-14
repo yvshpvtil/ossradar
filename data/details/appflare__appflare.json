@@ -1,0 +1,16 @@
+{
+ "fullName": "appflare/appflare",
+ "whoItsFor": null,
+ "useCases": [
+  "Browse apps for analytics, email, files, AI, productivity and more, then install them from your browser.",
+  "Update apps when a new version is available. Automatic updates are off until you turn them on.",
+  "Follow installs and updates in a live log, and roll back to an earlier app version when supported."
+ ],
+ "installCommand": "npx create-appflare",
+ "source": "readme",
+ "readmeSummary": "Install and manage 100+ open-source apps, including OpenSEO, Sink and Counterscale.",
+ "extractor": "heuristic",
+ "readmeHash": "0388e9b0683e",
+ "version": 1,
+ "generatedAt": "2026-10-14T16:55:38.563Z"
+}

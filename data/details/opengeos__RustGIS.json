@@ -1,0 +1,12 @@
+{
+ "fullName": "opengeos/RustGIS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Every screenshot is RustGIS itself, rendered offscreen by cargo run -p rustgis-ui-egui --example uishot.",
+ "extractor": "heuristic",
+ "readmeHash": "1ad8ce4caeec",
+ "version": 1,
+ "generatedAt": "2026-10-14T16:55:38.387Z"
+}

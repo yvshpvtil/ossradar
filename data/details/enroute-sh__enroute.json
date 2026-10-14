@@ -1,0 +1,12 @@
+{
+ "fullName": "enroute-sh/enroute",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://enroute.sh/install | sh",
+ "source": "readme",
+ "readmeSummary": "Enroute is a fast, programmable Git server that is easy to operate.",
+ "extractor": "heuristic",
+ "readmeHash": "3663824fdd8d",
+ "version": 1,
+ "generatedAt": "2026-10-14T16:55:38.400Z"
+}
