@@ -19,6 +19,7 @@ import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
 import { hasTopicPage } from "@/lib/topics";
+import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) return {};
-  const title = `${repo.fullName}: ${formatDelta(repo.delta7d)} GitHub stars this week`;
+  const title = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
   const description = clip(
     `${repo.description || repo.oneLiner} ${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`,
   );
@@ -226,6 +227,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             See more <Link className="underline" href={`/category/${repo.category}`}>trending {categoryLabel(repo.category)} repos</Link> or the{" "}
             <Link className="underline" href="/trending/ai-repos-this-week">top AI repos this week</Link>.
+            {hasAlternativesPage(repo) && (
+              <> Looking for something similar? See <Link className="underline" href={alternativesPath(repo)}>{repo.name} alternatives</Link>.</>
+            )}
           </p>
         </section>
 
