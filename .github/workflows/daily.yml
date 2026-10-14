@@ -69,3 +69,11 @@ jobs:
             git pull --rebase -X theirs || git pull --rebase
             git push
           fi
+
+      - name: IndexNow ping (after Vercel deploys the new data)
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 6
+        run: |
+          sleep 180
+          npx tsx scripts/indexnow.ts
