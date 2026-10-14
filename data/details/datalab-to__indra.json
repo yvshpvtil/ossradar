@@ -1,0 +1,12 @@
+{
+ "fullName": "datalab-to/indra",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install indra-ocr",
+ "source": "readme",
+ "readmeSummary": "The main recognizer, rec.onnx, has about 1M parameters. See benchmarks for the full results and limitations for what it does not do yet.",
+ "extractor": "heuristic",
+ "readmeHash": "006ac7e3bb76",
+ "version": 1,
+ "generatedAt": "2026-10-14T11:53:39.884Z"
+}

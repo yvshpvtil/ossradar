@@ -1,0 +1,12 @@
+{
+ "fullName": "surrealdb/surrealdb",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install surrealdb/tap/surreal",
+ "source": "readme",
+ "readmeSummary": "SurrealDB is a multi-model database built in Rust designed to unify multiple data models into a single engine.",
+ "extractor": "heuristic",
+ "readmeHash": "60047b711591",
+ "version": 1,
+ "generatedAt": "2026-10-14T11:53:39.868Z"
+}

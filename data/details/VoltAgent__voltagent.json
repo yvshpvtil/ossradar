@@ -1,0 +1,12 @@
+{
+ "fullName": "VoltAgent/voltagent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Build agents with full code control and ship them with production-ready visibility and operations.",
+ "extractor": "heuristic",
+ "readmeHash": "9b488ee3bb36",
+ "version": 1,
+ "generatedAt": "2026-10-14T11:53:40.261Z"
+}
