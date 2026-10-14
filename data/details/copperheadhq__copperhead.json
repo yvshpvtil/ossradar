@@ -1,0 +1,12 @@
+{
+ "fullName": "copperheadhq/copperhead",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g copperhead   # or: npx copperhead check",
+ "source": "readme",
+ "readmeSummary": "Cursor for circuit boards. An AI agent that designs, documents, and validates real PCBs from a prompt, working directly on existing KiCad…",
+ "extractor": "heuristic",
+ "readmeHash": "8524b29bfe6f",
+ "version": 1,
+ "generatedAt": "2026-10-14T21:51:38.604Z"
+}
