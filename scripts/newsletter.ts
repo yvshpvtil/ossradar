@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { cleanBlurb, readmeBlurb, repoBlurb } from "../lib/blurb";
+import { getActiveSponsor } from "../lib/sponsors";
 
 type Repo = {
   fullName: string; owner: string; topics?: string[]; url: string; description?: string; oneLiner?: string;
@@ -37,9 +38,21 @@ const buildItems = (blurbs: Map<string, string>) => repos.map((r, i) => `
   <div style="font-size:13px;color:#059669;font-weight:600;">+${fmt(r.delta24h ?? 0)} stars in the last 24 hours <span style="color:#6b7280;font-weight:400;">· ${fmt(r.stars)} total</span></div>
 </td></tr>`).join("");
 
+/** Sponsor block (top of the issue) when data/sponsors.json has an active sponsor today; empty string otherwise. */
+const sponsorHtml = () => {
+  const s = getActiveSponsor(new Date());
+  if (!s) return "";
+  const logo = s.logo ? `<img src="${esc(s.logo)}" width="20" height="20" alt="" style="vertical-align:middle;border-radius:4px;margin-right:6px;">` : "";
+  return `<div style="border:1px solid #fcd34d;background:#fffbeb;border-radius:8px;padding:12px 14px;margin:0 0 16px;font-size:14px;line-height:1.5;">
+<div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#92400e;margin-bottom:4px;">Sponsor</div>
+<a href="${esc(s.url)}" rel="sponsored" style="color:#111827;text-decoration:none;">${logo}<strong>${esc(s.name)}</strong>: ${esc(s.tagline)} <span style="color:#92400e;">→</span></a>
+</div>`;
+};
+
 const buildHtml = (blurbs: Map<string, string>) => `<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;color:#111827;">
 <h1 style="font-size:22px;margin:0 0 4px;">OSS Radar — Daily</h1>
 <div style="font-size:14px;color:#6b7280;margin-bottom:12px;">${nice}</div>
+${sponsorHtml()}
 <p style="font-size:15px;line-height:1.5;color:#374151;">The open-source projects on GitHub that gained the most stars (GitHub's "bookmark/like" count, a rough signal of developer interest) over the past 24 hours.</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${buildItems(blurbs)}</table>
 <p style="font-size:15px;margin-top:20px;"><a href="${SITE}" style="color:#2563eb;">See the full live rankings on ossradar.net →</a></p>
