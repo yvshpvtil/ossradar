@@ -32,7 +32,7 @@ export function Footer() {
             {getLanguages().slice(0, 8).map((l) => (
               <li key={l.slug}>
                 <Link href={`/language/${l.slug}`} className="text-zinc-600 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100">
-                  {l.name}
+                  {l.name} repos
                 </Link>
               </li>
             ))}
