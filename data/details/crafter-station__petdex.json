@@ -1,0 +1,11 @@
+{
+ "fullName": "crafter-station/petdex",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx petdex install boba",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3818ae5c9949",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.134Z"
+}

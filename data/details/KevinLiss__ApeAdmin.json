@@ -1,0 +1,11 @@
+{
+ "fullName": "KevinLiss/ApeAdmin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e .",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f924e812e645",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.869Z"
+}

@@ -1,0 +1,11 @@
+{
+ "fullName": "yakuikai/tokentab",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install .",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "ac127f86f85d",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.613Z"
+}

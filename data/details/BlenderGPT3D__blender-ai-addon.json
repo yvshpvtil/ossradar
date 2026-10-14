@@ -1,0 +1,11 @@
+{
+ "fullName": "BlenderGPT3D/blender-ai-addon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "8662d4f1d874",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.314Z"
+}

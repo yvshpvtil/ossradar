@@ -1,0 +1,11 @@
+{
+ "fullName": "agentvivekkumar/dontbemichael",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install        # also rebuilds node-pty for Electron",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "1522d23c594d",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:47.273Z"
+}

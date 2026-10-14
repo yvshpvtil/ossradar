@@ -1,0 +1,11 @@
+{
+ "fullName": "To3akaRin/mac-computer-use",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add To3akaRin/mac-computer-use",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "769f36fc1f35",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:47.189Z"
+}

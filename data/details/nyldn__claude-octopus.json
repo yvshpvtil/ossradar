@@ -1,0 +1,11 @@
+{
+ "fullName": "nyldn/claude-octopus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @openai/codex @qwen-code/qwen-code 2>/dev/null || true",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "c2eca971cf25",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.431Z"
+}

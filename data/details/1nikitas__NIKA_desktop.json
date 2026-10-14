@@ -1,0 +1,11 @@
+{
+ "fullName": "1nikitas/NIKA_desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install llama.cpp",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "966c6e9fcbd4",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.095Z"
+}

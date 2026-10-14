@@ -1,0 +1,11 @@
+{
+ "fullName": "topoteretes/cognee",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install \"cognee[gliner]\"",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "9715d6a9171c",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:47.490Z"
+}

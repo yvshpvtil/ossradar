@@ -1,0 +1,11 @@
+{
+ "fullName": "yilewang/llm-for-zotero",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @openai/codex",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0cce76e3175a",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.591Z"
+}

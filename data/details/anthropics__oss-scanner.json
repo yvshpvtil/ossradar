@@ -1,0 +1,11 @@
+{
+ "fullName": "anthropics/oss-scanner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d77950ce37c5",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.080Z"
+}

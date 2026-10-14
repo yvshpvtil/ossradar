@@ -1,0 +1,11 @@
+{
+ "fullName": "modelcontextprotocol/typescript-sdk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @modelcontextprotocol/server",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "f1fe2588b7d9",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:46.417Z"
+}

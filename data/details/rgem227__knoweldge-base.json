@@ -1,0 +1,11 @@
+{
+ "fullName": "rgem227/knoweldge-base",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "31649d9d6c44",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:47.551Z"
+}

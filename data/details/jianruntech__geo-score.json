@@ -1,0 +1,11 @@
+{
+ "fullName": "jianruntech/geo-score",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add jianruntech/geo-score     # add -g for a global install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "82a795dd9de6",
+ "version": 1,
+ "generatedAt": "2026-10-14T01:03:47.200Z"
+}
