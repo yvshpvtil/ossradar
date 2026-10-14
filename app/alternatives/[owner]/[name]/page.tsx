@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
@@ -52,10 +53,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
           { name: "Alternatives", path },
         ])}
       />
-      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-        <Link href="/" className="hover:underline">Home</Link> / <Link href={`/category/${repo.category}`} className="hover:underline">{cat}</Link> /{" "}
-        <Link href={repoPath(repo)} className="hover:underline">{repo.fullName}</Link> / <span className="text-zinc-700 dark:text-zinc-300">Alternatives</span>
-      </nav>
+      <PageNav fallbackHref={repoPath(repo)} crumbs={[{ name: cat, href: `/category/${repo.category}` }, { name: repo.fullName, href: repoPath(repo) }, { name: "Alternatives" }]} />
       <h1 className="text-3xl font-bold tracking-tight">{repo.name} alternatives</h1>
       <p className="mt-3 text-zinc-600 dark:text-zinc-400">
         <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week): {repo.oneLiner}

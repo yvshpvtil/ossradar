@@ -1,4 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
+import { PageNav } from "@/components/PageNav";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export default function NewPage() {
     <>
       <JsonLd data={itemListLd(title, groups.flatMap((g) => g.repos))} />
       <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "New repos", path: "/new" }])} />
+      <PageNav crumbs={[{ name: "New repos" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Updated hourly</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">New repos, day by day</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">

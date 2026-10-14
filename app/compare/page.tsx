@@ -1,4 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
+import { PageNav } from "@/components/PageNav";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getData } from "@/lib/data";
@@ -30,6 +31,7 @@ export default function ComparePage() {
   });
   return (
     <div>
+      <PageNav crumbs={[{ name: "Compare" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Compare</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Compare repos side by side</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">

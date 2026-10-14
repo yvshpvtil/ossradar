@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import { SponsorSlot } from "@/components/SponsorSlot";
 import { getData } from "@/lib/data";
 import { SITE } from "@/lib/site";
@@ -23,6 +24,7 @@ export default function SponsorPage() {
   const mail = `mailto:${SITE.sponsorEmail}?subject=OSS%20Radar%20sponsorship`;
   return (
     <div className="max-w-3xl">
+      <PageNav crumbs={[{ name: "Sponsor" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Sponsor OSS Radar</h1>
       <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
         OSS Radar ranks open-source AI and developer-tool repos by how fast they are gaining GitHub stars, updated every hour.

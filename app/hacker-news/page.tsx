@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, getRepos } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -19,6 +20,7 @@ export default function HackerNewsPage() {
   const byName = new Map(getRepos().map((r) => [r.fullName, r]));
   return (
     <div className="max-w-3xl">
+      <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Repos trending on Hacker News</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">

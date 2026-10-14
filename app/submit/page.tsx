@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import { getRepos } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { SubmitForm } from "./SubmitForm";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function SubmitPage() {
   return (
     <div className="max-w-2xl">
+      <PageNav crumbs={[{ name: "Submit a repo" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Submit</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Submit a repo</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">

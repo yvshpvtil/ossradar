@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
+      <PageNav crumbs={[{ name: "About" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-900 dark:text-zinc-100">About OSS Radar</h1>
       <p>
         {SITE.name} (<strong>OSS = Open-Source Software</strong>) is an hourly-updated tracker of the fastest-rising open-source AI and developer-tool repositories on GitHub.

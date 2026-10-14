@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, rankRepos } from "@/lib/data";
 import { getArchiveDays } from "@/lib/daily";
@@ -18,6 +19,7 @@ export default function DailyIndex() {
   const live = rankRepos(getData().repos, "today").slice(0, 5);
   return (
     <div className="max-w-3xl">
+      <PageNav crumbs={[{ name: "Daily archive" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">

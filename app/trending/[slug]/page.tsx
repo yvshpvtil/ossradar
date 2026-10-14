@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
@@ -39,9 +40,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
     <>
       <JsonLd data={itemListLd(l.h1, repos)} />
       <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: l.title, path }])} />
-      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-        <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{l.title}</span>
-      </nav>
+      <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{l.h1}</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{l.intro}</p>
