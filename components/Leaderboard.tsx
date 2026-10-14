@@ -11,6 +11,8 @@ import { Sparkline } from "./Sparkline";
 import { WatchButton } from "./WatchButton";
 import { readSinceLastVisit } from "@/lib/watch";
 import { RESTORE } from "./BackNav";
+import { InlineSignup } from "./InlineSignup";
+import { Fragment } from "react";
 
 type Period = "today" | "week";
 const PAGE = 50;
@@ -33,7 +35,10 @@ export function Leaderboard({
   showMovement = false,
   dataAt,
   generatedAtMs,
+  signupAfter,
 }: {
+  /** Show an inline newsletter card after this many rows (unfiltered view only). */
+  signupAfter?: number;
   /** Rows to server-render. With fullUrl, only the first rows of the default view. */
   repos: LeaderRepo[];
   /** JSON endpoint with every row; fetched on idle or on first interaction. */
@@ -258,8 +263,8 @@ export function Leaderboard({
           const cur = todayRank.get(r.fullName);
           const move = showMovement && r.prevRank != null && cur != null ? r.prevRank - cur : null;
           return (
+            <Fragment key={r.fullName}>
             <li
-              key={r.fullName}
               className={`relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
             >
               <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-500 dark:text-zinc-500 sm:pt-0">
@@ -319,6 +324,12 @@ export function Leaderboard({
               </div>
               <span className="relative z-10"><WatchButton fullName={r.fullName} /></span>
             </li>
+            {signupAfter && i + 1 === signupAfter && !query && (
+              <li className="list-none bg-white p-3 dark:bg-zinc-950 sm:p-4">
+                <InlineSignup source="leaderboard" />
+              </li>
+            )}
+            </Fragment>
           );
         })}
         {ranked.length === 0 && !partial && <li className="px-4 py-8 text-center text-sm text-zinc-500">No repos match these filters.</li>}
