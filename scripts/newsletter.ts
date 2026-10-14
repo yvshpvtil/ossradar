@@ -71,7 +71,8 @@ async function main() {
       subject, content: html, preview_text: `Today's top: ${repos[0].fullName} (+${fmt(repos[0].delta24h ?? 0)} stars)`,
       description: `Daily digest ${date}`, public: false,
       send_at: new Date(Date.now() + 2 * 60_000).toISOString(),
-      subscriber_filter: [{ all: [{ type: "all_subscribers" }] }],
+      published_at: new Date().toISOString(),
+      // No subscriber_filter: Kit then sends to all subscribers (the API only accepts segment/tag filters).
     }),
   });
   console.log(`Scheduled Kit broadcast ${res.broadcast?.id} for ${res.broadcast?.send_at}`);
