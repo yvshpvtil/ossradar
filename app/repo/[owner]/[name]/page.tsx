@@ -27,6 +27,7 @@ import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
 import { getLanguage, languageSlug } from "@/lib/languages";
 import { RepoDetailsView } from "@/components/RepoDetailsView";
+import { InlineSignup } from "@/components/InlineSignup";
 import { ShareButton } from "@/components/ShareButton";
 
 function ageText(iso: string): string {
@@ -73,6 +74,28 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   };
 }
 
+function RepoCards({ repos }: { repos: Repo[] }) {
+  return (
+    <ul className="grid gap-3 sm:grid-cols-2">
+      {repos.map((s) => (
+        <li key={s.fullName} className="relative cursor-pointer rounded-lg border border-zinc-200 p-3 transition-colors hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+          <div className="flex items-start justify-between gap-2">
+            <Link href={repoPath(s)} className="min-w-0 break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
+              {s.fullName}
+            </Link>
+            <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
+              {formatDelta(s.delta7d)}
+              {s.estimated7d && <EstBadge />}
+              <span className="sr-only"> stars this week</span>
+            </span>
+          </div>
+          <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{s.oneLiner}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function Stat({ label, value, est }: { label: string; value: string; est?: boolean }) {
   return (
     <div className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
@@ -90,6 +113,14 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const repo = getRepo(owner, name);
   if (!repo) notFound();
   const similar = getSimilarRepos(repo);
+  const related = similar.slice(0, 4);
+  const shown = new Set([repo.fullName, ...related.map((r) => r.fullName)]);
+  const risingInCat = rankRepos(getReposByCategory(repo.category), "week").filter((r) => !shown.has(r.fullName)).slice(0, 6);
+  const todayList = rankRepos(getRepos(), "today");
+  const todayIdx = todayList.findIndex((r) => r.fullName === repo.fullName);
+  const todayRank = todayIdx + 1;
+  const prev = todayIdx > 0 ? todayList[todayIdx - 1] : null;
+  const next = todayIdx >= 0 && todayIdx < todayList.length - 1 ? todayList[todayIdx + 1] : null;
   const hourlyPts = getHourlyStars(repo.fullName);
   const hn = getHnMentions(repo.fullName);
   const release = getLatestRelease(repo.fullName);
@@ -192,6 +223,18 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <Stat label="Forks" value={formatNumber(repo.forks)} />
         </section>
 
+        {related.length > 0 && (
+          <section className="mt-6">
+            <div className="mb-2 flex items-baseline justify-between gap-2">
+              <h2 className="text-sm font-semibold">Related repos</h2>
+              {hasAlternativesPage(repo) && (
+                <Link className="text-xs text-indigo-700 hover:underline dark:text-indigo-400" href={alternativesPath(repo)}>All {repo.name} alternatives →</Link>
+              )}
+            </div>
+            <RepoCards repos={related} />
+          </section>
+        )}
+
         {details && <RepoDetailsView d={details} />}
 
         <section className="mt-8 rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
@@ -219,6 +262,8 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         </section>
 
         {repo.velocityEstimated && <EstimateNote className="mt-4" />}
+
+        <InlineSignup source="repo" className="mt-8" />
 
         {hn && <HnMentions m={hn} fullName={repo.fullName} />}
 
@@ -272,27 +317,32 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           </ul>
         )}
 
-        {similar.length > 0 && (
+        {risingInCat.length > 0 && (
           <section className="mt-10">
-            <h2 className="mb-3 text-xl font-semibold tracking-tight">Similar rising repos</h2>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {similar.map((s) => (
-                <li key={s.fullName} className="relative cursor-pointer rounded-lg border border-zinc-200 p-3 transition-colors hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
-                  <div className="flex items-start justify-between gap-2">
-                    <Link href={`/repo/${s.owner}/${s.name}`} className="min-w-0 break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
-                      {s.fullName}
-                    </Link>
-                    <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
-                      {formatDelta(s.delta7d)}
-                      {s.estimated7d && <EstBadge />}
-                    </span>
-                  </div>
-                  <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{s.oneLiner}</p>
-                </li>
-              ))}
-            </ul>
+            <h2 className="mb-3 text-xl font-semibold tracking-tight">
+              Rising in <Link className="hover:underline" href={`/category/${repo.category}`}>{categoryLabel(repo.category)}</Link> this week
+            </h2>
+            <RepoCards repos={risingInCat} />
           </section>
         )}
+
+        <nav aria-label="Leaderboard rank navigation" className="mt-10 grid grid-cols-2 gap-3 border-t border-zinc-200 pt-6 text-sm dark:border-zinc-800">
+          {prev ? (
+            <Link href={repoPath(prev)} className="min-w-0 rounded-lg border border-zinc-200 p-3 hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+              <span className="block text-xs text-zinc-500">← #{todayRank - 1} today</span>
+              <span className="block truncate font-medium">{prev.fullName}</span>
+            </Link>
+          ) : <span />}
+          {next ? (
+            <Link href={repoPath(next)} className="min-w-0 rounded-lg border border-zinc-200 p-3 text-right hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+              <span className="block text-xs text-zinc-500">#{todayRank + 1} today →</span>
+              <span className="block truncate font-medium">{next.fullName}</span>
+            </Link>
+          ) : <span />}
+        </nav>
+        <p className="mt-2 text-center text-xs text-zinc-500">
+          {repo.fullName} is #{todayRank} of {todayList.length} on today&apos;s <Link className="underline" href="/#leaderboard">leaderboard</Link>.
+        </p>
       </div>
       <aside className="space-y-4">
         <SponsorSlot variant="card" />
