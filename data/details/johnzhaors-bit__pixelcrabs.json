@@ -1,0 +1,12 @@
+{
+ "fullName": "johnzhaors-bit/pixelcrabs",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The public edition is Web-first. It is intended for studying, modifying and running the local development workflow yourself.",
+ "extractor": "heuristic",
+ "readmeHash": "9870976524a4",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:03:23.581Z"
+}

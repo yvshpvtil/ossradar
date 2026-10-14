@@ -1,0 +1,16 @@
+{
+ "fullName": "MemTensor/MemOS",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Memory API: A single API to add, retrieve, edit, and delete memory—structured as a graph, inspectable and editable by design, not a ",
+  "Multi-Modal Memory: Natively supports text, images, tool traces, and personas, retrieved and reasoned together in one memory system.",
+  "Multi-Cube Knowledge Base Management: Manage multiple knowledge bases as composable memory cubes, enabling isolation, controlled sharing, an"
+ ],
+ "installCommand": "npx @deepseek-ai/dsh plugin --profile web add @memtensor/memos-cloud-dsh-plugin@latest",
+ "source": "readme",
+ "readmeSummary": "MemOS is a Memory Operating System for LLMs and AI agents that unifies store / retrieve / manage for long-term memory, enabling…",
+ "extractor": "heuristic",
+ "readmeHash": "bafbb1eb25c2",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:03:23.601Z"
+}

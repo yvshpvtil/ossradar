@@ -1,0 +1,12 @@
+{
+ "fullName": "lokicorvus/crosspet",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/lokicorvus/crosspet/main/get.sh | bash",
+ "source": "readme",
+ "readmeSummary": "一只浮在桌面角落的小桌宠，Mac 和 Windows 都能用。你切到哪个 AI，她就变成哪个 AI 娘；AI 干什么活，她就跟着做什么动作。",
+ "extractor": "heuristic",
+ "readmeHash": "fce8a10ecaf4",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:03:23.676Z"
+}
