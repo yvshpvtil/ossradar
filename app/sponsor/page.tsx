@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageNav } from "@/components/PageNav";
+import { RazorpayButton } from "@/components/RazorpayButton";
 import { SponsorSlot } from "@/components/SponsorSlot";
 import { getData } from "@/lib/data";
 import { SITE } from "@/lib/site";
@@ -42,12 +43,8 @@ export default function SponsorPage() {
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           The first {LAUNCH_SLOTS} sponsors pay ${LAUNCH_PRICE_USD}/week. After that the price is ${REGULAR_PRICE_USD}/week.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {paymentUrl && (
-            <a href={paymentUrl} className="rounded-md bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-500">
-              Book a week (${price})
-            </a>
-          )}
+        <div className="mt-4 flex flex-wrap items-start gap-3">
+          <RazorpayButton url="https://pages.razorpay.com/pl_TntKzp5KHKdyR4/view" fallbackUrl={paymentUrl || "https://pages.razorpay.com/pl_TntKzp5KHKdyR4/view"} label={`Book a week ($${price})`} />
           <a href={mail} className={paymentUrl ? "rounded-md border border-zinc-300 px-4 py-2 font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900" : "rounded-md bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-500"}>
             Email {SITE.sponsorEmail}
           </a>
