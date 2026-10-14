@@ -1,0 +1,12 @@
+{
+ "fullName": "scaleapi/agentenv-framework",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install agentenv-framework",
+ "source": "readme",
+ "readmeSummary": "AgentEnv Framework is a Python SDK and CLI for building, deploying and running agentic environments and the tasks that grade agents inside…",
+ "extractor": "heuristic",
+ "readmeHash": "b88bbdf8667b",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.818Z"
+}

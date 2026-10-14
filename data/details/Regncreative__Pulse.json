@@ -1,0 +1,12 @@
+{
+ "fullName": "Regncreative/Pulse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Windows already knows everything about itself — crashes, service starts, explorer restarts, boot failures.",
+ "extractor": "heuristic",
+ "readmeHash": "de0354c8ee34",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.923Z"
+}

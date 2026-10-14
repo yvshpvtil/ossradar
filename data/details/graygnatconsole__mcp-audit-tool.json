@@ -1,0 +1,16 @@
+{
+ "fullName": "graygnatconsole/mcp-audit-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "12 built-in detection rules covering the OWASP MCP Top 10 categories: tool poisoning, rug pulls, secrets exposure, command injection, instal",
+  "Zero-config auto-discovery — finds Claude Desktop, Cursor, Windsurf, Cline, Zed, and VS Code MCP configs on macOS, Linux, and Windows automa",
+  "Security score & grade (A+ → F) with clear, actionable remediation for every finding"
+ ],
+ "installCommand": "pipx install git+https://github.com/graygnatconsole/mcp-audit-tool.git",
+ "source": "readme",
+ "readmeSummary": "Scan your AI agent configs for tool poisoning, rug pulls, hardcoded secrets, command injection, and supply-chain risks — before the model…",
+ "extractor": "heuristic",
+ "readmeHash": "cae9e6c60919",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.578Z"
+}

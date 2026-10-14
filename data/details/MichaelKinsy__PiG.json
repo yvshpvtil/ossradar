@@ -1,0 +1,12 @@
+{
+ "fullName": "MichaelKinsy/PiG",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://pi-in-go.dev/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "PiG is Pi, the minimal and extensible coding agent for the terminal, rebuilt in Go as one native binary.",
+ "extractor": "heuristic",
+ "readmeHash": "4c3e1d60bc9f",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.532Z"
+}

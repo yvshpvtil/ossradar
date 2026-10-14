@@ -1,0 +1,12 @@
+{
+ "fullName": "Arekejoker/qwen21-nsfw-pose-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Qwen-Image 2.1 本地 NSFW / 姿势出图完整配方 — 作者级提示词结构 + NSFW LoRA + 136 个 3D 姿势库 + VNCCS 人偶精确姿势控制。",
+ "extractor": "heuristic",
+ "readmeHash": "d46f01c905f5",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.332Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "yvetteYSY/creator-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Creator Agent is a mobile-first platform for building an AI agent grounded in creator-approved content.",
+ "extractor": "heuristic",
+ "readmeHash": "aeb74f4ac240",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.569Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "scholay/rimes",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "致敬伟大的开源精神，本项目中文编码逻辑基于 RIME 输入法引擎。 这是一个支持多操作系统的输入法项目，用三个首创的插槽式平台来承接用户的个性化需求: 1. 输入法显式缓冲区（buffer） 2. 管理剪切板历史、截屏、个人知识库的记忆胶囊(capsule) 3.",
+ "extractor": "heuristic",
+ "readmeHash": "1e7452198385",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.593Z"
+}

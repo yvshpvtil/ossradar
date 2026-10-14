@@ -1,0 +1,12 @@
+{
+ "fullName": "skillmds/skillmd",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skillmds search \"pdf\"",
+ "source": "readme",
+ "readmeSummary": "An Agent Skill is a folder with a SKILL.md file: YAML frontmatter (name, description) plus Markdown instructions an agent loads on demand.",
+ "extractor": "heuristic",
+ "readmeHash": "6fccb68eae15",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:52.065Z"
+}

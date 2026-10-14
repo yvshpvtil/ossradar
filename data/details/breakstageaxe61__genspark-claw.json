@@ -1,0 +1,12 @@
+{
+ "fullName": "breakstageaxe61/genspark-claw",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx genspark-claw doctor     # health-check your setup",
+ "source": "readme",
+ "readmeSummary": "Give your personal AI agent superpowers in one line — five production-ready, security-audited SKILL.md skills, a zero-dependency installer…",
+ "extractor": "heuristic",
+ "readmeHash": "721f5880de17",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.910Z"
+}

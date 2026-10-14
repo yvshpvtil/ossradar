@@ -1,0 +1,12 @@
+{
+ "fullName": "heaven999b/hello-agent-system",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "从\"会调 LLM API\"到\"能设计生产级 Agent 系统\"：32 节课 · 中英双语 · 每课都有带测试的练习。 不依赖任何 Agent 框架，从零手写企业级 Agent…",
+ "extractor": "heuristic",
+ "readmeHash": "ee233d112ad0",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:52.020Z"
+}

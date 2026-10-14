@@ -1,0 +1,12 @@
+{
+ "fullName": "CorentinTh/it-tools",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name it-tools --restart unless-stopped -p 8080:80 corentinth/it-tools:latest",
+ "source": "readme",
+ "readmeSummary": "Please check the issues to see if some feature listed to be implemented.",
+ "extractor": "heuristic",
+ "readmeHash": "fe9d3f1d9244",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:52.208Z"
+}

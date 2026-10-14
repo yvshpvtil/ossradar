@@ -1,0 +1,12 @@
+{
+ "fullName": "netdata/netdata",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "MENU: WHO WE ARE | KEY FEATURES | GETTING STARTED | HOW IT WORKS | FAQ | DOCS | COMMUNITY | CONTRIBUTE | LICENSE",
+ "extractor": "heuristic",
+ "readmeHash": "33b770a937ec",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.381Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "onyx-dot-app/onyx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Onyx is the knowledge/context layer for your team and AI agents.",
+ "extractor": "heuristic",
+ "readmeHash": "89f5bc7524ca",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:52.288Z"
+}

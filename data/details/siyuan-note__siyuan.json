@@ -1,0 +1,12 @@
+{
+ "fullName": "siyuan-note/siyuan",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d \\",
+ "source": "readme",
+ "readmeSummary": "SiYuan is a privacy-first personal knowledge management system, supporting fine-grained block-level reference and Markdown WYSIWYG.",
+ "extractor": "heuristic",
+ "readmeHash": "ba0e97beeeed",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:52.233Z"
+}

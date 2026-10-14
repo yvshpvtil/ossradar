@@ -1,0 +1,12 @@
+{
+ "fullName": "cdcailf/cjkfold",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install cjkfold",
+ "source": "readme",
+ "readmeSummary": "Text pulled out of a PDF often contains characters that look like ordinary Han characters but are not them.",
+ "extractor": "heuristic",
+ "readmeHash": "3e23ef4fe0c3",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.361Z"
+}

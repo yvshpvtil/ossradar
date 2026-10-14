@@ -1,0 +1,12 @@
+{
+ "fullName": "opensec-git/Pi-Bolt",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://pi-bolt.opensec.in/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Pi-Bolt is the Pi you already use, with the same commands, sessions, settings, providers and extensions.",
+ "extractor": "heuristic",
+ "readmeHash": "cec35b239cf7",
+ "version": 1,
+ "generatedAt": "2026-10-14T05:50:51.756Z"
+}
