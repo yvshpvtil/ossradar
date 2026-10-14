@@ -11,6 +11,7 @@ import { SITE } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: { google: "NW8aDd0EOyyuQQXGn6EI_b-1v3VypoooB2-HIVpTUXY" },
   metadataBase: new URL(SITE.url),
   title: {
     default: `${SITE.name}: fastest-rising open-source AI & dev tools`,
