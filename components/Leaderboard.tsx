@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
-import type { LeaderRepo } from "@/lib/leader";
+import type { LeaderMeta, LeaderRepo } from "@/lib/leader";
 import type { CategorySlug } from "@/lib/types";
 import { Sparkline } from "./Sparkline";
 import { WatchButton } from "./WatchButton";
@@ -24,7 +24,9 @@ const pill = (active: boolean) =>
   }`;
 
 export function Leaderboard({
-  repos,
+  repos: initialRepos,
+  fullUrl,
+  meta,
   showCategoryFilter = true,
   defaultPeriod = "today",
   newDate = null,
@@ -32,7 +34,12 @@ export function Leaderboard({
   dataAt,
   generatedAtMs,
 }: {
+  /** Rows to server-render. With fullUrl, only the first rows of the default view. */
   repos: LeaderRepo[];
+  /** JSON endpoint with every row; fetched on idle or on first interaction. */
+  fullUrl?: string;
+  /** Totals for the full list (required with fullUrl). */
+  meta?: LeaderMeta;
   showCategoryFilter?: boolean;
   defaultPeriod?: Period;
   /** Snapshot date whose first-time entries get a "New today" badge (null hides badges). */
@@ -44,6 +51,26 @@ export function Leaderboard({
   /** Reference time for "new this week" (data time, so server and client agree). */
   generatedAtMs?: number;
 }) {
+  const [loaded, setLoaded] = useState<LeaderRepo[] | null>(null);
+  const loading = useRef(false);
+  const pendingScroll = useRef<number | null>(null);
+  const repos = loaded ?? initialRepos;
+  const partial = Boolean(fullUrl) && !loaded;
+  const loadAll = useCallback(() => {
+    if (!fullUrl || loading.current) return;
+    loading.current = true;
+    fetch(fullUrl)
+      .then((r) => r.json())
+      .then((d: { repos: LeaderRepo[] }) => setLoaded(d.repos))
+      .catch(() => { loading.current = false; });
+  }, [fullUrl]);
+  // Fetch the rest once the page is idle, so the initial HTML stays small.
+  useEffect(() => {
+    if (!fullUrl) return;
+    const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
+    if (w.requestIdleCallback) w.requestIdleCallback(loadAll, { timeout: 4000 });
+    else setTimeout(loadAll, 2500);
+  }, [fullUrl, loadAll]);
   const [period, setPeriod] = useState<Period>(defaultPeriod);
   const [category, setCategory] = useState<CategorySlug | "all">("all");
   const [limit, setLimit] = useState(PAGE);
@@ -63,14 +90,23 @@ export function Leaderboard({
       sessionStorage.removeItem(RESTORE);
       try {
         const v = JSON.parse(saved);
+        loadAll();
         /* eslint-disable react-hooks/set-state-in-effect -- sessionStorage is only readable after mount */
         setPeriod(v.period); setCategory(v.category); setLanguage(v.language); setQuery(v.query); setLimit(v.limit); setNewWeek(v.newWeek);
         /* eslint-enable react-hooks/set-state-in-effect */
-        requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, v.scroll ?? 0)));
+        // With a partial list, wait for the full rows so the saved scroll position exists.
+        if (fullUrl) pendingScroll.current = v.scroll ?? 0;
+        else requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, v.scroll ?? 0)));
       } catch {}
     }
     restored.current = true;
-  }, []);
+  }, [loadAll, fullUrl]);
+  useEffect(() => {
+    if (!loaded || pendingScroll.current == null) return;
+    const y = pendingScroll.current;
+    pendingScroll.current = null;
+    requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+  }, [loaded]);
   useEffect(() => {
     if (!restored.current) return;
     const key = `ossr-lb:${location.pathname}`;
@@ -80,6 +116,10 @@ export function Leaderboard({
     document.addEventListener("click", save, true);
     return () => document.removeEventListener("click", save, true);
   }, [period, category, language, query, limit, newWeek]);
+
+  useEffect(() => {
+    if (period !== defaultPeriod || category !== "all" || language !== "all" || query || newWeek || onlySince || limit > PAGE) loadAll();
+  }, [period, defaultPeriod, category, language, query, newWeek, onlySince, limit, loadAll]);
 
   // "/" or Cmd/Ctrl+K jumps to search, like most directory sites.
   useEffect(() => {
@@ -97,21 +137,24 @@ export function Leaderboard({
 
   useEffect(() => {
     if (!dataAt) return;
+    if (partial) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount
     setSinceVisit(readSinceLastVisit(dataAt, repos.map((r) => r.fullName)));
-  }, [dataAt, repos]);
+  }, [dataAt, repos, partial]);
 
   const refMs = generatedAtMs ?? 0;
   const languages = useMemo(() => {
+    if (partial && meta) return meta.languages;
     const c: Record<string, number> = {};
     for (const r of repos) if (r.language) c[r.language] = (c[r.language] ?? 0) + 1;
     return Object.entries(c).sort((a, b) => b[1] - a[1]);
-  }, [repos]);
+  }, [repos, partial, meta]);
 
   // Current rank by 24h gain over the whole list, for movement arrows.
   const todayRank = useMemo(() => {
     const m = new Map<string, number>();
-    [...repos].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars).forEach((r, i) => m.set(r.fullName, i + 1));
+    if (repos.every((r) => r.rank24 != null)) for (const r of repos) m.set(r.fullName, r.rank24!);
+    else [...repos].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars).forEach((r, i) => m.set(r.fullName, i + 1));
     return m;
   }, [repos]);
 
@@ -128,10 +171,13 @@ export function Leaderboard({
   }, [repos, period, category, language, newWeek, refMs, query, onlySince, sinceVisit]);
 
   const counts = useMemo(() => {
+    if (partial && meta) return meta.counts;
     const c: Record<string, number> = {};
     for (const r of repos) c[r.category] = (c[r.category] ?? 0) + 1;
     return c;
-  }, [repos]);
+  }, [repos, partial, meta]);
+  const total = partial && meta ? meta.total : repos.length;
+  const remaining = partial && meta ? meta.total - Math.min(limit, ranked.length) : ranked.length - limit;
 
   return (
     <div>
@@ -156,11 +202,12 @@ export function Leaderboard({
             type="search"
             value={query}
             onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }}
+            onFocus={loadAll}
             placeholder="Search repos…"
             aria-label="Search repos" aria-keyshortcuts="/ Control+K Meta+K"
             className="h-9 w-full rounded-full border border-zinc-300 bg-white pl-4 pr-10 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900"
           />
-            <kbd aria-hidden className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-zinc-300 px-1.5 font-mono text-[10px] text-zinc-400 sm:block dark:border-zinc-700">/</kbd>
+            <kbd aria-hidden className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-zinc-300 px-1.5 font-mono text-[10px] text-zinc-500 sm:block dark:border-zinc-700">/</kbd>
           </div>
           <select
             value={language}
@@ -187,7 +234,7 @@ export function Leaderboard({
         {showCategoryFilter && (
           <div className="flex flex-wrap gap-2 border-t border-zinc-200 pt-3 dark:border-zinc-800" aria-label="Category filter">
             <button className={pill(category === "all")} onClick={() => { setCategory("all"); setLimit(PAGE); }}>
-              All <span className="tabular-nums opacity-60">{repos.length}</span>
+              All <span className="tabular-nums opacity-80">{total}</span>
             </button>
             {CATEGORIES.filter((c) => counts[c.slug]).map((c) => (
               <button
@@ -195,7 +242,7 @@ export function Leaderboard({
                 className={pill(category === c.slug)}
                 onClick={() => { setCategory(c.slug); setLimit(PAGE); }}
               >
-                {c.label} <span className="tabular-nums opacity-60">{counts[c.slug]}</span>
+                {c.label} <span className="tabular-nums opacity-80">{counts[c.slug]}</span>
               </button>
             ))}
           </div>
@@ -215,11 +262,11 @@ export function Leaderboard({
               key={r.fullName}
               className={`relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
             >
-              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-400 dark:text-zinc-500 sm:pt-0">
+              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-500 dark:text-zinc-500 sm:pt-0">
                 {i + 1}
                 {move != null && move !== 0 && (
                   <span
-                    className={`block text-[10px] leading-tight ${move > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-rose-500"}`}
+                    className={`block text-[10px] leading-tight ${move > 0 ? "text-emerald-700 dark:text-emerald-400" : "text-rose-600"}`}
                     title={`${move > 0 ? "Up" : "Down"} ${Math.abs(move)} since yesterday (24h ranking)`}
                   >
                     {move > 0 ? "▲" : "▼"}{Math.abs(move)}
@@ -262,11 +309,11 @@ export function Leaderboard({
               <Sparkline points={r.spark} width={80} height={28} className="hidden shrink-0 text-indigo-500 md:block" />
               <div className="w-20 shrink-0 text-right sm:w-24">
                 <p
-                  className="font-mono font-semibold tabular-nums text-emerald-600 dark:text-emerald-400"
+                  className="font-mono font-semibold tabular-nums text-emerald-700 dark:text-emerald-400"
                   title={est ? "Estimated: not enough daily snapshots yet (see note above the list)" : undefined}
                 >
                   {formatDelta(delta)}
-                  {est && <span className="text-zinc-400" aria-label="estimated">*</span>}
+                  {est && <span className="text-zinc-500" aria-label="estimated">*</span>}
                 </p>
                 <p className="text-[11px] text-zinc-500 dark:text-zinc-400">{period === "today" ? "stars today" : "stars this week"}</p>
               </div>
@@ -274,12 +321,12 @@ export function Leaderboard({
             </li>
           );
         })}
-        {ranked.length === 0 && <li className="px-4 py-8 text-center text-sm text-zinc-500">No repos match these filters.</li>}
+        {ranked.length === 0 && !partial && <li className="px-4 py-8 text-center text-sm text-zinc-500">No repos match these filters.</li>}
       </ol>
-      {ranked.length > limit && (
+      {remaining > 0 && (
         <div className="mt-4 text-center">
-          <button className={pill(false)} onClick={() => setLimit((l) => l + PAGE)}>
-            Show more ({ranked.length - limit} left)
+          <button className={pill(false)} onClick={() => { loadAll(); setLimit((l) => l + PAGE); }}>
+            Show more ({remaining} left)
           </button>
         </div>
       )}

@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { LANDINGS } from "@/lib/landing";
 import { itemListLd } from "@/lib/seo";
-import { toLeaderRepo } from "@/lib/leader";
+import { leaderMeta, toLeaderRepos } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
 import { UpdatedClock } from "@/components/UpdatedClock";
@@ -52,7 +52,11 @@ export default function Home() {
       <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">Leaderboard</h2>
       {anyEstimated && <EstimateNote className="mb-4" />}
       <Leaderboard
-        repos={data.repos.map(toLeaderRepo)}
+        repos={toLeaderRepos(data.repos)
+          .sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars)
+          .slice(0, 50)}
+        fullUrl="/leaderboard.json"
+        meta={leaderMeta(data.repos, now)}
         newDate={data.snapshotCount > 1 ? data.snapshotDate : null}
         showMovement={Boolean(data.rankBaseDate)}
         dataAt={data.generatedAt}
