@@ -84,7 +84,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
                     : "border-zinc-200 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900"
                 }`}
               >
-                {l.name} <span className="tabular-nums opacity-70">{l.count}</span>
+                {l.name} <span className="tabular-nums">{l.count}</span>
               </Link>
             </li>
           ))}

@@ -232,7 +232,7 @@ export function Leaderboard({
           )}
           {sinceVisit && sinceVisit.newNames.size > 0 && (
             <button className={pill(onlySince)} aria-pressed={onlySince} onClick={() => { setOnlySince((v) => !v); setLimit(PAGE); }}>
-              New since last visit <span className="tabular-nums opacity-70">{sinceVisit.newNames.size}</span>
+              New since last visit <span className="tabular-nums opacity-90">{sinceVisit.newNames.size}</span>
             </button>
           )}
         </div>
@@ -267,11 +267,11 @@ export function Leaderboard({
             <li
               className={`relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
             >
-              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-500 dark:text-zinc-500 sm:pt-0">
+              <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-500 dark:text-zinc-400 sm:pt-0">
                 {i + 1}
                 {move != null && move !== 0 && (
                   <span
-                    className={`block text-[10px] leading-tight ${move > 0 ? "text-emerald-700 dark:text-emerald-400" : "text-rose-600"}`}
+                    className={`block text-[10px] leading-tight ${move > 0 ? "text-emerald-700 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}
                     title={`${move > 0 ? "Up" : "Down"} ${Math.abs(move)} since yesterday (24h ranking)`}
                   >
                     {move > 0 ? "▲" : "▼"}{Math.abs(move)}

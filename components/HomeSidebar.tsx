@@ -27,14 +27,14 @@ export function HomeSidebar({ repos, newCount, active = "all" }: { repos: Repo[]
             <li>
               <Link href="/" aria-current={active === "all" ? "page" : undefined} className={`${item} ${active === "all" ? on : ""}`}>
                 <span>All</span>
-                <span className="tabular-nums text-xs text-zinc-500 dark:text-zinc-500">{repos.length}</span>
+                <span className="tabular-nums text-xs text-zinc-500 dark:text-zinc-400">{repos.length}</span>
               </Link>
             </li>
             {CATEGORIES.filter((c) => counts[c.slug]).map((c) => (
               <li key={c.slug}>
                 <Link href={`/category/${c.slug}`} aria-current={active === c.slug ? "page" : undefined} className={`${item} ${active === c.slug ? on : ""}`}>
                   <span>{c.label}</span>
-                  <span className="tabular-nums text-xs text-zinc-500 dark:text-zinc-500">{counts[c.slug]}</span>
+                  <span className="tabular-nums text-xs text-zinc-500 dark:text-zinc-400">{counts[c.slug]}</span>
                 </Link>
               </li>
             ))}

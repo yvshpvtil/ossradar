@@ -20,7 +20,7 @@ export function CategoryChips({ repos, active }: { repos: Repo[]; active: string
         {items.map((c) => (
           <li key={c.slug}>
             <Link href={c.href} aria-current={active === c.slug ? "page" : undefined} className={chip(active === c.slug)}>
-              {c.label} <span className="tabular-nums opacity-70">{c.n}</span>
+              {c.label} <span className="tabular-nums">{c.n}</span>
             </Link>
           </li>
         ))}

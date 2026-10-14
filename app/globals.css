@@ -18,3 +18,8 @@
 body {
   @apply bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
 }
+
+/* Dark mode: zinc-500 secondary text is only ~4.1:1 on zinc-950; lift it to AA unless a dark: colour is set explicitly. */
+.dark .text-zinc-500:not([class*="dark:text-"]) {
+  color: var(--color-zinc-400);
+}
