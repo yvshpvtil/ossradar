@@ -46,11 +46,9 @@ const ageDays = (r: Repo) => (r.createdAt ? Math.max(1, Math.round((nowMs - Date
 const CAT: Record<string, string> = { "ai-agents": "AI agents", "llm-tooling": "LLM tooling", mcp: "MCP", "coding-agents": "Coding agents", "rag-vector": "RAG / vector", "local-llms": "Local LLMs", devops: "DevOps", other: "Dev tools" };
 
 const lead = repos[0];
-const subject = lead
-  ? `${nameOf(lead)} gained ${fmt(lead.delta24h ?? 0)} GitHub stars in a day · OSS Radar ${date}`
-  : `OSS Radar daily — ${date}`;
+const subject = lead ? `${nameOf(lead)} tops today's rising open-source projects` : "Today's rising open-source projects";
 const previewText = lead
-  ? `Plus ${repos.slice(1, 3).map(nameOf).join(", ")} and ${Math.max(0, repos.length - 3)} more open-source projects developers starred most in the last 24 hours.`
+  ? `Also climbing: ${repos.slice(1, 4).map(nameOf).join(", ")}. Your OSS Radar daily for ${niceShort}.`
   : "";
 
 /** Optional sections, only from real data. */
@@ -113,38 +111,32 @@ function llmIntro(): string | null {
   } catch { return null; }
 }
 
-// ---------- email building blocks (table layout, inline styles) ----------
+// ---------- email building blocks ----------
+// Mobile-first: one full-width column, 16px gutters, no nested cards, no fixed side columns.
+// Light palette with explicit colours; dark-mode overrides for clients that honour prefers-color-scheme
+// (Apple Mail, iOS Mail, Outlook.com via [data-ogsc]); Gmail's forced inversion still reads well because
+// we avoid tinted boxes and light-on-light text.
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
-const MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace";
-const C = { ink: "#18181b", body: "#3f3f46", muted: "#71717a", line: "#e4e4e7", bg: "#f4f4f5", card: "#ffffff", brand: "#4f46e5", brandDark: "#1e1b4b", green: "#047857", greenBg: "#ecfdf5" };
+const C = { ink: "#18181b", body: "#3f3f46", muted: "#6b7280", line: "#e5e7eb", brand: "#4338ca", green: "#047857" };
 
-const chip = (text: string, tone: "green" | "plain" = "plain") =>
-  `<span style="display:inline-block;margin:0 6px 6px 0;padding:3px 9px;border-radius:999px;font:600 12px/18px ${FONT};${tone === "green" ? `background:${C.greenBg};color:${C.green};border:1px solid #a7f3d0;` : `background:#f4f4f5;color:${C.body};border:1px solid ${C.line};`}">${text}</span>`;
-
-const chips = (r: Repo, withTotal = true) =>
-  chip(`▲ +${fmt(r.delta24h ?? 0)} today${r.estimated24h ? "*" : ""}`, "green") +
-  (withTotal ? chip(`★ ${short(r.stars)} total`) : "") +
-  (r.language ? chip(esc(r.language)) : "") +
-  chip(esc(CAT[r.category ?? "other"] ?? "Dev tools"));
-
-const button = (href: string, label: string, primary: boolean) => `
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="display:inline-table;margin:0 8px 8px 0;"><tr>
-<td bgcolor="${primary ? C.brand : "#ffffff"}" style="border-radius:8px;${primary ? "" : `border:1px solid #d4d4d8;`}">
-<a href="${esc(href)}" style="display:inline-block;padding:10px 16px;font:600 14px/20px ${FONT};color:${primary ? "#ffffff" : C.ink};text-decoration:none;border-radius:8px;">${label}</a>
-</td></tr></table>`;
-
-const section = (inner: string, pad = "24px 28px") => `<tr><td bgcolor="${C.card}" style="background:${C.card};padding:${pad};">${inner}</td></tr>`;
-const divider = () => `<tr><td bgcolor="${C.card}" style="background:${C.card};padding:0 28px;"><div style="height:1px;line-height:1px;font-size:0;background:${C.line};">&nbsp;</div></td></tr>`;
-const eyebrow = (t: string, color = C.brand) => `<div style="font:700 11px/16px ${FONT};letter-spacing:.12em;text-transform:uppercase;color:${color};margin:0 0 10px;">${t}</div>`;
+/** Let names wrap only after "/" , "-" , "_" or "." (never mid-word). */
+const nameHtml = (t: string) => esc(t).replace(/([/\-_.])/g, "$1<wbr>");
+const pill = (text: string, cls = "", style = "") =>
+  `<span class="pill ${cls}" style="display:inline-block;white-space:nowrap;margin:0 4px 4px 0;padding:2px 8px;border:1px solid ${C.line};border-radius:999px;font:600 13px/20px ${FONT};color:${C.body};${style}">${text}</span>`;
+const stats = (r: Repo, total = true) =>
+  pill(`+${fmt(r.delta24h ?? 0)} today${r.estimated24h ? "*" : ""}`, "up", `color:${C.green};border-color:#a7f3d0;`) +
+  (total ? pill(`${short(r.stars)} stars`) : "") +
+  (r.language ? pill(esc(r.language)) : "");
+const eyebrow = (t: string) => `<p class="eyebrow" style="margin:28px 0 8px;font:700 12px/16px ${FONT};letter-spacing:.1em;text-transform:uppercase;color:${C.brand};">${t}</p>`;
+const p = (html: string, style = "") => `<p class="body" style="margin:0 0 12px;font:16px/1.6 ${FONT};color:${C.body};${style}">${html}</p>`;
+const rule = `<div class="rule" style="height:1px;line-height:1px;font-size:0;background:${C.line};margin:16px 0;">&nbsp;</div>`;
 
 const sponsorHtml = () => {
   const s = getActiveSponsor(new Date());
   if (!s) return "";
-  const logo = s.logo ? `<img src="${esc(s.logo)}" width="20" height="20" alt="" style="vertical-align:middle;border-radius:4px;margin-right:8px;border:0;">` : "";
-  return section(`<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #fcd34d;border-radius:10px;" bgcolor="#fffbeb"><tr><td style="padding:12px 16px;font:14px/21px ${FONT};color:${C.ink};">
-<div style="font:700 10px/14px ${FONT};letter-spacing:.12em;text-transform:uppercase;color:#92400e;margin-bottom:4px;">Sponsor</div>
-<a href="${esc(s.url)}" rel="sponsored" style="color:${C.ink};text-decoration:none;">${logo}<strong>${esc(s.name)}</strong> — ${esc(s.tagline)} <span style="color:#92400e;">→</span></a>
-</td></tr></table>`, "16px 28px 0");
+  return `<div class="sponsor" style="margin:16px 0 0;padding:12px 14px;border:1px solid #fcd34d;border-radius:10px;font:15px/1.5 ${FONT};color:${C.ink};">
+<span style="font:700 11px/16px ${FONT};letter-spacing:.1em;text-transform:uppercase;color:#92400e;">Sponsor</span><br>
+<a href="${esc(s.url)}" rel="sponsored" style="color:${C.ink};text-decoration:none;"><strong>${esc(s.name)}</strong>: ${esc(s.tagline)}</a></div>`;
 };
 
 function buildHtml(blurbs: Map<string, string>, intro: string): string {
@@ -153,82 +145,72 @@ function buildHtml(blurbs: Map<string, string>, intro: string): string {
   const quick = rest.slice(5);
   const b = (r: Repo) => esc(blurbs.get(r.fullName) ?? "");
   const anyEst = repos.some((r) => r.estimated24h);
+  const item = (r: Repo, n: number, size = 18) =>
+    `<p class="name" style="margin:0 0 4px;font:700 ${size}px/1.35 ${FONT};color:${C.ink};word-break:normal;overflow-wrap:break-word;"><span class="muted" style="color:${C.muted};font-weight:600;">${n}.</span> <a class="ink" href="${repoUrl(r)}" style="color:${C.ink};text-decoration:none;">${nameHtml(r.fullName)}</a></p>`;
 
-  const heroHtml = section(`
-${eyebrow("Repo of the day")}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #c7d2fe;border-radius:14px;" bgcolor="#eef2ff"><tr><td style="padding:22px 22px 14px;">
-<div style="font:500 14px/20px ${FONT};color:${C.muted};">${esc(hero.owner)} /</div>
-<a href="${repoUrl(hero)}" style="font:800 26px/32px ${FONT};color:${C.ink};text-decoration:none;word-break:break-word;">${esc(nameOf(hero))}</a>
-<p style="margin:10px 0 14px;font:16px/24px ${FONT};color:${C.body};">${b(hero)}</p>
-<div style="margin:0 0 8px;">${chips(hero)}</div>
-<p style="margin:6px 0 16px;font:14px/21px ${FONT};color:${C.body};"><strong style="color:${C.ink};">Why it matters:</strong> ${esc(heroWhy(hero))}</p>
-${button(repoUrl(hero), "View on OSS Radar", true)}${button(hero.url, "Open on GitHub", false)}
-</td></tr></table>`, "8px 28px 24px");
+  const heroHtml = `${eyebrow("Repo of the day")}
+${item(hero, 1, 22)}
+${p(b(hero), `font-size:17px;color:${C.ink};`)}
+<div style="margin:0 0 10px;">${stats(hero)}${pill(esc(CAT[hero.category ?? "other"] ?? "Dev tools"))}</div>
+${p(`<strong class="ink" style="color:${C.ink};">Why it matters:</strong> ${esc(heroWhy(hero))}`)}
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 0;"><tr>
+<td class="btn" bgcolor="${C.brand}" style="border-radius:8px;background:${C.brand};"><a href="${repoUrl(hero)}" style="display:inline-block;padding:11px 18px;font:600 15px/20px ${FONT};color:#ffffff;text-decoration:none;">See the star chart</a></td>
+<td style="padding-left:14px;font:15px/20px ${FONT};"><a href="${esc(hero.url)}" class="lnk" style="color:${C.brand};text-decoration:underline;">GitHub</a></td>
+</tr></table>`;
 
-  const alsoHtml = also.length ? section(`
-${eyebrow("Also rising")}
-${also.map((r, i) => `
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${C.line};border-radius:12px;margin:0 0 12px;" bgcolor="#ffffff"><tr>
-<td width="44" valign="top" style="padding:16px 0 14px 16px;font:800 20px/26px ${MONO};color:#a1a1aa;">${i + 2}</td>
-<td valign="top" style="padding:14px 16px 10px 8px;">
-<a href="${repoUrl(r)}" style="font:700 17px/24px ${FONT};color:${C.ink};text-decoration:none;word-break:break-word;"><span style="font-weight:500;color:${C.muted};">${esc(r.owner)}/</span>${esc(nameOf(r))}</a>
-<p style="margin:4px 0 10px;font:14px/21px ${FONT};color:${C.body};">${b(r)}</p>
-<div>${chips(r)}</div>
-</td></tr></table>`).join("")}`, "0 28px 12px") : "";
+  const alsoHtml = also.length ? `${eyebrow("Also rising")}
+${also.map((r, i) => `${i ? rule : ""}${item(r, i + 2)}${p(b(r), "margin-bottom:8px;")}<div>${stats(r)}</div>`).join("\n")}` : "";
 
-  const quickHtml = quick.length ? section(`
-${eyebrow("Quick hits")}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-${quick.map((r, i) => `<tr>
-<td width="30" valign="top" style="padding:10px 0;border-top:1px solid ${C.line};font:700 14px/21px ${MONO};color:#a1a1aa;">${i + 7}</td>
-<td valign="top" style="padding:10px 0;border-top:1px solid ${C.line};font:14px/21px ${FONT};color:${C.body};">
-<a href="${repoUrl(r)}" style="font-weight:700;color:${C.ink};text-decoration:none;word-break:break-word;">${esc(r.fullName)}</a>
-<span style="color:${C.green};font-weight:600;white-space:nowrap;">&nbsp;+${fmt(r.delta24h ?? 0)}${r.estimated24h ? "*" : ""}</span><br>${b(r)}
-</td></tr>`).join("")}
-</table>`, "4px 28px 20px") : "";
+  const quickHtml = quick.length ? `${eyebrow("Quick hits")}
+${quick.map((r, i) => `<p class="body" style="margin:0 0 12px;font:15px/1.55 ${FONT};color:${C.body};overflow-wrap:break-word;"><strong class="ink" style="color:${C.ink};"><span class="muted" style="color:${C.muted};">${i + 7}.</span> <a class="ink" href="${repoUrl(r)}" style="color:${C.ink};text-decoration:none;">${nameHtml(r.fullName)}</a></strong> <span class="up" style="color:${C.green};font-weight:600;white-space:nowrap;">+${fmt(r.delta24h ?? 0)}${r.estimated24h ? "*" : ""}</span><br>${b(r)}</p>`).join("\n")}` : "";
 
-  const newHtml = newThisWeek.length ? divider() + section(`
-${eyebrow("New this week", C.green)}
-<p style="margin:0 0 10px;font:13px/19px ${FONT};color:${C.muted};">Created in the last 7 days and already gaining fast.</p>
-${newThisWeek.map((r) => `<p style="margin:0 0 10px;font:14px/21px ${FONT};color:${C.body};"><a href="${repoUrl(r)}" style="font-weight:700;color:${C.ink};text-decoration:none;">${esc(r.fullName)}</a> <span style="color:${C.muted};">· ${ageDays(r)} day${ageDays(r) === 1 ? "" : "s"} old · ${fmt(r.stars)} stars</span><span style="color:${C.green};font-weight:600;"> · +${fmt(r.delta24h ?? 0)} today</span><br>${b(r) || esc(r.description ?? "")}</p>`).join("")}`, "20px 28px 12px") : "";
+  const newHtml = newThisWeek.length ? `${eyebrow("New this week")}
+${p("Created in the last 7 days and already picking up stars.", `font-size:14px;color:${C.muted};`)}
+${newThisWeek.map((r) => `<p class="body" style="margin:0 0 12px;font:15px/1.55 ${FONT};color:${C.body};overflow-wrap:break-word;"><strong class="ink" style="color:${C.ink};"><a class="ink" href="${repoUrl(r)}" style="color:${C.ink};text-decoration:none;">${nameHtml(r.fullName)}</a></strong> <span class="muted" style="color:${C.muted};white-space:nowrap;">${ageDays(r)}d old · +${fmt(r.delta24h ?? 0)} today</span><br>${b(r) || esc(r.description ?? "")}</p>`).join("\n")}` : "";
 
-  const hnHtml = hnPick ? divider() + section(`
-${eyebrow("On Hacker News", "#c2410c")}
-<p style="margin:0;font:14px/21px ${FONT};color:${C.body};"><a href="https://news.ycombinator.com/item?id=${esc(hnPick.m!.top!.id)}" style="font-weight:700;color:${C.ink};text-decoration:none;">“${esc(hnPick.m!.top!.title)}”</a><br>
-<span style="color:${C.muted};">${fmt(hnPick.m!.top!.points)} points · ${fmt(hnPick.m!.top!.comments)} comments on Hacker News, the tech discussion site · about </span><a href="${repoUrl(hnPick.r)}" style="color:${C.brand};text-decoration:none;font-weight:600;">${esc(hnPick.r.fullName)}</a></p>`, "20px 28px 20px") : "";
+  const hnHtml = hnPick ? `${eyebrow("On Hacker News")}
+${p(`<strong class="ink" style="color:${C.ink};">“${esc(hnPick.m!.top!.title)}”</strong> drew ${fmt(hnPick.m!.top!.points)} points and ${fmt(hnPick.m!.top!.comments)} comments on Hacker News, the tech discussion site. It's about <a class="lnk" href="${repoUrl(hnPick.r)}" style="color:${C.brand};">${nameHtml(hnPick.r.fullName)}</a>.`)}` : "";
 
-  return `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>${esc(subject)}</title></head>
-<body style="margin:0;padding:0;background:${C.bg};-webkit-text-size-adjust:100%;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${esc(previewText)}&#8199;&#65279;&#847;&#8199;&#65279;&#847;&#8199;&#65279;&#847;</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="${C.bg}" style="background:${C.bg};"><tr><td align="center" style="padding:24px 12px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;border-radius:16px;overflow:hidden;border:1px solid ${C.line};">
-<tr><td bgcolor="${C.brandDark}" style="background:${C.brandDark};padding:22px 28px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-<td valign="middle" style="font:800 22px/28px ${FONT};color:#ffffff;"><span style="color:#a5b4fc;">◉</span>&nbsp;OSS&nbsp;Radar</td>
-<td valign="middle" align="right" style="font:600 12px/16px ${FONT};color:#c7d2fe;white-space:nowrap;">Issue #${issueNo}<br><span style="font-weight:400;">${esc(niceShort)}</span></td>
+  return `<style>
+  @media (prefers-color-scheme: dark) {
+    .wrap, body { background:#111113 !important; }
+    .ink, .name, .name a { color:#f4f4f5 !important; }
+    .body { color:#d4d4d8 !important; }
+    .muted { color:#a1a1aa !important; }
+    .eyebrow, .brandtxt { color:#a5b4fc !important; }
+    .up { color:#6ee7b7 !important; border-color:#065f46 !important; }
+    .pill { color:#d4d4d8 !important; border-color:#3f3f46 !important; }
+    .pill.up, .up { color:#6ee7b7 !important; border-color:#065f46 !important; }
+    .lnk { color:#a5b4fc !important; }
+    .rule { background:#27272a !important; }
+    .btn { background:#6366f1 !important; }
+  }
+  [data-ogsc] .ink, [data-ogsc] .name a { color:#f4f4f5 !important; }
+  [data-ogsc] .body { color:#d4d4d8 !important; }
+  [data-ogsc] .eyebrow { color:#a5b4fc !important; }
+</style>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${esc(previewText)}</div>
+<table role="presentation" class="wrap" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background:#ffffff;"><tr><td align="center" style="padding:0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;"><tr><td style="padding:20px 16px 8px;text-align:left;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td style="font:800 22px/28px ${FONT};"><span class="brandtxt" style="color:${C.brand};">◉ OSS Radar</span></td>
+<td align="right" class="muted" style="font:13px/18px ${FONT};color:${C.muted};white-space:nowrap;">Issue #${issueNo} · ${esc(niceShort)}</td>
 </tr></table>
-<div style="margin-top:10px;font:14px/20px ${FONT};color:#e0e7ff;">The open-source projects developers starred most in the last 24 hours.</div>
-</td></tr>
+${rule}
 ${sponsorHtml()}
-${section(`
-${eyebrow("Today in open source")}
-<p style="margin:0;font:16px/25px ${FONT};color:${C.ink};">${intro}</p>
-<p style="margin:10px 0 0;font:12px/18px ${FONT};color:${C.muted};">${esc(nice)} · Stars are GitHub's “bookmark” button, a rough signal of how many developers are paying attention.</p>`, "24px 28px 16px")}
+${eyebrow("Today in open source").replace("margin:28px 0 8px", "margin:8px 0 8px")}
+${p(intro, `font-size:17px;color:${C.ink};`)}
+${p(`Stars are GitHub's bookmark button: a rough signal of how many developers are paying attention.`, `font-size:13px;color:${C.muted};`)}
 ${heroHtml}
 ${alsoHtml}
 ${quickHtml}
 ${newHtml}
 ${hnHtml}
-${section(`<div style="text-align:center;">${button(SITE, "See the full live leaderboard →", true)}</div>`, "8px 28px 24px")}
-<tr><td bgcolor="#fafafa" style="background:#fafafa;padding:20px 28px;border-top:1px solid ${C.line};font:12px/19px ${FONT};color:${C.muted};">
-<p style="margin:0 0 8px;"><strong style="color:${C.body};">Know someone who'd like this?</strong> Forward this email, or send them to <a href="${SITE}" style="color:${C.brand};">ossradar.net</a> to subscribe free.</p>
-<p style="margin:0 0 8px;">You're receiving this because you signed up for the OSS Radar daily email at ossradar.net. Rankings come from public GitHub data, updated hourly; sponsors never affect them.${anyEst ? " * = estimated for repos we started tracking recently." : ""}</p>
-<p style="margin:0;">OSS = open-source software: code anyone can read, use and improve.</p>
-</td></tr>
-</table>
+${rule}
+${p(`Full live rankings, updated hourly: <a class="lnk" href="${SITE}" style="color:${C.brand};">ossradar.net</a>`, "font-size:15px;")}
+${p(`Know someone who'd like this? Forward it. You're getting this because you subscribed at ossradar.net. Rankings come from public GitHub data; sponsors never affect them.${anyEst ? " * = estimated for recently added repos." : ""} OSS means open-source software: code anyone can read, use and improve.`, `font-size:13px;color:${C.muted};`)}
 </td></tr></table>
-</body></html>`;
+</td></tr></table>`;
 }
 
 async function kit(path: string, init: RequestInit = {}) {
@@ -290,7 +272,7 @@ async function main() {
   if (!process.env.KIT_API_KEY) throw new Error("KIT_API_KEY missing");
 
   const existing = await kit("/broadcasts?per_page=50");
-  // Dedupe: one broadcast per data date (subject carries the ISO date; description too).
+  // Dedupe: one broadcast per data date, matched on description "Daily digest <date>" (older issues also had it in the subject). Test sends must not put a date in subject/description.
   if (existing.broadcasts?.some((b: { subject?: string; description?: string }) => b.subject?.includes(date) || b.description?.includes(date))) {
     console.log(`Broadcast for ${date} already exists; skipping.`); return;
   }
