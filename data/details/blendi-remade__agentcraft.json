@@ -7,5 +7,6 @@
  "extractor": "heuristic",
  "readmeHash": "0e9f56a2dc31",
  "version": 1,
- "generatedAt": "2026-10-13T15:42:46.554Z"
+ "generatedAt": "2026-10-13T15:42:46.554Z",
+ "readmeSummary": "A team of Claude agents doing real work on your code, inside a Minecraft studio you can walk around in."
 }

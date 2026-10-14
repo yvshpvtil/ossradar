@@ -4,7 +4,7 @@
  "useCases": [],
  "installCommand": "npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing",
  "source": "readme",
- "readmeSummary": "Install the H3 prompt writing skill — one of nine skills bundled with this repository:",
+ "readmeSummary": "It ships with two prompt guides under skills/h3-prompt-writing/references/: base-en.txt for text/keyframe modes and ref-en.txt for…",
  "extractor": "heuristic",
  "readmeHash": "482fa713d68f",
  "version": 1,

@@ -62,6 +62,7 @@ export function readmeBlurb(markdown: string, max = BLURB_MAX): string | null {
       .replace(/[*_`~]/g, "");
     const words = plain.match(/[A-Za-z]{2,}/g)?.length ?? 0;
     if (words < 6 && cjkRatio(plain) < 0.3) continue;
+    if (/:\s*$/.test(plain.trim())) continue; // lead-in to a list or code block, not a description
     const c = cleanBlurb(plain, max);
     if (c) return c;
   }
