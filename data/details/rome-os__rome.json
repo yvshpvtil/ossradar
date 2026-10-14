@@ -1,0 +1,11 @@
+{
+ "fullName": "rome-os/rome",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/rome-os/rome/main/scripts/quickstart-docker.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "44d54662551d",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:47.190Z"
+}

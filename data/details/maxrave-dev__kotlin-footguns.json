@@ -1,0 +1,11 @@
+{
+ "fullName": "maxrave-dev/kotlin-footguns",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills@latest add maxrave-dev/kotlin-footguns",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "d1b31bf5a8d9",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:47.044Z"
+}

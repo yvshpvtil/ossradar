@@ -1,0 +1,11 @@
+{
+ "fullName": "Bingeljell/image-to-3dlab",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://assetfurnace.com/install.sh | bash",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "cd0e0f35a1ab",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.490Z"
+}

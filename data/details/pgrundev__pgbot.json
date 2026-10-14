@@ -1,0 +1,11 @@
+{
+ "fullName": "pgrundev/pgbot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://pgbot.dev/install | sh",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3d9e831cfa57",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.972Z"
+}

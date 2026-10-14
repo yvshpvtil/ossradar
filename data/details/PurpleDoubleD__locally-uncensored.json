@@ -1,0 +1,11 @@
+{
+ "fullName": "PurpleDoubleD/locally-uncensored",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "6ed5d2fd0e9a",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.325Z"
+}

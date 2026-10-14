@@ -1,0 +1,11 @@
+{
+ "fullName": "comet-ml/opik",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install opik",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "a8bf7d11ec2e",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.786Z"
+}

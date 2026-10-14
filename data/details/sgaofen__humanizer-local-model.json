@@ -1,0 +1,11 @@
+{
+ "fullName": "sgaofen/humanizer-local-model",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install git+https://github.com/sgaofen/humanizer-local-model     # or: pip install git+https://github.com/sgaofen/humanizer-local-model",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "3cf3ff9dde37",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.519Z"
+}

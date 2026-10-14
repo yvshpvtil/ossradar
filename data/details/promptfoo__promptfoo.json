@@ -1,0 +1,11 @@
+{
+ "fullName": "promptfoo/promptfoo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g promptfoo",
+ "source": "readme",
+ "extractor": "heuristic",
+ "readmeHash": "0916e5a9f9d0",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:46.717Z"
+}
