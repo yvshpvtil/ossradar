@@ -75,5 +75,5 @@ export function readmeBlurb(markdown: string, max = BLURB_MAX): string | null {
 /** A line that should get an English override: mostly CJK, or a README fragment that starts mid-thought. */
 export function needsOverride(text: string | null | undefined): boolean {
   if (!text) return true;
-  return cjkRatio(text) > 0.2 || /^(It|That|This|These|They|Then|And|But|So|Also|Here|There)\b/.test(text.trim());
+  return cjkRatio(text) > 0.05 || /^(It|That|This|These|They|Then|And|But|So|Also|Here|There)\b/.test(text.trim());
 }

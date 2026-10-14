@@ -17,6 +17,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:15.900Z"
  },
+ "DevnorsAI/devnors-data-mcp": {
+  "text": "MCP server for AI assistants that queries Chinese legal, company registry, tax, keyword index and parcel tracking APIs.",
+  "basis": "d78d9f7a6d7d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:21:48.111Z"
+ },
  "DevnorsAI/devnors-data-python": {
   "text": "Python SDK for querying Chinese legal cases, laws, company records, keyword indexes, research and parcel tracking via one API.",
   "basis": "615c09cbb57f",
@@ -214,6 +220,12 @@
   "basis": "84de5ce1f09e",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:22.579Z"
+ },
+ "elliothux/open-compute": {
+  "text": "Self-hosted platform that runs Cloudflare Workers-compatible apps and bindings like KV, D1 and R2 from a single Rust binary.",
+  "basis": "fb3514586f3f",
+  "source": "claude -p",
+  "generatedAt": "2026-10-14T05:21:48.914Z"
  },
  "flizzywine/dsh-tavern": {
   "text": "A SillyTavern-compatible text roleplay game agent built on DeepSeek Harness that plays imported character cards.",
