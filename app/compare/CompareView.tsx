@@ -65,7 +65,7 @@ export function CompareView({ rows }: { rows: CompareRow[] }) {
           <table className="w-full min-w-[560px] text-sm">
             <thead>
               <tr className="border-b border-zinc-200 dark:border-zinc-800">
-                <th className="w-40 p-3 text-left font-medium text-zinc-500" />
+                <th className="w-40 p-3 text-left font-medium text-zinc-500"><span className="sr-only">Metric</span></th>
                 {picked.map((r) => (
                   <th key={r.fullName} className="p-3 text-left align-top font-normal">
                     <div className="flex items-start gap-2">
