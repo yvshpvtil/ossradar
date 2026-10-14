@@ -55,14 +55,28 @@ export function generateStaticParams() {
   return getRepos().map((r) => ({ owner: r.owner, name: r.name }));
 }
 
+/** Whole sentences that fit in `room`; only word-clip (with …) when even the first sentence is too long. */
+function metaLead(text: string, room: number): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= room) return t;
+  let out = "";
+  for (const sentence of t.match(/[^.!?。]+[.!?。]+(?=\s|$)/g) ?? []) {
+    const next = `${out}${sentence}`.trim();
+    if (next.length > room) break;
+    out = `${next} `;
+  }
+  return out.trim() || clip(t, room);
+}
+
 export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[name]">): Promise<Metadata> {
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) return {};
   const title = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
-  const description = clip(
-    `${repo.description || repo.oneLiner} ${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`,
-  );
+  // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
+  const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
+  const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
+  const description = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
   const url = repoPath(repo);
   return {
     title,
