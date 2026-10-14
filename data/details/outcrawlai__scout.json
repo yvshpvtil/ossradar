@@ -1,0 +1,12 @@
+{
+ "fullName": "outcrawlai/scout",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i @outcrawl/scout",
+ "source": "readme",
+ "readmeSummary": "Scout is an open-source agent that uses a real browser to finish a task for you. Describe what you need in plain words.",
+ "extractor": "heuristic",
+ "readmeHash": "c1d213c0619b",
+ "version": 1,
+ "generatedAt": "2026-10-14T10:54:33.075Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "fireman-droid/droid-for-vscode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "面向 VS Code 与 Cursor 的开源 AI 编码助手。",
+ "extractor": "heuristic",
+ "readmeHash": "815aa49926bb",
+ "version": 1,
+ "generatedAt": "2026-10-14T10:54:33.081Z"
+}

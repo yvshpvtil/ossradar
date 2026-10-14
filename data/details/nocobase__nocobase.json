@@ -1,0 +1,12 @@
+{
+ "fullName": "nocobase/nocobase",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @nocobase/cli",
+ "source": "readme",
+ "readmeSummary": "English Français Español Português Português (BR) Bahasa Indonesia Deutsch",
+ "extractor": "heuristic",
+ "readmeHash": "723b1e43c8fe",
+ "version": 1,
+ "generatedAt": "2026-10-14T10:54:33.353Z"
+}

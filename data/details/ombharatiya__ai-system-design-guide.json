@@ -1,0 +1,12 @@
+{
+ "fullName": "ombharatiya/ai-system-design-guide",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A practical, continuously updated guide to AI system design, RAG architectures, LLM engineering, agentic AI, MCP and A2A protocols, and AI…",
+ "extractor": "heuristic",
+ "readmeHash": "dde933ef7d2e",
+ "version": 1,
+ "generatedAt": "2026-10-14T10:54:33.123Z"
+}

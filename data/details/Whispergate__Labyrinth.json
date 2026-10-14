@@ -1,0 +1,12 @@
+{
+ "fullName": "Whispergate/Labyrinth",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Malware-as-a-Service (MAAS) cyber range for Ludus. Automated offensive development pipeline with CI/CD-driven payload compilation…",
+ "extractor": "heuristic",
+ "readmeHash": "6223aeb94399",
+ "version": 1,
+ "generatedAt": "2026-10-14T10:54:33.083Z"
+}
