@@ -1,0 +1,12 @@
+{
+ "fullName": "hardenrun/aif",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://aif.harden.run/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "The Harden AIF is a local system for coding agent safety. If AIF is useful to you please star this repo.",
+ "extractor": "heuristic",
+ "readmeHash": "65091299d2a8",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:55:27.275Z"
+}

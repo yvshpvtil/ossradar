@@ -1,0 +1,12 @@
+{
+ "fullName": "vercel/ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install ai",
+ "source": "readme",
+ "readmeSummary": "The AI SDK is a provider-agnostic TypeScript toolkit designed to help you build AI-powered applications and agents using popular UI…",
+ "extractor": "heuristic",
+ "readmeHash": "37452bf5f630",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:55:26.249Z"
+}

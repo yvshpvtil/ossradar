@@ -1,0 +1,12 @@
+{
+ "fullName": "Microqian2th/dsh-codex-effort-slider",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "给 DeepSeek Harness（DSH）用的 Codex 风格推理等级滑条。",
+ "extractor": "heuristic",
+ "readmeHash": "fbfc75edf952",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:55:26.745Z"
+}

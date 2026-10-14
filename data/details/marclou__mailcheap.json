@@ -1,0 +1,16 @@
+{
+ "fullName": "marclou/mailcheap",
+ "whoItsFor": null,
+ "useCases": [
+  "Editor with a live email preview, slash commands and boxes. Images are dropped in, pasted, or picked from the ones you uploaded before. Mark",
+  "Checks before every send: subject, preview text, unsubscribe link, size under Gmail's 100 KB clip, postal address, verified domain.",
+  "Test emails, scheduling, and sending in batches through QStash."
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "MailCheap is a newsletter app: write an issue, send it to your list, publish it on the web.",
+ "extractor": "heuristic",
+ "readmeHash": "38bbc9578066",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:55:26.416Z"
+}

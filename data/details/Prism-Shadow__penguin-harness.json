@@ -1,0 +1,12 @@
+{
+ "fullName": "Prism-Shadow/penguin-harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name penguin -p 127.0.0.1:7364:7364 -v penguin-data:/data hiyouga/penguinharness:latest",
+ "source": "readme",
+ "readmeSummary": "PenguinHarness is an open-source framework for agent self-evolution (recursive self-improvement, RSI).",
+ "extractor": "heuristic",
+ "readmeHash": "fc4a43e820ec",
+ "version": 1,
+ "generatedAt": "2026-10-14T13:55:26.284Z"
+}
