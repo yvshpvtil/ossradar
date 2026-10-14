@@ -3,6 +3,16 @@ import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+
+const FAQ: { q: string; a: string }[] = [
+  { q: "What is OSS Radar?", a: `${SITE.name} (OSS = Open-Source Software) is a free, hourly-updated ranking of the fastest-rising open-source AI and developer-tool repositories on GitHub.` },
+  { q: "How are repos ranked?", a: "By star velocity: stars gained in the last 24 hours (Today) or the last 7 days (This week), not by total stars. Ties are broken by total stars." },
+  { q: "How often is the data updated?", a: "Every hour. A GitHub Action pulls star counts from the GitHub API and the site is rebuilt with the new numbers." },
+  { q: "Why are some numbers marked as estimates?", a: "For repos first seen less than 24 hours or 7 days ago there is no earlier snapshot to diff against, so the gain is estimated as total stars divided by days since the repo was created. Measured numbers replace estimates automatically." },
+  { q: "Do sponsors affect the rankings?", a: "No. Rankings are computed from GitHub data only. Sponsor placements are clearly labeled and separate from the leaderboard." },
+  { q: "Is there an API?", a: "Yes. /api/v1/trending returns the top 100 repos by 24-hour star gain as JSON. It is free, needs no key and updates hourly." },
+];
 
 export const metadata: Metadata = {
   title: "About",
@@ -24,13 +34,13 @@ export default function AboutPage() {
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">How it works</h2>
       <ol className="list-decimal space-y-2 pl-5">
         <li>
-          Once a day a GitHub Action queries the GitHub Search API for repos created in the last ~90 days around topics
+          Every hour a GitHub Action queries the GitHub Search API for repos created in the last ~90 days around topics
           like LLMs, AI agents, MCP, RAG and vector databases, local LLMs, coding agents and DevOps, plus recently active
           popular repos in the same space.
         </li>
-        <li>It stores a snapshot of every repo&apos;s star count, keyed by date.</li>
+        <li>It stores an hourly star count for every repo (last 48 hours) and a daily snapshot keyed by UTC date.</li>
         <li>
-          Star gains are computed by diffing today&apos;s snapshot against the snapshots from 1 and 7 days ago. Repos are
+          Star gains are computed by diffing the latest counts against those from 24 hours and 7 days earlier. Repos are
           grouped into categories using their GitHub topics and description.
         </li>
         <li>The site is rebuilt as static pages, so it&apos;s fast and cheap to run.</li>
@@ -47,6 +57,22 @@ export default function AboutPage() {
         link back to {SITE.name}.
       </p>
 
+      <h2 id="faq" className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">FAQ</h2>
+      <dl className="space-y-3">
+        {FAQ.map((f) => (
+          <div key={f.q}>
+            <dt className="font-medium text-zinc-900 dark:text-zinc-100">{f.q}</dt>
+            <dd className="mt-0.5">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Who&apos;s behind it</h2>
       <p>
         Built by <a className="underline" href={SITE.github}>{SITE.owner}</a>. Want your product in front of this
