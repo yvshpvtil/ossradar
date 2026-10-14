@@ -1,17 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
+import { track } from "@vercel/analytics";
+
+export const SUBSCRIBED_KEY = "ossr-subscribed";
 
 /** Native signup form (Kit-backed via /api/subscribe). Use once per page; elsewhere use <SubscribeButton/>. */
-export function NewsletterForm() {
+export function NewsletterForm({ source = "hero", anchor = true }: { source?: string; anchor?: boolean } = {}) {
+  const uid = useId();
+  const inputId = anchor ? "nl-email" : `nl-email-${uid}`;
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [msg, setMsg] = useState("");
 
   // Arriving via /#subscribe (e.g. the footer CTA from another page): scroll to and focus the email field.
   useEffect(() => {
-    if (window.location.hash === "#subscribe") focusSignup();
-  }, []);
+    if (anchor && window.location.hash === "#subscribe") focusSignup();
+  }, [anchor]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,6 +31,10 @@ export function NewsletterForm() {
       const j = await res.json();
       setMsg(j.message);
       setState(j.ok ? "done" : "error");
+      if (j.ok) {
+        track("subscribe", { source });
+        try { localStorage.setItem(SUBSCRIBED_KEY, "1"); } catch {}
+      }
     } catch {
       setMsg("Network error. Please try again.");
       setState("error");
@@ -33,16 +42,16 @@ export function NewsletterForm() {
   }
 
   return (
-    <div id="subscribe" className="scroll-mt-24">
+    <div id={anchor ? "subscribe" : undefined} className="scroll-mt-24">
       {state === "done" ? (
         <p role="status" className="rounded-md border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
           {msg || "You're in! First issue lands tomorrow."}
         </p>
       ) : (
         <form onSubmit={onSubmit} className="flex flex-col gap-2 sm:flex-row">
-          <label htmlFor="nl-email" className="sr-only">Email address</label>
+          <label htmlFor={inputId} className="sr-only">Email address</label>
           <input
-            id="nl-email"
+            id={inputId}
             name="email"
             type="email"
             required

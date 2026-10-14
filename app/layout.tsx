@@ -1,6 +1,7 @@
 import { NavTracker } from "@/components/BackNav";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { EngagementTracker } from "@/components/EngagementTracker";
 import { JsonLd } from "@/components/JsonLd";
 import { websiteLd } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <JsonLd data={websiteLd} />
         <Analytics />
+        <EngagementTracker />
       </body>
     </html>
   );
