@@ -1,0 +1,12 @@
+{
+ "fullName": "Chengjun023/agent-smith",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Token overspending? Better Call Smith. The most expensive model need not appear in every court hearing.",
+ "extractor": "heuristic",
+ "readmeHash": "e5af46728181",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:17.630Z"
+}

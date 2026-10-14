@@ -1,0 +1,12 @@
+{
+ "fullName": "NoizAI/HelixWorld",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "HelixWorld is a real-time interactive audio-visual world model from Noiz AI.",
+ "extractor": "heuristic",
+ "readmeHash": "d810bc0f8823",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:17.681Z"
+}

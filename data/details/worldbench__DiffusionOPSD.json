@@ -1,0 +1,12 @@
+{
+ "fullName": "worldbench/DiffusionOPSD",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e \".[rewards]\"",
+ "source": "readme",
+ "readmeSummary": "Reward-guided diffusion post-training through explicit, continually refreshed intermediate targets",
+ "extractor": "heuristic",
+ "readmeHash": "98adbe28369b",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:18.006Z"
+}

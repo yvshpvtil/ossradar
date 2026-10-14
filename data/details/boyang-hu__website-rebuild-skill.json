@@ -1,0 +1,12 @@
+{
+ "fullName": "boyang-hu/website-rebuild-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx website-rebuild-skill                    # → ~/.claude/skills/website-rebuild",
+ "source": "readme",
+ "readmeSummary": "给一个网址，让你的 AI agent 把那个网站逐行复刻出来，并且能证明复刻得对。",
+ "extractor": "heuristic",
+ "readmeHash": "a077078a398f",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:17.683Z"
+}

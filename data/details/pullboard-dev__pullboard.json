@@ -1,0 +1,12 @@
+{
+ "fullName": "pullboard-dev/pullboard",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g pullboard",
+ "source": "readme",
+ "readmeSummary": "Accumulated judgement for agents. Agents are good at tasks and bad at projects: every new session starts without what you decided, so you…",
+ "extractor": "heuristic",
+ "readmeHash": "af31bed80d7b",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:17.670Z"
+}

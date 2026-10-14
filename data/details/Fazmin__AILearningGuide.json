@@ -1,0 +1,16 @@
+{
+ "fullName": "Fazmin/AILearningGuide",
+ "whoItsFor": null,
+ "useCases": [
+  "51 interactive labs. Each lab is split into a few short steps with a \"Try this\" hint, so you always know what to do next.",
+  "Two ways to read. Plain mode uses everyday words. Standard mode uses the proper technical terms. Switch at any time from the top bar.",
+  "Real models where it matters. The attention lab runs a small trained transformer in the app. The training labs train a tiny language model l"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "A desktop app that teaches you how modern AI works by letting you play with it.",
+ "extractor": "heuristic",
+ "readmeHash": "879d0afba496",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:18.227Z"
+}

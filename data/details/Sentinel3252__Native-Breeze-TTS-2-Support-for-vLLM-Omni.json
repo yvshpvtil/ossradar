@@ -1,0 +1,12 @@
+{
+ "fullName": "Sentinel3252/Native-Breeze-TTS-2-Support-for-vLLM-Omni",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This project adds Breeze TTS 2 support to vLLM-Omni and is intended for learning.",
+ "extractor": "heuristic",
+ "readmeHash": "4e19aba30f2d",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:06:18.077Z"
+}
