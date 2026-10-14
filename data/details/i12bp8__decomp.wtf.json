@@ -1,0 +1,12 @@
+{
+ "fullName": "i12bp8/decomp.wtf",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://decomp.wtf/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "On GameCube and Wii the goal is what real decomps aim for: every file linked, so the game is built from its C and still comes out byte for…",
+ "extractor": "heuristic",
+ "readmeHash": "ccab1ec43829",
+ "version": 1,
+ "generatedAt": "2026-10-14T17:52:18.879Z"
+}
