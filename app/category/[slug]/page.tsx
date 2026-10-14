@@ -15,6 +15,17 @@ import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
 import { toLeaderRepo } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 
+/** Search-intent phrasing per category (what people actually type). */
+const CATEGORY_SEO_TITLE: Record<string, string> = {
+  "ai-agents": "Trending AI agent GitHub repos",
+  "llm-tooling": "Trending LLM tools & frameworks on GitHub",
+  mcp: "Best MCP servers & tools on GitHub, by star growth",
+  "coding-agents": "Trending AI coding agents on GitHub",
+  "rag-vector": "Trending RAG & vector database repos on GitHub",
+  "local-llms": "Trending local LLM tools on GitHub",
+  devops: "Trending open-source DevOps tools on GitHub",
+};
+
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: c.slug }));
 }
@@ -24,7 +35,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   const category = getCategory(slug);
   if (!category) return {};
   const count = getReposByCategory(category.slug).length;
-  const title = `Trending ${category.label} GitHub repos: ${count} rising projects`;
+  const title = `${CATEGORY_SEO_TITLE[category.slug] ?? `Trending ${category.label} GitHub repos`}: ${count} rising projects`;
   const description = clip(`Fastest-rising open-source ${category.label} projects on GitHub: ${category.description} Ranked by stars gained, updated hourly, on ${SITE.name}.`);
   return {
     title,

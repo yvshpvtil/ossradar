@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -14,6 +15,11 @@ import { UpdatedClock } from "@/components/UpdatedClock";
 import { TrendingGrid } from "@/components/TrendingGrid";
 import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
+
+export const metadata: Metadata = {
+  title: { absolute: `Trending AI GitHub repos today: fastest-rising open-source AI & dev tools · ${SITE.name}` },
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const data = getData();
