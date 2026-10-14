@@ -158,7 +158,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <p className="mt-4 text-lg">{repo.oneLiner}</p>
         {repo.description && repo.description !== repo.oneLiner && (
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <span className="font-medium">GitHub description:</span> {repo.description}
+            <span className="font-medium">GitHub description:</span> {repo.description.replace(/\s+/g, " ").trim()}
           </p>
         )}
 

@@ -32,6 +32,7 @@ jobs:
         run: npx tsx scripts/newsletter.ts
         env:
           KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Scheduled runs send; manual runs default to dry run.
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
       - uses: actions/upload-artifact@v4

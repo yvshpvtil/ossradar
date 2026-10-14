@@ -1,3 +1,4 @@
+import { repoBlurb } from "@/lib/blurb";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
@@ -53,7 +54,7 @@ export default function NewPage() {
                     <Link href={`/repo/${r.owner}/${r.name}`} className="break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
                       <span className="text-zinc-500 dark:text-zinc-400">{r.owner}/</span>{r.name}
                     </Link>
-                    <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{r.description || r.oneLiner}</p>
+                    <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{repoBlurb(r) ?? r.oneLiner}</p>
                     <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-zinc-500 dark:text-zinc-400">
                       <Link href={`/category/${r.category}`} className="relative z-10 hover:underline">{categoryLabel(r.category)}</Link>
                       {r.language && <span>{r.language}</span>}

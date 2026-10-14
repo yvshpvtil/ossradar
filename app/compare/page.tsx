@@ -1,3 +1,4 @@
+import { repoBlurb } from "@/lib/blurb";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getData } from "@/lib/data";
@@ -20,7 +21,7 @@ export default function ComparePage() {
     const rel = getLatestRelease(r.fullName);
     const hn = getHnMentions(r.fullName);
     return {
-      fullName: r.fullName, owner: r.owner, name: r.name, description: r.description, ownerAvatar: r.ownerAvatar,
+      fullName: r.fullName, owner: r.owner, name: r.name, description: repoBlurb(r) ?? "", ownerAvatar: r.ownerAvatar,
       stars: r.stars, forks: r.forks, delta24h: r.delta24h, delta7d: r.delta7d, est: r.velocityEstimated,
       language: r.language, category: categoryLabel(r.category), created: ago(r.createdAt, now), pushed: ago(r.pushedAt, now),
       release: rel ? `${rel.tag} (${ago(rel.date, now)})` : rel === null ? "None" : "—",
