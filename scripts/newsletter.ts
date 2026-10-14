@@ -5,7 +5,11 @@
  *   DRY_RUN=1   -> write out/newsletter.html and do not call Kit
  *   KIT_API_KEY -> Kit v4 API key (required for a real send)
  *
- * Idempotent: skips if a broadcast with today's subject already exists in Kit.
+ * Scheduled daily at 13:30 UTC (backup 15:15 UTC) by .github/workflows/newsletter.yml.
+ * Issue date = data.snapshotDate (the UTC day of the latest hourly collect), so the 13:30 run
+ * uses that same UTC day's data. Idempotent: skips if a broadcast for that date already exists
+ * in Kit, and skips scheduled sends when the data isn't from the current UTC day (stale data
+ * would otherwise re-send or mislabel a day).
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -270,6 +274,10 @@ async function main() {
   repos.forEach((r, i) => console.log(`${i + 1}. ${r.fullName} — ${blurbs.get(r.fullName)}`));
   if (process.env.DRY_RUN) { console.log("DRY_RUN: wrote out/newsletter.html, not sending."); return; }
   if (!process.env.KIT_API_KEY) throw new Error("KIT_API_KEY missing");
+  const todayUtc = new Date().toISOString().slice(0, 10);
+  if (date !== todayUtc && !process.env.ALLOW_STALE) {
+    console.log(`Data date ${date} is not today (${todayUtc} UTC); skipping so the next run sends fresh data.`); return;
+  }
 
   const existing = await kit("/broadcasts?per_page=50");
   // Dedupe: one broadcast per data date, matched on description "Daily digest <date>" (older issues also had it in the subject). Test sends must not put a date in subject/description.

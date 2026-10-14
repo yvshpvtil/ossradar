@@ -26,7 +26,7 @@ export function InlineSignup({ source, className = "" }: { source: string; class
         ×
       </button>
       <p className="pr-6 font-semibold text-zinc-900 dark:text-zinc-100">Catch the next breakout repo early</p>
-      <p className="mb-3 mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">The 10 fastest-rising open-source AI &amp; dev tools, one email each morning.</p>
+      <p className="mb-3 mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">The 10 fastest-rising open-source AI &amp; dev tools, one email every day.</p>
       <NewsletterForm source={source} anchor={false} />
     </aside>
   );

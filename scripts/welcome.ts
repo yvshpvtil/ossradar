@@ -12,7 +12,7 @@ const SITE = "https://ossradar.net";
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 const C = { ink: "#18181b", body: "#3f3f46", muted: "#6b7280", line: "#e5e7eb", brand: "#4338ca" };
 export const subject = "You're subscribed to OSS Radar";
-const preview = "Your first issue lands tomorrow around 8:15 AM IST. One quick step so it reaches your inbox.";
+const preview = "Your first daily issue is on its way. One quick step so it reaches your inbox.";
 
 const p = (html: string, style = "") => `<p class="body" style="margin:0 0 14px;font:16px/1.6 ${FONT};color:${C.body};${style}">${html}</p>`;
 const eyebrow = (t: string) => `<p class="eyebrow" style="margin:24px 0 8px;font:700 12px/16px ${FONT};letter-spacing:.1em;text-transform:uppercase;color:${C.brand};">${t}</p>`;
@@ -41,7 +41,7 @@ export const html = `<style>
 <p style="margin:0;font:800 22px/28px ${FONT};"><span class="brandtxt" style="color:${C.brand};">◉ OSS Radar</span></p>
 ${rule}
 <h1 class="ink" style="margin:8px 0 12px;font:800 26px/1.25 ${FONT};color:${C.ink};">You're in. Welcome!</h1>
-${p(`Thanks for subscribing. Starting tomorrow, you'll get one short email each morning at about ${strong("8:15 AM IST")}.`, `font-size:17px;color:${C.ink};`)}
+${p(`Thanks for subscribing. From now on, you'll get ${strong("one short email every day")}.`, `font-size:17px;color:${C.ink};`)}
 ${eyebrow("What you'll get")}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 ${li(`The ${strong("top 10 fastest-rising")} open-source AI and dev-tool repos of the day`)}

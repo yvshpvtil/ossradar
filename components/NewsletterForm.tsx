@@ -73,7 +73,7 @@ export function NewsletterForm({ source = "hero", anchor = true }: { source?: st
         </form>
       )}
       {state !== "done" && (
-        <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Top 10 rising repos, one email each morning (~8:15 AM IST). Free, unsubscribe anytime.</p>
+        <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Top 10 rising repos, one email every day. Free, unsubscribe anytime.</p>
       )}
       {state === "error" && <p role="alert" className="mt-2 text-sm text-red-600 dark:text-red-400">{msg}</p>}
     </div>
@@ -95,7 +95,7 @@ export function SubscribeButton() {
     <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900/50">
       <p className="font-semibold">Get the daily radar</p>
       <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">
-        The 10 fastest-rising AI &amp; dev-tool repos, every morning at ~8:15 AM IST (02:45 UTC). One email a day, free, unsubscribe anytime.
+        The 10 fastest-rising AI &amp; dev-tool repos, in one short daily email, free, unsubscribe anytime.
       </p>
       <Link
         href="/#subscribe"
