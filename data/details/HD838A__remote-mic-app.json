@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "官网 · 配置教程 · 微博",
  "extractor": "heuristic",
  "readmeHash": "ae8d6a7b1d9f",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.299Z"
+ "generatedAt": "2026-10-14T04:53:18.830Z"
 }

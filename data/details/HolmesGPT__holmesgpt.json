@@ -1,0 +1,16 @@
+{
+ "fullName": "HolmesGPT/holmesgpt",
+ "whoItsFor": null,
+ "useCases": [
+  "Petabyte-scale data: Server-side filtering, JSON tree traversal, and tool output transformers keep large payloads out of context windows",
+  "Memory-safe execution: Per-tool memory limits, streaming large results to disk, and automatic output budgeting prevent OOM kills when queryi",
+  "Deep integrations: Prometheus, Grafana, Datadog, Kubernetes, and many more—plus any REST API"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Open-source AI agent for investigating production incidents and finding root causes.",
+ "extractor": "heuristic",
+ "readmeHash": "b035015eacf1",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:21.882Z"
+}

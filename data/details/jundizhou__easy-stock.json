@@ -1,0 +1,12 @@
+{
+ "fullName": "jundizhou/easy-stock",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AI 时代的炒股软件，不应该只是在传统行情终端旁边多放一个聊天框。",
+ "extractor": "heuristic",
+ "readmeHash": "bc5a92190aed",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:25.808Z"
+}

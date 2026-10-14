@@ -1,0 +1,12 @@
+{
+ "fullName": "langbot-app/LangBot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "English Español Français",
+ "extractor": "heuristic",
+ "readmeHash": "5d97a7e269a6",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.967Z"
+}

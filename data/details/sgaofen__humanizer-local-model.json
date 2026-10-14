@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "pipx install git+https://github.com/sgaofen/humanizer-local-model     # or: pip install git+https://github.com/sgaofen/humanizer-local-model",
  "source": "readme",
+ "readmeSummary": "humanizer is a 12B model that rewrites AI-written drafts (emails, essays, reports, forum posts; English and Chinese) so they read like a…",
  "extractor": "heuristic",
  "readmeHash": "3cf3ff9dde37",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.519Z"
+ "generatedAt": "2026-10-14T04:53:20.623Z"
 }

@@ -1,0 +1,12 @@
+{
+ "fullName": "pydantic/pydantic-ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Pydantic AI is the Python AI SDK: a typed, extensible agent loop with every model a string swap away.",
+ "extractor": "heuristic",
+ "readmeHash": "354fa76dcc87",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.635Z"
+}

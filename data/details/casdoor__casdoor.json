@@ -1,0 +1,16 @@
+{
+ "fullName": "casdoor/casdoor",
+ "whoItsFor": null,
+ "useCases": [
+  "OAuth 2.0 / OIDC — full authorization server and OpenID Connect provider",
+  "SAML 2.0 — enterprise SSO, as both IdP and SP",
+  "CAS — Central Authentication Service for legacy applications"
+ ],
+ "installCommand": "docker run -p 8000:8000 casbin/casdoor-all-in-one",
+ "source": "readme",
+ "readmeSummary": "No database and no config file needed. This runs Casdoor on SQLite with sample data:",
+ "extractor": "heuristic",
+ "readmeHash": "488d060f69a0",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:25.233Z"
+}

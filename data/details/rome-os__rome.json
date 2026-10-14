@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "curl -fsSL https://raw.githubusercontent.com/rome-os/rome/main/scripts/quickstart-docker.sh | bash",
  "source": "readme",
+ "readmeSummary": "Most progress in AI comes from scaling models. Rome scales the other axis, the environment: the tools, workflows, memory, and interfaces an…",
  "extractor": "heuristic",
  "readmeHash": "44d54662551d",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.190Z"
+ "generatedAt": "2026-10-14T04:53:42.012Z"
 }

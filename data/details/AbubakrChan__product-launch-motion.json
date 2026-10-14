@@ -1,0 +1,12 @@
+{
+ "fullName": "AbubakrChan/product-launch-motion",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add AbubakrChan/product-launch-motion",
+ "source": "readme",
+ "readmeSummary": "No Claude Code? Get the film made for you: a polished launch video in 30 minutes, for $10 → launchreel.89-167-9-64.sslip.io",
+ "extractor": "heuristic",
+ "readmeHash": "60efb1a3d585",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:42.535Z"
+}

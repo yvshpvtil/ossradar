@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "npx skills@latest add maxrave-dev/kotlin-footguns",
  "source": "readme",
+ "readmeSummary": "By maxrave-dev — creator and maintainer of SimpMusic, the 10.8k-star cross-platform music app every lesson in this repository was mined…",
  "extractor": "heuristic",
  "readmeHash": "d1b31bf5a8d9",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.044Z"
+ "generatedAt": "2026-10-14T04:53:22.522Z"
 }

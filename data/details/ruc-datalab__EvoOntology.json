@@ -1,0 +1,12 @@
+{
+ "fullName": "ruc-datalab/EvoOntology",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "EvoOntology is the first self-evolving ontology layer for data agents, aiming to bridge the agent-data gap over heterogeneous tables, files…",
+ "extractor": "heuristic",
+ "readmeHash": "c45dccc4d857",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:41.958Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "assafelovic/gpt-researcher",
+ "whoItsFor": null,
+ "useCases": [
+  "Generate detailed research reports using web and local documents.",
+  "Smart image scraping and filtering for reports.",
+  "AI-generated inline images using Google Gemini (Nano Banana) for visual illustrations."
+ ],
+ "installCommand": "npx skills add assafelovic/gpt-researcher",
+ "source": "readme",
+ "readmeSummary": "English | 中文 | 日本語 | 한국어 | Русский",
+ "extractor": "heuristic",
+ "readmeHash": "c31ac8559e4e",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:37.175Z"
+}

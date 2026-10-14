@@ -1,0 +1,12 @@
+{
+ "fullName": "max-sixty/worktrunk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install worktrunk && wt config shell install",
+ "source": "readme",
+ "readmeSummary": "Worktrunk is a CLI for git worktree management, designed for running AI agents in parallel.",
+ "extractor": "heuristic",
+ "readmeHash": "4aef52b10780",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:38.947Z"
+}

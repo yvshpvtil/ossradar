@@ -1,0 +1,16 @@
+{
+ "fullName": "iAmCorey/Wake",
+ "whoItsFor": null,
+ "useCases": [
+  "Pick up where any agent left off — every new Claude Code or Codex session starts knowing where your agents left off in the project, and can ",
+  "One place for every session — grouped by agent and project, sub-agents under their parent, updated live as your agents write",
+  "Full-text search (⌘K / Ctrl+K) — every title and transcript, CJK and code (`useEffect(`) included; jumps straight to the match"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A native desktop app that gathers every coding-agent session on your machine into one place — find any conversation in seconds, read it in…",
+ "extractor": "heuristic",
+ "readmeHash": "1aaf93299643",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:41.408Z"
+}

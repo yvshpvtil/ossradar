@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "npx @cookiyai/sell-agent-sessions",
  "source": "readme",
+ "readmeSummary": "That opens a local web app on your machine that lists your Claude Code and Codex sessions, lets you pick the ones you want to license…",
  "extractor": "heuristic",
  "readmeHash": "4a65037e3933",
  "version": 1,
- "generatedAt": "2026-10-13T22:49:41.176Z"
+ "generatedAt": "2026-10-14T04:53:25.936Z"
 }

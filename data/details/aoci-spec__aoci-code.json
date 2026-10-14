@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "A persistent, Git-versioned map of your entire codebase — written by your coding agent, governed by a local MCP server.",
  "extractor": "heuristic",
  "readmeHash": "8bea506f63ea",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.969Z"
+ "generatedAt": "2026-10-14T04:53:19.691Z"
 }

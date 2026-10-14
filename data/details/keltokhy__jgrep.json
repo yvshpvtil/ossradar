@@ -1,0 +1,12 @@
+{
+ "fullName": "keltokhy/jgrep",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install jev-grep        # the command it installs is jgrep",
+ "source": "readme",
+ "readmeSummary": "grep, but the pattern is a description.",
+ "extractor": "heuristic",
+ "readmeHash": "bc332183b1dd",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.180Z"
+}

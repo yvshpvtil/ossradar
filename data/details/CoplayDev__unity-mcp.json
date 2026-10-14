@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "English 简体中文 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Discord Wiki",
  "extractor": "heuristic",
  "readmeHash": "f4a60671d52b",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.787Z"
+ "generatedAt": "2026-10-14T04:53:25.183Z"
 }

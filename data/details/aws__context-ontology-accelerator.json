@@ -1,0 +1,12 @@
+{
+ "fullName": "aws/context-ontology-accelerator",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source semantic context layer for AWS that combines knowledge graphs, formal ontologies, and rule-based systems with modern AI…",
+ "extractor": "heuristic",
+ "readmeHash": "7d2640040d22",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:26.015Z"
+}

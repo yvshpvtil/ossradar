@@ -1,0 +1,12 @@
+{
+ "fullName": "Gaurav-Gosain/tuios",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install tuios",
+ "source": "readme",
+ "readmeSummary": "TUIOS is a modern terminal multiplexer and window manager built with Go.",
+ "extractor": "heuristic",
+ "readmeHash": "82ef913c72ea",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.152Z"
+}

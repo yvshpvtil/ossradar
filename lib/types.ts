@@ -83,6 +83,8 @@ export interface RepoDetails {
   /** Legacy: written by DETAILS_VERSION 1 only; no longer extracted or displayed. */
   requirements?: RepoRequirements;
   installCommand: string | null;
+  /** First prose paragraph of the README, cleaned (used when the repo has no GitHub description). */
+  readmeSummary?: string | null;
   source: "readme" | "inferred";
   extractor: string;
   readmeHash: string;

@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "OSS Scanner is a service by Anthropic to scan critical open-source repositories for security vulnerabilities.",
  "extractor": "heuristic",
  "readmeHash": "d77950ce37c5",
  "version": 1,
- "generatedAt": "2026-10-14T01:03:46.080Z"
+ "generatedAt": "2026-10-14T04:53:18.034Z"
 }

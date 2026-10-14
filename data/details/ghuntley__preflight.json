@@ -1,0 +1,12 @@
+{
+ "fullName": "ghuntley/preflight",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A local proxy that scans LLM requests and attachments for secrets before they reach the model.",
+ "extractor": "heuristic",
+ "readmeHash": "c216ff709142",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:37.488Z"
+}

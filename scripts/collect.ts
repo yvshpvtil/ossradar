@@ -364,6 +364,7 @@ async function main() {
         category,
         stars: item.stargazers_count,
         delta7d: v.delta7d,
+        readmeSummary: description ? null : readJson<{ readmeSummary?: string | null }>(path.join("data", "details", `${item.full_name.replace("/", "__")}.json`), {}).readmeSummary ?? null,
       });
       if (summarizerId !== "template") {
         llmCalls++;

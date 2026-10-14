@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "pip install opik",
  "source": "readme",
+ "readmeSummary": "Opik covers the full LLM application lifecycle, from the first trace in development to production monitoring, for teams building LLM apps…",
  "extractor": "heuristic",
  "readmeHash": "a8bf7d11ec2e",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.786Z"
+ "generatedAt": "2026-10-14T04:53:21.502Z"
 }

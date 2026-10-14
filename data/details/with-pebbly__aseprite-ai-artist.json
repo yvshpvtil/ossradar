@@ -1,0 +1,12 @@
+{
+ "fullName": "with-pebbly/aseprite-ai-artist",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @pebbly/aseprite-ai-artist install-extension",
+ "source": "readme",
+ "readmeSummary": "Not a generated PNG. Not a file changed behind your back. The document on your screen, one pixel at a time — and every step is one Ctrl+Z.",
+ "extractor": "heuristic",
+ "readmeHash": "23f2bfe3d7bd",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:23.727Z"
+}

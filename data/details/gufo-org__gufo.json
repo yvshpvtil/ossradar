@@ -1,0 +1,12 @@
+{
+ "fullName": "gufo-org/gufo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Gufo is a vertical local inference engine specifically built and optimized for the AMD Strix Halo hardware: Ryzen AI MAX+ 395 systems with…",
+ "extractor": "heuristic",
+ "readmeHash": "45c6311ae03c",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:26.429Z"
+}

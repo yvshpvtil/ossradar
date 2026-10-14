@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "curl -fsSL https://pgbot.dev/install | sh",
  "source": "readme",
+ "readmeSummary": "Or set the connection once in the environment and drop the argument — handy for CI and shells, and it keeps the password out of your history…",
  "extractor": "heuristic",
  "readmeHash": "3d9e831cfa57",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.972Z"
+ "generatedAt": "2026-10-14T04:53:19.576Z"
 }

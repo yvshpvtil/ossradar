@@ -1,0 +1,12 @@
+{
+ "fullName": "DevnorsAI/devnors-data-python",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install devnors-data",
+ "source": "readme",
+ "readmeSummary": "简体中文 | English",
+ "extractor": "heuristic",
+ "readmeHash": "07ff7ccdb1a1",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:42.224Z"
+}

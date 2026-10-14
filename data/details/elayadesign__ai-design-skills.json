@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "A growing collection of design skills for AI coding tools — Claude Code, Cursor, Codex, Windsurf, and anything else that reads a markdown…",
  "extractor": "heuristic",
  "readmeHash": "346f66f0ea76",
  "version": 1,
- "generatedAt": "2026-10-13T21:49:51.291Z"
+ "generatedAt": "2026-10-14T04:53:18.020Z"
 }

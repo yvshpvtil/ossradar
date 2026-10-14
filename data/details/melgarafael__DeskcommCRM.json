@@ -1,0 +1,12 @@
+{
+ "fullName": "melgarafael/DeskcommCRM",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/melgarafael/DeskcommCRM/main/scripts/instalar-guias.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Agentes de IA que atendem, qualificam e vendem no WhatsApp — dentro de um CRM open source rodando no seu servidor.",
+ "extractor": "heuristic",
+ "readmeHash": "7c4e74c1f9f7",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.843Z"
+}

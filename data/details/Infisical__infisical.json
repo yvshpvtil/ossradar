@@ -1,0 +1,12 @@
+{
+ "fullName": "Infisical/infisical",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Infisical is the open source security infrastructure platform that teams use for secrets, certificates, and privileged access management.",
+ "extractor": "heuristic",
+ "readmeHash": "f1e54effd3a1",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:20.968Z"
+}

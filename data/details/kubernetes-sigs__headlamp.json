@@ -1,0 +1,16 @@
+{
+ "fullName": "kubernetes-sigs/headlamp",
+ "whoItsFor": null,
+ "useCases": [
+  "Vendor-independent / generic Kubernetes UI",
+  "Works in-cluster, or locally as a desktop app",
+  "Multi-cluster"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Headlamp is an easy-to-use and extensible Kubernetes web UI.",
+ "extractor": "heuristic",
+ "readmeHash": "06d46589d43b",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:39.537Z"
+}

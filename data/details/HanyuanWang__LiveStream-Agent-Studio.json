@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "把主播发现、直播拆解、直播复盘和短视频编导放进一个统一入口。",
  "extractor": "heuristic",
  "readmeHash": "9d42463027b9",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.467Z"
+ "generatedAt": "2026-10-14T04:53:19.445Z"
 }

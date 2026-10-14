@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "Recently added: usage in the menu bar with a dashboard for each account, starting usage windows after a reset, and animated bot marks.",
  "extractor": "heuristic",
  "readmeHash": "de45c7c01fc5",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.382Z"
+ "generatedAt": "2026-10-14T04:53:26.661Z"
 }

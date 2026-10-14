@@ -7,6 +7,7 @@
  */
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readmeBlurb, repoBlurb } from "../lib/blurb";
 import path from "node:path";
 import type { RepoData, RepoDetails } from "../lib/types";
 import { DETAILS_VERSION, detailsExtractorId, extractDetails } from "./summarize";
@@ -49,7 +50,8 @@ async function main() {
       const f = detailsFile(r.fullName);
       if (!existsSync(f)) return true;
       const d = JSON.parse(readFileSync(f, "utf8")) as RepoDetails;
-      return d.version !== DETAILS_VERSION || (upgrade && d.extractor === "heuristic");
+      // Also (re)process repos with no usable description whose details predate readmeSummary.
+      return d.version !== DETAILS_VERSION || (upgrade && d.extractor === "heuristic") || (d.readmeSummary === undefined && !repoBlurb(r));
     })
     .slice(0, limit);
   console.log(`enrich: ${todo.length} repos to process with ${detailsExtractorId}`);
@@ -64,6 +66,7 @@ async function main() {
         const out: RepoDetails = {
           fullName: r.fullName,
           ...details,
+          readmeSummary: readmeBlurb(readme),
           extractor,
           readmeHash: createHash("sha1").update(readme).digest("hex").slice(0, 12),
           version: DETAILS_VERSION,

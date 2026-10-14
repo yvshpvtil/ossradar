@@ -1,0 +1,12 @@
+{
+ "fullName": "files-community/Files",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Files is a modern file manager that helps users organize their files and folders.",
+ "extractor": "heuristic",
+ "readmeHash": "1193018e9914",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:36.918Z"
+}

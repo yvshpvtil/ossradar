@@ -1,0 +1,12 @@
+{
+ "fullName": "lithos-ai/lithos-metal",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install lithos-ai/tap/lithos-metal",
+ "source": "readme",
+ "readmeSummary": "lithos-metal is a fully open-source inference engine that generates Metal megakernels for Apple silicon.",
+ "extractor": "heuristic",
+ "readmeHash": "b436bc30acc8",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:23.982Z"
+}

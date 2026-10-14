@@ -1,0 +1,12 @@
+{
+ "fullName": "1Panel-dev/MaxKB",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb",
+ "source": "readme",
+ "readmeSummary": "MaxKB = Max Knowledge Brain, it is an open-source platform for building enterprise-grade agents.",
+ "extractor": "heuristic",
+ "readmeHash": "bebb67ed7097",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:37.767Z"
+}

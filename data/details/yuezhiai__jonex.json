@@ -1,0 +1,12 @@
+{
+ "fullName": "yuezhiai/jonex",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Jonex unifies an all-in-one multimodal parsing engine with an AI-ready knowledge engine.",
+ "extractor": "heuristic",
+ "readmeHash": "d0f5aaa616d1",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:41.503Z"
+}

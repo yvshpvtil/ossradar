@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "curl -fsSL https://vorynel.com/lyapunov/install.sh | sh",
  "source": "readme",
+ "readmeSummary": "English | 简体中文",
  "extractor": "heuristic",
  "readmeHash": "fd179acbabdc",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.536Z"
+ "generatedAt": "2026-10-14T04:53:20.363Z"
 }

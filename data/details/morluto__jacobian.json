@@ -1,0 +1,12 @@
+{
+ "fullName": "morluto/jacobian",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx jacobian@latest setup",
+ "source": "readme",
+ "readmeSummary": "English · 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "80e2d577a2cd",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.117Z"
+}

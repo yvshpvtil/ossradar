@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "pip install -r requirements.txt",
  "source": "readme",
+ "readmeSummary": "Track every hidden flow. / Traquez chaque flux masqué.",
  "extractor": "heuristic",
  "readmeHash": "b3b58cd97fe5",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.315Z"
+ "generatedAt": "2026-10-14T04:53:20.192Z"
 }

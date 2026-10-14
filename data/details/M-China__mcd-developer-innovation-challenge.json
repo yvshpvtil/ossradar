@@ -1,0 +1,12 @@
+{
+ "fullName": "M-China/mcd-developer-innovation-challenge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "本次活动是麦当劳程序员创意开发大赛！",
+ "extractor": "heuristic",
+ "readmeHash": "8d84c84355cf",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.594Z"
+}

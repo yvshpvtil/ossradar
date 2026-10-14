@@ -1,0 +1,12 @@
+{
+ "fullName": "AetherLabsAI/Video2World",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e .                    # scoring",
+ "source": "readme",
+ "readmeSummary": "Jinzhou Tang1,2, Zijun Zhang1, Jing Yang1, Yuchen Yan1, Kun Zhou1†, Lingjun Mao1, Ruobing Han1, Jinglin Cao1, Wenpeng Xu1, Lukun He1…",
+ "extractor": "heuristic",
+ "readmeHash": "b0429a62557c",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.047Z"
+}

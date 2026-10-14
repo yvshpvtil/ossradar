@@ -46,7 +46,7 @@ export function cleanBlurb(text: string | null | undefined, max = BLURB_MAX): st
 
 /** Best one-liner from repo fields: GitHub description, else our summary (unless it's the empty-description placeholder). */
 export function repoBlurb(r: { description?: string | null; oneLiner?: string | null }, max = BLURB_MAX): string | null {
-  return cleanBlurb(r.description, max) ?? (isPlaceholder(r.oneLiner) ? null : cleanBlurb(stripWhy(r.oneLiner ?? ""), max));
+  return cleanBlurb(r.description, max) ?? (isPlaceholder(r.oneLiner) || !r.oneLiner ? null : cleanBlurb(stripWhy(r.oneLiner ?? ""), max));
 }
 
 /** First real prose paragraph of a README (skips headings, badges, images, HTML, code, tables, link lists). */

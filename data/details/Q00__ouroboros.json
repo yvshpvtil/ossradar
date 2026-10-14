@@ -1,0 +1,12 @@
+{
+ "fullName": "Q00/ouroboros",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install 'ouroboros-ai[mcp]'       # or: uv tool install 'ouroboros-ai[mcp]'",
+ "source": "readme",
+ "readmeSummary": "Turn a vague idea into a verified, working codebase -- across Claude Code, Codex CLI, OpenCode, Hermes, Gemini, Kiro, Copilot, Pi, OMP…",
+ "extractor": "heuristic",
+ "readmeHash": "7c1fa87b109c",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.164Z"
+}

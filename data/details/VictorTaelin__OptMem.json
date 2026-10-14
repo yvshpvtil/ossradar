@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "curl -fsSL https://raw.githubusercontent.com/VictorTaelin/OptMem/main/install.sh | sh",
  "source": "readme",
+ "readmeSummary": "Permanent memory for AI agents. A 426-token prompt, a script, plug and play.",
  "extractor": "heuristic",
  "readmeHash": "2d6a54459195",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.286Z"
+ "generatedAt": "2026-10-14T04:53:19.937Z"
 }

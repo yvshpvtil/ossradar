@@ -1,0 +1,12 @@
+{
+ "fullName": "sno-ai/sno-station-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "One AI agent is a brilliant new hire with no colleagues. It reviews its own work, so it misses what it cannot see.",
+ "extractor": "heuristic",
+ "readmeHash": "7b7617361e4c",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.018Z"
+}

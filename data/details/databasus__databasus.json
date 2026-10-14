@@ -1,0 +1,12 @@
+{
+ "fullName": "databasus/databasus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d \\",
+ "source": "readme",
+ "readmeSummary": "Databasus performs a real restore to confirm backups are usable, not just intact on disk or checksum check.",
+ "extractor": "heuristic",
+ "readmeHash": "884fa77b1a95",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:21.600Z"
+}

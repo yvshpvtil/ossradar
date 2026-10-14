@@ -1,0 +1,16 @@
+{
+ "fullName": "modelscope/evalscope",
+ "whoItsFor": null,
+ "useCases": [
+  "Comprehensive Evaluation Benchmarks: Built-in multiple industry-recognized evaluation benchmarks including MMLU, C-Eval, GSM8K, and more.",
+  "Multi-modal and Multi-domain Support: Supports evaluation of various model types including Large Language Models (LLM), Vision Language Mode",
+  "System One Evaluation: Evaluate text Choice decision models via `--eval-type systemone_api`, with task instructions, few-shot examples and s"
+ ],
+ "installCommand": "pip install evalscope",
+ "source": "readme",
+ "readmeSummary": "EvalScope is a one-stop LLM evaluation framework built by the ModelScope Community.",
+ "extractor": "heuristic",
+ "readmeHash": "7e467742a970",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:21.997Z"
+}

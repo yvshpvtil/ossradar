@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "npm install",
  "source": "readme",
+ "readmeSummary": "The all-in-one local AI studio for your desktop. Chat, images, video and a coding agent in one app. Install it, pick a model, go.",
  "extractor": "heuristic",
  "readmeHash": "6ed5d2fd0e9a",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.325Z"
+ "generatedAt": "2026-10-14T04:53:22.110Z"
 }

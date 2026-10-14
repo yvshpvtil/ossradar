@@ -1,0 +1,16 @@
+{
+ "fullName": "ahmedkhaleel2004/gitdiagram",
+ "whoItsFor": null,
+ "useCases": [
+  "Watch a repository explained in a narrated video, or press Video on any diagram page.",
+  "Explore the architecture with an AI-generated diagram and streamed explanation.",
+  "Jump to the code by clicking any component's linked file or directory."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Visualize any codebase: turn any public or private GitHub repository into an interactive architecture diagram, or watch it explained in a…",
+ "extractor": "heuristic",
+ "readmeHash": "ed38dbfe3906",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.788Z"
+}

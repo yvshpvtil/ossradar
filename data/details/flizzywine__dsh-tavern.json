@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "基于 DSH（DeepSeek Harness）的 Agent 酒馆。兼容 SillyTavern 生态，人物卡导入就能玩。",
  "extractor": "heuristic",
  "readmeHash": "63e825d789c8",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.173Z"
+ "generatedAt": "2026-10-14T04:53:20.033Z"
 }

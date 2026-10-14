@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "Read in other languages: English · 中文 · Deutsch · Español · Français · Русский · 한국어 · 日本語 · 繁體中文",
  "extractor": "heuristic",
  "readmeHash": "438ad5a4ccd5",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.254Z"
+ "generatedAt": "2026-10-14T04:53:23.100Z"
 }

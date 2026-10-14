@@ -1,0 +1,16 @@
+{
+ "fullName": "spaceamoeba-t/tapq",
+ "whoItsFor": null,
+ "useCases": [
+  "Speaks every prompt. When Claude Code, Codex, Cursor, or OpenCode stops for an",
+  "Reports a finished run and takes the next instruction. \"Claude Code finished the",
+  "Answers questions about the work. \"Who's waiting?\" \"What did Codex change?\" TapQ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AI scales. Your attention doesn't. Agents work in parallel, and keeping them moving still pulls you back to a screen — to check, to answer…",
+ "extractor": "heuristic",
+ "readmeHash": "78b68eb133f0",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:42.105Z"
+}

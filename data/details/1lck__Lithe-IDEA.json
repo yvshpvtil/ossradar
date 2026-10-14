@@ -1,0 +1,12 @@
+{
+ "fullName": "1lck/Lithe-IDEA",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask 1lck/lithe/lithe",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/17e2325b-afed-4bbb-9926-a962f777269b",
+ "extractor": "heuristic",
+ "readmeHash": "89c7cfe0e3a0",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:25.608Z"
+}

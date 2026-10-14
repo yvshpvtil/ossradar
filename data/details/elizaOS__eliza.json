@@ -1,0 +1,12 @@
+{
+ "fullName": "elizaOS/eliza",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "elizaOS is an open-source TypeScript framework and product stack for autonomous AI agents.",
+ "extractor": "heuristic",
+ "readmeHash": "70b9e04008c4",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:38.091Z"
+}

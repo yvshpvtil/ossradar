@@ -1,0 +1,12 @@
+{
+ "fullName": "baidu-baige/LoongSage",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull loongsage/loongsage:latest",
+ "source": "readme",
+ "readmeSummary": "A production-grade, high-efficiency Agentic RL framework for frontier LLMs with validated recipes.",
+ "extractor": "heuristic",
+ "readmeHash": "71b36c43af9d",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.313Z"
+}

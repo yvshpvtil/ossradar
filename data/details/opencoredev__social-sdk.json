@@ -1,0 +1,12 @@
+{
+ "fullName": "opencoredev/social-sdk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @opencoredev/social-sdk",
+ "source": "readme",
+ "readmeSummary": "Social SDK is an open-source TypeScript toolkit for solo founders and small teams adding social features to their apps.",
+ "extractor": "heuristic",
+ "readmeHash": "722d18fb3c02",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:26.513Z"
+}

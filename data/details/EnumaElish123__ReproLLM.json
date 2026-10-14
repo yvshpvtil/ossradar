@@ -1,0 +1,12 @@
+{
+ "fullName": "EnumaElish123/ReproLLM",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A reproducibility linter, experiment recorder, lockfile system, and drift detector for LLM research.",
+ "extractor": "heuristic",
+ "readmeHash": "a093a78fb6bb",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.510Z"
+}

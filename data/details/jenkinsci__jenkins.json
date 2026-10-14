@@ -1,0 +1,12 @@
+{
+ "fullName": "jenkinsci/jenkins",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "In a nutshell, Jenkins is the leading open-source automation server. Built with Java, it provides over 2,000 plugins to support automating…",
+ "extractor": "heuristic",
+ "readmeHash": "6b002b8e5e7b",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.588Z"
+}

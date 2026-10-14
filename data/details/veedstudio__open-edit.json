@@ -1,0 +1,12 @@
+{
+ "fullName": "veedstudio/open-edit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add veedstudio/open-edit --skill open-edit",
+ "source": "readme",
+ "readmeSummary": "OpenEdit is an open-source, agent-driven editing pipeline. There is no GUI and no timeline: you tell your coding agent what you want, and it…",
+ "extractor": "heuristic",
+ "readmeHash": "aa274677f0b2",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.980Z"
+}

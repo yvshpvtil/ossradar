@@ -1,0 +1,12 @@
+{
+ "fullName": "spicyapi-ai/comfyui-spicyapi",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Seedance, Kling, Wan, MiniMax H3, Suno, GPT Image, Nano Banana and more AI models as ComfyUI nodes. No GPU, no model downloads.",
+ "extractor": "heuristic",
+ "readmeHash": "c98c94bb2255",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:24.354Z"
+}

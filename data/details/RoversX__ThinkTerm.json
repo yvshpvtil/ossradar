@@ -1,0 +1,12 @@
+{
+ "fullName": "RoversX/ThinkTerm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask roversx/tap/thinkterm",
+ "source": "readme",
+ "readmeSummary": "Download here - Get the latest release",
+ "extractor": "heuristic",
+ "readmeHash": "629748a42ced",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:27.734Z"
+}

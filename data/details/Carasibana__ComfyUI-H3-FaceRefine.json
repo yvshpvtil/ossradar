@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "A ComfyUI custom node set to refine and improve the quality of small faces in MiniMax H3 video.",
  "extractor": "heuristic",
  "readmeHash": "7b1f3fd3f0cb",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.119Z"
+ "generatedAt": "2026-10-14T04:53:23.509Z"
 }

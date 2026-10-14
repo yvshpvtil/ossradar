@@ -1,0 +1,16 @@
+{
+ "fullName": "browseros-ai/BrowserOS",
+ "whoItsFor": null,
+ "useCases": [
+  "Your logins. Agents automate your real work using your logged-in accounts, not a blank sandbox. How it works",
+  "Parallel agents. Fire off several tasks at once. Each agent works in its own tab while you keep browsing.",
+  "Fewer tokens. For the same task, BrowserOS neo uses fewer tokens than the alternatives, such as Claude's Chrome extension or the Codex brows"
+ ],
+ "installCommand": "brew install --cask browseros-neo",
+ "source": "readme",
+ "readmeSummary": "Free · Open source · Everything runs on your machine",
+ "extractor": "heuristic",
+ "readmeHash": "3170d3c173e3",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:38.904Z"
+}

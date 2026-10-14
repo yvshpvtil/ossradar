@@ -1,0 +1,12 @@
+{
+ "fullName": "alchaincyf/huashu-chrome",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx huashu-chrome install",
+ "source": "readme",
+ "readmeSummary": "让任何 AI agent 操控你自己的 Chrome——带着你全部的登录态。",
+ "extractor": "heuristic",
+ "readmeHash": "1e779da6db62",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:26.835Z"
+}

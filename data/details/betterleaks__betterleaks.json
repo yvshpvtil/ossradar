@@ -1,0 +1,12 @@
+{
+ "fullName": "betterleaks/betterleaks",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install betterleaks",
+ "source": "readme",
+ "readmeSummary": "Betterleaks is a configurable, fast, and thorough secrets scanner. It is maintained by the folks who made Gitleaks, including the original…",
+ "extractor": "heuristic",
+ "readmeHash": "ddaad09371ff",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.788Z"
+}

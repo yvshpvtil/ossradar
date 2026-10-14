@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "npm install -g promptfoo",
  "source": "readme",
+ "readmeSummary": "Also available via brew install promptfoo and pip install promptfoo. Or use npx promptfoo@latest to run any command without installing.",
  "extractor": "heuristic",
  "readmeHash": "0916e5a9f9d0",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.717Z"
+ "generatedAt": "2026-10-14T04:53:21.350Z"
 }

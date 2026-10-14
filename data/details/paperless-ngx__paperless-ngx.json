@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep…",
  "extractor": "heuristic",
  "readmeHash": "63e91fb10706",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.716Z"
+ "generatedAt": "2026-10-14T04:53:20.780Z"
 }

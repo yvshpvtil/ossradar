@@ -1,0 +1,12 @@
+{
+ "fullName": "ItsssssJack/SlopMonster",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SlopMonster checks English writing for common AI writing patterns and provides instructions for editing the draft.",
+ "extractor": "heuristic",
+ "readmeHash": "651e6c604a18",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:41.577Z"
+}

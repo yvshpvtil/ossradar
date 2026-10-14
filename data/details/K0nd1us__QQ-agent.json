@@ -1,0 +1,12 @@
+{
+ "fullName": "K0nd1us/QQ-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "扩展分两型，按\"什么时候该运行\"来选，放进对应目录即生效：",
+ "extractor": "heuristic",
+ "readmeHash": "1c40fb084dd0",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:23.418Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "maziyarpanahi/openmed",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install openmed @huggingface/transformers",
+ "source": "readme",
+ "readmeSummary": "This iPhone example uses OpenMed's local runtime after the required model artifacts are available:",
+ "extractor": "heuristic",
+ "readmeHash": "5bb1261d20fe",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:40.044Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "20000419/fauxnix",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx fauxnix-cli@latest \"ls -la src | head -3\"",
+ "source": "readme",
+ "readmeSummary": "Run Linux-style commands on Windows — natively, deterministically, no VM, no WSL.",
+ "extractor": "heuristic",
+ "readmeHash": "37382004ab0b",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:26.206Z"
+}

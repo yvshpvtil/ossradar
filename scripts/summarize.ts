@@ -7,6 +7,7 @@
  * provider, add a branch in summarize() that returns a string or null.
  */
 import { categoryLabel } from "../lib/categories";
+import { cleanBlurb } from "../lib/blurb";
 import type { CategorySlug } from "../lib/types";
 
 export interface SummaryInput {
@@ -17,6 +18,8 @@ export interface SummaryInput {
   category: CategorySlug;
   stars: number;
   delta7d: number;
+  /** README first paragraph, used when the description is empty. */
+  readmeSummary?: string | null;
 }
 
 const MODEL = process.env.SUMMARY_MODEL ?? "claude-opus-5-5";
@@ -47,9 +50,9 @@ const WHY: Record<CategorySlug, string> = {
 };
 
 export function templateSummary(input: SummaryInput): string {
-  const desc = clean(input.description);
+  const desc = cleanBlurb(clean(input.description)) ?? cleanBlurb(input.readmeSummary);
   let what = desc
-    ? truncate(desc, 150)
+    ? desc
     : `${input.language ?? "Open-source"} project in ${categoryLabel(input.category)}`;
   if (!/[.!?…。]$/.test(what)) what += ".";
   const why = WHY[input.category];

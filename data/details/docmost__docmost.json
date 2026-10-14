@@ -1,0 +1,16 @@
+{
+ "fullName": "docmost/docmost",
+ "whoItsFor": null,
+ "useCases": [
+  "Real-time collaboration",
+  "Diagrams (Draw.io, Excalidraw and Mermaid)",
+  "Spaces"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "To get started with Docmost, please refer to our documentation or try our cloud version .",
+ "extractor": "heuristic",
+ "readmeHash": "189587ab0d62",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:37.765Z"
+}

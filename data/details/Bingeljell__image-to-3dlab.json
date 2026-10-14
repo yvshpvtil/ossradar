@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": "curl -fsSL https://assetfurnace.com/install.sh | bash",
  "source": "readme",
+ "readmeSummary": "Type a sentence, drop a picture, or bring your own model. AssetFurnace makes the picture, builds the 3D model, cleans it up for games, adds…",
  "extractor": "heuristic",
  "readmeHash": "cd0e0f35a1ab",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:46.490Z"
+ "generatedAt": "2026-10-14T04:53:22.634Z"
 }

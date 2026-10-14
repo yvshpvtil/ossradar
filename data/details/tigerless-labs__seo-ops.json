@@ -4,8 +4,9 @@
  "useCases": [],
  "installCommand": null,
  "source": "readme",
+ "readmeSummary": "seo-ops checks a site's SEO foundation — the machine-readable structure search engines and AI retrieval need to fetch, read, index, and cite…",
  "extractor": "heuristic",
  "readmeHash": "f79cc5196dc3",
  "version": 1,
- "generatedAt": "2026-10-14T04:53:47.175Z"
+ "generatedAt": "2026-10-14T04:53:22.807Z"
 }

@@ -1,0 +1,12 @@
+{
+ "fullName": "activepieces/activepieces",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "All-in-one AI automation designed to be extensible through a type-safe pieces framework written in TypeScript.",
+ "extractor": "heuristic",
+ "readmeHash": "dd569bae4a08",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:39.414Z"
+}

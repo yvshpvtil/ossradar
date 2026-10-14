@@ -1,0 +1,12 @@
+{
+ "fullName": "SouravBeraAkaSpeed/xiryn",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/SouravBeraAkaSpeed/xiryn/main/setup.sh | bash",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/e9769ff2-b9ae-426c-a47e-629910b11155",
+ "extractor": "heuristic",
+ "readmeHash": "35d0c7ae6112",
+ "version": 1,
+ "generatedAt": "2026-10-14T04:53:20.894Z"
+}
