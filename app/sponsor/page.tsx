@@ -52,6 +52,9 @@ export default function SponsorPage() {
             Email {SITE.sponsorEmail}
           </a>
         </div>
+        <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+          After paying, email <a href={mail} className="font-medium text-indigo-700 underline dark:text-indigo-400">{SITE.sponsorEmail}</a> with your logo, link and tagline.
+        </p>
       </section>
 
       <section className="mt-8">
