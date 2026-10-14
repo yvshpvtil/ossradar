@@ -1,0 +1,12 @@
+{
+ "fullName": "xerrors/Yuxi",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Yuxi = Cloud Agents + Knowledge RAG，Yuxi 是一个可私有部署的多租户知识智能体平台。自定义智能体，权限可控，沉淀企业轨迹。它把知识库检索、知识图谱、LangGraph 多智能体编排、MCP/Skills、沙盒工具和权限管理放进同一个工作区。",
+ "extractor": "heuristic",
+ "readmeHash": "46613756523c",
+ "version": 1,
+ "generatedAt": "2026-10-14T09:52:56.710Z"
+}

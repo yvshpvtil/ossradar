@@ -1,0 +1,12 @@
+{
+ "fullName": "emo-xiaoyu/harness-mix",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "macOS/Linux 已加入源码构建与启动适配；目标系统的完整桌面验收仍需在对应机器执行。安装方式、Linux 桌面前提和支持边界见 跨平台指南。",
+ "extractor": "heuristic",
+ "readmeHash": "4decc8251d91",
+ "version": 1,
+ "generatedAt": "2026-10-14T09:52:56.802Z"
+}
