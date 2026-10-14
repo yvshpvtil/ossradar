@@ -1,0 +1,12 @@
+{
+ "fullName": "LINJIANG12/video2book-courses",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "五十八门真实网课的模块合辑全书 + 思维导图复习笔记 + 逐字稿，全部由 Video2Book 从课程音频重构而成。",
+ "extractor": "heuristic",
+ "readmeHash": "da11a231d27d",
+ "version": 1,
+ "generatedAt": "2026-10-14T14:53:37.496Z"
+}

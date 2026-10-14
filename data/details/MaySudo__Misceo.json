@@ -1,0 +1,12 @@
+{
+ "fullName": "MaySudo/Misceo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global @misceo/cli",
+ "source": "readme",
+ "readmeSummary": "English · 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "b51e0cf19ed4",
+ "version": 1,
+ "generatedAt": "2026-10-14T14:53:37.479Z"
+}
