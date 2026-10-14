@@ -1,0 +1,12 @@
+{
+ "fullName": "peonist-ai/halogen-flash-server",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "halogen™ is the fastest way to run Qwen3.8-Flash-Next on AMD Strix Halo, and it is built for agents: deep into a long session, each turn…",
+ "extractor": "heuristic",
+ "readmeHash": "fb9c4ada4bdb",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:56:20.492Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "milvus-io/milvus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U pymilvus",
+ "source": "readme",
+ "readmeSummary": "🐦 Milvus is a high-performance vector database built for scale. It powers AI applications by efficiently organizing and searching vast…",
+ "extractor": "heuristic",
+ "readmeHash": "b58d32ac9246",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:56:20.585Z"
+}

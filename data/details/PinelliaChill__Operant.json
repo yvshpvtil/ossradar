@@ -1,0 +1,12 @@
+{
+ "fullName": "PinelliaChill/Operant",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "让合适的模型分工协作，让验证过的经验留给下一次任务。",
+ "extractor": "heuristic",
+ "readmeHash": "c5f717b740e5",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:56:20.992Z"
+}

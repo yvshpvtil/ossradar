@@ -1,0 +1,12 @@
+{
+ "fullName": "See-Sol-Lab/DeepSeekGUI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @deepseek-ai/dsh web",
+ "source": "readme",
+ "readmeSummary": "DeepSeekGUI 是基于 DeepSeek Harness 的本地 AI 工作台，用 DeepSeek 账号登录或配置模型 API key 后即可开始。",
+ "extractor": "heuristic",
+ "readmeHash": "2f3e95635aed",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:56:20.813Z"
+}

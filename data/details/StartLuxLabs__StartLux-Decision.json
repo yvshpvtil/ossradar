@@ -1,0 +1,12 @@
+{
+ "fullName": "StartLuxLabs/StartLux-Decision",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e '.[vllm]'          # vLLM 0.19.1, the version of the published numbers; vLLM 0.31 is also supported",
+ "source": "readme",
+ "readmeSummary": "StartLux-Decision is a family of open decision models. Given a state (text, JSON or images) and a set of typed questions, a model returns a…",
+ "extractor": "heuristic",
+ "readmeHash": "e86791601988",
+ "version": 1,
+ "generatedAt": "2026-10-14T07:56:20.638Z"
+}
