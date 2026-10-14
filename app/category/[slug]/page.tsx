@@ -13,7 +13,6 @@ import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
 import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
 import { toLeaderRepo } from "@/lib/leader";
-import { SITE } from "@/lib/site";
 
 /** Search-intent phrasing per category (what people actually type). */
 const CATEGORY_SEO_TITLE: Record<string, string> = {
@@ -24,6 +23,22 @@ const CATEGORY_SEO_TITLE: Record<string, string> = {
   "rag-vector": "Trending RAG & vector database repos on GitHub",
   "local-llms": "Trending local LLM tools on GitHub",
   devops: "Trending open-source DevOps tools on GitHub",
+  other: "Trending developer tools & AI projects on GitHub",
+};
+
+/**
+ * Hand-written meta descriptions per category (natural phrasing, kept short so the
+ * full sentence shows in search results). `{n}` is replaced with the live repo count.
+ */
+const CATEGORY_SEO_DESCRIPTION: Record<string, string> = {
+  "ai-agents": "The {n} fastest-rising AI agent repos on GitHub: multi-agent frameworks, agent runtimes and orchestration, ranked by stars gained this week. Updated hourly.",
+  "llm-tooling": "The {n} fastest-rising LLM tools on GitHub: SDKs, prompt tooling, evals, gateways, fine-tuning and inference libraries, ranked by weekly star growth.",
+  mcp: "The {n} fastest-rising Model Context Protocol (MCP) servers, clients and tools on GitHub, ranked by stars gained this week. Updated hourly.",
+  "coding-agents": "The {n} fastest-rising AI coding agents on GitHub: pair programmers, code-generation agents and IDE assistants, ranked by stars gained this week.",
+  "rag-vector": "The {n} fastest-rising RAG and vector database repos on GitHub: retrieval, embeddings and search, ranked by stars gained this week. Updated hourly.",
+  "local-llms": "The {n} fastest-rising tools for running LLMs on your own hardware: runtimes, quantization and desktop apps, ranked by weekly GitHub star growth.",
+  devops: "The {n} fastest-rising open-source DevOps repos on GitHub: infrastructure, CI/CD, observability and containers, ranked by stars gained this week.",
+  other: "The {n} fastest-rising developer tools and AI projects on GitHub that don't fit a single category, ranked by stars gained this week. Updated hourly.",
 };
 
 export function generateStaticParams() {
@@ -36,7 +51,12 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   if (!category) return {};
   const count = getReposByCategory(category.slug).length;
   const title = `${CATEGORY_SEO_TITLE[category.slug] ?? `Trending ${category.label} GitHub repos`}: ${count} rising projects`;
-  const description = clip(`Fastest-rising open-source ${category.label} projects on GitHub: ${category.description} Ranked by stars gained, updated hourly, on ${SITE.name}.`);
+  const template = CATEGORY_SEO_DESCRIPTION[category.slug];
+  const description = clip(
+    template
+      ? template.replace("{n}", String(count))
+      : `Fastest-rising open-source ${category.label} projects on GitHub, ranked by stars gained this week. ${category.description}`,
+  );
   return {
     title,
     description,
