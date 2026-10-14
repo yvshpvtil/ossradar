@@ -32,9 +32,9 @@ export default function Home() {
     <>
       <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
       <section className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
-        <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
-          <strong className="text-zinc-900 dark:text-zinc-100">{SITE.ossExplainer}</strong> {SITE.tagline}
+        <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
+        <p className="mt-2 max-w-2xl text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">
+          The open-source software (<abbr title="Open-Source Software" className="no-underline">OSS</abbr>) on GitHub gaining stars fastest right now, ranked every hour.
         </p>
         <div className="mt-4 max-w-xl">
           <NewsletterForm />
@@ -56,6 +56,7 @@ export default function Home() {
           .sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars)
           .slice(0, 50)}
         fullUrl="/leaderboard.json"
+        signupAfter={20}
         meta={leaderMeta(data.repos, now)}
         newDate={data.snapshotCount > 1 ? data.snapshotDate : null}
         showMovement={Boolean(data.rankBaseDate)}
