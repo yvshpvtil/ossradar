@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { EstBadge, EstimateNote } from "@/components/EstBadge";
 import { SponsorSlot } from "@/components/SponsorSlot";
@@ -133,10 +134,12 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
       <JsonLd data={crumbs} />
       {appLd && <JsonLd data={appLd} />}
       <div className="min-w-0">
-        <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-          <Link href="/" className="hover:underline">Leaderboard</Link> /{" "}
-          <Link href={`/category/${repo.category}`} className="hover:underline">{categoryLabel(repo.category)}</Link>
-        </nav>
+        <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <BackButton fallbackHref="/" />
+          <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
+            <Link href="/" className="hover:underline">Home</Link> /{" "}<Link href={`/category/${repo.category}`} className="hover:underline">{categoryLabel(repo.category)}</Link> /{" "}<span className="break-all text-zinc-700 dark:text-zinc-300">{repo.name}</span>
+          </nav>
+        </div>
         <header className="flex items-center gap-3">
           <Image
             src={`${repo.ownerAvatar}${repo.ownerAvatar.includes("?") ? "&" : "?"}s=96`}
@@ -267,9 +270,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             <h2 className="mb-3 text-xl font-semibold tracking-tight">Similar rising repos</h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {similar.map((s) => (
-                <li key={s.fullName} className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
+                <li key={s.fullName} className="relative cursor-pointer rounded-lg border border-zinc-200 p-3 transition-colors hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
                   <div className="flex items-start justify-between gap-2">
-                    <Link href={`/repo/${s.owner}/${s.name}`} className="min-w-0 break-words font-medium hover:underline">
+                    <Link href={`/repo/${s.owner}/${s.name}`} className="min-w-0 break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
                       {s.fullName}
                     </Link>
                     <span className="shrink-0 font-mono text-sm text-emerald-600 dark:text-emerald-400">

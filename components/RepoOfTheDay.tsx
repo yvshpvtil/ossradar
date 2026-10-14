@@ -25,7 +25,7 @@ function whyRising(r: Repo, now: number): string {
 
 export function RepoOfTheDay({ repo, now }: { repo: Repo; now: number }) {
   return (
-    <section aria-label="Repo of the day" className="mb-8 rounded-xl border border-indigo-200 bg-indigo-50/60 p-4 sm:p-5 dark:border-indigo-900 dark:bg-indigo-950/30">
+    <section aria-label="Repo of the day" className="relative mb-8 cursor-pointer rounded-xl border border-indigo-200 transition-colors hover:border-indigo-400 bg-indigo-50/60 p-4 sm:p-5 dark:border-indigo-900 dark:bg-indigo-950/30">
       <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Repo of the day</p>
       <div className="flex items-start gap-3">
         <Image
@@ -37,14 +37,14 @@ export function RepoOfTheDay({ repo, now }: { repo: Repo; now: number }) {
           className="shrink-0 rounded-full"
         />
         <div className="min-w-0 flex-1">
-          <Link href={`/repo/${repo.owner}/${repo.name}`} className="break-words text-base font-semibold [overflow-wrap:anywhere] hover:underline sm:text-lg">
+          <Link href={`/repo/${repo.owner}/${repo.name}`} className="break-words text-base font-semibold [overflow-wrap:anywhere] hover:underline sm:text-lg after:absolute after:inset-0 after:content-['']">
             <span className="text-zinc-500 dark:text-zinc-400">{repo.owner}/</span>
             {repo.name}
           </Link>
           <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">{repo.oneLiner}</p>
           <p className="mt-2 text-sm font-medium text-emerald-700 dark:text-emerald-400">Why it&apos;s rising: {whyRising(repo, now)}</p>
         </div>
-        <WatchButton fullName={repo.fullName} />
+        <span className="relative z-10"><WatchButton fullName={repo.fullName} /></span>
       </div>
     </section>
   );

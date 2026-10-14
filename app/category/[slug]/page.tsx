@@ -4,6 +4,7 @@ import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
 import { CATEGORIES, getCategory } from "@/lib/categories";
 import Link from "next/link";
+import { BackButton } from "@/components/BackNav";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { HomeSidebar } from "@/components/HomeSidebar";
@@ -52,9 +53,12 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />
       <div className="min-w-0">
-      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-        <Link href="/" className="hover:underline">Leaderboard</Link> / <span>{category.label}</span>
-      </nav>
+      <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <BackButton fallbackHref="/" />
+        <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
+          <Link href="/" className="hover:underline">Home</Link> / <span className="text-zinc-700 dark:text-zinc-300">{category.label}</span>
+        </nav>
+      </div>
       <section className="mb-6">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Category</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {category.label} repos</h1>

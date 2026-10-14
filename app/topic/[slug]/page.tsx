@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
@@ -37,9 +38,12 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${slug} repos`, ranked)} />
       <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: slug, path: `/topic/${slug}` }])} />
-      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-        <Link href="/" className="hover:underline">Leaderboard</Link> / <span>Topic: {slug}</span>
-      </nav>
+      <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <BackButton fallbackHref="/" />
+        <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
+          <Link href="/" className="hover:underline">Home</Link> / <span className="text-zinc-700 dark:text-zinc-300">Topic: {slug}</span>
+        </nav>
+      </div>
       <section className="mb-6">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Topic</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending <span className="font-mono">{slug}</span> repos</h1>

@@ -10,6 +10,7 @@ import type { CategorySlug } from "@/lib/types";
 import { Sparkline } from "./Sparkline";
 import { WatchButton } from "./WatchButton";
 import { readSinceLastVisit } from "@/lib/watch";
+import { RESTORE } from "./BackNav";
 
 type Period = "today" | "week";
 const PAGE = 50;
@@ -52,6 +53,33 @@ export function Leaderboard({
   const [sinceVisit, setSinceVisit] = useState<{ newNames: Set<string>; since: string } | null>(null);
   const [onlySince, setOnlySince] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const restored = useRef(false);
+
+  // Coming back (Back button or browser back): restore this page's filters, then its scroll position.
+  useEffect(() => {
+    const key = `ossr-lb:${location.pathname}`;
+    const saved = sessionStorage.getItem(key);
+    if (saved && sessionStorage.getItem(RESTORE)) {
+      sessionStorage.removeItem(RESTORE);
+      try {
+        const v = JSON.parse(saved);
+        /* eslint-disable react-hooks/set-state-in-effect -- sessionStorage is only readable after mount */
+        setPeriod(v.period); setCategory(v.category); setLanguage(v.language); setQuery(v.query); setLimit(v.limit); setNewWeek(v.newWeek);
+        /* eslint-enable react-hooks/set-state-in-effect */
+        requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, v.scroll ?? 0)));
+      } catch {}
+    }
+    restored.current = true;
+  }, []);
+  useEffect(() => {
+    if (!restored.current) return;
+    const key = `ossr-lb:${location.pathname}`;
+    // Scroll is captured on click (before navigation resets it), not on every scroll event.
+    const save = () => sessionStorage.setItem(key, JSON.stringify({ period, category, language, query, limit, newWeek, scroll: window.scrollY }));
+    save();
+    document.addEventListener("click", save, true);
+    return () => document.removeEventListener("click", save, true);
+  }, [period, category, language, query, limit, newWeek]);
 
   // "/" or Cmd/Ctrl+K jumps to search, like most directory sites.
   useEffect(() => {
@@ -174,7 +202,7 @@ export function Leaderboard({
         )}
       </div>
 
-      <ol className="divide-y divide-zinc-200 rounded-lg border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+      <ol className="divide-y divide-zinc-200 overflow-hidden rounded-lg border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {ranked.slice(0, limit).map((r, i) => {
           const delta = period === "today" ? r.delta24h : r.delta7d;
           const est = period === "today" ? r.estimated24h : r.estimated7d;
@@ -185,7 +213,7 @@ export function Leaderboard({
           return (
             <li
               key={r.fullName}
-              className={`flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
+              className={`relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-2 px-3 py-3 sm:items-center sm:gap-3 sm:px-4 ${sinceNew ? "bg-indigo-50/70 dark:bg-indigo-950/30" : ""}`}
             >
               <span className="w-7 shrink-0 pt-0.5 text-right font-mono text-sm tabular-nums text-zinc-400 dark:text-zinc-500 sm:pt-0">
                 {i + 1}
@@ -208,7 +236,7 @@ export function Leaderboard({
                 className="mt-0.5 hidden shrink-0 rounded-full sm:mt-0 sm:block"
               />
               <div className="min-w-0 flex-1">
-                <Link href={`/repo/${r.owner}/${r.name}`} className="block break-words font-medium hover:underline sm:inline">
+                <Link href={`/repo/${r.owner}/${r.name}`} className="block break-words font-medium hover:underline sm:inline after:absolute after:inset-0 after:content-['']">
                   <span className="block text-xs font-normal text-zinc-500 sm:inline sm:text-[length:inherit] sm:font-medium dark:text-zinc-400">{r.owner}/</span>
                   {r.name}
                 </Link>
@@ -224,7 +252,7 @@ export function Leaderboard({
                 )}
                 <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>
                 <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-zinc-500">
-                  <Link href={`/category/${r.category}`} className="hover:underline">
+                  <Link href={`/category/${r.category}`} className="relative z-10 hover:underline">
                     {CATEGORIES.find((c) => c.slug === r.category)?.label}
                   </Link>
                   {r.language && <span>{r.language}</span>}
@@ -242,7 +270,7 @@ export function Leaderboard({
                 </p>
                 <p className="text-[11px] text-zinc-500 dark:text-zinc-400">{period === "today" ? "stars today" : "stars this week"}</p>
               </div>
-              <WatchButton fullName={r.fullName} />
+              <span className="relative z-10"><WatchButton fullName={r.fullName} /></span>
             </li>
           );
         })}

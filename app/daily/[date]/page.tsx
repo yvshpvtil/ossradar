@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -27,20 +28,23 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
   const newer = days[i - 1], older = days[i + 1];
   return (
     <div className="max-w-3xl">
-      <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500">
-        <Link href="/daily" className="hover:underline">Daily archive</Link> / <span>{date}</span>
-      </nav>
+      <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <BackButton fallbackHref="/daily" />
+        <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
+          <Link href="/" className="hover:underline">Home</Link> / <Link href="/daily" className="hover:underline">Daily archive</Link> / <span className="text-zinc-700 dark:text-zinc-300">{date}</span>
+        </nav>
+      </div>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Top rising repos on {formatDate(date)}</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">Stars gained during this UTC day, measured from our daily snapshots.</p>
       <ol className="mt-6 divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {top.map((e, n) => (
-          <li key={e.fullName} className="flex items-start gap-4 p-4">
+          <li key={e.fullName} className="relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-4 p-4">
             <span className="w-6 shrink-0 text-right tabular-nums text-zinc-500">{n + 1}</span>
             <div className="min-w-0 flex-1">
               {e.repo ? (
-                <Link className="font-medium hover:underline" href={`/repo/${e.repo.owner}/${e.repo.name}`}>{e.fullName}</Link>
+                <Link className={`font-medium hover:underline after:absolute after:inset-0 after:content-['']`} href={`/repo/${e.repo.owner}/${e.repo.name}`}>{e.fullName}</Link>
               ) : (
-                <a className="font-medium hover:underline" href={`https://github.com/${e.fullName}`}>{e.fullName}</a>
+                <a className={`font-medium hover:underline after:absolute after:inset-0 after:content-['']`} href={`https://github.com/${e.fullName}`}>{e.fullName}</a>
               )}
               {e.repo?.description && <p className="mt-0.5 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{e.repo.description}</p>}
             </div>
