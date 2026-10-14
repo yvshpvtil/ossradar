@@ -1,0 +1,12 @@
+{
+ "fullName": "ThinkWatchProject/ThinkWatch-Lite",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A local gateway for Claude Code, Codex and other AI clients, on macOS, Windows and Linux.",
+ "extractor": "heuristic",
+ "readmeHash": "83d89ec72a0f",
+ "version": 1,
+ "generatedAt": "2026-10-14T15:58:10.219Z"
+}
