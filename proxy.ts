@@ -4,6 +4,7 @@ import { getRepo } from "@/lib/data";
 import { getLanding } from "@/lib/landing";
 import { getLanguage } from "@/lib/languages";
 import { hasTopicPage } from "@/lib/topics";
+import { hasAlternativesPage } from "@/lib/alternatives";
 
 /** First day that can be archived: the day after the first snapshot (2026-10-13). */
 const FIRST_ARCHIVE_DAY = "2026-10-14";
@@ -27,6 +28,14 @@ export function proxy(req: NextRequest) {
       url.pathname = `/repo/${repo.owner}/${repo.name}`;
       return NextResponse.redirect(url, 308);
     }
+  } else if (parts[0] === "alternatives") {
+    const repo = parts.length === 3 ? getRepo(parts[1], parts[2]) : undefined;
+    if (!repo || !hasAlternativesPage(repo)) return notFound();
+    if (repo.owner !== parts[1] || repo.name !== parts[2]) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/alternatives/${repo.owner}/${repo.name}`;
+      return NextResponse.redirect(url, 308);
+    }
   } else if (parts[0] === "category") {
     if (!parts[1] || !getCategory(parts[1])) return notFound();
   } else if (parts[0] === "trending") {
@@ -45,5 +54,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/repo/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
+  matcher: ["/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
 };
