@@ -20,6 +20,7 @@ import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
 import { hasTopicPage } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
+import { badgeSpec } from "@/lib/badge";
 import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
@@ -221,7 +222,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
 
         {hn && <HnMentions m={hn} fullName={repo.fullName} />}
 
-        <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} />
+        <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} width={badgeSpec(repo).width} />
 
         <section className="mt-6">
           <h2 className="mb-3 text-xl font-semibold tracking-tight">About {repo.name}</h2>
@@ -281,7 +282,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
                     <Link href={`/repo/${s.owner}/${s.name}`} className="min-w-0 break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
                       {s.fullName}
                     </Link>
-                    <span className="shrink-0 font-mono text-sm text-emerald-600 dark:text-emerald-400">
+                    <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
                       {formatDelta(s.delta7d)}
                       {s.estimated7d && <EstBadge />}
                     </span>

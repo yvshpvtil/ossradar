@@ -1,13 +1,8 @@
-import { getRepo, getRepos, rankRepos } from "@/lib/data";
+import { getRepo } from "@/lib/data";
+import { badgeSpec } from "@/lib/badge";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
-// Approximate Verdana 11px text width (shields.io-style badges).
-const textWidth = (s: string) => Math.round(s.length * 6.6 + 10);
-
-function badge(label: string, message: string, color: string): string {
-  const lw = textWidth(label) + 16; // room for the radar mark
-  const mw = textWidth(message);
-  const w = lw + mw;
+function badge({ label, message, color, lw, mw, width: w }: ReturnType<typeof badgeSpec>): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="20" role="img" aria-label="${esc(label)}: ${esc(message)}">
 <title>${esc(label)}: ${esc(message)}</title>
 <linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>
@@ -22,14 +17,7 @@ function badge(label: string, message: string, color: string): string {
 export async function GET(_req: Request, { params }: { params: Promise<{ owner: string; name: string }> }) {
   const { owner, name } = await params;
   const repo = getRepo(owner, name.replace(/\.svg$/, ""));
-  let svg: string;
-  if (repo) {
-    const ranked = rankRepos(getRepos(), "today");
-    const rank = ranked.findIndex((r) => r.fullName === repo.fullName) + 1;
-    svg = rank <= 100 ? badge("OSS Radar", `Trending #${rank}`, "#059669") : badge("OSS Radar", "Tracked", "#52525b");
-  } else {
-    svg = badge("OSS Radar", "not tracked", "#9f9f9f");
-  }
+  const svg = badge(badgeSpec(repo));
   return new Response(svg, {
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",

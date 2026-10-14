@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function BadgeEmbed({ owner, name, siteUrl }: { owner: string; name: string; siteUrl: string }) {
+export function BadgeEmbed({ owner, name, siteUrl, width }: { owner: string; name: string; siteUrl: string; width: number }) {
   const img = `${siteUrl}/badge/${owner}/${name}`;
   const page = `${siteUrl}/repo/${owner}/${name}`;
   const md = `[![Trending on OSS Radar](${img})](${page})`;
@@ -22,7 +22,7 @@ export function BadgeEmbed({ owner, name, siteUrl }: { owner: string; name: stri
       <h2 className="mb-1 text-sm font-semibold">Maintainer? Add the badge to your README</h2>
       <p className="mb-3 text-xs text-zinc-500">Shows your live OSS Radar rank and links back here. Updates hourly.</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`/badge/${owner}/${name}`} alt="OSS Radar badge preview" height={20} className="mb-3 h-5" />
+      <img src={`/badge/${owner}/${name}`} alt="OSS Radar badge preview" width={width} height={20} className="mb-3 h-5" />
       {[
         ["Markdown", md],
         ["HTML", html],
