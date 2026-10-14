@@ -41,7 +41,7 @@ export default function HackerNewsPage() {
                   {formatNumber(m.top.points)} points · {formatNumber(m.top.comments)} comments · {formatDate(m.top.date)}
                 </p>
                 <p className="mt-1 text-sm">
-                  <Link href={`/repo/${r.owner}/${r.name}`} className="text-indigo-600 hover:underline dark:text-indigo-400">{fullName}</Link>
+                  <Link href={`/repo/${r.owner}/${r.name}`} className="text-indigo-700 underline underline-offset-2 dark:text-indigo-400">{fullName}</Link>
                   <span className="text-zinc-500"> · {formatNumber(r.stars)} stars · +{formatNumber(r.delta7d)}{r.estimated7d ? "*" : ""} this week</span>
                 </p>
               </div>

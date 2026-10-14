@@ -20,7 +20,7 @@ export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; sh
   if (list.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700">
-        Nothing here yet. Head to the <Link href="/" className="text-indigo-600 hover:underline dark:text-indigo-400">leaderboard</Link> and tap ☆ next to repos you want to follow.
+        Nothing here yet. Head to the <Link href="/" className="text-indigo-700 underline underline-offset-2 dark:text-indigo-400">leaderboard</Link> and tap ☆ next to repos you want to follow.
       </div>
     );
   }
