@@ -6,6 +6,16 @@ import { LANDINGS } from "@/lib/landing";
 import { getLanguages } from "@/lib/languages";
 import { getArchiveDays } from "@/lib/daily";
 import { getTopics } from "@/lib/topics";
+import { alternativesPath, getAlternativesRepos } from "@/lib/alternatives";
+import type { Repo } from "@/lib/types";
+
+/** Last day the repo's data actually changed (latest snapshot with a different star count), else its last code push. */
+function repoLastmod(r: Repo, fallback: Date): Date {
+  const h = r.history;
+  for (let i = h.length - 1; i > 0; i--) if (h[i].stars !== h[i - 1].stars) return new Date(`${h[i].date}T23:59:59Z`) > fallback ? fallback : new Date(`${h[i].date}T23:59:59Z`);
+  const p = new Date(r.pushedAt);
+  return p > fallback ? fallback : p;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getData();
@@ -15,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/new`, lastModified, changeFrequency: "hourly", priority: 0.9 },
     { url: `${SITE.url}/sponsor`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/daily`, lastModified, changeFrequency: "daily", priority: 0.7 },
-    ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, changeFrequency: "yearly" as const, priority: 0.5 })),
+    ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, lastModified: new Date(`${d}T23:59:59Z`), changeFrequency: "yearly" as const, priority: 0.5 })),
     { url: `${SITE.url}/hacker-news`, lastModified, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE.url}/compare`, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
@@ -46,9 +56,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...data.repos.map((r) => ({
       url: `${SITE.url}/repo/${r.owner}/${r.name}`,
-      lastModified,
+      lastModified: repoLastmod(r, lastModified),
       changeFrequency: "daily" as const,
       priority: 0.6,
+    })),
+    ...getAlternativesRepos().map((r) => ({
+      url: `${SITE.url}${alternativesPath(r)}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.5,
     })),
   ];
 }
