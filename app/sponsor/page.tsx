@@ -10,7 +10,7 @@ import { getLanguages } from "@/lib/languages";
 import { CATEGORIES } from "@/lib/categories";
 
 export const metadata: Metadata = {
-  title: "Sponsor OSS Radar",
+  title: "Sponsor",
   description: `One clearly labeled sponsor per week across OSS Radar and its daily newsletter. $${LAUNCH_PRICE_USD}/week for the first ${LAUNCH_SLOTS} sponsors, then $${REGULAR_PRICE_USD}/week.`,
   alternates: { canonical: "/sponsor" },
   openGraph: { url: "/sponsor" },

@@ -15,11 +15,15 @@ const FAQ: { q: string; a: string }[] = [
   { q: "Is there an API?", a: "Yes. /api/v1/trending returns the top 100 repos by 24-hour star gain as JSON. It is free, needs no key and updates hourly." },
 ];
 
+const title = "How we rank rising GitHub repos";
+const description = `How ${SITE.name} ranks the fastest-rising open-source AI and dev-tool repos on GitHub by star velocity (stars gained in 24 hours and 7 days), updated hourly.`;
+
 export const metadata: Metadata = {
-  title: "About",
-  description: `How ${SITE.name} finds and ranks the fastest-rising open-source AI and developer-tool repos.`,
+  title,
+  description,
   alternates: { canonical: "/about" },
-  openGraph: { url: "/about" },
+  openGraph: { title, description, url: "/about" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function AboutPage() {
