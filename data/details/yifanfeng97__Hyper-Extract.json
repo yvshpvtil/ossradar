@@ -1,0 +1,12 @@
+{
+ "fullName": "yifanfeng97/Hyper-Extract",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Transform documents into structured knowledge with one command.",
+ "extractor": "heuristic",
+ "readmeHash": "2a179e732432",
+ "version": 1,
+ "generatedAt": "2026-10-15T15:54:56.120Z"
+}

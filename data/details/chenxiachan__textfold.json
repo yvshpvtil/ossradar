@@ -1,0 +1,12 @@
+{
+ "fullName": "chenxiachan/textfold",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Fold any text, from a one-screen map to every word",
+ "extractor": "heuristic",
+ "readmeHash": "e564d8b0aba8",
+ "version": 1,
+ "generatedAt": "2026-10-15T15:54:56.124Z"
+}
