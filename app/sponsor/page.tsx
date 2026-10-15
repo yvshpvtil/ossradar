@@ -9,11 +9,15 @@ import { getTopics } from "@/lib/topics";
 import { getLanguages } from "@/lib/languages";
 import { CATEGORIES } from "@/lib/categories";
 
+const title = "Sponsor";
+const description = `One clearly labeled sponsor per week across OSS Radar and its daily newsletter. $${LAUNCH_PRICE_USD}/week for the first ${LAUNCH_SLOTS} sponsors, then $${REGULAR_PRICE_USD}/week.`;
+
 export const metadata: Metadata = {
-  title: "Sponsor",
-  description: `One clearly labeled sponsor per week across OSS Radar and its daily newsletter. $${LAUNCH_PRICE_USD}/week for the first ${LAUNCH_SLOTS} sponsors, then $${REGULAR_PRICE_USD}/week.`,
+  title,
+  description,
   alternates: { canonical: "/sponsor" },
-  openGraph: { url: "/sponsor" },
+  openGraph: { title, description, url: "/sponsor" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function SponsorPage() {

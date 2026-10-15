@@ -4,11 +4,15 @@ import { getRepos } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { SubmitForm } from "./SubmitForm";
 
+const title = "Suggest a rising AI or developer-tool repo";
+const description = `Suggest an open-source AI or developer-tool repo for ${SITE.name} to track. Free, reviewed by hand.`;
+
 export const metadata: Metadata = {
-  title: "Submit a repo",
-  description: `Suggest an open-source AI or developer-tool repo for ${SITE.name} to track. Free, reviewed by hand.`,
+  title,
+  description,
   alternates: { canonical: "/submit" },
-  openGraph: { url: "/submit" },
+  openGraph: { title, description, url: "/submit" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function SubmitPage() {
