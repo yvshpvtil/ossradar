@@ -1,0 +1,12 @@
+{
+ "fullName": "michael-denyer/pstack-claude",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Lauren Tan's pstack is an opinionated Cursor skill stack that improves agent outcomes.",
+ "extractor": "heuristic",
+ "readmeHash": "8c32cba03601",
+ "version": 1,
+ "generatedAt": "2026-10-15T02:52:56.933Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "browserbase/stagehand",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pnpm add @browserbasehq/stagehand 'zod@~4.4.3'",
+ "source": "readme",
+ "readmeSummary": "Sign in once, keep the session, and pull structured data out the other side.",
+ "extractor": "heuristic",
+ "readmeHash": "ec7a1a4bd0ec",
+ "version": 1,
+ "generatedAt": "2026-10-15T02:52:56.941Z"
+}
