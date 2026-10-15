@@ -140,18 +140,6 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const release = getLatestRelease(repo.fullName);
   const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
-  const appLd = details && {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: repo.name,
-    url: `${SITE.url}${repoPath(repo)}`,
-    sameAs: repo.url,
-    description: details.whoItsFor ?? repo.description ?? repo.oneLiner,
-    applicationCategory: "DeveloperApplication",
-    featureList: details.useCases.length ? details.useCases : undefined,
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  };
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
@@ -160,6 +148,12 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     url: `${SITE.url}${repoPath(repo)}`,
     description: repo.description || repo.oneLiner,
     codeRepository: repo.url,
+    sameAs: repo.url,
+    isAccessibleForFree: true,
+    // Who-it's-for lives here rather than in a separate SoftwareApplication node: Google treats
+    // SoftwareApplication as a rich-result type that requires aggregateRating/review, which we
+    // don't have, so every repo page was reporting an invalid Software App item.
+    audience: details?.whoItsFor ? { "@type": "Audience", audienceType: details.whoItsFor } : undefined,
     programmingLanguage: repo.language ?? undefined,
     author: { "@type": "Person", name: repo.owner, url: `https://github.com/${repo.owner}` },
     dateCreated: repo.createdAt,
@@ -181,7 +175,6 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     <article className="grid gap-8 lg:grid-cols-[1fr_260px]">
       <JsonLd data={jsonLd} />
       <JsonLd data={crumbs} />
-      {appLd && <JsonLd data={appLd} />}
       <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
           <BackButton fallbackHref="/" />
