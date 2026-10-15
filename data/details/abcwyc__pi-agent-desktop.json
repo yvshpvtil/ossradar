@@ -1,0 +1,16 @@
+{
+ "fullName": "abcwyc/pi-agent-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Browse and resume past Pi sessions by project, without digging through terminal history or `.jsonl` files.",
+  "Talk to the agent in real time inside a desktop window, with thinking, tool calls, context usage, cost, and compaction state all visible.",
+  "Continue from any earlier message as a branch, or fork the conversation into an independent session."
+ ],
+ "installCommand": "brew install --cask pi-agent",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "6738a67d3616",
+ "version": 1,
+ "generatedAt": "2026-10-15T14:00:19.780Z"
+}
