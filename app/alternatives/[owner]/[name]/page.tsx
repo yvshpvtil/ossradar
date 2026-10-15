@@ -7,7 +7,7 @@ import { EstBadge } from "@/components/EstBadge";
 import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
-import { abs, breadcrumbLd, clip, repoPath, ogDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, clip, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/alternatives/[own
     `Open-source alternatives to ${repo.fullName}: ${alts.slice(0, 3).map((a) => a.repo.fullName).join(", ")} and more. ${categoryLabel(repo.category)} repos sharing its GitHub topics, ranked by stars gained this week.`,
   );
   const url = alternativesPath(repo);
-  return { title, description, alternates: { canonical: url }, openGraph: { ...ogDefaults, title, description, url }, twitter: { card: "summary", title, description } };
+  return { title, description, alternates: { canonical: url }, openGraph: { ...ogDefaults, title, description, url }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
 }
 
 export default async function AlternativesPage({ params }: PageProps<"/alternatives/[owner]/[name]">) {
