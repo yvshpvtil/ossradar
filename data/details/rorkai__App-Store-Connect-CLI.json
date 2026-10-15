@@ -1,0 +1,12 @@
+{
+ "fullName": "rorkai/App-Store-Connect-CLI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install asc",
+ "source": "readme",
+ "readmeSummary": "A fast, lightweight, and scriptable CLI for the App Store Connect API. Automate iOS, macOS, tvOS, and visionOS release workflows from your…",
+ "extractor": "heuristic",
+ "readmeHash": "b790679d0467",
+ "version": 1,
+ "generatedAt": "2026-10-15T05:51:30.928Z"
+}
