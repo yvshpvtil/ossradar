@@ -1,0 +1,12 @@
+{
+ "fullName": "undefined-ui/second-brain-os",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A knowledge base that an AI agent builds and maintains for you, in plain markdown files you own.",
+ "extractor": "heuristic",
+ "readmeHash": "4c9eae48894e",
+ "version": 1,
+ "generatedAt": "2026-10-15T14:54:14.926Z"
+}
