@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageNav } from "@/components/PageNav";
+
+// Override the root layout's robots (index, follow) so it doesn't conflict with
+// Next.js's automatic <meta name="robots" content="noindex"/> on 404 responses.
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "That page isn't on OSS Radar. The repo may have dropped out of today's tracked set, or the URL may be wrong.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (
