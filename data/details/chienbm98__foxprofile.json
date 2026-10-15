@@ -1,0 +1,16 @@
+{
+ "fullName": "chienbm98/foxprofile",
+ "whoItsFor": null,
+ "useCases": [
+  "Persistent per-profile fingerprint. The first launch generates a device (screen, GPU, CPU cores, fonts, canvas/audio noise) and stores it; l",
+  "Two engines. Camoufox (Firefox, default) or Chrome (fingerprint-chromium, experimental), chosen when the profile is created. The Chrome buil",
+  "Sessions that stick. History, cookies and logins live in the profile directory; the tabs that were open are reopened on the next launch."
+ ],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "FoxProfile manages anti-detect browser profiles: each profile is a separate identity with its own device fingerprint, cookies, proxy…",
+ "extractor": "heuristic",
+ "readmeHash": "820412881f62",
+ "version": 1,
+ "generatedAt": "2026-10-15T08:56:34.749Z"
+}

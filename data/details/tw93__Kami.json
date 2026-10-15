@@ -1,0 +1,12 @@
+{
+ "fullName": "tw93/Kami",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add tw93/kami -a claude-code codex cursor -g -y",
+ "source": "readme",
+ "readmeSummary": "Kami (紙, かみ) means \"paper\" in Japanese. It gives AI agents layout rules and templates for PDF, PNG, and editable PowerPoint output, with…",
+ "extractor": "heuristic",
+ "readmeHash": "b53493b32da2",
+ "version": 1,
+ "generatedAt": "2026-10-15T08:56:34.740Z"
+}

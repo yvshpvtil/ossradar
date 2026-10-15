@@ -1,0 +1,12 @@
+{
+ "fullName": "AxiomCodeAI/axiomcodegraph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g @axiomcode/code-graph",
+ "source": "readme",
+ "readmeSummary": "Give it a repository. It builds a knowledge graph of your code using formal methods: for every function, exactly who calls it and what it…",
+ "extractor": "heuristic",
+ "readmeHash": "9544bff454ff",
+ "version": 1,
+ "generatedAt": "2026-10-15T08:56:35.158Z"
+}

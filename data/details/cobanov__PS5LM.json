@@ -1,0 +1,12 @@
+{
+ "fullName": "cobanov/PS5LM",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install llvm@21 lld socat cmake ninja",
+ "source": "readme",
+ "readmeSummary": "llama.cpp on a jailbroken PlayStation 5. Run any GGUF language model on the console itself, first on its Zen 2 CPU, then on its GPU.",
+ "extractor": "heuristic",
+ "readmeHash": "d7e39bdbc534",
+ "version": 1,
+ "generatedAt": "2026-10-15T08:56:34.750Z"
+}
