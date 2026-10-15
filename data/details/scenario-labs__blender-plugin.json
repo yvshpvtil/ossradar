@@ -1,0 +1,16 @@
+{
+ "fullName": "scenario-labs/blender-plugin",
+ "whoItsFor": null,
+ "useCases": [
+  "Image: generate from text or reference images and use results as textures or references.",
+  "Video: generate from prompts, images or scene playblasts.",
+  "3D: generate meshes, run provider edit tasks on a selected mesh and apply a saved edit back to it."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Experimental. Bring Scenario image, video, 3D, PBR material, audio and 360 environment generation into Blender.",
+ "extractor": "heuristic",
+ "readmeHash": "9717aca7346a",
+ "version": 1,
+ "generatedAt": "2026-10-15T07:07:53.487Z"
+}

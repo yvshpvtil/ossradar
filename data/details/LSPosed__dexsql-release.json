@@ -1,0 +1,12 @@
+{
+ "fullName": "LSPosed/dexsql-release",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add LSPosed/dexsql-release --skill install-dexsql",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "d6997f49f474",
+ "version": 1,
+ "generatedAt": "2026-10-15T07:07:53.450Z"
+}
