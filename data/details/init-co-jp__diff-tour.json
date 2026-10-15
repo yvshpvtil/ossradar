@@ -1,0 +1,12 @@
+{
+ "fullName": "init-co-jp/diff-tour",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/init-co-jp/diff-tour/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Walk through a diff the way a senior engineer reads it.",
+ "extractor": "heuristic",
+ "readmeHash": "922631ac325f",
+ "version": 1,
+ "generatedAt": "2026-10-15T04:52:31.428Z"
+}

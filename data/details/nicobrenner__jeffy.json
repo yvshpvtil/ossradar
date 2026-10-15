@@ -1,0 +1,12 @@
+{
+ "fullName": "nicobrenner/jeffy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install jeffy-classify",
+ "source": "readme",
+ "readmeSummary": "Pretrained classifiers you can run and retrain on CPU — text, game state, or any numeric features.",
+ "extractor": "heuristic",
+ "readmeHash": "3e2aa056e852",
+ "version": 1,
+ "generatedAt": "2026-10-15T04:52:31.425Z"
+}
