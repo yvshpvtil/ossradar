@@ -50,7 +50,10 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   const category = getCategory(slug);
   if (!category) return {};
   const count = getReposByCategory(category.slug).length;
-  const title = `${CATEGORY_SEO_TITLE[category.slug] ?? `Trending ${category.label} GitHub repos`}: ${count} rising projects`;
+  // <title> stays short (Google cuts around 60 chars); the live count lives in the
+  // description and in the OG/X title, where length matters less.
+  const title = CATEGORY_SEO_TITLE[category.slug] ?? `Trending ${category.label} GitHub repos`;
+  const socialTitle = `${title}: ${count} rising projects`;
   const template = CATEGORY_SEO_DESCRIPTION[category.slug];
   const description = clip(
     template
@@ -61,8 +64,8 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
     title,
     description,
     alternates: { canonical: `/category/${slug}` },
-    openGraph: { title, description, url: `/category/${slug}` },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title: socialTitle, description, url: `/category/${slug}` },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 
