@@ -17,7 +17,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
 
 export const metadata: Metadata = {
-  title: { absolute: `Trending AI GitHub repos today: fastest-rising open-source AI & dev tools · ${SITE.name}` },
+  title: { absolute: `Trending AI & dev-tool GitHub repos today · ${SITE.name}` },
   alternates: { canonical: "/" },
 };
 
