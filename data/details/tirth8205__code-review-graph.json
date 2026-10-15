@@ -1,0 +1,12 @@
+{
+ "fullName": "tirth8205/code-review-graph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install code-review-graph          # or: pipx install code-review-graph",
+ "source": "readme",
+ "readmeSummary": "AI coding tools often re-read large parts of a codebase to review a change.",
+ "extractor": "heuristic",
+ "readmeHash": "09a527ca5631",
+ "version": 1,
+ "generatedAt": "2026-10-15T13:06:36.229Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "thesysdev/open-intelligent-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "An open-source implementation of the \"Intelligent UI\" experience introduced in ChatGPT, built on OpenUI.",
+ "extractor": "heuristic",
+ "readmeHash": "267ddb842ac0",
+ "version": 1,
+ "generatedAt": "2026-10-15T13:06:36.159Z"
+}
