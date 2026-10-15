@@ -26,13 +26,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: SITE.name,
+    title: `${SITE.name}: fastest-rising open-source AI & dev tools`,
     description: `${SITE.ossExplainer} ${SITE.tagline}`,
     url: "/",
     locale: "en_US",
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
-  twitter: { card: "summary_large_image", title: SITE.name, description: `${SITE.ossExplainer} ${SITE.tagline}` },
+  twitter: { card: "summary_large_image", title: `${SITE.name}: fastest-rising open-source AI & dev tools`, description: `${SITE.ossExplainer} ${SITE.tagline}` },
 };
 
 export const viewport: Viewport = {

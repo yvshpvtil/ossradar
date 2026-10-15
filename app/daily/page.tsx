@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ogDefaults } from "@/lib/seo";
+import { ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, rankRepos } from "@/lib/data";
@@ -8,11 +8,15 @@ import { formatDate, formatNumber } from "@/lib/format";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
 
+const title = "Daily archive: the fastest-rising GitHub repos, day by day";
+const description = `Which open-source AI and developer-tool repos gained the most GitHub stars each day, archived by ${SITE.name}.`;
+
 export const metadata: Metadata = {
-  title: "Daily archive: the fastest-rising GitHub repos, day by day",
-  description: `Which open-source AI and developer-tool repos gained the most GitHub stars each day, archived by ${SITE.name}.`,
+  title,
+  description,
   alternates: { canonical: "/daily" },
-  openGraph: { ...ogDefaults, url: "/daily" },
+  openGraph: { ...ogDefaults, title, description, url: "/daily" },
+  twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
 export default function DailyIndex() {

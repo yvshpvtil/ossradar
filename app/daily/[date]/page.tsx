@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { ogDefaults } from "@/lib/seo";
+import { ogDefaults, twitterImage } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/daily/[date]">): 
   if (!getArchiveDays().includes(date)) return {};
   const title = `Fastest-rising GitHub repos on ${formatDate(date)}`;
   const description = `The open-source AI and developer-tool repos that gained the most GitHub stars on ${formatDate(date)}, from ${SITE.name}.`;
-  return { title, description, alternates: { canonical: `/daily/${date}` }, openGraph: { ...ogDefaults, title, description, url: `/daily/${date}` } };
+  return { title, description, alternates: { canonical: `/daily/${date}` }, openGraph: { ...ogDefaults, title, description, url: `/daily/${date}` }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
 }
 
 export default async function DailyPage({ params }: PageProps<"/daily/[date]">) {

@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { ogDefaults } from "@/lib/seo";
+import { ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import type { Metadata } from "next";
 import { Suspense } from "react";
@@ -9,11 +9,15 @@ import { ago, getLatestRelease } from "@/lib/activity";
 import { getHnMentions } from "@/lib/mentions";
 import { CompareView, type CompareRow } from "./CompareView";
 
+const title = "Compare GitHub repos side by side";
+const description = "Compare up to 3 rising open-source AI and developer-tool repos: stars, growth, forks, language, releases, recent activity and Hacker News discussion.";
+
 export const metadata: Metadata = {
-  title: "Compare GitHub repos side by side",
-  description: "Compare up to 3 rising open-source AI and developer-tool repos: stars, growth, forks, language, releases, recent activity and Hacker News discussion.",
+  title,
+  description,
   alternates: { canonical: "/compare" },
-  openGraph: { ...ogDefaults, url: "/compare" },
+  openGraph: { ...ogDefaults, title, description, url: "/compare" },
+  twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
 export default function ComparePage() {
