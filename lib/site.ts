@@ -5,6 +5,9 @@ export const SITE = {
   tagline: "The fastest-rising open-source AI & developer tools, ranked by star velocity and updated hourly.",
   description:
     "OSS Radar (OSS = Open-Source Software) tracks the fastest-rising open-source AI and developer-tool GitHub repos every day, ranked by stars gained in the last 24 hours and 7 days, with a one-line take on what each does and why it matters.",
+  /** Search-snippet length (≤158 chars); the long description above stays for JSON-LD and llms.txt. */
+  metaDescription:
+    "The fastest-rising open-source AI and dev-tool repos on GitHub, ranked by stars gained in 24 hours and 7 days. Updated hourly, with a one-line take on each.",
   owner: "Yash Patil",
   github: "https://github.com/yvshpvtil",
   sponsorPaymentUrl: "https://pages.razorpay.com/ossradar-sponsorship",

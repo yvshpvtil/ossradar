@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: `${SITE.name}: fastest-rising open-source AI & dev tools`,
     template: `%s · ${SITE.name}`,
   },
-  description: SITE.description,
+  description: SITE.metaDescription,
   applicationName: SITE.name,
   alternates: {
     types: { "application/rss+xml": [{ url: "/rss.xml", title: `${SITE.name} RSS` }] },
