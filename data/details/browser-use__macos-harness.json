@@ -1,0 +1,12 @@
+{
+ "fullName": "browser-use/macos-harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give any coding agent the apps on your Mac. One shell command per step.",
+ "extractor": "heuristic",
+ "readmeHash": "2d40405a995b",
+ "version": 1,
+ "generatedAt": "2026-10-15T21:51:32.109Z"
+}
