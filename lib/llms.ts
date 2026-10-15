@@ -10,6 +10,8 @@ const line = (r: Repo) =>
 
 function header(): string {
   const d = getData();
+  const top = rankRepos(d.repos, "today")[0];
+  const example = top ? `${SITE.url}/repo/${top.owner}/${top.name}` : `${SITE.url}/repo/{owner}/{name}`;
   return `# ${SITE.name}
 
 > ${SITE.name} (OSS = Open-Source Software) ranks open-source AI and developer-tool GitHub repositories by star velocity: stars gained in the last 24 hours and 7 days, not total stars. It tracks ${d.repos.length} repos and is rebuilt every hour from the GitHub API.
@@ -22,8 +24,21 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [New repos](${SITE.url}/new): repos that entered the tracked list recently
 - [Daily archive](${SITE.url}/daily): one page per UTC day with that day's top gainers
 - [Hacker News mentions](${SITE.url}/hacker-news): tracked repos discussed on Hacker News
+- [Compare repos](${SITE.url}/compare): side-by-side stars, growth, forks, releases and Hacker News discussion for up to 3 tracked repos
+- [Submit a repo](${SITE.url}/submit): suggest an open-source AI or developer-tool repo to track (free, reviewed by hand)
 - [About and methodology](${SITE.url}/about)
 ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.description}`).join("\n")}
+
+## URL patterns
+
+Use these to link straight to a tracked repo (owner and name exactly as on GitHub, e.g. ${example}):
+
+- Repo page: ${SITE.url}/repo/{owner}/{name} (stars, 24h and 7-day gains, star history, latest release, Hacker News mentions)
+- Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics; only for repos with at least 3)
+- Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
+- By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python
+- By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp
+- README badge (SVG): ${SITE.url}/badge/{owner}/{name}
 
 ## Categories
 
