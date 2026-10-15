@@ -1,0 +1,16 @@
+{
+ "fullName": "Zfinix/eleven",
+ "whoItsFor": null,
+ "useCases": [
+  "Bring your own agent. Aster, Claude, Codex, Gemini, Cursor, Copilot, OpenCode and any other ACP agent. Run several on the same project, each",
+  "Agents drive the window. Eleven serves its own MCP tools so an agent can open a function, switch views, rename, add notes, change types and ",
+  "Ask about any code. Select lines in pseudocode, assembly or a source file and ask, explain or copy them. The answer opens under the lines, a"
+ ],
+ "installCommand": "curl -fsSL https://eleven.chizi.app/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português…",
+ "extractor": "heuristic",
+ "readmeHash": "6c53f4a5434c",
+ "version": 1,
+ "generatedAt": "2026-10-15T10:54:26.321Z"
+}
