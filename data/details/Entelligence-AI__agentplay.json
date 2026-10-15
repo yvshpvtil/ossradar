@@ -1,0 +1,12 @@
+{
+ "fullName": "Entelligence-AI/agentplay",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install agentplay         # or install it into an environment",
+ "source": "readme",
+ "readmeSummary": "See what your coding agent actually did. Replay every session as a map and a timeline: what it read, what it edited, what failed, and what…",
+ "extractor": "heuristic",
+ "readmeHash": "59ac2d77509b",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.325Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "nightly-labs/openbot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name openbot --restart unless-stopped \\",
+ "source": "readme",
+ "readmeSummary": "OpenBot is a local-first desktop workspace for persistent AI teammates.",
+ "extractor": "heuristic",
+ "readmeHash": "2bdd4b0b86fd",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.682Z"
+}

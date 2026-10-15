@@ -1,0 +1,12 @@
+{
+ "fullName": "ajsahni/agents-office",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A 3D isometric office where AI agents do real work on your own Claude login.",
+ "extractor": "heuristic",
+ "readmeHash": "7d7d831febbc",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.555Z"
+}

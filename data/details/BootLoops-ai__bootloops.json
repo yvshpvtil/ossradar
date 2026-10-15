@@ -1,0 +1,12 @@
+{
+ "fullName": "BootLoops-ai/bootloops",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "BootLoops 1.0 is a harness for large language models doing precision quantitative science.",
+ "extractor": "heuristic",
+ "readmeHash": "459ed2a1ae67",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.645Z"
+}

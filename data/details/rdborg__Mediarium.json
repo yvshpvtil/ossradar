@@ -1,0 +1,12 @@
+{
+ "fullName": "rdborg/Mediarium",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Mediarium is a self-hosted media manager. Find a movie or show, and it searches your Usenet and torrent indexers, downloads the best…",
+ "extractor": "heuristic",
+ "readmeHash": "05a5912ed4ff",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.869Z"
+}

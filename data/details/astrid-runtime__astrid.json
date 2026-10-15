@@ -1,0 +1,12 @@
+{
+ "fullName": "astrid-runtime/astrid",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install astrid",
+ "source": "readme",
+ "readmeSummary": "Software should compose without inheriting each other's authority.",
+ "extractor": "heuristic",
+ "readmeHash": "36e03f6651c4",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.327Z"
+}

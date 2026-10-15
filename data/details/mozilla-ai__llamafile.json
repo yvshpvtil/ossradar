@@ -1,0 +1,12 @@
+{
+ "fullName": "mozilla-ai/llamafile",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "llamafile lets you distribute and run LLMs with a single file.",
+ "extractor": "heuristic",
+ "readmeHash": "68512a7fd6d3",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.614Z"
+}

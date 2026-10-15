@@ -1,0 +1,12 @@
+{
+ "fullName": "oceanbase/seekdb",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -U pyseekdb   # pyseekdb is the Python SDK for seekdb",
+ "source": "readme",
+ "readmeSummary": "MySQL-compatible · Embedded or Server · Hybrid Vector + Full-text Search · COW Sandbox",
+ "extractor": "heuristic",
+ "readmeHash": "c8e76c9099b5",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.319Z"
+}

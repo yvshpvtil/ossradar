@@ -1,0 +1,12 @@
+{
+ "fullName": "kharmanskyi/open-steps",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Plain-language agent skills for Claude Code, Codex, Cursor and Gemini CLI.",
+ "extractor": "heuristic",
+ "readmeHash": "9aae58790ed9",
+ "version": 1,
+ "generatedAt": "2026-10-15T01:01:25.355Z"
+}
