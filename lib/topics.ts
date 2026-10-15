@@ -12,3 +12,27 @@ export function getTopics(): { slug: string; count: number }[] {
 
 export const hasTopicPage = (slug: string) => getTopics().some((t) => t.slug === slug);
 export const getReposByTopic = (slug: string): Repo[] => getRepos().filter((r) => r.topics.includes(slug));
+
+/** Proper casing for acronyms and product names that appear in GitHub topic slugs. */
+const TOKEN_LABELS: Record<string, string> = {
+  ai: "AI", llm: "LLM", llms: "LLMs", mcp: "MCP", cli: "CLI", tui: "TUI", rag: "RAG", gpt: "GPT", dsh: "DSH",
+  openai: "OpenAI", chatgpt: "ChatGPT", anthropic: "Anthropic", claude: "Claude", deepseek: "DeepSeek", gemini: "Gemini",
+  qwen: "Qwen", ollama: "Ollama", codex: "Codex", cursor: "Cursor", opencode: "OpenCode", openclaw: "OpenClaw",
+  hermes: "Hermes", typescript: "TypeScript", javascript: "JavaScript", python: "Python", rust: "Rust", swift: "Swift",
+  golang: "Go", react: "React", nextjs: "Next.js", docker: "Docker", playwright: "Playwright", electron: "Electron",
+  macos: "macOS", windows: "Windows", linux: "Linux", android: "Android",
+};
+/** Whole-slug names that token casing can't get right. */
+const SLUG_LABELS: Record<string, string> = {
+  "claude-code": "Claude Code", "claude-code-plugin": "Claude Code plugin", "model-context-protocol": "Model Context Protocol",
+  "claude-skills": "Claude skills", "gemini-cli": "Gemini CLI",
+};
+/** Slugs whose hyphen is part of the normal spelling. */
+const KEEP_HYPHEN = new Set(["self-hosted", "local-first", "open-source", "multi-agent"]);
+
+/** Human-readable name for a topic slug, e.g. "llm" -> "LLM", "claude-code" -> "Claude Code", "ai-agents" -> "AI agents". */
+export function topicLabel(slug: string): string {
+  if (SLUG_LABELS[slug]) return SLUG_LABELS[slug];
+  if (KEEP_HYPHEN.has(slug)) return slug;
+  return slug.split("-").map((w) => TOKEN_LABELS[w] ?? w).join(" ");
+}
