@@ -5,15 +5,17 @@ import Link from "next/link";
 import { getData, getRepos } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { getRecentHn } from "@/lib/mentions";
-import { SITE } from "@/lib/site";
 
 const DAYS = 30;
 
 export function generateMetadata(): Metadata {
   const n = getRecentHn(DAYS, Date.parse(getData().generatedAt)).length;
-  const title = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
-  const description = `Open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly by ${SITE.name}.`;
-  return { title, description, alternates: { canonical: "/hacker-news" }, openGraph: { ...ogDefaults, title, description, url: "/hacker-news" }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
+  // Keep <title> under ~60 chars rendered (with " · OSS Radar") so Google shows it whole;
+  // the live count goes in the description and the longer social title.
+  const title = "GitHub repos trending on Hacker News this month";
+  const socialTitle = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
+  const description = `The ${n} open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly.`;
+  return { title, description, alternates: { canonical: "/hacker-news" }, openGraph: { ...ogDefaults, title: socialTitle, description, url: "/hacker-news" }, twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage } };
 }
 
 export default function HackerNewsPage() {
