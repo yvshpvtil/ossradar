@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { getRepos } from "@/lib/data";
 import { SITE } from "@/lib/site";
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/submit" },
-  openGraph: { title, description, url: "/submit" },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { ...ogDefaults, title, description, url: "/submit" },
+  twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
 export default function SubmitPage() {

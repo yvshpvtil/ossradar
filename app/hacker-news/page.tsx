@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, getRepos } from "@/lib/data";
@@ -12,7 +13,7 @@ export function generateMetadata(): Metadata {
   const n = getRecentHn(DAYS, Date.parse(getData().generatedAt)).length;
   const title = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
   const description = `Open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly by ${SITE.name}.`;
-  return { title, description, alternates: { canonical: "/hacker-news" }, openGraph: { title, description, url: "/hacker-news" } };
+  return { title, description, alternates: { canonical: "/hacker-news" }, openGraph: { ...ogDefaults, title, description, url: "/hacker-news" } };
 }
 
 export default function HackerNewsPage() {

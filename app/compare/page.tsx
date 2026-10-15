@@ -1,4 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
+import { ogDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import type { Metadata } from "next";
 import { Suspense } from "react";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Compare GitHub repos side by side",
   description: "Compare up to 3 rising open-source AI and developer-tool repos: stars, growth, forks, language, releases, recent activity and Hacker News discussion.",
   alternates: { canonical: "/compare" },
-  openGraph: { url: "/compare" },
+  openGraph: { ...ogDefaults, url: "/compare" },
 };
 
 export default function ComparePage() {

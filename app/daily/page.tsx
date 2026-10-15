@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, rankRepos } from "@/lib/data";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Daily archive: the fastest-rising GitHub repos, day by day",
   description: `Which open-source AI and developer-tool repos gained the most GitHub stars each day, archived by ${SITE.name}.`,
   alternates: { canonical: "/daily" },
-  openGraph: { url: "/daily" },
+  openGraph: { ...ogDefaults, url: "/daily" },
 };
 
 export default function DailyIndex() {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { RazorpayButton } from "@/components/RazorpayButton";
 import { SponsorSlot } from "@/components/SponsorSlot";
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/sponsor" },
-  openGraph: { title, description, url: "/sponsor" },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { ...ogDefaults, title, description, url: "/sponsor" },
+  twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
 export default function SponsorPage() {

@@ -9,7 +9,7 @@ import { categoryLabel } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
-import { breadcrumbLd, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, itemListLd, ogDefaults, twitterImage } from "@/lib/seo";
 
 const title = "New open-source AI & dev-tool repos, day by day";
 const description = `Repos created on GitHub in the last ${NEW_DAYS} days that are already gaining stars fast, grouped by launch day. Updated hourly.`;
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/new" },
-  openGraph: { title, description, url: "/new" },
-  twitter: { card: "summary_large_image", title, description },
+  openGraph: { ...ogDefaults, title, description, url: "/new" },
+  twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
 export default function NewPage() {

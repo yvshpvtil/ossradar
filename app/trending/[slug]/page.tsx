@@ -10,7 +10,7 @@ import { getData } from "@/lib/data";
 import { formatDate } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
 import { toLeaderRepo } from "@/lib/leader";
-import { breadcrumbLd, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, itemListLd, ogDefaults, twitterImage } from "@/lib/seo";
 
 export function generateStaticParams() {
   return LANDINGS.map((l) => ({ slug: l.slug }));
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps<"/trending/[slug]">
     title: l.title,
     description: l.description,
     alternates: { canonical: url },
-    openGraph: { title: l.title, description: l.description, url },
-    twitter: { card: "summary_large_image", title: l.title, description: l.description },
+    openGraph: { ...ogDefaults, title: l.title, description: l.description, url },
+    twitter: { card: "summary_large_image", title: l.title, description: l.description, ...twitterImage },
   };
 }
 

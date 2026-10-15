@@ -43,3 +43,16 @@ export function clip(s: string, max = 158): string {
   if (t.length <= max) return t;
   return `${t.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
 }
+
+// Pages that set their own `openGraph` replace the layout's object entirely, which drops the
+// root file-based OG image (and siteName/locale/type). Spread these into any page without its own
+// opengraph-image file so link previews on X/Slack/LinkedIn still show the card.
+export const SITE_OG_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: `${SITE.name}: fastest-rising open-source AI & dev tools`,
+  type: "image/png",
+};
+export const ogDefaults = { siteName: SITE.name, locale: "en_US", type: "website" as const, images: [SITE_OG_IMAGE] };
+export const twitterImage = { images: [SITE_OG_IMAGE.url] };
