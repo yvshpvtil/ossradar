@@ -1,0 +1,16 @@
+{
+ "fullName": "Kai-Jungsthoefel/SOMA",
+ "whoItsFor": null,
+ "useCases": [
+  "Models as code: Python with CadQuery, rebuilt on every change",
+  "One file per model: a `.soma` file holds code, result and history, like a CAD file",
+  "Point, measure, draw: click a part, measure exactly or sketch on the view, and send it to the agent"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Solid Object Modeling with Agents. A desktop app for designing parametric 3D models together with a coding agent.",
+ "extractor": "heuristic",
+ "readmeHash": "d201eb6b6a44",
+ "version": 1,
+ "generatedAt": "2026-10-16T08:55:56.072Z"
+}

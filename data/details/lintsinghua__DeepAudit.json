@@ -1,0 +1,12 @@
+{
+ "fullName": "lintsinghua/DeepAudit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull ghcr.nju.edu.cn/lintsinghua/deepaudit-frontend:latest",
+ "source": "readme",
+ "readmeSummary": "首页快速进入 Multi-Agent 深度审计",
+ "extractor": "heuristic",
+ "readmeHash": "cc32bb9303e5",
+ "version": 1,
+ "generatedAt": "2026-10-16T08:55:55.840Z"
+}

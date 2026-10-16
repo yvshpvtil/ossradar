@@ -1,0 +1,12 @@
+{
+ "fullName": "NB-Corp/gpt-with-taste",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Running in another host? See docs/harnesses/porting.md. Maintainers edit the single English authoring source in recipe/ and compile across…",
+ "extractor": "heuristic",
+ "readmeHash": "f521f2ff2910",
+ "version": 1,
+ "generatedAt": "2026-10-16T08:55:55.687Z"
+}

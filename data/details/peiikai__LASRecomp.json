@@ -1,0 +1,16 @@
+{
+ "fullName": "peiikai/LASRecomp",
+ "whoItsFor": null,
+ "useCases": [
+  "This is not emulation. Runs natively on Windows, macOS and Linux using static recompilation of the Switch code.",
+  "Unlocked aspect ratio: wider (or taller) windows show more of the island, up to ultrawide; houses and dungeons",
+  "Start screen: play vanilla or any randomizer seed, set up game files from your own dump, import fonts."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "LAS Recomp is a static recompilation of The Legend of Zelda: Link's Awakening (Nintendo Switch, 2019) into a native Windows, macOS and Linux…",
+ "extractor": "heuristic",
+ "readmeHash": "0ab0e1eab071",
+ "version": 1,
+ "generatedAt": "2026-10-16T08:55:55.691Z"
+}
