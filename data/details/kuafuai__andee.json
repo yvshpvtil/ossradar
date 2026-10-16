@@ -1,0 +1,12 @@
+{
+ "fullName": "kuafuai/andee",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask temurin@17",
+ "source": "readme",
+ "readmeSummary": "What moves in is not an app on the phone.",
+ "extractor": "heuristic",
+ "readmeHash": "fad3db7a058a",
+ "version": 1,
+ "generatedAt": "2026-10-16T03:53:36.168Z"
+}
