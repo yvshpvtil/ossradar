@@ -156,7 +156,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     audience: details?.whoItsFor ? { "@type": "Audience", audienceType: details.whoItsFor } : undefined,
     programmingLanguage: repo.language ?? undefined,
     author: {
-      "@type": repo.ownerType === "Organization" ? "Organization" : "Person",
+      "@type": (repo.ownerType ?? "User") === "Organization" ? "Organization" : "Person",
       name: repo.owner,
       url: `https://github.com/${repo.owner}`,
     },
