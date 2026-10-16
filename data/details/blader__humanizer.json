@@ -1,0 +1,12 @@
+{
+ "fullName": "blader/humanizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add blader/humanizer --global --agent codex",
+ "source": "readme",
+ "readmeSummary": "Humanizer makes AI-written text sound like a person wrote it, without changing what it says.",
+ "extractor": "heuristic",
+ "readmeHash": "276617d2c31e",
+ "version": 1,
+ "generatedAt": "2026-10-16T19:47:48.125Z"
+}
