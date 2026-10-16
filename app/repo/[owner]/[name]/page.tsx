@@ -18,7 +18,7 @@ import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
-import { hasTopicPage } from "@/lib/topics";
+import { hasTopicPage, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
 import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
@@ -322,9 +322,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             {repo.topics.map((t) => (
               <li key={t}>
                 {hasTopicPage(t) ? (
-                  <Link href={`/topic/${t}`} className="block rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-950">{t}</Link>
+                  <Link href={`/topic/${t}`} className="block rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-950">{topicLabel(t)}</Link>
                 ) : (
-                  <span className="block rounded-full bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">{t}</span>
+                  <span className="block rounded-full bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">{topicLabel(t)}</span>
                 )}
               </li>
             ))}
