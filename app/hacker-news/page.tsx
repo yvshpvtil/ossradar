@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, getRepos } from "@/lib/data";
@@ -21,8 +22,14 @@ export function generateMetadata(): Metadata {
 export default function HackerNewsPage() {
   const list = getRecentHn(DAYS, Date.parse(getData().generatedAt));
   const byName = new Map(getRepos().map((r) => [r.fullName, r]));
+  const rows = list.flatMap(({ fullName, m }) => {
+    const r = byName.get(fullName);
+    return r && m.top ? [{ name: fullName, url: abs(repoPath(r)) }] : [];
+  });
   return (
     <div className="max-w-3xl">
+      <JsonLd data={linkListLd("GitHub repos trending on Hacker News this month", rows)} />
+      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Repos trending on Hacker News</h1>

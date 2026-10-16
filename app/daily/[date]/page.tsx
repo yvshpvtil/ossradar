@@ -1,5 +1,6 @@
 import { repoBlurb } from "@/lib/blurb";
-import { ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
@@ -30,6 +31,8 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
   const newer = days[i - 1], older = days[i + 1];
   return (
     <div className="max-w-3xl">
+      <JsonLd data={linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))} />
+      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Daily archive", path: "/daily" }, { name: formatDate(date), path: `/daily/${date}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/daily" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">

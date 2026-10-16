@@ -39,6 +39,20 @@ export function itemListLd(name: string, repos: Repo[], limit = 50) {
   };
 }
 
+/** ItemList for listing pages whose rows aren't plain Repo objects (daily archive, Hacker News).
+ *  Items keep the on-page order; url should be absolute. */
+export function linkListLd(name: string, items: { name: string; url: string }[], limit = 50) {
+  const list = items.slice(0, limit);
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: list.length,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    itemListElement: list.map((it, i) => ({ "@type": "ListItem", position: i + 1, url: it.url, name: it.name })),
+  };
+}
+
 export const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
