@@ -1,0 +1,12 @@
+{
+ "fullName": "hummingbot/hummingbot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Hummingbot is an open-source framework that helps you design and deploy automated trading strategies, or bots, that can run on many…",
+ "extractor": "heuristic",
+ "readmeHash": "464e526eced4",
+ "version": 1,
+ "generatedAt": "2026-10-16T23:44:23.508Z"
+}
