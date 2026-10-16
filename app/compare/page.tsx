@@ -1,6 +1,7 @@
 import { repoBlurb } from "@/lib/blurb";
-import { ogDefaults, twitterImage } from "@/lib/seo";
+import { breadcrumbLd, ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
+import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getData } from "@/lib/data";
@@ -36,6 +37,7 @@ export default function ComparePage() {
   });
   return (
     <div>
+      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Compare", path: "/compare" }])} />
       <PageNav crumbs={[{ name: "Compare" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Compare</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Compare repos side by side</h1>
