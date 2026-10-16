@@ -1,0 +1,12 @@
+{
+ "fullName": "openbin-ai/binny",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://openbin.ai/install-binny.sh | sh",
+ "source": "readme",
+ "readmeSummary": "BINNY is the harness, not the model. It brings the tools (decompiled functions, strings, imports, data, a sealed sandbox, local Ghidra), the…",
+ "extractor": "heuristic",
+ "readmeHash": "7af9b3f729b4",
+ "version": 1,
+ "generatedAt": "2026-10-16T01:49:05.732Z"
+}
