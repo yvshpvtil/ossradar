@@ -1,8 +1,19 @@
 import type { Repo } from "./types";
+import { formatDelta } from "./format";
 import { SITE } from "./site";
 
 export const abs = (path: string) => `${SITE.url}${path === "/" ? "" : path}`;
 export const repoPath = (r: Pick<Repo, "owner" | "name">) => `/repo/${r.owner}/${r.name}`;
+
+/** <title> for a repo page. The layout template appends " · OSS Radar" (12 chars);
+ *  keep the rendered title around Google's ~60-char SERP limit. Prefer owner/name;
+ *  drop the owner when the full form would overflow. */
+export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">): string {
+  const delta = formatDelta(repo.delta7d);
+  const withOwner = `${repo.fullName}: ${delta} stars this week`;
+  if (withOwner.length <= 48) return withOwner;
+  return `${repo.name}: ${delta} stars this week`;
+}
 
 export function breadcrumbLd(items: { name: string; path: string }[]) {
   return {

@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clip, repoPath } from "@/lib/seo";
+import { breadcrumbLd, clip, repoPageTitle, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
@@ -72,7 +72,10 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) return {};
-  const title = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
+  // <title> stays short (Google cuts around 60 chars); the fuller growth phrase
+  // lives in the OG/X title, where length matters less — same pattern as category hubs.
+  const title = repoPageTitle(repo);
+  const socialTitle = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
   // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
   const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
   const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
@@ -83,8 +86,8 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
     description,
     alternates: { canonical: url },
     ...(isThinRepo(repo) ? { robots: { index: false, follow: true } } : {}),
-    openGraph: { type: "article", title, description, url },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { type: "article", title: socialTitle, description, url },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 
