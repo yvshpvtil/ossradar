@@ -1,0 +1,12 @@
+{
+ "fullName": "perplexityai/SPACE",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SPACE (Sandboxed Platform for Agentic Code Execution) is a sandbox platform for running code in isolated Firecracker microVMs.",
+ "extractor": "heuristic",
+ "readmeHash": "c463d08d6640",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:55:45.121Z"
+}

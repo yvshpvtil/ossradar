@@ -1,0 +1,12 @@
+{
+ "fullName": "trhhubsd/ARTEX",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Autumn-27/ARTEX 的持续维护版本。AI 自主渗透测试系统（Go 后端 + Next.js 前端）。",
+ "extractor": "heuristic",
+ "readmeHash": "4151d62a0c0e",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:55:45.119Z"
+}

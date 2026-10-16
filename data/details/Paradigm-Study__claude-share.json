@@ -1,0 +1,12 @@
+{
+ "fullName": "Paradigm-Study/claude-share",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Work in the same Claude session with your team. Share a link, let a teammate join from their own Claude Code, and see each other's prompts…",
+ "extractor": "heuristic",
+ "readmeHash": "cbba6dc5bb5e",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:55:45.348Z"
+}

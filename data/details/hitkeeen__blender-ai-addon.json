@@ -1,0 +1,12 @@
+{
+ "fullName": "hitkeeen/blender-ai-addon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Add-on для Blender, который превращает вьюпорт в чат с агентом OpenCode.",
+ "extractor": "heuristic",
+ "readmeHash": "8662d4f1d874",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:55:45.198Z"
+}
