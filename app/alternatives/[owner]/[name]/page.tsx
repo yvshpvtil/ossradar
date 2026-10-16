@@ -7,7 +7,7 @@ import { EstBadge } from "@/components/EstBadge";
 import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
-import { abs, breadcrumbLd, clip, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, alternativesPageTitle, breadcrumbLd, clip, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -19,12 +19,13 @@ export async function generateMetadata({ params }: PageProps<"/alternatives/[own
   const repo = getRepo(owner, name);
   if (!repo || !hasAlternativesPage(repo)) return {};
   const alts = getAlternatives(repo);
-  const title = `${alts.length} open-source ${repo.name} alternatives on GitHub`;
+  const title = alternativesPageTitle(repo.name, alts.length);
+  const shareTitle = `${alts.length} open-source ${repo.name} alternatives on GitHub`;
   const description = clip(
     `Open-source alternatives to ${repo.fullName}: ${alts.slice(0, 3).map((a) => a.repo.fullName).join(", ")} and more. ${categoryLabel(repo.category)} repos sharing its GitHub topics, ranked by stars gained this week.`,
   );
   const url = alternativesPath(repo);
-  return { title, description, alternates: { canonical: url }, openGraph: { ...ogDefaults, title, description, url }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
+  return { title, description, alternates: { canonical: url }, openGraph: { ...ogDefaults, title: shareTitle, description, url }, twitter: { card: "summary_large_image", title: shareTitle, description, ...twitterImage } };
 }
 
 export default async function AlternativesPage({ params }: PageProps<"/alternatives/[owner]/[name]">) {

@@ -15,6 +15,17 @@ export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">)
   return `${repo.name}: ${delta} stars this week`;
 }
 
+/** Alternatives page <title> sized for Google's ~60-char SERP limit (layout adds " · OSS Radar", 12 chars). */
+export function alternativesPageTitle(repoName: string, count: number): string {
+  const options = [
+    `${count} open-source ${repoName} alternatives on GitHub`,
+    `${count} open-source ${repoName} alternatives`,
+    `Open-source ${repoName} alternatives`,
+    `${repoName} alternatives`,
+  ];
+  return options.find((t) => t.length <= 48) ?? options[options.length - 1];
+}
+
 export function breadcrumbLd(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
