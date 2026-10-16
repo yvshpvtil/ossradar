@@ -1,0 +1,12 @@
+{
+ "fullName": "streamlit/streamlit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install streamlit",
+ "source": "readme",
+ "readmeSummary": "A faster way to build and share data apps.",
+ "extractor": "heuristic",
+ "readmeHash": "c3e0fad52d2d",
+ "version": 1,
+ "generatedAt": "2026-10-16T01:01:05.873Z"
+}

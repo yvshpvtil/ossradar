@@ -1,0 +1,12 @@
+{
+ "fullName": "ovobrowsersupport/ovobrowser",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "源码级修改的 Chromium 指纹内核。不是 JS 注入，不是 playwright-stealth 那套运行时补丁——指纹在 C++ 里改完再编译进二进制。检测站看到的是普通 Chrome，因为它本来就是 Chromium。",
+ "extractor": "heuristic",
+ "readmeHash": "71544807dfb7",
+ "version": 1,
+ "generatedAt": "2026-10-16T01:01:06.002Z"
+}

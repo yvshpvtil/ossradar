@@ -1,0 +1,12 @@
+{
+ "fullName": "eliasstravik/herdr-projects",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The board is an overview and a remote control; Herdr is the engine. Each delegated task gets its own agent in its own Herdr space, on its…",
+ "extractor": "heuristic",
+ "readmeHash": "fa96bf2e4f3b",
+ "version": 1,
+ "generatedAt": "2026-10-16T01:01:05.950Z"
+}
