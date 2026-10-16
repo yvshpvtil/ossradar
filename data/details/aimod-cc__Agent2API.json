@@ -1,0 +1,12 @@
+{
+ "fullName": "aimod-cc/Agent2API",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name agent2api --restart unless-stopped \\",
+ "source": "readme",
+ "readmeSummary": "把多家 AI 桌面客户端的登录态，变成一个本地 OpenAI 兼容 API 网关",
+ "extractor": "heuristic",
+ "readmeHash": "02b6732ada39",
+ "version": 1,
+ "generatedAt": "2026-10-16T17:50:00.970Z"
+}
