@@ -1,0 +1,16 @@
+{
+ "fullName": "hanzohanzhe/Grandet",
+ "whoItsFor": null,
+ "useCases": [
+  "It ranks by listed price only. It never says which site is \"good\" and never repeats a site's own claims such as \"full strength\" or \"stable\".",
+  "USD credit, CNY credit and cash prices are listed separately and never compared with each other.",
+  "Conditions such as a minimum top-up or members-only access are shown as a one-line hint. Prices that contradict the site's own text are list"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ask your agent for the cheapest API for a model, then let it connect that API to your own app.",
+ "extractor": "heuristic",
+ "readmeHash": "174530c903e3",
+ "version": 1,
+ "generatedAt": "2026-10-16T11:52:10.135Z"
+}
