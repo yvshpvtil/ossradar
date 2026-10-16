@@ -1,0 +1,12 @@
+{
+ "fullName": "bluechips-zhao/DITING",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name diting-postgres -p 127.0.0.1:5433:5432 -e POSTGRES_USER=diting -e POSTGRES_PASSWORD=YOUR_DATABASE_PASSWORD -e POSTGRES_DB=diting -v diting-pgdata:/var/lib/postgresql/data postgres:16",
+ "source": "readme",
+ "readmeSummary": "LLM 驱动的自主渗透测试工作台 · Go + Next.js + PostgreSQL",
+ "extractor": "heuristic",
+ "readmeHash": "855292d1da5b",
+ "version": 1,
+ "generatedAt": "2026-10-16T18:58:00.151Z"
+}
