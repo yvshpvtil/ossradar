@@ -1,0 +1,12 @@
+{
+ "fullName": "DayuanJiang/next-ai-draw-io",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Draw and edit draw.io diagrams by chatting with an AI.",
+ "extractor": "heuristic",
+ "readmeHash": "9f17e2790545",
+ "version": 1,
+ "generatedAt": "2026-10-16T04:53:35.286Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "neatlogs/neatroots",
+ "whoItsFor": null,
+ "useCases": [
+  "Takes runs from anywhere. The Neatlogs SDKs (Python,",
+  "Checks every run. Rules in code on every span (loops, repeated tool calls, error streaks,",
+  "Shows a run four ways. An Overview that reads like a chat (user, assistant, tool calls,"
+ ],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/neatlogs/neatroots/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "See, check and replay your AI agent's runs on your own machine while you build it.",
+ "extractor": "heuristic",
+ "readmeHash": "5041e51fbc8d",
+ "version": 1,
+ "generatedAt": "2026-10-16T04:53:35.281Z"
+}
