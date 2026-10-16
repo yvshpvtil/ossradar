@@ -9,15 +9,18 @@ import { formatDate, formatNumber } from "@/lib/format";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
 
-const title = "Daily archive: the fastest-rising GitHub repos, day by day";
+// Keep <title> under ~60 chars rendered (with " · OSS Radar") so Google shows it whole;
+// the longer phrase stays on OG/X like /hacker-news.
+const title = "Daily archive of rising GitHub repos";
+const socialTitle = "Daily archive: the fastest-rising GitHub repos, day by day";
 const description = `Which open-source AI and developer-tool repos gained the most GitHub stars each day, archived by ${SITE.name}.`;
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/daily" },
-  openGraph: { ...ogDefaults, title, description, url: "/daily" },
-  twitter: { card: "summary_large_image", title, description, ...twitterImage },
+  openGraph: { ...ogDefaults, title: socialTitle, description, url: "/daily" },
+  twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
 };
 
 export default function DailyIndex() {
