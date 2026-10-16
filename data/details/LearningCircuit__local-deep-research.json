@@ -1,0 +1,12 @@
+{
+ "fullName": "LearningCircuit/local-deep-research",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 11434:11434 --name ollama ollama/ollama",
+ "source": "readme",
+ "readmeSummary": "AI-powered research assistant for deep, agentic research",
+ "extractor": "heuristic",
+ "readmeHash": "2fafdf40e9ad",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:06:49.130Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "KnifeLemon/Droidline",
+ "whoItsFor": null,
+ "useCases": [
+  "Pick the element, not the pixel. `dump()` returns the screen as a tree with `text`, `id` and `desc` for every element. Commands take the fie",
+  "Waiting is built in. `touch`, `input` and `wait` wait for their element, 10 seconds by default. Conditions such as `exists`, `checked` and `",
+  "Clear errors. Every failure has a code, a message in English, Korean or Chinese, and a flag that says whether retrying helps: `NOT_FOUND: Co"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Droidline uses only permissions an ordinary app can get, so a few things are out of reach: see What it cannot do.",
+ "extractor": "heuristic",
+ "readmeHash": "7f0b6a69920a",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:06:49.062Z"
+}

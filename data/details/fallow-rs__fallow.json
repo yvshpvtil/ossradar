@@ -1,0 +1,12 @@
+{
+ "fullName": "fallow-rs/fallow",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx fallow",
+ "source": "readme",
+ "readmeSummary": "fallow builds a repository graph of modules, exports, dependencies, functions, and styling tokens.",
+ "extractor": "heuristic",
+ "readmeHash": "8c677c2cda86",
+ "version": 1,
+ "generatedAt": "2026-10-16T07:06:49.023Z"
+}
