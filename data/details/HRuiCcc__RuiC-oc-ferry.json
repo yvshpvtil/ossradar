@@ -1,0 +1,12 @@
+{
+ "fullName": "HRuiCcc/RuiC-oc-ferry",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "WorkBuddy 支持在它的 models.json 里填自定义模型。OpenCode 的免费模型池是现成的免费额度，但它不是一个能直接填进去的 OpenAI 端点：目录里带 free 的模型不一定免费，能聊天不等于能按 WorkBuddy…",
+ "extractor": "heuristic",
+ "readmeHash": "d421407ebf24",
+ "version": 1,
+ "generatedAt": "2026-10-16T15:52:51.485Z"
+}
