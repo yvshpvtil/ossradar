@@ -1,0 +1,12 @@
+{
+ "fullName": "TauricResearch/TradingAgents",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install .",
+ "source": "readme",
+ "readmeSummary": "Full release notes are in CHANGELOG.md.",
+ "extractor": "heuristic",
+ "readmeHash": "3d1cf6b1a659",
+ "version": 1,
+ "generatedAt": "2026-10-16T21:49:55.366Z"
+}
