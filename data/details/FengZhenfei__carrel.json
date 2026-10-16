@@ -1,0 +1,16 @@
+{
+ "fullName": "FengZhenfei/carrel",
+ "whoItsFor": null,
+ "useCases": [
+  "Document parsing: PDF, Word, PowerPoint, spreadsheets, images, HTML,",
+  "Automatic updates: scan for file changes, update indexes, and maintain",
+  "Hybrid retrieval: combine vector, keyword, graph, and visual search,"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ontology-Augmented Generation for AI agents.",
+ "extractor": "heuristic",
+ "readmeHash": "24832f35d1ec",
+ "version": 1,
+ "generatedAt": "2026-10-16T02:52:04.759Z"
+}
