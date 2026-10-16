@@ -15,6 +15,7 @@ import { UpdatedClock } from "@/components/UpdatedClock";
 import { TrendingGrid } from "@/components/TrendingGrid";
 import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
+import { getTopics, topicLabel } from "@/lib/topics";
 
 export const metadata: Metadata = {
   title: { absolute: `Trending AI & dev-tool GitHub repos today · ${SITE.name}` },
@@ -28,6 +29,14 @@ export default function Home() {
   const spotlight = pickRepoOfTheDay(data.repos);
   const trending = rankRepos(data.repos, "today").filter((r) => r.fullName !== spotlight?.fullName).slice(0, 6);
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
+  // Most-used topics that have a hub page; skip singular/plural twins (ai-agent vs ai-agents) so the row isn't repetitive.
+  const seenTopics = new Set<string>();
+  const popularTopics = getTopics().filter((t) => {
+    const key = t.slug.replace(/s$/, "");
+    if (seenTopics.has(key)) return false;
+    seenTopics.add(key);
+    return true;
+  }).slice(0, 16);
   return (
     <>
       <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
@@ -80,6 +89,23 @@ export default function Home() {
           ))}
         </div>
       </section>
+      {popularTopics.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 text-xl font-semibold tracking-tight">Popular topics</h2>
+          <ul className="flex flex-wrap gap-2 text-sm">
+            {popularTopics.map((t) => (
+              <li key={t.slug}>
+                <Link
+                  href={`/topic/${t.slug}`}
+                  className="block rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-950"
+                >
+                  {topicLabel(t.slug)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <section className="mt-8">
         <h2 className="mb-3 text-xl font-semibold tracking-tight">Popular views</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
