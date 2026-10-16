@@ -1,0 +1,12 @@
+{
+ "fullName": "tangency-labs/solidcraft",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Raspberry Pi 4 case from an empty design: a sketch dimensioned with the board's parameters, extrude, fillet, shell, the rim rounded in one…",
+ "extractor": "heuristic",
+ "readmeHash": "414f8a17020c",
+ "version": 1,
+ "generatedAt": "2026-10-16T16:53:37.288Z"
+}
