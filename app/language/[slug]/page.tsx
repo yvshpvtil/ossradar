@@ -20,14 +20,17 @@ export async function generateMetadata({ params }: PageProps<"/language/[slug]">
   const { slug } = await params;
   const lang = getLanguage(slug);
   if (!lang) return {};
-  const title = `Trending ${lang.name} repos on GitHub: ${lang.count} rising projects`;
+  // <title> stays short (Google cuts around 60 chars); the live count lives in the
+  // description and in the OG/X title, where length matters less.
+  const title = `Trending ${lang.name} repos on GitHub`;
+  const socialTitle = `${title}: ${lang.count} rising projects`;
   const description = clip(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained. ${lang.count} tracked, updated hourly on ${SITE.name}.`);
   return {
     title,
     description,
     alternates: { canonical: `/language/${slug}` },
-    openGraph: { title, description, url: `/language/${slug}` },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title: socialTitle, description, url: `/language/${slug}` },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 

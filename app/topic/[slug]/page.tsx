@@ -21,9 +21,12 @@ export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): 
   if (!hasTopicPage(slug)) return {};
   const n = getReposByTopic(slug).length;
   const label = topicLabel(slug);
-  const title = `Trending ${label} GitHub repos: ${n} rising projects`;
+  // <title> stays short (Google cuts around 60 chars); the live count lives in the
+  // description and in the OG/X title, where length matters less.
+  const title = `Trending ${label} GitHub repos`;
+  const socialTitle = `${title}: ${n} rising projects`;
   const description = clip(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained. ${n} tracked, updated hourly on ${SITE.name}.`);
-  return { title, description, alternates: { canonical: `/topic/${slug}` }, openGraph: { title, description, url: `/topic/${slug}` }, twitter: { card: "summary_large_image", title, description } };
+  return { title, description, alternates: { canonical: `/topic/${slug}` }, openGraph: { title: socialTitle, description, url: `/topic/${slug}` }, twitter: { card: "summary_large_image", title: socialTitle, description } };
 }
 
 export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) {
