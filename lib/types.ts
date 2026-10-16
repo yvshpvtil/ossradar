@@ -27,6 +27,8 @@ export interface Repo {
   createdAt: string;
   pushedAt: string;
   ownerAvatar: string;
+  /** GitHub account kind for the repo owner (User or Organization). */
+  ownerType: "User" | "Organization";
   category: CategorySlug;
   oneLiner: string;
   /** Stars gained in the last ~24h. */

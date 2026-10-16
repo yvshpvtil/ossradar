@@ -155,7 +155,11 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     // don't have, so every repo page was reporting an invalid Software App item.
     audience: details?.whoItsFor ? { "@type": "Audience", audienceType: details.whoItsFor } : undefined,
     programmingLanguage: repo.language ?? undefined,
-    author: { "@type": "Person", name: repo.owner, url: `https://github.com/${repo.owner}` },
+    author: {
+      "@type": repo.ownerType === "Organization" ? "Organization" : "Person",
+      name: repo.owner,
+      url: `https://github.com/${repo.owner}`,
+    },
     dateCreated: repo.createdAt,
     dateModified: repo.pushedAt,
     keywords: repo.topics.join(", ") || undefined,

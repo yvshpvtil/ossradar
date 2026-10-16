@@ -83,7 +83,7 @@ function readJson<T>(file: string, fallback: T): T {
 interface SearchItem {
   full_name: string;
   name: string;
-  owner: { login: string; avatar_url: string };
+  owner: { login: string; avatar_url: string; type: "User" | "Organization" };
   html_url: string;
   homepage: string | null;
   description: string | null;
@@ -397,6 +397,7 @@ async function main() {
       createdAt: item.created_at,
       pushedAt: item.pushed_at,
       ownerAvatar: item.owner.avatar_url,
+      ownerType: item.owner.type === "Organization" ? "Organization" : "User",
       category,
       oneLiner,
       ...v,
