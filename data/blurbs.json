@@ -89,12 +89,6 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.589Z"
  },
- "PinelliaChill/Operant": {
-  "text": "A local AI agent tool that splits tasks across multiple models, with layered approvals, memory reuse, and plugins.",
-  "basis": "b6e525f9357b",
-  "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:20.025Z"
- },
  "Sam-Hui-dot/mcd-budget-meal": {
   "text": "A skill that uses McDonald's MCP to check real prices, compare meals against a budget, and swap menu items.",
   "basis": "d0f3a3f39609",
@@ -173,17 +167,17 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:04.388Z"
  },
- "ddcat-ai/open-ai-canvas": {
-  "text": "Open-source infinite canvas workbench for AI film and video creation with storyboards and multimodal generation.",
-  "basis": "9b7a17fdd9bb",
-  "source": "claude -p",
-  "generatedAt": "2026-10-14T05:13:51.884Z"
- },
  "dofastted/vm2api": {
   "text": "Gateway that exposes Claude and ChatGPT subscriptions as standard APIs using isolated virtual machines or containers.",
   "basis": "84de5ce1f09e",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:22.579Z"
+ },
+ "elliothux/open-compute": {
+  "text": "A self-hosted platform that runs Cloudflare Workers-compatible code and services like KV, D1 and R2 from one Rust binary.",
+  "basis": "fb3514586f3f",
+  "source": "claude -p",
+  "generatedAt": "2026-10-16T02:21:55.677Z"
  },
  "emo-xiaoyu/harness-mix": {
   "text": "Connects multiple coding agents such as Claude Code to the Codex Desktop UI and lets tasks hand off between them.",
@@ -202,12 +196,6 @@
   "basis": "e008fd70579f",
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:55.411Z"
- },
- "fumingyang2004/Tulpa": {
-  "text": "Windows tool that lets desktop AI agents read local QQ and WeChat data via MCP and join QQ group chats as a member.",
-  "basis": "4860105aec26",
-  "source": "claude -p",
-  "generatedAt": "2026-10-14T05:13:39.333Z"
  },
  "gzxx-2025/aid-studio": {
   "text": "An open-source, self-hostable platform for making AI motion comics, short dramas, films and comics, from script to voiceover.",
@@ -233,23 +221,11 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:39.533Z"
  },
- "jundizhou/easy-stock": {
-  "text": "AI-assisted desktop workbench for China A-share market analysis, stock research and post-market reviews.",
-  "basis": "c4dc32f794fa",
-  "source": "claude -p",
-  "generatedAt": "2026-10-14T05:14:21.155Z"
- },
  "linguo2625469/workbuddy2api-panel": {
   "text": "Multi-account gateway that serves Tencent WorkBuddy accounts as an OpenAI-compatible API, with a web admin panel.",
   "basis": "ac22cf43d9d5",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:11:53.650Z"
- },
- "lokicorvus/crosspet": {
-  "text": "A desktop pet for Mac and Windows that changes to match the AI you use and acts out what the AI is currently doing.",
-  "basis": "80760d96642e",
-  "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:26.836Z"
  },
  "lvzuojing/mcd-wrapped": {
   "text": "A toolkit built on the McDonald's MCP that probes its tools and generates personal yearly and public data reports.",
@@ -269,17 +245,11 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:11:51.084Z"
  },
- "panxunying/ai-coding-welfare": {
-  "text": "Directory of free relay sites for Claude Code and Codex with auto-updated quotas, models, prices and a setup script.",
-  "basis": "87302e698d3d",
+ "modelscope/ms-cookbook": {
+  "text": "An open-source, hands-on guide to building apps with open-source AI models, covering inference, fine-tuning, RAG and agents.",
+  "basis": "a71768128c0d",
   "source": "claude -p",
-  "generatedAt": "2026-10-14T05:13:38.227Z"
- },
- "ruc-datalab/EvoOntology": {
-  "text": "A plugin for Claude Code and Codex that builds and evolves an ontology layer over data, exposed through MCP tools.",
-  "basis": "6149dde331dc",
-  "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:26.279Z"
+  "generatedAt": "2026-10-16T02:21:58.266Z"
  },
  "sansan0/TrendRadar": {
   "text": "Aggregates trending topics from multiple platforms and RSS, filters by keyword or AI, and pushes alerts to phones.",
@@ -316,5 +286,11 @@
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "youngyangyang04/llm-master": {
+  "text": "A Chinese-language learning roadmap and tutorials for developers covering LLM apps, RAG, agents, fine-tuning, and deployment.",
+  "basis": "b4d0ed911455",
+  "source": "claude -p",
+  "generatedAt": "2026-10-16T02:21:55.855Z"
  }
 }
