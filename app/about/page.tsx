@@ -43,8 +43,13 @@ export default function AboutPage() {
       <ol className="list-decimal space-y-2 pl-5">
         <li>
           Every hour a GitHub Action queries the GitHub Search API for repos created in the last ~90 days around topics
-          like LLMs, AI agents, MCP, RAG and vector databases, local LLMs, coding agents and DevOps, plus recently active
-          popular repos in the same space.
+          like <Link className="underline" href="/category/llm-tooling">LLM tooling</Link>,{" "}
+          <Link className="underline" href="/category/ai-agents">AI agents</Link>,{" "}
+          <Link className="underline" href="/category/mcp">MCP</Link>,{" "}
+          <Link className="underline" href="/category/rag-vector">RAG and vector databases</Link>,{" "}
+          <Link className="underline" href="/category/local-llms">local LLMs</Link>,{" "}
+          <Link className="underline" href="/category/coding-agents">coding agents</Link> and{" "}
+          <Link className="underline" href="/category/devops">DevOps</Link>, plus recently active popular repos in the same space.
         </li>
         <li>It stores an hourly star count for every repo (last 48 hours) and a daily snapshot keyed by UTC date.</li>
         <li>
@@ -84,8 +89,7 @@ export default function AboutPage() {
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Who&apos;s behind it</h2>
       <p>
         Built by <a className="underline" href={SITE.github}>{SITE.owner}</a>. Want your product in front of this
-        audience? See <Link className="underline" href="/sponsor">sponsorship</Link>. You can also follow along via{" "}
-        <a className="underline" href="/rss.xml">RSS</a>.
+        audience? See <Link className="underline" href="/sponsor">sponsorship</Link>.
       </p>
 
       <NewsletterForm />
