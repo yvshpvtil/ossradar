@@ -1,0 +1,12 @@
+{
+ "fullName": "feder-cr/git-ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Source control for the age of coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "38dd0ffe197d",
+ "version": 1,
+ "generatedAt": "2026-10-16T13:57:35.926Z"
+}
