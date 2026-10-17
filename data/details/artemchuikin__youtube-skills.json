@@ -1,0 +1,12 @@
+{
+ "fullName": "artemchuikin/youtube-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add artemchuikin/youtube-skills --skill youtube-full",
+ "source": "readme",
+ "readmeSummary": "An Agent Skill is a folder of instructions an agent loads when the task matches. The 12 skills in this repo cover YouTube end to end.",
+ "extractor": "heuristic",
+ "readmeHash": "3595a0778d2f",
+ "version": 1,
+ "generatedAt": "2026-10-17T05:48:26.936Z"
+}

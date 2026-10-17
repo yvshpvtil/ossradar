@@ -1,0 +1,12 @@
+{
+ "fullName": "jddevtime/open-lakehouse-compute-fabric",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/jddevtime/open-lakehouse-compute-fabric/main/scripts/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "An open-source lakehouse platform that extends Microsoft Fabric with Spark compute you own, and also runs completely on its own.",
+ "extractor": "heuristic",
+ "readmeHash": "feda0b093dd2",
+ "version": 1,
+ "generatedAt": "2026-10-17T05:48:26.924Z"
+}
