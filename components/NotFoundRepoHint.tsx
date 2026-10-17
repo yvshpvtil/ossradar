@@ -1,16 +1,19 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const REPO_PATH = /^\/(?:repo|alternatives)\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)\/?$/;
 
 /**
  * On a 404 for /repo/{owner}/{name} or /alternatives/{owner}/{name} (usually a repo that
  * dropped out of the tracked set since a newsletter or post linked it), point to the repo
- * on GitHub so the visitor still reaches what they came for.
+ * on GitHub so the visitor still reaches what they came for. The 404 page is prerendered
+ * (the proxy rewrites to it), so read the real URL after mount to avoid a hydration mismatch.
  */
 export function NotFoundRepoHint() {
-  const pathname = usePathname() ?? "";
+  const [pathname, setPathname] = useState("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- the URL is only known in the browser
+  useEffect(() => setPathname(window.location.pathname), []);
   const m = REPO_PATH.exec(pathname);
   if (!m) return null;
   const fullName = `${m[1]}/${m[2]}`;
