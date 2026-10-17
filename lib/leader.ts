@@ -72,3 +72,6 @@ export function leaderMeta(repos: Repo[], refMs: number): LeaderMeta {
     newWeekCount: repos.filter((r) => refMs - Date.parse(r.createdAt) <= 7 * 86_400_000).length,
   };
 }
+
+/** Rows the leaderboard renders before "Show more" (the rest load client-side, so they aren't in the HTML). */
+export const LEADERBOARD_PAGE = 50;

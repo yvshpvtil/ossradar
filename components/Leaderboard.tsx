@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
-import type { LeaderMeta, LeaderRepo } from "@/lib/leader";
+import { LEADERBOARD_PAGE, type LeaderMeta, type LeaderRepo } from "@/lib/leader";
 import type { CategorySlug } from "@/lib/types";
 import { Sparkline } from "./Sparkline";
 import { WatchButton } from "./WatchButton";
@@ -15,7 +15,7 @@ import { InlineSignup } from "./InlineSignup";
 import { Fragment } from "react";
 
 type Period = "today" | "week";
-const PAGE = 50;
+const PAGE = LEADERBOARD_PAGE;
 const WEEK_MS = 7 * 86_400_000;
 
 const pill = (active: boolean) =>
