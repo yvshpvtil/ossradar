@@ -1,0 +1,12 @@
+{
+ "fullName": "NirDiamant/agents-towards-production",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r meeting-recorder-agent/requirements.txt",
+ "source": "readme",
+ "readmeSummary": "Agents Towards Production is your go‑to resource for building production‑ready GenAI agents that scale from prototype to enterprise.",
+ "extractor": "heuristic",
+ "readmeHash": "a3ccd5624331",
+ "version": 1,
+ "generatedAt": "2026-10-17T15:46:45.285Z"
+}
