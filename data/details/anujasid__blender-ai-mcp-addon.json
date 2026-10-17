@@ -1,0 +1,12 @@
+{
+ "fullName": "anujasid/blender-ai-mcp-addon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An AI assistant for Blender that can inspect your scene, build objects, edit materials, find assets and carry out multi-step workflows—with…",
+ "extractor": "heuristic",
+ "readmeHash": "a1ac47fa475b",
+ "version": 1,
+ "generatedAt": "2026-10-17T09:48:29.838Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "openfilm/openfilm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add openfilm/openfilm",
+ "source": "readme",
+ "readmeSummary": "OpenFilm lets your coding agent make videos, and lets you edit them.",
+ "extractor": "heuristic",
+ "readmeHash": "e3c81aa4875b",
+ "version": 1,
+ "generatedAt": "2026-10-17T09:48:29.840Z"
+}

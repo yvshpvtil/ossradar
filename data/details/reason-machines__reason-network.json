@@ -1,0 +1,12 @@
+{
+ "fullName": "reason-machines/reason-network",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Your agents, talking to your teammates' agents.",
+ "extractor": "heuristic",
+ "readmeHash": "56a3a36dec3a",
+ "version": 1,
+ "generatedAt": "2026-10-17T09:48:29.834Z"
+}
