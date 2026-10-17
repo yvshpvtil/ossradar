@@ -43,11 +43,11 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${label} repos`, ranked)} />
-      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Topics", path: "/topic" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
-          <Link href="/" className="hover:underline">Home</Link> / <span className="text-zinc-700 dark:text-zinc-300">Topic: {label}</span>
+          <Link href="/" className="hover:underline">Home</Link> / <Link href="/topic" className="hover:underline">Topics</Link> / <span className="text-zinc-700 dark:text-zinc-300">Topic: {label}</span>
         </nav>
       </div>
       <section className="mb-6">

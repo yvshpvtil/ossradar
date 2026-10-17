@@ -63,6 +63,7 @@ export function Footer() {
           <Link href="/hacker-news" className="hover:underline">On Hacker News</Link> ·{" "}
           <Link href="/compare" className="hover:underline">Compare repos</Link> ·{" "}
           <Link href="/alternatives" className="hover:underline">Alternatives</Link> ·{" "}
+          <Link href="/topic" className="hover:underline">Topics</Link> ·{" "}
           <Link href="/submit" className="hover:underline">Submit a repo</Link> ·{" "}
           <Link href="/about" className="hover:underline">About</Link> ·{" "}
           <Link href="/sponsor" className="hover:underline">Sponsor</Link> ·{" "}

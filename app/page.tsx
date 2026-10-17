@@ -99,6 +99,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <p className="mt-3 text-sm">
+            <Link href="/topic" className="text-indigo-700 hover:underline dark:text-indigo-300">{`All ${getTopics().length} topics →`}</Link>
+          </p>
         </section>
       )}
       <section className="mt-8">
