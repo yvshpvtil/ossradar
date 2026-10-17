@@ -41,8 +41,9 @@ export function proxy(req: NextRequest) {
     if (!parts[1] || !getCategory(parts[1])) return notFound();
   } else if (parts[0] === "trending") {
     if (!parts[1] || !getLanding(parts[1])) return notFound();
-  } else if (parts[0] === "language") {
-    if (!parts[1] || (parts.length > 2 && parts[2] !== "opengraph-image") || !getLanguage(parts[1])) return notFound();
+  } else if (parts[0] === "language" && parts.length > 1) {
+    // Bare /language is the index page; only hub slugs are checked.
+    if ((parts.length > 2 && parts[2] !== "opengraph-image") || !getLanguage(parts[1])) return notFound();
   } else if (parts[0] === "topic" && parts.length > 1) {
     // Bare /topic is the index page; only hub slugs are checked.
     if ( (parts.length > 2 && parts[2] !== "opengraph-image") || !hasTopicPage(parts[1])) return notFound();

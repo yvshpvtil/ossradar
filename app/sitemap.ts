@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/hacker-news`, lastModified, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE.url}/alternatives`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/topic`, lastModified, changeFrequency: "daily", priority: 0.6 },
+    { url: `${SITE.url}/language`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/compare`, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE.url}/about`, changeFrequency: "monthly", priority: 0.4 },

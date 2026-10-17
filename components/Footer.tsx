@@ -49,6 +49,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/language" className="text-indigo-700 hover:underline dark:text-indigo-300">
+                {`All ${getLanguages().length} languages →`}
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -64,6 +69,7 @@ export function Footer() {
           <Link href="/compare" className="hover:underline">Compare repos</Link> ·{" "}
           <Link href="/alternatives" className="hover:underline">Alternatives</Link> ·{" "}
           <Link href="/topic" className="hover:underline">Topics</Link> ·{" "}
+          <Link href="/language" className="hover:underline">Languages</Link> ·{" "}
           <Link href="/submit" className="hover:underline">Submit a repo</Link> ·{" "}
           <Link href="/about" className="hover:underline">About</Link> ·{" "}
           <Link href="/sponsor" className="hover:underline">Sponsor</Link> ·{" "}
