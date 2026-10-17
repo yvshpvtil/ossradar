@@ -1,0 +1,12 @@
+{
+ "fullName": "aicodeking/leanrea",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add aicodeking/leanrea",
+ "source": "readme",
+ "readmeSummary": "One 8 KB skill file that does what REA does: no MCP server, no 207 tools, no setup.",
+ "extractor": "heuristic",
+ "readmeHash": "b3f047841e85",
+ "version": 1,
+ "generatedAt": "2026-10-17T12:56:22.869Z"
+}

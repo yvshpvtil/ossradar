@@ -1,0 +1,12 @@
+{
+ "fullName": "kergee/mcd-undercover",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "把今天的菜单，变成朋友之间的推理局。",
+ "extractor": "heuristic",
+ "readmeHash": "7e2a95986adb",
+ "version": 1,
+ "generatedAt": "2026-10-17T12:56:22.866Z"
+}
