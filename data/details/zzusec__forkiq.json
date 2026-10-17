@@ -1,0 +1,12 @@
+{
+ "fullName": "zzusec/forkiq",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "管理自己的 GitHub fork，让它们跟上上游；同步失败必须看得见。",
+ "extractor": "heuristic",
+ "readmeHash": "0b9776014e71",
+ "version": 1,
+ "generatedAt": "2026-10-17T02:51:04.943Z"
+}
