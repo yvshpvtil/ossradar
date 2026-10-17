@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/daily`, lastModified, changeFrequency: "daily", priority: 0.7 },
     ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, lastModified: new Date(`${d}T23:59:59Z`), changeFrequency: "yearly" as const, priority: 0.5 })),
     { url: `${SITE.url}/hacker-news`, lastModified, changeFrequency: "daily", priority: 0.7 },
+    { url: `${SITE.url}/alternatives`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/compare`, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE.url}/about`, changeFrequency: "monthly", priority: 0.4 },

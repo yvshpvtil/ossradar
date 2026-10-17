@@ -28,6 +28,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [Hacker News mentions](${SITE.url}/hacker-news): tracked repos discussed on Hacker News
 - [Compare repos](${SITE.url}/compare): side-by-side stars, growth, forks, releases and Hacker News discussion for up to 3 tracked repos
 - [Submit a repo](${SITE.url}/submit): suggest an open-source AI or developer-tool repo to track (free, reviewed by hand)
+- [Open-source alternatives](${SITE.url}/alternatives): every alternatives page, grouped by category
 - [About and methodology](${SITE.url}/about)
 ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.description}`).join("\n")}
 

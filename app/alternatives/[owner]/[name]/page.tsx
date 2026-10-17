@@ -89,7 +89,8 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
       </ol>
       <p className="mt-8 text-sm text-zinc-600 dark:text-zinc-400">
         More: <Link className="underline" href={`/category/${repo.category}`}>all trending {cat} repos</Link> ·{" "}
-        <Link className="underline" href={`/compare?r=${[repo, ...alts.slice(0, 2).map((a) => a.repo)].map((r) => r.fullName).join(",")}`}>compare {repo.name} with the top 2</Link>
+        <Link className="underline" href={`/compare?r=${[repo, ...alts.slice(0, 2).map((a) => a.repo)].map((r) => r.fullName).join(",")}`}>compare {repo.name} with the top 2</Link> ·{" "}
+        <Link className="underline" href="/alternatives">alternatives to other trending repos</Link>
       </p>
     </article>
   );
