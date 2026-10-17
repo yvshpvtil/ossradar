@@ -188,7 +188,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
           <BackButton fallbackHref="/" />
           <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
-            <Link href="/" className="hover:underline">Home</Link> /{" "}<Link href={`/category/${repo.category}`} className="hover:underline">{categoryLabel(repo.category)}</Link> /{" "}<span className="break-all text-zinc-700 dark:text-zinc-300">{repo.name}</span>
+            <Link href="/" className="hover:underline">Home</Link> /{" "}<Link href={`/category/${repo.category}`} className="hover:underline">{categoryLabel(repo.category)}</Link> /{" "}<span className="break-all text-zinc-700 dark:text-zinc-300">{repo.fullName}</span>
           </nav>
         </div>
         <header className="flex items-center gap-3">

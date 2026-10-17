@@ -36,7 +36,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/daily" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
-          <Link href="/" className="hover:underline">Home</Link> / <Link href="/daily" className="hover:underline">Daily archive</Link> / <span className="text-zinc-700 dark:text-zinc-300">{date}</span>
+          <Link href="/" className="hover:underline">Home</Link> / <Link href="/daily" className="hover:underline">Daily archive</Link> / <span className="text-zinc-700 dark:text-zinc-300">{formatDate(date)}</span>
         </nav>
       </div>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Top rising repos on {formatDate(date)}</h1>

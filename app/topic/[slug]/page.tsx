@@ -42,7 +42,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${label} repos`, ranked)} />
-      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: label, path: `/topic/${slug}` }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
