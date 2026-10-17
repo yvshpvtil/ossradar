@@ -18,7 +18,7 @@ import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
 import { getHnMentions } from "@/lib/mentions";
-import { hasTopicPage, topicLabel } from "@/lib/topics";
+import { hasTopicPage, repoTopics, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
 import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
@@ -319,7 +319,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
 
         {repo.topics.length > 0 && (
           <ul className="mt-6 flex flex-wrap gap-1.5">
-            {repo.topics.map((t) => (
+            {repoTopics(repo).map((t) => (
               <li key={t}>
                 {hasTopicPage(t) ? (
                   <Link href={`/topic/${t}`} className="block rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-950">{topicLabel(t)}</Link>

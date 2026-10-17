@@ -30,13 +30,8 @@ export default function Home() {
   const trending = rankRepos(data.repos, "today").filter((r) => r.fullName !== spotlight?.fullName).slice(0, 6);
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   // Most-used topics that have a hub page; skip singular/plural twins (ai-agent vs ai-agents) so the row isn't repetitive.
-  const seenTopics = new Set<string>();
-  const popularTopics = getTopics().filter((t) => {
-    const key = t.slug.replace(/s$/, "");
-    if (seenTopics.has(key)) return false;
-    seenTopics.add(key);
-    return true;
-  }).slice(0, 16);
+  // Singular/plural twins (ai-agent/ai-agents) are already folded into one hub by getTopics().
+  const popularTopics = getTopics().slice(0, 16);
   return (
     <>
       <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />

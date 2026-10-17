@@ -10,7 +10,7 @@ import { formatNumber } from "@/lib/format";
 import { toLeaderRepo } from "@/lib/leader";
 import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
-import { getReposByTopic, getTopics, hasTopicPage, topicLabel } from "@/lib/topics";
+import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
 
 export function generateStaticParams() {
   return getTopics().map((t) => ({ slug: t.slug }));
@@ -37,7 +37,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
   const ranked = rankRepos(repos, "week");
   const top = ranked.slice(0, 3);
   const weekTotal = repos.reduce((n, r) => n + r.delta7d, 0);
-  const related = getTopics().filter((t) => t.slug !== slug).map((t) => ({ ...t, overlap: repos.filter((r) => r.topics.includes(t.slug)).length }))
+  const related = getTopics().filter((t) => t.slug !== slug).map((t) => ({ ...t, overlap: repos.filter((r) => repoTopics(r).includes(t.slug)).length }))
     .filter((t) => t.overlap >= 3).sort((a, b) => b.overlap - a.overlap).slice(0, 12);
   return (
     <>
@@ -53,7 +53,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Topic</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {label} repos</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
-          Repos whose maintainers tagged them <span className="font-mono">{slug}</span> on GitHub (topics are labels that describe what a project is about), ranked by stars gained.
+          Repos whose maintainers tagged them {topicVariants(slug).map((v, i) => (<span key={v}>{i > 0 && " or "}<span className="font-mono">{v}</span></span>))} on GitHub (topics are labels that describe what a project is about), ranked by stars gained.
         </p>
         {top.length > 0 && (
           <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">

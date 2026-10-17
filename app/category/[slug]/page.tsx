@@ -16,7 +16,7 @@ import { toLeaderRepo } from "@/lib/leader";
 
 /** Search-intent phrasing per category (what people actually type). */
 const CATEGORY_SEO_TITLE: Record<string, string> = {
-  // Distinct from the /topic/ai-agent hub title ("Trending AI agent GitHub repos"), which this used to duplicate.
+  // Distinct from the AI agents topic hub title, which this used to duplicate (/topic/ai-agent now redirects to /topic/ai-agents).
   "ai-agents": "Trending AI agent frameworks on GitHub",
   "llm-tooling": "Trending LLM tools & frameworks on GitHub",
   mcp: "Best MCP servers & tools on GitHub, by star growth",
