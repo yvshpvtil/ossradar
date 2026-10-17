@@ -77,6 +77,12 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{a.repo.oneLiner}</p>
             <p className="mt-2 text-xs text-zinc-500">
               {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""} · shared topics: {a.sharedTopics.join(", ")}
+              {hasAlternativesPage(a.repo) && (
+                <>
+                  {" · "}
+                  <Link className="underline" href={alternativesPath(a.repo)}>{a.repo.name} alternatives</Link>
+                </>
+              )}
             </p>
           </li>
         ))}
