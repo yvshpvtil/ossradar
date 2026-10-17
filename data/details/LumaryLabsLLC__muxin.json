@@ -1,0 +1,12 @@
+{
+ "fullName": "LumaryLabsLLC/muxin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask lumarylabsllc/tap/muxin",
+ "source": "readme",
+ "readmeSummary": "Agents can also borrow a machine as a work environment: an agent workspace is a persistent folder (optionally a git checkout) on one of your…",
+ "extractor": "heuristic",
+ "readmeHash": "0730e239964d",
+ "version": 1,
+ "generatedAt": "2026-10-17T08:49:41.656Z"
+}
