@@ -1,0 +1,12 @@
+{
+ "fullName": "Lin-Chai49/home-solar-ess",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A local simulator for a household rooftop solar array plus a battery. It is a single Python process and a one-page web UI.",
+ "extractor": "heuristic",
+ "readmeHash": "74dd420adf28",
+ "version": 1,
+ "generatedAt": "2026-10-17T17:45:17.351Z"
+}
