@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { getData, rankRepos } from "@/lib/data";
-import { getArchiveDays } from "@/lib/daily";
+import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
@@ -26,9 +26,12 @@ export const metadata: Metadata = {
 export default function DailyIndex() {
   const days = getArchiveDays();
   const live = rankRepos(getData().repos, "today").slice(0, 5);
+  // Each archived day with its top 3, so the index says what happened that day (and links those repo pages), not just a list of dates.
+  const past = days.map((d) => ({ date: d, top: getDailyTop(d, 3) }));
   return (
     <div className="max-w-3xl">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }])} />
+      {days.length > 0 && <JsonLd data={linkListLd("OSS Radar daily archive", days.map((d) => ({ name: `Fastest-rising GitHub repos on ${formatDate(d)}`, url: abs(`/daily/${d}`) })))} />}
       <PageNav crumbs={[{ name: "Daily archive" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive</h1>
@@ -52,8 +55,26 @@ export default function DailyIndex() {
         <p className="mt-2 text-sm text-zinc-500">The first full day is archived once we have two consecutive daily snapshots. Check back tomorrow.</p>
       ) : (
         <ul className="mt-2 divide-y divide-zinc-200 dark:divide-zinc-800">
-          {days.map((d) => (
-            <li key={d}><Link className="block py-2 hover:underline" href={`/daily/${d}`}>{formatDate(d)}</Link></li>
+          {past.map(({ date, top }) => (
+            <li key={date} className="py-3">
+              <Link className="font-medium hover:underline" href={`/daily/${date}`}>Top repos on {formatDate(date)}</Link>
+              {top.length > 0 && (
+                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  {top.map((e, i) => (
+                    <span key={e.fullName}>
+                      {i > 0 && ", "}
+                      {i + 1}.{" "}
+                      {e.repo ? (
+                        <Link className="hover:underline" href={repoPath(e.repo)}>{e.fullName}</Link>
+                      ) : (
+                        e.fullName
+                      )}{" "}
+                      <span className="text-emerald-700 dark:text-emerald-400">+{formatNumber(e.gained)}</span>
+                    </span>
+                  ))}
+                </p>
+              )}
+            </li>
           ))}
         </ul>
       )}
