@@ -1,0 +1,12 @@
+{
+ "fullName": "Jakeschincariol/arena-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "When Claude keeps giving you bad answers, make 100 versions of it fight to the death. One Claude Code skill.",
+ "extractor": "heuristic",
+ "readmeHash": "c8f23f8d0120",
+ "version": 1,
+ "generatedAt": "2026-10-17T01:02:45.854Z"
+}

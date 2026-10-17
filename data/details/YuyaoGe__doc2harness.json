@@ -1,0 +1,12 @@
+{
+ "fullName": "YuyaoGe/doc2harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull ghcr.io/yuyaoge/doc2harness-builder:latest",
+ "source": "readme",
+ "readmeSummary": "Doc2Harness measures how well a model can build a working coding agent — the harness itself — rather than how well it writes a patch inside…",
+ "extractor": "heuristic",
+ "readmeHash": "2d540c52ec68",
+ "version": 1,
+ "generatedAt": "2026-10-17T01:02:45.855Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "receptron/laya",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @receptron/laya",
+ "source": "readme",
+ "readmeSummary": "Run Laya — the open-source, Jev-compatible System 1 decision model by Convai Innovations — from Node.js / TypeScript.",
+ "extractor": "heuristic",
+ "readmeHash": "3d0c191d878a",
+ "version": 1,
+ "generatedAt": "2026-10-17T01:02:45.845Z"
+}

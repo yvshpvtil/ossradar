@@ -1,0 +1,12 @@
+{
+ "fullName": "Caho1/open-claude-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "open-claude-ui 是基于对现代桌面端 AI 客户端进行深度拆解与逆向分析构建的高保真开源 UI 组件库与动效引擎。",
+ "extractor": "heuristic",
+ "readmeHash": "5b1b2bb7249d",
+ "version": 1,
+ "generatedAt": "2026-10-17T01:02:45.851Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "djkcyl/farwing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Farwing 是一个用 Rust 编写的远程桌面与串流项目。我们想让你在另一台设备上舒服地使用自己的电脑：继续工作、玩一局游戏，或者邀请别人一起看、一起操作。",
+ "extractor": "heuristic",
+ "readmeHash": "4125091f7e94",
+ "version": 1,
+ "generatedAt": "2026-10-17T01:02:46.058Z"
+}
