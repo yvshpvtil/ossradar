@@ -1,0 +1,16 @@
+{
+ "fullName": "georgevibing/conch-agent",
+ "whoItsFor": null,
+ "useCases": [
+  "Every model you have, one picker. The plans you already pay for, with their own",
+  "It says what it is doing, in plain words. Each run of work is one line, like",
+  "It does not give up at the first error. Every model reads what went wrong, tries"
+ ],
+ "installCommand": "curl -fsSL https://conchagent.com/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Download it, open it, sign in with a plan you already pay for or paste a key. That is the setup.",
+ "extractor": "heuristic",
+ "readmeHash": "a07aeeb2c671",
+ "version": 1,
+ "generatedAt": "2026-10-17T04:50:34.419Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "sixtysevenlf/dsh-blender-plugin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This plugin is open source and free (BSD-3-Clause): every feature is available to everyone — no paywall, no license key, no \"sponsor…",
+ "extractor": "heuristic",
+ "readmeHash": "aece1346cab7",
+ "version": 1,
+ "generatedAt": "2026-10-17T04:50:34.394Z"
+}
