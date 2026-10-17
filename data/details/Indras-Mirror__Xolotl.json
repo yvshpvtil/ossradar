@@ -1,0 +1,12 @@
+{
+ "fullName": "Indras-Mirror/Xolotl",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "One RTX 4090 (24 GB) · Ryzen 7 5700X · 90 GB DDR4 · one NVMe drive. Every number is measured on that machine, through the real server, while…",
+ "extractor": "heuristic",
+ "readmeHash": "0ee359722c8f",
+ "version": 1,
+ "generatedAt": "2026-10-17T22:44:33.269Z"
+}
