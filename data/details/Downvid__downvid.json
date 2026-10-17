@@ -1,0 +1,12 @@
+{
+ "fullName": "Downvid/downvid",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name downvid -p 6080:6080 \\",
+ "source": "readme",
+ "readmeSummary": "Please use the issue tracker for bug reports and feature requests instead, so that other users can find the answers too.",
+ "extractor": "heuristic",
+ "readmeHash": "74bda8151955",
+ "version": 1,
+ "generatedAt": "2026-10-17T10:47:32.512Z"
+}
