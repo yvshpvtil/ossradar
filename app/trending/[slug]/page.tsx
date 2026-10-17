@@ -39,7 +39,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
   return (
     <>
       <JsonLd data={itemListLd(l.h1, repos)} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: l.title, path }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: l.title, path }])} />
       <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{l.h1}</h1>

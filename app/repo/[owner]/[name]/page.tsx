@@ -173,7 +173,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     },
   };
   const crumbs = breadcrumbLd([
-    { name: "Leaderboard", path: "/" },
+    { name: "Home", path: "/" },
     { name: categoryLabel(repo.category), path: `/category/${repo.category}` },
     { name: repo.fullName, path: repoPath(repo) },
   ]);

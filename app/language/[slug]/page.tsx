@@ -47,7 +47,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${lang.name} repos`, ranked)} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: lang.name, path }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: lang.name, path }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">

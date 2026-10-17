@@ -29,7 +29,7 @@ export default function HackerNewsPage() {
   return (
     <div className="max-w-3xl">
       <JsonLd data={linkListLd("GitHub repos trending on Hacker News this month", rows)} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Repos trending on Hacker News</h1>

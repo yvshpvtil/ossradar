@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function SubmitPage() {
   return (
     <div className="max-w-2xl">
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Submit a repo", path: "/submit" }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Submit a repo", path: "/submit" }])} />
       <PageNav crumbs={[{ name: "Submit a repo" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Submit</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Submit a repo</h1>

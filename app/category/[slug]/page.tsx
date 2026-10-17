@@ -84,7 +84,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${category.label} repos`, ranked)} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: category.label, path }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: category.label, path }])} />
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />
       <div className="min-w-0">

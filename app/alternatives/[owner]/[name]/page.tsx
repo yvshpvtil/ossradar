@@ -48,7 +48,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
       />
       <JsonLd
         data={breadcrumbLd([
-          { name: "Leaderboard", path: "/" },
+          { name: "Home", path: "/" },
           { name: cat, path: `/category/${repo.category}` },
           { name: repo.fullName, path: repoPath(repo) },
           { name: "Alternatives", path },

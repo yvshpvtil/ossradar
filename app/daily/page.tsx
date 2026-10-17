@@ -28,7 +28,7 @@ export default function DailyIndex() {
   const live = rankRepos(getData().repos, "today").slice(0, 5);
   return (
     <div className="max-w-3xl">
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Daily archive", path: "/daily" }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }])} />
       <PageNav crumbs={[{ name: "Daily archive" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive</h1>

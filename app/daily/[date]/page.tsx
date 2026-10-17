@@ -32,7 +32,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
   return (
     <div className="max-w-3xl">
       <JsonLd data={linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Daily archive", path: "/daily" }, { name: formatDate(date), path: `/daily/${date}` }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }, { name: formatDate(date), path: `/daily/${date}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/daily" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">

@@ -58,7 +58,7 @@ export default function ComparePage() {
   return (
     <div>
       <JsonLd data={linkListLd("Popular GitHub repo comparisons", popularItems.map(({ name, url }) => ({ name, url })))} />
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "Compare", path: "/compare" }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Compare", path: "/compare" }])} />
       <PageNav crumbs={[{ name: "Compare" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Compare</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Compare repos side by side</h1>

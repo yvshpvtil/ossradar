@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
-      <JsonLd data={breadcrumbLd([{ name: "Leaderboard", path: "/" }, { name: "About", path: "/about" }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <PageNav crumbs={[{ name: "About" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-900 dark:text-zinc-100">About OSS Radar</h1>
       <p>
