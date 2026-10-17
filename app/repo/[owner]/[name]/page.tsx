@@ -17,6 +17,7 @@ import { breadcrumbLd, clip, repoPageTitle, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { getHourlyStars } from "@/lib/hourly";
+import { getDailyAppearances } from "@/lib/daily";
 import { getHnMentions } from "@/lib/mentions";
 import { hasTopicPage, repoTopics, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
@@ -143,6 +144,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const release = getLatestRelease(repo.fullName);
   const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
+  const daily = getDailyAppearances(repo.fullName);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
@@ -286,6 +288,19 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <section className="mt-6">
           <h2 className="mb-3 text-xl font-semibold tracking-tight">About {repo.name}</h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">{aboutText(repo)}</p>
+          {daily.length > 0 && (
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              It made the {SITE.name} daily top 25 on {daily.length} {daily.length === 1 ? "day" : "days"}
+              {daily.length > 5 ? " (latest 5 shown)" : ""}:{" "}
+              {daily.slice(0, 5).map((a, i, shown) => (
+                <span key={a.date}>
+                  #{a.rank} on <Link className="underline" href={`/daily/${a.date}`}>{formatDate(a.date)}</Link> ({formatDelta(a.gained)} stars)
+                  {i < shown.length - 1 ? "; " : "."}
+                </span>
+              ))}{" "}
+              Browse the full <Link className="underline" href="/daily">daily archive</Link>.
+            </p>
+          )}
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             See more <Link className="underline" href={`/category/${repo.category}`}>trending {categoryLabel(repo.category)} repos</Link> or the{" "}
             <Link className="underline" href="/trending/ai-repos-this-week">top AI repos this week</Link>.

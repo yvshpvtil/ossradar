@@ -33,3 +33,22 @@ export function getDailyTop(date: string, limit = 25): DailyEntry[] {
     .sort((a, b) => b.gained - a.gained)
     .slice(0, limit);
 }
+
+export type DailyAppearance = { date: string; rank: number; gained: number };
+let appearances: Map<string, DailyAppearance[]> | null = null;
+
+/** Archived days on which a repo made the daily top 25, newest first (built once per process). */
+export function getDailyAppearances(fullName: string): DailyAppearance[] {
+  if (!appearances) {
+    const map = new Map<string, DailyAppearance[]>();
+    for (const date of getArchiveDays()) {
+      getDailyTop(date).forEach((e, i) => {
+        const list = map.get(e.fullName) ?? [];
+        list.push({ date, rank: i + 1, gained: e.gained });
+        map.set(e.fullName, list);
+      });
+    }
+    appearances = map;
+  }
+  return appearances.get(fullName) ?? [];
+}
