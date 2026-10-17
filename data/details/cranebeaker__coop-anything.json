@@ -1,0 +1,12 @@
+{
+ "fullName": "cranebeaker/coop-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Want to play a single-player game with your friends? Point your AI coding agent at this repo.",
+ "extractor": "heuristic",
+ "readmeHash": "109e3e3a3f30",
+ "version": 1,
+ "generatedAt": "2026-10-17T18:49:32.756Z"
+}
