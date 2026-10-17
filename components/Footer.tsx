@@ -3,6 +3,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { getLanguages } from "@/lib/languages";
+import { LANDINGS } from "@/lib/landing";
 import { formatDate } from "@/lib/format";
 import { SubscribeButton } from "./NewsletterForm";
 
@@ -10,9 +11,21 @@ export function Footer() {
   const data = getData();
   return (
     <footer className="mt-16 border-t border-zinc-200 dark:border-zinc-800">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 sm:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 sm:grid-cols-5">
         <div className="sm:col-span-2">
           <SubscribeButton />
+        </div>
+        <div className="text-sm">
+          <p className="mb-2 font-semibold">Trending</p>
+          <ul className="space-y-1">
+            {LANDINGS.map((l) => (
+              <li key={l.slug}>
+                <Link href={`/trending/${l.slug}`} className="text-zinc-600 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100">
+                  {l.navLabel}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="text-sm">
           <p className="mb-2 font-semibold">Categories</p>
