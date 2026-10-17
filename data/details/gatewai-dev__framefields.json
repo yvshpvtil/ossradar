@@ -1,0 +1,12 @@
+{
+ "fullName": "gatewai-dev/framefields",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add gatewai-dev/framefields",
+ "source": "readme",
+ "readmeSummary": "Documentation &ensp;·&ensp; Website &ensp;·&ensp; Discord &ensp;·&ensp; Examples",
+ "extractor": "heuristic",
+ "readmeHash": "db4e5875ddda",
+ "version": 1,
+ "generatedAt": "2026-10-17T21:46:38.442Z"
+}
