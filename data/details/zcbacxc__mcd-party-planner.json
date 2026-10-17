@@ -1,0 +1,12 @@
+{
+ "fullName": "zcbacxc/mcd-party-planner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "组织一次多人麦当劳聚餐，真正麻烦的不是点什么，而是三件事同时算清楚：附近哪家门店能吃、多少人吃什么组合、总共花多少钱不超预算。",
+ "extractor": "heuristic",
+ "readmeHash": "58c3d071a4a5",
+ "version": 1,
+ "generatedAt": "2026-10-17T11:45:58.133Z"
+}
