@@ -28,7 +28,8 @@ export function proxy(req: NextRequest) {
       url.pathname = `/repo/${repo.owner}/${repo.name}`;
       return NextResponse.redirect(url, 308);
     }
-  } else if (parts[0] === "alternatives") {
+  } else if (parts[0] === "alternatives" && parts.length > 1) {
+    // Bare /alternatives is the index page; only owner/name paths are checked.
     const repo = parts.length === 3 ? getRepo(parts[1], parts[2]) : undefined;
     if (!repo || !hasAlternativesPage(repo)) return notFound();
     if (repo.owner !== parts[1] || repo.name !== parts[2]) {
