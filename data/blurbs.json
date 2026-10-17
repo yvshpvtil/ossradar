@@ -23,6 +23,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:16.612Z"
  },
+ "Caho1/open-claude-ui": {
+  "text": "React component library that recreates the Claude desktop app UI, with a 3,000+ line reverse-engineering manual.",
+  "basis": "d9f1c4918cb4",
+  "source": "claude -p",
+  "generatedAt": "2026-10-17T02:23:46.033Z"
+ },
  "DSH-APP/DSHA": {
   "text": "Android app that runs the DeepSeek Harness agent on phones in a bundled Ubuntu environment, without root or Termux.",
   "basis": "2a1475664536",
@@ -101,12 +107,6 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.263Z"
  },
- "Yzw202011/OmniSpace": {
-  "text": "A local-first AI creation workstation for chat, comics, comic dramas, writing and learning, with local GPU inference.",
-  "basis": "7cb4b4acd28e",
-  "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:13.691Z"
- },
  "alchaincyf/huashu-art-motion": {
   "text": "A coding-agent skill that animates artwork with code, offering 35 art styles and 9 explainer-video animation styles.",
   "basis": "692e47021792",
@@ -143,12 +143,6 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:29.506Z"
  },
- "cporter202/API-mega-list": {
-  "text": "A collection of 11,860 APIs in 24 categories for building apps and automations, plus 200 sponsored partner listings.",
-  "basis": "a1500baad311",
-  "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:11.272Z"
- },
  "cv-cat/catbus": {
   "text": "A CLI with unified commands and JSON output for Xiaohongshu, Douyin, TikTok, Bilibili, Weibo, Taobao, X and more.",
   "basis": "560bbcba2de7",
@@ -166,6 +160,12 @@
   "basis": "dc30c9ec113f",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:04.388Z"
+ },
+ "djkcyl/farwing": {
+  "text": "Remote desktop and streaming tool written in Rust for work, gaming, and sharing a desktop with others.",
+  "basis": "1a3384269c30",
+  "source": "claude -p",
+  "generatedAt": "2026-10-17T02:23:57.882Z"
  },
  "dofastted/vm2api": {
   "text": "Gateway that exposes Claude and ChatGPT subscriptions as standard APIs using isolated virtual machines or containers.",
@@ -197,11 +197,17 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:55.411Z"
  },
- "gzxx-2025/aid-studio": {
-  "text": "An open-source, self-hostable platform for making AI motion comics, short dramas, films and comics, from script to voiceover.",
-  "basis": "f300e639d52d",
+ "fy-agent/fyagent": {
+  "text": "A desktop app for Windows and macOS that manages models, accounts, skills, MCP servers and prompts across AI tools.",
+  "basis": "3cfb7fb66db7",
   "source": "claude -p",
-  "generatedAt": "2026-10-15T02:25:21.191Z"
+  "generatedAt": "2026-10-17T02:23:46.816Z"
+ },
+ "heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit": {
+  "text": "Toolkit that turns cross-border ecommerce SOPs into 7 reusable AI agent workflows with prompts, templates and cases.",
+  "basis": "8c4cb1c8f2c8",
+  "source": "claude -p",
+  "generatedAt": "2026-10-17T02:23:47.857Z"
  },
  "hujjun/mcd-saver-strategist": {
   "text": "An agent skill that uses McDonald's China MCP to fetch menus and coupons and find the cheapest order combination.",
@@ -221,6 +227,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:39.533Z"
  },
+ "jnMetaCode/agency-agents-zh": {
+  "text": "Chinese edition of agency-agents with 277 AI expert roles across 20 departments for Claude Code, Cursor and Copilot.",
+  "basis": "5bc412c5b438",
+  "source": "claude -p",
+  "generatedAt": "2026-10-17T02:23:46.453Z"
+ },
  "linguo2625469/workbuddy2api-panel": {
   "text": "Multi-account gateway that serves Tencent WorkBuddy accounts as an OpenAI-compatible API, with a web admin panel.",
   "basis": "ac22cf43d9d5",
@@ -239,17 +251,11 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:49.828Z"
  },
- "mhtsec/ARTEX": {
-  "text": "An AI system that runs penetration tests on its own, with a Go backend and a Next.js web interface.",
-  "basis": "2504833adbfb",
+ "ruc-datalab/EvoOntology": {
+  "text": "MCP plugin for Claude Code and Codex that builds an ontology layer from your data and evolves it from agent interactions.",
+  "basis": "6149dde331dc",
   "source": "claude -p",
-  "generatedAt": "2026-10-14T05:11:51.084Z"
- },
- "modelscope/ms-cookbook": {
-  "text": "An open-source, hands-on guide to building apps with open-source AI models, covering inference, fine-tuning, RAG and agents.",
-  "basis": "a71768128c0d",
-  "source": "claude -p",
-  "generatedAt": "2026-10-16T02:21:58.266Z"
+  "generatedAt": "2026-10-17T02:24:00.631Z"
  },
  "sansan0/TrendRadar": {
   "text": "Aggregates trending topics from multiple platforms and RSS, filters by keyword or AI, and pushes alerts to phones.",
@@ -275,22 +281,10 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:04.743Z"
  },
- "trhhubsd/ARTEXX": {
-  "text": "An AI system that runs autonomous penetration tests, with a Go backend and a Next.js web interface.",
-  "basis": "b17e6775c1b3",
-  "source": "claude -p",
-  "generatedAt": "2026-10-14T05:11:54.402Z"
- },
  "xqy2006/ModelTrace": {
   "text": "Local tool that matches an AI model to a known model family and version by fingerprinting its number outputs.",
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
- },
- "youngyangyang04/llm-master": {
-  "text": "A Chinese-language learning roadmap and tutorials for developers covering LLM apps, RAG, agents, fine-tuning, and deployment.",
-  "basis": "b4d0ed911455",
-  "source": "claude -p",
-  "generatedAt": "2026-10-16T02:21:55.855Z"
  }
 }
