@@ -1,0 +1,12 @@
+{
+ "fullName": "mikamikasuki/forest",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give it a research question. Turn it into ideas, real experiments, evidence, and a complete paper.",
+ "extractor": "heuristic",
+ "readmeHash": "43e92accdbb1",
+ "version": 1,
+ "generatedAt": "2026-10-17T07:48:12.519Z"
+}
