@@ -2,7 +2,9 @@ import { CATEGORIES, categoryLabel } from "./categories";
 import { getData, getReposByCategory, rankRepos } from "./data";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
+import { getLanguages } from "./languages";
 import { SITE } from "./site";
+import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
 
 const line = (r: Repo) =>
@@ -36,13 +38,23 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Repo page: ${SITE.url}/repo/{owner}/{name} (stars, 24h and 7-day gains, star history, latest release, Hacker News mentions)
 - Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics; only for repos with at least 3)
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
-- By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python
-- By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp
+- By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
+- By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name}
 
 ## Categories
 
 ${CATEGORIES.map((c) => `- [${c.label}](${SITE.url}/category/${c.slug}): ${c.description}`).join("\n")}
+
+## Topic hubs
+
+GitHub topics used by at least ${TOPIC_MIN} tracked repos, most used first (singular and plural spellings share one page):
+
+${getTopics().map((t) => `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug}): ${t.count} repos`).join("\n")}
+
+## Languages
+
+${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.count} repos`).join("\n")}
 
 ## Data access
 
