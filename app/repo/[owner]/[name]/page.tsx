@@ -16,6 +16,7 @@ import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { breadcrumbLd, clip, repoPageTitle, repoPath } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
+import { stripWhy } from "@/lib/blurb";
 import { getHourlyStars } from "@/lib/hourly";
 import { getDailyAppearances } from "@/lib/daily";
 import { getHnMentions } from "@/lib/mentions";
@@ -56,17 +57,38 @@ export function generateStaticParams() {
   return getRepos().map((r) => ({ owner: r.owner, name: r.name }));
 }
 
-/** Whole sentences that fit in `room`; only word-clip (with …) when even the first sentence is too long. */
+// Abbreviations whose trailing dot is not a sentence end ("Matrix e.g. Integrated with …").
+const ABBREV_END = /(?:^|[\s(])(?:e\.g|i\.e|etc|vs|incl|approx|cf|ca|al)\.$/i;
+
+/**
+ * Leading whole sentences, contiguous from the start of the text. A sentence ends at . ! ? 。 followed by
+ * whitespace or the end, never inside "draw.io", "llama.cpp" or after "e.g.". The old regex matched sentences
+ * anywhere, so when the first one had no clean end it skipped ahead and led with fragments like "g." or "io diagrams".
+ */
+function leadingSentences(t: string): string[] {
+  const out: string[] = [];
+  let start = 0;
+  for (const m of t.matchAll(/[.!?。]+(?=\s|$)|。/g)) {
+    const end = m.index + m[0].length;
+    const sentence = t.slice(start, end).trim();
+    if (ABBREV_END.test(sentence)) continue;
+    if (sentence) out.push(sentence);
+    start = end;
+  }
+  return out;
+}
+
+/** Whole leading sentences that fit in `room`; otherwise a word-clip (with …) of the start. Drops the template's generic "Why it matters" line. */
 function metaLead(text: string, room: number): string {
-  const t = text.replace(/\s+/g, " ").trim();
+  const t = stripWhy(text.replace(/\s+/g, " ").trim());
   if (t.length <= room) return t;
   let out = "";
-  for (const sentence of t.match(/[^.!?。]+[.!?。]+(?=\s|$)/g) ?? []) {
-    const next = `${out}${sentence}`.trim();
+  for (const sentence of leadingSentences(t)) {
+    const next = `${out} ${sentence}`.trim();
     if (next.length > room) break;
-    out = `${next} `;
+    out = next;
   }
-  return out.trim() || clip(t, room);
+  return out || clip(t, room).replace(/[\s,;:(\-–—/]+…$/, "…");
 }
 
 export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[name]">): Promise<Metadata> {
