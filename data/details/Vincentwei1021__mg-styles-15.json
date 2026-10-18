@@ -1,0 +1,12 @@
+{
+ "fullName": "Vincentwei1021/mg-styles-15",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Fifteen styles, one 10-second film each, all made by Claude Opus 5.5 writing code.",
+ "extractor": "heuristic",
+ "readmeHash": "922b510151b1",
+ "version": 1,
+ "generatedAt": "2026-10-18T01:02:46.265Z"
+}

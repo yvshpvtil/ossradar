@@ -1,0 +1,12 @@
+{
+ "fullName": "jwuthri-cloud/Tracely-ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"tracelyai-sdk[openai]\"     # or [anthropic], [langchain], [all]",
+ "source": "readme",
+ "readmeSummary": "Trace-native CI/CD for AI agents. Tracely grades every agent trace as it lands, clusters the failures into issues, freezes the bad runs into…",
+ "extractor": "heuristic",
+ "readmeHash": "94b70ff0088a",
+ "version": 1,
+ "generatedAt": "2026-10-18T01:02:46.310Z"
+}
