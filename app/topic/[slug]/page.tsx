@@ -79,7 +79,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
         )}
       </section>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} />
+      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod="week" />
       <HubIndex repos={repos} label={label} />
     </>
   );

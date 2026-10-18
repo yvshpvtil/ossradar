@@ -116,7 +116,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       </section>
       <CategoryChips repos={all} active={category.slug} />
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} />
+      <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} defaultPeriod="week" />
       <HubIndex repos={repos} label={category.label} />
       </div>
       </div>

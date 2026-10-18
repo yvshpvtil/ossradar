@@ -95,7 +95,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
         </ul>
       </nav>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} />
+      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod="week" />
       <HubIndex repos={repos} label={lang.name} />
     </>
   );
