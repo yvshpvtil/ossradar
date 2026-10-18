@@ -1,0 +1,12 @@
+{
+ "fullName": "EL4CTEO/blender-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Professional Blender workflows packaged as Agent Skills for AI coding agents: Claude Code, Codex, OpenCode, Gemini CLI, GitHub Copilot and…",
+ "extractor": "heuristic",
+ "readmeHash": "fc992a179e57",
+ "version": 1,
+ "generatedAt": "2026-10-18T15:46:35.236Z"
+}

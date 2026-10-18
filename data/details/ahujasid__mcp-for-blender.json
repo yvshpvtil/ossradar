@@ -1,0 +1,12 @@
+{
+ "fullName": "ahujasid/mcp-for-blender",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://www.mcp-for-blender.com/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "formerly blender-mcp — the PyPI package is now mcp-for-blender. Existing setups keep working; no config change is required. Read more",
+ "extractor": "heuristic",
+ "readmeHash": "90a2a5c79439",
+ "version": 1,
+ "generatedAt": "2026-10-18T15:46:35.234Z"
+}

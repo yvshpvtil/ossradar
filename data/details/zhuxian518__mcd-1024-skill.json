@@ -1,0 +1,12 @@
+{
+ "fullName": "zhuxian518/mcd-1024-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "只给一个答案的麦当劳点餐 Skill——它记得你点过的每一单，也顺带告诉你今天全国的巨无霸卖多少钱。",
+ "extractor": "heuristic",
+ "readmeHash": "dcc23c44e3b2",
+ "version": 1,
+ "generatedAt": "2026-10-18T15:46:35.232Z"
+}
