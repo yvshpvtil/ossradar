@@ -1,0 +1,12 @@
+{
+ "fullName": "jasonxu114514/opencode2api",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name opencode2api \\",
+ "source": "readme",
+ "readmeSummary": "A Go gateway for OpenCode Zen and Zen Go. It exposes Chat Completions, Responses, and Anthropic Messages endpoints, translates between their…",
+ "extractor": "heuristic",
+ "readmeHash": "c25980af5d7f",
+ "version": 1,
+ "generatedAt": "2026-10-18T14:47:24.359Z"
+}
