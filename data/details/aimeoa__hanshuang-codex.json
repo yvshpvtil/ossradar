@@ -1,0 +1,12 @@
+{
+ "fullName": "aimeoa/hanshuang-codex",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "独立项目，不再依赖外面的任何文件夹。界面基于 PI-Desktop 的设计系统 （src/styles/ 下的 tokens / ui-kit / settings 等样式表原样移植）， 功能由 electron/main.cjs 调用同级目录的 PowerShell 脚本完成。",
+ "extractor": "heuristic",
+ "readmeHash": "f10c1df56080",
+ "version": 1,
+ "generatedAt": "2026-10-18T06:59:54.629Z"
+}

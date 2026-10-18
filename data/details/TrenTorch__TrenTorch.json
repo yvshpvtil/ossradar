@@ -1,0 +1,12 @@
+{
+ "fullName": "TrenTorch/TrenTorch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt && pip install -e .",
+ "source": "readme",
+ "readmeSummary": "Learn ML by building it: a from-scratch machine learning framework in NumPy, and hundreds of coding questions that run in your browser.",
+ "extractor": "heuristic",
+ "readmeHash": "40895d1d73ae",
+ "version": 1,
+ "generatedAt": "2026-10-18T06:59:54.637Z"
+}
