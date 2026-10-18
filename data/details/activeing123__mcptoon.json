@@ -1,0 +1,12 @@
+{
+ "fullName": "activeing123/mcptoon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install mcptoon",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/0272d3a8-c74f-428d-8559-fbf804ce0685",
+ "extractor": "heuristic",
+ "readmeHash": "4294cf9e6989",
+ "version": 1,
+ "generatedAt": "2026-10-18T07:47:47.577Z"
+}
