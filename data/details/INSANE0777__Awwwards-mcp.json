@@ -1,0 +1,12 @@
+{
+ "fullName": "INSANE0777/Awwwards-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g playwright && npx playwright install chromium",
+ "source": "readme",
+ "readmeSummary": "Free, open-source MCP server that gives AI agents design inspiration from Awwwards — the Mobbin-style visual reference loop, sourced from…",
+ "extractor": "heuristic",
+ "readmeHash": "19fbc2c78ea7",
+ "version": 1,
+ "generatedAt": "2026-10-18T21:47:24.444Z"
+}
