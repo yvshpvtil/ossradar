@@ -23,12 +23,6 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:16.612Z"
  },
- "Caho1/open-claude-ui": {
-  "text": "React component library that recreates the Claude desktop app UI, with a 3,000+ line reverse-engineering manual.",
-  "basis": "d9f1c4918cb4",
-  "source": "claude -p",
-  "generatedAt": "2026-10-17T02:23:46.033Z"
- },
  "DSH-APP/DSHA": {
   "text": "Android app that runs the DeepSeek Harness agent on phones in a bundled Ubuntu environment, without root or Termux.",
   "basis": "2a1475664536",
@@ -82,12 +76,6 @@
   "basis": "7578ca56755d",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:55.805Z"
- },
- "NirDiamant/RAG_Techniques": {
-  "text": "A collection of runnable notebook tutorials covering techniques for building Retrieval-Augmented Generation (RAG) systems.",
-  "basis": "acd993df1260",
-  "source": "claude -p",
-  "generatedAt": "2026-10-14T05:13:40.205Z"
  },
  "PDFMathTranslate/PDFMathTranslate": {
   "text": "Translates scientific PDF papers into other languages while preserving layout, formulas, charts and annotations.",
@@ -239,6 +227,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:11:53.650Z"
  },
+ "lokicorvus/crosspet": {
+  "text": "A desktop pet for Mac and Windows that changes look to match the AI you use and acts out what the AI is doing.",
+  "basis": "80760d96642e",
+  "source": "claude -p",
+  "generatedAt": "2026-10-18T02:21:27.623Z"
+ },
  "lvzuojing/mcd-wrapped": {
   "text": "A toolkit built on the McDonald's MCP that probes its tools and generates personal yearly and public data reports.",
   "basis": "e1e9eb387342",
@@ -286,5 +280,11 @@
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "zzusec/forkiq": {
+  "text": "A self-hosted dashboard that discovers your GitHub forks, syncs them with upstream, and logs every sync result.",
+  "basis": "a242ac31f018",
+  "source": "claude -p",
+  "generatedAt": "2026-10-18T02:21:30.262Z"
  }
 }
