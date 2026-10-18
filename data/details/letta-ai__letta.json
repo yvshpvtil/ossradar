@@ -1,0 +1,12 @@
+{
+ "fullName": "letta-ai/letta",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @letta-ai/letta-code",
+ "source": "readme",
+ "readmeSummary": "Build stateful agents with memory that can learn and improve over time.",
+ "extractor": "heuristic",
+ "readmeHash": "220423b81b64",
+ "version": 1,
+ "generatedAt": "2026-10-18T22:45:11.184Z"
+}
