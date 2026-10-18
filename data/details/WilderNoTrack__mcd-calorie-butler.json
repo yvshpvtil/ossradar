@@ -1,0 +1,12 @@
+{
+ "fullName": "WilderNoTrack/mcd-calorie-butler",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "减脂不是少吃你爱的，是先换掉不值这口热量的。",
+ "extractor": "heuristic",
+ "readmeHash": "c4d9ca940037",
+ "version": 1,
+ "generatedAt": "2026-10-18T03:04:58.439Z"
+}
