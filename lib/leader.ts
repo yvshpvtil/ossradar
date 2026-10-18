@@ -1,4 +1,5 @@
 import type { Repo } from "./types";
+import { stripWhy } from "./why";
 
 /** Slim repo shape sent to the client-side leaderboard. */
 export type LeaderRepo = Pick<
@@ -26,7 +27,8 @@ export function toLeaderRepo(r: Repo): LeaderRepo {
     fullName: r.fullName,
     owner: r.owner,
     name: r.name,
-    oneLiner: r.oneLiner,
+    // Rows show only "what it is"; the generic "Why it matters" note stays on the repo page.
+    oneLiner: stripWhy(r.oneLiner),
     category: r.category,
     language: r.language,
     stars: r.stars,

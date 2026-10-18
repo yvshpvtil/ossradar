@@ -129,7 +129,7 @@ function RepoCards({ repos }: { repos: Repo[] }) {
               <span className="sr-only"> stars this week</span>
             </span>
           </div>
-          <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{s.oneLiner}</p>
+          {stripWhy(s.oneLiner) && <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(s.oneLiner)}</p>}
         </li>
       ))}
     </ul>

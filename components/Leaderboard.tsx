@@ -302,7 +302,7 @@ export function Leaderboard({
                     New since last visit
                   </span>
                 )}
-                <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>
+                {r.oneLiner && <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>}
                 <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-zinc-500">
                   <Link href={`/category/${r.category}`} className="relative z-10 hover:underline">
                     {CATEGORIES.find((c) => c.slug === r.category)?.label}

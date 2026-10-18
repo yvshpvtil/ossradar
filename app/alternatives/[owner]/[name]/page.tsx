@@ -7,6 +7,7 @@ import { EstBadge } from "@/components/EstBadge";
 import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
+import { stripWhy } from "@/lib/why";
 import { abs, alternativesPageTitle, breadcrumbLd, clip, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -57,7 +58,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
       <PageNav fallbackHref={repoPath(repo)} crumbs={[{ name: cat, href: `/category/${repo.category}` }, { name: repo.fullName, href: repoPath(repo) }, { name: "Alternatives" }]} />
       <h1 className="text-3xl font-bold tracking-tight">{repo.name} alternatives</h1>
       <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-        <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week): {repo.oneLiner}
+        <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week){stripWhy(repo.oneLiner) ? `: ${stripWhy(repo.oneLiner)}` : "."}
       </p>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics with {repo.name}, ordered by how many topics overlap,
@@ -74,7 +75,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
                 {formatDelta(a.repo.delta7d)}/wk{a.repo.estimated7d && <EstBadge />}
               </span>
             </div>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{a.repo.oneLiner}</p>
+            {stripWhy(a.repo.oneLiner) && <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(a.repo.oneLiner)}</p>}
             <p className="mt-2 text-xs text-zinc-500">
               {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""} · shared topics: {a.sharedTopics.join(", ")}
               {hasAlternativesPage(a.repo) && (

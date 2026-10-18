@@ -1,4 +1,4 @@
-import { repoBlurb } from "@/lib/blurb";
+import { repoBlurb, stripWhy } from "@/lib/blurb";
 import Link from "next/link";
 import { formatDelta } from "@/lib/format";
 import type { Repo } from "@/lib/types";
@@ -35,7 +35,7 @@ export function TrendingGrid({ repos }: { repos: Repo[] }) {
               <span className="font-normal text-zinc-500 dark:text-zinc-400">{r.owner}/</span>
               {r.name}
             </Link>
-            <p className="mt-1 line-clamp-2 flex-1 text-sm text-zinc-600 dark:text-zinc-400">{repoBlurb(r) ?? r.oneLiner}</p>
+            <p className="mt-1 line-clamp-2 flex-1 text-sm text-zinc-600 dark:text-zinc-400">{repoBlurb(r) ?? stripWhy(r.oneLiner)}</p>
             <div className="relative z-10 mt-3 self-start">
               <ShareButton path={`/repo/${r.owner}/${r.name}`} title={r.fullName} />
             </div>

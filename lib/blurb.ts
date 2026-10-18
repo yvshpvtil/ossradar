@@ -1,5 +1,6 @@
 /** Short, clean one-line repo descriptions for lists and the newsletter. */
 import { getBlurbOverride } from "./blurbOverrides";
+import { stripWhy } from "./why";
 
 export const BLURB_MAX = 140;
 
@@ -11,9 +12,7 @@ export function isPlaceholder(text: string | null | undefined): boolean {
 }
 
 /** Drop the template's trailing "Why it matters: …" so only the "what it is" part remains. */
-export function stripWhy(text: string): string {
-  return text.replace(/\s*Why it matters:.*$/i, "").trim();
-}
+export { stripWhy } from "./why";
 
 const collapse = (s: string) => s.replace(/\s+/g, " ").trim();
 export const cjkRatio = (s: string) => (s.match(CJK)?.length ?? 0) / Math.max(1, s.replace(/\s/g, "").length);

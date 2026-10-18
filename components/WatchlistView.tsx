@@ -48,7 +48,7 @@ export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; sh
                   <span className="block text-xs font-normal text-zinc-500 sm:inline sm:text-[length:inherit] sm:font-medium dark:text-zinc-400">{r.owner}/</span>
                   {r.name}
                 </Link>
-                <p className="line-clamp-1 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>
+                {r.oneLiner && <p className="line-clamp-1 text-sm text-zinc-600 dark:text-zinc-400">{r.oneLiner}</p>}
               </div>
               <WatchButton fullName={name} />
             </div>

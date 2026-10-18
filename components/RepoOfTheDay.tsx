@@ -3,6 +3,7 @@ import Link from "next/link";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import type { Repo } from "@/lib/types";
+import { stripWhy } from "@/lib/why";
 import { WatchButton } from "./WatchButton";
 
 /** Pick the top 24h gainer, preferring measured (non-estimated) numbers when any exist. */
@@ -41,7 +42,7 @@ export function RepoOfTheDay({ repo, now }: { repo: Repo; now: number }) {
             <span className="text-zinc-500 dark:text-zinc-400">{repo.owner}/</span>
             {repo.name}
           </Link>
-          <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">{repo.oneLiner}</p>
+          {stripWhy(repo.oneLiner) && <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">{stripWhy(repo.oneLiner)}</p>}
           <p className="mt-2 text-sm font-medium text-emerald-700 dark:text-emerald-400">Why it&apos;s rising: {whyRising(repo, now)}</p>
         </div>
         <span className="relative z-10"><WatchButton fullName={repo.fullName} /></span>
