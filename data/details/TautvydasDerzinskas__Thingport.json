@@ -1,0 +1,16 @@
+{
+ "fullName": "TautvydasDerzinskas/Thingport",
+ "whoItsFor": null,
+ "useCases": [
+  "Import from MakerWorld, Printables, Thingiverse, MyMiniFactory and Snapmaker Space",
+  "Synced collections",
+  "Bring your existing library"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "To put it simply, if you're into 3D printing, you probably look for models across multiple platforms, with MakerWorld, Printables…",
+ "extractor": "heuristic",
+ "readmeHash": "ffde65849424",
+ "version": 1,
+ "generatedAt": "2026-10-18T23:42:35.668Z"
+}
