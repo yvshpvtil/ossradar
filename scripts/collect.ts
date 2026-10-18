@@ -243,6 +243,22 @@ function computeVelocity(
     delta7d = Math.round(Math.min(stars, est * 7));
     estimated7d = true;
   }
+  // Hard bounds: a repo can't gain more stars in a window than it has in total, and one created
+  // inside the window gained all of them there. Extrapolating a day or two of snapshots to a week
+  // overshot for young repos (e.g. 4,376 stars shown as "+4,487 stars this week").
+  const ageMs = now.getTime() - Date.parse(createdAt);
+  if (ageMs <= 7 * DAY_MS) {
+    delta7d = stars;
+    estimated7d = false;
+  } else {
+    delta7d = Math.min(delta7d, stars);
+  }
+  if (ageMs <= DAY_MS) {
+    delta24h = stars;
+    estimated24h = false;
+  } else {
+    delta24h = Math.min(delta24h, stars);
+  }
   return { delta24h, delta7d, estimated24h, estimated7d };
 }
 
