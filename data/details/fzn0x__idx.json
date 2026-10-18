@@ -1,0 +1,12 @@
+{
+ "fullName": "fzn0x/idx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install ihsg-cli                    # crates.io, builds from source (Rust 1.88+)",
+ "source": "readme",
+ "readmeSummary": "The package is called ihsg-cli; the command it installs is idx (npm also adds ihsg-cli as an alias).",
+ "extractor": "heuristic",
+ "readmeHash": "e454e174c5fe",
+ "version": 1,
+ "generatedAt": "2026-10-18T19:43:19.656Z"
+}
