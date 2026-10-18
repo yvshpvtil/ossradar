@@ -1,0 +1,12 @@
+{
+ "fullName": "Gathin23/tv-vibehack",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Your TV, minus the ads. Debloat any Android TV / Google TV over ADB and give it a clean, tvOS-inspired launcher.",
+ "extractor": "heuristic",
+ "readmeHash": "77eabb3f1ab2",
+ "version": 1,
+ "generatedAt": "2026-10-18T11:45:35.072Z"
+}

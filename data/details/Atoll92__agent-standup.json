@@ -1,0 +1,12 @@
+{
+ "fullName": "Atoll92/agent-standup",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "See which of your agents is working, stuck, waiting on another one, or burning tokens — across all your Claude Code, Codex, Mistral Vibe and…",
+ "extractor": "heuristic",
+ "readmeHash": "f9ea9fdf72af",
+ "version": 1,
+ "generatedAt": "2026-10-18T11:45:35.127Z"
+}
