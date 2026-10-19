@@ -1,0 +1,12 @@
+{
+ "fullName": "kitlangton/scrawl",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask kitlangton/tap/scrawl",
+ "source": "readme",
+ "readmeSummary": "Show an agent a problem instead of describing it.",
+ "extractor": "heuristic",
+ "readmeHash": "889e1b4aa101",
+ "version": 1,
+ "generatedAt": "2026-10-19T20:52:59.129Z"
+}

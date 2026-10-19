@@ -1,0 +1,12 @@
+{
+ "fullName": "realmyang/MLView",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Use the LLM in your existing VS Code assistant to understand an ML workflow, then explore its source-linked interactive diagram.",
+ "extractor": "heuristic",
+ "readmeHash": "920f17a48912",
+ "version": 1,
+ "generatedAt": "2026-10-19T20:52:59.227Z"
+}
