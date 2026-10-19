@@ -1,0 +1,16 @@
+{
+ "fullName": "JosssphZhou/groki-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Native voice (macOS): talk directly with an agent in the Grok Bot app, using the app's existing login on your Mac, with no separate xAI voic",
+  "Hands-free wake word: wake up your robot at any time by saying \"Hi Grok\", powered by lightweight local voice detection in the desktop gatewa",
+  "Dynamic face tracking: keep the robot facing you as you move, using your Mac camera for face detection and real-time dual-axis servo steerin"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "English | 中文 | 日本語",
+ "extractor": "heuristic",
+ "readmeHash": "328c3acfe2d5",
+ "version": 1,
+ "generatedAt": "2026-10-19T03:56:17.437Z"
+}

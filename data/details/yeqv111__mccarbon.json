@@ -1,0 +1,12 @@
+{
+ "fullName": "yeqv111/mccarbon",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install .",
+ "source": "readme",
+ "readmeSummary": "省钱不是主题，热量不是主题，点餐更不是主题——麦麦碳账本要讲的是「你的麦当劳一年，排了多少碳，以及怎么少排一点」。",
+ "extractor": "heuristic",
+ "readmeHash": "1c585ecfcd2c",
+ "version": 1,
+ "generatedAt": "2026-10-19T03:56:17.460Z"
+}

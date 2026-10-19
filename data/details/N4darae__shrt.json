@@ -1,0 +1,12 @@
+{
+ "fullName": "N4darae/shrt",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A package path such as runner/runner.go is a file in the shrt module (github.com/N4darae/shrt).",
+ "extractor": "heuristic",
+ "readmeHash": "19d8c55f6d5e",
+ "version": 1,
+ "generatedAt": "2026-10-19T03:56:17.483Z"
+}
