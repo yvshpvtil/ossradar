@@ -1,0 +1,12 @@
+{
+ "fullName": "openspline/openspline",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/openspline/openspline/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Add a live face to any voice AI agent in five lines. Turn a portrait and generated audio into synchronized video and speech on your own GPU.",
+ "extractor": "heuristic",
+ "readmeHash": "d7d6acd342c9",
+ "version": 1,
+ "generatedAt": "2026-10-19T22:49:44.640Z"
+}
