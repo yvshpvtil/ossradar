@@ -1,0 +1,12 @@
+{
+ "fullName": "finereli/whatsapp-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Let your AI agent read your WhatsApp messages.",
+ "extractor": "heuristic",
+ "readmeHash": "d690a5829cb3",
+ "version": 1,
+ "generatedAt": "2026-10-19T05:51:49.402Z"
+}
