@@ -1,0 +1,12 @@
+{
+ "fullName": "alchaincyf/huashu-motion",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add alchaincyf/huashu-motion",
+ "source": "readme",
+ "readmeSummary": "简体中文 | English",
+ "extractor": "heuristic",
+ "readmeHash": "89ef4c089824",
+ "version": 1,
+ "generatedAt": "2026-10-19T10:52:54.291Z"
+}

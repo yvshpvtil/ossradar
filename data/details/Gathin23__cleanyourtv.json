@@ -1,0 +1,12 @@
+{
+ "fullName": "Gathin23/cleanyourtv",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install openjdk@17 android-commandlinetools",
+ "source": "readme",
+ "readmeSummary": "Your TV, minus the ads. Website: cleanyour.tv. This repo was called tv-vibehack until 19 October 2026; old links still work.",
+ "extractor": "heuristic",
+ "readmeHash": "dbf79d78c5bd",
+ "version": 1,
+ "generatedAt": "2026-10-19T10:52:54.289Z"
+}
