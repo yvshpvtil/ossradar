@@ -1,0 +1,12 @@
+{
+ "fullName": "kividbio/kividb",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 6380:6380 kividb/kividb",
+ "source": "readme",
+ "readmeSummary": "KiviDB is a fast, multi-threaded alternative to Redis® and Valkey, written in Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "31d173601f9e",
+ "version": 1,
+ "generatedAt": "2026-10-19T01:04:10.045Z"
+}

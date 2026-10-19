@@ -1,0 +1,12 @@
+{
+ "fullName": "EvannZhongg/Nosis",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Nosis is an open-source, lightweight personal agent application. It provides local workspace operations, human approval, session…",
+ "extractor": "heuristic",
+ "readmeHash": "fb34b154b37e",
+ "version": 1,
+ "generatedAt": "2026-10-19T01:04:09.745Z"
+}

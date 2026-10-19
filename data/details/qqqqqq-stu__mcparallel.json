@@ -1,0 +1,12 @@
+{
+ "fullName": "qqqqqq-stu/mcparallel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "当点麦当劳变成一场人格鉴定。 不知道吃什么？抽三张牌（还自动帮你算最优惠买法）。想知道你是谁？六大人格宇宙 46 种人格等你鉴定，生成可分享的麦门身份卡。想吃得明白？健身高碳日、减脂 500 大卡线、学生党省钱数学，全部由真实数据算给你看。",
+ "extractor": "heuristic",
+ "readmeHash": "70aaf962b369",
+ "version": 1,
+ "generatedAt": "2026-10-19T01:04:09.971Z"
+}

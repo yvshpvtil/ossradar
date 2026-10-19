@@ -1,0 +1,12 @@
+{
+ "fullName": "yvgude/lean-ctx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://leanctx.com/install.sh | sh      # universal (no Rust needed)",
+ "source": "readme",
+ "readmeSummary": "LeanCTX sits between AI tools and the information they read. It selects task-relevant context, applies supported access and content controls…",
+ "extractor": "heuristic",
+ "readmeHash": "7eb04e77cb86",
+ "version": 1,
+ "generatedAt": "2026-10-19T01:04:09.755Z"
+}

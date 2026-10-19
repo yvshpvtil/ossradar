@@ -1,0 +1,12 @@
+{
+ "fullName": "SakanaAI/AutoIllustrate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g autoillustrate    # or: npx autoillustrate ...",
+ "source": "readme",
+ "readmeSummary": "The deliverable is a real .drawio file you can keep editing in draw.io — the generative model only touches the final restyle pass.",
+ "extractor": "heuristic",
+ "readmeHash": "aa84b1a205e9",
+ "version": 1,
+ "generatedAt": "2026-10-19T01:04:09.959Z"
+}
