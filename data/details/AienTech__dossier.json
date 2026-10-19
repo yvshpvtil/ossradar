@@ -1,0 +1,16 @@
+{
+ "fullName": "AienTech/dossier",
+ "whoItsFor": null,
+ "useCases": [
+  "Profile: basics, skills and languages, experience, education and references, in the order you choose, with a strength meter. Start it from a",
+  "Base resume: twelve themes and a theme builder, previewed live and printed to PDF on the server. Duplicate themes, or share them as files.",
+  "Find jobs: search postings near your city, or anywhere you choose, through JSearch (LinkedIn, Indeed and more), Adzuna or Germany's Bundesag"
+ ],
+ "installCommand": "docker run --rm -it ghcr.io/aientech/dossier hash-password",
+ "source": "readme",
+ "readmeSummary": "Dossier keeps your career history in one profile and turns it into a clean resume.",
+ "extractor": "heuristic",
+ "readmeHash": "c6aad70b147c",
+ "version": 1,
+ "generatedAt": "2026-10-19T09:56:55.227Z"
+}

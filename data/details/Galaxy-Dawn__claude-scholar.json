@@ -1,0 +1,12 @@
+{
+ "fullName": "Galaxy-Dawn/claude-scholar",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Claude Scholar is not an end-to-end autonomous research system that tries to replace the researcher.",
+ "extractor": "heuristic",
+ "readmeHash": "3a36aec87898",
+ "version": 1,
+ "generatedAt": "2026-10-19T09:56:55.221Z"
+}
