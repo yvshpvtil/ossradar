@@ -1,0 +1,12 @@
+{
+ "fullName": "OrchestratorInc/agent-orchestrator",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give every coding task its own agent, workspace, and feedback loop. Plan and delegate larger outcomes with a project-aware orchestrator.",
+ "extractor": "heuristic",
+ "readmeHash": "23b2a953b519",
+ "version": 1,
+ "generatedAt": "2026-10-19T04:54:36.692Z"
+}

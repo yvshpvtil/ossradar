@@ -1,0 +1,12 @@
+{
+ "fullName": "ly05010419/MacNativeGames",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install opus libvpx python@3.14",
+ "source": "readme",
+ "readmeSummary": "Play your own copy of The Legend of Zelda: Tears of the Kingdom natively on an Apple silicon Mac.",
+ "extractor": "heuristic",
+ "readmeHash": "9827ee073d22",
+ "version": 1,
+ "generatedAt": "2026-10-19T04:54:36.673Z"
+}
