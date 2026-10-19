@@ -1,0 +1,16 @@
+{
+ "fullName": "jpzk/opensidian",
+ "whoItsFor": null,
+ "useCases": [
+  "live preview, source and reading modes",
+  "[[wikilinks]], backlinks, tags, graph view",
+  "tabs, splits, search, quick switcher, command palette, bookmarks"
+ ],
+ "installCommand": "curl --proto '=https' -sSf https://sh.rustup.rs | sh -s -- --default-toolchain 1.98.0",
+ "source": "readme",
+ "readmeSummary": "To add one, put its manifest.json and theme.css in /.obsidian/themes// (folder name = \"name\" in the manifest) and pick it in Settings ▸…",
+ "extractor": "heuristic",
+ "readmeHash": "d79e95850683",
+ "version": 1,
+ "generatedAt": "2026-10-19T02:52:37.495Z"
+}
