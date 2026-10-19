@@ -1,0 +1,12 @@
+{
+ "fullName": "pinganbbOvO/ai-companion-kit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "给你的 AI 一副身体，和一点人味。",
+ "extractor": "heuristic",
+ "readmeHash": "b1f39e8364de",
+ "version": 1,
+ "generatedAt": "2026-10-19T07:12:00.612Z"
+}

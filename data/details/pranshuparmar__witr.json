@@ -1,0 +1,16 @@
+{
+ "fullName": "pranshuparmar/witr",
+ "whoItsFor": null,
+ "useCases": [
+  "Processes Tab: Live, sortable, filterable list of all running processes with a side panel showing the ancestry tree of the highlighted proce",
+  "Ports Tab: Open/listening ports with the owning processes attached in a side panel. Toggle between LISTEN-only and ALL with `a`. Enter on an",
+  "Containers Tab: All running containers across Docker, Podman, nerdctl, K8s/crictl, Incus, LXC, LXD, and FreeBSD jails in one list - name, im"
+ ],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/pranshuparmar/witr/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Purpose • Installation • TUI • Flags • Core Concept • Examples Output Behavior • Platforms • Success Criteria • Sponsors",
+ "extractor": "heuristic",
+ "readmeHash": "539c495abb31",
+ "version": 1,
+ "generatedAt": "2026-10-19T07:12:00.621Z"
+}
