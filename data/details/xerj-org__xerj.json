@@ -1,0 +1,16 @@
+{
+ "fullName": "xerj-org/xerj",
+ "whoItsFor": null,
+ "useCases": [
+  "Reference coding: your coding agent",
+  "Code search and security audits:",
+  "AI search and RAG: full-text, vector"
+ ],
+ "installCommand": "curl -fsSL https://xerj.org/get | sh",
+ "source": "readme",
+ "readmeSummary": "Windows and a hand-verified install are under Install by hand.",
+ "extractor": "heuristic",
+ "readmeHash": "94f1bf85600e",
+ "version": 1,
+ "generatedAt": "2026-10-20T02:53:44.774Z"
+}

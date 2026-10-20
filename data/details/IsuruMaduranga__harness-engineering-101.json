@@ -1,0 +1,12 @@
+{
+ "fullName": "IsuruMaduranga/harness-engineering-101",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install mdbook mdbook-mermaid   # or: brew install mdbook (+ mdbook-mermaid binary)",
+ "source": "readme",
+ "readmeSummary": "The LLM is the brain. The harness is the body.",
+ "extractor": "heuristic",
+ "readmeHash": "026bf431b9f8",
+ "version": 1,
+ "generatedAt": "2026-10-20T02:53:44.827Z"
+}
