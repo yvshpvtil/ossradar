@@ -1,0 +1,12 @@
+{
+ "fullName": "simbasjungles/free-my-tv",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask temurin android-commandlinetools android-platform-tools",
+ "source": "readme",
+ "readmeSummary": "A fast, ad-free home screen for Google TV.",
+ "extractor": "heuristic",
+ "readmeHash": "20700cd5c9c4",
+ "version": 1,
+ "generatedAt": "2026-10-20T08:55:56.517Z"
+}
