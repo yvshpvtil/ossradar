@@ -1,0 +1,12 @@
+{
+ "fullName": "Sallyn0225/eidolon-sc",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "和《偶像大师 闪耀色彩》的偶像实时对话的 AI 分身",
+ "extractor": "heuristic",
+ "readmeHash": "a4687456355a",
+ "version": 1,
+ "generatedAt": "2026-10-20T05:51:33.469Z"
+}
