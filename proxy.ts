@@ -41,7 +41,13 @@ export function proxy(req: NextRequest) {
     // Bare /category is the index page; only hub slugs are checked.
     if (!getCategory(parts[1])) return notFound();
   } else if (parts[0] === "trending") {
-    if (!parts[1] || !getLanding(parts[1])) return notFound();
+    // Bare /trending has no page of its own; the homepage is the trending leaderboard.
+    if (parts.length === 1) {
+      const url = req.nextUrl.clone();
+      url.pathname = "/";
+      return NextResponse.redirect(url, 308);
+    }
+    if (!getLanding(parts[1])) return notFound();
   } else if (parts[0] === "language" && parts.length > 1) {
     // Bare /language is the index page; only hub slugs are checked.
     if ((parts.length > 2 && parts[2] !== "opengraph-image") || !getLanguage(parts[1])) return notFound();
