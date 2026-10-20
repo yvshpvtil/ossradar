@@ -1,0 +1,12 @@
+{
+ "fullName": "kailashsr38/ascii-magic-art",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx ascii-magic-art",
+ "source": "readme",
+ "readmeSummary": "Any key stops it. Add --look=dots (or ascii, numbers, binary...) or --chars=\" .oO@\" to redraw it in other characters.",
+ "extractor": "heuristic",
+ "readmeHash": "519e2cc2fd09",
+ "version": 1,
+ "generatedAt": "2026-10-20T17:49:05.772Z"
+}
