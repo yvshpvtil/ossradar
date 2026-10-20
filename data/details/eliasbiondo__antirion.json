@@ -1,0 +1,12 @@
+{
+ "fullName": "eliasbiondo/antirion",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -p 8080:8080 -p 8081:8081 -v antirion-data:/var/lib/antirion eliasbiondo/antirion",
+ "source": "readme",
+ "readmeSummary": "The fastest open-source AI gateway.",
+ "extractor": "heuristic",
+ "readmeHash": "93c61cc434af",
+ "version": 1,
+ "generatedAt": "2026-10-20T11:52:09.646Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "zhu1090093659/dsh-web",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "dsh-web 是面向 DeepSeek Harness（DSH）Web GUI、DeepSeek 网页版与官方桌面客户端（DeepSeek Desktop）的模块化插件生态与 AI 智能体开发工作台。",
+ "extractor": "heuristic",
+ "readmeHash": "0b41fccf1b3f",
+ "version": 1,
+ "generatedAt": "2026-10-20T11:52:09.709Z"
+}
