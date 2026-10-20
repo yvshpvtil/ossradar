@@ -23,6 +23,18 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:16.612Z"
  },
+ "Caho1/open-claude-ui": {
+  "text": "High-fidelity recreation of the Claude desktop app UI: 30 React components plus a reverse-engineering handbook.",
+  "basis": "d9f1c4918cb4",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.734Z"
+ },
+ "Clearailhc/clearai-dsh": {
+  "text": "Ontology-first DeepSeek Harness plugin that turns evidence-checked research into a browsable domain ontology.",
+  "basis": "b52997f8b6c8",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.736Z"
+ },
  "DSH-APP/DSHA": {
   "text": "Android app that runs the DeepSeek Harness agent on phones in a bundled Ubuntu environment, without root or Termux.",
   "basis": "2a1475664536",
@@ -40,6 +52,12 @@
   "basis": "e9902998adae",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:25.155Z"
+ },
+ "HRuiCcc/RuiC-oc-ferry": {
+  "text": "Routes OpenCode's free models into WorkBuddy through a local OpenAI-compatible endpoint, with one-click import.",
+  "basis": "206a9434203c",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
  },
  "HanyuanWang/LiveStream-Agent-Studio": {
   "text": "Local Windows AI agent for Douyin livestream commerce: creator discovery, transcripts, stream reviews and video scripts.",
@@ -83,6 +101,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.589Z"
  },
+ "Sallyn0225/eidolon-sc": {
+  "text": "AI companions of The Idolmaster Shiny Colors idols for real-time voice or text chat, deployable with Docker Compose.",
+  "basis": "ded2ff889b03",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
  "Sam-Hui-dot/mcd-budget-meal": {
   "text": "A skill that uses McDonald's MCP to check real prices, compare meals against a budget, and swap menu items.",
   "basis": "d0f3a3f39609",
@@ -94,6 +118,12 @@
   "basis": "908b1e0c838d",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.263Z"
+ },
+ "aimeoa/hanshuang-codex": {
+  "text": "Experimental jailbreak project for GPT 6.0 and WorkBuddy V4.1 Flash, with an Electron desktop interface.",
+  "basis": "4b17fd634347",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
  },
  "alchaincyf/huashu-art-motion": {
   "text": "A coding-agent skill that animates artwork with code, offering 35 art styles and 9 explainer-video animation styles.",
@@ -118,6 +148,12 @@
   "basis": "0afee4d74953",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:20.682Z"
+ },
+ "carnot-tech/jinba-consulting-pptx-skill": {
+  "text": "Claude Code and Codex skill that gets AI to produce serious, consulting-style PowerPoint decks.",
+  "basis": "5022a84ee9ca",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
  },
  "changexbc/workbuddy-switch": {
   "text": "A desktop app for switching WorkBuddy and CodeBuddy accounts, with credit expiry and token usage monitoring.",
@@ -149,6 +185,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:04.388Z"
  },
+ "didilili/ai-agents-from-zero": {
+  "text": "Chinese AI agent course with a learning path, projects and interview prep, covering LangChain, LangGraph, MCP and RAG.",
+  "basis": "bd7bc2247364",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.736Z"
+ },
  "djkcyl/farwing": {
   "text": "Remote desktop and streaming tool written in Rust for work, gaming, and sharing a desktop with others.",
   "basis": "1a3384269c30",
@@ -166,6 +208,12 @@
   "basis": "fb3514586f3f",
   "source": "claude -p",
   "generatedAt": "2026-10-16T02:21:55.677Z"
+ },
+ "elysia395/dsh-wallpaper-engine": {
+  "text": "Brings Wallpaper Engine wallpapers into the DeepSeek Harness web UI, rendering scene wallpapers live with WebGL.",
+  "basis": "ea5ca270a22d",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.736Z"
  },
  "emo-xiaoyu/harness-mix": {
   "text": "Connects multiple coding agents such as Claude Code to the Codex Desktop UI and lets tasks hand off between them.",
@@ -190,6 +238,12 @@
   "basis": "3cfb7fb66db7",
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.816Z"
+ },
+ "glanderness/BeefTV": {
+  "text": "Lightweight AI-native video creation workspace where you connect ideas, models and assets on a canvas with an agent.",
+  "basis": "54fb0516cdcf",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.736Z"
  },
  "heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit": {
   "text": "Toolkit that turns cross-border ecommerce SOPs into 7 reusable AI agent workflows with prompts, templates and cases.",
@@ -221,6 +275,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.453Z"
  },
+ "leopard627/fire-your-seo-agency": {
+  "text": "Claude Code skill that audits and optimizes a site for search and AI answers (SEO, AEO, GEO, LLMO and Naver).",
+  "basis": "685cb0188bcf",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
  "linguo2625469/workbuddy2api-panel": {
   "text": "Multi-account gateway that serves Tencent WorkBuddy accounts as an OpenAI-compatible API, with a web admin panel.",
   "basis": "ac22cf43d9d5",
@@ -245,6 +305,24 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:49.828Z"
  },
+ "peach-mitao/peach": {
+  "text": "Single-user, local-first personal media system.",
+  "basis": "62927f01b294",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "pinganbbOvO/ai-companion-kit": {
+  "text": "QQ chat companion bot that remembers things and reads the room, plus an MCP server for controlling Android phones.",
+  "basis": "1bbcc085f9a4",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "ranxianglei/billion-context": {
+  "text": "Context-compression plugin for month-long single sessions that works with 100K context windows and uses fewer tokens.",
+  "basis": "8770fee33ef4",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.736Z"
+ },
  "ruc-datalab/EvoOntology": {
   "text": "MCP plugin for Claude Code and Codex that builds an ontology layer from your data and evolves it from agent interactions.",
   "basis": "6149dde331dc",
@@ -263,6 +341,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:09.001Z"
  },
+ "songconmaisaix31-design/mcpet": {
+  "text": "Desktop pet in a McDonald's uniform for coding sessions: lunch reminders, coupon deals, task progress and token balance.",
+  "basis": "e2bd81462e57",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
  "spideymooon/McOracle": {
   "text": "An AI skill that answers your question with a random oracle and suggests a McDonald's China menu item through its MCP.",
   "basis": "40963c4cea08",
@@ -275,11 +359,23 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:04.743Z"
  },
+ "trhhubsd/ARTEX": {
+  "text": "Autonomous AI penetration testing system built on multi-agent LLMs, with a Go backend and Next.js frontend.",
+  "basis": "19716713fa26",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
  "xqy2006/ModelTrace": {
   "text": "Local tool that matches an AI model to a known model family and version by fingerprinting its number outputs.",
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "zcbacxc/mcd-party-planner": {
+  "text": "McDonald's MCP CLI and skill for planning group meals and party orders across stores, combos and budget.",
+  "basis": "08f9e6d4c4a0",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T11:05:50.735Z"
  },
  "zzusec/forkiq": {
   "text": "A self-hosted dashboard that discovers your GitHub forks, syncs them with upstream, and logs every sync result.",

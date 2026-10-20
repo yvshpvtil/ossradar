@@ -17,12 +17,17 @@ export { stripWhy } from "./why";
 const collapse = (s: string) => s.replace(/\s+/g, " ").trim();
 export const cjkRatio = (s: string) => (s.match(CJK)?.length ?? 0) / Math.max(1, s.replace(/\s/g, "").length);
 
-/** If text mixes CJK and an English part, keep the English sentences (when there are enough of them). */
+// Words that show an English fragment is a phrase ("a plugin for X"), not a list of names left over
+// after dropping the CJK around them ("SceneScript Windows macOS", "LangGraph Coze Dify MCP skills LLM RAG").
+const PHRASE_WORD = /\b(?:a|an|the|for|to|of|with|and|or|in|on|by|from|into|via|as|at|is|are|your|you|that|it)\b/i;
+const looksLikePhrase = (s: string) => PHRASE_WORD.test(s) || (s.match(/[A-Za-z][\w'’.+#-]*/g)?.length ?? 0) >= 8;
+
+/** If text mixes CJK and an English part, keep the English sentences (when there are enough of them and they read as a phrase). */
 export function preferEnglish(text: string): string {
   if (cjkRatio(text) < 0.05) return text;
   const parts = text.split(/(?<=[.!?])\s+|(?<=[。！？])\s*|\s+[|/]\s+|\s+[-–—]\s+(?=[A-Z])/).map((p) => p.trim()).filter(Boolean);
-  const english = parts.filter((p) => cjkRatio(p) < 0.05 && /[a-z]{3,}/i.test(p)).join(" ");
-  return english.replace(/[^a-z]/gi, "").length >= 20 ? english : text;
+  const english = parts.filter((p) => cjkRatio(p) < 0.05 && /[a-z]{3,}/i.test(p)).join(" ").replace(/^[\s·|•:;,\-–—]+/, "");
+  return english.replace(/[^a-z]/gi, "").length >= 20 && looksLikePhrase(english) ? english : text;
 }
 
 /** Cap at `max` chars, cutting at the last sentence end if one is reasonably late, else at a word boundary + "…". */
