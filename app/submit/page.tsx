@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 import { SubmitForm } from "./SubmitForm";
 
 const title = "Suggest a rising AI or developer-tool repo";
-const description = `Suggest an open-source AI or developer-tool repo for ${SITE.name} to track. Free, reviewed by hand.`;
+const description = `Suggest an open-source AI, LLM, agent or MCP repo for ${SITE.name} to track. Free and reviewed by hand; it's ranked purely by the GitHub stars it gains.`;
 
 export const metadata: Metadata = {
   title,
