@@ -1,0 +1,16 @@
+{
+ "fullName": "JCodesMore/ai-website-cloner-template",
+ "whoItsFor": null,
+ "useCases": [
+  "Platform migration — rebuild a site you own from WordPress/Webflow/Squarespace into a modern Next.js codebase",
+  "Lost source code — your site is live but the repo is gone, the developer left, or the stack is legacy. Get the code back in a modern format",
+  "Learning — deconstruct how production sites achieve specific layouts, animations, and responsive behavior by working with real code"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give your AI coding agent a URL and watch it recreate the website as a clean Next.js app.",
+ "extractor": "heuristic",
+ "readmeHash": "e37c2d12ba2a",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:30.868Z"
+}

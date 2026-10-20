@@ -1,0 +1,12 @@
+{
+ "fullName": "blendi-remade/dioramas",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "A free, open-source framework for cinematic, interactive 3D websites — with AI-generated hero assets.",
+ "extractor": "heuristic",
+ "readmeHash": "22b4cfa50c7c",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:30.888Z"
+}

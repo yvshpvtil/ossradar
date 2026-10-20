@@ -1,0 +1,12 @@
+{
+ "fullName": "justxor/deepseek-local-guide-ru",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \\",
+ "source": "readme",
+ "readmeSummary": "потом sudo systemctl daemon-reload && sudo systemctl restart ollama.",
+ "extractor": "heuristic",
+ "readmeHash": "e13b3ea77ff7",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:31.170Z"
+}

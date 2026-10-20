@@ -1,0 +1,12 @@
+{
+ "fullName": "adexbn/walk-kcal",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "你今天还能吃多少卡，取决于你愿意走多远。",
+ "extractor": "heuristic",
+ "readmeHash": "018e299c4900",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:30.862Z"
+}

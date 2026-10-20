@@ -1,0 +1,12 @@
+{
+ "fullName": "Leonxlnx/cinetic",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Leonxlnx/cinetic",
+ "source": "readme",
+ "readmeSummary": "cinetic (cinema + kinetic) is an agent skill that makes your coding agent direct a short film instead of arranging animation components.",
+ "extractor": "heuristic",
+ "readmeHash": "832184de22f8",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:30.886Z"
+}

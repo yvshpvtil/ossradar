@@ -1,0 +1,12 @@
+{
+ "fullName": "salikhussain71-code/PAKGOV-RAG-project",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Bilingual (Urdu + English) Retrieval-Augmented-Generation over the Constitution of Pakistan",
+ "extractor": "heuristic",
+ "readmeHash": "c09c4aa7efdb",
+ "version": 1,
+ "generatedAt": "2026-10-20T01:05:31.103Z"
+}
