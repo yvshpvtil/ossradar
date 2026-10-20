@@ -1,0 +1,12 @@
+{
+ "fullName": "juliobsz/skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add wheresryan22/anatomy -g   # optional: interactive isometric explainer figures",
+ "source": "readme",
+ "readmeSummary": "An agent skill that builds award-caliber websites from one line.",
+ "extractor": "heuristic",
+ "readmeHash": "de116e43df7c",
+ "version": 1,
+ "generatedAt": "2026-10-20T04:52:29.655Z"
+}
