@@ -4,6 +4,7 @@ import type { CategorySlug, Repo, RepoData } from "./types";
 import { categorize } from "./categories";
 import { isOffTopic } from "./blocklist";
 import { cleanOneLiner } from "./oneliner";
+import { cleanHomepage } from "./homepage";
 
 const rawData = raw as RepoData;
 /** Re-apply the current blocklist and categorizer so tuning takes effect without waiting for the next collect run. */
@@ -12,7 +13,7 @@ const data: RepoData = {
   repos: rawData.repos
     .filter((r) => !isOffTopic(r))
     .map((r) => ({ ...r, category: categorize({ topics: r.topics, description: r.description, name: r.name }) }))
-    .map((r) => ({ ...r, oneLiner: cleanOneLiner(r) })),
+    .map((r) => ({ ...r, oneLiner: cleanOneLiner(r), homepage: cleanHomepage(r.homepage) })),
 };
 
 export type Period = "today" | "week";

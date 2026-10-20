@@ -22,6 +22,7 @@ import { isOffTopic } from "../lib/blocklist";
 import type { HistoryPoint, Repo, RepoData, Snapshot } from "../lib/types";
 import { summarize, summarizerId } from "./summarize";
 import { getBlurbOverride } from "../lib/blurbOverrides";
+import { cleanHomepage } from "../lib/homepage";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -404,7 +405,7 @@ async function main() {
       owner: item.owner.login,
       name: item.name,
       url: item.html_url,
-      homepage: item.homepage || null,
+      homepage: cleanHomepage(item.homepage),
       description,
       language: item.language,
       topics,
