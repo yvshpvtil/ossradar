@@ -20,7 +20,7 @@ const CATEGORY_SEO_TITLE: Record<string, string> = {
   // Distinct from the AI agents topic hub title, which this used to duplicate (/topic/ai-agent now redirects to /topic/ai-agents).
   "ai-agents": "Trending AI agent frameworks on GitHub",
   "llm-tooling": "Trending LLM tools & frameworks on GitHub",
-  mcp: "Best MCP servers & tools on GitHub, by star growth",
+  mcp: "Best MCP servers & tools on GitHub, by growth",
   "coding-agents": "Trending AI coding agents on GitHub",
   "rag-vector": "Trending RAG & vector database repos on GitHub",
   "local-llms": "Trending local LLM tools on GitHub",

@@ -10,9 +10,14 @@ export const repoPath = (r: Pick<Repo, "owner" | "name">) => `/repo/${r.owner}/$
  *  drop the owner when the full form would overflow. */
 export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">): string {
   const delta = formatDelta(repo.delta7d);
-  const withOwner = `${repo.fullName}: ${delta} stars this week`;
-  if (withOwner.length <= 48) return withOwner;
-  return `${repo.name}: ${delta} stars this week`;
+  // Layout appends " · OSS Radar" (12 chars), so 48 keeps the rendered title within ~60.
+  // Long repo names step down: drop the owner, then the word "stars", then the growth phrase.
+  const options = [
+    `${repo.fullName}: ${delta} stars this week`,
+    `${repo.name}: ${delta} stars this week`,
+    `${repo.name}: ${delta} this week`,
+  ];
+  return options.find((t) => t.length <= 48) ?? repo.name;
 }
 
 /** Alternatives page <title> sized for Google's ~60-char SERP limit (layout adds " · OSS Radar", 12 chars). */
