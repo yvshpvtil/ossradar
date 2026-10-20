@@ -275,6 +275,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.453Z"
  },
+ "langbot-app/LangBot": {
+  "text": "Platform for building agentic chat bots for Discord, Slack, Telegram, WeChat, QQ and more.",
+  "basis": "8af897a81ff5",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T16:57:10.014Z"
+ },
  "leopard627/fire-your-seo-agency": {
   "text": "Claude Code skill that audits and optimizes a site for search and AI answers (SEO, AEO, GEO, LLMO and Naver).",
   "basis": "685cb0188bcf",
@@ -376,6 +382,12 @@
   "basis": "08f9e6d4c4a0",
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "zhu1090093659/dsh-web": {
+  "text": "Plugin ecosystem for the DeepSeek Harness web UI, shared through a Creative Workshop.",
+  "basis": "91626cc8edee",
+  "source": "manual translation",
+  "generatedAt": "2026-10-20T16:57:10.015Z"
  },
  "zzusec/forkiq": {
   "text": "A self-hosted dashboard that discovers your GitHub forks, syncs them with upstream, and logs every sync result.",
