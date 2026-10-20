@@ -85,14 +85,14 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   return (
     <>
       <JsonLd data={itemListLd(`Fastest-rising ${category.label} repos`, ranked)} />
-      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: category.label, path }])} />
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Categories", path: "/category" }, { name: category.label, path }])} />
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />
       <div className="min-w-0">
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />
         <nav aria-label="Breadcrumb" className="min-w-0 text-sm text-zinc-500">
-          <Link href="/" className="hover:underline">Home</Link> / <span className="text-zinc-700 dark:text-zinc-300">{category.label}</span>
+          <Link href="/" className="hover:underline">Home</Link> / <Link href="/category" className="hover:underline">Categories</Link> / <span className="text-zinc-700 dark:text-zinc-300">{category.label}</span>
         </nav>
       </div>
       <section className="mb-6">

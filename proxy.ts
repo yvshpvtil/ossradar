@@ -37,8 +37,9 @@ export function proxy(req: NextRequest) {
       url.pathname = `/alternatives/${repo.owner}/${repo.name}`;
       return NextResponse.redirect(url, 308);
     }
-  } else if (parts[0] === "category") {
-    if (!parts[1] || !getCategory(parts[1])) return notFound();
+  } else if (parts[0] === "category" && parts.length > 1) {
+    // Bare /category is the index page; only hub slugs are checked.
+    if (!getCategory(parts[1])) return notFound();
   } else if (parts[0] === "trending") {
     if (!parts[1] || !getLanding(parts[1])) return notFound();
   } else if (parts[0] === "language" && parts.length > 1) {

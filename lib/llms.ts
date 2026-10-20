@@ -29,6 +29,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [Compare repos](${SITE.url}/compare): side-by-side stars, growth, forks, releases and Hacker News discussion for up to 3 tracked repos
 - [Submit a repo](${SITE.url}/submit): suggest an open-source AI or developer-tool repo to track (free, reviewed by hand)
 - [Open-source alternatives](${SITE.url}/alternatives): every alternatives page, grouped by category
+- [Categories](${SITE.url}/category): every category hub with its repo count and this week's leading repo
 - [GitHub topics](${SITE.url}/topic): every topic hub with its repo count and this week's leading repo
 - [Programming languages](${SITE.url}/language): every language hub with its repo count and this week's leading repo
 - [About and methodology](${SITE.url}/about)

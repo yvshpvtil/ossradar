@@ -28,7 +28,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="text-sm">
-          <p className="mb-2 font-semibold">Categories</p>
+          <p className="mb-2 font-semibold"><Link href="/category" className="hover:underline">Categories</Link></p>
           <ul className="space-y-1">
             {CATEGORIES.map((c) => (
               <li key={c.slug}>
@@ -68,6 +68,7 @@ export function Footer() {
           <Link href="/hacker-news" className="hover:underline">On Hacker News</Link> ·{" "}
           <Link href="/compare" className="hover:underline">Compare repos</Link> ·{" "}
           <Link href="/alternatives" className="hover:underline">Alternatives</Link> ·{" "}
+          <Link href="/category" className="hover:underline">Categories</Link> ·{" "}
           <Link href="/topic" className="hover:underline">Topics</Link> ·{" "}
           <Link href="/language" className="hover:underline">Languages</Link> ·{" "}
           <Link href="/submit" className="hover:underline">Submit a repo</Link> ·{" "}
