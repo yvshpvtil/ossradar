@@ -1,0 +1,12 @@
+{
+ "fullName": "carnot-tech/jinba-consulting-pptx-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip3 install python-pptx",
+ "source": "readme",
+ "readmeSummary": "AIに「まじ」なPowerPointを作らせるためのClaude Codeスキル。 AIワークフロープラットフォーム Jinba を提供するメンバーにより作成されました。",
+ "extractor": "heuristic",
+ "readmeHash": "2e47df53fa1b",
+ "version": 1,
+ "generatedAt": "2026-10-20T03:53:51.747Z"
+}
