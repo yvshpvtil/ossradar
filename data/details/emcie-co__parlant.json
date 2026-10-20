@@ -1,0 +1,16 @@
+{
+ "fullName": "emcie-co/parlant",
+ "whoItsFor": null,
+ "useCases": [
+  "Guidelines —",
+  "Relationships —",
+  "Journeys —"
+ ],
+ "installCommand": "pip install parlant",
+ "source": "readme",
+ "readmeSummary": "Parlant is production-ready. It streamlines the development and maintenance of enterprise-grade B2C (business-to-consumer) and sensitive B2B…",
+ "extractor": "heuristic",
+ "readmeHash": "455545f738e7",
+ "version": 1,
+ "generatedAt": "2026-10-20T10:52:43.426Z"
+}
