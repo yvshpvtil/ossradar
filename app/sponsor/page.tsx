@@ -11,8 +11,8 @@ import { getTopics } from "@/lib/topics";
 import { getLanguages } from "@/lib/languages";
 import { CATEGORIES } from "@/lib/categories";
 
-const title = "Sponsor";
-const description = `One clearly labeled sponsor per week across OSS Radar and its daily newsletter. $${LAUNCH_PRICE_USD}/week for the first ${LAUNCH_SLOTS} sponsors, then $${REGULAR_PRICE_USD}/week.`;
+const title = "Advertise to developers: one sponsor per week";
+const description = `Reach developers who track rising open-source AI and dev-tool repos: one sponsor a week on OSS Radar and its newsletter. $${LAUNCH_PRICE_USD}/week for the first ${LAUNCH_SLOTS}, then $${REGULAR_PRICE_USD}.`;
 
 export const metadata: Metadata = {
   title,
