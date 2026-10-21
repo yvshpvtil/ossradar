@@ -12,7 +12,7 @@ import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
 import { breadcrumbLd, itemListLd, ogDefaults, twitterImage } from "@/lib/seo";
 
 const title = "New open-source AI & dev-tool repos, day by day";
-const description = `Repos created on GitHub in the last ${NEW_DAYS} days that are already gaining stars fast, grouped by launch day. Updated hourly.`;
+const description = `New open-source AI and developer-tool repos created on GitHub in the last ${NEW_DAYS} days that are gaining stars fast, grouped by launch day. Updated hourly.`;
 
 export const metadata: Metadata = {
   title,

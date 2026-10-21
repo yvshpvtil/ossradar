@@ -20,7 +20,7 @@ function groups() {
 
 export function generateMetadata(): Metadata {
   const total = getAlternativesRepos().length;
-  const description = `Find open-source alternatives to ${total} trending AI and developer-tool repos on GitHub, grouped by category. Each list shows tracked repos sharing its GitHub topics.`;
+  const description = `Open-source alternatives to ${total} trending AI and developer-tool GitHub repos, grouped by category. Each list shows tracked repos sharing its GitHub topics.`;
   return {
     title,
     description,
