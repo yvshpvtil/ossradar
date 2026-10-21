@@ -1,0 +1,12 @@
+{
+ "fullName": "Ansub/tv-detox",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install openjdk@17",
+ "source": "readme",
+ "readmeSummary": "Claude Code or Codex does the work. You just press OK on the remote.",
+ "extractor": "heuristic",
+ "readmeHash": "30df145dd0eb",
+ "version": 1,
+ "generatedAt": "2026-10-21T11:54:00.581Z"
+}
