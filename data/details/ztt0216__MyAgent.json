@@ -1,0 +1,12 @@
+{
+ "fullName": "ztt0216/MyAgent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "MyAgent 是一个基于 Python 实现的通用 Agent Runtime。它不是简单的命令行聊天工具，而是一个可运行、可阅读、可扩展的本地 runtime：统一编排模型推理、工具调用、权限控制、长期记忆、Skills、自进化、MCP 外部工具、子 Agent 和会话恢复。",
+ "extractor": "heuristic",
+ "readmeHash": "09dc8c0192bd",
+ "version": 1,
+ "generatedAt": "2026-10-21T14:54:30.768Z"
+}
