@@ -1,0 +1,12 @@
+{
+ "fullName": "cheaper-inference/OmniRoute",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask zoispag/tap/omniroute-tray",
+ "source": "readme",
+ "readmeSummary": "⭐ Star the repo if OMNIROUTE helped you save money and make your work easier.",
+ "extractor": "heuristic",
+ "readmeHash": "cbc05b8d4712",
+ "version": 1,
+ "generatedAt": "2026-10-21T19:02:29.956Z"
+}
