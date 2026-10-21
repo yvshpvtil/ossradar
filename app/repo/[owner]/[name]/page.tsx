@@ -91,6 +91,28 @@ function metaLead(text: string, room: number): string {
   return out || clip(t, room).replace(/[\s,;:(\-–—/]+…$/, "…");
 }
 
+/**
+ * Short GitHub descriptions ("Build resilient agents.") leave repo metas at ~90 chars, mostly boilerplate.
+ * Fill the spare room with real facts from the page (language, age, forks, latest release), inserted before
+ * the "tracked by" sentence, longest first that still fits in 155.
+ */
+function withFacts(base: string, repo: Repo): string {
+  const MAX = 155;
+  if (base.length >= 125) return base;
+  const release = getLatestRelease(repo.fullName);
+  const what = repo.language ? `${/^[AEIOU]/i.test(repo.language) ? "An" : "A"} ${repo.language} project` : "A project";
+  const made = `${what} created ${ageText(repo.createdAt)} ago`;
+  const rel = release?.tag && release.tag.length <= 20 ? ` Latest release ${release.tag}.` : "";
+  const forks = ` with ${formatNumber(repo.forks)} forks`;
+  const cut = base.lastIndexOf(` ${categoryLabel(repo.category)} repo tracked by`);
+  if (cut < 0) return base;
+  for (const facts of [`${made}${forks}.${rel}`, `${made}${forks}.`, `${made}.${rel}`, `${made}.`]) {
+    const out = `${base.slice(0, cut)} ${facts}${base.slice(cut)}`;
+    if (out.length <= MAX) return out;
+  }
+  return base;
+}
+
 export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[name]">): Promise<Metadata> {
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
@@ -102,7 +124,8 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
   const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
   const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
-  const description = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
+  const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
+  const description = withFacts(base, repo);
   const url = repoPath(repo);
   return {
     title,
