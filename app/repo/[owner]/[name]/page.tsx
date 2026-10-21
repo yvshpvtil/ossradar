@@ -94,7 +94,7 @@ function metaLead(text: string, room: number): string {
 /**
  * Short GitHub descriptions ("Build resilient agents.") leave repo metas at ~90 chars, mostly boilerplate.
  * Fill the spare room with real facts from the page (language, age, forks, latest release), inserted before
- * the "tracked by" sentence, longest first that still fits in 155.
+ * the "tracked by" sentence, longest first that still fits in 155 (shorter variants drop the language).
  */
 function withFacts(base: string, repo: Repo): string {
   const MAX = 155;
@@ -106,7 +106,10 @@ function withFacts(base: string, repo: Repo): string {
   const forks = ` with ${formatNumber(repo.forks)} forks`;
   const cut = base.lastIndexOf(` ${categoryLabel(repo.category)} repo tracked by`);
   if (cut < 0) return base;
-  for (const facts of [`${made}${forks}.${rel}`, `${made}${forks}.`, `${made}.${rel}`, `${made}.`]) {
+  // Shorter fallbacks (no language phrase) so long language names like "Jupyter Notebook" still leave room for a fact.
+  const age = `Created ${ageText(repo.createdAt)} ago`;
+  const variants = [`${made}${forks}.${rel}`, `${made}${forks}.`, `${made}.${rel}`, `${made}.`, `${age}${forks}.`, `${age}.`, `${formatNumber(repo.forks)} forks.`];
+  for (const facts of variants) {
     const out = `${base.slice(0, cut)} ${facts}${base.slice(cut)}`;
     if (out.length <= MAX) return out;
   }
