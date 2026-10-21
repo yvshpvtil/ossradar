@@ -1,0 +1,12 @@
+{
+ "fullName": "ai-job-search-dev/ai-job-search",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The job search that runs on your machine.",
+ "extractor": "heuristic",
+ "readmeHash": "d9ed9f67d873",
+ "version": 1,
+ "generatedAt": "2026-10-21T17:51:02.659Z"
+}
