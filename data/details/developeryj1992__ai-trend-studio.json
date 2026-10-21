@@ -1,0 +1,16 @@
+{
+ "fullName": "developeryj1992/ai-trend-studio",
+ "whoItsFor": null,
+ "useCases": [
+  "Track which AI products, models, and use cases are gaining attention.",
+  "Distill a video into talking points before sharing it with a team.",
+  "Record a course, webinar, or multi-guest live stream as structured notes."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Local-first AI trend radar and live-session distillation.",
+ "extractor": "heuristic",
+ "readmeHash": "b3f8874fdae7",
+ "version": 1,
+ "generatedAt": "2026-10-21T22:51:47.025Z"
+}

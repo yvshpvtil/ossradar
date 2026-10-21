@@ -1,0 +1,16 @@
+{
+ "fullName": "notinferred/keypaste",
+ "whoItsFor": null,
+ "useCases": [
+  "One KDBX 4 file on your disk, with no account and no network. KeePassXC opens and edits the same file, and CI checks both directions against",
+  "Logins with a title, username, password, URL and notes, in groups. Search covers titles, usernames and URLs and never reads a password.",
+  "A generator for 8 to 256 characters from a shell-safe alphabet, or passphrases of 6 to 32 words from the EFF list. `keypaste rotate` replace"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The published v0.3.0 CLI stores logins and environment variables in a local KDBX vault, runs commands with them, and asks you before an…",
+ "extractor": "heuristic",
+ "readmeHash": "eb592aa99dc7",
+ "version": 1,
+ "generatedAt": "2026-10-21T22:51:47.032Z"
+}
