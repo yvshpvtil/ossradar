@@ -1,0 +1,16 @@
+{
+ "fullName": "yizhiyanhua-ai/fireworks-tech-graph",
+ "whoItsFor": null,
+ "useCases": [
+  "12 visual styles — 11 generator-backed profiles + 1 AI-authored style (Dark Luxury)",
+  "Engineering semantic contracts — C4 abstraction levels, deployment ownership, event-rail topology, and exact golden signals fail closed befo",
+  "Executable style system — style guides are encoded into the generator, not only documented in markdown"
+ ],
+ "installCommand": "npx -y skills@1.5.17 add \\",
+ "source": "readme",
+ "readmeSummary": "The current checkout adds complete-text reporting and stronger supporting text across the default themes.",
+ "extractor": "heuristic",
+ "readmeHash": "6a6146ac0c37",
+ "version": 1,
+ "generatedAt": "2026-10-21T08:01:00.219Z"
+}

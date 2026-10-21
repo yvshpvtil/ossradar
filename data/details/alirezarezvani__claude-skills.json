@@ -1,0 +1,12 @@
+{
+ "fullName": "alirezarezvani/claude-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx agent-skills-cli add alirezarezvani/claude-skills --agent codex",
+ "source": "readme",
+ "readmeSummary": "388 production-ready Claude Code skills, plugins, and agent skills for 13 AI coding tools.",
+ "extractor": "heuristic",
+ "readmeHash": "46593ccff749",
+ "version": 1,
+ "generatedAt": "2026-10-21T08:01:00.223Z"
+}
