@@ -1,0 +1,12 @@
+{
+ "fullName": "3241288994/AImanager",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "项目上下文接入、多模型协作与 AI 账号管理。",
+ "extractor": "heuristic",
+ "readmeHash": "892319556d8f",
+ "version": 1,
+ "generatedAt": "2026-10-21T23:49:03.167Z"
+}
