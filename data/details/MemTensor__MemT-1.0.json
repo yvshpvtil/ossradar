@@ -1,0 +1,12 @@
+{
+ "fullName": "MemTensor/MemT-1.0",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install '.[server]'",
+ "source": "readme",
+ "readmeSummary": "MemT-1.0 is a new generation of memory foundation models that makes persistent, dynamically evolving memory an intrinsic part of model…",
+ "extractor": "heuristic",
+ "readmeHash": "0e0ffcbf322b",
+ "version": 1,
+ "generatedAt": "2026-10-21T02:52:22.278Z"
+}
