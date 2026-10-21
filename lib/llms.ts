@@ -1,4 +1,5 @@
 import { CATEGORIES, categoryLabel } from "./categories";
+import { getArchiveDays } from "./daily";
 import { getData, getReposByCategory, rankRepos } from "./data";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
@@ -14,6 +15,10 @@ function header(): string {
   const d = getData();
   const top = rankRepos(d.repos, "today")[0];
   const example = top ? `${SITE.url}/repo/${top.owner}/${top.name}` : `${SITE.url}/repo/{owner}/{name}`;
+  const days = getArchiveDays();
+  const dailyPattern = days.length
+    ? `\n- Daily archive: ${SITE.url}/daily/{YYYY-MM-DD} (one completed UTC day's top gainers; ${days.length} days from ${days[days.length - 1]} to ${days[0]}, e.g. ${SITE.url}/daily/${days[0]})`
+    : "";
   return `# ${SITE.name}
 
 > ${SITE.name} (OSS = Open-Source Software) ranks open-source AI and developer-tool GitHub repositories by star velocity: stars gained in the last 24 hours and 7 days, not total stars. It tracks ${d.repos.length} repos and is rebuilt every hour from the GitHub API.
@@ -44,7 +49,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
 - By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
 - By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)
-- README badge (SVG): ${SITE.url}/badge/{owner}/{name}
+- README badge (SVG): ${SITE.url}/badge/{owner}/{name}${dailyPattern}
 
 ## Categories
 
@@ -70,11 +75,17 @@ ${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.
 }
 
 export function llmsTxt(): string {
-  const top = rankRepos(getData().repos, "today").slice(0, 10);
+  const repos = getData().repos;
+  const top = rankRepos(repos, "today").slice(0, 10);
+  const week = rankRepos(repos, "week").slice(0, 10);
   return `${header()}
 ## Top 10 by stars gained in the last 24 hours
 
 ${top.map(line).join("\n")}
+
+## Top 10 by stars gained in the last 7 days
+
+${week.map(line).join("\n")}
 `;
 }
 
