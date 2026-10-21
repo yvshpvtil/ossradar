@@ -1,0 +1,12 @@
+{
+ "fullName": "iamumeransari/claude-show-your-work",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "It works on macOS, Linux and Windows. You need a terminal that supports the kitty graphics protocol, like Ghostty or Warp, and Claude Code…",
+ "extractor": "heuristic",
+ "readmeHash": "ee32f4454cb1",
+ "version": 1,
+ "generatedAt": "2026-10-21T03:54:26.653Z"
+}
