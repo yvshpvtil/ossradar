@@ -1,0 +1,12 @@
+{
+ "fullName": "FishBottle7/opencode2dsh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Free OpenCode Zen models, natively inside DSH (DeepSeek Harness).",
+ "extractor": "heuristic",
+ "readmeHash": "3c827a50cb9e",
+ "version": 1,
+ "generatedAt": "2026-10-21T01:05:25.546Z"
+}

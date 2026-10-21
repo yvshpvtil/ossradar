@@ -1,0 +1,12 @@
+{
+ "fullName": "ctoldigital/axuse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Accessibility-first browser and computer use for agent harnesses. One MCP server plugs into Codex, Claude Code, OpenCode, Antigravity, or…",
+ "extractor": "heuristic",
+ "readmeHash": "06ac1a597733",
+ "version": 1,
+ "generatedAt": "2026-10-21T01:05:25.549Z"
+}

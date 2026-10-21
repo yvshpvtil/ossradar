@@ -1,0 +1,12 @@
+{
+ "fullName": "Tencent-Hunyuan/Hy-Memory",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install hy-memory==2.0.3              # core (includes ChromaDB and Kuzu)",
+ "source": "readme",
+ "readmeSummary": "Hy Memory (Official Website) is a production-grade dual-system cognitive memory engine and Python SDK (hy-memory) for self-evolving LLM…",
+ "extractor": "heuristic",
+ "readmeHash": "3d4f8a9940e8",
+ "version": 1,
+ "generatedAt": "2026-10-21T01:05:25.521Z"
+}
