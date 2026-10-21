@@ -394,5 +394,11 @@
   "basis": "a242ac31f018",
   "source": "claude -p",
   "generatedAt": "2026-10-18T02:21:30.262Z"
+ },
+ "omdsh-dev/DSH-better-sidebar": {
+  "text": "Extensible sidebar for DeepSeek Harness: files, terminal, side chat, Git and subagents.",
+  "basis": "67fbf77357e4",
+  "source": "manual translation",
+  "generatedAt": "2026-10-21T01:03:55.301Z"
  }
 }
