@@ -11,6 +11,17 @@ export type CompareRow = {
   language: string | null; category: string; created: string; pushed: string; release: string; hn: string;
 };
 
+// Rows travel to the client as positional tuples (no repeated keys, avatar
+// URLs shortened to the numeric GitHub user id) to keep the page's payload small.
+export type PackedRow = [string, string, string, number, number, number, number, 0 | 1, string | null, string, string, string, string, string];
+const AVATAR = "https://avatars.githubusercontent.com/u/";
+function unpackRow(p: PackedRow): CompareRow {
+  const [fullName, description, av, stars, forks, delta24h, delta7d, est, language, category, created, pushed, release, hn] = p;
+  const [owner, name] = fullName.split("/");
+  const ownerAvatar = /^\d+$/.test(av) ? `${AVATAR}${av}?v=4` : av;
+  return { fullName, owner, name, description, ownerAvatar, stars, forks, delta24h, delta7d, est: est === 1, language, category, created, pushed, release, hn };
+}
+
 const n = (v: number) => v.toLocaleString("en-US");
 const METRICS: { label: string; hint?: string; get: (r: CompareRow) => string; num?: (r: CompareRow) => number }[] = [
   { label: "Stars", hint: "GitHub's bookmark/like count", get: (r) => n(r.stars), num: (r) => r.stars },
@@ -25,7 +36,8 @@ const METRICS: { label: string; hint?: string; get: (r: CompareRow) => string; n
   { label: "Hacker News", get: (r) => r.hn },
 ];
 
-export function CompareView({ rows }: { rows: CompareRow[] }) {
+export function CompareView({ packed }: { packed: PackedRow[] }) {
+  const rows = useMemo(() => packed.map(unpackRow), [packed]);
   const params = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
