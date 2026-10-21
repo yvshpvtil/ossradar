@@ -16,8 +16,32 @@ const socialTitle = "Browse fast-rising open-source repos by category";
 function rows() {
   return CATEGORIES.map((c) => {
     const repos = getReposByCategory(c.slug);
-    return { ...c, count: repos.length, week: repos.reduce((n, r) => n + r.delta7d, 0), top: rankRepos(repos, "week")[0] };
+    const week = repos.reduce((n, r) => n + r.delta7d, 0);
+    return { ...c, count: repos.length, week, avg: repos.length ? Math.round(week / repos.length) : 0, tops: rankRepos(repos, "week").slice(0, 3) };
   });
+}
+
+/** Plain-English summary of where this week's stars went across categories, built from the same rows as the list. */
+function summary(rs: ReturnType<typeof rows>): string | null {
+  const named = rs.filter((c) => c.slug !== "other" && c.count > 0);
+  if (named.length < 2) return null;
+  const total = rs.reduce((n, c) => n + c.week, 0);
+  const repoTotal = rs.reduce((n, c) => n + c.count, 0);
+  if (total <= 0 || repoTotal <= 0) return null;
+  const pct = (n: number, d: number) => Math.round((n / d) * 100);
+  const byWeek = [...named].sort((a, b) => b.week - a.week);
+  const byAvg = [...named].sort((a, b) => b.avg - a.avg);
+  const lead = byWeek[0];
+  const top = lead.tops[0];
+  let s = `${lead.label} repos gained the most stars together this week (${formatDelta(lead.week)}, ${pct(lead.week, total)}% of all stars gained by tracked repos), ${pct(lead.week, total) > pct(lead.count, repoTotal) ? "though they're only" : "and they make up"} ${pct(lead.count, repoTotal)}% of the ${repoTotal} tracked repos.`;
+  if (top && lead.week > 0) s += ` ${top.fullName} alone accounts for ${pct(top.delta7d, lead.week)}% of that.`;
+  if (byWeek[1]) s += ` ${byWeek[1].label} is second with ${formatDelta(byWeek[1].week)}.`;
+  const avgLead = byAvg[0];
+  if (avgLead.slug !== lead.slug) s += ` Per repo, ${avgLead.label} leads: its ${avgLead.count} repos averaged ${formatDelta(avgLead.avg)} stars each.`;
+  else if (byAvg[1]) s += ` ${lead.label} also leads per repo at ${formatDelta(avgLead.avg)} stars each, ahead of ${byAvg[1].label} at ${formatDelta(byAvg[1].avg)}.`;
+  const biggest = [...named].sort((a, b) => b.count - a.count)[0];
+  if (biggest.slug !== lead.slug) s += ` By size, ${biggest.label} is the largest category with ${biggest.count} repos.`;
+  return s;
 }
 
 export function generateMetadata(): Metadata {
@@ -33,6 +57,7 @@ export function generateMetadata(): Metadata {
 
 export default function CategoryIndex() {
   const rs = rows();
+  const sum = summary(rs);
   return (
     <div className="max-w-3xl">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Categories", path: "/category" }])} />
@@ -55,7 +80,7 @@ export default function CategoryIndex() {
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         {SITE.name} sorts every tracked open-source AI and developer-tool repo into one of {rs.length} categories, based on its GitHub topics and description. Each
         category hub ranks its repos by stars gained. Below are all {rs.length}, with how many repos each holds, the stars they gained together in the last 7 days
-        and the repo leading this week.
+        and the three repos rising fastest this week.
       </p>
       <ul className="mt-6 grid gap-x-6 gap-y-5 text-sm sm:grid-cols-2">
         {rs.map((c) => (
@@ -65,14 +90,35 @@ export default function CategoryIndex() {
               ({c.count}) · <span className="text-emerald-700 dark:text-emerald-400">{formatDelta(c.week)}/wk</span>
             </span>
             <span className="mt-0.5 block text-zinc-600 dark:text-zinc-400">{c.description}</span>
-            {c.top && (
+            {c.tops.length > 0 && (
               <span className="block text-xs text-zinc-500">
-                Leading: <Link prefetch={false} className="hover:underline" href={repoPath(c.top)}>{c.top.fullName}</Link>
+                Rising this week:{" "}
+                {c.tops.map((r, i) => (
+                  <span key={r.fullName}>
+                    {i > 0 && ", "}
+                    <Link prefetch={false} className="hover:underline" href={repoPath(r)}>{r.fullName}</Link> ({formatDelta(r.delta7d)})
+                  </span>
+                ))}
               </span>
             )}
           </li>
         ))}
       </ul>
+      {sum && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold">Where this week&apos;s stars went</h2>
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{sum}</p>
+        </section>
+      )}
+      <section className="mt-6">
+        <h2 className="text-lg font-semibold">How repos are sorted into categories</h2>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          Each repo goes into exactly one category. {SITE.name} scores every category against the repo&apos;s GitHub topics and the words in its name and
+          description, and the highest score wins. The description counts for more than topics, since it&apos;s what the author says the repo actually is: a coding
+          agent that also tags itself &quot;mcp&quot; stays a coding agent. Repos that match no category well land in Other. Because repos have one category,
+          the counts above add up to every tracked repo.
+        </p>
+      </section>
       <p className="mt-8 text-sm text-zinc-600 dark:text-zinc-400">
         Or browse by <Link className="underline" href="/language">programming language</Link> or{" "}
         <Link className="underline" href="/topic">GitHub topic</Link>.
