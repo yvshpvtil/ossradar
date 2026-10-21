@@ -1,0 +1,12 @@
+{
+ "fullName": "vercel-labs/durable-harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install durable-harness @earendil-works/pi-durable @earendil-works/chord @earendil-works/pi-ai just-bash",
+ "source": "readme",
+ "readmeSummary": "durable-harness runs coding-agent harnesses (Pi, OpenCode, libfx's fx, Claude Code and Codex) as durable agents on a Workflow SDK World.",
+ "extractor": "heuristic",
+ "readmeHash": "5dfd7b999351",
+ "version": 1,
+ "generatedAt": "2026-10-21T21:54:35.799Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "timoncool/YuE2-Studio",
+ "whoItsFor": null,
+ "useCases": [
+  "A player of its own — a ten-band equalizer on Winamp's frequencies with its presets,",
+  "Save as, and a Files panel — songs, stems, MIDI, lyric sheets, scores and videos are",
+  "A proxy for the whole studio — HTTP, HTTPS, SOCKS5 or SOCKS4, with a login: model"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Full songs with an editable score, generated on your own GPU. One executable — no Python, no Node.js, no launcher.",
+ "extractor": "heuristic",
+ "readmeHash": "2c5d19f28a48",
+ "version": 1,
+ "generatedAt": "2026-10-21T21:54:35.890Z"
+}

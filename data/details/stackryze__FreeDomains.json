@@ -1,0 +1,12 @@
+{
+ "fullName": "stackryze/FreeDomains",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Stackryze Domains runs Multiple Domains Names, a free managed subdomain service for developers, students, and open-source communities.",
+ "extractor": "heuristic",
+ "readmeHash": "9c3d7f7aef49",
+ "version": 1,
+ "generatedAt": "2026-10-21T21:54:35.792Z"
+}
