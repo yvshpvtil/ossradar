@@ -14,11 +14,26 @@ export function generateStaticParams() {
   return days.length ? days.map((date) => ({ date })) : [{ date: "none" }];
 }
 
+// Unique per day: name that day's top gainers (as many as fit ~158 chars) so each archive page's snippet says what's on it.
+function dailyDescription(date: string) {
+  const day = formatDate(date);
+  const head = `Top rising GitHub repos on ${day}: `;
+  const tail = `. See the day's full open-source AI & dev-tool list.`;
+  const fallback = `The open-source AI and developer-tool repos that gained the most GitHub stars on ${day}, from ${SITE.name}.`;
+  const items = getDailyTop(date).slice(0, 3).map((e, i) => `${e.fullName.split("/")[1]} (+${formatNumber(e.gained)}${i ? "" : " stars"})`);
+  for (let n = items.length; n > 0; n--) {
+    const list = n === 1 ? items[0] : `${items.slice(0, n - 1).join(", ")} and ${items[n - 1]}`;
+    const d = `${head}${list}${tail}`;
+    if (d.length <= 158) return d;
+  }
+  return fallback;
+}
+
 export async function generateMetadata({ params }: PageProps<"/daily/[date]">): Promise<Metadata> {
   const { date } = await params;
   if (!getArchiveDays().includes(date)) return {};
   const title = `Fastest-rising GitHub repos on ${formatDate(date)}`;
-  const description = `The open-source AI and developer-tool repos that gained the most GitHub stars on ${formatDate(date)}, from ${SITE.name}.`;
+  const description = dailyDescription(date);
   return { title, description, alternates: { canonical: `/daily/${date}` }, openGraph: { ...ogDefaults, title, description, url: `/daily/${date}` }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
 }
 

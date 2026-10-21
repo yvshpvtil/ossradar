@@ -13,7 +13,7 @@ import { SITE } from "@/lib/site";
 // the longer phrase stays on OG/X like /hacker-news.
 const title = "Daily archive of rising GitHub repos";
 const socialTitle = "Daily archive: the fastest-rising GitHub repos, day by day";
-const description = `Which open-source AI and developer-tool repos gained the most GitHub stars each day, archived by ${SITE.name}.`;
+const description = `Which open-source AI and developer-tool repos gained the most GitHub stars each day: ${SITE.name}'s dated archive with each day's top risers, newest first.`;
 
 export const metadata: Metadata = {
   title,
