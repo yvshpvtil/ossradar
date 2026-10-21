@@ -1,0 +1,12 @@
+{
+ "fullName": "dom96/KillSwitch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install --path .",
+ "source": "readme",
+ "readmeSummary": "This repo contains the design and reference implementation of the KillSwitch programming language.",
+ "extractor": "heuristic",
+ "readmeHash": "80d6cffd5483",
+ "version": 1,
+ "generatedAt": "2026-10-21T19:51:41.449Z"
+}
