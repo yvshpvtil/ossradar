@@ -1,0 +1,12 @@
+{
+ "fullName": "junxchan54-maker/mcd-cn-assistant",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "mcd-cn-assistant 是一个面向 AI Agent 的技能包（Skill），建立在麦当劳中国官方 MCP 服务（）之上。",
+ "extractor": "heuristic",
+ "readmeHash": "9e818f49c1bf",
+ "version": 1,
+ "generatedAt": "2026-10-21T15:56:16.055Z"
+}
