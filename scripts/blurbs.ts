@@ -70,8 +70,8 @@ async function main() {
     }
   };
   await Promise.all(Array.from({ length: Number(process.env.BLURBS_CONCURRENCY ?? 4) }, worker));
-  const tracked = new Set(repos.map((r) => r.fullName));
-  for (const k of Object.keys(out)) if (!tracked.has(k)) delete out[k];
+  // Keep entries for repos that dropped out of the tracked set: they often come back (churn), and
+  // hand translations would otherwise be lost. The basis hash still forces a refresh if the source text changes.
   writeFileSync(FILE, JSON.stringify(Object.fromEntries(Object.entries(out).sort()), null, 1) + "\n");
   console.log(`blurbs: wrote ${ok}; ${Object.keys(out).length} overrides in ${FILE}`);
 }

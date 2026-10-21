@@ -119,6 +119,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.263Z"
  },
+ "adexbn/walk-kcal": {
+  "text": "Turns walking distance into a meal calorie budget and marks which dishes at nearby restaurants, including McDonald's, fit it.",
+  "basis": "48f3baa07be7",
+  "source": "claude -p",
+  "generatedAt": "2026-10-21T02:25:00.754Z"
+ },
  "aimeoa/hanshuang-codex": {
   "text": "Experimental jailbreak project for GPT 6.0 and WorkBuddy V4.1 Flash, with an Electron desktop interface.",
   "basis": "4b17fd634347",
@@ -130,6 +136,12 @@
   "basis": "692e47021792",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:03.095Z"
+ },
+ "alchaincyf/huashu-chrome": {
+  "text": "An MCP server and Chrome extension that lets any AI agent control your own Chrome browser with your existing logins.",
+  "basis": "9842fd5772e1",
+  "source": "claude -p",
+  "generatedAt": "2026-10-21T02:25:16.432Z"
  },
  "ardeyouxipianyi/workbuddy2api-hub": {
   "text": "Multi-account proxy gateway that exposes Tencent WorkBuddy and CodeBuddy as OpenAI- and Anthropic-compatible APIs.",
@@ -166,6 +178,12 @@
   "basis": "6ec9042cc9b2",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:29.506Z"
+ },
+ "cporter202/API-mega-list": {
+  "text": "A directory of 11,860 APIs in 24 categories, such as AI, agents and automation, for building apps and automations.",
+  "basis": "a1500baad311",
+  "source": "claude -p",
+  "generatedAt": "2026-10-21T02:25:07.662Z"
  },
  "cv-cat/catbus": {
   "text": "A CLI with unified commands and JSON output for Xiaohongshu, Douyin, TikTok, Bilibili, Weibo, Taobao, X and more.",
@@ -275,6 +293,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.453Z"
  },
+ "kergee/mcd-undercover": {
+  "text": "A pass-the-phone “Who Is the Undercover” party game for 3–8 players that uses real McDonald's menu items as word pairs.",
+  "basis": "36fdde61d2a6",
+  "source": "claude -p, edited by hand",
+  "generatedAt": "2026-10-21T02:24:59.934Z"
+ },
  "langbot-app/LangBot": {
   "text": "Platform for building agentic chat bots for Discord, Slack, Telegram, WeChat, QQ and more.",
   "basis": "8af897a81ff5",
@@ -310,6 +334,12 @@
   "basis": "eb9f174e2fe3",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:49.828Z"
+ },
+ "omdsh-dev/DSH-better-sidebar": {
+  "text": "Extensible sidebar for DeepSeek Harness: files, terminal, side chat, Git and subagents.",
+  "basis": "67fbf77357e4",
+  "source": "manual translation",
+  "generatedAt": "2026-10-21T01:03:55.301Z"
  },
  "peach-mitao/peach": {
   "text": "Single-user, local-first personal media system.",
@@ -360,10 +390,10 @@
   "generatedAt": "2026-10-15T02:24:54.787Z"
  },
  "tradecatlabs/vibe-coding-cn": {
-  "text": "A Chinese-language Vibe Coding tutorial on AI pair-programming workflows, prompts, skills, context management and Codex.",
-  "basis": "dd020860f51d",
+  "text": "A Chinese-language Vibe Coding toolbox of guides, prompts, skills and tools built around Pi Agent and OpenAI GPT.",
+  "basis": "c26b5071695c",
   "source": "claude -p",
-  "generatedAt": "2026-10-14T05:14:04.743Z"
+  "generatedAt": "2026-10-21T02:25:06.706Z"
  },
  "trhhubsd/ARTEX": {
   "text": "Autonomous AI penetration testing system built on multi-agent LLMs, with a Go backend and Next.js frontend.",
@@ -394,11 +424,5 @@
   "basis": "a242ac31f018",
   "source": "claude -p",
   "generatedAt": "2026-10-18T02:21:30.262Z"
- },
- "omdsh-dev/DSH-better-sidebar": {
-  "text": "Extensible sidebar for DeepSeek Harness: files, terminal, side chat, Git and subagents.",
-  "basis": "67fbf77357e4",
-  "source": "manual translation",
-  "generatedAt": "2026-10-21T01:03:55.301Z"
  }
 }
