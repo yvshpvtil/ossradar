@@ -1,0 +1,12 @@
+{
+ "fullName": "pgrundev/pgx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://pgx.dev/install | sh",
+ "source": "readme",
+ "readmeSummary": "PGX is a database runtime for short-lived Postgres databases: agent sandboxes, CI and per-PR databases, test and preview environments.",
+ "extractor": "heuristic",
+ "readmeHash": "e71774326f33",
+ "version": 1,
+ "generatedAt": "2026-10-21T01:53:34.706Z"
+}
