@@ -1,0 +1,12 @@
+{
+ "fullName": "GeminiLight/SocialCoach",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "你的专属 AI 情商教练。",
+ "extractor": "heuristic",
+ "readmeHash": "893d8b09fa2c",
+ "version": 1,
+ "generatedAt": "2026-10-21T20:54:05.583Z"
+}
