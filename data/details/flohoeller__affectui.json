@@ -1,0 +1,12 @@
+{
+ "fullName": "flohoeller/affectui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx shadcn@latest add https://www.affectui.com/r/reaction-bar.json",
+ "source": "readme",
+ "readmeSummary": "affectUI is a library of handcrafted React components, illustrations and motion effects for AI products and modern SaaS apps.",
+ "extractor": "heuristic",
+ "readmeHash": "2a554fbccc2c",
+ "version": 1,
+ "generatedAt": "2026-10-21T16:54:55.740Z"
+}

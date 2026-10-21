@@ -1,0 +1,12 @@
+{
+ "fullName": "NineAbyss/OR-License",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "OR-License is an operations research benchmark with 31 tasks, their data, an interactive business-information simulator, and an evaluation…",
+ "extractor": "heuristic",
+ "readmeHash": "6003a2c0a228",
+ "version": 1,
+ "generatedAt": "2026-10-21T16:54:55.723Z"
+}
