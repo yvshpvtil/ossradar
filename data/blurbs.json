@@ -1,4 +1,10 @@
 {
+ "3241288994/AImanager": {
+  "text": "Gives ChatGPT access to project files, coordinates Codex, Claude Code and API models, and manages AI account quotas.",
+  "basis": "e914ff457f8b",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:23:50.366Z"
+ },
  "78/xiaozhi-esp32": {
   "text": "Voice chatbot for ESP32 boards that uses large models like Qwen and DeepSeek and controls devices through MCP.",
   "basis": "2e956c27b994",
@@ -83,6 +89,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:08.426Z"
  },
+ "MaryCache/imozuru": {
+  "text": "A Claude Code skill that researches unfamiliar fields by following citations and links until reaching original sources.",
+  "basis": "25c0b458dc55",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:23:47.468Z"
+ },
  "MeteorNOX/DeepSeek-Balance-Whale-Widget": {
   "text": "A corner widget for the DeepSeek Harness web UI with a whale character that shows your DeepSeek balance and daily spend.",
   "basis": "7685cf582c39",
@@ -160,6 +172,12 @@
   "basis": "0afee4d74953",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:20.682Z"
+ },
+ "calmsprite2001/mcd-mailu": {
+  "text": "A skill using McDonald's official MCP that reads your past orders and turns them into a shareable story card.",
+  "basis": "ad652aeb505b",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:23:57.710Z"
  },
  "carnot-tech/jinba-consulting-pptx-skill": {
   "text": "Claude Code and Codex skill that gets AI to produce serious, consulting-style PowerPoint decks.",
@@ -293,6 +311,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.453Z"
  },
+ "jundizhou/easy-stock": {
+  "text": "A desktop workbench for China A-share market data, AI-assisted stock research, quant analysis and after-market review.",
+  "basis": "c4dc32f794fa",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:24:01.486Z"
+ },
  "kergee/mcd-undercover": {
   "text": "A pass-the-phone “Who Is the Undercover” party game for 3–8 players that uses real McDonald's menu items as word pairs.",
   "basis": "36fdde61d2a6",
@@ -316,6 +340,12 @@
   "basis": "ac22cf43d9d5",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:11:53.650Z"
+ },
+ "liuda30201/AI-Coding": {
+  "text": "Lists Claude Code, Codex and Cursor relay sites with free credits and sign-up bonuses, plus a Python data scraper.",
+  "basis": "cb096be5d0e0",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:23:49.355Z"
  },
  "lokicorvus/crosspet": {
   "text": "A desktop pet for Mac and Windows that changes look to match the AI you use and acts out what the AI is doing.",
@@ -418,6 +448,12 @@
   "basis": "91626cc8edee",
   "source": "manual translation",
   "generatedAt": "2026-10-20T16:57:10.015Z"
+ },
+ "ztt0216/MyAgent": {
+  "text": "A Python agent runtime with an agent loop, permissions, MCP tools, sub-agents, memory and self-evolving skills.",
+  "basis": "646c575ddc9c",
+  "source": "claude -p",
+  "generatedAt": "2026-10-22T02:23:47.703Z"
  },
  "zzusec/forkiq": {
   "text": "A self-hosted dashboard that discovers your GitHub forks, syncs them with upstream, and logs every sync result.",
