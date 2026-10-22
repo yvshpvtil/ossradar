@@ -1,0 +1,12 @@
+{
+ "fullName": "llm-xiaoye/douyin-to-obsidian",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "把抖音视频、图文和收藏夹中的知识整理到自己的 Obsidian。面向 cc-connect + Claude Code 的 /dy 技能：Python 负责材料获取、本地识别、查重和事务写入，当前会话的模型负责理解、纠错和知识提炼。",
+ "extractor": "heuristic",
+ "readmeHash": "7857cea82174",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.028Z"
+}

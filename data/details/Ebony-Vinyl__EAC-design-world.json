@@ -1,0 +1,12 @@
+{
+ "fullName": "Ebony-Vinyl/EAC-design-world",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install eac-design-world@0.4.0",
+ "source": "readme",
+ "readmeSummary": "DeepSeek Harness 的本地视频制作与设计工作室",
+ "extractor": "heuristic",
+ "readmeHash": "efb78101946e",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.318Z"
+}

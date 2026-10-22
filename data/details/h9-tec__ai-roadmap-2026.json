@@ -1,0 +1,12 @@
+{
+ "fullName": "h9-tec/ai-roadmap-2026",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Per the market analysis this roadmap is built on, AI engineering in 2026 shifted from \"train models\" to \"build reliable agentic systems\" on…",
+ "extractor": "heuristic",
+ "readmeHash": "8274a4af84a1",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:48.992Z"
+}

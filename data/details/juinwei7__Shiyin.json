@@ -1,0 +1,16 @@
+{
+ "fullName": "juinwei7/Shiyin",
+ "whoItsFor": null,
+ "useCases": [
+  "Recording",
+  "Sources: microphone only, microphone + computer audio (online meetings), or computer audio only. The other side of Zoom, Meet or Teams is re",
+  "Live transcript and per-source level meters while recording; pause, bookmark and take notes"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A meeting-notes app for macOS. Record a meeting (in person or online) and watch a live transcript as it happens.",
+ "extractor": "heuristic",
+ "readmeHash": "7a26c546c11b",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:48.987Z"
+}

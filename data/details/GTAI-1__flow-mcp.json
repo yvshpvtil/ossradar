@@ -1,0 +1,12 @@
+{
+ "fullName": "GTAI-1/flow-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Drive Google Flow (flow.google.com) from Claude, Codex or any other MCP app, or from a local control panel, using Flow's own credits (free…",
+ "extractor": "heuristic",
+ "readmeHash": "c176db44a44f",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.559Z"
+}

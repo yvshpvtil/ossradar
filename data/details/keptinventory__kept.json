@@ -1,0 +1,16 @@
+{
+ "fullName": "keptinventory/kept",
+ "whoItsFor": null,
+ "useCases": [
+  "Inventory. Locations, places, boxes and things, with photos, documents, tags, custom fields,",
+  "Capture. Photograph a thing, a receipt, a label or a whole room, online or offline; your AI",
+  "Labels and scanning. Print label sheets with a short ID and a QR code; scan one to open the"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Homes, garages and storage units; the rooms, shelves and boxes inside them; the things inside those, with receipts, manuals, warranties and…",
+ "extractor": "heuristic",
+ "readmeHash": "a1e2595817a8",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.324Z"
+}

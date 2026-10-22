@@ -1,0 +1,16 @@
+{
+ "fullName": "GabrieleLozupone/kokon",
+ "whoItsFor": null,
+ "useCases": [
+  "Before/after: compare with Slider, Flicker or Changes, or hold B to see the original.",
+  "Undo/redo between versions with Ctrl + Z / Ctrl + Y ( ⌘ on a Mac).",
+  "Gallery: every image keeps its full recipe (prompt, seed, settings, pipeline) and reopens"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/8851c580-99b9-432a-82be-b6d42fa9a749",
+ "extractor": "heuristic",
+ "readmeHash": "359d40589252",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.786Z"
+}

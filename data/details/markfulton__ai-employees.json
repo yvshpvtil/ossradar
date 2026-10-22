@@ -1,0 +1,12 @@
+{
+ "fullName": "markfulton/ai-employees",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An AI Employee is a folder of scheduled routines that covers one business role.",
+ "extractor": "heuristic",
+ "readmeHash": "f44fa2dd5222",
+ "version": 1,
+ "generatedAt": "2026-10-22T16:54:49.007Z"
+}
