@@ -1,0 +1,12 @@
+{
+ "fullName": "tek-sys-hub/Rubix-lang",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Built-in math routines (floatadd, floatsub, floatmul, floatdiv, floattoint, inttofloat, printfloat) remain fully available for backwards…",
+ "extractor": "heuristic",
+ "readmeHash": "4eadc8333836",
+ "version": 1,
+ "generatedAt": "2026-10-22T08:58:48.644Z"
+}
