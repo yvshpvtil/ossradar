@@ -58,7 +58,7 @@ export function proxy(req: NextRequest) {
     // Archive days are completed UTC days from FIRST_ARCHIVE_DAY up to yesterday (snapshot files aren't readable here).
     const d = parts[1];
     const today = new Date().toISOString().slice(0, 10);
-    if (parts.length > 2 || !/^\d{4}-\d{2}-\d{2}$/.test(d) || Number.isNaN(Date.parse(d)) || d < FIRST_ARCHIVE_DAY || d >= today) return notFound();
+    if ((parts.length > 2 && parts[2] !== "opengraph-image") || parts.length > 3 || !/^\d{4}-\d{2}-\d{2}$/.test(d) || Number.isNaN(Date.parse(d)) || d < FIRST_ARCHIVE_DAY || d >= today) return notFound();
   }
   return NextResponse.next();
 }
