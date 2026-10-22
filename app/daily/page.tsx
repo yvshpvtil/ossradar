@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -32,7 +32,22 @@ export default function DailyIndex() {
   return (
     <div className="max-w-3xl">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }])} />
-      {days.length > 0 && <JsonLd data={linkListLd("OSS Radar daily archive", days.map((d) => ({ name: `Fastest-rising GitHub repos on ${formatDate(d)}`, url: abs(`/daily/${d}`) })))} />}
+      {days.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: title,
+            description,
+            url: abs("/daily"),
+            dateModified: days[0],
+            temporalCoverage: `${days[days.length - 1]}/${days[0]}`,
+            inLanguage: "en",
+            isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+            mainEntity: withoutContext(linkListLd("OSS Radar daily archive", days.map((d) => ({ name: `Fastest-rising GitHub repos on ${formatDate(d)}`, url: abs(`/daily/${d}`) })))),
+          }}
+        />
+      )}
       <PageNav crumbs={[{ name: "Daily archive" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive</h1>

@@ -57,6 +57,13 @@ export function itemListLd(name: string, repos: Repo[], limit = 50) {
 
 /** ItemList for listing pages whose rows aren't plain Repo objects (daily archive, Hacker News).
  *  Items keep the on-page order; url should be absolute. */
+/** Strip @context so a JSON-LD node can be nested inside another. */
+export function withoutContext<T extends Record<string, unknown>>(ld: T) {
+  const out: Record<string, unknown> = { ...ld };
+  delete out["@context"];
+  return out;
+}
+
 export function linkListLd(name: string, items: { name: string; url: string }[], limit = 50) {
   const list = items.slice(0, limit);
   return {

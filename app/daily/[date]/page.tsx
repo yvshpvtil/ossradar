@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -35,12 +35,6 @@ export async function generateMetadata({ params }: PageProps<"/daily/[date]">): 
   const title = `Fastest-rising GitHub repos on ${formatDate(date)}`;
   const description = dailyDescription(date);
   return { title, description, alternates: { canonical: `/daily/${date}` }, openGraph: { ...ogDefaults, title, description, url: `/daily/${date}` }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
-}
-
-function withoutContext<T extends Record<string, unknown>>(ld: T) {
-  const out: Record<string, unknown> = { ...ld };
-  delete out["@context"];
-  return out;
 }
 
 export default async function DailyPage({ params }: PageProps<"/daily/[date]">) {
