@@ -1,0 +1,12 @@
+{
+ "fullName": "sourcepro5/WeChatAgent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Windows 微信助手与独立桌面控制台。支持白名单好友／群聊、人格预设、独立 DSH 会话、天气查询、网页正文阅读、图片理解、原生文字及表情包发送。内置功能可通过扩展页面管理。",
+ "extractor": "heuristic",
+ "readmeHash": "d106b6d36346",
+ "version": 1,
+ "generatedAt": "2026-10-22T10:53:32.599Z"
+}

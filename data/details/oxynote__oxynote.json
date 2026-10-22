@@ -1,0 +1,12 @@
+{
+ "fullName": "oxynote/oxynote",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name oxynote \\",
+ "source": "readme",
+ "readmeSummary": "A self-hosted workspace that puts a live metric chart next to the paragraph explaining it, gives your internal APIs Stripe-style docs, and…",
+ "extractor": "heuristic",
+ "readmeHash": "8b46f3ee1bbe",
+ "version": 1,
+ "generatedAt": "2026-10-22T10:53:32.611Z"
+}
