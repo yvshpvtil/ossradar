@@ -1,0 +1,16 @@
+{
+ "fullName": "Zackriya-Solutions/meetily",
+ "whoItsFor": null,
+ "useCases": [
+  "Local First: All processing is done on your machine. No data ever leaves your computer.",
+  "Real-time Transcription: Get a live transcript of your meeting as it happens.",
+  "AI-Powered Summaries: Generate summaries of your meetings using powerful language models."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A privacy-first AI meeting assistant that captures, transcribes, and summarizes meetings entirely on your infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "928aa2d92438",
+ "version": 1,
+ "generatedAt": "2026-10-22T07:13:10.072Z"
+}

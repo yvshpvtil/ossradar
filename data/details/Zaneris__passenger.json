@@ -1,0 +1,12 @@
+{
+ "fullName": "Zaneris/passenger",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An IDE for C# and modern .NET, written in C# with Avalonia, free and open source under MIT.",
+ "extractor": "heuristic",
+ "readmeHash": "9f618f80440c",
+ "version": 1,
+ "generatedAt": "2026-10-22T07:13:10.052Z"
+}
