@@ -1,0 +1,12 @@
+{
+ "fullName": "Generated-Computers/Locals",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://raw.githubusercontent.com/Generated-Computers/Locals/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "That is all. The first time, Locals downloads a model that suits your Mac (about 3 GB), starts it in the background and opens the OpenCode…",
+ "extractor": "heuristic",
+ "readmeHash": "237986af3fd3",
+ "version": 1,
+ "generatedAt": "2026-10-22T08:01:51.768Z"
+}
