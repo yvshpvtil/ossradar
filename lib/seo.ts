@@ -1,5 +1,5 @@
 import type { Repo } from "./types";
-import { formatDelta } from "./format";
+import { formatDelta, formatNumber } from "./format";
 import { SITE } from "./site";
 
 export const abs = (path: string) => `${SITE.url}${path === "/" ? "" : path}`;
@@ -120,3 +120,24 @@ export const SITE_OG_IMAGE = {
 };
 export const ogDefaults = { siteName: SITE.name, locale: "en_US", type: "website" as const, images: [SITE_OG_IMAGE] };
 export const twitterImage = { images: [SITE_OG_IMAGE.url] };
+
+/**
+ * Hub meta descriptions: a fixed lead sentence plus the hub's current weekly leader, so the
+ * 70+ topic/language hubs don't share one near-identical template. Tries the longest variant
+ * that fits `max` (tails are tried in order, longest first) and falls back to the plain lead
+ * with the first tail, so nothing gets cut mid-sentence.
+ */
+export function hubDescription(lead: string, tails: string[], leader: Pick<Repo, "name" | "delta7d" | "estimated7d"> | undefined, max = 155): string {
+  const variants: string[] = [];
+  if (leader && leader.delta7d > 0) {
+    const gain = `${leader.estimated7d ? "about " : ""}+${formatNumber(leader.delta7d)} stars`;
+    const withLeader = `${lead} Leading this week: ${leader.name} (${gain}).`;
+    variants.push(...tails.map((t) => `${withLeader} ${t}`), withLeader);
+  }
+  variants.push(...tails.map((t) => `${lead} ${t}`));
+  for (const v of variants) {
+    const t = v.replace(/\s+/g, " ").trim();
+    if (t.length <= max) return t;
+  }
+  return clip(`${lead} ${tails[0] ?? ""}`, max);
+}

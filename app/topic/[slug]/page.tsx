@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { toLeaderRepo } from "@/lib/leader";
-import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
 
@@ -24,7 +24,8 @@ function topicMeta(slug: string) {
   // description and in the OG/X title, where length matters less.
   const title = `Trending ${label} GitHub repos`;
   const socialTitle = `${title}: ${n} rising projects`;
-  const description = clip(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained. ${n} tracked, updated hourly on ${SITE.name}.`);
+  const leader = rankRepos(getReposByTopic(slug), "week")[0];
+  const description = hubDescription(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained.`, [`${n} tracked, updated hourly on ${SITE.name}.`, `${n} tracked, updated hourly.`, `${n} tracked.`], leader);
   return { title, socialTitle, description };
 }
 

@@ -10,7 +10,7 @@ import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { toLeaderRepo } from "@/lib/leader";
-import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -22,7 +22,8 @@ function languageMeta(lang: NonNullable<ReturnType<typeof getLanguage>>) {
   // description and in the OG/X title, where length matters less.
   const title = `Trending ${lang.name} repos on GitHub`;
   const socialTitle = `${title}: ${lang.count} rising projects`;
-  const description = clip(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained. ${lang.count} tracked, updated hourly on ${SITE.name}.`);
+  const leader = rankRepos(getReposByLanguage(lang.name), "week")[0];
+  const description = hubDescription(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained.`, [`${lang.count} tracked, updated hourly on ${SITE.name}.`, `${lang.count} tracked, updated hourly.`, `${lang.count} tracked.`], leader);
   return { title, socialTitle, description };
 }
 
