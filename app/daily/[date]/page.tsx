@@ -37,6 +37,12 @@ export async function generateMetadata({ params }: PageProps<"/daily/[date]">): 
   return { title, description, alternates: { canonical: `/daily/${date}` }, openGraph: { ...ogDefaults, title, description, url: `/daily/${date}` }, twitter: { card: "summary_large_image", title, description, ...twitterImage } };
 }
 
+function withoutContext<T extends Record<string, unknown>>(ld: T) {
+  const out: Record<string, unknown> = { ...ld };
+  delete out["@context"];
+  return out;
+}
+
 export default async function DailyPage({ params }: PageProps<"/daily/[date]">) {
   const { date } = await params;
   const days = getArchiveDays();
@@ -46,7 +52,20 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
   const newer = days[i - 1], older = days[i + 1];
   return (
     <div className="max-w-3xl">
-      <JsonLd data={linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: `Fastest-rising GitHub repos on ${formatDate(date)}`,
+          description: dailyDescription(date),
+          url: abs(`/daily/${date}`),
+          datePublished: date,
+          temporalCoverage: date,
+          inLanguage: "en",
+          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          mainEntity: withoutContext(linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))),
+        }}
+      />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }, { name: formatDate(date), path: `/daily/${date}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/daily" />
