@@ -1,0 +1,12 @@
+{
+ "fullName": "devswha/ovis",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://ovis.sh/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Ovis, the browser and phone client for herdr.",
+ "extractor": "heuristic",
+ "readmeHash": "7cfd6f99d8a1",
+ "version": 1,
+ "generatedAt": "2026-10-22T14:01:17.885Z"
+}
