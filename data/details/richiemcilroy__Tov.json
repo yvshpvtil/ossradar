@@ -1,0 +1,12 @@
+{
+ "fullName": "richiemcilroy/Tov",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A programming language for coding agents. Tov reads like TypeScript, so your agent can already write it, and when the agent gets something…",
+ "extractor": "heuristic",
+ "readmeHash": "bcef3d0b4e21",
+ "version": 1,
+ "generatedAt": "2026-10-22T01:04:06.591Z"
+}

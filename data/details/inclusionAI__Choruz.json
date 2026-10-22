@@ -1,0 +1,12 @@
+{
+ "fullName": "inclusionAI/Choruz",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An agent workspace for Codex, Claude Code, and Muse that asynchronously turns user interaction traces into personalized benchmarks to adapt…",
+ "extractor": "heuristic",
+ "readmeHash": "829eee91691e",
+ "version": 1,
+ "generatedAt": "2026-10-22T01:04:06.557Z"
+}

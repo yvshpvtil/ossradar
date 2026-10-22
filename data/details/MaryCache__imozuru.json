@@ -1,0 +1,12 @@
+{
+ "fullName": "MaryCache/imozuru",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add MaryCache/imozuru",
+ "source": "readme",
+ "readmeSummary": "imozuruは、知らない分野を、原文にたどりつくまで芋づる式に掘るClaude Codeのスキルです。 Batesのberrypicking、Ellisの探索行動のモデル、Kuhlthauの探索過程の研究など、図書館情報学の情報探索の研究から、考え方を応用しています。",
+ "extractor": "heuristic",
+ "readmeHash": "9100d273bdca",
+ "version": 1,
+ "generatedAt": "2026-10-22T01:04:06.576Z"
+}

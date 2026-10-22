@@ -1,0 +1,12 @@
+{
+ "fullName": "respanai/respan-gateway",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/respanai/respan-gateway/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "One endpoint for every LLM vendor. Point any official SDK at the gateway, name any model, and it routes the request to the right provider…",
+ "extractor": "heuristic",
+ "readmeHash": "84169c834ee6",
+ "version": 1,
+ "generatedAt": "2026-10-22T01:04:06.870Z"
+}
