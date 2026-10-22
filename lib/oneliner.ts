@@ -2,6 +2,9 @@ import { cleanBlurb, isPlaceholder, stripWhy } from "./blurb";
 import { getDetails } from "./details";
 import { getBlurbOverride } from "./blurbOverrides";
 import type { Repo } from "./types";
+import { WHY } from "./whyNotes";
+
+const TEMPLATE_WHYS = new Set(Object.values(WHY));
 
 /**
  * Site-side cleanup of stored one-liners (older data predates the cleaner collector):
@@ -9,8 +12,11 @@ import type { Repo } from "./types";
  * "Why it matters" note. Placeholder lines for repos with no description use the README's
  * first paragraph from data/details when available.
  */
-export function cleanOneLiner(r: Pick<Repo, "fullName" | "description" | "oneLiner">): string {
-  const why = r.oneLiner.match(/\s*(Why it matters:.*)$/i)?.[1] ?? "";
+export function cleanOneLiner(r: Pick<Repo, "fullName" | "description" | "oneLiner" | "category">): string {
+  let why = r.oneLiner.match(/\s*(Why it matters:.*)$/i)?.[1] ?? "";
+  // A stored template note reflects the category at collect time; follow the current categorizer.
+  const note = why.match(/^Why it matters:\s*(.*?)\.?$/i)?.[1];
+  if (note && TEMPLATE_WHYS.has(note) && WHY[r.category] !== note) why = `Why it matters: ${WHY[r.category]}.`;
   let what: string | null = getBlurbOverride(r.fullName);
   if (what) {
     // English override from data/blurbs.json wins.

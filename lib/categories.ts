@@ -102,9 +102,22 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
  * rule is scored (topic hit = 2, keyword hit in name/description = 3, since the description is
  * what the author actually says the repo is). Highest score wins; ties go to rule order.
  */
+/**
+ * Tags authors add because they built the project with an AI coding tool, not because the
+ * project is one (e.g. an Android TV debloater tagged claude-code and vibe-coding).
+ */
+const BUILT_WITH_TOPICS = new Set(["claude-code", "vibe-coding", "cursor", "codex", "copilot"]);
+const AI_SIGNAL = /\b(ai|llms?|agents?|agentic|claude|codex|cursor|copilot|gemini|coding|code|codebase|prompts?|models?|gpt|chatgpt|opencode|mcp)\b/i;
+
 export function categorize(input: { topics: string[]; description: string; name: string }): CategorySlug {
-  const topics = new Set(input.topics.map((t) => t.toLowerCase()));
-  const text = ` ${input.name.replace(/[-_]/g, " ")} ${input.description} `.toLowerCase();
+  const name = input.name.replace(/[-_]/g, " ");
+  // Built-with tags only count when the name or description says the repo is about AI or code;
+  // with no description we can't tell, so they still count.
+  const ignoreBuiltWith = input.description.trim() !== "" && !AI_SIGNAL.test(`${name} ${input.description}`);
+  const topics = new Set(
+    input.topics.map((t) => t.toLowerCase()).filter((t) => !(ignoreBuiltWith && BUILT_WITH_TOPICS.has(t))),
+  );
+  const text = ` ${name} ${input.description} `.toLowerCase();
   let best: CategorySlug = "other";
   let bestScore = 0;
   for (const rule of RULES) {

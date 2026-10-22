@@ -8,6 +8,7 @@
  */
 import { categoryLabel } from "../lib/categories";
 import { cleanBlurb } from "../lib/blurb";
+import { WHY } from "../lib/whyNotes";
 import type { CategorySlug } from "../lib/types";
 
 export interface SummaryInput {
@@ -39,17 +40,6 @@ function truncate(text: string, max: number): string {
   const cut = text.slice(0, max);
   return `${cut.slice(0, cut.lastIndexOf(" ") > 40 ? cut.lastIndexOf(" ") : max).replace(/[,;:.\s-]+$/, "")}…`;
 }
-
-const WHY: Record<CategorySlug, string> = {
-  "ai-agents": "worth a look if you build or run autonomous agents",
-  "llm-tooling": "useful plumbing for shipping LLM-powered features",
-  mcp: "extends what MCP-compatible assistants can connect to and do",
-  "coding-agents": "relevant if AI is part of your coding workflow",
-  "rag-vector": "relevant for grounding LLMs in your own data",
-  "local-llms": "helps you run models on your own hardware without an API bill",
-  devops: "worth a look for your infrastructure and delivery stack",
-  other: "a developer project picking up unusual momentum",
-};
 
 export function templateSummary(input: SummaryInput): string {
   const desc = cleanBlurb(input.override) ?? cleanBlurb(clean(input.description)) ?? cleanBlurb(input.readmeSummary);
