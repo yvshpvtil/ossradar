@@ -8,11 +8,24 @@ import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAl
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
-import { abs, alternativesPageTitle, breadcrumbLd, clip, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, alternativesPageTitle, breadcrumbLd, clip, collectionPageLd, repoPath, ogDefaults, twitterImage } from "@/lib/seo";
+import { getData } from "@/lib/data";
+import type { Repo } from "@/lib/types";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAlternativesRepos().map((r) => ({ owner: r.owner, name: r.name }));
+}
+
+/** Title and description shared by the page metadata and its CollectionPage JSON-LD, so they can't drift. */
+function alternativesMeta(repo: Repo) {
+  const alts = getAlternatives(repo);
+  return {
+    title: alternativesPageTitle(repo.name, alts.length),
+    description: clip(
+      `Open-source alternatives to ${repo.fullName}: ${alts.slice(0, 3).map((a) => a.repo.fullName).join(", ")} and more. ${categoryLabel(repo.category)} repos sharing its GitHub topics, ranked by stars gained this week.`,
+    ),
+  };
 }
 
 export async function generateMetadata({ params }: PageProps<"/alternatives/[owner]/[name]">): Promise<Metadata> {
@@ -20,11 +33,8 @@ export async function generateMetadata({ params }: PageProps<"/alternatives/[own
   const repo = getRepo(owner, name);
   if (!repo || !hasAlternativesPage(repo)) return {};
   const alts = getAlternatives(repo);
-  const title = alternativesPageTitle(repo.name, alts.length);
+  const { title, description } = alternativesMeta(repo);
   const shareTitle = `${alts.length} open-source ${repo.name} alternatives on GitHub`;
-  const description = clip(
-    `Open-source alternatives to ${repo.fullName}: ${alts.slice(0, 3).map((a) => a.repo.fullName).join(", ")} and more. ${categoryLabel(repo.category)} repos sharing its GitHub topics, ranked by stars gained this week.`,
-  );
   const url = alternativesPath(repo);
   return { title, description, alternates: { canonical: url }, openGraph: { ...ogDefaults, title: shareTitle, description, url }, twitter: { card: "summary_large_image", title: shareTitle, description, ...twitterImage } };
 }
@@ -40,11 +50,19 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
     <article className="max-w-3xl">
       <JsonLd
         data={{
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          name: `Open-source alternatives to ${repo.fullName}`,
-          numberOfItems: alts.length,
-          itemListElement: alts.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: abs(repoPath(a.repo)), name: a.repo.fullName })),
+          ...collectionPageLd({
+            name: alternativesMeta(repo).title,
+            description: alternativesMeta(repo).description,
+            path,
+            dateModified: getData().generatedAt,
+            mainEntity: {
+              "@type": "ItemList",
+              name: `Open-source alternatives to ${repo.fullName}`,
+              numberOfItems: alts.length,
+              itemListElement: alts.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: abs(repoPath(a.repo)), name: a.repo.fullName })),
+            },
+          }),
+          about: { "@type": "SoftwareSourceCode", name: repo.fullName, url: abs(repoPath(repo)), codeRepository: repo.url },
         }}
       />
       <JsonLd
