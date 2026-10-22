@@ -1,0 +1,12 @@
+{
+ "fullName": "sykyyds3739/laya-heart",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "A copilot for couple chats that runs as a web page on your own PC. Copy what your partner said, switch to the page and press Ctrl+V: a Laya…",
+ "extractor": "heuristic",
+ "readmeHash": "42c8eb71f517",
+ "version": 1,
+ "generatedAt": "2026-10-22T01:52:57.697Z"
+}
