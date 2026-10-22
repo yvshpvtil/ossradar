@@ -1,0 +1,12 @@
+{
+ "fullName": "NomaDamas/CozyClay",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx cozyclay",
+ "source": "readme",
+ "readmeSummary": "AI video costs money per take, and one miss means paying again. A text prompt cannot hold a whole scene: where everyone stands, how they…",
+ "extractor": "heuristic",
+ "readmeHash": "adf1962d7655",
+ "version": 1,
+ "generatedAt": "2026-10-22T03:55:06.315Z"
+}
