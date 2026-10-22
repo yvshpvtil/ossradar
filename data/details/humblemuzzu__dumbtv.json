@@ -1,0 +1,16 @@
+{
+ "fullName": "humblemuzzu/dumbtv",
+ "whoItsFor": null,
+ "useCases": [
+  "Removes the ads and tracking. Disables Amazon's sponsored rows, ad",
+  "Blocks what cannot be disabled. A small open-source DNS filter on the TV",
+  "Replaces the home screen with dumbtv home: your apps,"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "I had a Fire TV Edition television that had become painful to use. Menus lagged, apps took ages to open, and the home screen was mostly ads.",
+ "extractor": "heuristic",
+ "readmeHash": "c17272d3b381",
+ "version": 1,
+ "generatedAt": "2026-10-22T15:54:38.621Z"
+}
