@@ -76,6 +76,22 @@ export function linkListLd(name: string, items: { name: string; url: string }[],
   };
 }
 
+/** CollectionPage wrapper for a hub/listing page: says what the page is, when its ranking was last
+ *  rebuilt (the data snapshot time) and which site it belongs to, with the ranked list as mainEntity. */
+export function collectionPageLd(o: { name: string; description: string; path: string; dateModified: string; mainEntity: Record<string, unknown> }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: o.name,
+    description: o.description,
+    url: abs(o.path),
+    dateModified: o.dateModified,
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+    mainEntity: withoutContext(o.mainEntity),
+  };
+}
+
 export const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",

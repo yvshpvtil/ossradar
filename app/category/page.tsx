@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
-import { getReposByCategory, rankRepos } from "@/lib/data";
+import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -67,6 +67,9 @@ export default function CategoryIndex() {
           "@type": "CollectionPage",
           name: title,
           url: abs("/category"),
+          dateModified: getData().generatedAt,
+          inLanguage: "en",
+          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: rs.length,

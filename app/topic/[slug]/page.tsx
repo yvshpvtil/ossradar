@@ -6,10 +6,10 @@ import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
 import { HubIndex } from "@/components/HubIndex";
 import { JsonLd } from "@/components/JsonLd";
-import { rankRepos } from "@/lib/data";
+import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { toLeaderRepo } from "@/lib/leader";
-import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
 
@@ -17,9 +17,7 @@ export function generateStaticParams() {
   return getTopics().map((t) => ({ slug: t.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): Promise<Metadata> {
-  const { slug } = await params;
-  if (!hasTopicPage(slug)) return {};
+function topicMeta(slug: string) {
   const n = getReposByTopic(slug).length;
   const label = topicLabel(slug);
   // <title> stays short (Google cuts around 60 chars); the live count lives in the
@@ -27,6 +25,13 @@ export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): 
   const title = `Trending ${label} GitHub repos`;
   const socialTitle = `${title}: ${n} rising projects`;
   const description = clip(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained. ${n} tracked, updated hourly on ${SITE.name}.`);
+  return { title, socialTitle, description };
+}
+
+export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  if (!hasTopicPage(slug)) return {};
+  const { title, socialTitle, description } = topicMeta(slug);
   return { title, description, alternates: { canonical: `/topic/${slug}` }, openGraph: { title: socialTitle, description, url: `/topic/${slug}` }, twitter: { card: "summary_large_image", title: socialTitle, description } };
 }
 
@@ -42,7 +47,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
     .filter((t) => t.overlap >= 3).sort((a, b) => b.overlap - a.overlap).slice(0, 12);
   return (
     <>
-      <JsonLd data={itemListLd(`Fastest-rising ${label} repos`, ranked)} />
+      <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Topics", path: "/topic" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />

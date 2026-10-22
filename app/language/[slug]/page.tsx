@@ -6,26 +6,31 @@ import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
 import { HubIndex } from "@/components/HubIndex";
 import { JsonLd } from "@/components/JsonLd";
-import { rankRepos } from "@/lib/data";
+import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { toLeaderRepo } from "@/lib/leader";
-import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return getLanguages().map((l) => ({ slug: l.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/language/[slug]">): Promise<Metadata> {
-  const { slug } = await params;
-  const lang = getLanguage(slug);
-  if (!lang) return {};
+function languageMeta(lang: NonNullable<ReturnType<typeof getLanguage>>) {
   // <title> stays short (Google cuts around 60 chars); the live count lives in the
   // description and in the OG/X title, where length matters less.
   const title = `Trending ${lang.name} repos on GitHub`;
   const socialTitle = `${title}: ${lang.count} rising projects`;
   const description = clip(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained. ${lang.count} tracked, updated hourly on ${SITE.name}.`);
+  return { title, socialTitle, description };
+}
+
+export async function generateMetadata({ params }: PageProps<"/language/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const lang = getLanguage(slug);
+  if (!lang) return {};
+  const { title, socialTitle, description } = languageMeta(lang);
   return {
     title,
     description,
@@ -47,7 +52,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
   const others = getLanguages();
   return (
     <>
-      <JsonLd data={itemListLd(`Fastest-rising ${lang.name} repos`, ranked)} />
+      <JsonLd data={collectionPageLd({ name: languageMeta(lang).title, description: languageMeta(lang).description, path, dateModified: getData().generatedAt, mainEntity: itemListLd(`Fastest-rising ${lang.name} repos`, ranked) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Languages", path: "/language" }, { name: lang.name, path }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />

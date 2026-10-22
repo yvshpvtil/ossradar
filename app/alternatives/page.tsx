@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { getData } from "@/lib/data";
 import { PageNav } from "@/components/PageNav";
 import { alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
@@ -42,6 +43,9 @@ export default function AlternativesIndex() {
           "@type": "CollectionPage",
           name: title,
           url: abs("/alternatives"),
+          dateModified: getData().generatedAt,
+          inLanguage: "en",
+          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: total,

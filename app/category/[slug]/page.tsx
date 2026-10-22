@@ -12,7 +12,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
 import { toLeaderRepo } from "@/lib/leader";
 
 /** Search-intent phrasing per category (what people actually type). */
@@ -47,10 +47,7 @@ export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: c.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/category/[slug]">): Promise<Metadata> {
-  const { slug } = await params;
-  const category = getCategory(slug);
-  if (!category) return {};
+function categoryMeta(category: NonNullable<ReturnType<typeof getCategory>>) {
   const count = getReposByCategory(category.slug).length;
   // <title> stays short (Google cuts around 60 chars); the live count lives in the
   // description and in the OG/X title, where length matters less.
@@ -62,6 +59,14 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
       ? template.replace("{n}", String(count))
       : `Fastest-rising open-source ${category.label} projects on GitHub, ranked by stars gained this week. ${category.description}`,
   );
+  return { title, socialTitle, description };
+}
+
+export async function generateMetadata({ params }: PageProps<"/category/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const category = getCategory(slug);
+  if (!category) return {};
+  const { title, socialTitle, description } = categoryMeta(category);
   return {
     title,
     description,
@@ -84,7 +89,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   return (
     <>
-      <JsonLd data={itemListLd(`Fastest-rising ${category.label} repos`, ranked)} />
+      <JsonLd data={collectionPageLd({ name: categoryMeta(category).title, description: categoryMeta(category).description, path, dateModified: getData().generatedAt, mainEntity: itemListLd(`Fastest-rising ${category.label} repos`, ranked) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Categories", path: "/category" }, { name: category.label, path }])} />
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />
