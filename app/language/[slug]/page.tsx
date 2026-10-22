@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
 import { HubIndex } from "@/components/HubIndex";
+import { HubAlternatives } from "@/components/HubAlternatives";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
@@ -103,6 +104,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod="week" />
       <HubIndex repos={repos} label={lang.name} />
+      <HubAlternatives repos={repos} label={lang.name} sameCategory={false} />
     </>
   );
 }
