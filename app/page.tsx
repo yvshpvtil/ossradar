@@ -7,7 +7,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { LANDINGS } from "@/lib/landing";
-import { itemListLd } from "@/lib/seo";
+import { collectionPageLd, itemListLd } from "@/lib/seo";
 import { leaderMeta, toLeaderRepos } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
@@ -17,8 +17,10 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
 import { getTopics, topicLabel } from "@/lib/topics";
 
+const HOME_TITLE = `Trending AI & dev-tool GitHub repos today · ${SITE.name}`;
+
 export const metadata: Metadata = {
-  title: { absolute: `Trending AI & dev-tool GitHub repos today · ${SITE.name}` },
+  title: { absolute: HOME_TITLE },
   alternates: { canonical: "/" },
 };
 
@@ -34,7 +36,7 @@ export default function Home() {
   const popularTopics = getTopics().slice(0, 16);
   return (
     <>
-      <JsonLd data={itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"))} />
+      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: SITE.metaDescription, path: "/", dateModified: data.generatedAt, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today")) })} />
       <section className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
         <p className="mt-2 max-w-2xl text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">
