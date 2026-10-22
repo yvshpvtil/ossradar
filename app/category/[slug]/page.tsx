@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
 import { Leaderboard } from "@/components/Leaderboard";
 import { HubIndex } from "@/components/HubIndex";
+import { HubAlternatives } from "@/components/HubAlternatives";
 import { CATEGORIES, getCategory } from "@/lib/categories";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
@@ -123,6 +124,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} defaultPeriod="week" />
       <HubIndex repos={repos} label={category.label} />
+      <HubAlternatives repos={repos} label={category.label} />
       </div>
       </div>
     </>
