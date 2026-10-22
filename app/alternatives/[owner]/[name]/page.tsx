@@ -22,10 +22,27 @@ function alternativesMeta(repo: Repo) {
   const alts = getAlternatives(repo);
   return {
     title: alternativesPageTitle(repo.name, alts.length),
-    description: clip(
-      `Open-source alternatives to ${repo.fullName}: ${alts.slice(0, 3).map((a) => a.repo.fullName).join(", ")} and more. ${categoryLabel(repo.category)} repos sharing its GitHub topics, ranked by stars gained this week.`,
-    ),
+    description: alternativesDescription(repo, alts.map((a) => a.repo.fullName)),
   };
+}
+
+/**
+ * Names as many alternatives as fit in a search snippet instead of clipping the sentence
+ * mid-word: tries 3, 2, then 1 named alternatives, each with the full and then the short
+ * ranking tail, and keeps the first variant under `max`.
+ */
+function alternativesDescription(repo: Repo, names: string[], max = 155): string {
+  const cat = categoryLabel(repo.category);
+  const tails = [`${cat} repos sharing its GitHub topics, ranked by stars gained this week.`, "Ranked by stars gained this week.", ""];
+  for (let k = Math.min(3, names.length); k >= 1; k--) {
+    const rest = names.length - k;
+    const lead = `Open-source alternatives to ${repo.fullName}: ${names.slice(0, k).join(", ")}${rest > 0 ? ` and ${rest} more` : ""}.`;
+    for (const t of tails) {
+      const v = `${lead} ${t}`.trim();
+      if (v.length <= max) return v;
+    }
+  }
+  return clip(`Open-source alternatives to ${repo.fullName}, ranked by stars gained this week.`, max);
 }
 
 export async function generateMetadata({ params }: PageProps<"/alternatives/[owner]/[name]">): Promise<Metadata> {
