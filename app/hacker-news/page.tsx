@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -9,18 +9,23 @@ import { getRecentHn } from "@/lib/mentions";
 
 const DAYS = 30;
 
+const TITLE = "GitHub repos trending on Hacker News this month";
+const hnDescription = (n: number) =>
+  `The ${n} open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly.`;
+
 export function generateMetadata(): Metadata {
   const n = getRecentHn(DAYS, Date.parse(getData().generatedAt)).length;
   // Keep <title> under ~60 chars rendered (with " · OSS Radar") so Google shows it whole;
   // the live count goes in the description and the longer social title.
-  const title = "GitHub repos trending on Hacker News this month";
+  const title = TITLE;
   const socialTitle = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
-  const description = `The ${n} open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly.`;
+  const description = hnDescription(n);
   return { title, description, alternates: { canonical: "/hacker-news" }, openGraph: { ...ogDefaults, title: socialTitle, description, url: "/hacker-news" }, twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage } };
 }
 
 export default function HackerNewsPage() {
-  const list = getRecentHn(DAYS, Date.parse(getData().generatedAt));
+  const data = getData();
+  const list = getRecentHn(DAYS, Date.parse(data.generatedAt));
   const byName = new Map(getRepos().map((r) => [r.fullName, r]));
   const rows = list.flatMap(({ fullName, m }) => {
     const r = byName.get(fullName);
@@ -28,7 +33,7 @@ export default function HackerNewsPage() {
   });
   return (
     <div className="max-w-3xl">
-      <JsonLd data={linkListLd("GitHub repos trending on Hacker News this month", rows)} />
+      <JsonLd data={collectionPageLd({ name: TITLE, description: hnDescription(list.length), path: "/hacker-news", dateModified: data.generatedAt, mainEntity: linkListLd(TITLE, rows) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
