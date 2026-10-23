@@ -1,0 +1,12 @@
+{
+ "fullName": "wangwanjie/gately",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name gately --network host --cap-add NET_ADMIN \\",
+ "source": "readme",
+ "readmeSummary": "English Español Français Deutsch Português (Brasil)",
+ "extractor": "heuristic",
+ "readmeHash": "973070bd328e",
+ "version": 1,
+ "generatedAt": "2026-10-23T15:57:01.453Z"
+}
