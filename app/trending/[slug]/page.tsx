@@ -9,7 +9,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { formatDate } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
-import { toLeaderRepo } from "@/lib/leader";
+import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, itemListLd, ogDefaults } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -48,7 +48,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
         <p className="mt-1 text-xs text-zinc-500">{repos.length} repos · updated {formatDate(getData().generatedAt)}</p>
       </section>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod={l.slug === "github-repos-today" ? "today" : "week"} />
+      <Leaderboard {...hubLeaderProps(repos, l.slug === "github-repos-today" ? "today" : "week", Date.parse(getData().generatedAt))} defaultPeriod={l.slug === "github-repos-today" ? "today" : "week"} />
       <section className="mt-10 text-sm">
         <h2 className="mb-3 text-xl font-semibold tracking-tight">More views</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-1">

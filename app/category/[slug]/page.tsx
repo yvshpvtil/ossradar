@@ -14,7 +14,7 @@ import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
 import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
-import { toLeaderRepo } from "@/lib/leader";
+import { hubLeaderProps } from "@/lib/leader";
 
 /** Search-intent phrasing per category (what people actually type). */
 const CATEGORY_SEO_TITLE: Record<string, string> = {
@@ -122,7 +122,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       </section>
       <CategoryChips repos={all} active={category.slug} />
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} showCategoryFilter={false} defaultPeriod="week" />
+      <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} showCategoryFilter={false} defaultPeriod="week" />
       <HubIndex repos={repos} label={category.label} />
       <HubAlternatives repos={repos} label={category.label} />
       </div>

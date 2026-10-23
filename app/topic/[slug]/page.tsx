@@ -9,7 +9,7 @@ import { HubAlternatives } from "@/components/HubAlternatives";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
-import { toLeaderRepo } from "@/lib/leader";
+import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
@@ -86,7 +86,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
         )}
       </section>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod="week" />
+      <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} defaultPeriod="week" />
       <HubIndex repos={repos} label={label} />
       <HubAlternatives repos={repos} label={label} sameCategory={false} />
     </>

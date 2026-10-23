@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
-import { toLeaderRepo } from "@/lib/leader";
+import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -102,7 +102,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
         </ul>
       </nav>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
-      <Leaderboard repos={repos.map(toLeaderRepo)} defaultPeriod="week" />
+      <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} defaultPeriod="week" />
       <HubIndex repos={repos} label={lang.name} />
       <HubAlternatives repos={repos} label={lang.name} sameCategory={false} />
     </>

@@ -36,7 +36,10 @@ export function Leaderboard({
   dataAt,
   generatedAtMs,
   signupAfter,
+  only,
 }: {
+  /** With fullUrl: keep only these repos from the fetched list (hub pages share /leaderboard.json). */
+  only?: string[];
   /** Show an inline newsletter card after this many rows (unfiltered view only). */
   signupAfter?: number;
   /** Rows to server-render. With fullUrl, only the first rows of the default view. */
@@ -59,7 +62,13 @@ export function Leaderboard({
   const [loaded, setLoaded] = useState<LeaderRepo[] | null>(null);
   const loading = useRef(false);
   const pendingScroll = useRef<number | null>(null);
-  const repos = loaded ?? initialRepos;
+  const onlyKey = only?.join(",");
+  const repos = useMemo(() => {
+    if (!loaded) return initialRepos;
+    if (!onlyKey) return loaded;
+    const keep = new Set(onlyKey.split(","));
+    return loaded.filter((r) => keep.has(r.fullName));
+  }, [loaded, initialRepos, onlyKey]);
   const partial = Boolean(fullUrl) && !loaded;
   const loadAll = useCallback(() => {
     if (!fullUrl || loading.current) return;

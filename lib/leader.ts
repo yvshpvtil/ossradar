@@ -77,3 +77,21 @@ export function leaderMeta(repos: Repo[], refMs: number): LeaderMeta {
 
 /** Rows the leaderboard renders before "Show more" (the rest load client-side, so they aren't in the HTML). */
 export const LEADERBOARD_PAGE = 50;
+
+/**
+ * Leaderboard props for a hub page (category, topic, language, trending view). Big hubs used to ship every row
+ * in the page's RSC payload (~100 KB of JSON on the largest hubs) although only the first LEADERBOARD_PAGE are
+ * rendered; now they server-render the same first rows and fetch the shared, CDN-cached /leaderboard.json on
+ * idle or first interaction, narrowed to this hub's repos via `only`.
+ */
+export function hubLeaderProps(repos: Repo[], period: "today" | "week", refMs: number) {
+  if (repos.length <= LEADERBOARD_PAGE) return { repos: repos.map(toLeaderRepo) };
+  const key = period === "today" ? "delta24h" : "delta7d";
+  const first = [...repos].sort((a, b) => b[key] - a[key] || b.stars - a.stars).slice(0, LEADERBOARD_PAGE);
+  return {
+    repos: first.map(toLeaderRepo),
+    fullUrl: "/leaderboard.json",
+    meta: leaderMeta(repos, refMs),
+    only: repos.map((r) => r.fullName),
+  };
+}
