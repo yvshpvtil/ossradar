@@ -1,0 +1,12 @@
+{
+ "fullName": "Belluxx/Aleph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This was born as a way to let LLMs quickly gather information from the physical world, but you can just use it to have piece of the Earth on…",
+ "extractor": "heuristic",
+ "readmeHash": "2f31e87365a0",
+ "version": 1,
+ "generatedAt": "2026-10-23T03:54:16.841Z"
+}

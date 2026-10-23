@@ -1,0 +1,12 @@
+{
+ "fullName": "christos-antono/NPCTalk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Built first for GTA V: walk up to anyone in Los Santos and just talk. Lamar roasts your hoodie, a cop tells you to file a civil claim and…",
+ "extractor": "heuristic",
+ "readmeHash": "c2ac5611a868",
+ "version": 1,
+ "generatedAt": "2026-10-23T03:54:16.786Z"
+}
