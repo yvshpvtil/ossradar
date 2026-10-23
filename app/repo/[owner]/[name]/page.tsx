@@ -116,6 +116,15 @@ function withFacts(base: string, repo: Repo): string {
   return base;
 }
 
+/** Meta description for a repo page; shared by the page metadata and its WebPage JSON-LD so they can't drift. */
+function repoMetaDescription(repo: Repo): string {
+  // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
+  const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
+  const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
+  const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
+  return withFacts(base, repo);
+}
+
 export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[name]">): Promise<Metadata> {
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
@@ -124,11 +133,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   // lives in the OG/X title, where length matters less — same pattern as category hubs.
   const title = repoPageTitle(repo);
   const socialTitle = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
-  // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
-  const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
-  const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
-  const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
-  const description = withFacts(base, repo);
+  const description = repoMetaDescription(repo);
   const url = repoPath(repo);
   return {
     title,
@@ -193,12 +198,11 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
   const daily = getDailyAppearances(repo.fullName);
-  const jsonLd = {
-    "@context": "https://schema.org",
+  const software = {
     "@type": "SoftwareSourceCode",
     name: repo.name,
     alternateName: repo.fullName,
-    url: `${SITE.url}${repoPath(repo)}`,
+    url: repo.url,
     description: repo.description || repo.oneLiner,
     codeRepository: repo.url,
     sameAs: repo.url,
@@ -221,6 +225,22 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
       interactionType: "https://schema.org/LikeAction",
       userInteractionCount: repo.stars,
     },
+    softwareVersion: release?.tag || undefined,
+  };
+  // The page itself (an OSS Radar profile of the repo, rebuilt hourly) is a separate thing from the
+  // repo it describes: say so, with when its numbers were last refreshed and the card it shares.
+  const pagePath = repoPath(repo);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    name: repoPageTitle(repo),
+    description: repoMetaDescription(repo),
+    url: `${SITE.url}${pagePath}`,
+    dateModified: getData().generatedAt,
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+    primaryImageOfPage: { "@type": "ImageObject", url: `${SITE.url}${pagePath}/opengraph-image`, width: 1200, height: 630 },
+    mainEntity: software,
   };
   const crumbs = breadcrumbLd([
     { name: "Home", path: "/" },
