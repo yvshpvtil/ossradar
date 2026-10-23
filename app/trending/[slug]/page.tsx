@@ -39,7 +39,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
   const path = `/trending/${l.slug}`;
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: l.title, description: l.description, path, dateModified: getData().generatedAt, mainEntity: itemListLd(l.h1, repos) })} />
+      <JsonLd data={collectionPageLd({ name: l.title, description: l.description, path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(l.h1, repos) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: l.title, path }])} />
       <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">

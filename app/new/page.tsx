@@ -28,7 +28,7 @@ export default function NewPage() {
   const data = getData();
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: title, description, path: "/new", dateModified: data.generatedAt, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
+      <JsonLd data={collectionPageLd({ name: title, description, path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "New repos", path: "/new" }])} />
       <PageNav crumbs={[{ name: "New repos" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Updated hourly</p>

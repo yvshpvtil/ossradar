@@ -78,7 +78,7 @@ export function linkListLd(name: string, items: { name: string; url: string }[],
 
 /** CollectionPage wrapper for a hub/listing page: says what the page is, when its ranking was last
  *  rebuilt (the data snapshot time) and which site it belongs to, with the ranked list as mainEntity. */
-export function collectionPageLd(o: { name: string; description: string; path: string; dateModified: string; mainEntity: Record<string, unknown> }) {
+export function collectionPageLd(o: { name: string; description: string; path: string; dateModified: string; mainEntity: Record<string, unknown>; ogCard?: boolean }) {
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -88,8 +88,14 @@ export function collectionPageLd(o: { name: string; description: string; path: s
     dateModified: o.dateModified,
     inLanguage: "en",
     isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+    ...(o.ogCard ? { primaryImageOfPage: ogCardLd(o.path) } : {}),
     mainEntity: withoutContext(o.mainEntity),
   };
+}
+
+/** ImageObject for a page's own file-based Open Graph card (pages with an opengraph-image route). */
+export function ogCardLd(path: string) {
+  return { "@type": "ImageObject", url: abs(`${path === "/" ? "" : path}/opengraph-image`), width: 1200, height: 630 };
 }
 
 export const websiteLd = {

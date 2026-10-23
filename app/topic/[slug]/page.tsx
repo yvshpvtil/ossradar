@@ -49,7 +49,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
     .filter((t) => t.overlap >= 3).sort((a, b) => b.overlap - a.overlap).slice(0, 12);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked) })} />
+      <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Topics", path: "/topic" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />

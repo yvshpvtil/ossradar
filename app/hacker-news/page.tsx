@@ -33,7 +33,7 @@ export default function HackerNewsPage() {
   });
   return (
     <div className="max-w-3xl">
-      <JsonLd data={collectionPageLd({ name: TITLE, description: hnDescription(list.length), path: "/hacker-news", dateModified: data.generatedAt, mainEntity: linkListLd(TITLE, rows) })} />
+      <JsonLd data={collectionPageLd({ name: TITLE, description: hnDescription(list.length), path: "/hacker-news", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd(TITLE, rows) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>

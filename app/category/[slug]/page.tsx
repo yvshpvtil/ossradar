@@ -90,7 +90,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: categoryMeta(category).title, description: categoryMeta(category).description, path, dateModified: getData().generatedAt, mainEntity: itemListLd(`Fastest-rising ${category.label} repos`, ranked) })} />
+      <JsonLd data={collectionPageLd({ name: categoryMeta(category).title, description: categoryMeta(category).description, path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(`Fastest-rising ${category.label} repos`, ranked) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Categories", path: "/category" }, { name: category.label, path }])} />
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />

@@ -36,7 +36,7 @@ export default function Home() {
   const popularTopics = getTopics().slice(0, 16);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: SITE.metaDescription, path: "/", dateModified: data.generatedAt, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today")) })} />
+      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: SITE.metaDescription, path: "/", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today")) })} />
       <section className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
         <p className="mt-2 max-w-2xl text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">

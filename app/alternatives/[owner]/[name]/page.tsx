@@ -72,6 +72,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             description: alternativesMeta(repo).description,
             path,
             dateModified: getData().generatedAt,
+            ogCard: true,
             mainEntity: {
               "@type": "ItemList",
               name: `Open-source alternatives to ${repo.fullName}`,
