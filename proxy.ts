@@ -30,9 +30,11 @@ export function proxy(req: NextRequest) {
     }
   } else if (parts[0] === "alternatives" && parts.length > 1) {
     // Bare /alternatives is the index page; only owner/name paths are checked.
-    const repo = parts.length === 3 ? getRepo(parts[1], parts[2]) : undefined;
+    // Owner/name, plus that page's Open Graph card route.
+    const ok = parts.length === 3 || (parts.length === 4 && parts[3] === "opengraph-image");
+    const repo = ok ? getRepo(parts[1], parts[2]) : undefined;
     if (!repo || !hasAlternativesPage(repo)) return notFound();
-    if (repo.owner !== parts[1] || repo.name !== parts[2]) {
+    if (parts.length === 3 && (repo.owner !== parts[1] || repo.name !== parts[2])) {
       const url = req.nextUrl.clone();
       url.pathname = `/alternatives/${repo.owner}/${repo.name}`;
       return NextResponse.redirect(url, 308);
