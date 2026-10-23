@@ -1,0 +1,12 @@
+{
+ "fullName": "DozenTwelve/Papermorph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add DozenTwelve/Papermorph --skill papermorph --agent claude-code",
+ "source": "readme",
+ "readmeSummary": "Everything is a static web page: no server, no database, no account. A book is a folder you can host anywhere.",
+ "extractor": "heuristic",
+ "readmeHash": "e186b7de7c7b",
+ "version": 1,
+ "generatedAt": "2026-10-23T13:59:02.318Z"
+}
