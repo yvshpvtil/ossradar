@@ -38,6 +38,8 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [GitHub topics](${SITE.url}/topic): every topic hub with its repo count and this week's leading repo
 - [Programming languages](${SITE.url}/language): every language hub with its repo count and this week's leading repo
 - [About and methodology](${SITE.url}/about)
+- [Daily newsletter](${SITE.url}/#subscribe): the top 10 rising repos in one email every day; free, unsubscribe anytime
+- [Sponsor OSS Radar](${SITE.url}/sponsor): one sponsor per week across the site and the daily newsletter, labeled as a sponsor; sponsorships never affect rankings
 ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.description}`).join("\n")}
 
 ## URL patterns
