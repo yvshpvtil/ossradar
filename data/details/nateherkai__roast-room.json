@@ -1,0 +1,12 @@
+{
+ "fullName": "nateherkai/roast-room",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Bring a hard business decision and a council of AI advisors argues it out, then hands you a scored verdict and a one-click PDF.",
+ "extractor": "heuristic",
+ "readmeHash": "398f75ed0760",
+ "version": 1,
+ "generatedAt": "2026-10-23T11:53:48.039Z"
+}
