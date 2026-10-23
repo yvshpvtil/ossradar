@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/topic`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/category`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/language`, lastModified, changeFrequency: "daily", priority: 0.6 },
-    { url: `${SITE.url}/compare`, changeFrequency: "daily", priority: 0.5 },
+    { url: `${SITE.url}/compare`, lastModified, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE.url}/about`, changeFrequency: "monthly", priority: 0.4 },
     ...CATEGORIES.map((c) => ({
