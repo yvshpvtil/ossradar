@@ -1,0 +1,12 @@
+{
+ "fullName": "JackWang666666/my-rag",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "一个检索增强生成（RAG）知识库系统，同一套前端 + 两个功能等价的后端：一个用 Python / LangChain 写，一个用 Java / Spring AI 写。",
+ "extractor": "heuristic",
+ "readmeHash": "a942f9910bfd",
+ "version": 1,
+ "generatedAt": "2026-10-23T23:47:27.233Z"
+}
