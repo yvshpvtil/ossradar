@@ -1,0 +1,12 @@
+{
+ "fullName": "JMS1717/ming-voice",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/JMS1717/ming-voice/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "A fully local, real-time voice assistant for AMD Radeon GPUs (NVIDIA experimental), on Linux or Windows.",
+ "extractor": "heuristic",
+ "readmeHash": "c31c3ff7c623",
+ "version": 1,
+ "generatedAt": "2026-10-23T10:51:37.461Z"
+}
