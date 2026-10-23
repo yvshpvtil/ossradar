@@ -47,6 +47,18 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:15.900Z"
  },
+ "Ebony-Vinyl/EAC-design-world": {
+  "text": "A local video and design plugin for DeepSeek Harness with multi-track editing, templates, preview and file export.",
+  "basis": "5d8ef08a72e9",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:21:03.107Z"
+ },
+ "FoShmily/ai-paper-system": {
+  "text": "White-label AI platform that drafts academic papers, revises them, lowers AIGC scores, and makes defense slides.",
+  "basis": "f3803684b82d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:20:46.583Z"
+ },
  "Folkbench/folkbench": {
   "text": "Desktop app that switches Claude Code, Codex and other tools between AI API relays, showing their uptime and latency.",
   "basis": "a71b2c52fbbc",
@@ -276,10 +288,10 @@
   "generatedAt": "2026-10-17T02:23:46.816Z"
  },
  "glanderness/BeefTV": {
-  "text": "Lightweight AI-native video creation workspace where you connect ideas, models and assets on a canvas with an agent.",
-  "basis": "54fb0516cdcf",
-  "source": "manual translation",
-  "generatedAt": "2026-10-20T11:05:50.736Z"
+  "text": "A desktop video creation workspace where you link ideas, AI models and media on a free canvas alongside an AI agent.",
+  "basis": "820778b95e4a",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:20:46.309Z"
  },
  "heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit": {
   "text": "Toolkit that turns cross-border ecommerce SOPs into 7 reusable AI agent workflows with prompts, templates and cases.",
@@ -383,6 +395,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "qqqqqq-stu/mcparallel": {
+  "text": "AI ordering skill on McDonald's official MCP that picks random meals, runs personality quizzes, and compares prices.",
+  "basis": "66cecadd8a14",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:20:58.827Z"
+ },
  "ranxianglei/billion-context": {
   "text": "Context-compression plugin for month-long single sessions that works with 100K context windows and uses fewer tokens.",
   "basis": "8770fee33ef4",
@@ -413,6 +431,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "sourcepro5/WeChatAgent": {
+  "text": "A Windows WeChat assistant and desktop console supporting whitelisted chats, persona presets, and web page reading.",
+  "basis": "6f0ce257d90b",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:20:56.726Z"
+ },
  "spideymooon/McOracle": {
   "text": "An AI skill that answers your question with a random oracle and suggests a McDonald's China menu item through its MCP.",
   "basis": "40963c4cea08",
@@ -436,6 +460,12 @@
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "z91772524-ai/pojia-next": {
+  "text": "A Windows tool that replaces the built-in system prompts and persona in AI clients like Cursor, Codex and Claude Code.",
+  "basis": "e13307aab568",
+  "source": "claude -p",
+  "generatedAt": "2026-10-23T02:20:55.066Z"
  },
  "zcbacxc/mcd-party-planner": {
   "text": "McDonald's MCP CLI and skill for planning group meals and party orders across stores, combos and budget.",
