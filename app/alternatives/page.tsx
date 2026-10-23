@@ -6,7 +6,7 @@ import { PageNav } from "@/components/PageNav";
 import { alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, twitterImage, withoutContext } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, twitterImage, withoutContext, websiteRef } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every alternatives page, grouped by category. Before this, each
@@ -45,7 +45,7 @@ export default function AlternativesIndex() {
           url: abs("/alternatives"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
-          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          isPartOf: websiteRef,
           // Capped at the 50 fastest-rising like every other hub's ItemList: the full 300+ entry
           // list was ~43 KB of JSON-LD, shipped twice (HTML and RSC payload), duplicating the links below.
           mainEntity: withoutContext(

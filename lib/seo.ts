@@ -3,6 +3,14 @@ import { formatDelta, formatNumber } from "./format";
 import { SITE } from "./site";
 
 export const abs = (path: string) => `${SITE.url}${path === "/" ? "" : path}`;
+
+/** Stable node ids so every page's isPartOf/publisher points at the same WebSite and Organization. */
+export const WEBSITE_ID = `${SITE.url}/#website`;
+export const ORGANIZATION_ID = `${SITE.url}/#organization`;
+
+/** Compact WebSite reference for a page node's isPartOf (same @id as the sitewide WebSite node). */
+export const websiteRef = { "@type": "WebSite", "@id": WEBSITE_ID, name: SITE.name, url: SITE.url };
+
 export const repoPath = (r: Pick<Repo, "owner" | "name">) => `/repo/${r.owner}/${r.name}`;
 
 /** <title> for a repo page. The layout template appends " · OSS Radar" (12 chars);
@@ -87,7 +95,7 @@ export function collectionPageLd(o: { name: string; description: string; path: s
     url: abs(o.path),
     dateModified: o.dateModified,
     inLanguage: "en",
-    isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+    isPartOf: websiteRef,
     ...(o.ogCard ? { primaryImageOfPage: ogCardLd(o.path) } : {}),
     mainEntity: withoutContext(o.mainEntity),
   };
@@ -101,10 +109,20 @@ export function ogCardLd(path: string) {
 export const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": WEBSITE_ID,
   name: SITE.name,
   url: SITE.url,
   description: SITE.description,
-  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url, email: SITE.sponsorEmail },
+  inLanguage: "en",
+  publisher: {
+    "@type": "Organization",
+    "@id": ORGANIZATION_ID,
+    name: SITE.name,
+    url: SITE.url,
+    email: SITE.sponsorEmail,
+    // app/apple-icon.png (180x180): Google wants a crawlable square logo of at least 112x112.
+    logo: { "@type": "ImageObject", url: abs("/apple-icon.png"), width: 180, height: 180 },
+  },
 };
 
 /** Trim to a meta-description-friendly length on a word boundary. */

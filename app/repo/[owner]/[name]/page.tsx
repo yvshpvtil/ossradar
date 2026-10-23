@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clip, repoPageTitle, repoPath } from "@/lib/seo";
+import { breadcrumbLd, clip, repoPageTitle, repoPath, websiteRef } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -238,7 +238,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     url: `${SITE.url}${pagePath}`,
     dateModified: getData().generatedAt,
     inLanguage: "en",
-    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+    isPartOf: websiteRef,
     primaryImageOfPage: { "@type": "ImageObject", url: `${SITE.url}${pagePath}/opengraph-image`, width: 1200, height: 630 },
     mainEntity: software,
   };

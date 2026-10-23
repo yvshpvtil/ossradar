@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { TOPIC_MIN, getReposByTopic, getTopics, topicLabel } from "@/lib/topics";
 
@@ -46,7 +46,7 @@ export default function TopicIndex() {
           url: abs("/topic"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
-          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: rs.length,

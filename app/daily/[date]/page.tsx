@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
           datePublished: date,
           temporalCoverage: date,
           inLanguage: "en",
-          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          isPartOf: websiteRef,
           primaryImageOfPage: ogCardLd(`/daily/${date}`),
           mainEntity: withoutContext(linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))),
         }}

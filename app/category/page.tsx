@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every category hub. Before this, bare /category 404'd and category hubs
@@ -69,7 +69,7 @@ export default function CategoryIndex() {
           url: abs("/category"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
-          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: rs.length,

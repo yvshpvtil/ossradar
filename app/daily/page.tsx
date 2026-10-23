@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext, websiteRef } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -43,7 +43,7 @@ export default function DailyIndex() {
             dateModified: days[0],
             temporalCoverage: `${days[days.length - 1]}/${days[0]}`,
             inLanguage: "en",
-            isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+            isPartOf: websiteRef,
             mainEntity: withoutContext(linkListLd("OSS Radar daily archive", days.map((d) => ({ name: `Fastest-rising GitHub repos on ${formatDate(d)}`, url: abs(`/daily/${d}`) })))),
           }}
         />

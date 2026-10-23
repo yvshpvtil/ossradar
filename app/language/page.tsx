@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { getLanguages, getReposByLanguage } from "@/lib/languages";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every language hub. Before this, language hubs were linked only from the
@@ -68,7 +68,7 @@ export default function LanguageIndex() {
           url: abs("/language"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
-          isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
+          isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: rs.length,
