@@ -22,7 +22,7 @@ export function BadgeEmbed({ owner, name, siteUrl, width }: { owner: string; nam
       <h2 className="mb-1 text-sm font-semibold">Maintainer? Add the badge to your README</h2>
       <p className="mb-3 text-xs text-zinc-500">Shows your live OSS Radar rank and links back here. Updates hourly.</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`/badge/${owner}/${name}`} alt="OSS Radar badge preview" width={width} height={20} className="mb-3 h-5" />
+      <img src={`/badge/${owner}/${name}`} alt="OSS Radar badge preview" width={width} height={20} loading="lazy" decoding="async" className="mb-3 h-5" />
       {[
         ["Markdown", md],
         ["HTML", html],
