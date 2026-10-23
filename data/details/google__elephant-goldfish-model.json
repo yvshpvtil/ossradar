@@ -1,0 +1,12 @@
+{
+ "fullName": "google/elephant-goldfish-model",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Elephant-Goldfish Model (EGM) is an open-source plugin for Spec-Driven Development with AI coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "12b01366c704",
+ "version": 1,
+ "generatedAt": "2026-10-23T04:52:52.870Z"
+}
