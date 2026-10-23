@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
@@ -31,6 +31,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
+      <JsonLd data={staticPageLd({ type: "AboutPage", name: title, description, path: "/about" })} />
       <PageNav crumbs={[{ name: "About" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-900 dark:text-zinc-100">About OSS Radar</h1>
       <p>

@@ -101,6 +101,23 @@ export function collectionPageLd(o: { name: string; description: string; path: s
   };
 }
 
+/** Page node for a static page (about, sponsor, submit): what the page is and which site it belongs to.
+ *  type "AboutPage" also points `about` at the sitewide Organization node. */
+export function staticPageLd(o: { type?: "WebPage" | "AboutPage"; name: string; description: string; path: string }) {
+  const type = o.type ?? "WebPage";
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    "@id": `${abs(o.path)}#webpage`,
+    name: o.name,
+    description: o.description,
+    url: abs(o.path),
+    inLanguage: "en",
+    isPartOf: websiteRef,
+    ...(type === "AboutPage" ? { about: { "@id": ORGANIZATION_ID } } : {}),
+  };
+}
+
 /** ImageObject for a page's own file-based Open Graph card (pages with an opengraph-image route). */
 export function ogCardLd(path: string) {
   return { "@type": "ImageObject", url: abs(`${path === "/" ? "" : path}/opengraph-image`), width: 1200, height: 630 };

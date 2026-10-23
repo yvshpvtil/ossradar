@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { RazorpayButton } from "@/components/RazorpayButton";
@@ -32,6 +32,7 @@ export default function SponsorPage() {
   return (
     <div className="max-w-3xl">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Sponsor", path: "/sponsor" }])} />
+      <JsonLd data={staticPageLd({ name: title, description, path: "/sponsor" })} />
       <PageNav crumbs={[{ name: "Sponsor" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Sponsor OSS Radar</h1>
       <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
