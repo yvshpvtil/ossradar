@@ -1,0 +1,16 @@
+{
+ "fullName": "tangency-labs/fieldcraft",
+ "whoItsFor": null,
+ "useCases": [
+  "Geometry in: SolidCraft designs (`.solidcraft`) with persistent face, edge and body names,",
+  "Meshing: constrained Delaunay tetrahedra (tet4, tet10) with exact predicates and a",
+  "Elements: solids (tet4, tet10, wedge6, hex8 with incompatible modes, hex20 full and"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source, clean-room CAE application in pure Rust: from a parametric SolidCraft part to a verified finite element analysis, with…",
+ "extractor": "heuristic",
+ "readmeHash": "05fe4eafe058",
+ "version": 1,
+ "generatedAt": "2026-10-23T02:54:03.484Z"
+}
