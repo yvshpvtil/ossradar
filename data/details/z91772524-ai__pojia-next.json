@@ -1,0 +1,12 @@
+{
+ "fullName": "z91772524-ai/pojia-next",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install bandit",
+ "source": "readme",
+ "readmeSummary": "一句话：把你电脑上那几个 AI 客户端「自己改不到的内置提示词」，换成你自己写的那份 —— 双击 exe、点一个按钮的事。",
+ "extractor": "heuristic",
+ "readmeHash": "3014e2c94312",
+ "version": 1,
+ "generatedAt": "2026-10-23T01:08:18.029Z"
+}
