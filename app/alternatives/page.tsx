@@ -6,7 +6,7 @@ import { PageNav } from "@/components/PageNav";
 import { alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, twitterImage, withoutContext } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every alternatives page, grouped by category. Before this, each
@@ -46,11 +46,17 @@ export default function AlternativesIndex() {
           dateModified: getData().generatedAt,
           inLanguage: "en",
           isPartOf: { "@type": "WebSite", name: SITE.name, url: abs("/") },
-          mainEntity: {
-            "@type": "ItemList",
-            numberOfItems: total,
-            itemListElement: gs.flatMap((g) => g.repos).map((r, i) => ({ "@type": "ListItem", position: i + 1, url: abs(alternativesPath(r)), name: `${r.name} alternatives` })),
-          },
+          // Capped at the 50 fastest-rising like every other hub's ItemList: the full 300+ entry
+          // list was ~43 KB of JSON-LD, shipped twice (HTML and RSC payload), duplicating the links below.
+          mainEntity: withoutContext(
+            linkListLd(
+              "Open-source alternatives to the fastest-rising GitHub repos",
+              gs
+                .flatMap((g) => g.repos)
+                .sort((a, b) => b.delta7d - a.delta7d)
+                .map((r) => ({ url: abs(alternativesPath(r)), name: `${r.name} alternatives` })),
+            ),
+          ),
         }}
       />
       <PageNav crumbs={[{ name: "Alternatives" }]} fallbackHref="/" />
@@ -77,9 +83,9 @@ export default function AlternativesIndex() {
           <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2">
             {g.repos.map((r) => (
               <li key={r.fullName} className="min-w-0 break-words">
-                <Link className="font-medium hover:underline" href={alternativesPath(r)}>{r.name} alternatives</Link>{" "}
+                <Link className="font-medium hover:underline" href={alternativesPath(r)}>{`${r.name} alternatives`}</Link>{" "}
                 <span className="text-zinc-500">
-                  ({getAlternatives(r).length}) · <span className="text-emerald-700 dark:text-emerald-400">{formatDelta(r.delta7d)}/wk</span>
+                  {`(${getAlternatives(r).length}) · `}<span className="text-emerald-700 dark:text-emerald-400">{`${formatDelta(r.delta7d)}/wk`}</span>
                 </span>
               </li>
             ))}
