@@ -1,0 +1,12 @@
+{
+ "fullName": "wuyoscar/AISafetyHot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add wuyoscar/AISafetyHot-Hub",
+ "source": "readme",
+ "readmeSummary": "AI Safety HOT 持续整理越狱、提示注入、Agent 安全、防御与护栏、对齐、评测、真实事件和治理政策。网站提供中英文阅读；这个 Hub 保存公开论文清单、日报归档和 Agent 技能。",
+ "extractor": "heuristic",
+ "readmeHash": "65192020d43d",
+ "version": 1,
+ "generatedAt": "2026-10-23T20:53:09.974Z"
+}
