@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/compare" },
-  openGraph: { ...ogDefaults, title, description, url: "/compare" },
-  twitter: { card: "summary_large_image", title, description, ...twitterImage },
+  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/compare" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 /** Top-2-by-7d pairs across categories (one pair each), for starter links + ItemList. */
