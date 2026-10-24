@@ -11,7 +11,7 @@ import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { hubLeaderProps } from "@/lib/leader";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps<"/language/[slug]">
   return {
     title,
     description,
-    alternates: { canonical: `/language/${slug}` },
+    alternates: pageAlternates(`/language/${slug}`),
     openGraph: { title: socialTitle, description, url: `/language/${slug}` },
     twitter: { card: "summary_large_image", title: socialTitle, description },
   };

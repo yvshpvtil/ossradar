@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext, websiteRef } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext, websiteRef, pageAlternates } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const description = `Which open-source AI and developer-tool repos gained the mo
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/daily" },
+  alternates: pageAlternates("/daily"),
   openGraph: { ...ogDefaults, title: socialTitle, description, url: "/daily" },
   twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
 };

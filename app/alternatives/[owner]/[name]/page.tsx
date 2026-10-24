@@ -8,7 +8,7 @@ import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAl
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
-import { abs, alternativesPageTitle, breadcrumbLd, clip, collectionPageLd, repoPath, ogDefaults } from "@/lib/seo";
+import { abs, alternativesPageTitle, breadcrumbLd, clip, collectionPageLd, repoPath, ogDefaults, pageAlternates } from "@/lib/seo";
 import { getData } from "@/lib/data";
 import type { Repo } from "@/lib/types";
 import { SITE } from "@/lib/site";
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: PageProps<"/alternatives/[own
   const { title, description } = alternativesMeta(repo);
   const shareTitle = `${alts.length} open-source ${repo.name} alternatives on GitHub`;
   const url = alternativesPath(repo);
-  return { title, description, alternates: { canonical: url }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: shareTitle, description, url }, twitter: { card: "summary_large_image", title: shareTitle, description } };
+  return { title, description, alternates: pageAlternates(url), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: shareTitle, description, url }, twitter: { card: "summary_large_image", title: shareTitle, description } };
 }
 
 export default async function AlternativesPage({ params }: PageProps<"/alternatives/[owner]/[name]">) {

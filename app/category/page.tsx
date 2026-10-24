@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every category hub. Before this, bare /category 404'd and category hubs
@@ -49,7 +49,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    alternates: { canonical: "/category" },
+    alternates: pageAlternates("/category"),
     openGraph: { ...ogDefaults, title: socialTitle, description, url: "/category" },
     twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
   };

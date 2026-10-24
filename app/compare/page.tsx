@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -18,7 +18,7 @@ const description = "Compare up to 3 rising open-source AI and developer-tool re
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/compare" },
+  alternates: pageAlternates("/compare"),
   openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/compare" },
   twitter: { card: "summary_large_image", title, description },
 };

@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { EngagementTracker } from "@/components/EngagementTracker";
 import { JsonLd } from "@/components/JsonLd";
-import { websiteLd } from "@/lib/seo";
+import { RSS_ALTERNATE, websiteLd } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SponsorSlot } from "@/components/SponsorSlot";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: SITE.metaDescription,
   applicationName: SITE.name,
   alternates: {
-    types: { "application/rss+xml": [{ url: "/rss.xml", title: `${SITE.name} RSS` }] },
+    types: RSS_ALTERNATE,
   },
   openGraph: {
     type: "website",

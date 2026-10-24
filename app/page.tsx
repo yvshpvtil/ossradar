@@ -7,7 +7,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { LANDINGS } from "@/lib/landing";
-import { collectionPageLd, itemListLd } from "@/lib/seo";
+import { collectionPageLd, itemListLd, pageAlternates } from "@/lib/seo";
 import { leaderMeta, toLeaderRepos } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
@@ -23,7 +23,7 @@ const HOME_TITLE = `Trending AI & dev-tool GitHub repos today · ${SITE.name}`;
 
 export const metadata: Metadata = {
   title: { absolute: HOME_TITLE },
-  alternates: { canonical: "/" },
+  alternates: pageAlternates("/"),
 };
 
 export default function Home() {

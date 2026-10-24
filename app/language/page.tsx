@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { getLanguages, getReposByLanguage } from "@/lib/languages";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every language hub. Before this, language hubs were linked only from the
@@ -48,7 +48,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    alternates: { canonical: "/language" },
+    alternates: pageAlternates("/language"),
     openGraph: { ...ogDefaults, title: socialTitle, description, url: "/language" },
     twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
   };

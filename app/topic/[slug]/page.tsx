@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { hubLeaderProps } from "@/lib/leader";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
 
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): 
   const { slug } = await params;
   if (!hasTopicPage(slug)) return {};
   const { title, socialTitle, description } = topicMeta(slug);
-  return { title, description, alternates: { canonical: `/topic/${slug}` }, openGraph: { title: socialTitle, description, url: `/topic/${slug}` }, twitter: { card: "summary_large_image", title: socialTitle, description } };
+  return { title, description, alternates: pageAlternates(`/topic/${slug}`), openGraph: { title: socialTitle, description, url: `/topic/${slug}` }, twitter: { card: "summary_large_image", title: socialTitle, description } };
 }
 
 export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) {

@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import type { Metadata } from "next";
 import { PageNav } from "@/components/PageNav";
 import { WatchlistView } from "@/components/WatchlistView";
@@ -7,7 +8,7 @@ import { toLeaderRepo } from "@/lib/leader";
 export const metadata: Metadata = {
   title: "Your watchlist",
   description: "Repos you're watching on OSS Radar, with current stars and recent gains. Saved in your browser, no login.",
-  alternates: { canonical: "/watchlist" },
+  alternates: pageAlternates("/watchlist"),
   robots: { index: false, follow: true },
 };
 

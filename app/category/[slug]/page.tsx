@@ -13,7 +13,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, collectionPageLd, itemListLd } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, itemListLd, pageAlternates } from "@/lib/seo";
 import { hubLeaderProps } from "@/lib/leader";
 
 /** Search-intent phrasing per category (what people actually type). */
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   return {
     title,
     description,
-    alternates: { canonical: `/category/${slug}` },
+    alternates: pageAlternates(`/category/${slug}`),
     openGraph: { title: socialTitle, description, url: `/category/${slug}` },
     twitter: { card: "summary_large_image", title: socialTitle, description },
   };

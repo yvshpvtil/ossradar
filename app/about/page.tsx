@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
@@ -22,7 +22,7 @@ const description = `How ${SITE.name} ranks the fastest-rising open-source AI an
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/about" },
+  alternates: pageAlternates("/about"),
   openGraph: { ...ogDefaults, title, description, url: "/about" },
   twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };

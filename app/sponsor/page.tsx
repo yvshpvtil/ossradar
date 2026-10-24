@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { RazorpayButton } from "@/components/RazorpayButton";
@@ -17,7 +17,7 @@ const description = `Reach developers who track rising open-source AI and dev-to
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/sponsor" },
+  alternates: pageAlternates("/sponsor"),
   openGraph: { ...ogDefaults, title, description, url: "/sponsor" },
   twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
