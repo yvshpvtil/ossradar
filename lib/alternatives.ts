@@ -1,4 +1,5 @@
 import { getRepo, getRepos } from "./data";
+import { isThinRepo } from "./thin";
 import type { Repo } from "./types";
 
 /** Minimum alternatives (same category + shared GitHub topics) before an alternatives page is published. */
@@ -21,6 +22,23 @@ export function getAlternatives(repo: Repo, limit = 12): Alternative[] {
     .map((r) => ({ repo: r, sharedTopics: r.topics.filter((t) => topics.has(t)), sameLanguage: !!r.language && r.language === repo.language }))
     .filter((a) => a.sharedTopics.length >= 2)
     .sort((a, b) => b.sharedTopics.length - a.sharedTopics.length || b.repo.delta7d - a.repo.delta7d)
+    .slice(0, limit);
+}
+
+/** Alternatives pages with fewer than this many topic-overlap matches also list other rising repos from the same category. */
+export const ALT_SHORT = 6;
+
+/**
+ * For short alternatives pages: other rising repos in the same category that are neither the repo
+ * nor one of its topic-overlap alternatives, by stars gained this week. Labeled on the page as
+ * same-category only, not as alternatives.
+ */
+export function getCategoryNeighbors(repo: Repo, alts: Alternative[], limit = 6): Repo[] {
+  if (alts.length >= ALT_SHORT) return [];
+  const skip = new Set([repo.fullName, ...alts.map((a) => a.repo.fullName)]);
+  return getRepos()
+    .filter((r) => r.category === repo.category && !skip.has(r.fullName) && !isThinRepo(r))
+    .sort((a, b) => b.delta7d - a.delta7d)
     .slice(0, limit);
 }
 

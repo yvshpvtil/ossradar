@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { EstBadge } from "@/components/EstBadge";
-import { alternativesPath, getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
+import { alternativesPath, getAlternatives, getAlternativesRepos, getCategoryNeighbors, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
@@ -62,6 +62,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
   const repo = getRepo(owner, name);
   if (!repo || !hasAlternativesPage(repo)) notFound();
   const alts = getAlternatives(repo);
+  const neighbors = getCategoryNeighbors(repo, alts);
   const path = alternativesPath(repo);
   const cat = categoryLabel(repo.category);
   // Topic hubs (topics used by enough tracked repos) this page can link to, so shared topics lead somewhere.
@@ -138,6 +139,24 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
           </li>
         ))}
       </ol>
+      {neighbors.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold tracking-tight">More rising {cat} repos</h2>
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            Only {alts.length} tracked repos share at least two GitHub topics with {repo.name}, so here are the {cat} repos gaining the most stars this week.
+            They sit in the same category but don&apos;t share its topics, so treat them as related projects rather than alternatives.
+          </p>
+          <ul className="mt-4 space-y-2 text-sm">
+            {neighbors.map((r) => (
+              <li key={r.fullName}>
+                <Link className="font-medium hover:underline" href={repoPath(r)}>{r.fullName}</Link>{" "}
+                <span className="font-mono text-emerald-700 dark:text-emerald-400">{formatDelta(r.delta7d)}/wk</span>
+                {stripWhy(r.oneLiner) && <span className="text-zinc-600 dark:text-zinc-400">: {stripWhy(r.oneLiner)}</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <p className="mt-8 text-sm text-zinc-600 dark:text-zinc-400">
         More: <Link className="underline" href={`/category/${repo.category}`}>all trending {cat} repos</Link> ·{" "}
         {repoHubs.map((t) => (
