@@ -1,0 +1,12 @@
+{
+ "fullName": "zj-unicom-ai/UniEmployee",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "UniEmployee 是一套面向企业的数字员工构建与运行平台：把专业员工的工作经验、业务流程和判断标准，固化为可随时上岗、可配置、可审批、可观测的 AI 数字员工。",
+ "extractor": "heuristic",
+ "readmeHash": "3cdfeca9f75d",
+ "version": 1,
+ "generatedAt": "2026-10-24T09:50:29.287Z"
+}
