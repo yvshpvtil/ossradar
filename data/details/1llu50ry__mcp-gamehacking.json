@@ -1,0 +1,12 @@
+{
+ "fullName": "1llu50ry/mcp-gamehacking",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "MCP (Model Context Protocol) server for game hacking & reverse engineering.",
+ "extractor": "heuristic",
+ "readmeHash": "284183f05e83",
+ "version": 1,
+ "generatedAt": "2026-10-24T01:56:16.749Z"
+}
