@@ -118,6 +118,36 @@ export function staticPageLd(o: { type?: "WebPage" | "AboutPage"; name: string; 
   };
 }
 
+/**
+ * Dataset node for the free hourly data (JSON API + RSS), so dataset search and AI crawlers can
+ * find and cite it. Only facts the site already states: what's measured, update cadence, formats, terms.
+ */
+export function datasetLd(o: { dateModified: string; repoCount: number; firstDay?: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "@id": `${SITE.url}/about#dataset`,
+    name: `${SITE.name} GitHub star velocity data`,
+    description: `Hourly-updated star velocity for ${o.repoCount} fast-rising open-source AI and developer-tool GitHub repositories: stars gained in the last 24 hours and 7 days, total stars, forks, primary language, category and GitHub topics, computed by diffing hourly and daily star-count snapshots from the GitHub API. The JSON API returns the top 100 repos by 24-hour star gain. Free to use with a link back to ${SITE.url}.`,
+    url: abs("/about#api"),
+    keywords: ["GitHub", "open source", "star velocity", "trending repositories", "AI", "developer tools", "LLM", "MCP"],
+    isAccessibleForFree: true,
+    usageInfo: abs("/about#api"),
+    creator: { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
+    isPartOf: websiteRef,
+    inLanguage: "en",
+    dateModified: o.dateModified,
+    ...(o.firstDay ? { temporalCoverage: `${o.firstDay}/..` } : {}),
+    measurementTechnique: "Diffs of hourly and daily GitHub stargazer counts; repos first seen less than a week ago have estimated gains, flagged as such.",
+    variableMeasured: ["stars gained in the last 24 hours", "stars gained in the last 7 days", "total stars", "forks"],
+    distribution: [
+      { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: abs("/api/v1/trending"), name: "Top 100 repos by 24-hour star gain (JSON)" },
+      { "@type": "DataDownload", encodingFormat: "application/rss+xml", contentUrl: abs("/rss.xml"), name: "Fastest-rising repos today (RSS)" },
+    ],
+  };
+}
+
 /** ImageObject for a page's own file-based Open Graph card (pages with an opengraph-image route). */
 export function ogCardLd(path: string) {
   return { "@type": "ImageObject", url: abs(`${path === "/" ? "" : path}/opengraph-image`), width: 1200, height: 630 };

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, datasetLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
+import { getData } from "@/lib/data";
+import { getArchiveDays } from "@/lib/daily";
 
 const FAQ: { q: string; a: string }[] = [
   { q: "What is OSS Radar?", a: `${SITE.name} (OSS = Open-Source Software) is a free, hourly-updated ranking of the fastest-rising open-source AI and developer-tool repositories on GitHub.` },
@@ -32,6 +34,7 @@ export default function AboutPage() {
     <div className="max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <JsonLd data={staticPageLd({ type: "AboutPage", name: title, description, path: "/about" })} />
+      <JsonLd data={datasetLd({ dateModified: getData().generatedAt, repoCount: getData().repos.length, firstDay: getArchiveDays().at(-1) })} />
       <PageNav crumbs={[{ name: "About" }]} fallbackHref={"/"} />
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-900 dark:text-zinc-100">About OSS Radar</h1>
       <p>
