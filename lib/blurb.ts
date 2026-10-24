@@ -40,10 +40,25 @@ export function cap(text: string, max = BLURB_MAX): string {
   return `${cut.slice(0, space > max * 0.5 ? space : max).replace(/[\s,;:.\-–—(]+$/, "")}…`;
 }
 
-/** Full cleanup of a free-text description: whitespace, emoji-only noise, English preference, length cap. */
+// Unicode emoji runs (pictographs plus variation selector, ZWJ, skin tones, keycaps). (c), (r) and (tm) signs are
+// Extended_Pictographic too but are part of names ("Redis®"), so they stay. The collector already strips emoji
+// from stored one-liners; this keeps lines rebuilt from the raw GitHub description consistent with them.
+const EMOJI_RUN = /(?:(?![\u00A9\u00AE\u2122])\p{Extended_Pictographic}|[\u{1F1E6}-\u{1F1FF}\u{1F3FB}-\u{1F3FF}\uFE0F\u200D\u20E3])+/gu;
+
+/** Drop decorative emoji. One sitting between a word and a capitalized word ("agency 🔥 A Claude Code skill") marked a sentence break. */
+export function stripEmoji(text: string): string {
+  if (!text.match(EMOJI_RUN)) return text;
+  return text
+    .replace(new RegExp(`(?<=[\\p{L}\\p{N})])\\s*(?:${EMOJI_RUN.source})\\s+(?=\\p{Lu})`, "gu"), ". ")
+    .replace(new RegExp(`\\s*(?:${EMOJI_RUN.source})\\s*(?=[.,;:!?])`, "gu"), "") // "alerts 🎯." -> "alerts."
+    .replace(EMOJI_RUN, " ")
+    .replace(/^[\s·|•:;,\-–—]+/, "");
+}
+
+/** Full cleanup of a free-text description: whitespace, emoji, English preference, length cap. */
 export function cleanBlurb(text: string | null | undefined, max = BLURB_MAX): string | null {
   if (!text) return null;
-  let t = collapse(text.replace(/:[a-z0-9_+-]+:/gi, " ")); // GitHub :emoji: shortcodes
+  let t = collapse(stripEmoji(text.replace(/:[a-z0-9_+-]+:/gi, " "))); // GitHub :emoji: shortcodes and Unicode emoji
   t = collapse(preferEnglish(t));
   if (t.replace(/[^\p{L}\p{N}]/gu, "").length < 8) return null;
   return cap(t, max);
