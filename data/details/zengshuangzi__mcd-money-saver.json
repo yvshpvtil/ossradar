@@ -1,0 +1,12 @@
+{
+ "fullName": "zengshuangzi/mcd-money-saver",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "「麦麦省钱助手」是一个基于麦当劳 MCP 能力构建的智能省钱 Skill，帮助你把散落在各处的优惠券、麦麦省券、积分和套餐组合自动盘清楚，算出每一单最省钱的点法。",
+ "extractor": "heuristic",
+ "readmeHash": "918c4aa7b188",
+ "version": 1,
+ "generatedAt": "2026-10-24T13:48:12.387Z"
+}
