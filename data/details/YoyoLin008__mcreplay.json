@@ -1,0 +1,12 @@
+{
+ "fullName": "YoyoLin008/mcreplay",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "把一次麦当劳 MCP 查询变成可复现的本地结构测试。",
+ "extractor": "heuristic",
+ "readmeHash": "20afdb8979af",
+ "version": 1,
+ "generatedAt": "2026-10-24T23:43:27.747Z"
+}

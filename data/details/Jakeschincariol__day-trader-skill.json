@@ -1,0 +1,12 @@
+{
+ "fullName": "Jakeschincariol/day-trader-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before…",
+ "extractor": "heuristic",
+ "readmeHash": "a6ea89f1e9eb",
+ "version": 1,
+ "generatedAt": "2026-10-24T23:43:27.758Z"
+}
