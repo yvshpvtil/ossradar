@@ -10,6 +10,7 @@ import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
 import { abs, alternativesPageTitle, breadcrumbLd, clip, collectionPageLd, repoPath, ogDefaults, pageAlternates } from "@/lib/seo";
 import { getData } from "@/lib/data";
+import { canonicalTopic, getTopics, repoTopics, topicLabel } from "@/lib/topics";
 import type { Repo } from "@/lib/types";
 import { SITE } from "@/lib/site";
 
@@ -63,6 +64,18 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
   const alts = getAlternatives(repo);
   const path = alternativesPath(repo);
   const cat = categoryLabel(repo.category);
+  // Topic hubs (topics used by enough tracked repos) this page can link to, so shared topics lead somewhere.
+  const hubs = new Set(getTopics().map((t) => t.slug));
+  const repoHubs = repoTopics(repo).filter((t) => hubs.has(t)).slice(0, 4);
+  const topicChips = (raw: string[]) => {
+    const slugs = [...new Set(raw.map(canonicalTopic))];
+    return slugs.map((t, i) => (
+      <span key={t}>
+        {i > 0 && ", "}
+        {hubs.has(t) ? <Link className="underline" href={`/topic/${t}`}>{topicLabel(t)}</Link> : topicLabel(t)}
+      </span>
+    ));
+  };
   return (
     <article className="max-w-3xl">
       <JsonLd
@@ -114,7 +127,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             </div>
             {stripWhy(a.repo.oneLiner) && <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(a.repo.oneLiner)}</p>}
             <p className="mt-2 text-xs text-zinc-500">
-              {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""} · shared topics: {a.sharedTopics.join(", ")}
+              {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""} · shared topics: {topicChips(a.sharedTopics)}
               {hasAlternativesPage(a.repo) && (
                 <>
                   {" · "}
@@ -127,6 +140,11 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
       </ol>
       <p className="mt-8 text-sm text-zinc-600 dark:text-zinc-400">
         More: <Link className="underline" href={`/category/${repo.category}`}>all trending {cat} repos</Link> ·{" "}
+        {repoHubs.map((t) => (
+          <span key={t}>
+            <Link className="underline" href={`/topic/${t}`}>trending {topicLabel(t)} repos</Link> ·{" "}
+          </span>
+        ))}
         <Link className="underline" href={`/compare?r=${[repo, ...alts.slice(0, 2).map((a) => a.repo)].map((r) => r.fullName).join(",")}`}>compare {repo.name} with the top 2</Link> ·{" "}
         <Link className="underline" href="/alternatives">alternatives to other trending repos</Link>
       </p>
