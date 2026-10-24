@@ -1,0 +1,12 @@
+{
+ "fullName": "kukemc/bili-cli",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install bili-agent       # 或者 pipx install bili-agent / pip install bili-agent",
+ "source": "readme",
+ "readmeSummary": "简体中文 | English",
+ "extractor": "heuristic",
+ "readmeHash": "930f48246e69",
+ "version": 1,
+ "generatedAt": "2026-10-24T14:48:34.462Z"
+}
