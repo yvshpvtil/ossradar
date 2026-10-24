@@ -1,0 +1,12 @@
+{
+ "fullName": "llm-xiaoye/cc-connect-obsidian-knowledge-import",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "通过 cc-connect / Claude Code 中的 /ki，将公开网页整理为 Obsidian 知识笔记。微信文章链接可自动触发。模型负责理解与写作，Python 脚本负责抓取、查重、校验和事务提交。",
+ "extractor": "heuristic",
+ "readmeHash": "383605a65548",
+ "version": 1,
+ "generatedAt": "2026-10-24T18:53:18.351Z"
+}
