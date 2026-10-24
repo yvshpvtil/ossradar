@@ -1,0 +1,12 @@
+{
+ "fullName": "securetron-gh/aifw",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name aifw-gateway -p 8080:80 \\",
+ "source": "readme",
+ "readmeSummary": "Every AI agent: identified, authorized, inspected, governed.",
+ "extractor": "heuristic",
+ "readmeHash": "a3e52ec9d20b",
+ "version": 1,
+ "generatedAt": "2026-10-24T19:45:01.961Z"
+}
