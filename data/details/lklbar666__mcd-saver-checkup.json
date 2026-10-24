@@ -1,0 +1,12 @@
+{
+ "fullName": "lklbar666/mcd-saver-checkup",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "基于麦当劳中国 MCP 的省钱审计 Skill。同类项目都在回答「怎么点最省」，它回答「你这一单多花了多少、亏在哪一步、下次怎么不再亏」——每个数字都来自 calculate-price，可当场复算。",
+ "extractor": "heuristic",
+ "readmeHash": "44b355714344",
+ "version": 1,
+ "generatedAt": "2026-10-24T01:10:32.836Z"
+}
