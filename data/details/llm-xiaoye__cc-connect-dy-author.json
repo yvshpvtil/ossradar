@@ -1,0 +1,12 @@
+{
+ "fullName": "llm-xiaoye/cc-connect-dy-author",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "面向 cc-connect + Claude Code 等可读写本地文件、执行 Python 的 Agent 的独立 Skill。发送一次 /dy-author 作品链接，从该作品识别作者，分页获取公开作品，准备完整视频转写或图文材料，由当前 Agent 提炼知识并逐条存入自己的…",
+ "extractor": "heuristic",
+ "readmeHash": "ba2c7a690820",
+ "version": 1,
+ "generatedAt": "2026-10-24T02:51:48.325Z"
+}
