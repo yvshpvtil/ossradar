@@ -1,0 +1,12 @@
+{
+ "fullName": "gitleaks/gitleaks",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install gitleaks",
+ "source": "readme",
+ "readmeSummary": "[license]: ./LICENSE [badge-license]: https://img.shields.io/github/license/gitleaks/gitleaks.svg [go-docs-badge]…",
+ "extractor": "heuristic",
+ "readmeHash": "2417b306be18",
+ "version": 1,
+ "generatedAt": "2026-10-24T12:59:40.095Z"
+}
