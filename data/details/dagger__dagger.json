@@ -1,0 +1,12 @@
+{
+ "fullName": "dagger/dagger",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install dagger/tap/dagger",
+ "source": "readme",
+ "readmeSummary": "Dagger is a platform for automating software delivery. It can build, test and ship any codebase, reliably and at scale.",
+ "extractor": "heuristic",
+ "readmeHash": "511a459636ae",
+ "version": 1,
+ "generatedAt": "2026-10-24T15:49:35.847Z"
+}

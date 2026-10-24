@@ -1,0 +1,12 @@
+{
+ "fullName": "amosblomqvist/learnharness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "LearnHarness uses AI agents to plan and teach lessons from your current understanding to your goal.",
+ "extractor": "heuristic",
+ "readmeHash": "a573f6434609",
+ "version": 1,
+ "generatedAt": "2026-10-24T15:49:35.853Z"
+}
