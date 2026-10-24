@@ -26,7 +26,7 @@ const HUBS: Record<string, (slug: string) => boolean> = {
 const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
 /** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
-const INDEX_CARDS = new Set(["alternatives", "topic", "daily"]);
+const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
 /**
  * With Cache Components, unknown dynamic params render on request and the static shell

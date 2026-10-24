@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { getLanguages, getReposByLanguage } from "@/lib/languages";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every language hub. Before this, language hubs were linked only from the
@@ -49,8 +49,8 @@ export function generateMetadata(): Metadata {
     title,
     description,
     alternates: pageAlternates("/language"),
-    openGraph: { ...ogDefaults, title: socialTitle, description, url: "/language" },
-    twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/language" },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 
@@ -66,6 +66,7 @@ export default function LanguageIndex() {
           "@type": "CollectionPage",
           name: title,
           url: abs("/language"),
+          primaryImageOfPage: ogCardLd("/language"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
           isPartOf: websiteRef,

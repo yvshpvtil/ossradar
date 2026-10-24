@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every category hub. Before this, bare /category 404'd and category hubs
@@ -50,8 +50,8 @@ export function generateMetadata(): Metadata {
     title,
     description,
     alternates: pageAlternates("/category"),
-    openGraph: { ...ogDefaults, title: socialTitle, description, url: "/category" },
-    twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/category" },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 
@@ -67,6 +67,7 @@ export default function CategoryIndex() {
           "@type": "CollectionPage",
           name: title,
           url: abs("/category"),
+          primaryImageOfPage: ogCardLd("/category"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
           isPartOf: websiteRef,
