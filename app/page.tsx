@@ -15,6 +15,8 @@ import { UpdatedClock } from "@/components/UpdatedClock";
 import { TrendingGrid } from "@/components/TrendingGrid";
 import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
+import { getArchiveDays } from "@/lib/daily";
+import { formatDate } from "@/lib/format";
 import { getTopics, topicLabel } from "@/lib/topics";
 
 const HOME_TITLE = `Trending AI & dev-tool GitHub repos today · ${SITE.name}`;
@@ -31,6 +33,7 @@ export default function Home() {
   const spotlight = pickRepoOfTheDay(data.repos);
   const trending = rankRepos(data.repos, "today").filter((r) => r.fullName !== spotlight?.fullName).slice(0, 6);
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
+  const latestDay = getArchiveDays()[0];
   // Most-used topics that have a hub page; skip singular/plural twins (ai-agent vs ai-agents) so the row isn't repetitive.
   // Singular/plural twins (ai-agent/ai-agents) are already folded into one hub by getTopics().
   const popularTopics = getTopics().slice(0, 16);
@@ -114,6 +117,14 @@ export default function Home() {
               <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/trending/${l.slug}`}>{l.title}</Link>
             </li>
           ))}
+          {latestDay && (
+            <li>
+              <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${latestDay}`}>{`Top 25 rising repos on ${formatDate(latestDay)}`}</Link>
+            </li>
+          )}
+          <li>
+            <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/daily">Daily top 25 archive</Link>
+          </li>
         </ul>
       </section>
     </>
