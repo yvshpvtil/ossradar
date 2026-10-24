@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -101,7 +101,7 @@ export default function ComparePage() {
   });
   return (
     <div>
-      <JsonLd data={linkListLd("Popular GitHub repo comparisons", popularItems.map(({ name, url }) => ({ name, url })))} />
+      <JsonLd data={collectionPageLd({ name: title, description, path: "/compare", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd("Popular GitHub repo comparisons", popularItems.map(({ name, url }) => ({ name, url }))) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Compare", path: "/compare" }])} />
       <PageNav crumbs={[{ name: "Compare" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Compare</p>
