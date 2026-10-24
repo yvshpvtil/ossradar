@@ -320,7 +320,7 @@ export function Leaderboard({
                   <span className="tabular-nums">★ {formatNumber(r.stars)}</span>
                 </p>
               </div>
-              <Sparkline points={r.spark} width={80} height={28} className="hidden shrink-0 text-indigo-500 md:block" />
+              <Sparkline points={r.spark} width={80} height={28} title={`Star history for ${r.owner}/${r.name}`} className="hidden shrink-0 text-indigo-500 md:block" />
               <div className="w-20 shrink-0 text-right sm:w-24">
                 <p
                   className="font-mono font-semibold tabular-nums text-emerald-700 dark:text-emerald-400"
