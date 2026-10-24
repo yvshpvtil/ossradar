@@ -2,7 +2,7 @@ import { getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } f
 import { categoryLabel } from "@/lib/categories";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-export const alt = "OSS Radar open-source alternatives card";
+export const alt = "OSS Radar card listing open-source alternatives to this GitHub repo";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

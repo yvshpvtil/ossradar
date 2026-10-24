@@ -3,7 +3,7 @@ import { getRepo, getRepos } from "@/lib/data";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-export const alt = "OSS Radar repo card";
+export const alt = "OSS Radar card for this GitHub repo: category, one-line summary, total stars and stars gained this week";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

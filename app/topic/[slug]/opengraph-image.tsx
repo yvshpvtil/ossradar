@@ -1,7 +1,7 @@
 import { ogCard, OG_SIZE } from "@/lib/og";
 import { getReposByTopic, getTopics, hasTopicPage, topicLabel } from "@/lib/topics";
 
-export const alt = "OSS Radar topic leaderboard";
+export const alt = "OSS Radar leaderboard of the fastest-rising GitHub repos for this topic";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

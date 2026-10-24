@@ -1,7 +1,7 @@
 import { getLanguage, getLanguages } from "@/lib/languages";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-export const alt = "OSS Radar language leaderboard";
+export const alt = "OSS Radar leaderboard of the fastest-rising GitHub repos in this language";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

@@ -160,7 +160,8 @@ export const SITE_OG_IMAGE = {
   type: "image/png",
 };
 export const ogDefaults = { siteName: SITE.name, locale: "en_US", type: "website" as const, images: [SITE_OG_IMAGE] };
-export const twitterImage = { images: [SITE_OG_IMAGE.url] };
+// Full image object (not just the URL) so twitter:image:alt, width, height and type are emitted too.
+export const twitterImage = { images: [SITE_OG_IMAGE] };
 
 /**
  * Hub meta descriptions: a fixed lead sentence plus the hub's current weekly leader, so the

@@ -2,7 +2,7 @@ import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-export const alt = "OSS Radar daily top risers";
+export const alt = "OSS Radar daily top 25 fastest-rising GitHub repos for this date";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
