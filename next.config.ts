@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       // www.ossradar.net served the whole site with 200s (canonicals pointed at the apex, but
       // crawlers still fetched duplicates). Send every www URL to the same path on the apex.
       { source: "/:path*", has: [{ type: "host", value: "www.ossradar.net" }], destination: "https://ossradar.net/:path*", permanent: true },
+      // Feed readers and crawlers probe common feed paths; the one feed lives at /rss.xml.
+      ...["/feed", "/feed.xml", "/rss"].map((source) => ({ source, destination: "/rss.xml", permanent: true })),
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
     ];
   },
