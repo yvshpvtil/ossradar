@@ -14,8 +14,9 @@ const nextConfig: NextConfig = {
     ];
   },
   partialPrefetching: true,
-  // ~8 KB of Tailwind CSS: inline it so first paint doesn't wait on a second round trip (render-blocking stylesheet).
-  experimental: { inlineCss: true },
+  // Tailwind CSS is served as one cacheable stylesheet instead of experimental.inlineCss: inlining put
+  // the ~42 KB (raw) stylesheet into every HTML response three times (a <style> tag plus twice in the
+  // RSC payload), so each page was ~126 KB heavier for crawlers and repeat visitors.
   turbopack: {
     rules: {
       "*.css": {
