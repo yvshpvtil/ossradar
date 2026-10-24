@@ -1,0 +1,12 @@
+{
+ "fullName": "xkx121029/mcd-vibe-commit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "麦门人格 Commit 生成器 —— 测出你的麦门人格，生成专属 git commit message。",
+ "extractor": "heuristic",
+ "readmeHash": "2b6f5bbd9fb0",
+ "version": 1,
+ "generatedAt": "2026-10-24T21:48:36.342Z"
+}

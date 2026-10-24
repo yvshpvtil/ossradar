@@ -1,0 +1,12 @@
+{
+ "fullName": "morganlinton/BeautifulRust",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Claude Code plugin with one skill, rust-best-practices, that teaches Claude to write idiomatic, robust, maintainable Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "dc32dea0df10",
+ "version": 1,
+ "generatedAt": "2026-10-24T21:48:36.351Z"
+}
