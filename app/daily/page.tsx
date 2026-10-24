@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, twitterImage, withoutContext, websiteRef, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: pageAlternates("/daily"),
-  openGraph: { ...ogDefaults, title: socialTitle, description, url: "/daily" },
-  twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
+  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/daily" },
+  twitter: { card: "summary_large_image", title: socialTitle, description },
 };
 
 export default function DailyIndex() {
@@ -40,6 +40,7 @@ export default function DailyIndex() {
             name: title,
             description,
             url: abs("/daily"),
+            primaryImageOfPage: ogCardLd("/daily"),
             dateModified: days[0],
             temporalCoverage: `${days[days.length - 1]}/${days[0]}`,
             inLanguage: "en",

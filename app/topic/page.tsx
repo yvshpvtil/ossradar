@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, twitterImage, websiteRef, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { TOPIC_MIN, getReposByTopic, getTopics, topicLabel } from "@/lib/topics";
 
@@ -28,8 +28,8 @@ export function generateMetadata(): Metadata {
     title,
     description,
     alternates: pageAlternates("/topic"),
-    openGraph: { ...ogDefaults, title: socialTitle, description, url: "/topic" },
-    twitter: { card: "summary_large_image", title: socialTitle, description, ...twitterImage },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/topic" },
+    twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
 
@@ -44,6 +44,7 @@ export default function TopicIndex() {
           "@type": "CollectionPage",
           name: title,
           url: abs("/topic"),
+            primaryImageOfPage: ogCardLd("/topic"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
           isPartOf: websiteRef,

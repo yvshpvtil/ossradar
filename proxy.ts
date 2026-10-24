@@ -25,6 +25,9 @@ const HUBS: Record<string, (slug: string) => boolean> = {
 /** Sections with a bare index page. */
 const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
+/** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
+const INDEX_CARDS = new Set(["alternatives", "topic", "daily"]);
+
 /**
  * With Cache Components, unknown dynamic params render on request and the static shell
  * streams before the page calls notFound(), so they'd answer 200 + noindex. Reject unknown
@@ -46,6 +49,9 @@ export function proxy(req: NextRequest) {
     url.pathname = pathname;
     return NextResponse.redirect(url, 308);
   };
+
+  // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
+  if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
 
   if (section === "repo") {
     if (parts.length < 3) return notFound();
