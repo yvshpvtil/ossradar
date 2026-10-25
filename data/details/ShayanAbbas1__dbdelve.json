@@ -1,0 +1,16 @@
+{
+ "fullName": "ShayanAbbas1/dbdelve",
+ "whoItsFor": null,
+ "useCases": [
+  "Make it yours. The app's own themes alongside Catppuccin, Tokyo Night, Gruvbox and Dracula, each in dark, light and glass. Import themes fro",
+  "Bring your connections with you. Import every saved connection, passwords and SSH settings included, from DBeaver, or TablePlus on macOS.",
+  "Organize your connections into projects, and jump to any of them from the palette."
+ ],
+ "installCommand": "brew install --cask ShayanAbbas1/dbdelve/dbdelve",
+ "source": "readme",
+ "readmeSummary": "A fast, native, cross-platform, multi-engine database client. Written in Rust with GPUI, no Electron and no JVM: instant startup, friendly…",
+ "extractor": "heuristic",
+ "readmeHash": "b1572b85339a",
+ "version": 1,
+ "generatedAt": "2026-10-25T12:59:31.982Z"
+}
