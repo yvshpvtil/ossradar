@@ -5,7 +5,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
-import { getArchiveDays, getDailyTop } from "@/lib/daily";
+import { getArchiveDays, getDailyTop, getDaySummary, type DaySummary } from "@/lib/daily";
+import { categoryLabel } from "@/lib/categories";
 import { formatDate, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 
@@ -71,6 +72,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
       </div>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Top rising repos on {formatDate(date)}</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">Stars gained during this UTC day, measured from our daily snapshots.</p>
+      <DayRecap date={date} s={getDaySummary(date)} />
       <ol className="mt-6 divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {top.map((e, n) => (
           <li key={e.fullName} className="relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-4 p-4">
@@ -94,6 +96,37 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
         {older ? <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${older}`}>← {formatDate(older)}</Link> : <span />}
         {newer ? <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${newer}`}>{formatDate(newer)} →</Link> : <span />}
       </div>
+    </div>
+  );
+}
+
+const plural = (n: number, one: string, many = one + "s") => `${formatNumber(n)} ${n === 1 ? one : many}`;
+
+// A short, data-driven recap so each archive day reads differently: total gain, the leader's share, the busiest categories, churn vs the previous day.
+function DayRecap({ date, s }: { date: string; s: DaySummary }) {
+  if (!s.leader || s.count < 3) return null;
+  const leaderName = s.leader.fullName.split("/")[1];
+  return (
+    <div className="mt-4 rounded-xl bg-zinc-50 p-4 text-sm leading-relaxed text-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-300">
+      <h2 className="sr-only">The day in numbers</h2>
+      <p>
+        The {s.count} repos below gained {formatNumber(s.total)} stars between them on {formatDate(date)}.{" "}
+        {s.leader.repo ? <Link className="font-medium text-indigo-600 hover:underline dark:text-indigo-400" href={repoPath(s.leader.repo)}>{leaderName}</Link> : <span className="font-medium">{leaderName}</span>} led with +{formatNumber(s.leader.gained)}, {s.leaderShare}% of that total.
+        {s.categories.length > 0 && (
+          <>
+            {" "}The busiest {s.categories.length === 1 ? "category was" : "categories were"}{" "}
+            {s.categories.map((c, i) => (
+              <span key={c.slug}>
+                {i > 0 && " and "}
+                <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/category/${c.slug}`}>{categoryLabel(c.slug)}</Link> ({c.count})
+              </span>
+            ))}
+            .
+          </>
+        )}
+        {s.prevDate && <> {plural(s.repeat, "repo")} also made the list on <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${s.prevDate}`}>{formatDate(s.prevDate)}</Link>, so {plural(s.count - s.repeat, "is", "are")} new to it.</>}
+        {s.createdThisWeek > 0 && <> {plural(s.createdThisWeek, "repo")} {s.createdThisWeek === 1 ? "was" : "were"} created on GitHub in the 7 days up to that day.</>}
+      </p>
     </div>
   );
 }
