@@ -1,0 +1,12 @@
+{
+ "fullName": "vxcn/mcd-kcal-picker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "基于麦当劳中国官方 MCP 开发的热量搭配 Skill：你说一个目标热量，它就从官方营养数据里帮你凑出一顿主食加小食加饮料的组合，总热量尽量接近目标，又不超过你设的上限。",
+ "extractor": "heuristic",
+ "readmeHash": "c4b68718a21c",
+ "version": 1,
+ "generatedAt": "2026-10-25T15:49:48.178Z"
+}

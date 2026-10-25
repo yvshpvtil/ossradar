@@ -1,0 +1,12 @@
+{
+ "fullName": "wusuaya/overtime-meal-buddy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "V0.2：把群聊里的“我都行”整理成需求，再把套餐拆清、账分准。",
+ "extractor": "heuristic",
+ "readmeHash": "235c633ad38e",
+ "version": 1,
+ "generatedAt": "2026-10-25T15:49:48.153Z"
+}
