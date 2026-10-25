@@ -1,0 +1,12 @@
+{
+ "fullName": "akexin/mcd-points-actuary",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "同一份订单 —— 巨无霸 + 薯条 + 可乐，在麦当劳南京新百餐厅（storeCode=1990346）实查菜单下：",
+ "extractor": "heuristic",
+ "readmeHash": "9985475e3005",
+ "version": 1,
+ "generatedAt": "2026-10-25T02:52:17.275Z"
+}
