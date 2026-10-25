@@ -7,9 +7,24 @@ import { getLanguages } from "./languages";
 import { SITE } from "./site";
 import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
+import { stripWhy } from "./why";
+import { WHY } from "./whyNotes";
 
-const line = (r: Repo) =>
-  `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${r.oneLiner.replace(/\s+/g, " ")} (${formatNumber(r.stars)} stars, ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7d${r.velocityEstimated ? ", early estimate" : ""})`;
+const TEMPLATE_WHYS = new Set(Object.values(WHY));
+
+/**
+ * The one-liner for llms.txt rows. The category-template "Why it matters" note (the same sentence on every repo in
+ * a category, 450 times in llms-full.txt) is dropped, like in the site's list rows; a repo-specific note stays.
+ */
+function llmsBlurb(r: Repo): string {
+  const text = r.oneLiner.replace(/\s+/g, " ").trim();
+  const note = text.match(/Why it matters:\s*(.*?)\.?$/i)?.[1];
+  return note && TEMPLATE_WHYS.has(note) ? stripWhy(text) : text;
+}
+
+/** One repo row. `withCategory` names the category where the section heading doesn't (mixed top-10 lists). */
+const line = (r: Repo, withCategory = false) =>
+  `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (${withCategory ? `${categoryLabel(r.category)}; ` : ""}${formatNumber(r.stars)} stars, ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7d${r.velocityEstimated ? ", early estimate" : ""})`;
 
 function header(): string {
   const d = getData();
@@ -83,11 +98,11 @@ export function llmsTxt(): string {
   return `${header()}
 ## Top 10 by stars gained in the last 24 hours
 
-${top.map(line).join("\n")}
+${top.map((r) => line(r, true)).join("\n")}
 
 ## Top 10 by stars gained in the last 7 days
 
-${week.map(line).join("\n")}
+${week.map((r) => line(r, true)).join("\n")}
 `;
 }
 
@@ -96,7 +111,7 @@ export function llmsFullTxt(): string {
   for (const c of CATEGORIES) {
     const repos = rankRepos(getReposByCategory(c.slug), "week");
     if (!repos.length) continue;
-    parts.push(`## ${categoryLabel(c.slug)} (${repos.length} repos, ranked by 7-day star gain)\n\n${repos.map(line).join("\n")}\n`);
+    parts.push(`## ${categoryLabel(c.slug)} (${repos.length} repos, ranked by 7-day star gain)\n\n${repos.map((r) => line(r)).join("\n")}\n`);
   }
   return parts.join("\n");
 }
