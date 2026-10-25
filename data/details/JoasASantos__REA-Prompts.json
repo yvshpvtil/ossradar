@@ -1,0 +1,12 @@
+{
+ "fullName": "JoasASantos/REA-Prompts",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A curated collection of prompts for REA (Reverse Engineer Anything) — the toolset that lets your AI coding agent inspect how software works…",
+ "extractor": "heuristic",
+ "readmeHash": "9695164cd857",
+ "version": 1,
+ "generatedAt": "2026-10-25T21:48:51.494Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "shx2005/codex-account-switcher",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install 'git+https://github.com/shx2005/codex-account-switcher.git@v0.3.0'",
+ "source": "readme",
+ "readmeSummary": "你是否厌倦了 Codex 多个账号之间来回切换？",
+ "extractor": "heuristic",
+ "readmeHash": "ef18c35cbebd",
+ "version": 1,
+ "generatedAt": "2026-10-25T21:48:51.456Z"
+}
