@@ -1,0 +1,12 @@
+{
+ "fullName": "YUTA-fywoo/chatgpt-web-workers",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Let Astra coordinate the goal. Let each Chat finish one useful stage.",
+ "extractor": "heuristic",
+ "readmeHash": "29ae80d21df3",
+ "version": 1,
+ "generatedAt": "2026-10-25T09:50:56.632Z"
+}
