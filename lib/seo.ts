@@ -39,10 +39,23 @@ export function alternativesPageTitle(repoName: string, count: number): string {
   return options.find((t) => t.length <= 48) ?? options[options.length - 1];
 }
 
+/** Stable @id base for a page node: the page URL (home keeps its trailing slash, like WEBSITE_ID). */
+const pageUrlId = (path: string) => (path === "/" ? `${SITE.url}/` : abs(path));
+
+/** @id for a page's own node plus a reference to its BreadcrumbList (same page URL + #breadcrumb),
+ *  so each page's JSON-LD blocks form one connected graph. Home has no breadcrumb trail. */
+export function pageNodeIds(path: string) {
+  return {
+    "@id": `${pageUrlId(path)}#webpage`,
+    ...(path === "/" ? {} : { breadcrumb: { "@id": `${pageUrlId(path)}#breadcrumb` } }),
+  };
+}
+
 export function breadcrumbLd(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${pageUrlId(items[items.length - 1].path)}#breadcrumb`,
     itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: abs(it.path) })),
   };
 }
@@ -90,6 +103,7 @@ export function collectionPageLd(o: { name: string; description: string; path: s
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
+    ...pageNodeIds(o.path),
     name: o.name,
     description: o.description,
     url: abs(o.path),
@@ -108,7 +122,7 @@ export function staticPageLd(o: { type?: "WebPage" | "AboutPage"; name: string; 
   return {
     "@context": "https://schema.org",
     "@type": type,
-    "@id": `${abs(o.path)}#webpage`,
+    ...pageNodeIds(o.path),
     name: o.name,
     description: o.description,
     url: abs(o.path),

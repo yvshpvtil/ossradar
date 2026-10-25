@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -37,6 +37,7 @@ export default function DailyIndex() {
           data={{
             "@context": "https://schema.org",
             "@type": "CollectionPage",
+            ...pageNodeIds("/daily"),
             name: title,
             description,
             url: abs("/daily"),

@@ -6,7 +6,7 @@ import { PageNav } from "@/components/PageNav";
 import { alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, withoutContext, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every alternatives page, grouped by category. Before this, each
@@ -41,6 +41,7 @@ export default function AlternativesIndex() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          ...pageNodeIds("/alternatives"),
           name: title,
           url: abs("/alternatives"),
             primaryImageOfPage: ogCardLd("/alternatives"),

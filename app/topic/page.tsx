@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { TOPIC_MIN, getReposByTopic, getTopics, topicLabel } from "@/lib/topics";
 
@@ -42,6 +42,7 @@ export default function TopicIndex() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          ...pageNodeIds("/topic"),
           name: title,
           url: abs("/topic"),
             primaryImageOfPage: ogCardLd("/topic"),

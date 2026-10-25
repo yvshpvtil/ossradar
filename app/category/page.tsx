@@ -5,7 +5,7 @@ import { PageNav } from "@/components/PageNav";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every category hub. Before this, bare /category 404'd and category hubs
@@ -65,6 +65,7 @@ export default function CategoryIndex() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          ...pageNodeIds("/category"),
           name: title,
           url: abs("/category"),
           primaryImageOfPage: ogCardLd("/category"),

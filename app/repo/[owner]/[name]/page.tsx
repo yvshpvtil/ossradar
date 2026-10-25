@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clip, repoPageTitle, repoPath, websiteRef, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, clip, repoPageTitle, repoPath, websiteRef, pageAlternates, pageNodeIds } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -233,6 +233,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemPage",
+    ...pageNodeIds(pagePath),
     name: repoPageTitle(repo),
     description: repoMetaDescription(repo),
     url: `${SITE.url}${pagePath}`,

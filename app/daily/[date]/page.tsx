@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, pageNodeIds } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -50,6 +50,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          ...pageNodeIds(`/daily/${date}`),
           name: `Fastest-rising GitHub repos on ${formatDate(date)}`,
           description: dailyDescription(date),
           url: abs(`/daily/${date}`),

@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { getLanguages, getReposByLanguage } from "@/lib/languages";
-import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every language hub. Before this, language hubs were linked only from the
@@ -64,6 +64,7 @@ export default function LanguageIndex() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          ...pageNodeIds("/language"),
           name: title,
           url: abs("/language"),
           primaryImageOfPage: ogCardLd("/language"),
