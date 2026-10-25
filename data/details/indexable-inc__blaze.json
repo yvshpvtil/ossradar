@@ -1,0 +1,12 @@
+{
+ "fullName": "indexable-inc/blaze",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ra-jit makes rebuilding a Rust project after an edit take milliseconds.",
+ "extractor": "heuristic",
+ "readmeHash": "2fc96fb32ad7",
+ "version": 1,
+ "generatedAt": "2026-10-25T07:04:04.895Z"
+}
