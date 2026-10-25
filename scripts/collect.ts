@@ -81,6 +81,13 @@ function readJson<T>(file: string, fallback: T): T {
 
 // ---------- GitHub search ----------
 
+/** GitHub's detected license; "NOASSERTION" (unrecognised license file) keeps the name with no SPDX id. */
+function repoLicense(l: SearchItem["license"]): Repo["license"] {
+  if (!l) return null;
+  const spdx = l.spdx_id && l.spdx_id !== "NOASSERTION" ? l.spdx_id : null;
+  return { spdx, name: spdx ? l.name : "Other (custom license)" };
+}
+
 interface SearchItem {
   full_name: string;
   name: string;
@@ -96,6 +103,7 @@ interface SearchItem {
   pushed_at: string;
   archived: boolean;
   fork: boolean;
+  license?: { key: string; name: string; spdx_id: string | null } | null;
 }
 
 const token = getToken();
@@ -413,6 +421,7 @@ async function main() {
       forks: item.forks_count,
       createdAt: item.created_at,
       pushedAt: item.pushed_at,
+      license: repoLicense(item.license),
       ownerAvatar: item.owner.avatar_url,
       ownerType: item.owner.type === "Organization" ? "Organization" : "User",
       category,

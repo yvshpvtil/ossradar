@@ -226,6 +226,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
       userInteractionCount: repo.stars,
     },
     softwareVersion: release?.tag || undefined,
+    license: repo.license?.spdx ? `https://spdx.org/licenses/${repo.license.spdx}.html` : undefined,
   };
   // The page itself (an OSS Radar profile of the repo, rebuilt hourly) is a separate thing from the
   // repo it describes: say so, with when its numbers were last refreshed and the card it shares.
@@ -383,6 +384,18 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-3">
           <div><dt className="text-zinc-500">Language</dt><dd>{repo.language && getLanguage(languageSlug(repo.language)) ? <Link className="underline" href={`/language/${languageSlug(repo.language)}`}>{repo.language}</Link> : (repo.language ?? "n/a")}</dd></div>
           <div><dt className="text-zinc-500">Category</dt><dd><Link className="hover:underline" href={`/category/${repo.category}`}>{categoryLabel(repo.category)}</Link></dd></div>
+          {repo.license !== undefined && (
+            <div>
+              <dt className="text-zinc-500" title="The license GitHub detected in the repo">License</dt>
+              <dd>
+                {repo.license?.spdx ? (
+                  <a className="underline" href={`https://spdx.org/licenses/${repo.license.spdx}.html`} rel="noopener" title={repo.license.name}>{repo.license.spdx}</a>
+                ) : (
+                  <span className="text-zinc-500">{repo.license ? repo.license.name : "None detected"}</span>
+                )}
+              </dd>
+            </div>
+          )}
           <div><dt className="text-zinc-500">Created</dt><dd>{formatDate(repo.createdAt)}</dd></div>
           <div>
             <dt className="text-zinc-500" title="When code was last pushed (uploaded) to the repo">Last code push</dt>

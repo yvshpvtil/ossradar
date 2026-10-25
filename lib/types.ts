@@ -26,6 +26,8 @@ export interface Repo {
   forks: number;
   createdAt: string;
   pushedAt: string;
+  /** License GitHub detected (spdx null when it couldn't match a standard one); null when none; absent in older data. */
+  license?: { spdx: string | null; name: string } | null;
   ownerAvatar: string;
   /** GitHub account kind for the repo owner (User or Organization). */
   ownerType: "User" | "Organization";
