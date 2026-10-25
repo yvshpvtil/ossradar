@@ -1,0 +1,12 @@
+{
+ "fullName": "GortexAI/franco",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install franco                    # or, in a virtualenv: pip install franco",
+ "source": "readme",
+ "readmeSummary": "An outbound sales agent that runs on your own machine, on the Claude Code or Codex subscription you already pay for.",
+ "extractor": "heuristic",
+ "readmeHash": "0c3f476b91d1",
+ "version": 1,
+ "generatedAt": "2026-10-25T20:47:22.815Z"
+}
