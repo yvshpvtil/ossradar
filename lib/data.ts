@@ -7,11 +7,26 @@ import { cleanOneLiner } from "./oneliner";
 import { cleanHomepage } from "./homepage";
 
 const rawData = raw as RepoData;
+
+/**
+ * GitHub descriptions are plain text, but some authors write Markdown or ASCII punctuation in them
+ * ("**4,100+ skills**", "Context7 Platform -- Up-to-date docs"), which then shows up literally in
+ * meta descriptions, JSON-LD and list rows. Turn a spaced double hyphen into an em dash and drop
+ * Markdown bold markers around words.
+ */
+export function tidyDescription<T extends string | null | undefined>(text: T): T {
+  if (!text) return text;
+  return text
+    .replace(/\s+--\s+/g, " — ")
+    .replace(/(\*\*|__)(?=\S)([^*_]*?\S)\1/g, "$2") as T;
+}
+
 /** Re-apply the current blocklist and categorizer so tuning takes effect without waiting for the next collect run. */
 const data: RepoData = {
   ...rawData,
   repos: rawData.repos
     .filter((r) => !isOffTopic(r))
+    .map((r) => ({ ...r, description: tidyDescription(r.description), oneLiner: tidyDescription(r.oneLiner) }))
     .map((r) => ({ ...r, category: categorize({ topics: r.topics, description: r.description, name: r.name }) }))
     .map((r) => ({ ...r, oneLiner: cleanOneLiner(r), homepage: cleanHomepage(r.homepage) })),
 };
