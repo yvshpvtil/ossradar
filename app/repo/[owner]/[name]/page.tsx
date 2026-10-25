@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clip, repoPageTitle, repoPath, websiteRef, pageAlternates, pageNodeIds } from "@/lib/seo";
+import { breadcrumbLd, clipWidth, textWidth, repoPageTitle, repoPath, websiteRef, pageAlternates, pageNodeIds } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -80,15 +80,16 @@ function leadingSentences(t: string): string[] {
 
 /** Whole leading sentences that fit in `room`; otherwise a word-clip (with …) of the start. Drops the template's generic "Why it matters" line. */
 function metaLead(text: string, room: number): string {
+  // Measured in rendered width (CJK counts double) so long Chinese descriptions don't crowd the stats out of the snippet.
   const t = stripWhy(text.replace(/\s+/g, " ").trim());
-  if (t.length <= room) return t;
+  if (textWidth(t) <= room) return t;
   let out = "";
   for (const sentence of leadingSentences(t)) {
     const next = `${out} ${sentence}`.trim();
-    if (next.length > room) break;
+    if (textWidth(next) > room) break;
     out = next;
   }
-  return out || clip(t, room).replace(/[\s,;:(\-–—/]+…$/, "…");
+  return out || clipWidth(t, room).replace(/[\s,;:(\-–—/]+…$/, "…");
 }
 
 /**
@@ -98,7 +99,7 @@ function metaLead(text: string, room: number): string {
  */
 function withFacts(base: string, repo: Repo): string {
   const MAX = 155;
-  if (base.length >= 125) return base;
+  if (textWidth(base) >= 125) return base;
   const release = getLatestRelease(repo.fullName);
   const what = repo.language ? `${/^[AEIOU]/i.test(repo.language) ? "An" : "A"} ${repo.language} project` : "A project";
   const made = `${what} created ${ageText(repo.createdAt)} ago`;
@@ -111,7 +112,7 @@ function withFacts(base: string, repo: Repo): string {
   const variants = [`${made}${forks}.${rel}`, `${made}${forks}.`, `${made}.${rel}`, `${made}.`, `${age}${forks}.`, `${age}.`, `${formatNumber(repo.forks)} forks.`];
   for (const facts of variants) {
     const out = `${base.slice(0, cut)} ${facts}${base.slice(cut)}`;
-    if (out.length <= MAX) return out;
+    if (textWidth(out) <= MAX) return out;
   }
   return base;
 }

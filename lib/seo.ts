@@ -186,6 +186,41 @@ export const websiteLd = {
   },
 };
 
+// East Asian wide characters (CJK ideographs, kana, Hangul, full-width forms) render about twice as wide
+// as Latin letters, and Google cuts snippets by pixel width, so a 150-char Chinese description fills
+// roughly two snippets and pushes the stats sentence out of view.
+const WIDE = /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6]/u;
+
+/** Approximate rendered width in Latin-character units: wide (CJK) characters count as 2. */
+export function textWidth(s: string): number {
+  let w = 0;
+  for (const ch of s) w += WIDE.test(ch) ? 2 : 1;
+  return w;
+}
+
+/**
+ * Like clip(), but measured with textWidth() so CJK text gets about half the characters. Text with no
+ * nearby space (Chinese/Japanese) is cut after the last CJK comma/colon/semicolon in the back third,
+ * else at a character boundary, instead of falling back to the last ASCII space far earlier.
+ */
+export function clipWidth(s: string, max: number): string {
+  const t = s.replace(/\s+/g, " ").trim();
+  if (textWidth(t) <= max) return t;
+  let out = "";
+  let w = 0;
+  for (const ch of t) {
+    const cw = WIDE.test(ch) ? 2 : 1;
+    if (w + cw > max - 1) break;
+    out += ch;
+    w += cw;
+  }
+  const space = out.search(/\s+\S*$/);
+  if (space > out.length * 0.6) return `${out.slice(0, space)}…`;
+  const punct = Math.max(...["，", "、", "：", "；", "（"].map((p) => out.lastIndexOf(p)));
+  if (punct > out.length * 0.6) return `${out.slice(0, punct)}…`;
+  return `${out.replace(/[\s,;:(\-–—/]+$/, "")}…`;
+}
+
 /** Trim to a meta-description-friendly length on a word boundary. */
 export function clip(s: string, max = 158): string {
   const t = s.replace(/\s+/g, " ").trim();
