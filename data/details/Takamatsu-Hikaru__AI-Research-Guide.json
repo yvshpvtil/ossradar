@@ -1,0 +1,12 @@
+{
+ "fullName": "Takamatsu-Hikaru/AI-Research-Guide",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。",
+ "extractor": "heuristic",
+ "readmeHash": "1d7d63184c3a",
+ "version": 1,
+ "generatedAt": "2026-10-25T08:51:51.289Z"
+}

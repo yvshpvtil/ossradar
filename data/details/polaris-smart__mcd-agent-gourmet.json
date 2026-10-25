@@ -1,0 +1,12 @@
+{
+ "fullName": "polaris-smart/mcd-agent-gourmet",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "同样的东西，两条点法差 ¥12.00（24.7%）。 价格一律以麦当劳官方当次核价为准：菜单价有时附带条件（例如需要随单购买一张卡），这种情况下核价会不同——所以它只报核价，并把条件一并说明。",
+ "extractor": "heuristic",
+ "readmeHash": "52da36c4c9e9",
+ "version": 1,
+ "generatedAt": "2026-10-25T08:51:51.310Z"
+}
