@@ -1,0 +1,12 @@
+{
+ "fullName": "Cesare-N/mcd-daily-saver",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "麦当劳程序员节创意开发大赛（M-CODE）参赛作品。 本项目不包含任何人的 Token 或密钥——每个人用自己的 Token 跑，数据只在自己机器上流转。",
+ "extractor": "heuristic",
+ "readmeHash": "6b7590f8b81d",
+ "version": 1,
+ "generatedAt": "2026-10-25T16:51:15.190Z"
+}

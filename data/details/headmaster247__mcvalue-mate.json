@@ -1,0 +1,12 @@
+{
+ "fullName": "headmaster247/mcvalue-mate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "麦麦精算师根据你的预算、用餐人数和餐品偏好，从麦当劳实时菜单中生成多个候选组合，并通过官方价格验证确认每个组合的实际总价，只推荐真正吃得起的方案。",
+ "extractor": "heuristic",
+ "readmeHash": "ec773a71d4f9",
+ "version": 1,
+ "generatedAt": "2026-10-25T16:51:15.142Z"
+}

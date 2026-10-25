@@ -1,0 +1,12 @@
+{
+ "fullName": "miuuyy/Octopus-SI-OS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Octopus runs agents the way the well-known ones run: they read and write your files, drive a browser, use your desktop, call your apps and…",
+ "extractor": "heuristic",
+ "readmeHash": "e9f828b4c2e5",
+ "version": 1,
+ "generatedAt": "2026-10-25T16:51:15.130Z"
+}

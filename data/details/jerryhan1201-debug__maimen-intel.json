@@ -1,0 +1,12 @@
+{
+ "fullName": "jerryhan1201-debug/maimen-intel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "一句话生成「当日麦当劳情报」的本地简报工具：公共活动、可领券、我的券、积分月度到期提醒， 输出私人 Markdown/HTML、公开 HTML、1080px 移动端分享 PNG 与小红书草稿。",
+ "extractor": "heuristic",
+ "readmeHash": "2d82e725a712",
+ "version": 1,
+ "generatedAt": "2026-10-25T16:51:15.524Z"
+}

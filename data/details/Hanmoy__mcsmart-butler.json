@@ -1,0 +1,12 @@
+{
+ "fullName": "Hanmoy/mcsmart-butler",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "「今天吃什么？」把预算、热量和每个人的心愿，一起算进去。",
+ "extractor": "heuristic",
+ "readmeHash": "0b3764fff1d5",
+ "version": 1,
+ "generatedAt": "2026-10-25T16:51:15.191Z"
+}
