@@ -26,11 +26,21 @@ const TOKEN_LABELS: Record<string, string> = {
   hermes: "Hermes", typescript: "TypeScript", javascript: "JavaScript", python: "Python", rust: "Rust", swift: "Swift",
   golang: "Go", react: "React", nextjs: "Next.js", docker: "Docker", playwright: "Playwright", electron: "Electron",
   macos: "macOS", windows: "Windows", linux: "Linux", android: "Android",
+  // Product, company and acronym names that are close to (or already over) the hub threshold.
+  workbuddy: "WorkBuddy", antigravity: "Antigravity", mcdonalds: "McDonald's", grok: "Grok", glm: "GLM", gemma: "Gemma",
+  llama: "Llama", copilot: "Copilot", cline: "Cline", kiro: "Kiro", google: "Google", ios: "iOS", api: "API", ui: "UI",
+  sqlite: "SQLite", postgresql: "PostgreSQL", mysql: "MySQL", mongodb: "MongoDB", redis: "Redis", nodejs: "Node.js",
+  vue: "Vue", svelte: "Svelte", tauri: "Tauri", swiftui: "SwiftUI", tailwindcss: "Tailwind CSS", threejs: "Three.js",
+  langchain: "LangChain", langgraph: "LangGraph", pytorch: "PyTorch", fastapi: "FastAPI", cuda: "CUDA", mlx: "MLX",
+  gguf: "GGUF", lora: "LoRA", qlora: "QLoRA", moe: "MoE", nlp: "NLP", tts: "TTS", ocr: "OCR", pdf: "PDF", seo: "SEO",
+  aigc: "AIGC", genai: "GenAI", llmops: "LLMOps", devops: "DevOps", webrtc: "WebRTC", webgl: "WebGL", html: "HTML",
+  svg: "SVG", pwa: "PWA", ffmpeg: "FFmpeg", obsidian: "Obsidian", blender: "Blender", unity: "Unity", wechat: "WeChat",
+  git: "Git", esp32: "ESP32", "3d": "3D",
 };
 /** Whole-slug names that token casing can't get right. */
 const SLUG_LABELS: Record<string, string> = {
   "claude-code": "Claude Code", "claude-code-plugin": "Claude Code plugin", "model-context-protocol": "Model Context Protocol",
-  "claude-skills": "Claude skills", "gemini-cli": "Gemini CLI",
+  "claude-skills": "Claude skills", "gemini-cli": "Gemini CLI", "llama-cpp": "llama.cpp", "gpt-oss": "gpt-oss",
 };
 /** Slugs whose hyphen is part of the normal spelling. */
 const KEEP_HYPHEN = new Set(["self-hosted", "local-first", "open-source", "multi-agent"]);
