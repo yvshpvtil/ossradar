@@ -35,6 +35,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.734Z"
  },
+ "Cesare-N/mcd-daily-saver": {
+  "text": "Uses McDonald's official MCP to find the cheapest way to order each day, with coupons included.",
+  "basis": "97c86e169457",
+  "source": "manual translation",
+  "generatedAt": "2026-10-25T20:58:57.867Z"
+ },
  "Clearailhc/clearai-dsh": {
   "text": "Ontology-first DeepSeek Harness plugin that turns evidence-checked research into a browsable domain ontology.",
   "basis": "b52997f8b6c8",
@@ -148,6 +154,12 @@
   "basis": "908b1e0c838d",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.263Z"
+ },
+ "W313997791/mai-suanpan": {
+  "text": "McDonald's MCP assistant that prices meal combos to save money, cut calories and plan group meals.",
+  "basis": "b009193ae228",
+  "source": "manual translation",
+  "generatedAt": "2026-10-25T20:58:57.867Z"
  },
  "YoyoLin008/mcreplay": {
   "text": "Captures the structure of McDonald's China MCP responses, reports changes between them, and replays them locally over MCP.",
@@ -437,6 +449,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "polaris-smart/mcd-agent-gourmet": {
+  "text": "McDonald's ordering skill that turns a budget and taste into one officially priced order card.",
+  "basis": "5f27ba045cad",
+  "source": "manual translation",
+  "generatedAt": "2026-10-25T20:58:57.867Z"
+ },
  "qqqqqq-stu/mcparallel": {
   "text": "AI ordering skill on McDonald's official MCP that picks random meals, runs personality quizzes, and compares prices.",
   "basis": "66cecadd8a14",
@@ -502,6 +520,12 @@
   "basis": "19716713fa26",
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "vxcn/mcd-kcal-picker": {
+  "text": "Read-only McDonald's China MCP skill that picks a main, side and drink close to a calorie target.",
+  "basis": "4298665768af",
+  "source": "manual translation",
+  "generatedAt": "2026-10-25T20:58:57.867Z"
  },
  "xkx121029/mcd-vibe-commit": {
   "text": "A Claude Code skill that runs a 3-question McDonald's personality quiz and writes a matching git commit message.",
