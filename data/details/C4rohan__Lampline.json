@@ -1,0 +1,12 @@
+{
+ "fullName": "C4rohan/Lampline",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e cli                  # installs the `vk` command",
+ "source": "readme",
+ "readmeSummary": "Lampline imports your Dialogflow CX and CX Agent Studio agents, flows, pages, playbooks, forms and tools included, and runs them on hardware…",
+ "extractor": "heuristic",
+ "readmeHash": "60d690669761",
+ "version": 1,
+ "generatedAt": "2026-10-25T05:49:35.294Z"
+}

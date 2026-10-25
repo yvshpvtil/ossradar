@@ -1,0 +1,12 @@
+{
+ "fullName": "TuguiDragos/Peel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask tuguidragos/tap/peel",
+ "source": "readme",
+ "readmeSummary": "Requirements: macOS Tahoe 26 or later, on any Mac that runs it: every Mac with Apple silicon, and the few Intel Macs from 2019 and 2020 that…",
+ "extractor": "heuristic",
+ "readmeHash": "a190891a7252",
+ "version": 1,
+ "generatedAt": "2026-10-25T05:49:35.297Z"
+}
