@@ -149,6 +149,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.263Z"
  },
+ "YoyoLin008/mcreplay": {
+  "text": "Captures the structure of McDonald's China MCP responses, reports changes between them, and replays them locally over MCP.",
+  "basis": "992795a41f52",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:43.463Z"
+ },
  "adexbn/walk-kcal": {
   "text": "Turns walking distance into a meal calorie budget and marks which dishes at nearby restaurants, including McDonald's, fit it.",
   "basis": "48f3baa07be7",
@@ -329,6 +335,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:46.453Z"
  },
+ "jouaaaaaa/mcd-self-butler": {
+  "text": "A McDonald's ordering assistant built on McDonald's MCP that recommends meals, checks nutrition, and compares store costs.",
+  "basis": "efe28f3b6455",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:43.496Z"
+ },
  "jundizhou/easy-stock": {
   "text": "A desktop workbench for China A-share market data, AI-assisted stock research, quant analysis and after-market review.",
   "basis": "c4dc32f794fa",
@@ -346,6 +358,12 @@
   "basis": "ac30d10c2fb0",
   "source": "claude -p",
   "generatedAt": "2026-10-24T02:19:41.796Z"
+ },
+ "kukemc/bili-cli": {
+  "text": "A Bilibili command-line tool for AI agents: QR login, watching videos, comments, DMs, posts and uploads, all in JSON.",
+  "basis": "fcdaae14076f",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:48.399Z"
  },
  "langbot-app/LangBot": {
   "text": "Platform for building agentic chat bots for Discord, Slack, Telegram, WeChat, QQ and more.",
@@ -376,6 +394,12 @@
   "basis": "ecdf579a9130",
   "source": "claude -p",
   "generatedAt": "2026-10-24T02:19:41.560Z"
+ },
+ "llm-xiaoye/cc-connect-dy-author": {
+  "text": "An agent skill for cc-connect that turns a Douyin author's posts into Obsidian knowledge notes and interview questions.",
+  "basis": "8c3de0014c72",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:58.150Z"
  },
  "lokicorvus/crosspet": {
   "text": "A desktop pet for Mac and Windows that changes look to match the AI you use and acts out what the AI is doing.",
@@ -461,6 +485,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:54.787Z"
  },
+ "suikv000/mai-you-pu": {
+  "text": "An AI assistant skill and web demo, built on McDonald's MCP, that suggests new ways to combine McDonald's menu items.",
+  "basis": "22889d65b4e5",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:22:00.139Z"
+ },
  "tradecatlabs/vibe-coding-cn": {
   "text": "A Chinese-language Vibe Coding toolbox of guides, prompts, skills and tools built around Pi Agent and OpenAI GPT.",
   "basis": "c26b5071695c",
@@ -472,6 +502,12 @@
   "basis": "19716713fa26",
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "xkx121029/mcd-vibe-commit": {
+  "text": "A Claude Code skill that runs a 3-question McDonald's personality quiz and writes a matching git commit message.",
+  "basis": "d3ac98212b99",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:54.322Z"
  },
  "xqy2006/ModelTrace": {
   "text": "Local tool that matches an AI model to a known model family and version by fingerprinting its number outputs.",
@@ -491,11 +527,23 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "zengshuangzi/mcd-money-saver": {
+  "text": "An AI skill built on McDonald's MCP that claims coupons and calculates the cheapest order combination for your budget.",
+  "basis": "70ced82ffc1a",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:46.924Z"
+ },
  "zhu1090093659/dsh-web": {
   "text": "Plugin ecosystem for the DeepSeek Harness web UI, shared through a Creative Workshop.",
   "basis": "91626cc8edee",
   "source": "manual translation",
   "generatedAt": "2026-10-20T16:57:10.015Z"
+ },
+ "zj-unicom-ai/UniEmployee": {
+  "text": "A platform for building and running AI digital employees that capture expert staff's experience, processes and judgment.",
+  "basis": "683ed777913b",
+  "source": "claude -p",
+  "generatedAt": "2026-10-25T02:21:51.135Z"
  },
  "ztt0216/MyAgent": {
   "text": "A Python agent runtime with an agent loop, permissions, MCP tools, sub-agents, memory and self-evolving skills.",
