@@ -125,11 +125,16 @@ export function heuristicDetails(readme: string, description: string): Omit<Repo
   const feats: string[] = [];
   const featBlock = readme.match(/^#{1,4}\s*(?:✨\s*)?(?:key\s+)?(?:features|use cases|what (?:it|you can) do)[^\n]*\n([\s\S]*?)(?=\n#{1,4}\s)/im);
   if (featBlock) {
+    // A bullet can wrap onto following lines; join them so the use case isn't cut mid-sentence.
+    const bullets: string[] = [];
+    let open = false; // the last line was part of a bullet, so a plain line right after it continues it
     for (const line of featBlock[1].split("\n")) {
       const m = line.match(/^\s*[-*]\s+(.+)/);
-      if (m) feats.push(clean(stripMd(m[1]).replace(/\*\*/g, "")).slice(0, 140));
-      if (feats.length === 3) break;
+      if (m) { bullets.push(m[1]); open = true; }
+      else if (open && line.trim() && !/^\s*(#|```|\||>|\d+\.)/.test(line)) bullets[bullets.length - 1] += ` ${line.trim()}`;
+      else open = false;
     }
+    for (const b of bullets.slice(0, 3)) feats.push(clean(stripMd(b).replace(/\*\*/g, "")).slice(0, 140));
   }
 
   return {
