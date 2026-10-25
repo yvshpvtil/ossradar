@@ -41,3 +41,17 @@ export function topicLabel(slug: string): string {
   if (KEEP_HYPHEN.has(slug)) return slug;
   return slug.split("-").map((w) => TOKEN_LABELS[w] ?? w).join(" ");
 }
+
+/**
+ * Topic hubs most used by a set of repos (e.g. a category or language hub's members), most overlap first.
+ * Small hubs need fewer shared repos to count, so thin category/language pages still link their real topic hubs.
+ */
+export function relatedTopics(repos: Pick<Repo, "topics">[], opts: { exclude?: string; limit?: number } = {}): { slug: string; overlap: number }[] {
+  const min = repos.length < 20 ? 2 : 3;
+  return getTopics()
+    .filter((t) => t.slug !== opts.exclude)
+    .map((t) => ({ slug: t.slug, overlap: repos.filter((r) => repoTopics(r).includes(t.slug)).length }))
+    .filter((t) => t.overlap >= min)
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, opts.limit ?? 12);
+}

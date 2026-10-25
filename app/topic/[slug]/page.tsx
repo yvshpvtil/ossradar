@@ -12,7 +12,8 @@ import { formatNumber } from "@/lib/format";
 import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
-import { getReposByTopic, getTopics, hasTopicPage, repoTopics, topicLabel, topicVariants } from "@/lib/topics";
+import { getReposByTopic, getTopics, hasTopicPage, relatedTopics, topicLabel, topicVariants } from "@/lib/topics";
+import { RelatedTopics } from "@/components/RelatedTopics";
 
 export function generateStaticParams() {
   return getTopics().map((t) => ({ slug: t.slug }));
@@ -45,8 +46,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
   const ranked = rankRepos(repos, "week");
   const top = ranked.slice(0, 3);
   const weekTotal = repos.reduce((n, r) => n + r.delta7d, 0);
-  const related = getTopics().filter((t) => t.slug !== slug).map((t) => ({ ...t, overlap: repos.filter((r) => repoTopics(r).includes(t.slug)).length }))
-    .filter((t) => t.overlap >= 3).sort((a, b) => b.overlap - a.overlap).slice(0, 12);
+  const related = relatedTopics(repos, { exclude: slug });
   return (
     <>
       <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked) })} />
@@ -76,14 +76,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
           </p>
         )}
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
-        {related.length > 0 && (
-          <p className="mt-3 flex flex-wrap items-center gap-1.5 text-xs">
-            <span className="text-zinc-500">Related topics:</span>
-            {related.map((t) => (
-              <Link key={t.slug} href={`/topic/${t.slug}`} className="rounded-full bg-indigo-50 px-2 py-0.5 text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:text-indigo-300">{topicLabel(t.slug)}</Link>
-            ))}
-          </p>
-        )}
+        <RelatedTopics topics={related} />
       </section>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} defaultPeriod="week" />

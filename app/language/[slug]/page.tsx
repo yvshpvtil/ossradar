@@ -11,6 +11,8 @@ import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { hubLeaderProps } from "@/lib/leader";
+import { relatedTopics } from "@/lib/topics";
+import { RelatedTopics } from "@/components/RelatedTopics";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -81,6 +83,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
           </p>
         )}
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
+        <RelatedTopics topics={relatedTopics(repos, { exclude: lang.slug })} />
       </section>
       <nav aria-label="Languages" className="-mx-4 mb-6 overflow-x-auto px-4 [scrollbar-width:none]">
         <ul className="flex gap-2 pb-1 lg:flex-wrap">
