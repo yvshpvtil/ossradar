@@ -22,6 +22,12 @@ function unbalanced(s: string): boolean {
 /** Cut back to the last clean boundary: a sentence end, else a comma/dash/semicolon clause, else a word. */
 function clip(s: string): string | null {
   let t = s;
+  // A bullet wrapped right after punctuation ("…: your apps,") only lost its tail: keep every word.
+  if (/[,;&/+]$/.test(t) && !unbalanced(t)) {
+    t = t.replace(/[\s,;&/+]+$/, "");
+    while (DANGLING.test(t)) t = t.replace(DANGLING, "").replace(/[\s,;:—–-]+$/, "");
+    return t.length >= 15 ? `${t}${ELLIPSIS}` : null;
+  }
   const sentence = t.match(/^(.*[.!?])\s+\S/);
   if (sentence && sentence[1].length >= 12 && !unbalanced(sentence[1])) return sentence[1];
   if (unbalanced(t)) {
@@ -47,7 +53,7 @@ export function cleanUseCase(raw: string): string | null {
   if (!/\s/.test(s) && s.length < 20) return null;
   const cut = (CUT_LENGTHS.has(raw.trim().length) && !/[.!?)]$/.test(s)) || unbalanced(s);
   const lastWord = s.match(/(\S+)$/)?.[1] ?? "";
-  const dangling = DANGLING.test(s) || /,\s*\S{1,3}$/.test(s);
+  const dangling = DANGLING.test(s) || /,\s*\S{1,3}$/.test(s) || /[,;(&/+]$/.test(s);
   if (!cut && !dangling) return s;
   // Bullets ending in a lowercase 1-3 letter stub after a comma (", ad", ", em") or a dangling
   // connector were wrapped/cut: clip them. Keep a short final word that is a real token (e.g. "UI").
