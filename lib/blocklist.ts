@@ -20,6 +20,17 @@ const OFF_TOPIC_WORDS = [
   "self-help", "horoscope", "recipes",
 ];
 
+/**
+ * Adult / sexual-content signals. These always drop the repo, even when it is AI or dev related
+ * (e.g. an NSFW image-generation skill): OSS Radar is a work-safe site, and adult listings can
+ * get pages filtered out of SafeSearch results. Matched on whole words in name, description and topics.
+ */
+const ADULT_RE = /(^|[^a-z0-9])(nsfw|porn|porno|pornography|hentai|nudify|nudity|undress|erotic|erotica|onlyfans|r18)([^a-z0-9]|$)|色情|成人内容/i;
+
+export function isAdult(input: { name: string; description: string; topics: string[] }): boolean {
+  return ADULT_RE.test(` ${input.name.replace(/[-_]/g, " ")} ${input.description} ${input.topics.join(" ")} `);
+}
+
 /** Words that signal a repo is actually software / AI / dev related. */
 const DEV_SIGNALS = [
   "code", "coding", "cli", "api", "sdk", "library", "framework", "developer", "dev ", "plugin",
@@ -32,6 +43,7 @@ const DEV_SIGNALS = [
 export function isOffTopic(input: { fullName: string; owner: string; topics: string[]; description: string; name: string }): boolean {
   const full = input.fullName.toLowerCase();
   if (BLOCKED_REPOS.has(full) || BLOCKED_OWNERS.has(input.owner.toLowerCase())) return true;
+  if (isAdult(input)) return true;
   const text = ` ${input.name.replace(/[-_]/g, " ")} ${input.description} ${input.topics.join(" ")} `.toLowerCase();
   const offTopicHit =
     input.topics.some((t) => OFF_TOPIC_TOPICS.has(t.toLowerCase())) || OFF_TOPIC_WORDS.some((w) => text.includes(w));

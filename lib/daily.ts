@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { getData, getRepos } from "./data";
+import { getData, getRepos, isExcludedName } from "./data";
 import type { Repo } from "./types";
 
 const DIR = path.join(process.cwd(), "data", "snapshots");
@@ -27,7 +27,7 @@ export function getDailyTop(date: string, limit = 25): DailyEntry[] {
   const cur = snap(date), prev = snap(prevDay(date));
   const byName = new Map(getRepos().map((r) => [r.fullName, r]));
   return Object.entries(cur)
-    .filter(([n]) => prev[n] !== undefined)
+    .filter(([n]) => prev[n] !== undefined && !isExcludedName(n))
     .map(([fullName, stars]) => ({ fullName, stars, gained: stars - prev[fullName], repo: byName.get(fullName) }))
     .filter((e) => e.gained > 0)
     .sort((a, b) => b.gained - a.gained)

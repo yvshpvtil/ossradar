@@ -16,6 +16,14 @@ const data: RepoData = {
     .map((r) => ({ ...r, oneLiner: cleanOneLiner(r), homepage: cleanHomepage(r.homepage) })),
 };
 
+/** Lowercased names of collected repos the filters drop; snapshot-based views (daily archive) skip these too. */
+const excluded = new Set(rawData.repos.filter((r) => isOffTopic(r)).map((r) => r.fullName.toLowerCase()));
+
+export function isExcludedName(fullName: string): boolean {
+  const full = fullName.toLowerCase();
+  return excluded.has(full) || isOffTopic({ fullName: full, owner: full.split("/")[0], name: full.split("/")[1] ?? "", topics: [], description: "" });
+}
+
 export type Period = "today" | "week";
 
 export function getData(): RepoData {
