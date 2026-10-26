@@ -1,0 +1,16 @@
+{
+ "fullName": "DenisSergeevitch/ex-ussr-kinship-research",
+ "whoItsFor": null,
+ "useCases": [
+  "Case intake and scope. One research question, known facts, who may be alive, what is off-limits.",
+  "Reproducible registers. Persons, artifacts, claims, relationships and a full search log (CSV), plus a final report template.",
+  "Historical jurisdiction model. It resolves every event to the state, province, district, parish or civil registry *as of the event date*, no"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An evidence-first genealogy skill for AI agents (Codex, Claude Code and other Agent Skills runtimes).",
+ "extractor": "heuristic",
+ "readmeHash": "d0831a805f6c",
+ "version": 1,
+ "generatedAt": "2026-10-26T21:51:54.611Z"
+}
