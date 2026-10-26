@@ -1,0 +1,16 @@
+{
+ "fullName": "andyhuo520/digital-human-koubo",
+ "whoItsFor": null,
+ "useCases": [
+  "Digital human from one photo — a fixed presenter (face, outfit, voice description, prompt template) stored in `persona.json`, so every video",
+  "Lip-synced talking clips — the script is split into ≤ 15-second segments and generated with Grok Video 1.5 through Renoise MCP. Other models",
+  "Cost gate — the agent always quotes *segments · seconds · credits · balance* first and waits for your \"yes\". It generates segment 1 for you "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "One photo + one sentence → a finished talking-head video with a digital human.",
+ "extractor": "heuristic",
+ "readmeHash": "efa23679ff75",
+ "version": 1,
+ "generatedAt": "2026-10-26T08:08:11.222Z"
+}

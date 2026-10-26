@@ -1,0 +1,12 @@
+{
+ "fullName": "BloopAI/vibe-kanban",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx vibe-kanban",
+ "source": "readme",
+ "readmeSummary": "In a world where software engineers spend most of their time planning and reviewing coding agents, the most impactful way to ship more is to…",
+ "extractor": "heuristic",
+ "readmeHash": "06fee97118ca",
+ "version": 1,
+ "generatedAt": "2026-10-26T08:08:11.234Z"
+}
