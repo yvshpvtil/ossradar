@@ -1,0 +1,12 @@
+{
+ "fullName": "Yu-tao-Li/dsh-computer-use-win",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "让 DSH 看懂并操作你的 Windows 桌面。",
+ "extractor": "heuristic",
+ "readmeHash": "85d9a6fd1ee0",
+ "version": 1,
+ "generatedAt": "2026-10-26T07:12:42.046Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "rddmwmddr/android-ad-cleaner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip3 install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。",
+ "extractor": "heuristic",
+ "readmeHash": "a0939a8a0015",
+ "version": 1,
+ "generatedAt": "2026-10-26T07:12:42.015Z"
+}
