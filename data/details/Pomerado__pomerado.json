@@ -1,0 +1,12 @@
+{
+ "fullName": "Pomerado/pomerado",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y -p pomerado pomerado-mcp --help",
+ "source": "readme",
+ "readmeSummary": "Pomerado builds MCP integrations for websites, including sites without an API.",
+ "extractor": "heuristic",
+ "readmeHash": "87be2ca4862e",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:07.874Z"
+}

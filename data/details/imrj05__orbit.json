@@ -1,0 +1,16 @@
+{
+ "fullName": "imrj05/orbit",
+ "whoItsFor": null,
+ "useCases": [
+  "Chat-style agent sessions — composer with model selection, thinking effort, follow-up queueing, mid-run steering, cancel, and streaming repl",
+  "A send is in flight from the keystroke: pressing Enter flips the composer to Stop and starts the live “Working for…” row at the send, instea",
+  "Enter behavior — Settings → Agent → Behavior picks what Enter does: queue a follow-up (default) or steer the running task. Alt/Option+Enter "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Orbit is a native desktop workbench for the pi coding agent — a chat-style GUI rendered entirely in Rust on GPUI, the GPU-accelerated UI…",
+ "extractor": "heuristic",
+ "readmeHash": "89de81aacb4d",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.446Z"
+}

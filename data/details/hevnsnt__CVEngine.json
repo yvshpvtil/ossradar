@@ -1,0 +1,12 @@
+{
+ "fullName": "hevnsnt/CVEngine",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Attack surface tools find assets. Vulnerability scanners find flaws. Threat feeds find CVEs.",
+ "extractor": "heuristic",
+ "readmeHash": "9035a7900fd9",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:07.834Z"
+}

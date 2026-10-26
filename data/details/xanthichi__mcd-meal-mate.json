@@ -1,0 +1,12 @@
+{
+ "fullName": "xanthichi/mcd-meal-mate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "M餐搭子是一个基于麦当劳 MCP 实时数据的智能搭餐 Skill。输入城市、地标、预算、热量上限和蛋白质目标，它会从当前门店的真实菜单里选出三套可执行的组合，并把每一餐的价格、热量、蛋白质和 MCP 调用链一起摊开给你看。",
+ "extractor": "heuristic",
+ "readmeHash": "4e233fca6201",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:07.860Z"
+}

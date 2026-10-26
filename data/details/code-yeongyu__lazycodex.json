@@ -1,0 +1,12 @@
+{
+ "fullName": "code-yeongyu/lazycodex",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx lazycodex-ai install",
+ "source": "readme",
+ "readmeSummary": "On the next launch, approve the omo hooks in Codex's startup review — hooks never run before approval.",
+ "extractor": "heuristic",
+ "readmeHash": "fed27d2dc22f",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:07.892Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "wahaha-potato/mcd-coupon-xray",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "麦当劳 MCP 里有两个都叫「我的券」的接口，语义完全不同：",
+ "extractor": "heuristic",
+ "readmeHash": "62672a6a6229",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.428Z"
+}

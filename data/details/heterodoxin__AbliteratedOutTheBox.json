@@ -1,0 +1,12 @@
+{
+ "fullName": "heterodoxin/AbliteratedOutTheBox",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AbliteratedOutTheBox is a fork of llama.cpp that gets any supported model to answer flagged harmful prompts, delivering the requested…",
+ "extractor": "heuristic",
+ "readmeHash": "97d4d5fb4ca1",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.113Z"
+}

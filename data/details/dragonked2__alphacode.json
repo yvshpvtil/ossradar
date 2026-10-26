@@ -1,0 +1,12 @@
+{
+ "fullName": "dragonked2/alphacode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/dragonked2/alphacode/main/scripts/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Built in Rust. Understands your codebase, edits files, runs commands and tests, drives Firefox, controls desktop apps, and verifies its own…",
+ "extractor": "heuristic",
+ "readmeHash": "618da5ac97dc",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.217Z"
+}

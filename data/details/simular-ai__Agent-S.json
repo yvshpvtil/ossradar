@@ -1,0 +1,12 @@
+{
+ "fullName": "simular-ai/Agent-S",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Agent S is an open-source computer use agent framework from Simular. Give it a task in plain English.",
+ "extractor": "heuristic",
+ "readmeHash": "6bec7a3a0054",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.121Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "encoredev/encore",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Encore helps developers and AI coding agents build and deploy backend applications without having to manually set up and manage…",
+ "extractor": "heuristic",
+ "readmeHash": "875442ef505a",
+ "version": 1,
+ "generatedAt": "2026-10-26T01:16:08.124Z"
+}
