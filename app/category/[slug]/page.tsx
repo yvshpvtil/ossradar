@@ -13,7 +13,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, collectionPageLd, itemListLd, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
 import { RelatedTopics } from "@/components/RelatedTopics";
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
     title,
     description,
     alternates: pageAlternates(`/category/${slug}`),
-    openGraph: { title: socialTitle, description, url: `/category/${slug}` },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/category/${slug}` },
     twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }

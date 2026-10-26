@@ -13,7 +13,7 @@ import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
 import { RelatedTopics } from "@/components/RelatedTopics";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps<"/language/[slug]">
     title,
     description,
     alternates: pageAlternates(`/language/${slug}`),
-    openGraph: { title: socialTitle, description, url: `/language/${slug}` },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/language/${slug}` },
     twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }

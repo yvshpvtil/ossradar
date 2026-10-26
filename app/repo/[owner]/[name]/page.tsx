@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clipWidth, textWidth, repoPageTitle, repoPath, websiteRef, pageAlternates, pageNodeIds } from "@/lib/seo";
+import { breadcrumbLd, clipWidth, textWidth, repoPageTitle, repoPath, websiteRef, pageAlternates, pageNodeIds, ogDefaults } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -141,7 +141,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
     description,
     alternates: pageAlternates(url),
     ...(isThinRepo(repo) ? { robots: { index: false, follow: true } } : {}),
-    openGraph: { type: "article", title: socialTitle, description, url },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: "article", title: socialTitle, description, url },
     twitter: { card: "summary_large_image", title: socialTitle, description },
   };
 }
