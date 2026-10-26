@@ -1,0 +1,12 @@
+{
+ "fullName": "ibh4/mac-Buddy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Mac-Buddy × 麦当劳 MCP × React × Express × SQLite",
+ "extractor": "heuristic",
+ "readmeHash": "f5e23859b1d2",
+ "version": 1,
+ "generatedAt": "2026-10-26T10:04:11.485Z"
+}

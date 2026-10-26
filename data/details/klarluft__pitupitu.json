@@ -1,0 +1,12 @@
+{
+ "fullName": "klarluft/pitupitu",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://pitupitu.chat/install | sh   # or: brew install klarluft/tap/pitupitu",
+ "source": "readme",
+ "readmeSummary": "You say what you want done and where. pitupitu starts the agent session on that machine, keeps an eye on it, answers what it can, and tells…",
+ "extractor": "heuristic",
+ "readmeHash": "a2e80b1cc6f5",
+ "version": 1,
+ "generatedAt": "2026-10-26T10:04:11.456Z"
+}
