@@ -1,0 +1,12 @@
+{
+ "fullName": "mashanglinyu/luanyujia-workbench",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "把本地 AI 助手包进一个分场景的桌面工作台：",
+ "extractor": "heuristic",
+ "readmeHash": "b55711f1b4d0",
+ "version": 1,
+ "generatedAt": "2026-10-26T17:03:14.338Z"
+}

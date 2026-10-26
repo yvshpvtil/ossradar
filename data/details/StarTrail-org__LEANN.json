@@ -1,0 +1,12 @@
+{
+ "fullName": "StarTrail-org/LEANN",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "LEANN is an innovative vector database that democratizes personal AI. Transform your laptop into a powerful RAG system that can index and…",
+ "extractor": "heuristic",
+ "readmeHash": "b8710fea083f",
+ "version": 1,
+ "generatedAt": "2026-10-26T17:03:14.418Z"
+}
