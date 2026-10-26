@@ -9,7 +9,9 @@
     "lint": "eslint",
     "collect": "tsx scripts/collect.ts",
     "enrich": "tsx scripts/enrich.ts",
-    "blurbs": "tsx scripts/blurbs.ts"
+    "blurbs": "tsx scripts/blurbs.ts",
+    "prebuild": "tsx scripts/retired.ts",
+    "retired": "tsx scripts/retired.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

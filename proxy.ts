@@ -5,6 +5,10 @@ import { getLanding } from "@/lib/landing";
 import { getLanguage } from "@/lib/languages";
 import { hasTopicPage } from "@/lib/topics";
 import { hasAlternativesPage } from "@/lib/alternatives";
+import retiredList from "@/data/retired.json";
+
+/** Repos seen in a daily snapshot that have since left the tracked set (written by scripts/retired.ts at prebuild). */
+const RETIRED = new Set<string>(retiredList as string[]);
 
 /** First day that can be archived: the day after the first snapshot (2026-10-13). */
 const FIRST_ARCHIVE_DAY = "2026-10-14";
@@ -28,6 +32,26 @@ const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily
 /** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
 const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
+const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+
+/** Body of the 410 answer for a repo that has left the tracked set. */
+function gonePage(fullName: string): string {
+  const name = escapeHtml(fullName);
+  const gh = `https://github.com/${fullName.split("/").map(encodeURIComponent).join("/")}`;
+  const link = "color:#4f46e5;text-decoration:none";
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${name} is no longer tracked · OSS Radar</title><meta name="robots" content="noindex, follow">
+<link rel="icon" href="/favicon.ico"></head>
+<body style="margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#18181b;background:#fff">
+<main style="max-width:560px;margin:0 auto;padding:72px 20px;text-align:center;line-height:1.6">
+<p style="margin:0 0 8px;font-weight:600"><a href="/" style="${link}">OSS Radar</a></p>
+<h1 style="font-size:28px;margin:0 0 12px">${name} is no longer on the radar</h1>
+<p style="color:#52525b;margin:0 0 24px">OSS Radar tracked this repo when it was rising fast. It has since dropped out of the tracked set, so its page was retired. The project itself is still on GitHub.</p>
+<p style="margin:0 0 8px"><a href="${gh}" style="${link}" rel="nofollow">View ${name} on GitHub</a></p>
+<p style="margin:0"><a href="/" style="${link}">Today's leaderboard</a> · <a href="/new" style="${link}">New repos</a> · <a href="/daily" style="${link}">Daily top 25 archive</a> · <a href="/category" style="${link}">Categories</a></p>
+</main></body></html>`;
+}
+
 /**
  * With Cache Components, unknown dynamic params render on request and the static shell
  * streams before the page calls notFound(), so they'd answer 200 + noindex. Reject unknown
@@ -37,6 +61,18 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
 export function proxy(req: NextRequest) {
   const raw = req.nextUrl.pathname.split("/").filter(Boolean).map(decodeURIComponent);
   const notFound = () => NextResponse.rewrite(new URL("/__not-found", req.url), { status: 404 });
+  // A repo seen in an earlier snapshot that has since dropped out of the tracked set answers
+  // 410 Gone, so search engines drop the old URL instead of retrying it as a 404. A rewrite's
+  // status is overridden by the page it renders, so this is a small standalone page instead.
+  const gone = (fullName: string) =>
+    new NextResponse(gonePage(fullName), {
+      status: 410,
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": "noindex, follow",
+        "cache-control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+      },
+    });
   // Route folders and hub slugs are lowercase, but the matcher (and the dynamic routes behind it)
   // also accept other casings, so /Category/mcp or /TOPIC/mcp would serve a duplicate 200 while
   // /topic/MCP 404s. Look everything up lowercased (repo owner/name stay as typed; getRepo is
@@ -56,7 +92,7 @@ export function proxy(req: NextRequest) {
   if (section === "repo") {
     if (parts.length < 3) return notFound();
     const repo = getRepo(parts[1], parts[2]);
-    if (!repo) return notFound();
+    if (!repo) return parts.length === 3 && RETIRED.has(`${parts[1]}/${parts[2]}`.toLowerCase()) ? gone(`${parts[1]}/${parts[2]}`) : notFound();
     const canonical = `/repo/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);
     if (parts.length > 3 && raw[0] !== "repo") return notFound();
