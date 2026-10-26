@@ -32,6 +32,7 @@ export function RepoOfTheDay({ repo, now }: { repo: Repo; now: number }) {
         <Image
           src={`${repo.ownerAvatar}${repo.ownerAvatar.includes("?") ? "&" : "?"}s=80`}
           alt={`${repo.owner} avatar`}
+          loading="eager"
           width={40}
           height={40}
           unoptimized

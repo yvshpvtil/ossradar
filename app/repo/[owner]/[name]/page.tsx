@@ -267,6 +267,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <Image
             src={`${repo.ownerAvatar}${repo.ownerAvatar.includes("?") ? "&" : "?"}s=96`}
             alt={`${repo.owner} avatar`}
+            loading="eager"
             width={48}
             height={48}
             unoptimized
