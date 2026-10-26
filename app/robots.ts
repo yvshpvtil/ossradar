@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: AI_BOTS, allow: "/", disallow },
     ],
     sitemap: `${SITE.url}/sitemap.xml`,
-    host: SITE.url,
+    // No `host`: Host is a retired Yandex-only directive that Google and Bing ignore and robots.txt checkers flag as unsupported.
   };
 }
