@@ -1,0 +1,12 @@
+{
+ "fullName": "ParadevAI/Paradev",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://superset.sh/cli/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Run Claude Code, Codex, or another CLI agent with terminals, code review, and browser previews in one workspace.",
+ "extractor": "heuristic",
+ "readmeHash": "46b219b40444",
+ "version": 1,
+ "generatedAt": "2026-10-26T09:04:59.390Z"
+}
