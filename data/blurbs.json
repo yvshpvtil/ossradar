@@ -83,6 +83,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "Hanmoy/mcsmart-butler": {
+  "text": "Local panel and Agent Skill using McDonald's MCP to plan meals within budget, split group orders and compare vouchers.",
+  "basis": "2c5f7fba23a7",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:21:49.969Z"
+ },
  "HanyuanWang/LiveStream-Agent-Studio": {
   "text": "Local Windows AI agent for Douyin livestream commerce: creator discovery, transcripts, stream reviews and video scripts.",
   "basis": "13fa5bff8427",
@@ -160,6 +166,12 @@
   "basis": "b009193ae228",
   "source": "manual translation",
   "generatedAt": "2026-10-25T20:58:57.867Z"
+ },
+ "XRayLau1/maitaiyi": {
+  "text": "A 12-question quiz that finds your McDonald's taste type and issues a mock diagnosis with a meal prescription.",
+  "basis": "12bbd0972389",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:21:55.985Z"
  },
  "YoyoLin008/mcreplay": {
   "text": "Captures the structure of McDonald's China MCP responses, reports changes between them, and replays them locally over MCP.",
@@ -322,6 +334,12 @@
   "basis": "8c4cb1c8f2c8",
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:47.857Z"
+ },
+ "huaxialucaicaizi/ai-startup-skills": {
+  "text": "Seven bundled agent skills for a one-person AI startup, from idea validation and business plans to company registration.",
+  "basis": "86c014f21129",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:21:52.043Z"
  },
  "hujjun/mcd-saver-strategist": {
   "text": "An agent skill that uses McDonald's China MCP to fetch menus and coupons and find the cheapest order combination.",
@@ -526,6 +544,30 @@
   "basis": "4298665768af",
   "source": "manual translation",
   "generatedAt": "2026-10-25T20:58:57.867Z"
+ },
+ "wahaha-potato/mcd-coupon-xray": {
+  "text": "Claims all McDonald's coupons via MCP, checks which ones each store accepts, and calculates the price after coupons.",
+  "basis": "4506bc17d5e2",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:22:08.162Z"
+ },
+ "wusuaya/overtime-meal-buddy": {
+  "text": "A WorkBuddy skill that uses McDonald's MCP to plan group meals, compare combos, reprice changes and split the bill.",
+  "basis": "7fc6a24dcecb",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:21:48.217Z"
+ },
+ "xanthichi/mcd-meal-mate": {
+  "text": "Suggests McDonald's meal combos within budget, calorie and protein targets using live MCP menu and nutrition data.",
+  "basis": "cf1658cb5b0d",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:22:00.447Z"
+ },
+ "xiaozhangup/Oh-My-McDonald": {
+  "text": "AI skill using McDonald's official MCP to suggest meals, compare store prices, find coupons and render voxel images.",
+  "basis": "d13af2497b10",
+  "source": "claude -p",
+  "generatedAt": "2026-10-26T02:22:02.397Z"
  },
  "xkx121029/mcd-vibe-commit": {
   "text": "A Claude Code skill that runs a 3-question McDonald's personality quiz and writes a matching git commit message.",
