@@ -1,0 +1,12 @@
+{
+ "fullName": "jadezane6634-ops/dsh-purge-flash",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "常驻 1,597 token，零宿主补丁，被拒之后还有下一步。",
+ "extractor": "heuristic",
+ "readmeHash": "bc1339618f96",
+ "version": 1,
+ "generatedAt": "2026-10-26T13:38:38.735Z"
+}

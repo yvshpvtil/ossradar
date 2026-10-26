@@ -1,0 +1,12 @@
+{
+ "fullName": "t3dotgg/tstack",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The agent skills I use every day, cleaned up so anyone can use them. They work in Claude Code and Codex.",
+ "extractor": "heuristic",
+ "readmeHash": "fd7f0352877d",
+ "version": 1,
+ "generatedAt": "2026-10-26T13:38:38.671Z"
+}

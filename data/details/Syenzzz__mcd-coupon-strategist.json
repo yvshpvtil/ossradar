@@ -1,0 +1,12 @@
+{
+ "fullName": "Syenzzz/mcd-coupon-strategist",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "市面上的省钱工具都在回答「这一单怎么点最省」。 我们多回答一个问题：「你正在白扔多少钱？」",
+ "extractor": "heuristic",
+ "readmeHash": "3a40f8106cea",
+ "version": 1,
+ "generatedAt": "2026-10-26T13:38:38.684Z"
+}
