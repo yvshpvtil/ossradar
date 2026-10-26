@@ -1,0 +1,16 @@
+{
+ "fullName": "free-cracks/Adobe-Acrobat-Pro",
+ "whoItsFor": null,
+ "useCases": [
+  "One-Click Provisioning: Automated setup of the Adobe DC SDK environment.",
+  "Batch Conversion Support: Extracts tables, text, and metadata across multiple formats.",
+  "Offline Architecture: No cloud checks or telemetry. All processing remains local."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Standalone Windows deployment tool for automated PDF processing, conversion, and secure document management.",
+ "extractor": "heuristic",
+ "readmeHash": "8a90cbbb3d77",
+ "version": 1,
+ "generatedAt": "2026-10-26T10:59:56.427Z"
+}

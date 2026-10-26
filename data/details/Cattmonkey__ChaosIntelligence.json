@@ -1,0 +1,12 @@
+{
+ "fullName": "Cattmonkey/ChaosIntelligence",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Chaos 是一门以函数为基础、把智能体作为可调用值的编程语言。 计算与流程写成函数，理解与生成交给智能体；让它们在同一个程序里传递数据、协作执行、返回结果。",
+ "extractor": "heuristic",
+ "readmeHash": "58eb68cbb648",
+ "version": 1,
+ "generatedAt": "2026-10-26T10:59:56.402Z"
+}
