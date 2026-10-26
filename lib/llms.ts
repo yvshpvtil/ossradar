@@ -3,6 +3,7 @@ import { type DailyEntry, getArchiveDays, getDailyTop } from "./daily";
 import { getData, getReposByCategory, rankRepos } from "./data";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
+import { NEW_DAYS, getNewRepos } from "./newRepos";
 import { getLanguages } from "./languages";
 import { SITE } from "./site";
 import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
@@ -58,7 +59,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 ## Key pages
 
 - [Leaderboard](${SITE.url}/): all tracked repos ranked by stars gained today or this week
-- [New repos](${SITE.url}/new): repos that entered the tracked list recently
+- [New repos](${SITE.url}/new): tracked repos created on GitHub in the last ${NEW_DAYS} days, grouped by launch day
 - [Daily archive](${SITE.url}/daily): one page per UTC day with that day's top gainers
 - [Hacker News mentions](${SITE.url}/hacker-news): tracked repos discussed on Hacker News
 - [Compare repos](${SITE.url}/compare): side-by-side stars, growth, forks, releases and Hacker News discussion for up to 3 tracked repos
@@ -118,6 +119,19 @@ ${top.map((r) => line(r, true)).join("\n")}
 ## Top 10 by stars gained in the last 7 days
 
 ${week.map((r) => line(r, true)).join("\n")}
+${newSection()}`;
+}
+
+/** The fastest-rising repos created on GitHub in the last NEW_DAYS days, so "what new AI repos launched this week" has an answer. */
+function newSection(): string {
+  const fresh = rankRepos(getNewRepos().flatMap((g) => g.repos), "week").slice(0, 10);
+  if (!fresh.length) return "";
+  return `
+## Top 10 new repos (created in the last ${NEW_DAYS} days) by 7-day star gain
+
+All new repos, grouped by launch day: [New repos](${SITE.url}/new)
+
+${fresh.map((r) => `${line(r, true).slice(0, -1)}; created ${r.createdAt.slice(0, 10)})`).join("\n")}
 `;
 }
 
