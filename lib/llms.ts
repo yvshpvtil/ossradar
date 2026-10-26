@@ -7,20 +7,9 @@ import { getLanguages } from "./languages";
 import { SITE } from "./site";
 import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
-import { stripWhy } from "./why";
-import { WHY } from "./whyNotes";
+import { dropTemplateWhy } from "./whyNotes";
 
-const TEMPLATE_WHYS = new Set(Object.values(WHY));
-
-/**
- * The one-liner for llms.txt rows. The category-template "Why it matters" note (the same sentence on every repo in
- * a category, 450 times in llms-full.txt) is dropped, like in the site's list rows; a repo-specific note stays.
- */
-function llmsBlurb(r: Repo): string {
-  const text = r.oneLiner.replace(/\s+/g, " ").trim();
-  const note = text.match(/Why it matters:\s*(.*?)\.?$/i)?.[1];
-  return note && TEMPLATE_WHYS.has(note) ? stripWhy(text) : text;
-}
+const llmsBlurb = (r: Repo) => dropTemplateWhy(r.oneLiner);
 
 /** One repo row. `withCategory` names the category where the section heading doesn't (mixed top-10 lists). */
 const line = (r: Repo, withCategory = false) =>

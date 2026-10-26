@@ -1,7 +1,9 @@
+import type { Repo } from "@/lib/types";
 import { categoryLabel } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
-import { formatDelta } from "@/lib/format";
+import { formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
+import { dropTemplateWhy } from "@/lib/whyNotes";
 
 function esc(s: string): string {
   return s
@@ -11,6 +13,14 @@ function esc(s: string): string {
     .replace(/"/g, "&quot;")
     // strip characters that are invalid in XML 1.0
     .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "");
+}
+
+/** What the project does (no category-template "Why it matters" filler) plus the numbers behind its rank. */
+function feedDescription(r: Repo): string {
+  const text = dropTemplateWhy(r.oneLiner ?? "");
+  const blurb = text ? `${text.replace(/[.!?…]?$/, (m) => m || ".")} ` : "";
+  const est = r.velocityEstimated ? ", early estimate" : "";
+  return `${blurb}${formatNumber(r.stars)} stars: ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7 days${est}.`;
 }
 
 export function GET() {
@@ -27,7 +37,7 @@ export function GET() {
       <guid isPermaLink="false">${esc(`${r.fullName}@${data.snapshotDate}`)}</guid>
       <pubDate>${pubDate}</pubDate>
       <category>${esc(categoryLabel(r.category))}</category>
-      <description>${esc(r.oneLiner)}</description>
+      <description>${esc(feedDescription(r))}</description>
     </item>`;
     })
     .join("\n");
