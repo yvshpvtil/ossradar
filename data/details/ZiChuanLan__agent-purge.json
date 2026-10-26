@@ -1,0 +1,12 @@
+{
+ "fullName": "ZiChuanLan/agent-purge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g agent-purge     # 或 npx agent-purge web",
+ "source": "readme",
+ "readmeSummary": "一份系统提示词，喂给多个 coding agent。支持替换（replace）、追加（append）、清空（off）三种模式，可热切换，全程可逆。",
+ "extractor": "heuristic",
+ "readmeHash": "96797a70efae",
+ "version": 1,
+ "generatedAt": "2026-10-26T05:55:00.078Z"
+}
