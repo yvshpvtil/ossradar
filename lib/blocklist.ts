@@ -31,6 +31,21 @@ export function isAdult(input: { name: string; description: string; topics: stri
   return ADULT_RE.test(` ${input.name.replace(/[-_]/g, " ")} ${input.description} ${input.topics.join(" ")} `);
 }
 
+/**
+ * Pirated-software lures: repos posing as "cracked" commercial apps (e.g. an org called
+ * free-cracks publishing Adobe-Acrobat-Pro with no code, no description and stuffed topics) are a
+ * common malware vector, and listing them hurts trust and search quality. Owners whose name says
+ * crack/keygen/warez always drop; elsewhere only unambiguous piracy wording matches, so slang like
+ * "codex-on-crack" stays.
+ */
+const PIRACY_OWNER_RE = /crack|keygen|warez|pirat/i;
+const PIRACY_RE = /(^|[^a-z0-9])(keygens?|warez|kmspico|cracked|crack (download|free|full|for windows|for mac)|free crack|full version crack|license key generator|serial key generator)([^a-z0-9]|$)/i;
+
+export function isPiracy(input: { owner: string; name: string; description: string; topics: string[] }): boolean {
+  if (PIRACY_OWNER_RE.test(input.owner)) return true;
+  return PIRACY_RE.test(` ${input.name.replace(/[-_]/g, " ")} ${input.description} ${input.topics.join(" ").replace(/-/g, " ")} `);
+}
+
 /** Words that signal a repo is actually software / AI / dev related. */
 const DEV_SIGNALS = [
   "code", "coding", "cli", "api", "sdk", "library", "framework", "developer", "dev ", "plugin",
@@ -43,7 +58,7 @@ const DEV_SIGNALS = [
 export function isOffTopic(input: { fullName: string; owner: string; topics: string[]; description: string; name: string }): boolean {
   const full = input.fullName.toLowerCase();
   if (BLOCKED_REPOS.has(full) || BLOCKED_OWNERS.has(input.owner.toLowerCase())) return true;
-  if (isAdult(input)) return true;
+  if (isAdult(input) || isPiracy(input)) return true;
   const text = ` ${input.name.replace(/[-_]/g, " ")} ${input.description} ${input.topics.join(" ")} `.toLowerCase();
   const offTopicHit =
     input.topics.some((t) => OFF_TOPIC_TOPICS.has(t.toLowerCase())) || OFF_TOPIC_WORDS.some((w) => text.includes(w));
