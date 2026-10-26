@@ -24,7 +24,7 @@ import { hasTopicPage, repoTopics, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
 import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
-import { ago, getLatestRelease } from "@/lib/activity";
+import { ago, getLatestRelease, releaseVersion } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
 import { getLanguage, languageSlug } from "@/lib/languages";
@@ -226,7 +226,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
       interactionType: "https://schema.org/LikeAction",
       userInteractionCount: repo.stars,
     },
-    softwareVersion: release?.tag || undefined,
+    softwareVersion: releaseVersion(release?.tag, repo.name),
     license: repo.license?.spdx ? `https://spdx.org/licenses/${repo.license.spdx}.html` : undefined,
   };
   // The page itself (an OSS Radar profile of the repo, rebuilt hourly) is a separate thing from the
