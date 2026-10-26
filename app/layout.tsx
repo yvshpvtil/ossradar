@@ -47,6 +47,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" suppressHydrationWarning className="h-full antialiased">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Owner avatars (repo of the day, leaderboard rows, repo headers) load straight from GitHub's
+            avatar CDN; opening that connection early saves the DNS/TLS round trips on the first image. */}
+        <link rel="preconnect" href="https://avatars.githubusercontent.com" />
       </head>
       <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
         <NavTracker />
