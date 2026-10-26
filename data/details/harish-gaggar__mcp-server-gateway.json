@@ -1,0 +1,12 @@
+{
+ "fullName": "harish-gaggar/mcp-server-gateway",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e \".[dev]\" && pytest -v",
+ "source": "readme",
+ "readmeSummary": "A production-grade MCP Gateway, OAuth-secured MCP servers, and a governed LangGraph agent — ready to fork and run.",
+ "extractor": "heuristic",
+ "readmeHash": "192b7092fdf5",
+ "version": 1,
+ "generatedAt": "2026-10-26T15:48:01.635Z"
+}
