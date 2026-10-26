@@ -1,0 +1,12 @@
+{
+ "fullName": "salemalem/npmscan-mcp-plugin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Claude Code plugin that gives Claude read-only npm package and vulnerability lookups, backed by npmscan.com's free, unauthenticated MCP…",
+ "extractor": "heuristic",
+ "readmeHash": "85cd9aab34c8",
+ "version": 1,
+ "generatedAt": "2026-10-26T03:56:58.744Z"
+}
