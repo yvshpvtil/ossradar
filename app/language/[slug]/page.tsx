@@ -104,6 +104,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
           ))}
         </ul>
       </nav>
+      <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">{lang.name} leaderboard</h2>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} defaultPeriod="week" />
       <HubIndex repos={repos} label={lang.name} />

@@ -78,6 +78,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
         <RelatedTopics topics={related} />
       </section>
+      <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">{label} leaderboard</h2>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} defaultPeriod="week" />
       <HubIndex repos={repos} label={label} />

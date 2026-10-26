@@ -124,6 +124,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
         <RelatedTopics topics={relatedTopics(repos)} />
       </section>
       <CategoryChips repos={all} active={category.slug} />
+      <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">{category.label} leaderboard</h2>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard {...hubLeaderProps(repos, "week", Date.parse(getData().generatedAt))} showCategoryFilter={false} defaultPeriod="week" />
       <HubIndex repos={repos} label={category.label} />

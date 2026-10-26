@@ -47,6 +47,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{l.intro}</p>
         <p className="mt-1 text-xs text-zinc-500">{repos.length} repos · updated {formatDate(getData().generatedAt)}</p>
       </section>
+      <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">Leaderboard</h2>
       {repos.some((r) => r.velocityEstimated) && <EstimateNote className="mb-4" />}
       <Leaderboard {...hubLeaderProps(repos, l.slug === "github-repos-today" ? "today" : "week", Date.parse(getData().generatedAt))} defaultPeriod={l.slug === "github-repos-today" ? "today" : "week"} />
       <section className="mt-10 text-sm">
