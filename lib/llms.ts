@@ -1,5 +1,5 @@
 import { CATEGORIES, categoryLabel } from "./categories";
-import { getArchiveDays } from "./daily";
+import { type DailyEntry, getArchiveDays, getDailyTop } from "./daily";
 import { getData, getReposByCategory, rankRepos } from "./data";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
@@ -25,6 +25,32 @@ function llmsBlurb(r: Repo): string {
 /** One repo row. `withCategory` names the category where the section heading doesn't (mixed top-10 lists). */
 const line = (r: Repo, withCategory = false) =>
   `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (${withCategory ? `${categoryLabel(r.category)}; ` : ""}${formatNumber(r.stars)} stars, ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7d${r.velocityEstimated ? ", early estimate" : ""})`;
+
+const DAILY_MAX = 14;
+
+/**
+ * One line per recent archived day (newest first): the day's top 3 gainers and the list's combined gain, so a crawler or
+ * assistant asked "what was trending on GitHub on <date>" finds the dated archive page instead of only a URL pattern.
+ */
+function dailySection(days: string[]): string {
+  const name = (e: DailyEntry) => (e.repo ? `[${e.fullName}](${SITE.url}/repo/${e.repo.owner}/${e.repo.name})` : e.fullName);
+  const rows = days.slice(0, DAILY_MAX).flatMap((date) => {
+    const top = getDailyTop(date);
+    if (!top.length) return [];
+    const total = top.reduce((sum, e) => sum + e.gained, 0);
+    const lead = top.slice(0, 3).map((e, i) => `#${i + 1} ${name(e)} ${formatDelta(e.gained)}`).join(", ");
+    return [`- [${date}](${SITE.url}/daily/${date}): ${lead}; the top ${top.length} gained ${formatNumber(total)} stars combined`];
+  });
+  if (!rows.length) return "";
+  const more = days.length > DAILY_MAX ? ` (latest ${DAILY_MAX} of ${days.length}; all in the [daily archive](${SITE.url}/daily))` : "";
+  return `## Daily archive
+
+Top gainers per completed UTC day, newest first${more}:
+
+${rows.join("\n")}
+
+`;
+}
 
 function header(): string {
   const d = getData();
@@ -82,7 +108,7 @@ ${getTopics().map((t) => `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug})
 
 ${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.count} repos`).join("\n")}
 
-## Data access
+${dailySection(days)}## Data access
 
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
 - [RSS feed](${SITE.url}/rss.xml)
