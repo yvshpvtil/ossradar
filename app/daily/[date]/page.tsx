@@ -73,7 +73,8 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Top rising repos on {formatDate(date)}</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">Stars gained during this UTC day, measured from our daily snapshots.</p>
       <DayRecap date={date} s={getDaySummary(date)} />
-      <ol className="mt-6 divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+      <h2 id="leaderboard" className="mb-3 mt-6 scroll-mt-6 text-xl font-semibold tracking-tight">Top {top.length} by stars gained</h2>
+      <ol className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {top.map((e, n) => (
           <li key={e.fullName} className="relative cursor-pointer transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/60 flex items-start gap-4 p-4">
             <span className="w-6 shrink-0 text-right tabular-nums text-zinc-500">{n + 1}</span>

@@ -64,7 +64,8 @@ export default function TopicIndex() {
         least {TOPIC_MIN} tracked repos (singular and plural spellings share one page), ranking those repos by stars gained. Topics are listed by how many tracked
         repos use them, with the stars they gained together in the last 7 days and the repo leading this week.
       </p>
-      <ul className="mt-6 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
+      <h2 id="topics" className="mb-3 mt-6 scroll-mt-6 text-xl font-semibold tracking-tight">All {rs.length} topic hubs</h2>
+      <ul className="grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
         {rs.map((t) => (
           <li key={t.slug} className="min-w-0 break-words">
             <Link className="font-medium hover:underline" href={`/topic/${t.slug}`}>{t.label} repos</Link>{" "}

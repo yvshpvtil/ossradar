@@ -46,7 +46,8 @@ export default function HackerNewsPage() {
         story&apos;s points (upvotes). &quot;Show HN&quot; posts are makers presenting their own project.
       </p>
       <p className="mt-3 text-xs text-zinc-500">{items.length} repos · HN data from the public HN Algolia API · refreshed every 12 hours</p>
-      <ol className="mt-6 divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+      <h2 id="stories" className="mb-3 mt-6 scroll-mt-6 text-xl font-semibold tracking-tight">Hacker News stories, ranked by points</h2>
+      <ol className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {items.map(({ fullName, r, top }, i) => {
           const blurb = repoBlurb(r) ?? stripWhy(r.oneLiner);
           return (
