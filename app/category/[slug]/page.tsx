@@ -16,6 +16,7 @@ import { formatNumber } from "@/lib/format";
 import { breadcrumbLd, clip, collectionPageLd, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
+import { HubBreakdown } from "@/components/HubBreakdown";
 import { RelatedTopics } from "@/components/RelatedTopics";
 
 /** Search-intent phrasing per category (what people actually type). */
@@ -120,6 +121,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
             .
           </p>
         )}
+        <HubBreakdown repos={repos} by="language" />
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained this week · updated hourly</p>
         <RelatedTopics topics={relatedTopics(repos)} />
       </section>

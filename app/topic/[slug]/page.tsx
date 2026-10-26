@@ -13,6 +13,7 @@ import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, relatedTopics, topicLabel, topicVariants } from "@/lib/topics";
+import { HubBreakdown } from "@/components/HubBreakdown";
 import { RelatedTopics } from "@/components/RelatedTopics";
 
 export function generateStaticParams() {
@@ -75,6 +76,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
             .
           </p>
         )}
+        <HubBreakdown repos={repos} by="category" />
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
         <RelatedTopics topics={related} />
       </section>

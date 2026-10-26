@@ -12,6 +12,7 @@ import { formatNumber } from "@/lib/format";
 import { getLanguage, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
+import { HubBreakdown } from "@/components/HubBreakdown";
 import { RelatedTopics } from "@/components/RelatedTopics";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -82,6 +83,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
             .
           </p>
         )}
+        <HubBreakdown repos={repos} by="category" />
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">{repos.length} repos tracked · ranked by stars gained · updated hourly</p>
         <RelatedTopics topics={relatedTopics(repos, { exclude: lang.slug })} />
       </section>
