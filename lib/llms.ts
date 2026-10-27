@@ -5,6 +5,7 @@ import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
 import { NEW_DAYS, getNewRepos } from "./newRepos";
 import { getLanguages } from "./languages";
+import { getRecentHn } from "./mentions";
 import { SITE } from "./site";
 import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
@@ -119,7 +120,33 @@ ${top.map((r) => line(r, true)).join("\n")}
 ## Top 10 by stars gained in the last 7 days
 
 ${week.map((r) => line(r, true)).join("\n")}
-${newSection()}`;
+${newSection()}${hnSection()}`;
+}
+
+const HN_DAYS = 30;
+
+/** Tracked repos with the most-upvoted Hacker News stories in the last HN_DAYS days, matching /hacker-news, so "which GitHub repos are on Hacker News" has an answer. */
+function hnSection(): string {
+  const byName = new Map(getData().repos.map((r) => [r.fullName, r]));
+  const rows = getRecentHn(HN_DAYS, Date.parse(getData().generatedAt))
+    .flatMap(({ fullName, m }) => {
+      const r = byName.get(fullName);
+      return r && m.top ? [{ r, top: m.top }] : [];
+    })
+    .slice(0, 10);
+  if (!rows.length) return "";
+  return `
+## Top 10 tracked repos on Hacker News (last ${HN_DAYS} days) by story points
+
+All Hacker News mentions: [Hacker News](${SITE.url}/hacker-news)
+
+${rows
+  .map(
+    ({ r, top }) =>
+      `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (HN story "${top.title.replace(/"/g, "'")}" on ${top.date.slice(0, 10)}: ${formatNumber(top.points)} points, ${formatNumber(top.comments)} comments, https://news.ycombinator.com/item?id=${top.id}; ${formatNumber(r.stars)} stars, ${formatDelta(r.delta7d)} in 7d)`,
+  )
+  .join("\n")}
+`;
 }
 
 /** The fastest-rising repos created on GitHub in the last NEW_DAYS days, so "what new AI repos launched this week" has an answer. */
