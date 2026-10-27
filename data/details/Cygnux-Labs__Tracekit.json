@@ -1,0 +1,12 @@
+{
+ "fullName": "Cygnux-Labs/Tracekit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install tracekit-ai",
+ "source": "readme",
+ "readmeSummary": "Tracekit checks every tool call your agent makes before it runs, signs each call and decision into a hash chain, and gives you one .tkb file…",
+ "extractor": "heuristic",
+ "readmeHash": "2e5b573c917a",
+ "version": 1,
+ "generatedAt": "2026-10-27T07:07:45.409Z"
+}

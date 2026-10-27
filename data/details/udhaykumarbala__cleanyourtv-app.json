@@ -1,0 +1,12 @@
+{
+ "fullName": "udhaykumarbala/cleanyourtv-app",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "You need an Android phone (Android 9 or newer, with a screen lock) on the same Wi-Fi as the TV. Download the APK and open it to install.",
+ "extractor": "heuristic",
+ "readmeHash": "1c456e020a6f",
+ "version": 1,
+ "generatedAt": "2026-10-27T07:07:45.398Z"
+}

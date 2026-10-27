@@ -1,0 +1,14 @@
+{
+ "fullName": "Sidiora-Labs/hyperfide",
+ "whoItsFor": null,
+ "useCases": [
+  "Add gauge (497c30a)"
+ ],
+ "installCommand": "npx @vscode/vsce package        # produces codify-workflow-2.0.0-dev.vsix",
+ "source": "readme",
+ "readmeSummary": "The agent workflow tool that scales from small, simple projects to large, complex codebases.",
+ "extractor": "heuristic",
+ "readmeHash": "09b1e070eec9",
+ "version": 1,
+ "generatedAt": "2026-10-27T07:07:45.436Z"
+}
