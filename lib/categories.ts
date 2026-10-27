@@ -82,8 +82,8 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   },
   {
     slug: "ai-agents",
-    topics: ["ai-agents", "ai-agent", "agents", "agent", "multi-agent", "autonomous-agents", "agentic", "agentic-ai", "agent-framework", "browser-use", "computer-use"],
-    keywords: ["ai agent", "agents", "agentic", "autonomous", "multi-agent", "web agent", "智能体"],
+    topics: ["ai-agents", "ai-agent", "agents", "agent", "multi-agent", "autonomous-agents", "agentic", "agentic-ai", "agent-framework", "browser-use", "computer-use", "agent-memory"],
+    keywords: ["ai agent", "agents", "agentic", "autonomous", "multi-agent", "web agent", "agent memory", "long-term memory", "智能体"],
   },
   {
     slug: "llm-tooling",
@@ -118,7 +118,7 @@ export function categorize(input: { topics: string[]; description: string; name:
   const topics = new Set(
     input.topics.map((t) => t.toLowerCase()).filter((t) => !(ignoreBuiltWith && BUILT_WITH_TOPICS.has(t))),
   );
-  const text = ` ${name} ${input.description} `.toLowerCase();
+  const text = ` ${name} ${stripAudience(input.description)} `.toLowerCase();
   let best: CategorySlug = "other";
   let bestScore = 0;
   for (const rule of RULES) {
@@ -145,6 +145,20 @@ export function categorize(input: { topics: string[]; description: string; name:
   }
   if (extraBest !== "other") return extraBest;
   return fallbackCategory(input.name, `${input.description} ${extra}`, topics);
+}
+
+/**
+ * "Up-to-date docs for AI agents" names who the repo serves, not what it is, yet "ai agent" and
+ * "agents" scored 6 and outranked context7's own mcp + mcp-server topics. Audience phrases ("for /
+ * to / into AI agents", "for LLMs and coding agents") are dropped before keyword scoring, so the
+ * topics and the rest of the description decide. Repos that only describe their audience still
+ * reach the fallback pass, which reads the full description.
+ */
+const AUDIENCE =
+  /\b(?:for|to|into)\s+(?:your\s+|any\s+|all\s+)?(?:(?:ai|llm|coding|autonomous)\s+)?(?:agents|llms|assistants)(?:\s*(?:,|and|&|\/|or)\s*(?:(?:ai|llm|coding)\s+)?(?:agents|llms|assistants|ides?|code editors?|humans|developers))*\b/gi;
+
+function stripAudience(description: string): string {
+  return description.replace(AUDIENCE, " ");
 }
 
 /** "WeChatAgent" -> "We Chat Agent", "AISafetyHot" -> "AI Safety Hot", "Hy-Memory" -> "Hy Memory". */
