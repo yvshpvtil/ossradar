@@ -485,6 +485,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.736Z"
  },
+ "rddmwmddr/android-ad-cleaner": {
+  "text": "Turns off system ads, trending searches, news feeds and marketing pushes on Chinese Android phones, without root.",
+  "basis": "eed517ccd866",
+  "source": "claude -p",
+  "generatedAt": "2026-10-27T02:19:55.760Z"
+ },
  "ruc-datalab/EvoOntology": {
   "text": "MCP plugin for Claude Code and Codex that builds an ontology layer from your data and evolves it from agent interactions.",
   "basis": "6149dde331dc",
@@ -520,6 +526,12 @@
   "basis": "40963c4cea08",
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:54.787Z"
+ },
+ "stockedge/manga-generator": {
+  "text": "A manga-making tool for Codex that turns novels or other text into scripts, generated images, lettered pages and a PDF.",
+  "basis": "3e8a72ee58df",
+  "source": "claude -p",
+  "generatedAt": "2026-10-27T02:19:54.593Z"
  },
  "suikv000/mai-you-pu": {
   "text": "An AI assistant skill and web demo, built on McDonald's MCP, that suggests new ways to combine McDonald's menu items.",
