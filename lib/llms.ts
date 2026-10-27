@@ -43,6 +43,19 @@ ${rows.join("\n")}
 `;
 }
 
+/** Category hub rows with the same numbers /category shows: repo count, combined 7-day gain and this week's leading repo. */
+function categoryLines(): string {
+  return CATEGORIES.map((c) => {
+    const repos = getReposByCategory(c.slug);
+    const base = `- [${c.label}](${SITE.url}/category/${c.slug}): ${c.description}`;
+    if (!repos.length) return base;
+    const week = repos.reduce((n, r) => n + r.delta7d, 0);
+    const lead = rankRepos(repos, "week")[0];
+    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
+    return `${base} (${repos.length} repos, ${formatDelta(week)} stars combined in 7d${leadText})`;
+  }).join("\n");
+}
+
 function header(): string {
   const d = getData();
   const top = rankRepos(d.repos, "today")[0];
@@ -87,7 +100,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 
 ## Categories
 
-${CATEGORIES.map((c) => `- [${c.label}](${SITE.url}/category/${c.slug}): ${c.description}`).join("\n")}
+${categoryLines()}
 
 ## Topic hubs
 
