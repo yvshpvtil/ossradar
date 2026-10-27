@@ -1,0 +1,16 @@
+{
+ "fullName": "0xProbabillity/house-control",
+ "whoItsFor": null,
+ "useCases": [
+  "Lives in the menu bar. Click the house icon and a panel drops down; click anywhere else and it is gone.",
+  "Your floor plan in 3D. Rooms, walls, doors, windows and furniture are built from one JSON file. Lamps light the scene the way they light the",
+  "Lights. Tap to toggle, drag across a tile to dim, open a light for brightness, white temperature and colour."
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Both apps are a small native Swift shell (AppKit on the Mac, SwiftUI on the iPhone) around one Three.js web UI, and share their device…",
+ "extractor": "heuristic",
+ "readmeHash": "96d15a6ba132",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:51.840Z"
+}

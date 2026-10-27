@@ -1,0 +1,12 @@
+{
+ "fullName": "MiaAI-Lab/GLM-5.3-Flash-EXL3-2x-DGX-Sparks-TensorFold",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Serve GLM-5.3-Flash from two NVIDIA DGX Sparks (GB10, 128 GB each, linked by their ConnectX-7 ports) through an OpenAI-compatible API, with…",
+ "extractor": "heuristic",
+ "readmeHash": "bc5a1b171e99",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.856Z"
+}

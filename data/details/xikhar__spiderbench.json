@@ -1,0 +1,12 @@
+{
+ "fullName": "xikhar/spiderbench",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "A non-commercial fan project and benchmark. It shows the kind of code and assets that Claude (Anthropic's AI model, working through Claude…",
+ "extractor": "heuristic",
+ "readmeHash": "30588b3924ac",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.778Z"
+}

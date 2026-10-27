@@ -1,0 +1,12 @@
+{
+ "fullName": "cskwork/scopeweaver",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An LLM multi-agent autonomous penetration-testing system (Go backend + Next.js frontend)",
+ "extractor": "heuristic",
+ "readmeHash": "710e9631f307",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.124Z"
+}

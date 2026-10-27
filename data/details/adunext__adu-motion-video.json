@@ -1,0 +1,12 @@
+{
+ "fullName": "adunext/adu-motion-video",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "阿杜实验室出品，精选由阿杜与 Opus 5.5 制作的动画动效模板。选喜欢的风格，用 Codex / Claude Code 等助手，把自己的口播、文案与素材制作成视频，适合口播、知识讲解与方法分享。更多类型的模板和助手适配持续进行中。",
+ "extractor": "heuristic",
+ "readmeHash": "f3835082bec3",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.655Z"
+}

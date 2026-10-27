@@ -1,0 +1,12 @@
+{
+ "fullName": "MisakaZentai/world-execute-me-dsh-pv",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "一支用代码逐帧渲染的 TUI 风格 PV，非官方同人作品： - 左边是 DeepSeek Harness（dsh）的聊天窗口，她和\"你\"的对话； - 右边是运行着她的那个世界，也就是模型的可视化。",
+ "extractor": "heuristic",
+ "readmeHash": "0cdc1e1de6c1",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.396Z"
+}

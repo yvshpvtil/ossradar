@@ -1,0 +1,12 @@
+{
+ "fullName": "Zero-Mem/Zero-mem",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Zero-Mem is a structured memory framework for LLM agents. It retains original interaction traces and organizes them through an…",
+ "extractor": "heuristic",
+ "readmeHash": "4a5432a8c456",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:51.800Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "xming521/WeClone",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install --group main -e .",
+ "source": "readme",
+ "readmeSummary": "The project uses Qwen2.5-VL-7B-Instruct model by default with LoRA method for SFT stage fine-tuning.",
+ "extractor": "heuristic",
+ "readmeHash": "cb8b5769cc65",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.686Z"
+}

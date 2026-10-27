@@ -1,0 +1,12 @@
+{
+ "fullName": "GrEarl/microgpt-lesson",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "> This is learning material that builds up LLM/GPT from basic math and programming, one piece at a time. It runs on Google Colab.",
+ "extractor": "heuristic",
+ "readmeHash": "79a73bba54dc",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.935Z"
+}

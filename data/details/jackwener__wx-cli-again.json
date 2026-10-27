@@ -1,0 +1,12 @@
+{
+ "fullName": "jackwener/wx-cli-again",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add botiverse/wx-cli",
+ "source": "readme",
+ "readmeSummary": "从命令行查询本地微信数据",
+ "extractor": "heuristic",
+ "readmeHash": "272b89b1d067",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.530Z"
+}

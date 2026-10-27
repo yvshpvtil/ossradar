@@ -1,0 +1,16 @@
+{
+ "fullName": "coldteadotai/abide",
+ "whoItsFor": null,
+ "useCases": [
+  "One call per edit, about 300 ms, a few thousandths of a cent.",
+  "Rules a linter could check are handed to your linter instead.",
+  "No built-in rules. No instruction files, nothing to enforce."
+ ],
+ "installCommand": "npx @coldtea/abide login    # pick a key type, paste it once",
+ "source": "readme",
+ "readmeSummary": "Then start claude, codex, opencode or pi as usual. That is the whole setup.",
+ "extractor": "heuristic",
+ "readmeHash": "ec72138e0261",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.973Z"
+}

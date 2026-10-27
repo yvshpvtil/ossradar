@@ -1,0 +1,12 @@
+{
+ "fullName": "genex-games/genex-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Genex is early: expect rough edges, and tell us about them in issues.",
+ "extractor": "heuristic",
+ "readmeHash": "5ceadf60fc06",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.104Z"
+}

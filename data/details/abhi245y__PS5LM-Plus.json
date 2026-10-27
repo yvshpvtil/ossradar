@@ -1,0 +1,12 @@
+{
+ "fullName": "abhi245y/PS5LM-Plus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "llama.cpp on a jailbroken PlayStation 5, on its GPU. A native app that runs GGUF language models on the console itself, with a dashboard on…",
+ "extractor": "heuristic",
+ "readmeHash": "2d42e8a4b423",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.389Z"
+}

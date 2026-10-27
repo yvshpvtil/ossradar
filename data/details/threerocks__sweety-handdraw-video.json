@@ -1,0 +1,12 @@
+{
+ "fullName": "threerocks/sweety-handdraw-video",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add threerocks/sweety-handdraw-video --skill sweety-handdraw-video --agent claude-code codex --global --copy --yes",
+ "source": "readme",
+ "readmeSummary": "给一个主题、一篇文章或完整故事，做成边画边讲的有声视频。",
+ "extractor": "heuristic",
+ "readmeHash": "542e398d8cee",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:51.811Z"
+}

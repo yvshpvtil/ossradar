@@ -1,0 +1,12 @@
+{
+ "fullName": "whaleyxbt/claude-motion",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install && npx playwright install chromium",
+ "source": "readme",
+ "readmeSummary": "A motion design toolkit for coding agents. Remotion skills teach your agent the API.",
+ "extractor": "heuristic",
+ "readmeHash": "5c8ecbb95fc3",
+ "version": 1,
+ "generatedAt": "2026-10-27T13:11:52.413Z"
+}
