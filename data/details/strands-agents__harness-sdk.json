@@ -1,0 +1,12 @@
+{
+ "fullName": "strands-agents/harness-sdk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install strands-harness",
+ "source": "readme",
+ "readmeSummary": "Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript.",
+ "extractor": "heuristic",
+ "readmeHash": "b8b2792dd4ba",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:12.299Z"
+}

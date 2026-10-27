@@ -1,0 +1,16 @@
+{
+ "fullName": "CursorTouch/Windows-MCP",
+ "whoItsFor": null,
+ "useCases": [
+  "Seamless Windows Integration Interacts natively with Windows UI elements, opens apps, controls windows, simulates user input, and more.",
+  "Use Any LLM (Vision Optional) Unlike many automation tools, Windows-MCP doesn't rely on any traditional computer vision techniques or specif",
+  "Rich Toolset for UI Automation Includes tools for basic keyboard, mouse operation and capturing window/UI state."
+ ],
+ "installCommand": "npm install -g @anthropic-ai/mcpb",
+ "source": "readme",
+ "readmeSummary": "Windows-MCP is a lightweight, open-source project that enables seamless integration between AI agents and the Windows operating system.",
+ "extractor": "heuristic",
+ "readmeHash": "e9a39c005e47",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:11.920Z"
+}

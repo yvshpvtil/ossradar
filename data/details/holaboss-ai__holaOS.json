@@ -1,0 +1,12 @@
+{
+ "fullName": "holaboss-ai/holaOS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/holaboss-ai/holaOS/refs/heads/main/scripts/install.sh | bash -s -- --launch",
+ "source": "readme",
+ "readmeSummary": "Most agent products hand you a finished product and hope it fits your work. HolaOS hands you the parts.",
+ "extractor": "heuristic",
+ "readmeHash": "f5dc64f1df8e",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:10.704Z"
+}

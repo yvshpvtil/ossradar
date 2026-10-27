@@ -1,0 +1,12 @@
+{
+ "fullName": "netease-youdao/LobsterAI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "The open-source desktop AI agent that does real work on your computer.",
+ "extractor": "heuristic",
+ "readmeHash": "9ecf4f085142",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:11.188Z"
+}

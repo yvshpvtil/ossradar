@@ -1,0 +1,16 @@
+{
+ "fullName": "asciimoo/hister",
+ "whoItsFor": null,
+ "useCases": [
+  "Privacy focused: No telemetry or mandatory cloud service. Run Hister locally or on infrastructure you control.",
+  "Full text indexing: Search the actual contents of visited pages and local files, not only titles and URLs.",
+  "Automatic browser indexing: Save newly visited pages with the Firefox or Chrome extension."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Hister is a private search engine for the pages you visit and the files you keep.",
+ "extractor": "heuristic",
+ "readmeHash": "569211e4c3ff",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:11.503Z"
+}

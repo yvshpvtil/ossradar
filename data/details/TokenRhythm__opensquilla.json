@@ -1,0 +1,12 @@
+{
+ "fullName": "TokenRhythm/opensquilla",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "OpenSquilla is a token-efficient, microkernel AI agent. A local model router sends each turn to the cheapest model that can handle it, while…",
+ "extractor": "heuristic",
+ "readmeHash": "bc6b374defb5",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:10.749Z"
+}

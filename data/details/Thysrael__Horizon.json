@@ -1,0 +1,16 @@
+{
+ "fullName": "Thysrael/Horizon",
+ "whoItsFor": null,
+ "useCases": [
+  "Bring Your Sources Together — Follow RSS, Hacker News, Reddit, Telegram, X, GitHub, financial news, and more.",
+  "Decide What's Worth Reading — Define scoring rubrics with profiles, set individual thresholds, and merge repeated stories within each profil",
+  "Give Every Read the Right Treatment — Choose summaries, context, solutions, or takeaways with Markdown prompts and JSON block definitions."
+ ],
+ "installCommand": "npx skills add Thysrael/Horizon --skill horizon -g",
+ "source": "readme",
+ "readmeSummary": "Your own AI-powered news radar. Generates daily briefings in English & Chinese.",
+ "extractor": "heuristic",
+ "readmeHash": "2bc3913bd2f0",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:10.682Z"
+}

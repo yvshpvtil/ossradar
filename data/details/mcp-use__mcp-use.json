@@ -1,0 +1,12 @@
+{
+ "fullName": "mcp-use/mcp-use",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y create-mcp-use-app@latest",
+ "source": "readme",
+ "readmeSummary": "Run npm run dev in the generated project · open http://localhost:3000/mcp/inspector",
+ "extractor": "heuristic",
+ "readmeHash": "229616bfd610",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:11.848Z"
+}

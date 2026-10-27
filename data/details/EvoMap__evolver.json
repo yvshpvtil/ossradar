@@ -1,0 +1,16 @@
+{
+ "fullName": "EvoMap/evolver",
+ "whoItsFor": null,
+ "useCases": [
+  "Auto-Log Analysis: scans memory and history files for errors and patterns.",
+  "Self-Repair Guidance: emits repair-focused directives from signals.",
+  "GEP Protocol: standardized evolution with reusable assets."
+ ],
+ "installCommand": "npm install -g @evomap/evolver",
+ "source": "readme",
+ "readmeSummary": "evomap.ai | Documentation | Chinese / 中文文档 | Japanese / 日本語ドキュメント | Korean / 한국어 문서 | GitHub | Releases",
+ "extractor": "heuristic",
+ "readmeHash": "4da9dc935136",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:10.692Z"
+}

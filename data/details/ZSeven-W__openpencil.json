@@ -1,0 +1,16 @@
+{
+ "fullName": "ZSeven-W/openpencil",
+ "whoItsFor": null,
+ "useCases": [
+  "Infinite canvas with pan, zoom, smart alignment guides, and snapping",
+  "Rectangle, Ellipse, Line, Polygon, Pen (Bezier), Frame, Text",
+  "Boolean operations — union, subtract, intersect with contextual toolbar"
+ ],
+ "installCommand": "brew install --cask openpencil",
+ "source": "readme",
+ "readmeSummary": "Describe any UI in natural language. Watch it appear on the infinite canvas in real-time with streaming animation.",
+ "extractor": "heuristic",
+ "readmeHash": "80c471ce42a1",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:11.054Z"
+}

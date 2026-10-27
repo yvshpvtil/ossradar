@@ -1,0 +1,12 @@
+{
+ "fullName": "nolabs-ai/nono",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://nono.sh/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "nono is a complete agent runtime security tool. Secure your agents, their tools, their credentials, and the skills and instructions they…",
+ "extractor": "heuristic",
+ "readmeHash": "88740814b9d0",
+ "version": 1,
+ "generatedAt": "2026-10-27T15:08:12.245Z"
+}
