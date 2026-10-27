@@ -1,0 +1,12 @@
+{
+ "fullName": "daveebbelaar/bama",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills@latest add daveebbelaar/bama",
+ "source": "readme",
+ "readmeSummary": "Agent skills that take a native macOS app from idea to your Dock. Swift and SwiftUI. Local data. No Xcode GUI.",
+ "extractor": "heuristic",
+ "readmeHash": "155290c8ba37",
+ "version": 1,
+ "generatedAt": "2026-10-27T22:53:25.879Z"
+}
