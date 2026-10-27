@@ -15,6 +15,8 @@ export const TOPIC_ALIASES: Record<string, string> = {
   // Model Context Protocol is MCP spelled out; 16 of its 17 tracked repos also carry the mcp topic.
   "model-context-protocol": "mcp",
   modelcontextprotocol: "mcp",
+  // Codex CLI is the Codex coding agent; every tracked codex-cli repo is about that tool, and 8 of 10 already carry codex.
+  "codex-cli": "codex",
 };
 
 export const canonicalTopic = (slug: string): string => TOPIC_ALIASES[slug] ?? slug;
