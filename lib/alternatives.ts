@@ -11,16 +11,37 @@ export interface Alternative {
   sameLanguage: boolean;
 }
 
+/** A topic on more than this share of tracked repos (llm, mcp, ai-agents, claude-code...) says little about what a repo does. */
+const BROAD_TOPIC_SHARE = 0.1;
+
+let specificCache: ((t: string) => boolean) | null = null;
 /**
- * Alternatives = other tracked repos in the same category that share at least two GitHub topics.
- * Purely data-derived; no editorial claims.
+ * True for topics that narrow down what a repo is: on at most 10% of tracked repos and not just a
+ * programming-language tag (python, typescript), which the page already shows separately.
+ */
+function isSpecificTopic(t: string): boolean {
+  if (!specificCache) {
+    const repos = getRepos();
+    const freq = new Map<string, number>();
+    for (const r of repos) for (const x of new Set(r.topics)) freq.set(x, (freq.get(x) ?? 0) + 1);
+    const langs = new Set(repos.map((r) => (r.language ?? "").toLowerCase().replace(/\s+/g, "-")).filter(Boolean));
+    const max = repos.length * BROAD_TOPIC_SHARE;
+    specificCache = (x) => (freq.get(x) ?? 0) <= max && !langs.has(x);
+  }
+  return specificCache(t);
+}
+
+/**
+ * Alternatives = other tracked repos in the same category that share at least two GitHub topics,
+ * at least one of them specific. Two broad tags alone ("llm" + "mcp") matched a docs MCP server
+ * with a trading bot and a pentest agent. Purely data-derived; no editorial claims.
  */
 export function getAlternatives(repo: Repo, limit = 12): Alternative[] {
   const topics = new Set(repo.topics);
   return getRepos()
     .filter((r) => r.fullName !== repo.fullName && r.category === repo.category)
     .map((r) => ({ repo: r, sharedTopics: r.topics.filter((t) => topics.has(t)), sameLanguage: !!r.language && r.language === repo.language }))
-    .filter((a) => a.sharedTopics.length >= 2)
+    .filter((a) => a.sharedTopics.length >= 2 && a.sharedTopics.some(isSpecificTopic))
     .sort((a, b) => b.sharedTopics.length - a.sharedTopics.length || b.repo.delta7d - a.repo.delta7d)
     .slice(0, limit);
 }
