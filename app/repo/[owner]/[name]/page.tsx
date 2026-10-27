@@ -105,7 +105,7 @@ function withFacts(base: string, repo: Repo): string {
   const made = `${what} created ${ageText(repo.createdAt)} ago`;
   const rel = release?.tag && release.tag.length <= 20 ? ` Latest release ${release.tag}.` : "";
   const forks = ` with ${formatNumber(repo.forks)} forks`;
-  const cut = base.lastIndexOf(` ${categoryLabel(repo.category)} repo tracked by`);
+  const cut = base.lastIndexOf(` ${trackedLabel(repo)} repo tracked by`);
   if (cut < 0) return base;
   // Shorter fallbacks (no language phrase) so long language names like "Jupyter Notebook" still leave room for a fact.
   const age = `Created ${ageText(repo.createdAt)} ago`;
@@ -117,10 +117,15 @@ function withFacts(base: string, repo: Repo): string {
   return base;
 }
 
+/** "MCP repo tracked by OSS Radar"; uncategorized repos read "Open-source repo" rather than the awkward "Other repo". */
+function trackedLabel(repo: Repo): string {
+  return repo.category === "other" ? "Open-source" : categoryLabel(repo.category);
+}
+
 /** Meta description for a repo page; shared by the page metadata and its WebPage JSON-LD so they can't drift. */
 function repoMetaDescription(repo: Repo): string {
   // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
-  const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${categoryLabel(repo.category)} repo tracked by ${SITE.name}.`;
+  const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${trackedLabel(repo)} repo tracked by ${SITE.name}.`;
   const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
   const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
   return withFacts(base, repo);
