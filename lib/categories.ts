@@ -128,5 +128,24 @@ export function categorize(input: { topics: string[]; description: string; name:
       bestScore = score;
     }
   }
-  return best;
+  return best === "other" ? fallbackCategory(input.name, input.description, topics) : best;
+}
+
+/**
+ * Second pass for repos the main rules leave in Other. The main keywords miss singular "agent",
+ * agent harnesses, agent skills (often written "skill：" next to CJK text), "MCP" glued to CJK
+ * text or punctuation, and DeepSeek Harness (DSH) plugins, so clearly-AI repos like
+ * "Agent harness for learning difficult things." landed in Other next to TV launchers. This only
+ * runs when nothing else matched, so established categories (and their hub pages) don't churn.
+ */
+const FALLBACK: { slug: CategorySlug; test: RegExp }[] = [
+  // Word-bounded MCP, but "no MCP" / "without MCP" says what the repo is not.
+  { slug: "mcp", test: /(^|[^a-z])(?<!\b(?:no|without|instead of) )mcp([^a-z]|$)/ },
+  { slug: "llm-tooling", test: /deepseek|\bdsh\b|context window|\btokens?\b|\bminimax\b|\bhunyuan\b/ },
+  { slug: "ai-agents", test: /\bagents?\b|agent[- ]native|harness|\bskills?\b|copilotkit|ag-ui/ },
+];
+
+function fallbackCategory(name: string, description: string, topics: Set<string>): CategorySlug {
+  const text = ` ${name} ${description} ${[...topics].join(" ")} `.toLowerCase();
+  return FALLBACK.find((f) => f.test.test(text))?.slug ?? "other";
 }
