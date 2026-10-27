@@ -1,0 +1,12 @@
+{
+ "fullName": "Charonyuu/whatsmyagentdoing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Claude Code / Codex skill: type /myoffice and see what every Claude Code, Codex, Gemini CLI and OMP (oh-my-pi) agent on your machine is…",
+ "extractor": "heuristic",
+ "readmeHash": "71ed781eb315",
+ "version": 1,
+ "generatedAt": "2026-10-27T17:03:16.841Z"
+}
