@@ -1,0 +1,16 @@
+{
+ "fullName": "aicodeking/pandacode",
+ "whoItsFor": null,
+ "useCases": [
+  "Every harness in one place. Pick the harness, model and reasoning effort per task; switch between them from the composer. See providers.",
+  "Tasks and a task board. Parallel tasks across projects, a Pending → In progress → Review → Completed board, message queueing and steering wh",
+  "Agent teams. An architect and up to three workers, mixing harnesses and models, or named team profiles. Each spawned worker is one line in t"
+ ],
+ "installCommand": "npx tsc --noEmit           # typecheck",
+ "source": "readme",
+ "readmeSummary": "A small, native desktop workspace for coding agents. PandaCode runs the coding CLIs you already use — Claude Code, Codex, Kimi Code…",
+ "extractor": "heuristic",
+ "readmeHash": "7c7933054f4d",
+ "version": 1,
+ "generatedAt": "2026-10-27T01:09:33.355Z"
+}

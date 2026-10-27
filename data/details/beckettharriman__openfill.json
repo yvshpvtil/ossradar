@@ -1,0 +1,12 @@
+{
+ "fullName": "beckettharriman/openfill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Generative fill, expand and object removal for PhotoCraft and GIMP 3, running on your graphics card.",
+ "extractor": "heuristic",
+ "readmeHash": "45126e24006e",
+ "version": 1,
+ "generatedAt": "2026-10-27T01:09:33.315Z"
+}

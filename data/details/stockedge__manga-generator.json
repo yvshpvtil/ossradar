@@ -1,0 +1,12 @@
+{
+ "fullName": "stockedge/manga-generator",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "小説や文章の原作から、脚本・ネーム・画像生成・文字入れ・検品・PDF出力までをCodexと進める漫画制作ツールです。",
+ "extractor": "heuristic",
+ "readmeHash": "c4b80a2acb50",
+ "version": 1,
+ "generatedAt": "2026-10-27T01:09:33.603Z"
+}
