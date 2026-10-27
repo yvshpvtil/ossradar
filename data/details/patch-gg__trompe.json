@@ -1,0 +1,12 @@
+{
+ "fullName": "patch-gg/trompe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "@patchgg · village blockout + FLUX 3 Klein + Fibo 2 · 128 views on fal, $4.44, 26 minutes, one view at a time.",
+ "extractor": "heuristic",
+ "readmeHash": "c9ba9d8f537d",
+ "version": 1,
+ "generatedAt": "2026-10-27T03:54:59.480Z"
+}
