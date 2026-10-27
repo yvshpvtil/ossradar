@@ -1,0 +1,12 @@
+{
+ "fullName": "shareAI-lab/learn-claude-code",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "English | 中文 | 日本語",
+ "extractor": "heuristic",
+ "readmeHash": "4c3cce1762c9",
+ "version": 1,
+ "generatedAt": "2026-10-27T04:53:40.617Z"
+}

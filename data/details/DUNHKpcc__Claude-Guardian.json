@@ -1,0 +1,12 @@
+{
+ "fullName": "DUNHKpcc/Claude-Guardian",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Agent带着真实经验，陪你把 Claude 的使用环境准备好、查清楚、用着不烧心。不要碰代过kyc(定制除外) 成品号 代充 成品邮箱 !!!",
+ "extractor": "heuristic",
+ "readmeHash": "aa16e37cf451",
+ "version": 1,
+ "generatedAt": "2026-10-27T04:53:40.614Z"
+}
