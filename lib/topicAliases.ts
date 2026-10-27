@@ -19,6 +19,22 @@ export const TOPIC_ALIASES: Record<string, string> = {
   "codex-cli": "codex",
 };
 
+/**
+ * GitHub topics that just name a programming language. Their topic hubs (/topic/python, "Trending Python GitHub repos")
+ * competed with the language hubs (/language/python, "Trending Python repos on GitHub") for the same searches, with a
+ * smaller, looser list (repos tagged python, not repos written mainly in Python). They get no topic hub: next.config.ts
+ * 308-redirects /topic/<tag> to /language/<slug>, and repo topic chips link the language hub.
+ * Only languages with a long-standing hub (10+ tracked repos) are listed, so a redirect never lands on a 404.
+ */
+export const LANGUAGE_TOPICS: Record<string, string> = {
+  python: "python",
+  typescript: "typescript",
+  javascript: "javascript",
+  rust: "rust",
+  golang: "go",
+  go: "go",
+};
+
 export const canonicalTopic = (slug: string): string => TOPIC_ALIASES[slug] ?? slug;
 
 /** Slugs that fold into `slug` (the canonical slug itself first), e.g. ai-agents -> ["ai-agents", "ai-agent"]. */

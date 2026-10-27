@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { TOPIC_ALIASES } from "./lib/topicAliases";
+import { LANGUAGE_TOPICS, TOPIC_ALIASES } from "./lib/topicAliases";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
       // Feed readers and crawlers probe common feed paths; the one feed lives at /rss.xml.
       ...["/feed", "/feed.xml", "/rss"].map((source) => ({ source, destination: "/rss.xml", permanent: true })),
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
+      // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
+      ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
     ];
   },
   partialPrefetching: true,

@@ -10,7 +10,7 @@ import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
 import { abs, alternativesPageTitle, breadcrumbLd, clip, collectionPageLd, repoPath, ogDefaults, pageAlternates } from "@/lib/seo";
 import { getData } from "@/lib/data";
-import { canonicalTopic, getTopics, repoTopics, topicLabel } from "@/lib/topics";
+import { canonicalTopic, getTopics, repoTopics, topicHref, topicLabel } from "@/lib/topics";
 import type { Repo } from "@/lib/types";
 import { SITE } from "@/lib/site";
 
@@ -73,7 +73,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
     return slugs.map((t, i) => (
       <span key={t}>
         {i > 0 && ", "}
-        {hubs.has(t) ? <Link className="underline" href={`/topic/${t}`}>{topicLabel(t)}</Link> : topicLabel(t)}
+        {topicHref(t) ? <Link className="underline" href={topicHref(t)!}>{topicLabel(t)}</Link> : topicLabel(t)}
       </span>
     ));
   };

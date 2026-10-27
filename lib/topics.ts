@@ -1,19 +1,26 @@
 import { getRepos } from "./data";
 import type { Repo } from "./types";
-import { canonicalTopic } from "./topicAliases";
+import { getLanguage } from "./languages";
+import { canonicalTopic, LANGUAGE_TOPICS } from "./topicAliases";
 
 export { canonicalTopic, topicVariants } from "./topicAliases";
 
 export const TOPIC_MIN = 10;
 
-/** GitHub topics used by at least TOPIC_MIN tracked repos, most used first. Only these get a hub page. */
+/** GitHub topics used by at least TOPIC_MIN tracked repos, most used first. Only these get a hub page. Language-name topics are left to the language hubs. */
 export function getTopics(): { slug: string; count: number }[] {
   const counts = new Map<string, number>();
   for (const r of getRepos()) for (const t of repoTopics(r)) counts.set(t, (counts.get(t) ?? 0) + 1);
-  return [...counts.entries()].filter(([, n]) => n >= TOPIC_MIN).sort((a, b) => b[1] - a[1]).map(([slug, count]) => ({ slug, count }));
+  return [...counts.entries()].filter(([t, n]) => n >= TOPIC_MIN && !(t in LANGUAGE_TOPICS)).sort((a, b) => b[1] - a[1]).map(([slug, count]) => ({ slug, count }));
 }
 
 export const hasTopicPage = (slug: string) => getTopics().some((t) => t.slug === slug);
+/** Where a topic chip should link: its topic hub, the language hub for a language-name topic, or nowhere. */
+export function topicHref(slug: string): string | null {
+  if (hasTopicPage(slug)) return `/topic/${slug}`;
+  const lang = LANGUAGE_TOPICS[slug];
+  return lang && getLanguage(lang) ? `/language/${lang}` : null;
+}
 /** A repo's topics with singular/plural twins folded into their canonical slug, deduped, original order. */
 export const repoTopics = (r: Pick<Repo, "topics">): string[] => [...new Set(r.topics.map(canonicalTopic))];
 export const getReposByTopic = (slug: string): Repo[] => getRepos().filter((r) => repoTopics(r).includes(slug));
