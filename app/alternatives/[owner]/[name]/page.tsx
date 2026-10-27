@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { EstBadge } from "@/components/EstBadge";
-import { alternativesPath, getAlternatives, getAlternativesRepos, getCategoryNeighbors, getRepo, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos, getCategoryNeighbors, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
@@ -22,7 +22,7 @@ export function generateStaticParams() {
 function alternativesMeta(repo: Repo) {
   const alts = getAlternatives(repo);
   return {
-    title: alternativesPageTitle(repo.name, alts.length),
+    title: alternativesPageTitle(altLabel(repo), alts.length),
     description: alternativesDescription(repo, alts.map((a) => a.repo.fullName)),
   };
 }
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps<"/alternatives/[own
   if (!repo || !hasAlternativesPage(repo)) return {};
   const alts = getAlternatives(repo);
   const { title, description } = alternativesMeta(repo);
-  const shareTitle = `${alts.length} open-source ${repo.name} alternatives on GitHub`;
+  const shareTitle = `${alts.length} open-source ${altLabel(repo)} alternatives on GitHub`;
   const url = alternativesPath(repo);
   return { title, description, alternates: pageAlternates(url), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: shareTitle, description, url }, twitter: { card: "summary_large_image", title: shareTitle, description } };
 }
@@ -107,7 +107,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
         ])}
       />
       <PageNav fallbackHref={repoPath(repo)} crumbs={[{ name: "Categories", href: "/category" }, { name: cat, href: `/category/${repo.category}` }, { name: repo.fullName, href: repoPath(repo) }, { name: "Alternatives" }]} />
-      <h1 className="text-3xl font-bold tracking-tight">{repo.name} alternatives</h1>
+      <h1 className="text-3xl font-bold tracking-tight">{altLabel(repo)} alternatives</h1>
       <p className="mt-3 text-zinc-600 dark:text-zinc-400">
         <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week){stripWhy(repo.oneLiner) ? `: ${stripWhy(repo.oneLiner)}` : "."}
       </p>
@@ -132,7 +132,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
               {hasAlternativesPage(a.repo) && (
                 <>
                   {" · "}
-                  <Link className="underline" href={alternativesPath(a.repo)}>{a.repo.name} alternatives</Link>
+                  <Link className="underline" href={alternativesPath(a.repo)}>{altLabel(a.repo)} alternatives</Link>
                 </>
               )}
             </p>

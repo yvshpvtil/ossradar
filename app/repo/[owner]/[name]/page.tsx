@@ -23,7 +23,7 @@ import { getHnMentions } from "@/lib/mentions";
 import { hasTopicPage, repoTopics, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
-import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease, releaseVersion } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
@@ -322,7 +322,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             <div className="mb-2 flex items-baseline justify-between gap-2">
               <h2 className="text-sm font-semibold">Related repos</h2>
               {hasAlternativesPage(repo) && (
-                <Link className="text-xs text-indigo-700 hover:underline dark:text-indigo-400" href={alternativesPath(repo)}>All {repo.name} alternatives →</Link>
+                <Link className="text-xs text-indigo-700 hover:underline dark:text-indigo-400" href={alternativesPath(repo)}>All {altLabel(repo)} alternatives →</Link>
               )}
             </div>
             <RepoCards repos={related} />
@@ -383,7 +383,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
             See more <Link className="underline" href={`/category/${repo.category}`}>trending {categoryLabel(repo.category)} repos</Link> or the{" "}
             <Link className="underline" href="/trending/ai-repos-this-week">top AI repos this week</Link>.
             {hasAlternativesPage(repo) && (
-              <> Looking for something similar? See <Link className="underline" href={alternativesPath(repo)}>{repo.name} alternatives</Link>.</>
+              <> Looking for something similar? See <Link className="underline" href={alternativesPath(repo)}>{altLabel(repo)} alternatives</Link>.</>
             )}
           </p>
         </section>

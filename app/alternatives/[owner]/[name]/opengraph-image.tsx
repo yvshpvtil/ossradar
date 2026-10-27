@@ -1,4 +1,4 @@
-import { getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, getAlternatives, getAlternativesRepos, getRepo, hasAlternativesPage } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
@@ -18,7 +18,7 @@ export default async function Image({ params }: { params: Promise<{ owner: strin
   const alts = getAlternatives(repo);
   return ogCard({
     eyebrow: `${categoryLabel(repo.category)} alternatives`,
-    title: `${alts.length} open-source alternatives to ${repo.name}`,
+    title: `${alts.length} open-source alternatives to ${altLabel(repo)}`,
     subtitle: alts.slice(0, 3).map((a) => a.repo.fullName).join(" · "),
     stat: "Same category, shared GitHub topics, ranked weekly",
   });

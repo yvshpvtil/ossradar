@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
 import type { Repo } from "@/lib/types";
 
 /**
@@ -26,7 +26,7 @@ export function HubAlternatives({ repos, label, sameCategory = true }: { repos: 
       <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2 lg:grid-cols-3 [&_a]:text-zinc-700 [&_a:hover]:underline dark:[&_a]:text-zinc-300 [&_li]:break-words">
         {withAlts.map((r) => (
           <li key={r.fullName}>
-            <Link prefetch={false} href={alternativesPath(r)}>{r.name} alternatives</Link>
+            <Link prefetch={false} href={alternativesPath(r)}>{altLabel(r)} alternatives</Link>
           </li>
         ))}
       </ul>

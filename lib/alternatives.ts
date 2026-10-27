@@ -67,3 +67,23 @@ export const hasAlternativesPage = (repo: Repo) => repo.category !== "other" && 
 export const alternativesPath = (r: Pick<Repo, "owner" | "name">) => `/alternatives/${r.owner}/${r.name}`;
 export const getAlternativesRepos = () => getRepos().filter(hasAlternativesPage);
 export { getRepo };
+
+/** Words that describe a kind of repo rather than name one ("agents", "claude-skills", "AI-Coding"). */
+const GENERIC_NAME_WORDS = new Set(["ai", "agent", "agents", "skill", "skills", "claude", "coding", "code", "memory", "security", "tool", "tools", "mcp", "llm", "llms", "prompt", "prompts", "awesome", "cli", "app", "apps"]);
+
+let dupNames: Set<string> | null = null;
+/**
+ * The name to use in "X alternatives" titles, headings and links. Usually the bare repo name, which is
+ * what people search for ("dify alternatives"), but owner/name when the bare name is ambiguous: made only
+ * of generic words (wshobson/agents, anbeime/skill) or shared by two tracked repos (two OpenBots).
+ */
+export function altLabel(r: Pick<Repo, "owner" | "name">): string {
+  if (!dupNames) {
+    const seen = new Map<string, number>();
+    for (const x of getRepos()) seen.set(x.name.toLowerCase(), (seen.get(x.name.toLowerCase()) ?? 0) + 1);
+    dupNames = new Set([...seen].filter(([, n]) => n > 1).map(([k]) => k));
+  }
+  const words = r.name.toLowerCase().split(/[-_.\s]+/).filter(Boolean);
+  const generic = words.length > 0 && words.every((w) => GENERIC_NAME_WORDS.has(w));
+  return generic || dupNames.has(r.name.toLowerCase()) ? `${r.owner}/${r.name}` : r.name;
+}

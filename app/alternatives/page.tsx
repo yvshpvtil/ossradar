@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { getData } from "@/lib/data";
 import { PageNav } from "@/components/PageNav";
-import { alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
+import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta } from "@/lib/format";
 import { abs, breadcrumbLd, linkListLd, ogDefaults, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
@@ -56,7 +56,7 @@ export default function AlternativesIndex() {
               gs
                 .flatMap((g) => g.repos)
                 .sort((a, b) => b.delta7d - a.delta7d)
-                .map((r) => ({ url: abs(alternativesPath(r)), name: `${r.name} alternatives` })),
+                .map((r) => ({ url: abs(alternativesPath(r)), name: `${altLabel(r)} alternatives` })),
             ),
           ),
         }}
@@ -85,7 +85,7 @@ export default function AlternativesIndex() {
           <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2">
             {g.repos.map((r) => (
               <li key={r.fullName} className="min-w-0 break-words">
-                <Link className="font-medium hover:underline" href={alternativesPath(r)}>{`${r.name} alternatives`}</Link>{" "}
+                <Link className="font-medium hover:underline" href={alternativesPath(r)}>{`${altLabel(r)} alternatives`}</Link>{" "}
                 <span className="text-zinc-500">
                   {`(${getAlternatives(r).length}) · `}<span className="text-emerald-700 dark:text-emerald-400">{`${formatDelta(r.delta7d)}/wk`}</span>
                 </span>
