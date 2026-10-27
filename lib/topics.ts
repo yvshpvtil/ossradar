@@ -41,6 +41,7 @@ const TOKEN_LABELS: Record<string, string> = {
 const SLUG_LABELS: Record<string, string> = {
   "claude-code": "Claude Code", "claude-code-plugin": "Claude Code plugin", "model-context-protocol": "Model Context Protocol",
   "claude-skills": "Claude skills", "gemini-cli": "Gemini CLI", "llama-cpp": "llama.cpp", "gpt-oss": "gpt-oss",
+  "deepseek-harness": "DeepSeek Harness",
 };
 /** Slugs whose hyphen is part of the normal spelling. */
 const KEEP_HYPHEN = new Set(["self-hosted", "local-first", "open-source", "multi-agent"]);
