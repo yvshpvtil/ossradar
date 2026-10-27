@@ -1,0 +1,12 @@
+{
+ "fullName": "winnin/farol",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @winninjs/farol routes",
+ "source": "readme",
+ "readmeSummary": "Agents write the code and agents review it. The last call is still a person's: approve the merge or not.",
+ "extractor": "heuristic",
+ "readmeHash": "e9942065d6ff",
+ "version": 1,
+ "generatedAt": "2026-10-27T01:59:21.501Z"
+}
