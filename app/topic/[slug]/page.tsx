@@ -60,7 +60,8 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
       </div>
       <section className="mb-6">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Topic</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {label} repos</h1>
+        {/* Matches the <title>; the category hubs use "Trending <label> repos", so mcp and ai-agents no longer share an h1 with /category. */}
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {label} GitHub repos</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
           Repos whose maintainers tagged them {topicVariants(slug).map((v, i) => (<span key={v}>{i > 0 && " or "}<span className="font-mono">{v}</span></span>))} on GitHub (topics are labels that describe what a project is about), ranked by stars gained.
         </p>
