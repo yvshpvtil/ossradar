@@ -1,0 +1,12 @@
+{
+ "fullName": "apify/apify-mcp-server",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @apify/actors-mcp-server --tools actors,docs,apify/rag-web-browser,apify/web-fetch",
+ "source": "readme",
+ "readmeSummary": "The Apify Model Context Protocol (MCP) server at mcp.apify.com enables your AI agents to extract data from social media, search engines…",
+ "extractor": "heuristic",
+ "readmeHash": "32c6900dc581",
+ "version": 1,
+ "generatedAt": "2026-10-27T10:57:23.954Z"
+}
