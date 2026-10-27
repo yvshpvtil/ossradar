@@ -2,6 +2,7 @@ import raw from "@/data/repos.json";
 import type { CategorySlug, Repo, RepoData } from "./types";
 
 import { categorize } from "./categories";
+import { getBlurbOverride } from "./blurbOverrides";
 import { isOffTopic } from "./blocklist";
 import { cleanOneLiner } from "./oneliner";
 import { cleanHomepage } from "./homepage";
@@ -27,7 +28,7 @@ const data: RepoData = {
   repos: rawData.repos
     .filter((r) => !isOffTopic(r))
     .map((r) => ({ ...r, description: tidyDescription(r.description), oneLiner: tidyDescription(r.oneLiner) }))
-    .map((r) => ({ ...r, category: categorize({ topics: r.topics, description: r.description, name: r.name }) }))
+    .map((r) => ({ ...r, category: categorize({ topics: r.topics, description: r.description, name: r.name, summary: getBlurbOverride(r.fullName) ?? r.oneLiner }) }))
     .map((r) => ({ ...r, oneLiner: cleanOneLiner(r), homepage: cleanHomepage(r.homepage) })),
 };
 

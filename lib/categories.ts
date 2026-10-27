@@ -1,4 +1,5 @@
 import type { CategorySlug } from "./types";
+import { stripWhy } from "./why";
 
 export interface Category {
   slug: CategorySlug;
@@ -109,7 +110,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
 const BUILT_WITH_TOPICS = new Set(["claude-code", "vibe-coding", "cursor", "codex", "copilot"]);
 const AI_SIGNAL = /\b(ai|llms?|agents?|agentic|claude|codex|cursor|copilot|gemini|coding|code|codebase|prompts?|models?|gpt|chatgpt|opencode|mcp)\b/i;
 
-export function categorize(input: { topics: string[]; description: string; name: string }): CategorySlug {
+export function categorize(input: { topics: string[]; description: string; name: string; summary?: string | null }): CategorySlug {
   const name = input.name.replace(/[-_]/g, " ");
   // Built-with tags only count when the name or description says the repo is about AI or code;
   // with no description we can't tell, so they still count.
@@ -128,7 +129,30 @@ export function categorize(input: { topics: string[]; description: string; name:
       bestScore = score;
     }
   }
-  return best === "other" ? fallbackCategory(input.name, input.description, topics) : best;
+  if (best !== "other") return best;
+  // Repos with no GitHub description (or a non-English one) often say what they are only in their
+  // English one-liner (README summary or data/blurbs.json) or a CamelCase name ("WeChatAgent"), so
+  // score those too before the fallback regexes. Only reached for repos nothing else matched.
+  const extra = ` ${splitCamel(input.name)} ${stripWhy(input.summary)} `.toLowerCase();
+  let extraBest: CategorySlug = "other";
+  let extraScore = 0;
+  for (const rule of RULES) {
+    const score = rule.keywords.filter((k) => extra.includes(k)).length;
+    if (score > extraScore) {
+      extraBest = rule.slug;
+      extraScore = score;
+    }
+  }
+  if (extraBest !== "other") return extraBest;
+  return fallbackCategory(input.name, `${input.description} ${extra}`, topics);
+}
+
+/** "WeChatAgent" -> "We Chat Agent", "AISafetyHot" -> "AI Safety Hot", "Hy-Memory" -> "Hy Memory". */
+function splitCamel(name: string): string {
+  return name
+    .replace(/[-_.]/g, " ")
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2");
 }
 
 /**
