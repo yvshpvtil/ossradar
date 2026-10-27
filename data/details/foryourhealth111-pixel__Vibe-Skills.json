@@ -1,0 +1,12 @@
+{
+ "fullName": "foryourhealth111-pixel/Vibe-Skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SkillsBench is a benchmark designed to evaluate whether AI agents can effectively use Skills to complete professional tasks across diverse…",
+ "extractor": "heuristic",
+ "readmeHash": "cf60bef8351a",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.281Z"
+}

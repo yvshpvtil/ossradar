@@ -1,0 +1,16 @@
+{
+ "fullName": "boyuchengz/canvas-mcp",
+ "whoItsFor": null,
+ "useCases": [
+  "Every tool is read-only. No write endpoints are wrapped, and inbox threads and discussions are fetched without marking them as read.",
+  "The tools are built around the questions students actually ask: deadlines across all courses, missing work, grade weights, feedback and syll",
+  "Output is compact. Canvas HTML becomes plain text, and responses keep only the fields a model needs."
+ ],
+ "installCommand": "npm i -g @railway/cli",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "81df8078b78a",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.819Z"
+}

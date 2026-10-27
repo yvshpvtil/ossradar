@@ -1,0 +1,12 @@
+{
+ "fullName": "0xS4N4TG/kinetograph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx kinetograph still examples/rajz-cards/index.tsx 60 -o out/rajz-60.png",
+ "source": "readme",
+ "readmeSummary": "You (or an agent) write a video in TypeScript with Remotion's API, CSS, SVG, Canvas 2D, WebGL shaders and Web Audio; Node runs the code; a…",
+ "extractor": "heuristic",
+ "readmeHash": "18286241a7e3",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.616Z"
+}

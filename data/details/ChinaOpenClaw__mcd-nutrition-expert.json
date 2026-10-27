@@ -1,0 +1,12 @@
+{
+ "fullName": "ChinaOpenClaw/mcd-nutrition-expert",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "一个基于 SP 矩阵理论 的个人饮食搭配可视化选型工具，基于麦当劳官方 MCP Server 打通「营养计算 → SP 选型 → 套餐推荐 → 门店点餐 → 领券下单 → 健康记录」的完整闭环。",
+ "extractor": "heuristic",
+ "readmeHash": "2d61ad0884b9",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.889Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "YOLOW92/pagesift",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 3002:3002 -v pagesift-data:/data \\",
+ "source": "readme",
+ "readmeSummary": "High-performance, memory-bounded web scraping and extraction engine built for AI agents and LLM pipelines.",
+ "extractor": "heuristic",
+ "readmeHash": "04ed446670d4",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.471Z"
+}

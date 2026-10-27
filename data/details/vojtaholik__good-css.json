@@ -1,0 +1,12 @@
+{
+ "fullName": "vojtaholik/good-css",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills@latest add vojtaholik/good-css",
+ "source": "readme",
+ "readmeSummary": "Opinionated modern CSS techniques, packaged as an agent skill. With it installed, a coding agent reaches for one declaration that adapts on…",
+ "extractor": "heuristic",
+ "readmeHash": "668ac674a2d9",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.388Z"
+}

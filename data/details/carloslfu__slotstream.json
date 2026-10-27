@@ -1,0 +1,12 @@
+{
+ "fullName": "carloslfu/slotstream",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/carloslfu/slotstream/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Run a 105 GB AI model on a Mac that can't hold it.",
+ "extractor": "heuristic",
+ "readmeHash": "a79b2bc0dca4",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.513Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "finnvoor/PiDurableKit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Durable AI agents for iPhone, iPad, Mac, and Vision Pro, powered by @earendil-works/pi-durable running in JavaScriptCore.",
+ "extractor": "heuristic",
+ "readmeHash": "3bc9b05b76ba",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.660Z"
+}

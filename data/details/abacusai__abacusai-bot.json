@@ -1,0 +1,12 @@
+{
+ "fullName": "abacusai/abacusai-bot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Create a bot for a job you want to hand off. Give it a name, instructions, and a model.",
+ "extractor": "heuristic",
+ "readmeHash": "884ab3fcc7f9",
+ "version": 1,
+ "generatedAt": "2026-10-27T08:03:11.720Z"
+}
