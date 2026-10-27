@@ -1,0 +1,12 @@
+{
+ "fullName": "YOURSJEYO/claude-switcher",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Fail-Closed 账号环境管理器 —— 把真实 IP 泄漏拦截在启动之前",
+ "extractor": "heuristic",
+ "readmeHash": "9da9efc8bce3",
+ "version": 1,
+ "generatedAt": "2026-10-27T09:01:10.153Z"
+}

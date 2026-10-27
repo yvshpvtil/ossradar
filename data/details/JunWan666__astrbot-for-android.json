@@ -1,0 +1,12 @@
+{
+ "fullName": "JunWan666/astrbot-for-android",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AstrBot for Android（AstrBot 运行管理器） 是面向 Android 设备的 AstrBot 与 NapCat 本地部署及运行管理应用。",
+ "extractor": "heuristic",
+ "readmeHash": "d7ff986858ed",
+ "version": 1,
+ "generatedAt": "2026-10-27T09:01:10.150Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "enesozturk/dimensional-drawing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add enesozturk/dimensional-drawing",
+ "source": "readme",
+ "readmeSummary": "Apple publishes dimensional drawings for every device so accessory makers can build cases that fit.",
+ "extractor": "heuristic",
+ "readmeHash": "a0b2b550ace6",
+ "version": 1,
+ "generatedAt": "2026-10-27T09:01:10.155Z"
+}
