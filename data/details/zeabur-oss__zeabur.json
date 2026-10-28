@@ -1,0 +1,12 @@
+{
+ "fullName": "zeabur-oss/zeabur",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Deploy and run your services on your own Kubernetes, simply and securely.",
+ "extractor": "heuristic",
+ "readmeHash": "f4c0e784261e",
+ "version": 1,
+ "generatedAt": "2026-10-28T20:02:02.891Z"
+}
