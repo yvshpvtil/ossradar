@@ -1,0 +1,12 @@
+{
+ "fullName": "MiniMax-AI/mcode-stack",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use.",
+ "extractor": "heuristic",
+ "readmeHash": "40c10b713243",
+ "version": 1,
+ "generatedAt": "2026-10-28T19:09:51.334Z"
+}
