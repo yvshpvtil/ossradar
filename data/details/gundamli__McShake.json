@@ -1,0 +1,12 @@
+{
+ "fullName": "gundamli/McShake",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "摇一摇老虎机，摇出你这一餐的营养账本和最省买法。",
+ "extractor": "heuristic",
+ "readmeHash": "61d59dbe7cf9",
+ "version": 1,
+ "generatedAt": "2026-10-28T05:59:52.536Z"
+}

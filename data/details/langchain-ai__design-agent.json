@@ -1,0 +1,12 @@
+{
+ "fullName": "langchain-ai/design-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/langchain-ai/design-agent/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Content Studio is the design agent LangChain runs, now open source. Add your brand and deploy it to your team's Slack with Managed Deep…",
+ "extractor": "heuristic",
+ "readmeHash": "1499989493bc",
+ "version": 1,
+ "generatedAt": "2026-10-28T05:59:52.534Z"
+}
