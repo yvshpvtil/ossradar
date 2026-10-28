@@ -58,7 +58,27 @@ function isSpecificTopic(t: string): boolean {
 const NICHE_TOPIC_SHARE = 0.05;
 
 /** Platform and packaging tags say where a repo runs, not what it does, so they never count as niche. */
-const PLATFORM_TOPICS = new Set(["windows", "macos", "mac", "linux", "android", "ios", "desktop-app", "desktop", "cross-platform", "menubar-app", "web-app", "self-hosted", "open-source", "cli", "terminal", "tui", "docker"]);
+const PLATFORM_TOPICS = new Set(["windows", "macos", "mac", "macos-app", "linux", "android", "ios", "desktop-app", "desktop", "cross-platform", "menubar-app", "web-app", "self-hosted", "open-source", "cli", "terminal", "tui", "docker"]);
+
+/**
+ * Tags about how a repo is built or listed rather than what it does: UI/app frameworks and repo
+ * housekeeping labels. Like platform and language tags, they don't count toward a cross-category
+ * match, so two unrelated Electron or SwiftUI apps aren't offered as alternatives to each other.
+ */
+const STACK_TOPICS = new Set(["electron", "tauri", "react", "nextjs", "vue", "svelte", "swiftui", "flutter", "good-first-issue", "hacktoberfest", "productivity", "developer-tools"]);
+
+let langCache: Set<string> | null = null;
+/** Programming-language tags (python, rust, swift...): the language of any tracked repo, plus common aliases. */
+function isLanguageTopic(t: string): boolean {
+  if (!langCache) {
+    langCache = new Set(getRepos().map((r) => (r.language ?? "").toLowerCase().replace(/\s+/g, "-")).filter(Boolean));
+    for (const x of ["golang", "cpp", "csharp", "nodejs", "node"]) langCache.add(x);
+  }
+  return langCache.has(t);
+}
+
+/** True for a shared topic that says what a repo does, not where it runs, what it's written in or built with. */
+const isDescriptiveTopic = (t: string) => !PLATFORM_TOPICS.has(t) && !STACK_TOPICS.has(t) && !isLanguageTopic(t);
 
 let nicheCache: ((t: string) => boolean) | null = null;
 function isNicheTopic(t: string): boolean {
@@ -74,14 +94,14 @@ function isNicheTopic(t: string): boolean {
 
 /**
  * Same category: at least two shared topics, one of them specific. Another category (only used to
- * fill pages with fewer than ALT_SHORT same-category matches): at least three shared topics, two of
- * them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
+ * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive
+ * topics (not platform, language or framework tags), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
  * vllm, sglang and unsloth, which share its model-family tags, sit in LLM tooling).
  */
 function isCloseMatch(shared: string[], sameCategory: boolean): boolean {
   return sameCategory
     ? shared.length >= 2 && shared.some(isSpecificTopic)
-    : shared.length >= 3 && shared.filter(isNicheTopic).length >= 2;
+    : shared.filter(isDescriptiveTopic).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
 }
 
 /**

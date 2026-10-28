@@ -117,7 +117,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
         {crossCount === 0
           ? <>Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics with {repo.name}</>
           : <>Below are {alts.length} other repos tracked by {SITE.name} that share GitHub topics with {repo.name}: {alts.length - crossCount} from {cat} sharing at least two, and {crossCount} from
-            other categories sharing at least three, two of them niche tags rather than broad ones like llm or a platform</>}
+            other categories sharing at least three topics about what they do (platform, language and framework tags don&apos;t count), two of them niche rather than broad ones like llm</>}
         , ordered by how closely their topics overlap (rarer shared topics count more), then by stars gained in the last 7 days. Topic overlap means a similar
         problem space, not a drop-in replacement, so check each project&apos;s README.
       </p>
