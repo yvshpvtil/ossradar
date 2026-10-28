@@ -1,0 +1,12 @@
+{
+ "fullName": "eliasstravik/shepherdr",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The app is an overview and a remote control; herdr is the engine. A space is a folder on a machine with its own coordinator, and each task…",
+ "extractor": "heuristic",
+ "readmeHash": "f98c48d4d711",
+ "version": 1,
+ "generatedAt": "2026-10-28T21:58:25.231Z"
+}
