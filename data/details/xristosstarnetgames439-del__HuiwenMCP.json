@@ -1,0 +1,12 @@
+{
+ "fullName": "xristosstarnetgames439-del/HuiwenMCP",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "鸿蒙 PC 上的 PDF 与 Markdown 阅读、转换应用。本阶段先把文字型 PDF 转成沙箱内的 MD 文件。",
+ "extractor": "heuristic",
+ "readmeHash": "3bbeb87a5d90",
+ "version": 1,
+ "generatedAt": "2026-10-28T07:19:53.634Z"
+}
