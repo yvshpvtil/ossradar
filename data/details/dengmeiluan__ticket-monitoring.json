@@ -1,0 +1,12 @@
+{
+ "fullName": "dengmeiluan/ticket-monitoring",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "点开即玩的在线演示 · English README · 下载发行包（Windows / Linux / macOS）",
+ "extractor": "heuristic",
+ "readmeHash": "cf49801d0333",
+ "version": 1,
+ "generatedAt": "2026-10-28T03:02:12.595Z"
+}
