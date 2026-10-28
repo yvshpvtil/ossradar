@@ -107,6 +107,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-24T02:19:43.643Z"
  },
+ "JunWan666/astrbot-for-android": {
+  "text": "Android app that runs and manages AstrBot and NapCat locally in a built-in PRoot Ubuntu environment, without root.",
+  "basis": "15681f8e4143",
+  "source": "claude -p",
+  "generatedAt": "2026-10-28T02:23:29.818Z"
+ },
  "K0nd1us/QQ-agent": {
   "text": "A desktop app that runs an LLM-powered QQ group chat bot on your own computer, with long-term memory and web search.",
   "basis": "c377abda2758",
@@ -449,6 +455,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:49.828Z"
  },
+ "mashanglinyu/luanyujia-workbench": {
+  "text": "Methods and shell templates for building a multi-scene AI workbench where each scene has its own panels and AI session.",
+  "basis": "8590511c27ce",
+  "source": "claude -p",
+  "generatedAt": "2026-10-28T02:23:31.437Z"
+ },
  "omdsh-dev/DSH-better-sidebar": {
   "text": "Extensible sidebar for DeepSeek Harness: files, terminal, side chat, Git and subagents.",
   "basis": "67fbf77357e4",
@@ -593,11 +605,17 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
  },
- "z91772524-ai/pojia-next": {
-  "text": "A Windows tool that replaces the built-in system prompts and persona in AI clients like Cursor, Codex and Claude Code.",
-  "basis": "e13307aab568",
+ "yzlin286-wq/Deepscient": {
+  "text": "A research workbench on the DeepSeek Harness runtime that guides science work through 12 stages with evidence chains.",
+  "basis": "1e54cf01a0c6",
   "source": "claude -p",
-  "generatedAt": "2026-10-23T02:20:55.066Z"
+  "generatedAt": "2026-10-28T02:23:28.707Z"
+ },
+ "z91772524-ai/pojia-next": {
+  "text": "Windows tool that swaps the built-in prompts of 15 AI clients for your own, with backups and one-click restore.",
+  "basis": "0602281e3175",
+  "source": "claude -p",
+  "generatedAt": "2026-10-28T02:23:31.017Z"
  },
  "zcbacxc/mcd-party-planner": {
   "text": "McDonald's MCP CLI and skill for planning group meals and party orders across stores, combos and budget.",
