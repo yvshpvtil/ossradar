@@ -1,0 +1,12 @@
+{
+ "fullName": "anonnerdfrenzy/survival-llm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A free AI assistant and survival library that runs entirely on your own computer and works with no internet.",
+ "extractor": "heuristic",
+ "readmeHash": "5e1c585974d8",
+ "version": 1,
+ "generatedAt": "2026-10-28T01:20:51.525Z"
+}
