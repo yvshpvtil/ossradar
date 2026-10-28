@@ -17,6 +17,12 @@ export const TOPIC_ALIASES: Record<string, string> = {
   modelcontextprotocol: "mcp",
   // Codex CLI is the Codex coding agent; every tracked codex-cli repo is about that tool, and 8 of 10 already carry codex.
   "codex-cli": "codex",
+  // Agent skill tags come singular and plural; the plural is far more used (agent-skills 54 vs 7, claude-skills 32 vs 4,
+  // claude-code-skills 10 vs 6, skills 19 vs 7 tracked repos), so the singular repos join the hub people already land on.
+  "agent-skill": "agent-skills",
+  "claude-skill": "claude-skills",
+  "claude-code-skill": "claude-code-skills",
+  skill: "skills",
 };
 
 /**
