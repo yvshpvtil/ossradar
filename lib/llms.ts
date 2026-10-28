@@ -1,3 +1,4 @@
+import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos } from "./alternatives";
 import { CATEGORIES, categoryLabel } from "./categories";
 import { type DailyEntry, getArchiveDays, getDailyTop } from "./daily";
 import { getData, getReposByCategory, rankRepos } from "./data";
@@ -37,6 +38,32 @@ function dailySection(days: string[]): string {
   return `## Daily archive
 
 Top gainers per completed UTC day, newest first${more}:
+
+${rows.join("\n")}
+
+`;
+}
+
+const ALT_LIST_MAX = 20;
+
+/**
+ * The alternatives pages for the most-starred tracked repos (the names people ask about: "open-source alternatives to
+ * dify"), each with its first three alternatives, so an assistant can answer from llms.txt and link the full page.
+ */
+function alternativesSection(): string {
+  const all = getAlternativesRepos();
+  const rows = [...all]
+    .sort((a, b) => b.stars - a.stars)
+    .slice(0, ALT_LIST_MAX)
+    .map((r) => {
+      const alts = getAlternatives(r);
+      const names = alts.slice(0, 3).map((a) => a.repo.fullName).join(", ");
+      return `- [${altLabel(r)} alternatives](${SITE.url}${alternativesPath(r)}): lists ${alts.length} tracked alternatives to ${r.fullName}, including ${names}`;
+    });
+  if (!rows.length) return "";
+  return `## Open-source alternatives
+
+Alternatives pages for the ${rows.length} most-starred of ${all.length} tracked repos that have one (all in the [alternatives index](${SITE.url}/alternatives)):
 
 ${rows.join("\n")}
 
@@ -112,7 +139,7 @@ ${getTopics().map((t) => `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug})
 
 ${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.count} repos`).join("\n")}
 
-${dailySection(days)}## Data access
+${alternativesSection()}${dailySection(days)}## Data access
 
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
 - [RSS feed](${SITE.url}/rss.xml)
