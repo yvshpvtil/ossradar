@@ -267,3 +267,30 @@ export function hubDescription(lead: string, tails: string[], leader: Pick<Repo,
 // so a page passing only { canonical } silently dropped the <link rel="alternate" type="application/rss+xml">.
 export const RSS_ALTERNATE = { "application/rss+xml": [{ url: "/rss.xml", title: `${SITE.name} RSS` }] };
 export const pageAlternates = (canonical: string) => ({ canonical, types: RSS_ALTERNATE });
+
+/**
+ * GitHub descriptions often carry link clutter that reads badly in a search snippet: bare URLs
+ * ("DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/."), community plugs
+ * ("Join our community at https://discord.gg/…"), decorative lead symbols ("⌥ Coding agent…") and
+ * wrapping quotes. Used for meta descriptions only; the page itself still shows the description as written.
+ */
+export function snippetText(s: string): string {
+  let t = s
+    // A URL plus the label that introduces it ("Join our community at", "Official website:", "link:").
+    .replace(/(?:\b(?:join (?:our |the )?(?:community|discord|server)[^.:。]*?|official (?:website|site)|website|homepage|home page|link|docs|paper)\s*:?\s*)?(?:https?:\/\/|www\.)[^\s，。)）]*[^\s，。)）.,;:!?]/gi, "")
+    .replace(/\s+/g, " ")
+    .replace(/[：:]\s+(?=[（(])/g, "")
+    // Separators and colons the removed URL leaves dangling before a sentence end or the end.
+    .replace(/\s*[|•·:：\-–—]+\s*(?=[.!?。]|$)/g, "")
+    .replace(/\s*[|•·]\s*[|•·]\s*/g, " | ")
+    // Sentences emptied to a bare period ("Tutoring. ." or a leading ". The end…"), and separators left opening a sentence.
+    .replace(/(^|[.!?。])(?:\s+[.。](?=\s|$))+/g, "$1")
+    .replace(/^[.。]\s+/, "")
+    .replace(/([.!?。])\s*[|•·]\s*/g, "$1 ")
+    .trim();
+  // Decorative lead symbols (⌥, ☤, emoji); keep openers that start real text.
+  t = t.replace(/^[^\p{L}\p{N}"“'([]+/u, "");
+  // A description wrapped whole in quotes: "Vibe-Trading: Your Personal Trading Agent".
+  t = t.replace(/^["“]([^"”]+)["”]/, "$1");
+  return t.trim();
+}
