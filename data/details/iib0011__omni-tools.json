@@ -1,0 +1,12 @@
+{
+ "fullName": "iib0011/omni-tools",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest",
+ "source": "readme",
+ "readmeSummary": "Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.",
+ "extractor": "heuristic",
+ "readmeHash": "cdfbfc538b45",
+ "version": 1,
+ "generatedAt": "2026-10-28T05:02:34.512Z"
+}

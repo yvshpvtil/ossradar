@@ -1,0 +1,12 @@
+{
+ "fullName": "nektos/act",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "When you run act it reads in your GitHub Actions from .github/workflows/ and determines the set of actions that need to be run.",
+ "extractor": "heuristic",
+ "readmeHash": "6bcdc73c769e",
+ "version": 1,
+ "generatedAt": "2026-10-28T05:02:34.505Z"
+}
