@@ -1,0 +1,16 @@
+{
+ "fullName": "CopilotKit/OpenDuet",
+ "whoItsFor": null,
+ "useCases": [
+  "A morning brief. One short message to start the day: what is on, what changed, and what needs a decision from you.",
+  "What needs you, and what can wait. It looks across your mail, calendar, and Slack, brings the few things that need you to the top, and holds",
+  "Keeps working when you step away. Hand it a task and it carries on in a computer of its own: a real browser, its own files, and only the too"
+ ],
+ "installCommand": "npx --yes copilotkit@latest login",
+ "source": "readme",
+ "readmeSummary": "Built on OpenBot and CopilotKit · Quick start · Overview · Features and Capabilities · How it works · Contributing",
+ "extractor": "heuristic",
+ "readmeHash": "358ea724d908",
+ "version": 1,
+ "generatedAt": "2026-10-28T09:12:21.303Z"
+}
