@@ -4,6 +4,7 @@ import { getData, rankRepos } from "@/lib/data";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { dropTemplateWhy } from "@/lib/whyNotes";
+import { snippetText } from "@/lib/seo";
 
 function esc(s: string): string {
   return s
@@ -17,7 +18,7 @@ function esc(s: string): string {
 
 /** What the project does (no category-template "Why it matters" filler) plus the numbers behind its rank. */
 function feedDescription(r: Repo): string {
-  const text = dropTemplateWhy(r.oneLiner ?? "");
+  const text = snippetText(dropTemplateWhy(r.oneLiner ?? ""));
   const blurb = text ? `${text.replace(/[.!?…]?$/, (m) => m || ".")} ` : "";
   const est = r.velocityEstimated ? ", early estimate" : "";
   return `${blurb}${formatNumber(r.stars)} stars: ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7 days${est}.`;

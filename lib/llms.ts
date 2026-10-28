@@ -7,12 +7,14 @@ import { LANDINGS } from "./landing";
 import { NEW_DAYS, getNewRepos } from "./newRepos";
 import { getLanguages } from "./languages";
 import { getRecentHn } from "./mentions";
+import { snippetText } from "./seo";
 import { SITE } from "./site";
 import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
 import { dropTemplateWhy } from "./whyNotes";
 
-const llmsBlurb = (r: Repo) => dropTemplateWhy(r.oneLiner);
+// Same link-clutter cleanup as repo meta descriptions (bare URLs, Discord plugs, decorative lead symbols).
+const llmsBlurb = (r: Repo) => snippetText(dropTemplateWhy(r.oneLiner)) || dropTemplateWhy(r.oneLiner);
 
 /** One repo row. `withCategory` names the category where the section heading doesn't (mixed top-10 lists). */
 const line = (r: Repo, withCategory = false) =>
