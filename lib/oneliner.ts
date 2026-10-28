@@ -3,6 +3,7 @@ import { getDetails } from "./details";
 import { getBlurbOverride } from "./blurbOverrides";
 import type { Repo } from "./types";
 import { WHY } from "./whyNotes";
+import { snippetText } from "./seo";
 
 const TEMPLATE_WHYS = new Set(Object.values(WHY));
 
@@ -29,6 +30,9 @@ export function cleanOneLiner(r: Pick<Repo, "fullName" | "description" | "oneLin
     what = why ? cleanBlurb(r.description) ?? cleanBlurb(stripWhy(r.oneLiner)) : cleanBlurb(r.oneLiner);
     if (!what) return r.oneLiner;
   }
+  // Drop GitHub-description link clutter (bare URLs, Discord plugs, decorative lead symbols,
+  // wrapping quotes) from visible blurbs too; overrides are already clean.
+  if (!getBlurbOverride(r.fullName)) what = snippetText(what) || what;
   if (!/[.!?…。]$/.test(what)) what += ".";
   return why ? `${what} ${why}` : what;
 }
