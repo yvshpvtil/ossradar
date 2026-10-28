@@ -1,0 +1,12 @@
+{
+ "fullName": "BackplaneWorks/Backplane",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/i2cjak/backplane-bend/releases/latest/download/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "The real VALUE of Backplane is in its KiCad + FreeCAD viewers. See EVERY step the agent takes, click on specific components and reference…",
+ "extractor": "heuristic",
+ "readmeHash": "8458a32c526a",
+ "version": 1,
+ "generatedAt": "2026-10-28T21:01:10.958Z"
+}
