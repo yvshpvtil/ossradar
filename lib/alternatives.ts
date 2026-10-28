@@ -1,5 +1,6 @@
 import { getRepo, getRepos } from "./data";
 import { isThinRepo } from "./thin";
+import { repoTopics } from "./topics";
 import type { Repo } from "./types";
 
 /** Minimum alternatives (same category + shared GitHub topics) before an alternatives page is published. */
@@ -26,7 +27,7 @@ function topicWeight(t: string): number {
   if (!weightCache) {
     const repos = getRepos();
     const freq = new Map<string, number>();
-    for (const r of repos) for (const x of new Set(r.topics)) freq.set(x, (freq.get(x) ?? 0) + 1);
+    for (const r of repos) for (const x of repoTopics(r)) freq.set(x, (freq.get(x) ?? 0) + 1);
     const n = repos.length;
     weightCache = (x) => Math.log(n / Math.max(1, freq.get(x) ?? 1));
   }
@@ -40,7 +41,7 @@ function isSpecificTopic(t: string): boolean {
   if (!specificCache) {
     const repos = getRepos();
     const freq = new Map<string, number>();
-    for (const r of repos) for (const x of new Set(r.topics)) freq.set(x, (freq.get(x) ?? 0) + 1);
+    for (const r of repos) for (const x of repoTopics(r)) freq.set(x, (freq.get(x) ?? 0) + 1);
     const langs = new Set(repos.map((r) => (r.language ?? "").toLowerCase().replace(/\s+/g, "-")).filter(Boolean));
     const max = repos.length * BROAD_TOPIC_SHARE;
     specificCache = (x) => (freq.get(x) ?? 0) <= max && !langs.has(x);
@@ -53,14 +54,15 @@ function isSpecificTopic(t: string): boolean {
  * at least one of them specific. Two broad tags alone ("llm" + "mcp") matched a docs MCP server
  * with a trading bot and a pentest agent. Ranked by how rare the shared topics are (IDF-weighted),
  * so two repos sharing a niche tag rank above two that only share more common ones. Purely
- * data-derived; no editorial claims.
+ * data-derived; no editorial claims. Topics are compared in canonical form (repoTopics), so alias
+ * twins like dsh + deepseek-harness or mcp + model-context-protocol count once, not as two matches.
  */
 export function getAlternatives(repo: Repo, limit = 12): Alternative[] {
-  const topics = new Set(repo.topics);
+  const topics = new Set(repoTopics(repo));
   return getRepos()
     .filter((r) => r.fullName !== repo.fullName && r.category === repo.category)
     .map((r) => {
-      const sharedTopics = r.topics.filter((t) => topics.has(t));
+      const sharedTopics = repoTopics(r).filter((t) => topics.has(t));
       const score = sharedTopics.reduce((s, t) => s + topicWeight(t), 0);
       return { repo: r, sharedTopics, sameLanguage: !!r.language && r.language === repo.language, score };
     })
