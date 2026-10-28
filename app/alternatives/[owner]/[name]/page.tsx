@@ -34,7 +34,8 @@ function alternativesMeta(repo: Repo) {
  */
 function alternativesDescription(repo: Repo, names: string[], max = 155): string {
   const cat = categoryLabel(repo.category);
-  const tails = [`${cat} repos sharing its GitHub topics, ranked by stars gained this week.`, "Ranked by stars gained this week.", ""];
+  const mixed = getAlternatives(repo).some((a) => !a.sameCategory);
+  const tails = [`${mixed ? "Tracked" : cat} repos sharing its GitHub topics, ranked by stars gained this week.`, "Ranked by stars gained this week.", ""];
   for (let k = Math.min(3, names.length); k >= 1; k--) {
     const rest = names.length - k;
     const lead = `Open-source alternatives to ${repo.fullName}: ${names.slice(0, k).join(", ")}${rest > 0 ? ` and ${rest} more` : ""}.`;
@@ -65,6 +66,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
   const neighbors = getCategoryNeighbors(repo, alts);
   const path = alternativesPath(repo);
   const cat = categoryLabel(repo.category);
+  const crossCount = alts.filter((a) => !a.sameCategory).length;
   // Topic hubs (topics used by enough tracked repos) this page can link to, so shared topics lead somewhere.
   const hubs = new Set(getTopics().map((t) => t.slug));
   const repoHubs = repoTopics(repo).filter((t) => hubs.has(t)).slice(0, 4);
@@ -112,8 +114,12 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
         <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week){stripWhy(repo.oneLiner) ? `: ${stripWhy(repo.oneLiner)}` : "."}
       </p>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics with {repo.name}, ordered by how many topics overlap,
-        then by stars gained in the last 7 days. Topic overlap means a similar problem space, not a drop-in replacement, so check each project&apos;s README.
+        {crossCount === 0
+          ? <>Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics with {repo.name}</>
+          : <>Below are {alts.length} other repos tracked by {SITE.name} that share GitHub topics with {repo.name}: {alts.length - crossCount} from {cat} sharing at least two, and {crossCount} from
+            other categories sharing at least three, two of them niche tags rather than broad ones like llm or a platform</>}
+        , ordered by how closely their topics overlap (rarer shared topics count more), then by stars gained in the last 7 days. Topic overlap means a similar
+        problem space, not a drop-in replacement, so check each project&apos;s README.
       </p>
       <ol className="mt-6 space-y-3">
         {alts.map((a, i) => (
@@ -128,7 +134,8 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             </div>
             {stripWhy(a.repo.oneLiner) && <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(a.repo.oneLiner)}</p>}
             <p className="mt-2 text-xs text-zinc-500">
-              {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""} · shared topics: {topicChips(a.sharedTopics)}
+              {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""}
+              {!a.sameCategory && <>{" · "}<Link className="underline" href={`/category/${a.repo.category}`}>{categoryLabel(a.repo.category)}</Link></>} · shared topics: {topicChips(a.sharedTopics)}
               {hasAlternativesPage(a.repo) && (
                 <>
                   {" · "}

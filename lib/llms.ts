@@ -121,7 +121,7 @@ ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.descr
 Use these to link straight to a tracked repo (owner and name exactly as on GitHub, e.g. ${example}):
 
 - Repo page: ${SITE.url}/repo/{owner}/{name} (stars, 24h and 7-day gains, star history, latest release, Hacker News mentions)
-- Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics; only for repos with at least 3)
+- Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics, plus close matches from other categories when few; only for repos with at least 3)
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
 - By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
 - By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)

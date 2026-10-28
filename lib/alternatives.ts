@@ -6,9 +6,14 @@ import type { Repo } from "./types";
 /** Minimum alternatives (same category + shared GitHub topics) before an alternatives page is published. */
 export const ALT_MIN = 3;
 
+/** Alternatives pages with fewer than this many same-category matches also take close matches from other categories, then list other rising repos from the same category. */
+export const ALT_SHORT = 6;
+
 export interface Alternative {
   repo: Repo;
   sharedTopics: string[];
+  /** False for a cross-category match, which needs a closer topic overlap (see isCloseMatch). */
+  sameCategory: boolean;
   sameLanguage: boolean;
   /** Sum of topicWeight() over shared topics; ranks closest matches first. */
   score: number;
@@ -49,9 +54,40 @@ function isSpecificTopic(t: string): boolean {
   return specificCache(t);
 }
 
+/** A topic on at most this share of tracked repos is niche: model families (qwen, llama), tools (playwright), not vendor tags. */
+const NICHE_TOPIC_SHARE = 0.05;
+
+/** Platform and packaging tags say where a repo runs, not what it does, so they never count as niche. */
+const PLATFORM_TOPICS = new Set(["windows", "macos", "mac", "linux", "android", "ios", "desktop-app", "desktop", "cross-platform", "menubar-app", "web-app", "self-hosted", "open-source", "cli", "terminal", "tui", "docker"]);
+
+let nicheCache: ((t: string) => boolean) | null = null;
+function isNicheTopic(t: string): boolean {
+  if (!nicheCache) {
+    const repos = getRepos();
+    const freq = new Map<string, number>();
+    for (const r of repos) for (const x of repoTopics(r)) freq.set(x, (freq.get(x) ?? 0) + 1);
+    const max = repos.length * NICHE_TOPIC_SHARE;
+    nicheCache = (x) => (freq.get(x) ?? 0) <= max && !PLATFORM_TOPICS.has(x) && isSpecificTopic(x);
+  }
+  return nicheCache(t);
+}
+
+/**
+ * Same category: at least two shared topics, one of them specific. Another category (only used to
+ * fill pages with fewer than ALT_SHORT same-category matches): at least three shared topics, two of
+ * them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
+ * vllm, sglang and unsloth, which share its model-family tags, sit in LLM tooling).
+ */
+function isCloseMatch(shared: string[], sameCategory: boolean): boolean {
+  return sameCategory
+    ? shared.length >= 2 && shared.some(isSpecificTopic)
+    : shared.length >= 3 && shared.filter(isNicheTopic).length >= 2;
+}
+
 /**
  * Alternatives = other tracked repos in the same category that share at least two GitHub topics,
- * at least one of them specific. Two broad tags alone ("llm" + "mcp") matched a docs MCP server
+ * at least one of them specific; pages short of ALT_SHORT also take closer matches from other categories
+ * (isCloseMatch). Two broad tags alone ("llm" + "mcp") matched a docs MCP server
  * with a trading bot and a pentest agent. Ranked by how rare the shared topics are (IDF-weighted),
  * so two repos sharing a niche tag rank above two that only share more common ones. Purely
  * data-derived; no editorial claims. Topics are compared in canonical form (repoTopics), so alias
@@ -59,20 +95,19 @@ function isSpecificTopic(t: string): boolean {
  */
 export function getAlternatives(repo: Repo, limit = 12): Alternative[] {
   const topics = new Set(repoTopics(repo));
-  return getRepos()
-    .filter((r) => r.fullName !== repo.fullName && r.category === repo.category)
+  const matches = getRepos()
+    .filter((r) => r.fullName !== repo.fullName && r.category !== "other")
     .map((r) => {
       const sharedTopics = repoTopics(r).filter((t) => topics.has(t));
       const score = sharedTopics.reduce((s, t) => s + topicWeight(t), 0);
-      return { repo: r, sharedTopics, sameLanguage: !!r.language && r.language === repo.language, score };
+      return { repo: r, sharedTopics, sameCategory: r.category === repo.category, sameLanguage: !!r.language && r.language === repo.language, score };
     })
-    .filter((a) => a.sharedTopics.length >= 2 && a.sharedTopics.some(isSpecificTopic))
+    .filter((a) => isCloseMatch(a.sharedTopics, a.sameCategory));
+  const same = matches.filter((a) => a.sameCategory);
+  return (same.length >= ALT_SHORT ? same : matches)
     .sort((a, b) => b.score - a.score || b.repo.delta7d - a.repo.delta7d)
     .slice(0, limit);
 }
-
-/** Alternatives pages with fewer than this many topic-overlap matches also list other rising repos from the same category. */
-export const ALT_SHORT = 6;
 
 /**
  * For short alternatives pages: other rising repos in the same category that are neither the repo

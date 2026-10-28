@@ -19,8 +19,8 @@ export function HubAlternatives({ repos, label, sameCategory = true }: { repos: 
       </summary>
       <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
         {sameCategory
-          ? <>Each page lists other tracked {label} repos that share at least two GitHub topics with it.</>
-          : <>Each page lists other tracked repos in the same category that share at least two GitHub topics with it.</>}{" "}
+          ? <>Each page lists other tracked repos, mostly {label}, that share at least two GitHub topics with it.</>
+          : <>Each page lists other tracked repos, mostly from the same category, that share at least two GitHub topics with it.</>}{" "}
         <Link className="underline" href="/alternatives">Browse all alternatives</Link>.
       </p>
       <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2 lg:grid-cols-3 [&_a]:text-zinc-700 [&_a:hover]:underline dark:[&_a]:text-zinc-300 [&_li]:break-words">
