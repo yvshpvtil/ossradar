@@ -23,6 +23,12 @@ export const TOPIC_ALIASES: Record<string, string> = {
   "claude-skill": "claude-skills",
   "claude-code-skill": "claude-code-skills",
   skill: "skills",
+  // Twins of existing hubs, folded into the form most tracked repos use: claude-code-plugin 17 vs claude-code-plugins 2,
+  // dsh-plugin 24 vs dsh-plugins 4, chatbot 12 vs chatbots 1, developer-tools 49 vs developer-tool 1 (Oct 29 2026).
+  "claude-code-plugins": "claude-code-plugin",
+  "dsh-plugins": "dsh-plugin",
+  chatbots: "chatbot",
+  "developer-tool": "developer-tools",
 };
 
 /**
