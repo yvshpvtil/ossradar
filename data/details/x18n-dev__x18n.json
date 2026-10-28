@@ -1,0 +1,16 @@
+{
+ "fullName": "x18n-dev/x18n",
+ "whoItsFor": null,
+ "useCases": [
+  "45+ Presets, Zero Config - Detects Vue, React, Angular, Svelte, Astro, Next.js, Nuxt, Flutter, Laravel, Rails, .NET and more automatically",
+  "Any Format - JSON, JSON5, YAML, PO, Fluent, INI, Properties, PHP and .NET resource files",
+  "Namespaces - Organize messages with `ns:key` style keys"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Universal toolkits for linting, viewing and managing i18n for any frameworks.",
+ "extractor": "heuristic",
+ "readmeHash": "226fa91601e5",
+ "version": 1,
+ "generatedAt": "2026-10-28T10:05:45.356Z"
+}
