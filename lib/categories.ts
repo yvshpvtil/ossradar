@@ -67,7 +67,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   },
   {
     slug: "coding-agents",
-    topics: ["coding-agent", "coding-assistant", "code-generation", "ai-coding", "copilot", "claude-code", "code-agent", "vibe-coding", "codex", "cursor", "swe-agent", "ai-code-review"],
+    topics: ["coding-agent", "coding-agents", "coding-assistant", "code-generation", "ai-coding", "copilot", "claude-code", "code-agent", "vibe-coding", "codex", "cursor", "swe-agent", "ai-code-review"],
     keywords: ["coding agent", "coding assistant", "pair programmer", "code generation", "claude code", "software engineering agent", "ai coding", "code review", "vibe coding"],
   },
   {
@@ -93,7 +93,7 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
   {
     slug: "devops",
     topics: ["devops", "kubernetes", "k8s", "docker", "ci-cd", "cicd", "terraform", "infrastructure-as-code", "observability", "monitoring", "sre", "platform-engineering", "gitops", "self-hosted", "homelab", "cloud-native", "helm"],
-    keywords: ["kubernetes", "docker", "devops", "ci/cd", "terraform", "observability", "monitoring", "deploy", "infrastructure", "self-hosted"],
+    keywords: ["kubernetes", "docker", "devops", "ci/cd", "terraform", "observability", "monitoring", "deploy", "infrastructure", "self-host"],
   },
 ];
 
@@ -110,6 +110,28 @@ const RULES: { slug: CategorySlug; topics: string[]; keywords: string[] }[] = [
 const BUILT_WITH_TOPICS = new Set(["claude-code", "vibe-coding", "cursor", "codex", "copilot"]);
 const AI_SIGNAL = /\b(ai|llms?|agents?|agentic|claude|codex|cursor|copilot|gemini|coding|code|codebase|prompts?|models?|gpt|chatgpt|opencode|mcp)\b/i;
 
+/**
+ * Broad tags that each scored 2 although they say how a repo is built, run or what it works with,
+ * not what it is: vendor, model and "it's AI" tags (claude, chatgpt, gemini, llm, ai) for LLM
+ * tooling, supported coding tools (claude-code, codex, cursor) for Coding agents, and run-it-yourself
+ * tags (docker, self-hosted) for DevOps. Agents tagged ai + anthropic + chatgpt + claude
+ * (NousResearch/hermes-agent, OpenHands, langgraph) outscored their own ai-agents tags. Each group
+ * now counts as one topic hit; specific tags (inference, evals, prompt-engineering, kubernetes,
+ * coding-agent) still count individually.
+ */
+const BROAD_TOPIC_GROUPS: Set<string>[] = [
+  new Set(["llm", "llms", "large-language-models", "openai", "anthropic", "claude", "gpt", "chatgpt", "gemini", "deepseek", "generative-ai", "genai", "ai", "machine-learning"]),
+  BUILT_WITH_TOPICS,
+  new Set(["docker", "self-hosted", "homelab"]),
+];
+
+function topicScore(ruleTopics: string[], topics: Set<string>): number {
+  const hits = ruleTopics.filter((t) => topics.has(t));
+  const specific = hits.filter((t) => !BROAD_TOPIC_GROUPS.some((g) => g.has(t))).length;
+  const groups = BROAD_TOPIC_GROUPS.filter((g) => hits.some((t) => g.has(t))).length;
+  return (specific + groups) * 2;
+}
+
 export function categorize(input: { topics: string[]; description: string; name: string; summary?: string | null }): CategorySlug {
   const name = input.name.replace(/[-_]/g, " ");
   // Built-with tags only count when the name or description says the repo is about AI or code;
@@ -122,8 +144,7 @@ export function categorize(input: { topics: string[]; description: string; name:
   let best: CategorySlug = "other";
   let bestScore = 0;
   for (const rule of RULES) {
-    const score =
-      rule.topics.filter((t) => topics.has(t)).length * 2 + rule.keywords.filter((k) => text.includes(k)).length * 3;
+    const score = topicScore(rule.topics, topics) + rule.keywords.filter((k) => text.includes(k)).length * 3;
     if (score > bestScore) {
       best = rule.slug;
       bestScore = score;
