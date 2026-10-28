@@ -1,0 +1,12 @@
+{
+ "fullName": "davidondrej/cloudroom",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Your agents get their own room in the cloud.",
+ "extractor": "heuristic",
+ "readmeHash": "6195ad0acdf8",
+ "version": 1,
+ "generatedAt": "2026-10-28T22:57:38.947Z"
+}
