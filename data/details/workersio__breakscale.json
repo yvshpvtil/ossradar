@@ -1,0 +1,16 @@
+{
+ "fullName": "workersio/breakscale",
+ "whoItsFor": null,
+ "useCases": [
+  "33 components. Load balancers, caches, databases, queues and workers, plus CDNs, rate limiters, circuit breakers, read replicas, shards, aut",
+  "23 worked examples. Sixteen teaching scenarios that each isolate one failure mode, and seven reconstructions of real architectures.",
+  "A real discrete-event engine. Finite server slots, gamma-distributed service times and measured percentiles, with no formula standing in for"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Breakscale lets you put load balancers, caches, databases, queues and 29 other components on a canvas, wire them into a system, and drag the…",
+ "extractor": "heuristic",
+ "readmeHash": "f9605c4e8234",
+ "version": 1,
+ "generatedAt": "2026-10-28T18:02:03.769Z"
+}
