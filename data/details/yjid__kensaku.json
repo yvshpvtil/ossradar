@@ -1,0 +1,16 @@
+{
+ "fullName": "yjid/kensaku",
+ "whoItsFor": null,
+ "useCases": [
+  "Filename search across ~100,000 files in a few milliseconds on a warm cache. Method and numbers are in Performance.",
+  "Results update as you type. There is no separate search page.",
+  "Incremental indexing: changed files are picked up without rescanning the whole disk."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "You don't remember the filename. You remember what was in it.",
+ "extractor": "heuristic",
+ "readmeHash": "d506feecb134",
+ "version": 1,
+ "generatedAt": "2026-10-29T12:02:32.281Z"
+}
