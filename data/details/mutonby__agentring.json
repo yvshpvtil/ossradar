@@ -1,0 +1,16 @@
+{
+ "fullName": "mutonby/agentring",
+ "whoItsFor": null,
+ "useCases": [
+  "Your agent reaches you. It can send you a message, wait for your reply or call you (`send_message`, `get_replies`, `call`). On a call, a voi",
+  "You reach your agents. Tap \"Call agent\" in the app. The voice AI can ask your own agents for help mid-call. If one is slow, the call goes on",
+  "Nothing gets lost. A missed call turns into a message you can answer from the notification."
+ ],
+ "installCommand": "uv tool install './daemon[voice]'",
+ "source": "readme",
+ "readmeSummary": "Your AI agent can call you. When it needs a decision, hits a wall or finishes a long job, your phone rings like a real call, even locked and…",
+ "extractor": "heuristic",
+ "readmeHash": "da5640966818",
+ "version": 1,
+ "generatedAt": "2026-10-29T17:11:24.662Z"
+}

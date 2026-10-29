@@ -1,0 +1,12 @@
+{
+ "fullName": "IvenKooLab/desktop-pet",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install pyinstaller",
+ "source": "readme",
+ "readmeSummary": "简体中文 | English",
+ "extractor": "heuristic",
+ "readmeHash": "d210d906ed6a",
+ "version": 1,
+ "generatedAt": "2026-10-29T17:11:24.686Z"
+}
