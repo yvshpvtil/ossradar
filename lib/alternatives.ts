@@ -162,14 +162,26 @@ let dupNames: Set<string> | null = null;
  * spells it out (sglang -> "SGLang", ragflow -> "RAGFlow", context7 -> "Context7").
  * GitHub repo slugs are often lowercase while the project brands itself
  * otherwise; titles read better, and match how people write the name, with the
- * project's own spelling. Only a whole-token, case-insensitive match counts.
+ * project's own spelling. Only a whole-token, case-insensitive match counts; multi-word
+ * slugs also match their spaced or run-together spelling (DeepSeek Harness, AnythingLLM).
  */
 export function brandName(r: Pick<Repo, "name"> & { description?: string | null }): string {
   const desc = r.description ?? "";
   if (!desc || r.name !== r.name.toLowerCase()) return r.name;
-  const esc = r.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const m = desc.match(new RegExp(`(?<![\\w/-])${esc}(?![\\w/-])`, "i"));
-  return m && m[0] !== r.name ? m[0] : r.name;
+  const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const find = (pattern: string) => desc.match(new RegExp(`(?<![\\w/-])${pattern}(?![\\w/-])`, "i"))?.[0];
+  const exact = find(esc(r.name));
+  if (exact) return exact !== r.name ? exact : r.name;
+  // Multi-word slugs: the description often writes the name with spaces or run together
+  // (deepseek-harness -> "DeepSeek Harness", browser-use -> "Browser Use", anything-llm -> "AnythingLLM").
+  // Only a branded spelling counts (every spaced word capitalized, or capitals in the run-together form),
+  // so a sentence fragment like "Answer me with HTML" or a lowercase phrase never replaces the slug.
+  const words = r.name.split(/[-_.]+/).filter(Boolean);
+  if (words.length < 2) return r.name;
+  const spaced = find(words.map(esc).join("[ ]"));
+  if (spaced && spaced.split(" ").every((w) => /^[A-Z0-9]/.test(w))) return spaced;
+  const joined = find(words.map(esc).join(""));
+  return joined && /[A-Z]/.test(joined) ? joined : r.name;
 }
 
 export function altLabel(r: Pick<Repo, "owner" | "name"> & { description?: string | null }): string {
