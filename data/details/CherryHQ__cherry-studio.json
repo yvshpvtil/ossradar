@@ -1,0 +1,12 @@
+{
+ "fullName": "CherryHQ/cherry-studio",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Cherry Studio is an AI workstation for Windows, macOS, and Linux. Chat with multiple models, work with agents, build knowledge bases, create…",
+ "extractor": "heuristic",
+ "readmeHash": "b69e85c5d0f3",
+ "version": 1,
+ "generatedAt": "2026-10-29T21:01:59.271Z"
+}
