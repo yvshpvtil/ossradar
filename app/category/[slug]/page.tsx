@@ -106,7 +106,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
       </div>
       <section className="mb-6">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Category</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {category.label} repos</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{categoryMeta(category).title}</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{category.description}</p>
         {top.length > 0 && (
           <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">

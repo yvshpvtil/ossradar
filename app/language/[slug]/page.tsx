@@ -67,7 +67,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
       </div>
       <section className="mb-6">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Language</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {lang.name} repos</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Trending {lang.name} repos on GitHub</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
           Open-source AI and developer tools written mainly in {lang.name} (the main language GitHub detects in the code), ranked by how many stars they gained.
         </p>
