@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clipWidth, textWidth, repoPageTitle, repoPath, snippetText, websiteRef, pageAlternates, pageNodeIds, ogDefaults } from "@/lib/seo";
+import { breadcrumbLd, clipWidth, officialSite, textWidth, repoPageTitle, repoPath, snippetText, websiteRef, pageAlternates, pageNodeIds, ogDefaults } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -205,6 +205,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
   const daily = getDailyAppearances(repo.fullName);
+  const site = officialSite(repo.homepage);
   const software = {
     "@type": "SoftwareSourceCode",
     // The project's own spelling of its name when its description gives it (SGLang, not sglang),
@@ -214,7 +215,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     url: repo.url,
     description: repo.description || repo.oneLiner,
     codeRepository: repo.url,
-    sameAs: repo.url,
+    // The GitHub repo plus, when the homepage field is the project's own site, that site, so the
+    // page is tied to the official project rather than just a repo slug.
+    sameAs: site ? [repo.url, site] : repo.url,
     isAccessibleForFree: true,
     // Who-it's-for lives here rather than in a separate SoftwareApplication node: Google treats
     // SoftwareApplication as a rich-result type that requires aggregateRating/review, which we

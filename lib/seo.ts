@@ -295,3 +295,23 @@ export function snippetText(s: string): string {
   t = t.replace(/^["“]([^"”]+)["”]/, "$1");
   return t.trim();
 }
+
+/** Hosts that are never a project's own site: code hosts, papers, video, social and chat. */
+const NOT_A_PROJECT_SITE = /(^|\.)(github\.com|gitlab\.com|gitee\.com|arxiv\.org|youtube\.com|youtu\.be|x\.com|twitter\.com|discord\.gg|discord\.com|t\.me|reddit\.com|huggingface\.co|npmjs\.com|pypi\.org|linkedin\.com|medium\.com|bilibili\.com|notion\.site)$/i;
+
+/**
+ * The project's own website from its GitHub "homepage" field, when it is one (an http(s) site that
+ * isn't GitHub, a paper, a package registry or a social profile), for use in sameAs so search
+ * engines and AI tools can tie the page to the project's official site. Otherwise undefined.
+ */
+export function officialSite(homepage: string | null | undefined): string | undefined {
+  if (!homepage?.trim()) return undefined;
+  try {
+    const u = new URL(homepage.trim());
+    if (u.protocol !== "https:" && u.protocol !== "http:") return undefined;
+    if (NOT_A_PROJECT_SITE.test(u.hostname)) return undefined;
+    return u.href;
+  } catch {
+    return undefined;
+  }
+}
