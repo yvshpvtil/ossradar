@@ -33,6 +33,10 @@ export default function HackerNewsPage() {
     const r = byName.get(fullName);
     return r && m.top ? [{ fullName, r, top: m.top }] : [];
   });
+  // Answer-first, data-backed summary for search snippets and AI assistants.
+  const lead = items[0];
+  const showHn = items.filter(({ top }) => /^show hn/i.test(top.title)).length;
+  const mostDiscussed = [...items].sort((a, b) => b.top.comments - a.top.comments)[0];
   const rows = items.map(({ fullName, r }) => ({ name: fullName, url: abs(repoPath(r)) }));
   return (
     <div className="max-w-3xl">
@@ -45,6 +49,16 @@ export default function HackerNewsPage() {
         Tracked open-source repos that were posted to Hacker News (a popular tech discussion site) in the last {DAYS} days, ranked by the
         story&apos;s points (upvotes). &quot;Show HN&quot; posts are makers presenting their own project.
       </p>
+      {lead && (
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          The top story right now is <Link className="underline" href={`/repo/${lead.r.owner}/${lead.r.name}`}>{lead.fullName}</Link> with{" "}
+          {formatNumber(lead.top.points)} points and {formatNumber(lead.top.comments)} comments ({formatDate(lead.top.date)}).
+          {mostDiscussed && mostDiscussed.fullName !== lead.fullName && (
+            <> The most discussed is <Link className="underline" href={`/repo/${mostDiscussed.r.owner}/${mostDiscussed.r.name}`}>{mostDiscussed.fullName}</Link> ({formatNumber(mostDiscussed.top.comments)} comments).</>
+          )}{" "}
+          {showHn} of the {items.length} stories are Show HN posts.
+        </p>
+      )}
       <p className="mt-3 text-xs text-zinc-500">{items.length} repos · HN data from the public HN Algolia API · refreshed every 12 hours</p>
       <h2 id="stories" className="mb-3 mt-6 scroll-mt-6 text-xl font-semibold tracking-tight">Hacker News stories, ranked by points</h2>
       <ol className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">

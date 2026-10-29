@@ -26,6 +26,12 @@ export default function NewPage() {
   const groups = getNewRepos();
   const total = groups.reduce((n, g) => n + g.repos.length, 0);
   const data = getData();
+  // Answer-first, data-backed summary for search snippets and AI assistants: the fastest-rising new repos by 7-day star gain.
+  const all = groups.flatMap((g) => g.repos);
+  const top = [...all].sort((a, b) => b.delta7d - a.delta7d || b.stars - a.stars).slice(0, 3);
+  const weekTotal = all.reduce((n, r) => n + Math.max(0, r.delta7d), 0);
+  const langs = [...all.reduce((m, r) => (r.language ? m.set(r.language, (m.get(r.language) ?? 0) + 1) : m), new Map<string, number>())]
+    .sort((a, b) => b[1] - a[1]).slice(0, 3);
   return (
     <>
       <JsonLd data={collectionPageLd({ name: title, description, path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
@@ -37,6 +43,19 @@ export default function NewPage() {
         Projects created on GitHub in the last {NEW_DAYS} days that are already among the {data.repos.length} fastest-rising
         AI &amp; dev-tool repos we track. Grouped by the day they were created.
       </p>
+      {top.length > 0 && (
+        <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+          Together they gained about {formatNumber(weekTotal)} stars in the last 7 days. Fastest-rising new repos:{" "}
+          {top.map((r, i) => (
+            <span key={r.fullName}>
+              {i > 0 && (i === top.length - 1 ? " and " : ", ")}
+              <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link> (+{formatNumber(r.delta7d)}{r.estimated7d ? "*" : ""}, created {formatDate(r.createdAt)})
+            </span>
+          ))}
+          .{langs.length > 0 && <> Most common languages: {langs.map(([l, n]) => `${l} (${n})`).join(", ")}.</>}
+          {top.some((r) => r.estimated7d) && <span className="text-xs text-zinc-500"> * Partly estimated.</span>}
+        </p>
+      )}
       <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">{total} new repos · last {NEW_DAYS} days · updated {formatDate(data.generatedAt)}</p>
       <div className="mt-6 max-w-xl rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/50">
         <p className="mb-2 text-sm font-medium">Get the top rising repos in your inbox every day</p>
