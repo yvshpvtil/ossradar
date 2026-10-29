@@ -179,6 +179,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-26T02:21:55.985Z"
  },
+ "YOURSJEYO/claude-switcher": {
+  "text": "Manages local setups for multiple Claude accounts and blocks the app from launching if proxy or IP-leak checks fail.",
+  "basis": "4cf5a84bfe68",
+  "source": "claude -p",
+  "generatedAt": "2026-10-29T02:22:39.219Z"
+ },
  "YoyoLin008/mcreplay": {
   "text": "Captures the structure of McDonald's China MCP responses, reports changes between them, and replays them locally over MCP.",
   "basis": "992795a41f52",
@@ -275,6 +281,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:04.388Z"
  },
+ "dengmeiluan/ticket-monitoring": {
+  "text": "Self-hosted tool that tracks airfares on five Chinese booking sites and sends DingTalk alerts when prices hit your target.",
+  "basis": "fa0dd9bfc5a9",
+  "source": "claude -p",
+  "generatedAt": "2026-10-29T02:22:37.196Z"
+ },
  "didilili/ai-agents-from-zero": {
   "text": "Chinese AI agent course with a learning path, projects and interview prep, covering LangChain, LangGraph, MCP and RAG.",
   "basis": "bd7bc2247364",
@@ -286,6 +298,12 @@
   "basis": "1a3384269c30",
   "source": "claude -p",
   "generatedAt": "2026-10-17T02:23:57.882Z"
+ },
+ "dmoshehun-prog/learn-from-materials": {
+  "text": "Agent skill that turns books, PDFs, slides and other materials into traceable knowledge bases and interactive learning pages.",
+  "basis": "ba46e3f2e0d8",
+  "source": "claude -p",
+  "generatedAt": "2026-10-29T02:22:45.820Z"
  },
  "dofastted/vm2api": {
   "text": "Gateway that exposes Claude and ChatGPT subscriptions as standard APIs using isolated virtual machines or containers.",
@@ -456,10 +474,10 @@
   "generatedAt": "2026-10-14T05:13:49.828Z"
  },
  "mashanglinyu/luanyujia-workbench": {
-  "text": "Methods and shell templates for building a multi-scene AI workbench where each scene has its own panels and AI session.",
-  "basis": "8590511c27ce",
+  "text": "Methods and template for a multi-scene desktop AI workbench with per-scene AI sessions, panels and memory.",
+  "basis": "d4f2521cf777",
   "source": "claude -p",
-  "generatedAt": "2026-10-28T02:23:31.437Z"
+  "generatedAt": "2026-10-29T02:22:39.359Z"
  },
  "omdsh-dev/DSH-better-sidebar": {
   "text": "Extensible sidebar for DeepSeek Harness: files, terminal, side chat, Git and subagents.",
@@ -604,6 +622,12 @@
   "basis": "2b31985bac53",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.889Z"
+ },
+ "xristosstarnetgames439-del/HuiwenMCP": {
+  "text": "Qt app for HarmonyOS PCs that previews PDF and Markdown side by side and converts PDF files to Markdown.",
+  "basis": "104507dd9a81",
+  "source": "claude -p",
+  "generatedAt": "2026-10-29T02:22:37.057Z"
  },
  "yzlin286-wq/Deepscient": {
   "text": "A research workbench on the DeepSeek Harness runtime that guides science work through 12 stages with evidence chains.",
