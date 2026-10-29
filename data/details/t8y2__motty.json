@@ -1,0 +1,12 @@
+{
+ "fullName": "t8y2/motty",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Real PTY sessions, 256-colour and true-colour output, the alternate screen, 5,000 lines of scrollback, wide and combining characters, mouse…",
+ "extractor": "heuristic",
+ "readmeHash": "eb7f04ff20a7",
+ "version": 1,
+ "generatedAt": "2026-10-29T04:04:37.685Z"
+}
