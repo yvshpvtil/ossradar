@@ -1,0 +1,16 @@
+{
+ "fullName": "TonF1917/claude-desktop-multiple-windows-different-api",
+ "whoItsFor": null,
+ "useCases": [
+  "Official + third-party at the same time. The official window keeps your subscription login; other windows run on whatever API cc-switch poin",
+  "A different API per window. Pick a cc-switch provider for each window (it then talks to that provider's upstream directly), or let a window ",
+  "As many windows as you want, in a small GUI in the Anthropic look (English by default, 中文 switch built in)."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "English · 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "ce340ad376f7",
+ "version": 1,
+ "generatedAt": "2026-10-29T16:11:56.358Z"
+}
