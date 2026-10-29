@@ -29,6 +29,14 @@ export const TOPIC_ALIASES: Record<string, string> = {
   "dsh-plugins": "dsh-plugin",
   chatbots: "chatbot",
   "developer-tool": "developer-tools",
+  // More spellings of existing hubs (Oct 29 2026): multiagent / multi-agent-system(s) are multi-agent (17 tracked repos;
+  // brings in langchain, langgraph, TradingAgents, DeepTutor and others), and genai / gen-ai are the common abbreviation
+  // of generative-ai (18; brings in dify, mem0, onyx, LightRAG).
+  multiagent: "multi-agent",
+  "multi-agent-system": "multi-agent",
+  "multi-agent-systems": "multi-agent",
+  genai: "generative-ai",
+  "gen-ai": "generative-ai",
 };
 
 /**
