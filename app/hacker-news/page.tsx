@@ -44,7 +44,7 @@ export default function HackerNewsPage() {
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Repos trending on Hacker News</h1>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">GitHub repos trending on Hacker News</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         Tracked open-source repos that were posted to Hacker News (a popular tech discussion site) in the last {DAYS} days, ranked by the
         story&apos;s points (upvotes). &quot;Show HN&quot; posts are makers presenting their own project.

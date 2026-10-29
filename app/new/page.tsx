@@ -38,7 +38,7 @@ export default function NewPage() {
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "New repos", path: "/new" }])} />
       <PageNav crumbs={[{ name: "New repos" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Updated hourly</p>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">New repos, day by day</h1>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">New open-source AI &amp; dev-tool repos, day by day</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
         Projects created on GitHub in the last {NEW_DAYS} days that are already among the {data.repos.length} fastest-rising
         AI &amp; dev-tool repos we track. Grouped by the day they were created.

@@ -52,7 +52,7 @@ export default function DailyIndex() {
       )}
       <PageNav crumbs={[{ name: "Daily archive" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive</h1>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive of rising GitHub repos</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         The repos that gained the most GitHub stars on each day, measured from our daily snapshots (a saved star count for every tracked repo, once per UTC day).
       </p>

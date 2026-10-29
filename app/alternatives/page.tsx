@@ -63,7 +63,7 @@ export default function AlternativesIndex() {
       />
       <PageNav crumbs={[{ name: "Alternatives" }]} fallbackHref="/" />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Alternatives</p>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Open-source alternatives</h1>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Open-source alternatives to rising GitHub repos</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         {SITE.name} lists open-source alternatives for {total} of the repos it tracks. An alternative is another tracked repo in the same category that shares at
         least two GitHub topics, at least one of them specific rather than a broad tag like llm or mcp, so it works in a similar problem space. Pages with
