@@ -1,0 +1,12 @@
+{
+ "fullName": "davemessew/AgentFlux",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Agentic AI platform for visual workflows and autonomous agents. Import files, automate tasks and keep results local.",
+ "extractor": "heuristic",
+ "readmeHash": "083ad1adcb6a",
+ "version": 1,
+ "generatedAt": "2026-10-29T01:19:26.481Z"
+}

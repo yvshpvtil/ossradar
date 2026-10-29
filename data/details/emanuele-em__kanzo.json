@@ -1,0 +1,12 @@
+{
+ "fullName": "emanuele-em/kanzo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/kanzo-installer.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Kanzo is a kanban board in your browser and an MCP server in one small program, so you and your coding agents work on the same tasks.",
+ "extractor": "heuristic",
+ "readmeHash": "6d701170ac87",
+ "version": 1,
+ "generatedAt": "2026-10-29T01:19:26.472Z"
+}
