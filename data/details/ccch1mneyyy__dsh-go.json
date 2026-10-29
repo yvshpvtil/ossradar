@@ -1,0 +1,12 @@
+{
+ "fullName": "ccch1mneyyy/dsh-go",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "没有关系。dsh-go 是社区开发的非官方客户端，基于开源的 DeepSeek Harness 构建。手机上运行的是 DSH 本身，模型在 DeepSeek 云端，需要联网，按你的账户计费。",
+ "extractor": "heuristic",
+ "readmeHash": "36c52b3def44",
+ "version": 1,
+ "generatedAt": "2026-10-29T18:04:03.215Z"
+}
