@@ -18,6 +18,7 @@ import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
 import { getHourlyStars } from "@/lib/hourly";
+import { repoLastmod } from "@/lib/lastmod";
 import { getDailyAppearances } from "@/lib/daily";
 import { getHnMentions } from "@/lib/mentions";
 import { repoTopics, topicHref, topicLabel } from "@/lib/topics";
@@ -235,7 +236,8 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     license: repo.license?.spdx ? `https://spdx.org/licenses/${repo.license.spdx}.html` : undefined,
   };
   // The page itself (an OSS Radar profile of the repo, rebuilt hourly) is a separate thing from the
-  // repo it describes: say so, with when its numbers were last refreshed and the card it shares.
+  // repo it describes: say so, with when its numbers last changed (the same day the sitemap gives as lastmod,
+  // not the hourly build time) and the card it shares.
   const pagePath = repoPath(repo);
   const jsonLd = {
     "@context": "https://schema.org",
@@ -244,7 +246,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     name: repoPageTitle(repo),
     description: repoMetaDescription(repo),
     url: `${SITE.url}${pagePath}`,
-    dateModified: getData().generatedAt,
+    dateModified: repoLastmod(repo, new Date(getData().generatedAt)),
     inLanguage: "en",
     isPartOf: websiteRef,
     primaryImageOfPage: { "@type": "ImageObject", url: `${SITE.url}${pagePath}/opengraph-image`, width: 1200, height: 630 },
