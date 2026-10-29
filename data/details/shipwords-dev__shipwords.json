@@ -1,0 +1,12 @@
+{
+ "fullName": "shipwords-dev/shipwords",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source framework for new-keyword site fleets: a new site in an afternoon, taking payments the day it launches.",
+ "extractor": "heuristic",
+ "readmeHash": "9244397d4849",
+ "version": 1,
+ "generatedAt": "2026-10-29T02:14:02.352Z"
+}
