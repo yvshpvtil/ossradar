@@ -1,0 +1,16 @@
+{
+ "fullName": "guilyx/grip",
+ "whoItsFor": null,
+ "useCases": [
+  "Five questions from your diff, graded against a hidden rubric into a Grip Score out of 100. Never line numbers or trivia.",
+  "`grip whiteboard`: your change drawn as parts and arrows in the browser, with the questions pinned to it, including what a malicious actor c",
+  "Works with what you have: reuse Claude Code, Codex or Gemini CLI as the model (no API key), or use Anthropic, any OpenAI-compatible API, or "
+ ],
+ "installCommand": "pipx install grip-hook                 # or: uv tool install grip-hook",
+ "source": "readme",
+ "readmeSummary": "A git hook that won't let you push code you can't explain.",
+ "extractor": "heuristic",
+ "readmeHash": "d43546473e4c",
+ "version": 1,
+ "generatedAt": "2026-10-29T19:12:13.904Z"
+}
