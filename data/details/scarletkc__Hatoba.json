@@ -1,0 +1,16 @@
+{
+ "fullName": "scarletkc/Hatoba",
+ "whoItsFor": null,
+ "useCases": [
+  "AI assistant: reads the screen, runs commands, edits files on the host or your own computer, and searches the web. You approve its actions, ",
+  "Hosts: groups, tags, fuzzy search, `~/.ssh/config` import, ProxyJump, and proxies. Type `ssh user@host` in the search box to connect without",
+  "Resource usage: the CPU, memory, disks, and network of every saved host, read over SSH with nothing to install on the servers."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Open-source desktop SSH client with an AI assistant and end-to-end encrypted sync through your own Cloudflare account",
+ "extractor": "heuristic",
+ "readmeHash": "3c0fdf6398a8",
+ "version": 1,
+ "generatedAt": "2026-10-29T05:03:51.719Z"
+}
