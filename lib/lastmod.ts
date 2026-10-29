@@ -28,3 +28,19 @@ export function alternativesLastmod(r: Repo, cap: Date): string {
   }
   return latest;
 }
+
+/**
+ * Last day the hand-written copy of each static page changed. Hard-coded on purpose: Vercel clones shallow, so git dates
+ * aren't available at build time. Bump the date when you edit that page's copy.
+ */
+export const STATIC_LASTMOD = {
+  about: "2026-10-24",
+  submit: "2026-10-25",
+  sponsor: "2026-10-24",
+} as const;
+
+/** /sponsor also shows the live snapshot count, which grows once a day, so it moves daily (day precision). */
+export function sponsorLastmod(cap: Date): string {
+  const capDay = cap.toISOString().slice(0, 10);
+  return capDay > STATIC_LASTMOD.sponsor ? capDay : STATIC_LASTMOD.sponsor;
+}

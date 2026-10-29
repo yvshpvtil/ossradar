@@ -7,7 +7,7 @@ import { getLanguages } from "@/lib/languages";
 import { getArchiveDays } from "@/lib/daily";
 import { getTopics } from "@/lib/topics";
 import { alternativesPath, getAlternativesRepos } from "@/lib/alternatives";
-import { alternativesLastmod, repoLastmod } from "@/lib/lastmod";
+import { STATIC_LASTMOD, alternativesLastmod, repoLastmod, sponsorLastmod } from "@/lib/lastmod";
 import { isThinRepo } from "@/lib/thin";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: SITE.url, lastModified, changeFrequency: "hourly", priority: 1 },
     { url: `${SITE.url}/new`, lastModified, changeFrequency: "hourly", priority: 0.9 },
-    { url: `${SITE.url}/sponsor`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE.url}/sponsor`, lastModified: sponsorLastmod(lastModified), changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/daily`, lastModified, changeFrequency: "daily", priority: 0.7 },
     ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, lastModified: new Date(`${d}T23:59:59Z`), changeFrequency: "yearly" as const, priority: 0.5 })),
     { url: `${SITE.url}/hacker-news`, lastModified, changeFrequency: "daily", priority: 0.7 },
@@ -25,8 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/category`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/language`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/compare`, lastModified, changeFrequency: "daily", priority: 0.5 },
-    { url: `${SITE.url}/submit`, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${SITE.url}/about`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${SITE.url}/submit`, lastModified: STATIC_LASTMOD.submit, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${SITE.url}/about`, lastModified: STATIC_LASTMOD.about, changeFrequency: "monthly", priority: 0.4 },
     ...CATEGORIES.map((c) => ({
       url: `${SITE.url}/category/${c.slug}`,
       lastModified,
