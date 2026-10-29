@@ -246,13 +246,14 @@ export const twitterImage = { images: [SITE_OG_IMAGE] };
  * Hub meta descriptions: a fixed lead sentence plus the hub's current weekly leader, so the
  * 70+ topic/language hubs don't share one near-identical template. Tries the longest variant
  * that fits `max` (tails are tried in order, longest first) and falls back to the plain lead
- * with the first tail, so nothing gets cut mid-sentence.
+ * with the first tail, so nothing gets cut mid-sentence. `leader.label` (altLabel: the project's own
+ * spelling, or owner/name for generic or duplicate names) is shown instead of the raw slug when given.
  */
-export function hubDescription(lead: string, tails: string[], leader: Pick<Repo, "name" | "delta7d" | "estimated7d"> | undefined, max = 155): string {
+export function hubDescription(lead: string, tails: string[], leader: (Pick<Repo, "name" | "delta7d" | "estimated7d"> & { label?: string }) | undefined, max = 155): string {
   const variants: string[] = [];
   if (leader && leader.delta7d > 0) {
     const gain = `${leader.estimated7d ? "about " : ""}+${formatNumber(leader.delta7d)} stars`;
-    const withLeader = `${lead} Leading this week: ${leader.name} (${gain}).`;
+    const withLeader = `${lead} Leading this week: ${leader.label ?? leader.name} (${gain}).`;
     variants.push(...tails.map((t) => `${withLeader} ${t}`), withLeader);
   }
   variants.push(...tails.map((t) => `${lead} ${t}`));

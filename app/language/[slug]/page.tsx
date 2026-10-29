@@ -1,3 +1,4 @@
+import { altLabel } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
@@ -27,7 +28,7 @@ function languageMeta(lang: NonNullable<ReturnType<typeof getLanguage>>) {
   const title = `Trending ${lang.name} repos on GitHub`;
   const socialTitle = `${title}: ${lang.count} rising projects`;
   const leader = rankRepos(getReposByLanguage(lang.name), "week")[0];
-  const description = hubDescription(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained.`, [`${lang.count} tracked, updated hourly on ${SITE.name}.`, `${lang.count} tracked, updated hourly.`, `${lang.count} tracked.`], leader);
+  const description = hubDescription(`The fastest-rising open-source ${lang.name} AI and developer-tool repos on GitHub, ranked by stars gained.`, [`${lang.count} tracked, updated hourly on ${SITE.name}.`, `${lang.count} tracked, updated hourly.`, `${lang.count} tracked.`], leader && { ...leader, label: altLabel(leader) });
   return { title, socialTitle, description };
 }
 

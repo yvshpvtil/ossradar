@@ -1,3 +1,4 @@
+import { altLabel } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
@@ -28,7 +29,7 @@ function topicMeta(slug: string) {
   const title = `Trending ${label} GitHub repos`;
   const socialTitle = `${title}: ${n} rising projects`;
   const leader = rankRepos(getReposByTopic(slug), "week")[0];
-  const description = hubDescription(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained.`, [`${n} tracked, updated hourly on ${SITE.name}.`, `${n} tracked, updated hourly.`, `${n} tracked.`], leader);
+  const description = hubDescription(`The fastest-rising open-source ${label} repos on GitHub, ranked by stars gained.`, [`${n} tracked, updated hourly on ${SITE.name}.`, `${n} tracked, updated hourly.`, `${n} tracked.`], leader && { ...leader, label: altLabel(leader) });
   return { title, socialTitle, description };
 }
 
