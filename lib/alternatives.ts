@@ -157,7 +157,22 @@ let dupNames: Set<string> | null = null;
  * what people search for ("dify alternatives"), but owner/name when the bare name is ambiguous: made only
  * of generic words (wshobson/agents, anbeime/skill) or shared by two tracked repos (two OpenBots).
  */
-export function altLabel(r: Pick<Repo, "owner" | "name">): string {
+/**
+ * The project's own capitalization of its name, when its GitHub description
+ * spells it out (sglang -> "SGLang", ragflow -> "RAGFlow", context7 -> "Context7").
+ * GitHub repo slugs are often lowercase while the project brands itself
+ * otherwise; titles read better, and match how people write the name, with the
+ * project's own spelling. Only a whole-token, case-insensitive match counts.
+ */
+function brandName(r: Pick<Repo, "name"> & { description?: string | null }): string {
+  const desc = r.description ?? "";
+  if (!desc || r.name !== r.name.toLowerCase()) return r.name;
+  const esc = r.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = desc.match(new RegExp(`(?<![\\w/-])${esc}(?![\\w/-])`, "i"));
+  return m && m[0] !== r.name ? m[0] : r.name;
+}
+
+export function altLabel(r: Pick<Repo, "owner" | "name"> & { description?: string | null }): string {
   if (!dupNames) {
     const seen = new Map<string, number>();
     for (const x of getRepos()) seen.set(x.name.toLowerCase(), (seen.get(x.name.toLowerCase()) ?? 0) + 1);
@@ -165,5 +180,5 @@ export function altLabel(r: Pick<Repo, "owner" | "name">): string {
   }
   const words = r.name.toLowerCase().split(/[-_.\s]+/).filter(Boolean);
   const generic = words.length > 0 && words.every((w) => GENERIC_NAME_WORDS.has(w));
-  return generic || dupNames.has(r.name.toLowerCase()) ? `${r.owner}/${r.name}` : r.name;
+  return generic || dupNames.has(r.name.toLowerCase()) ? `${r.owner}/${r.name}` : brandName(r);
 }
