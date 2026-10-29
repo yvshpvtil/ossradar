@@ -7,16 +7,8 @@ import { getLanguages } from "@/lib/languages";
 import { getArchiveDays } from "@/lib/daily";
 import { getTopics } from "@/lib/topics";
 import { alternativesPath, getAlternativesRepos } from "@/lib/alternatives";
-import type { Repo } from "@/lib/types";
+import { alternativesLastmod, repoLastmod } from "@/lib/lastmod";
 import { isThinRepo } from "@/lib/thin";
-
-/** Last day the repo's data actually changed (latest snapshot with a different star count), else its last code push. */
-function repoLastmod(r: Repo, fallback: Date): Date {
-  const h = r.history;
-  for (let i = h.length - 1; i > 0; i--) if (h[i].stars !== h[i - 1].stars) return new Date(`${h[i].date}T23:59:59Z`) > fallback ? fallback : new Date(`${h[i].date}T23:59:59Z`);
-  const p = new Date(r.pushedAt);
-  return p > fallback ? fallback : p;
-}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getData();
@@ -67,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...getAlternativesRepos().map((r) => ({
       url: `${SITE.url}${alternativesPath(r)}`,
-      lastModified,
+      lastModified: alternativesLastmod(r, lastModified),
       changeFrequency: "weekly" as const,
       priority: 0.5,
     })),

@@ -13,6 +13,7 @@ import { getData } from "@/lib/data";
 import { canonicalTopic, getTopics, repoTopics, topicHref, topicLabel } from "@/lib/topics";
 import type { Repo } from "@/lib/types";
 import { SITE } from "@/lib/site";
+import { alternativesLastmod } from "@/lib/lastmod";
 
 export function generateStaticParams() {
   return getAlternativesRepos().map((r) => ({ owner: r.owner, name: r.name }));
@@ -87,7 +88,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             name: alternativesMeta(repo).title,
             description: alternativesMeta(repo).description,
             path,
-            dateModified: getData().generatedAt,
+            dateModified: alternativesLastmod(repo, new Date(getData().generatedAt)).toISOString(),
             ogCard: true,
             mainEntity: {
               "@type": "ItemList",
