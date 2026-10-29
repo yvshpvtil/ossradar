@@ -6,8 +6,8 @@ import { EstimateNote } from "@/components/EstBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Leaderboard } from "@/components/Leaderboard";
 import { CATEGORIES } from "@/lib/categories";
-import { getData } from "@/lib/data";
-import { formatDate } from "@/lib/format";
+import { deltaFor, getData } from "@/lib/data";
+import { formatDate, formatNumber } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
 import { hubLeaderProps } from "@/lib/leader";
 import { breadcrumbLd, collectionPageLd, itemListLd, ogDefaults, pageAlternates } from "@/lib/seo";
@@ -37,6 +37,19 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
   if (!l) notFound();
   const repos = l.select();
   const path = `/trending/${l.slug}`;
+  // Answer-first, data-backed summary for search snippets and AI assistants: who leads this view right now,
+  // what the top 10 gained together, and which categories dominate it (linked, so the landing cross-links its hubs).
+  const period = l.slug === "github-repos-today" ? "today" : "week";
+  const windowText = period === "today" ? "the last 24 hours" : "the last 7 days";
+  const top10 = repos.slice(0, 10).filter((r) => deltaFor(r, period) > 0);
+  const leaders = top10.slice(0, 3);
+  const top10Total = top10.reduce((n, r) => n + deltaFor(r, period), 0);
+  const est = (r: (typeof repos)[number]) => (period === "today" ? r.estimated24h : r.estimated7d);
+  const catCounts = top10.reduce((m, r) => m.set(r.category, (m.get(r.category) ?? 0) + 1), new Map<string, number>());
+  const topCats = CATEGORIES.map((c) => ({ ...c, n: catCounts.get(c.slug) ?? 0 }))
+    .filter((c) => c.n >= 2 && c.slug !== "other")
+    .sort((a, b) => b.n - a.n)
+    .slice(0, 2);
   return (
     <>
       <JsonLd data={collectionPageLd({ name: l.title, description: l.description, path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(l.h1, repos) })} />
@@ -45,6 +58,31 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
       <section className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{l.h1}</h1>
         <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{l.intro}</p>
+        {leaders.length > 0 && (
+          <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+            The top {top10.length} gained about {formatNumber(top10Total)} stars in {windowText}. Leading right now:{" "}
+            {leaders.map((r, i) => (
+              <span key={r.fullName}>
+                {i > 0 && (i === leaders.length - 1 ? " and " : ", ")}
+                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link> (+{formatNumber(deltaFor(r, period))}{est(r) ? "*" : ""})
+              </span>
+            ))}
+            .
+            {topCats.length > 0 && (
+              <>
+                {" "}Most common in the top {top10.length}:{" "}
+                {topCats.map((c, i) => (
+                  <span key={c.slug}>
+                    {i > 0 && " and "}
+                    <Link className="underline" href={`/category/${c.slug}`}>{c.label}</Link> ({c.n})
+                  </span>
+                ))}
+                .
+              </>
+            )}
+            {leaders.some(est) && <span className="text-xs text-zinc-500"> * Estimated.</span>}
+          </p>
+        )}
         <p className="mt-1 text-xs text-zinc-500">{repos.length} repos · updated {formatDate(getData().generatedAt)}</p>
       </section>
       <h2 id="leaderboard" className="mb-3 scroll-mt-6 text-xl font-semibold tracking-tight">Leaderboard</h2>
