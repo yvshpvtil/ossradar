@@ -24,7 +24,7 @@ import { getHnMentions } from "@/lib/mentions";
 import { repoTopics, topicHref, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
-import { altLabel, alternativesPath, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, brandName, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease, releaseVersion } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
@@ -207,7 +207,9 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const daily = getDailyAppearances(repo.fullName);
   const software = {
     "@type": "SoftwareSourceCode",
-    name: repo.name,
+    // The project's own spelling of its name when its description gives it (SGLang, not sglang),
+    // matching the alternatives page; the owner/name slug stays as alternateName.
+    name: brandName(repo),
     alternateName: repo.fullName,
     url: repo.url,
     description: repo.description || repo.oneLiner,

@@ -164,7 +164,7 @@ let dupNames: Set<string> | null = null;
  * otherwise; titles read better, and match how people write the name, with the
  * project's own spelling. Only a whole-token, case-insensitive match counts.
  */
-function brandName(r: Pick<Repo, "name"> & { description?: string | null }): string {
+export function brandName(r: Pick<Repo, "name"> & { description?: string | null }): string {
   const desc = r.description ?? "";
   if (!desc || r.name !== r.name.toLowerCase()) return r.name;
   const esc = r.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
