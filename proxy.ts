@@ -32,6 +32,12 @@ const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily
 /** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
 const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
+/** Id of the one card each hub, repo and alternatives page generates (generateImageMetadata in its opengraph-image.tsx). */
+const CARD_ID = "card";
+
+/** True when `rest` (path parts after the page path) is that page's card route exactly as generated. */
+const isCardPath = (rest: string[]) => rest.length === 2 && rest[0] === "opengraph-image" && rest[1] === CARD_ID;
+
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 /** Body of the 410 answer for a repo that has left the tracked set. */
@@ -89,6 +95,13 @@ export function proxy(req: NextRequest) {
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
 
+  // Cards moved from {page}/opengraph-image to {page}/opengraph-image/card when they gained
+  // per-page alt text; 308 the old address so previews already shared keep their image.
+  const pagePartCount = section === "repo" || section === "alternatives" ? 3 : 2;
+  if (raw.length === pagePartCount + 1 && raw[pagePartCount] === "opengraph-image" && (section === "repo" || section === "alternatives" || Object.hasOwn(HUBS, section))) {
+    return redirectTo(`/${raw.map(encodeURIComponent).join("/")}/${CARD_ID}`);
+  }
+
   if (section === "repo") {
     if (parts.length < 3) return notFound();
     const repo = getRepo(parts[1], parts[2]);
@@ -99,7 +112,7 @@ export function proxy(req: NextRequest) {
   } else if (section === "alternatives" && parts.length > 1) {
     // Bare /alternatives is the index page; only owner/name paths are checked.
     // Owner/name, plus that page's Open Graph card route.
-    const ok = parts.length === 3 || (parts.length === 4 && parts[3] === "opengraph-image" && raw[0] === "alternatives");
+    const ok = parts.length === 3 || (isCardPath(raw.slice(3)) && raw[0] === "alternatives");
     const repo = ok ? getRepo(parts[1], parts[2]) : undefined;
     if (!repo || !hasAlternativesPage(repo)) return notFound();
     const canonical = `/alternatives/${repo.owner}/${repo.name}`;
@@ -113,7 +126,7 @@ export function proxy(req: NextRequest) {
   } else if (parts.length > 1 && Object.hasOwn(HUBS, section)) {
     // Bare /category, /language, /topic and /daily are index pages; only hub paths are checked:
     // the slug page, plus its Open Graph card route when requested exactly as generated.
-    const card = parts.length === 3 && parts[2] === "opengraph-image" && raw[0] === section && raw[1] === slug;
+    const card = isCardPath(raw.slice(2)) && raw[0] === section && raw[1] === slug;
     if ((parts.length > 2 && !card) || !HUBS[section](slug)) return notFound();
     if (!card && raw[0] + "/" + raw[1] !== `${section}/${slug}`) return redirectTo(`/${section}/${slug}`);
   }
