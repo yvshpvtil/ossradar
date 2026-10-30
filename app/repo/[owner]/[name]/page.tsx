@@ -93,6 +93,15 @@ function metaLead(text: string, room: number): string {
   return out || clipWidth(t, room).replace(/[\s,;:(\-–—/]+…$/, "…");
 }
 
+/** "a, b, c d e…" -> "a, b…": back a word-clip up to its last clause break (, ; : — –) when that keeps 60%+ of it. */
+function clauseClip(clipped: string): string {
+  const body = clipped.replace(/…$/, "");
+  let cut = -1;
+  for (const m of body.matchAll(/[,;:，；：]\s|\s[—–]\s/g)) cut = m.index;
+  if (cut >= body.length * 0.6) return `${body.slice(0, cut).replace(/[\s,;:(\-–—/]+$/, "")}…`;
+  return clipped;
+}
+
 /**
  * Short GitHub descriptions ("Build resilient agents.") leave repo metas at ~90 chars, mostly boilerplate.
  * Fill the spare room with real facts from the page (language, age, forks, latest release), inserted before
@@ -135,6 +144,9 @@ function repoMetaDescription(repo: Repo): string {
     const shortStats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days.`;
     const whole = metaLead(text, 155 - shortStats.length - 1);
     if (whole && !whole.endsWith("…")) return `${/[.!?。]$/.test(whole) ? whole : `${whole}.`} ${shortStats}`;
+    // Still too long: give the one-liner that extra room anyway and end at a clause boundary
+    // (comma, colon, dash) instead of mid-phrase ("…track breaking news, time…").
+    if (whole) return `${clauseClip(whole)} ${shortStats}`;
   }
   const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
   return withFacts(base, repo);
