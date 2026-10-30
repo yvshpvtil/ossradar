@@ -1,0 +1,12 @@
+{
+ "fullName": "boardshogunfluctuate/Capri-AI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Tell your PC what to do. Capri is a cyberpunk AI agent that works with your files, projects and code through Claude Code…",
+ "extractor": "heuristic",
+ "readmeHash": "8e818456b665",
+ "version": 1,
+ "generatedAt": "2026-10-30T22:55:17.524Z"
+}

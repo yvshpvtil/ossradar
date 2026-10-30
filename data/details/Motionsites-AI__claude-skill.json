@@ -1,0 +1,12 @@
+{
+ "fullName": "Motionsites-AI/claude-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install playwright && python -m playwright install chromium",
+ "source": "readme",
+ "readmeSummary": "Make Claude build award-level, cinematic landing pages instead of average AI layouts.",
+ "extractor": "heuristic",
+ "readmeHash": "08302d445da6",
+ "version": 1,
+ "generatedAt": "2026-10-30T22:55:17.566Z"
+}
