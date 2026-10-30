@@ -30,6 +30,28 @@ export function preferEnglish(text: string): string {
   return english.replace(/[^a-z]/gi, "").length >= 20 && looksLikePhrase(english) ? english : text;
 }
 
+const CJK_CHAR = CJK.source.slice(0, -1).replace(/^\[/, ""); // character class body, no flags
+const CJK_GLOSS = new RegExp(`\\s*[（(][${CJK_CHAR}\\s]+[)）]`, "g");
+const CJK_RUN = new RegExp(`[A-Za-z0-9]*[${CJK_CHAR}]+(?:[A-Za-z0-9]*[${CJK_CHAR}]+)*[A-Za-z0-9]*`, "g");
+
+/**
+ * In a mostly-English line (under 5% CJK), drop the stray CJK left inside it, which English readers
+ * can't use: a parenthetical gloss ("Comi (可米)"), a tag glued to a sentence ("skill.Claude防封实战 It"),
+ * and turn CJK corner quotes into ordinary ones ("「agent harness」"). Mostly-CJK lines are left to
+ * preferEnglish() and the English overrides in data/blurbs.json.
+ */
+export function stripCjkFragments(text: string): string {
+  if (!text.match(CJK) || cjkRatio(text) >= 0.05) return text;
+  const t = text
+    .replace(/[「『]([^」』]*)[」』]/g, "“$1”")
+    .replace(CJK_GLOSS, "")
+    .replace(CJK_RUN, " ")
+    .replace(/\s+([.,;:!?])/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+  return t.replace(/[^\p{L}\p{N}]/gu, "").length >= 8 ? t : text;
+}
+
 /** Cap at `max` chars, cutting at the last sentence end if one is reasonably late, else at a word boundary + "…". */
 export function cap(text: string, max = BLURB_MAX): string {
   if (text.length <= max) return text;
@@ -59,7 +81,7 @@ export function stripEmoji(text: string): string {
 export function cleanBlurb(text: string | null | undefined, max = BLURB_MAX): string | null {
   if (!text) return null;
   let t = collapse(stripEmoji(text.replace(/:[a-z0-9_+-]+:/gi, " "))); // GitHub :emoji: shortcodes and Unicode emoji
-  t = collapse(preferEnglish(t));
+  t = collapse(stripCjkFragments(preferEnglish(t)));
   if (t.replace(/[^\p{L}\p{N}]/gu, "").length < 8) return null;
   return cap(t, max);
 }
