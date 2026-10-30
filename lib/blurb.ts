@@ -52,14 +52,30 @@ export function stripCjkFragments(text: string): string {
   return t.replace(/[^\p{L}\p{N}]/gu, "").length >= 8 ? t : text;
 }
 
-/** Cap at `max` chars, cutting at the last sentence end if one is reasonably late, else at a word boundary + "…". */
+// A word-clip ending on one of these reads as cut mid-phrase ("…and replay every outcome before…", "…one CLI, zero…").
+const DANGLING = /\s(?:a|an|the|and|or|nor|but|of|for|to|with|without|in|on|at|by|from|into|onto|via|as|than|that|which|who|your|its|their|our|my|is|are|be|before|after|while|zero|every|each|any|all|no|not|so)$/i;
+
+/**
+ * Cap at `max` chars, cutting at the last sentence end if one is reasonably late, else at a word boundary + "…".
+ * When that word-clip would end on a dangling word, back up to the last clause break (, ; : — –) if that keeps
+ * 60%+ of it, else drop the dangling words: "…time every entry and exit, and replay every outcome before…"
+ * becomes "…time every entry and exit…".
+ */
 export function cap(text: string, max = BLURB_MAX): string {
   if (text.length <= max) return text;
   const cut = text.slice(0, max + 1);
   const sentence = Math.max(...[". ", "! ", "? ", "。"].map((p) => cut.lastIndexOf(p)));
   if (sentence >= max * 0.5) return cut.slice(0, sentence + 1).trim();
   const space = cut.lastIndexOf(" ");
-  return `${cut.slice(0, space > max * 0.5 ? space : max).replace(/[\s,;:.\-–—(]+$/, "")}…`;
+  let body = cut.slice(0, space > max * 0.5 ? space : max).replace(/[\s,;:.\-–—(]+$/, "");
+  if (DANGLING.test(body)) {
+    let clause = -1;
+    for (const m of body.matchAll(/[,;:，；：]\s|\s[—–]\s/g)) clause = m.index;
+    if (clause >= body.length * 0.6) body = body.slice(0, clause);
+    else while (DANGLING.test(body)) body = body.replace(DANGLING, "");
+    body = body.replace(/[\s,;:(\-–—/&]+$/, "");
+  }
+  return `${body}…`;
 }
 
 // Unicode emoji runs (pictographs plus variation selector, ZWJ, skin tones, keycaps). (c), (r) and (tm) signs are
