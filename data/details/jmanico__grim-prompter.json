@@ -1,0 +1,12 @@
+{
+ "fullName": "jmanico/grim-prompter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Threat model your project with Claude Code, Codex, or another coding agent.",
+ "extractor": "heuristic",
+ "readmeHash": "466c41ff50de",
+ "version": 1,
+ "generatedAt": "2026-10-30T20:59:02.865Z"
+}

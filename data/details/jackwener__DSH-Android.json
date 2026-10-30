@@ -1,0 +1,12 @@
+{
+ "fullName": "jackwener/DSH-Android",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "不要 root，不用电脑，直接跑在你的安卓手机上。真正的手机 Agent，替你把手机上的事干完。",
+ "extractor": "heuristic",
+ "readmeHash": "8b1511e00350",
+ "version": 1,
+ "generatedAt": "2026-10-30T20:59:02.838Z"
+}
