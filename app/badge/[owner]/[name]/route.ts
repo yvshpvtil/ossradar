@@ -22,6 +22,10 @@ export async function GET(_req: Request, { params }: { params: Promise<{ owner: 
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
       "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+      // Badges are embedded in READMEs across GitHub, so crawlers find thousands of copies of a
+      // 20px SVG. They're not a useful search or image result; keep them out of the index (the
+      // repo page they link to is the page to rank).
+      "X-Robots-Tag": "noindex",
     },
   });
 }
