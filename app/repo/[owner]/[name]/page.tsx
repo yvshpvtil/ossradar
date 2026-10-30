@@ -127,7 +127,15 @@ function trackedLabel(repo: Repo): string {
 function repoMetaDescription(repo: Repo): string {
   // Stats always survive: clip the (English-preferred) one-liner to whatever room the stats line leaves.
   const stats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days. ${trackedLabel(repo)} repo tracked by ${SITE.name}.`;
-  const lead = metaLead(repo.oneLiner || repo.description || "", 155 - stats.length);
+  const text = repo.oneLiner || repo.description || "";
+  const lead = metaLead(text, 155 - stats.length);
+  if (lead.endsWith("…")) {
+    // Rather than cut the project's own one-liner mid-phrase, drop the "tracked by" boilerplate
+    // (the title already names OSS Radar) when that lets a whole sentence fit beside the numbers.
+    const shortStats = `${formatNumber(repo.stars)} stars, ${formatDelta(repo.delta7d)} in 7 days.`;
+    const whole = metaLead(text, 155 - shortStats.length - 1);
+    if (whole && !whole.endsWith("…")) return `${/[.!?。]$/.test(whole) ? whole : `${whole}.`} ${shortStats}`;
+  }
   const base = lead ? `${/[.!?…。]$/.test(lead) ? lead : `${lead}.`} ${stats}` : stats;
   return withFacts(base, repo);
 }
