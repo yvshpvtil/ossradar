@@ -51,7 +51,11 @@ function aboutText(repo: Repo): string {
   const cat = categoryLabel(repo.category);
   const lang = repo.language ? `a ${repo.language} project` : "a project";
   const est = repo.velocityEstimated ? " (early estimate)" : "";
-  return `${repo.fullName} is ${lang} in the ${cat} category, created ${ageText(repo.createdAt)} ago. It has ${formatNumber(repo.stars)} GitHub stars and ${formatNumber(repo.forks)} forks, and gained ${formatDelta(repo.delta7d)} stars over the last 7 days${est}, ranking #${rank} of ${total} ${cat} repos tracked by ${SITE.name} this week.`;
+  // Name the project the way it spells itself (SGLang, Open WebUI) and keep owner/name beside it, so the
+  // sentence that defines the repo carries both forms people search for.
+  const label = altLabel(repo);
+  const subject = label === repo.fullName || label === repo.name ? repo.fullName : `${label} (${repo.fullName})`;
+  return `${subject} is ${lang} in the ${cat} category, created ${ageText(repo.createdAt)} ago. It has ${formatNumber(repo.stars)} GitHub stars and ${formatNumber(repo.forks)} forks, and gained ${formatDelta(repo.delta7d)} stars over the last 7 days${est}, ranking #${rank} of ${total} ${cat} repos tracked by ${SITE.name} this week.`;
 }
 
 export function generateStaticParams() {
@@ -391,7 +395,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
         <BadgeEmbed owner={repo.owner} name={repo.name} siteUrl={SITE.url} width={badgeSpec(repo).width} />
 
         <section className="mt-6">
-          <h2 className="mb-3 text-xl font-semibold tracking-tight">About {repo.name}</h2>
+          <h2 className="mb-3 text-xl font-semibold tracking-tight">About {altLabel(repo)}</h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">{aboutText(repo)}</p>
           {daily.length > 0 && (
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
