@@ -7,6 +7,7 @@ import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { getArchiveDays, getDailyTop, getDaySummary, type DaySummary } from "@/lib/daily";
 import { categoryLabel } from "@/lib/categories";
+import { altLabel } from "@/lib/alternatives";
 import { formatDate, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 
@@ -15,13 +16,19 @@ export function generateStaticParams() {
   return days.length ? days.map((date) => ({ date })) : [{ date: "none" }];
 }
 
+// A day's gainer by its project name (SGLang, Ollama; owner/name for generic or duplicate names), as hub metas do; untracked repos keep the slug.
+const dayLabel = (e: { fullName: string; repo?: { owner: string; name: string; description?: string | null } }) => {
+  const [owner, name] = e.fullName.split("/");
+  return e.repo ? altLabel(e.repo) : name ?? owner;
+};
+
 // Unique per day: name that day's top gainers (as many as fit ~158 chars) so each archive page's snippet says what's on it.
 function dailyDescription(date: string) {
   const day = formatDate(date);
   const head = `Top rising GitHub repos on ${day}: `;
   const tail = `. See the day's full open-source AI & dev-tool list.`;
   const fallback = `The open-source AI and developer-tool repos that gained the most GitHub stars on ${day}, from ${SITE.name}.`;
-  const items = getDailyTop(date).slice(0, 3).map((e, i) => `${e.fullName.split("/")[1]} (+${formatNumber(e.gained)}${i ? "" : " stars"})`);
+  const items = getDailyTop(date).slice(0, 3).map((e, i) => `${dayLabel(e)} (+${formatNumber(e.gained)}${i ? "" : " stars"})`);
   for (let n = items.length; n > 0; n--) {
     const list = n === 1 ? items[0] : `${items.slice(0, n - 1).join(", ")} and ${items[n - 1]}`;
     const d = `${head}${list}${tail}`;
