@@ -1,0 +1,16 @@
+{
+ "fullName": "heydamir/unslop",
+ "whoItsFor": null,
+ "useCases": [
+  "Audit. Lists every sign of slop with where it lives.",
+  "Direction. Character, world, the one or two moments that carry the color, and a signature detail, all taken from your product.",
+  "Passes. Spacing, color, icons, copy, type, layout, details, visuals and motion, in that order."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Created by Damir Sokolovsky (@heydamir), who started the Unslopping series on X.",
+ "extractor": "heuristic",
+ "readmeHash": "bc9da9e445e4",
+ "version": 1,
+ "generatedAt": "2026-10-30T23:53:07.471Z"
+}
