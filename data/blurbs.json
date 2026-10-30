@@ -143,6 +143,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:55.805Z"
  },
+ "NirDiamant/RAG_Techniques": {
+  "text": "A collection of notebook tutorials covering advanced Retrieval-Augmented Generation (RAG) techniques, from basic to advanced.",
+  "basis": "acd993df1260",
+  "source": "claude -p",
+  "generatedAt": "2026-10-30T02:19:35.758Z"
+ },
  "PDFMathTranslate/PDFMathTranslate": {
   "text": "Translates scientific PDF papers into other languages while preserving layout, formulas, charts and annotations.",
   "basis": "50905c9a9b76",
@@ -244,6 +250,12 @@
   "basis": "5022a84ee9ca",
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "ccch1mneyyy/dsh-go": {
+  "text": "An Android client for DeepSeek Harness that runs on the phone and can also remotely control DSH on your computer.",
+  "basis": "a12962232472",
+  "source": "claude -p",
+  "generatedAt": "2026-10-30T02:19:31.895Z"
  },
  "changexbc/workbuddy-switch": {
   "text": "A desktop app for switching WorkBuddy and CodeBuddy accounts, with credit expiry and token usage monitoring.",
@@ -376,6 +388,12 @@
   "basis": "283a3c6b6664",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:29.559Z"
+ },
+ "jackwener/DeepseekHarness-Android": {
+  "text": "Android app that runs DeepSeek Harness on phones without root or Termux to control apps, settings and automations.",
+  "basis": "724565dce6e3",
+  "source": "claude -p",
+  "generatedAt": "2026-10-30T02:19:33.644Z"
  },
  "jiwoochris/artex-global": {
   "text": "Korean-language edition of ARTEX, an autonomous penetration-testing framework run by multiple LLM agents.",
