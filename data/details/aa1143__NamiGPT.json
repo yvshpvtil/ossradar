@@ -1,0 +1,12 @@
+{
+ "fullName": "aa1143/NamiGPT",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "零基础入门大模型（LLM）的基础教程 从零手写 GPT-2，一行行看懂大模型是怎么工作的",
+ "extractor": "heuristic",
+ "readmeHash": "07117cdc50c1",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.470Z"
+}

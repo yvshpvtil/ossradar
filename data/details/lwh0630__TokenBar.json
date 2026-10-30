@@ -1,0 +1,12 @@
+{
+ "fullName": "lwh0630/TokenBar",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Every AI quota, one glance away. An open-source, cross-platform monitor for AI usage limits, balances and reset times.",
+ "extractor": "heuristic",
+ "readmeHash": "15be848ab5f3",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.466Z"
+}

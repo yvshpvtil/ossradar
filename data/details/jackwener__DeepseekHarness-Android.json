@@ -1,0 +1,12 @@
+{
+ "fullName": "jackwener/DeepseekHarness-Android",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "在安卓手机上运行 DeepSeek Harness（dsh）：用一句话让它整理文件、操作 App、修改系统设置，或者设置自动执行的任务。",
+ "extractor": "heuristic",
+ "readmeHash": "0d894f93c1b3",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.186Z"
+}

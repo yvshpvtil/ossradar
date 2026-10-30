@@ -1,0 +1,12 @@
+{
+ "fullName": "rasbt/LLMs-from-scratch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This repository contains the code for developing, pretraining, and finetuning a GPT-like LLM and is the official code repository for the…",
+ "extractor": "heuristic",
+ "readmeHash": "b342bec66cdb",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.280Z"
+}

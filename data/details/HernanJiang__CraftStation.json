@@ -1,0 +1,12 @@
+{
+ "fullName": "HernanJiang/CraftStation",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Native by default. Personalized by you. CraftStation defaults to a model's native Harness to bring out its full capabilities, preserving the…",
+ "extractor": "heuristic",
+ "readmeHash": "66f50a2a3e9c",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.821Z"
+}

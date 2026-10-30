@@ -1,0 +1,12 @@
+{
+ "fullName": "divagr18/qwenputer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Qwenputer model: Hugging Face · ModelScope Filesystem model: Hugging Face · ModelScope",
+ "extractor": "heuristic",
+ "readmeHash": "c653bd09502b",
+ "version": 1,
+ "generatedAt": "2026-10-30T01:22:44.263Z"
+}
