@@ -1,0 +1,12 @@
+{
+ "fullName": "wenxuanzhang1209-cyber/meetdo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install funasr torch torchaudio numpy",
+ "source": "readme",
+ "readmeSummary": "Open-source Meeting-to-Action AI, by · JKinco Listen. The meeting ends. AI keeps the work moving.",
+ "extractor": "heuristic",
+ "readmeHash": "7a643c114091",
+ "version": 1,
+ "generatedAt": "2026-10-30T19:04:47.658Z"
+}
