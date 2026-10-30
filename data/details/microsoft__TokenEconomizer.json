@@ -1,0 +1,12 @@
+{
+ "fullName": "microsoft/TokenEconomizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "TokenEconomizer is a plugin for Claude Code, Codex, the GitHub Copilot CLI and Pi, with experimental support for opencode.",
+ "extractor": "heuristic",
+ "readmeHash": "984d20f36401",
+ "version": 1,
+ "generatedAt": "2026-10-30T07:20:15.328Z"
+}

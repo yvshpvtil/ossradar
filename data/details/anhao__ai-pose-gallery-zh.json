@@ -1,0 +1,12 @@
+{
+ "fullName": "anhao/ai-pose-gallery-zh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx wrangler pages deploy dist --project-name ai-pose-gallery-zh",
+ "source": "readme",
+ "readmeSummary": "在线演示： 原始站点： 原作者： ギア（@giaaibusi） 中文版维护： Anhao · X @anhaoai GitHub：",
+ "extractor": "heuristic",
+ "readmeHash": "354b56dcaffd",
+ "version": 1,
+ "generatedAt": "2026-10-30T07:20:15.326Z"
+}
