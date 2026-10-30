@@ -1,0 +1,12 @@
+{
+ "fullName": "1llu50ry/mcp-reverse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install && npx tsc",
+ "source": "readme",
+ "readmeSummary": "180+ MCP tools · 56 RE/debug backends · 9 host-side plugins · 4,200+ skills · multi-agent mesh · native x86-64 + ARM64 emulators",
+ "extractor": "heuristic",
+ "readmeHash": "d55f67dd3118",
+ "version": 1,
+ "generatedAt": "2026-10-30T10:09:29.054Z"
+}

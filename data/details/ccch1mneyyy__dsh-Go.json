@@ -1,0 +1,12 @@
+{
+ "fullName": "ccch1mneyyy/dsh-Go",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DSH Go 提供聊天界面、本机运行环境和远程连接，是基于 DeepSeek Harness 的第三方项目。运行在手机上的是 DSH 引擎；模型请求仍由你配置的模型提供方处理。",
+ "extractor": "heuristic",
+ "readmeHash": "963f6bc693eb",
+ "version": 1,
+ "generatedAt": "2026-10-30T10:09:29.020Z"
+}
