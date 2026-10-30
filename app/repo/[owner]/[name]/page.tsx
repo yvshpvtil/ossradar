@@ -24,7 +24,7 @@ import { getHnMentions } from "@/lib/mentions";
 import { repoTopics, topicHref, topicLabel } from "@/lib/topics";
 import { isThinRepo } from "@/lib/thin";
 import { badgeSpec } from "@/lib/badge";
-import { altLabel, alternativesPath, brandName, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, brandName, getRelatedRepos, hasAlternativesPage } from "@/lib/alternatives";
 import { ago, getLatestRelease, releaseVersion } from "@/lib/activity";
 import { HnMentions } from "@/components/HnMentions";
 import { StarChart } from "@/components/StarChart";
@@ -214,8 +214,10 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) notFound();
-  const similar = getSimilarRepos(repo);
+  const similar = getRelatedRepos(repo);
   const related = similar.slice(0, 4);
+  // Compare button: closest related repo, else the old same-category pick so the button always pairs two repos.
+  const compareWith = similar[0] ?? getSimilarRepos(repo)[0];
   const shown = new Set([repo.fullName, ...related.map((r) => r.fullName)]);
   const risingInCat = rankRepos(getReposByCategory(repo.category), "week").filter((r) => !shown.has(r.fullName)).slice(0, 6);
   const todayList = rankRepos(getRepos(), "today");
@@ -334,7 +336,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           <WatchButton fullName={repo.fullName} withLabel />
           <ShareButton path={repoPath(repo)} title={repo.fullName} className="h-9 px-3.5 text-sm" />
           <Link
-            href={`/compare?r=${[repo, ...similar.slice(0, 1)].map((r) => r.fullName).join(",")}`}
+            href={`/compare?r=${[repo, ...(compareWith ? [compareWith] : [])].map((r) => r.fullName).join(",")}`}
             className="inline-flex h-9 items-center rounded-md border border-zinc-300 px-3.5 font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
           >
             Compare

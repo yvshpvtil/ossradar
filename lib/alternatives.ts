@@ -239,3 +239,54 @@ export function altLabel(r: Pick<Repo, "owner" | "name"> & { description?: strin
   const generic = words.length > 0 && words.every((w) => GENERIC_NAME_WORDS.has(w));
   return generic || dupNames.has(r.name.toLowerCase()) ? `${r.owner}/${r.name}` : brandName(r);
 }
+
+const STOP = new Set("about across after agent agents also based build built code coding easy every fast from free full github have into just like local made make model models more most open over powered project repo repos runs simple source that their them then this tool tools using with without your what when where which while will".split(" "));
+/** Distinctive words (4+ letters, no filler) in a repo's GitHub description, singularized crudely. */
+function descWords(r: Repo): Set<string> {
+  const words = (r.description ?? "").toLowerCase().match(/[a-z][a-z0-9-]{3,}/g) ?? [];
+  return new Set(words.map((w) => w.replace(/(?<=[a-z]{3})s$/, "")).filter((w) => !STOP.has(w)));
+}
+let descWeightCache: ((w: string) => number) | null = null;
+function descWeight(w: string): number {
+  if (!descWeightCache) {
+    const repos = getRepos();
+    const freq = new Map<string, number>();
+    for (const r of repos) for (const x of descWords(r)) freq.set(x, (freq.get(x) ?? 0) + 1);
+    const n = repos.length;
+    descWeightCache = (x) => ((freq.get(x) ?? 0) > n * 0.08 ? 0 : Math.log(n / Math.max(1, freq.get(x) ?? 1)));
+  }
+  return descWeightCache(w);
+}
+
+/**
+ * "Related repos" on a repo page: its alternatives first (getAlternatives), then other tracked
+ * repos with real overlap, ranked by what they share: rarer descriptive
+ * GitHub topics (platform, language and framework tags don't count) and distinctive words in
+ * their descriptions, with the same category worth a little more and stars gained this week only
+ * breaking ties. getSimilarRepos() gave any same-category repo a flat 3 points, so a docs MCP
+ * server's list was whichever MCP repos gained the most stars (an n8n workflow kit). Repos with
+ * no meaningful overlap aren't listed; the page's "rising in category" list covers the category.
+ */
+export function getRelatedRepos(repo: Repo, limit = 6): Repo[] {
+  const out: Repo[] = getAlternatives(repo, limit).map((a) => a.repo);
+  if (out.length >= limit) return out;
+  const skip = new Set([repo.fullName, ...out.map((r) => r.fullName)]);
+  const topics = new Set(repoTopics(repo));
+  const words = descWords(repo);
+  const rest = getRepos()
+    .filter((r) => !skip.has(r.fullName))
+    .map((r) => {
+      const shared = repoTopics(r).filter((t) => topics.has(t) && isDescriptiveTopic(t) && isSpecificTopic(t));
+      const topicScore = shared.reduce((s, t) => s + topicWeight(t), 0);
+      let descScore = 0;
+      for (const w of descWords(r)) if (words.has(w)) descScore += descWeight(w);
+      const sameCat = r.category === repo.category && r.category !== "other";
+      const score = topicScore + 0.7 * descScore + (sameCat ? 1.5 : 0) + (r.language && r.language === repo.language ? 0.25 : 0);
+      return { r, score, overlap: topicScore + 0.7 * descScore };
+    })
+    .filter((x) => x.overlap >= 4)
+    .sort((a, b) => b.score - a.score || b.r.delta7d - a.r.delta7d)
+    .slice(0, limit - out.length)
+    .map((x) => x.r);
+  return [...out, ...rest];
+}
