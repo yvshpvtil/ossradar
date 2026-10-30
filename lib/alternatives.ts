@@ -193,13 +193,26 @@ const KNOWN_BRANDS: Record<string, string> = {
   "onyx-dot-app/onyx": "Onyx",
   "github/github-mcp-server": "GitHub MCP Server",
   "chromedevtools/chrome-devtools-mcp": "Chrome DevTools MCP",
+  "qwenlm/qwen-code": "Qwen Code",
+  "google/langextract": "LangExtract",
+  "comet-ml/opik": "Opik",
+  "openai/openai-agents-python": "OpenAI Agents SDK",
+  "thedotmack/claude-mem": "Claude-Mem",
 };
+
+/** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
+const OWNER_SUFFIX = /[-_](labs?|ai|hq|app|dev|io|org|project|team|inc|oss)$/i;
 
 export function brandName(r: Pick<Repo, "name"> & { owner?: string; description?: string | null }): string {
   const known = r.owner ? KNOWN_BRANDS[`${r.owner}/${r.name}`.toLowerCase()] : undefined;
   if (known) return known;
   const desc = r.description ?? "";
-  if (!desc || r.name !== r.name.toLowerCase()) return r.name;
+  if (r.name !== r.name.toLowerCase()) return r.name;
+  // A project whose GitHub org is its own name, capitalized (MemPalace/mempalace,
+  // Graphify-Labs/graphify), already tells us its spelling.
+  const org = r.owner?.replace(OWNER_SUFFIX, "");
+  if (org && org !== r.name && org.toLowerCase() === r.name && /[A-Z]/.test(org)) return org;
+  if (!desc) return r.name;
   const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const find = (pattern: string) => desc.match(new RegExp(`(?<![\\w/-])${pattern}(?![\\w/-])`, "i"))?.[0];
   const exact = find(esc(r.name));
