@@ -2,22 +2,9 @@ import { altLabel, getAlternatives, getAlternativesRepos, getRepo, hasAlternativ
 import { categoryLabel } from "@/lib/categories";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-// One card per page; its alt names this page's subject and numbers instead of a generic line.
-export function generateImageMetadata({ params }: { params: { owner: string; name: string } }) {
-  return [{ id: "card", alt: cardAlt(params), size: OG_SIZE, contentType: "image/png" }];
-}
-
-function cardAlt({ owner, name }: { owner: string; name: string }): string {
-  const repo = getRepo(owner, name);
-  if (!repo || !hasAlternativesPage(repo)) return "OSS Radar card listing open-source alternatives to a GitHub repo";
-  const alts = getAlternatives(repo);
-  const lead = alts.slice(0, 3).map((a) => altLabel(a.repo));
-  return `OSS Radar card: ${alts.length} open-source alternatives to ${altLabel(repo)}${lead.length ? `, led by ${listJoin(lead)}` : ""}`;
-}
-
-function listJoin(xs: string[]): string {
-  return xs.length < 3 ? xs.join(" and ") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`;
-}
+export const alt = "OSS Radar card listing open-source alternatives to this GitHub repo";
+export const size = OG_SIZE;
+export const contentType = "image/png";
 
 export function generateStaticParams() {
   return getAlternativesRepos().map((r) => ({ owner: r.owner, name: r.name }));

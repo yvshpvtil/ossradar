@@ -2,16 +2,9 @@ import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-// One card per page; its alt names this page's subject and numbers instead of a generic line.
-export function generateImageMetadata({ params }: { params: { date: string } }) {
-  return [{ id: "card", alt: cardAlt(params), size: OG_SIZE, contentType: "image/png" }];
-}
-
-function cardAlt({ date }: { date: string }): string {
-  if (!getArchiveDays().includes(date)) return "OSS Radar daily archive of the fastest-rising GitHub repos";
-  const top = getDailyTop(date).slice(0, 3).map((e) => e.fullName);
-  return `OSS Radar card: the fastest-rising GitHub repos on ${formatDate(date)}${top.length ? `, led by ${top.join(", ")}` : ""}`;
-}
+export const alt = "OSS Radar daily top 25 fastest-rising GitHub repos for this date";
+export const size = OG_SIZE;
+export const contentType = "image/png";
 
 export function generateStaticParams() {
   const days = getArchiveDays();

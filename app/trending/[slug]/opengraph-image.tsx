@@ -3,17 +3,9 @@ import { formatNumber } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-// One card per page; its alt names this page's subject and numbers instead of a generic line.
-export function generateImageMetadata({ params }: { params: { slug: string } }) {
-  return [{ id: "card", alt: cardAlt(params), size: OG_SIZE, contentType: "image/png" }];
-}
-
-function cardAlt({ slug }: { slug: string }): string {
-  const l = getLanding(slug);
-  if (!l) return "OSS Radar card for a trending view of GitHub repos by stars gained";
-  const top = l.select().slice(0, 3).map((r) => r.fullName);
-  return `OSS Radar card: ${l.title}${top.length ? `, led by ${top.join(", ")}` : ""}`;
-}
+export const alt = "OSS Radar card for this trending view: its top three GitHub repos by stars gained";
+export const size = OG_SIZE;
+export const contentType = "image/png";
 
 export function generateStaticParams() {
   return LANDINGS.map((l) => ({ slug: l.slug }));

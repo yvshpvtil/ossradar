@@ -3,16 +3,9 @@ import { getRepo, getRepos } from "@/lib/data";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-// One card per page; its alt names this page's subject and numbers instead of a generic line.
-export function generateImageMetadata({ params }: { params: { owner: string; name: string } }) {
-  return [{ id: "card", alt: cardAlt(params), size: OG_SIZE, contentType: "image/png" }];
-}
-
-function cardAlt({ owner, name }: { owner: string; name: string }): string {
-  const repo = getRepo(owner, name);
-  if (!repo) return `OSS Radar card for the GitHub repo ${owner}/${name}`;
-  return `OSS Radar card for ${repo.fullName}: ${categoryLabel(repo.category)} repo with ${formatNumber(repo.stars)} GitHub stars, ${formatDelta(repo.delta7d)} this week${repo.estimated7d ? " (estimated)" : ""}`;
-}
+export const alt = "OSS Radar card for this GitHub repo: category, one-line summary, total stars and stars gained this week";
+export const size = OG_SIZE;
+export const contentType = "image/png";
 
 export function generateStaticParams() {
   return getRepos().map((r) => ({ owner: r.owner, name: r.name }));

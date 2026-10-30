@@ -2,16 +2,9 @@ import { CATEGORIES, getCategory } from "@/lib/categories";
 import { getReposByCategory } from "@/lib/data";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-// One card per page; its alt names this page's subject and numbers instead of a generic line.
-export function generateImageMetadata({ params }: { params: { slug: string } }) {
-  return [{ id: "card", alt: cardAlt(params), size: OG_SIZE, contentType: "image/png" }];
-}
-
-function cardAlt({ slug }: { slug: string }): string {
-  const category = getCategory(slug);
-  if (!category) return "OSS Radar leaderboard of the fastest-rising open-source repos in a category";
-  return `OSS Radar card: the fastest-rising open-source ${category.label} repos on GitHub, ${getReposByCategory(category.slug).length} tracked`;
-}
+export const alt = "OSS Radar leaderboard of the fastest-rising open-source repos in this category";
+export const size = OG_SIZE;
+export const contentType = "image/png";
 
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: c.slug }));
