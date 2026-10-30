@@ -9,6 +9,7 @@ import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { CATEGORIES, categoryLabel } from "@/lib/categories";
 import { ago, getLatestRelease } from "@/lib/activity";
 import { getHnMentions } from "@/lib/mentions";
+import { altLabel } from "@/lib/alternatives";
 import { CompareView, type CompareRow, type PackedRow } from "./CompareView";
 import type { Repo } from "@/lib/types";
 
@@ -41,24 +42,26 @@ const compact = (v: number) => (v >= 10_000 ? `${(v / 1000).toFixed(v >= 100_000
 /** Plain-English, data-backed summary of one head-to-head, rendered on the server so crawlers and AI assistants can read it. */
 function headToHead(a: Repo, b: Repo, now: number): string[] {
   const out: string[] = [];
+  const n = (r: Repo) => altLabel(r);
+  const poss = (r: Repo) => (n(r).endsWith("s") ? `${n(r)}'` : `${n(r)}'s`);
   const [lead, trail] = a.delta7d >= b.delta7d ? [a, b] : [b, a];
   const ratio = trail.delta7d > 0 ? lead.delta7d / trail.delta7d : null;
   const est = a.velocityEstimated || b.velocityEstimated ? " (partly estimated)" : "";
   out.push(
-    `${lead.name} gained ${fmt(lead.delta7d)} stars in the last 7 days against ${fmt(trail.delta7d)} for ${trail.name}${est}` +
+    `${n(lead)} gained ${fmt(lead.delta7d)} stars in the last 7 days against ${fmt(trail.delta7d)} for ${n(trail)}${est}` +
       (ratio === null ? "." : ratio >= 1.5 ? `, about ${ratio.toFixed(1)} times as many.` : ", a close race."),
   );
   const [big, small] = a.stars >= b.stars ? [a, b] : [b, a];
-  out.push(`In total, ${big.name} has ${compact(big.stars)} stars and ${compact(big.forks)} forks; ${small.name} has ${compact(small.stars)} stars and ${compact(small.forks)} forks.`);
+  out.push(`In total, ${n(big)} has ${compact(big.stars)} stars and ${compact(big.forks)} forks; ${n(small)} has ${compact(small.stars)} stars and ${compact(small.forks)} forks.`);
   const lang = (r: Repo) => r.language ?? "an unlisted language";
   out.push(
     a.language && a.language === b.language
-      ? `Both are written mainly in ${a.language}. ${a.name} was created ${ago(a.createdAt, now)} and ${b.name} ${ago(b.createdAt, now)}.`
-      : `${a.name} is written mainly in ${lang(a)} and was created ${ago(a.createdAt, now)}; ${b.name} is mainly ${lang(b)}, created ${ago(b.createdAt, now)}.`,
+      ? `Both are written mainly in ${a.language}. ${n(a)} was created ${ago(a.createdAt, now)} and ${n(b)} ${ago(b.createdAt, now)}.`
+      : `${n(a)} is written mainly in ${lang(a)} and was created ${ago(a.createdAt, now)}; ${n(b)} is mainly ${lang(b)}, created ${ago(b.createdAt, now)}.`,
   );
   const rel = (r: Repo) => {
     const x = getLatestRelease(r.fullName);
-    return x ? `${r.name}'s latest release is ${x.tag} (${ago(x.date, now)})` : x === null ? `${r.name} has no tagged release yet` : null;
+    return x ? `${poss(r)} latest release is ${x.tag} (${ago(x.date, now)})` : x === null ? `${n(r)} has no tagged release yet` : null;
   };
   const rels = [rel(a), rel(b)].filter(Boolean);
   if (rels.length) out.push(`${rels.join("; ")}.`);
@@ -139,9 +142,9 @@ export default function ComparePage() {
                   <Link href={`/category/${slug}`} className="hover:underline">{category}</Link>
                 </p>
                 <h3 className="mt-1 font-semibold">
-                  <Link href={`/repo/${a.owner}/${a.name}`} className="hover:underline">{a.name}</Link>
+                  <Link href={`/repo/${a.owner}/${a.name}`} className="hover:underline">{altLabel(a)}</Link>
                   <span className="font-normal text-zinc-500"> vs </span>
-                  <Link href={`/repo/${b.owner}/${b.name}`} className="hover:underline">{b.name}</Link>
+                  <Link href={`/repo/${b.owner}/${b.name}`} className="hover:underline">{altLabel(b)}</Link>
                 </h3>
                 <div className="mt-2 space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
                   {headToHead(a, b, now).map((t) => <p key={t}>{t}</p>)}
