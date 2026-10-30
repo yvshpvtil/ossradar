@@ -165,7 +165,39 @@ let dupNames: Set<string> | null = null;
  * project's own spelling. Only a whole-token, case-insensitive match counts; multi-word
  * slugs also match their spaced or run-together spelling (DeepSeek Harness, AnythingLLM).
  */
-export function brandName(r: Pick<Repo, "name"> & { description?: string | null }): string {
+/**
+ * Official spellings of well-known projects whose GitHub description never names them, so
+ * brandName() can't learn the casing from it (ollama -> "Ollama", vllm -> "vLLM"). Keyed by
+ * lowercase owner/name; only projects whose own site and docs use this exact spelling.
+ */
+const KNOWN_BRANDS: Record<string, string> = {
+  "ollama/ollama": "Ollama",
+  "firecrawl/firecrawl": "Firecrawl",
+  "langgenius/dify": "Dify",
+  "open-webui/open-webui": "Open WebUI",
+  "langchain-ai/langchain": "LangChain",
+  "langchain-ai/langgraph": "LangGraph",
+  "google-gemini/gemini-cli": "Gemini CLI",
+  "vllm-project/vllm": "vLLM",
+  "unslothai/unsloth": "Unsloth",
+  "bytedance/deer-flow": "DeerFlow",
+  "berriai/litellm": "LiteLLM",
+  "cherryhq/cherry-studio": "Cherry Studio",
+  "langfuse/langfuse": "Langfuse",
+  "agentscope-ai/agentscope": "AgentScope",
+  "mem0ai/mem0": "Mem0",
+  "getzep/graphiti": "Graphiti",
+  "paperless-ngx/paperless-ngx": "Paperless-ngx",
+  "dokploy/dokploy": "Dokploy",
+  "nousresearch/hermes-agent": "Hermes Agent",
+  "onyx-dot-app/onyx": "Onyx",
+  "github/github-mcp-server": "GitHub MCP Server",
+  "chromedevtools/chrome-devtools-mcp": "Chrome DevTools MCP",
+};
+
+export function brandName(r: Pick<Repo, "name"> & { owner?: string; description?: string | null }): string {
+  const known = r.owner ? KNOWN_BRANDS[`${r.owner}/${r.name}`.toLowerCase()] : undefined;
+  if (known) return known;
   const desc = r.description ?? "";
   if (!desc || r.name !== r.name.toLowerCase()) return r.name;
   const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
