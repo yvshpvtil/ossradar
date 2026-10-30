@@ -1,0 +1,12 @@
+{
+ "fullName": "savannahfeder/agentbox",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "There are two ways to run it: in the browser, or as a Mac app. Both need Node 22.13 or newer and Claude Code or Codex installed and signed…",
+ "extractor": "heuristic",
+ "readmeHash": "176085692934",
+ "version": 1,
+ "generatedAt": "2026-10-30T03:05:41.680Z"
+}

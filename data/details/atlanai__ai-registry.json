@@ -1,0 +1,12 @@
+{
+ "fullName": "atlanai/ai-registry",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://aireg.sh/install | sh",
+ "source": "readme",
+ "readmeSummary": "An agent registry stores your organization's AI artifacts and manages their lifecycle.",
+ "extractor": "heuristic",
+ "readmeHash": "bdb1f7babfd1",
+ "version": 1,
+ "generatedAt": "2026-10-30T03:05:41.654Z"
+}
