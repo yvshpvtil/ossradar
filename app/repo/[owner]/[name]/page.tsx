@@ -225,7 +225,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const nowMs = Date.parse(getData().generatedAt);
   const details = getDetails(repo.fullName);
   const daily = getDailyAppearances(repo.fullName);
-  const site = officialSite(repo.homepage);
+  const site = officialSite(repo.homepage, repo.owner);
   const software = {
     "@type": "SoftwareSourceCode",
     // The project's own spelling of its name when its description gives it (SGLang, not sglang),

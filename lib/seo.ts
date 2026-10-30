@@ -304,11 +304,14 @@ const NOT_A_PROJECT_SITE = /(^|\.)(github\.com|gitlab\.com|gitee\.com|arxiv\.org
  * isn't GitHub, a paper, a package registry or a social profile), for use in sameAs so search
  * engines and AI tools can tie the page to the project's official site. Otherwise undefined.
  */
-export function officialSite(homepage: string | null | undefined): string | undefined {
+export function officialSite(homepage: string | null | undefined, owner?: string): string | undefined {
   if (!homepage?.trim()) return undefined;
   try {
     const u = new URL(homepage.trim());
     if (u.protocol !== "https:" && u.protocol !== "http:") return undefined;
+    // A host's own projects are official there: huggingface/transformers -> huggingface.co/transformers
+    // (a personal huggingface.co/<user> profile from anyone else is still skipped).
+    if (owner && u.hostname.replace(/^www\./, "").toLowerCase().split(".")[0] === owner.toLowerCase()) return u.href;
     if (NOT_A_PROJECT_SITE.test(u.hostname)) return undefined;
     return u.href;
   } catch {
