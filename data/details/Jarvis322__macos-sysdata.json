@@ -1,0 +1,16 @@
+{
+ "fullName": "Jarvis322/macos-sysdata",
+ "whoItsFor": null,
+ "useCases": [
+  "Menu bar total. The icon shows the size of everything the scan found, the number Storage settings calls System Data. The window header says ",
+  "Every item has a real size, measured on disk, plus a badge: Safe regenerates automatically, Review costs you something (a simulator, a login",
+  "Trash first. Review items go to the Trash, so a wrong click can be undone for 30 days. Safe items are deleted outright because they come bac"
+ ],
+ "installCommand": "brew install --cask Jarvis322/tap/sysdata",
+ "source": "readme",
+ "readmeSummary": "Open System Settings > General > Storage on a developer Mac and \"System Data\" is often the largest line, with no way to see inside it.",
+ "extractor": "heuristic",
+ "readmeHash": "23031a893cb4",
+ "version": 1,
+ "generatedAt": "2026-10-30T17:03:18.399Z"
+}

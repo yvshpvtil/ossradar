@@ -1,0 +1,16 @@
+{
+ "fullName": "valentderah/totk-pc-recomp",
+ "whoItsFor": null,
+ "useCases": [
+  "Native code, not emulation",
+  "Game updates 1.2.1 and 1.4.3, with saves that carry over between them",
+  "60 fps by default; up to 144 fps or the monitor's refresh rate (experimental)"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "TotK Recomp is a static recompilation of The Legend of Zelda: Tears of the Kingdom (Nintendo Switch, 2023) into a native Windows x86-64…",
+ "extractor": "heuristic",
+ "readmeHash": "aa8e21079ec4",
+ "version": 1,
+ "generatedAt": "2026-10-30T17:03:18.357Z"
+}
