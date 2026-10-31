@@ -1,0 +1,16 @@
+{
+ "fullName": "ekzhang/resin",
+ "whoItsFor": null,
+ "useCases": [
+  "Rust batch scheduler",
+  "Unified slab-based cache pool (KV, SWA, Recurrent)",
+  "Pluggable prefix cache storage"
+ ],
+ "installCommand": "pip install \"git+https://github.com/ekzhang/resin.git\"",
+ "source": "readme",
+ "readmeSummary": "Resin is not an inference engine. It's a library of building blocks for LLM inference.",
+ "extractor": "heuristic",
+ "readmeHash": "6985a99e3bd0",
+ "version": 1,
+ "generatedAt": "2026-10-31T19:03:33.535Z"
+}

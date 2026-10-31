@@ -1,0 +1,12 @@
+{
+ "fullName": "patch-gg/pixelfx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "244 pixel art effects and animations, every one a small piece of code. Fire, explosions, magic, weather, UI, pickups, critters and more.",
+ "extractor": "heuristic",
+ "readmeHash": "53d6206984db",
+ "version": 1,
+ "generatedAt": "2026-10-31T19:03:33.573Z"
+}
