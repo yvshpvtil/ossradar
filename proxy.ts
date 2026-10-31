@@ -101,6 +101,9 @@ export function proxy(req: NextRequest) {
     // Owner/name, plus that page's Open Graph card route.
     const ok = parts.length === 3 || (parts.length === 4 && parts[3] === "opengraph-image" && raw[0] === "alternatives");
     const repo = ok ? getRepo(parts[1], parts[2]) : undefined;
+    // A tracked repo whose alternatives page was retired (too few close matches) sends visitors and
+    // old links to its repo page, which still lists related repos, instead of a dead end.
+    if (repo && parts.length === 3 && !hasAlternativesPage(repo)) return redirectTo(`/repo/${repo.owner}/${repo.name}`);
     if (!repo || !hasAlternativesPage(repo)) return notFound();
     const canonical = `/alternatives/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);

@@ -92,15 +92,43 @@ function isNicheTopic(t: string): boolean {
   return nicheCache(t);
 }
 
+/** A topic on at least this share of a category's repos mostly restates the category (mcp-server in MCP, coding-agents in Coding agents). */
+const CATEGORY_DEFINING_SHARE = 0.3;
+/** Only broad categories get this check; see isCategoryDefining. */
+const CATEGORY_DEFINING_MIN_REPOS = 30;
+
+let catDefCache: Map<string, Set<string>> | null = null;
 /**
- * Same category: at least two shared topics, one of them specific. Another category (only used to
+ * True when a topic is on CATEGORY_DEFINING_SHARE+ of the category's repos. Two MCP servers both
+ * tagged mcp + mcp-server only share being MCP servers (a docs server and an ffmpeg skill), so such
+ * a tag can't be the specific topic that makes two same-category repos alternatives.
+ */
+function isCategoryDefining(t: string, category?: string): boolean {
+  if (!category) return false;
+  if (!catDefCache) {
+    catDefCache = new Map();
+    const byCat = new Map<string, Repo[]>();
+    for (const r of getRepos()) byCat.set(r.category, [...(byCat.get(r.category) ?? []), r]);
+    for (const [c, rs] of byCat) {
+      // In a small, tight category (RAG, Local LLMs) the shared tag is the point: two RAG engines are alternatives.
+      if (rs.length < CATEGORY_DEFINING_MIN_REPOS) continue;
+      const freq = new Map<string, number>();
+      for (const r of rs) for (const x of repoTopics(r)) freq.set(x, (freq.get(x) ?? 0) + 1);
+      catDefCache.set(c, new Set([...freq].filter(([, n]) => n >= rs.length * CATEGORY_DEFINING_SHARE).map(([x]) => x)));
+    }
+  }
+  return catDefCache.get(category)?.has(t) ?? false;
+}
+
+/**
+ * Same category: at least two shared topics, one of them specific and not category-defining. Another category (only used to
  * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive
  * topics (not platform, language or framework tags), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
  * vllm, sglang and unsloth, which share its model-family tags, sit in LLM tooling).
  */
-function isCloseMatch(shared: string[], sameCategory: boolean): boolean {
+function isCloseMatch(shared: string[], sameCategory: boolean, category?: string): boolean {
   return sameCategory
-    ? shared.length >= 2 && shared.some(isSpecificTopic)
+    ? shared.length >= 2 && shared.some((t) => isSpecificTopic(t) && !isCategoryDefining(t, category))
     : shared.filter(isDescriptiveTopic).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
 }
 
@@ -122,7 +150,7 @@ export function getAlternatives(repo: Repo, limit = 12): Alternative[] {
       const score = sharedTopics.reduce((s, t) => s + topicWeight(t), 0);
       return { repo: r, sharedTopics, sameCategory: r.category === repo.category, sameLanguage: !!r.language && r.language === repo.language, score };
     })
-    .filter((a) => isCloseMatch(a.sharedTopics, a.sameCategory));
+    .filter((a) => isCloseMatch(a.sharedTopics, a.sameCategory, repo.category));
   const same = matches.filter((a) => a.sameCategory);
   return (same.length >= ALT_SHORT ? same : matches)
     .sort((a, b) => b.score - a.score || b.repo.delta7d - a.repo.delta7d)
