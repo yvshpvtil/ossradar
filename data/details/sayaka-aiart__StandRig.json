@@ -1,0 +1,12 @@
+{
+ "fullName": "sayaka-aiart/StandRig",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AIから編集できる2Dモデリングコアと、組み込み可能な再生ランタイム。",
+ "extractor": "heuristic",
+ "readmeHash": "1d41fbda6f2e",
+ "version": 1,
+ "generatedAt": "2026-10-31T05:58:25.241Z"
+}
