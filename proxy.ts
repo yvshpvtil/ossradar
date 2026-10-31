@@ -102,7 +102,8 @@ export function proxy(req: NextRequest) {
   } else if (section === "alternatives" && parts.length > 1) {
     // Bare /alternatives is the index page; only owner/name paths are checked.
     // Owner/name, plus that page's Open Graph card route.
-    const ok = parts.length === 3 || (parts.length === 4 && parts[3] === "opengraph-image" && raw[0] === "alternatives");
+    const isCard = parts[3] === "opengraph-image" && raw[0] === "alternatives";
+    const ok = parts.length === 3 || (isCard && (parts.length === 4 || (parts.length === 5 && parts[4] === "card")));
     const repo = ok ? getRepo(parts[1], parts[2]) : undefined;
     // A tracked repo whose alternatives page was retired (too few close matches) sends visitors and
     // old links to its repo page, which still lists related repos, instead of a dead end.
@@ -110,6 +111,9 @@ export function proxy(req: NextRequest) {
     if (!repo || !hasAlternativesPage(repo)) return notFound();
     const canonical = `/alternatives/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);
+    // The card moved to /opengraph-image/card (per-page alt text via generateImageMetadata);
+    // previews cached with the old card URL follow it instead of breaking.
+    if (parts.length === 4) return redirectTo(`${canonical}/opengraph-image/card`);
   } else if (section === "trending" && parts.length === 1) {
     // Bare /trending has no page of its own; the homepage is the trending leaderboard.
     return redirectTo("/");
