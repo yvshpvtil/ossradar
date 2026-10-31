@@ -1,0 +1,16 @@
+{
+ "fullName": "lexifina/global-law",
+ "whoItsFor": null,
+ "useCases": [
+  "Each corpus covers only what its README says. A file missing on a date can mean the provision was not yet in force or that the corpus does n",
+  "A later law that reaches back to earlier dates (retroactive application) is recorded in the corpus's commit messages but does not change the",
+  "`git blame` works by line, so a line changed in part is credited to the last law that touched it. `law.py words` credits each word instead, "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The world's law in one git history. Every word traced to the law that wrote it for any country and any date.",
+ "extractor": "heuristic",
+ "readmeHash": "cf31424dcd89",
+ "version": 1,
+ "generatedAt": "2026-10-31T11:54:15.851Z"
+}

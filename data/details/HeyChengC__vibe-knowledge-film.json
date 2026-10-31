@@ -1,0 +1,12 @@
+{
+ "fullName": "HeyChengC/vibe-knowledge-film",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "你一定见过这种视频。最近抖音上爆火的 Vibe 知识大赏，看完收获满满。",
+ "extractor": "heuristic",
+ "readmeHash": "fde0ac2089c6",
+ "version": 1,
+ "generatedAt": "2026-10-31T11:54:15.846Z"
+}
