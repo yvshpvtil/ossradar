@@ -16,13 +16,32 @@ import type { Repo } from "@/lib/types";
 const title = "Compare GitHub repos side by side";
 const description = "Compare up to 3 rising open-source AI and developer-tool repos: stars, growth, forks, language, releases, recent activity and Hacker News discussion.";
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: pageAlternates("/compare"),
-  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/compare" },
-  twitter: { card: "summary_large_image", title, description },
-};
+const COMPARE_LEAD = "Compare rising AI and dev-tool GitHub repos side by side: star growth, forks, releases and Hacker News buzz.";
+
+/** Meta description naming this week's most popular head-to-heads (as many as fit 158 chars), fixed description as fallback. */
+function compareDescription(): string {
+  const pairs = popularComparisons().map(({ a, b }) => `${altLabel(a)} vs ${altLabel(b)}`);
+  let best: string | null = null;
+  for (let k = 1; k <= pairs.length; k++) {
+    const shown = pairs.slice(0, k);
+    const list = shown.length === 1 ? shown[0] : `${shown.slice(0, -1).join(", ")} and ${shown[shown.length - 1]}`;
+    const d = `${COMPARE_LEAD} Popular now: ${list}.`;
+    if (d.length > 158) break;
+    best = d;
+  }
+  return best ?? description;
+}
+
+export function generateMetadata(): Metadata {
+  const d = compareDescription();
+  return {
+    title,
+    description: d,
+    alternates: pageAlternates("/compare"),
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description: d, url: "/compare" },
+    twitter: { card: "summary_large_image", title, description: d },
+  };
+}
 
 /** Top-2-by-7d pairs across categories (one pair each), for starter links + ItemList. */
 function popularComparisons(limit = 6): { a: Repo; b: Repo; category: string; slug: string }[] {
@@ -104,7 +123,7 @@ export default function ComparePage() {
   });
   return (
     <div>
-      <JsonLd data={collectionPageLd({ name: title, description, path: "/compare", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd("Popular GitHub repo comparisons", popularItems.map(({ name, url }) => ({ name, url }))) })} />
+      <JsonLd data={collectionPageLd({ name: title, description: compareDescription(), path: "/compare", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd("Popular GitHub repo comparisons", popularItems.map(({ name, url }) => ({ name, url }))) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Compare", path: "/compare" }])} />
       <PageNav crumbs={[{ name: "Compare" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Compare</p>
