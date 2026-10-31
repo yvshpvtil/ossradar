@@ -8,6 +8,7 @@ import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SITE } from "@/lib/site";
+import { altLabel } from "@/lib/alternatives";
 
 // Keep <title> under ~60 chars rendered (with " · OSS Radar") so Google shows it whole;
 // the longer phrase stays on OG/X like /hacker-news.
@@ -15,13 +16,29 @@ const title = "Daily archive of rising GitHub repos";
 const socialTitle = "Daily archive: the fastest-rising GitHub repos, day by day";
 const description = `Which open-source AI and developer-tool repos gained the most GitHub stars each day: ${SITE.name}'s dated archive with each day's top risers, newest first.`;
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: pageAlternates("/daily"),
-  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/daily" },
-  twitter: { card: "summary_large_image", title: socialTitle, description },
-};
+// Snippet names the latest archived day's #1 riser (like topic, category, trending, /new and /hacker-news hubs),
+// so the result says what's in the archive right now; the fixed description is the fallback.
+function dailySnippet(days: string[]): string {
+  const latest = days[0];
+  const top = latest ? getDailyTop(latest, 1)[0] : undefined;
+  if (!latest || !top) return description;
+  const head = "Which open-source AI and dev-tool repos gained the most GitHub stars each day, newest first.";
+  const name = top.repo ? altLabel(top.repo) : top.fullName;
+  const lead = ` Top riser on ${formatDate(latest)}: ${name} (+${formatNumber(top.gained)} stars).`;
+  for (const v of [`${head}${lead} Updated daily.`, `${head}${lead}`]) if (v.length <= 158) return v;
+  return description;
+}
+
+export function generateMetadata(): Metadata {
+  const d = dailySnippet(getArchiveDays());
+  return {
+    title,
+    description: d,
+    alternates: pageAlternates("/daily"),
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description: d, url: "/daily" },
+    twitter: { card: "summary_large_image", title: socialTitle, description: d },
+  };
+}
 
 export default function DailyIndex() {
   const days = getArchiveDays();
@@ -39,7 +56,7 @@ export default function DailyIndex() {
             "@type": "CollectionPage",
             ...pageNodeIds("/daily"),
             name: title,
-            description,
+            description: dailySnippet(days),
             url: abs("/daily"),
             primaryImageOfPage: ogCardLd("/daily"),
             dateModified: days[0],
@@ -83,7 +100,7 @@ export default function DailyIndex() {
                       {i > 0 && ", "}
                       {i + 1}.{" "}
                       {e.repo ? (
-                        <Link className="hover:underline" href={repoPath(e.repo)}>{e.fullName}</Link>
+                        <Link className="hover:underline" href={repoPath(e.repo)}>{altLabel(e.repo)}</Link>
                       ) : (
                         e.fullName
                       )}{" "}
