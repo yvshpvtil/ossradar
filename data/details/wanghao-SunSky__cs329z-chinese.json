@@ -1,0 +1,12 @@
+{
+ "fullName": "wanghao-SunSky/cs329z-chinese",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "一套面向 Python 开发者的 AI 智能体（Agent）自学教程。围绕斯坦福大学 Stanford CS329Z 的公开材料，用中文讲解如何构建、评测和改进 Agent：从大语言模型、RAG、工具调用，到记忆、多 Agent 协作和安全防护。",
+ "extractor": "heuristic",
+ "readmeHash": "21809988e5d5",
+ "version": 1,
+ "generatedAt": "2026-10-31T13:59:37.687Z"
+}

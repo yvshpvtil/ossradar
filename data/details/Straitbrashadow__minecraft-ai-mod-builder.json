@@ -1,0 +1,12 @@
+{
+ "fullName": "Straitbrashadow/minecraft-ai-mod-builder",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A watchtower on the hill you're standing on. A bridge over the river. A speed boost when you eat a golden carrot.",
+ "extractor": "heuristic",
+ "readmeHash": "5e5a092be995",
+ "version": 1,
+ "generatedAt": "2026-10-31T13:59:37.676Z"
+}
