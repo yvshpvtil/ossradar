@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Leaderboard } from "@/components/Leaderboard";
+import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { deltaFor, getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -16,18 +17,35 @@ export function generateStaticParams() {
   return LANDINGS.map((l) => ({ slug: l.slug }));
 }
 
+const periodFor = (slug: string) => (slug === "github-repos-today" ? "today" : "week");
+
+// Live snippet: the view's static pitch plus who leads it right now by project name (SGLang, not sgl-project/sglang),
+// as many leaders as fit ~158 chars; the hand-written description is the fallback when nothing is gaining.
+function landingDescription(l: NonNullable<ReturnType<typeof getLanding>>) {
+  const period = periodFor(l.slug);
+  const leaders = l.select().filter((r) => deltaFor(r, period) > 0).slice(0, 3);
+  const items = leaders.map((r, i) => `${altLabel(r)} (+${formatNumber(deltaFor(r, period))}${i ? "" : " stars"})`);
+  for (let n = items.length; n > 0; n--) {
+    const list = n === 1 ? items[0] : `${items.slice(0, n - 1).join(", ")} and ${items[n - 1]}`;
+    const d = `${l.metaHead} Leading now: ${list}.`;
+    if (d.length <= 158) return d;
+  }
+  return l.description;
+}
+
 export async function generateMetadata({ params }: PageProps<"/trending/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const l = getLanding(slug);
   if (!l) return {};
   const url = `/trending/${l.slug}`;
+  const description = landingDescription(l);
   return {
     title: l.title,
-    description: l.description,
+    description,
     alternates: pageAlternates(url),
     // Images come from ./opengraph-image (a per-view card), so the generic site image is left out here.
-    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: l.title, description: l.description, url },
-    twitter: { card: "summary_large_image", title: l.title, description: l.description },
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: l.title, description, url },
+    twitter: { card: "summary_large_image", title: l.title, description },
   };
 }
 
@@ -39,7 +57,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
   const path = `/trending/${l.slug}`;
   // Answer-first, data-backed summary for search snippets and AI assistants: who leads this view right now,
   // what the top 10 gained together, and which categories dominate it (linked, so the landing cross-links its hubs).
-  const period = l.slug === "github-repos-today" ? "today" : "week";
+  const period = periodFor(l.slug);
   const windowText = period === "today" ? "the last 24 hours" : "the last 7 days";
   const top10 = repos.slice(0, 10).filter((r) => deltaFor(r, period) > 0);
   const leaders = top10.slice(0, 3);
@@ -52,7 +70,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
     .slice(0, 2);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: l.title, description: l.description, path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(l.h1, repos) })} />
+      <JsonLd data={collectionPageLd({ name: l.title, description: landingDescription(l), path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(l.h1, repos) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: l.title, path }])} />
       <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">
@@ -64,7 +82,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
             {leaders.map((r, i) => (
               <span key={r.fullName}>
                 {i > 0 && (i === leaders.length - 1 ? " and " : ", ")}
-                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link> (+{formatNumber(deltaFor(r, period))}{est(r) ? "*" : ""})
+                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{altLabel(r)}</Link> (+{formatNumber(deltaFor(r, period))}{est(r) ? "*" : ""})
               </span>
             ))}
             .
