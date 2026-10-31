@@ -7,6 +7,7 @@ import { getData, getRepos } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { getRecentHn } from "@/lib/mentions";
 import { repoBlurb, stripWhy } from "@/lib/blurb";
+import { altLabel } from "@/lib/alternatives";
 
 const DAYS = 30;
 
@@ -14,13 +15,34 @@ const TITLE = "GitHub repos trending on Hacker News this month";
 const hnDescription = (n: number) =>
   `The ${n} open-source AI and developer-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and GitHub star growth. Updated hourly.`;
 
+// Tracked repos with a top HN story, ranked by points (same rows the page renders).
+function hnItems() {
+  const list = getRecentHn(DAYS, Date.parse(getData().generatedAt));
+  const byName = new Map(getRepos().map((r) => [r.fullName, r]));
+  return list.flatMap(({ fullName, m }) => {
+    const r = byName.get(fullName);
+    return r && m.top ? [{ fullName, r, top: m.top }] : [];
+  });
+}
+
+// Like topic, category, trending and /new hubs, the snippet names who leads right now: the top HN story's
+// project by brand spelling (altLabel) with its points. Falls back to the fixed description when it won't fit.
+function hnSnippet(n: number): string {
+  const lead = hnItems()[0];
+  if (!lead) return hnDescription(n);
+  const head = `The ${n} open-source AI and dev-tool repos that hit Hacker News in the last ${DAYS} days, with points, comments and star growth.`;
+  const top = ` Top story: ${altLabel(lead.r)} (${formatNumber(lead.top.points)} points).`;
+  for (const v of [`${head}${top} Updated hourly.`, `${head}${top}`]) if (v.length <= 158) return v;
+  return hnDescription(n);
+}
+
 export function generateMetadata(): Metadata {
   const n = getRecentHn(DAYS, Date.parse(getData().generatedAt)).length;
   // Keep <title> under ~60 chars rendered (with " · OSS Radar") so Google shows it whole;
   // the live count goes in the description and the longer social title.
   const title = TITLE;
   const socialTitle = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
-  const description = hnDescription(n);
+  const description = hnSnippet(n);
   return { title, description, alternates: pageAlternates("/hacker-news"), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/hacker-news" }, twitter: { card: "summary_large_image", title: socialTitle, description } };
 }
 
@@ -40,7 +62,7 @@ export default function HackerNewsPage() {
   const rows = items.map(({ fullName, r }) => ({ name: fullName, url: abs(repoPath(r)) }));
   return (
     <div className="max-w-3xl">
-      <JsonLd data={collectionPageLd({ name: TITLE, description: hnDescription(list.length), path: "/hacker-news", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd(TITLE, rows) })} />
+      <JsonLd data={collectionPageLd({ name: TITLE, description: hnSnippet(list.length), path: "/hacker-news", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd(TITLE, rows) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Hacker News", path: "/hacker-news" }])} />
       <PageNav crumbs={[{ name: "Hacker News" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Hacker News</p>
@@ -51,10 +73,10 @@ export default function HackerNewsPage() {
       </p>
       {lead && (
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          The top story right now is <Link className="underline" href={`/repo/${lead.r.owner}/${lead.r.name}`}>{lead.fullName}</Link> with{" "}
+          The top story right now is <Link className="underline" href={`/repo/${lead.r.owner}/${lead.r.name}`}>{altLabel(lead.r)}</Link> with{" "}
           {formatNumber(lead.top.points)} points and {formatNumber(lead.top.comments)} comments ({formatDate(lead.top.date)}).
           {mostDiscussed && mostDiscussed.fullName !== lead.fullName && (
-            <> The most discussed is <Link className="underline" href={`/repo/${mostDiscussed.r.owner}/${mostDiscussed.r.name}`}>{mostDiscussed.fullName}</Link> ({formatNumber(mostDiscussed.top.comments)} comments).</>
+            <> The most discussed is <Link className="underline" href={`/repo/${mostDiscussed.r.owner}/${mostDiscussed.r.name}`}>{altLabel(mostDiscussed.r)}</Link> ({formatNumber(mostDiscussed.top.comments)} comments).</>
           )}{" "}
           {showHn} of the {items.length} stories are Show HN posts.
         </p>
