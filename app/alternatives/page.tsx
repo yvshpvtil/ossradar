@@ -19,9 +19,26 @@ function groups() {
   return CATEGORIES.map((c) => ({ category: c, repos: repos.filter((r) => r.category === c.slug) })).filter((g) => g.repos.length > 0);
 }
 
+// Names the best-known projects that have an alternatives page ("…including Ollama, LangChain and Dify."),
+// since searches are for a project's name plus "alternatives", like topic and category hubs naming their
+// leader. As many as fit ~158 chars, by total stars; the fixed sentence is the fallback.
+function indexDescription(max = 158): string {
+  const repos = getAlternativesRepos();
+  const lead = `Open-source alternatives to ${repos.length} trending AI and developer-tool GitHub repos, grouped by category`;
+  const fixed = `${lead}. Each list shows tracked repos sharing its GitHub topics.`;
+  const names = [...repos].sort((a, b) => b.stars - a.stars).map((r) => altLabel(r));
+  const list = (ns: string[]) => (ns.length === 1 ? ns[0] : `${ns.slice(0, -1).join(", ")} and ${ns[ns.length - 1]}`);
+  for (let k = Math.min(4, names.length); k >= 2; k--) {
+    const t = `${lead}, including ${list(names.slice(0, k))}. Updated hourly.`;
+    if (t.length <= max) return t;
+    const u = `${lead}, including ${list(names.slice(0, k))}.`;
+    if (u.length <= max) return u;
+  }
+  return fixed.length <= max ? fixed : fixed.slice(0, max);
+}
+
 export function generateMetadata(): Metadata {
-  const total = getAlternativesRepos().length;
-  const description = `Open-source alternatives to ${total} trending AI and developer-tool GitHub repos, grouped by category. Each list shows tracked repos sharing its GitHub topics.`;
+  const description = indexDescription();
   return {
     title,
     description,
@@ -43,6 +60,7 @@ export default function AlternativesIndex() {
           "@type": "CollectionPage",
           ...pageNodeIds("/alternatives"),
           name: title,
+          description: indexDescription(),
           url: abs("/alternatives"),
             primaryImageOfPage: ogCardLd("/alternatives"),
           dateModified: getData().generatedAt,
