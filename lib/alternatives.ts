@@ -122,14 +122,15 @@ function isCategoryDefining(t: string, category?: string): boolean {
 
 /**
  * Same category: at least two shared topics, one of them specific and not category-defining. Another category (only used to
- * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive
- * topics (not platform, language or framework tags), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
+ * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive,
+ * specific topics (not platform, language or framework tags, and not broad tags like ai-agents, llm or
+ * mcp that sit on 10%+ of tracked repos), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
  * vllm, sglang and unsloth, which share its model-family tags, sit in LLM tooling).
  */
 function isCloseMatch(shared: string[], sameCategory: boolean, category?: string): boolean {
   return sameCategory
     ? shared.length >= 2 && shared.some((t) => isSpecificTopic(t) && !isCategoryDefining(t, category))
-    : shared.filter(isDescriptiveTopic).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
+    : shared.filter((t) => isDescriptiveTopic(t) && isSpecificTopic(t)).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
 }
 
 /**
