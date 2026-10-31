@@ -280,7 +280,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     dateModified: repoLastmod(repo, new Date(getData().generatedAt)),
     inLanguage: "en",
     isPartOf: websiteRef,
-    primaryImageOfPage: { "@type": "ImageObject", url: `${SITE.url}${pagePath}/opengraph-image`, width: 1200, height: 630 },
+    primaryImageOfPage: { "@type": "ImageObject", url: `${SITE.url}${pagePath}/opengraph-image/card`, width: 1200, height: 630 },
     mainEntity: software,
   };
   const crumbs = breadcrumbLd([

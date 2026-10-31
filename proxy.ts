@@ -96,6 +96,9 @@ export function proxy(req: NextRequest) {
     const canonical = `/repo/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);
     if (parts.length > 3 && raw[0] !== "repo") return notFound();
+    // The card moved to /opengraph-image/card (per-repo alt text via generateImageMetadata);
+    // previews cached with the old card URL follow it instead of breaking.
+    if (parts.length === 4 && parts[3] === "opengraph-image") return redirectTo(`${canonical}/opengraph-image/card`);
   } else if (section === "alternatives" && parts.length > 1) {
     // Bare /alternatives is the index page; only owner/name paths are checked.
     // Owner/name, plus that page's Open Graph card route.
