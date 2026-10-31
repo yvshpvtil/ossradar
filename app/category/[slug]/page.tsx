@@ -13,7 +13,8 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, collectionPageLd, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
+import { altLabel } from "@/lib/alternatives";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
 import { HubBreakdown } from "@/components/HubBreakdown";
@@ -47,6 +48,22 @@ const CATEGORY_SEO_DESCRIPTION: Record<string, string> = {
   other: "The {n} fastest-rising developer tools and AI projects on GitHub that don't fit a single category, ranked by stars gained this week. Updated hourly.",
 };
 
+/**
+ * Shorter lead per category, used when the meta description names the category's current weekly
+ * leader (like topic and language hubs do). If the leader line doesn't fit, the full hand-written
+ * description above is used instead.
+ */
+const CATEGORY_SEO_LEAD: Record<string, string> = {
+  "ai-agents": "The {n} fastest-rising AI agent frameworks and runtimes on GitHub, ranked by weekly stars.",
+  "llm-tooling": "The {n} fastest-rising LLM SDKs, evals, gateways and inference libraries on GitHub, ranked by weekly stars.",
+  mcp: "The {n} fastest-rising MCP (Model Context Protocol) servers and tools on GitHub, ranked by weekly stars.",
+  "coding-agents": "The {n} fastest-rising AI coding agents and IDE assistants on GitHub, ranked by weekly stars.",
+  "rag-vector": "The {n} fastest-rising RAG and vector database repos on GitHub, ranked by weekly stars.",
+  "local-llms": "The {n} fastest-rising tools for running LLMs on your own hardware, ranked by weekly GitHub stars.",
+  devops: "The {n} fastest-rising open-source DevOps, CI/CD and observability repos on GitHub, ranked by weekly stars.",
+  other: "The {n} fastest-rising developer tools and AI projects on GitHub outside one category, ranked by weekly stars.",
+};
+
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: c.slug }));
 }
@@ -58,7 +75,10 @@ function categoryMeta(category: NonNullable<ReturnType<typeof getCategory>>) {
   const title = CATEGORY_SEO_TITLE[category.slug] ?? `Trending ${category.label} GitHub repos`;
   const socialTitle = `${title}: ${count} rising projects`;
   const template = CATEGORY_SEO_DESCRIPTION[category.slug];
-  const description = clip(
+  const lead = CATEGORY_SEO_LEAD[category.slug]?.replace("{n}", String(count));
+  const leader = rankRepos(getReposByCategory(category.slug), "week")[0];
+  const withLeader = lead && leader ? hubDescription(lead, ["Updated hourly."], { ...leader, label: altLabel(leader) }, 158) : "";
+  const description = withLeader.includes("Leading this week:") ? withLeader : clip(
     template
       ? template.replace("{n}", String(count))
       : `Fastest-rising open-source ${category.label} projects on GitHub, ranked by stars gained this week. ${category.description}`,
