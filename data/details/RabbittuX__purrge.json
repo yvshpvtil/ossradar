@@ -1,0 +1,12 @@
+{
+ "fullName": "RabbittuX/purrge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install rabbittux/tap/purrge",
+ "source": "readme",
+ "readmeSummary": "基于 AI 的磁盘空间管理工具（macOS / Windows）：低空间预警、智能识别可清理项、经用户审批后执行清理。",
+ "extractor": "heuristic",
+ "readmeHash": "fb880215ad91",
+ "version": 1,
+ "generatedAt": "2026-10-31T17:51:24.837Z"
+}

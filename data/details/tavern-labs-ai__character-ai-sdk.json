@@ -1,0 +1,12 @@
+{
+ "fullName": "tavern-labs-ai/character-ai-sdk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install character-ai-sdk",
+ "source": "readme",
+ "readmeSummary": "Pick a persona, wire a model, and ship a character that remembers. The package combines the Tavern Labs persona catalog…",
+ "extractor": "heuristic",
+ "readmeHash": "ef31f4eca3bc",
+ "version": 1,
+ "generatedAt": "2026-10-31T17:51:24.834Z"
+}
