@@ -1,0 +1,12 @@
+{
+ "fullName": "N1nEmAn/sapper-v2",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name sapper ... sapper:latest",
+ "source": "readme",
+ "readmeSummary": "AUTHORIZED SECURITY TESTING ONLY — see DISCLAIMER.md.",
+ "extractor": "heuristic",
+ "readmeHash": "a1c2686ca69e",
+ "version": 1,
+ "generatedAt": "2026-10-31T08:05:45.618Z"
+}
