@@ -221,6 +221,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-21T02:25:16.432Z"
  },
+ "anhao/ai-pose-gallery-zh": {
+  "text": "Chinese-translated gallery of AI art pose, outfit and portrait references with a studio for generating AI characters.",
+  "basis": "a9789c2c2d40",
+  "source": "claude -p",
+  "generatedAt": "2026-10-31T02:21:35.924Z"
+ },
  "ardeyouxipianyi/workbuddy2api-hub": {
   "text": "Multi-account proxy gateway that exposes Tencent WorkBuddy and CodeBuddy as OpenAI- and Anthropic-compatible APIs.",
   "basis": "68904c5459a8",
@@ -250,6 +256,12 @@
   "basis": "5022a84ee9ca",
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
+ },
+ "ccch1mneyyy/dsh-Go": {
+  "text": "An Android client for DeepSeek Harness that runs on the phone itself or remotely controls DSH on your computer.",
+  "basis": "b3abd0ef6841",
+  "source": "claude -p",
+  "generatedAt": "2026-10-31T02:21:36.537Z"
  },
  "ccch1mneyyy/dsh-go": {
   "text": "An Android client for DeepSeek Harness that runs on the phone and can also remotely control DSH on your computer.",
@@ -298,6 +310,12 @@
   "basis": "fa0dd9bfc5a9",
   "source": "claude -p",
   "generatedAt": "2026-10-29T02:22:37.196Z"
+ },
+ "didi/helixharness": {
+  "text": "A Codex and Claude Code plugin that lets teams build an AI coding harness from their own project rules and knowledge.",
+  "basis": "bec219949af2",
+  "source": "claude -p",
+  "generatedAt": "2026-10-31T02:21:36.285Z"
  },
  "didilili/ai-agents-from-zero": {
   "text": "Chinese AI agent course with a learning path, projects and interview prep, covering LangChain, LangGraph, MCP and RAG.",
@@ -388,6 +406,12 @@
   "basis": "283a3c6b6664",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:29.559Z"
+ },
+ "jackwener/DSH-Android": {
+  "text": "Android app that runs DeepSeek Harness on the phone without root or Termux, operating apps and changing system settings.",
+  "basis": "9a3f6e207857",
+  "source": "claude -p",
+  "generatedAt": "2026-10-31T02:21:35.713Z"
  },
  "jackwener/DeepseekHarness-Android": {
   "text": "Android app that runs DeepSeek Harness on phones without root or Termux to control apps, settings and automations.",
