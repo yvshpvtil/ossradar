@@ -15,17 +15,26 @@ export const repoPath = (r: Pick<Repo, "owner" | "name">) => `/repo/${r.owner}/$
 
 /** <title> for a repo page. The layout template appends " · OSS Radar" (12 chars);
  *  keep the rendered title around Google's ~60-char SERP limit. Prefer owner/name;
- *  drop the owner when the full form would overflow. */
-export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">): string {
+ *  drop the owner when the full form would overflow. When the project goes by a
+ *  brand spelled differently from its slug (SGLang for sgl-project/sglang, OpenAI
+ *  Agents SDK for openai/openai-agents-python), lead with that brand, which is
+ *  what people search for, and keep the slug beside it when it fits. */
+export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">, label?: string): string {
   const delta = formatDelta(repo.delta7d);
-  // Layout appends " · OSS Radar" (12 chars), so 48 keeps the rendered title within ~60.
-  // Long repo names step down: drop the owner, then the word "stars", then the growth phrase.
+  const brand = label && !label.includes("/") && label !== repo.name ? label : null;
   const options = [
+    ...(brand
+      ? [
+          `${brand} (${repo.fullName}): ${delta} stars this week`,
+          `${brand} (${repo.fullName}): ${delta} this week`,
+        ]
+      : []),
     `${repo.fullName}: ${delta} stars this week`,
+    ...(brand ? [`${brand}: ${delta} stars this week`, `${brand}: ${delta} this week`] : []),
     `${repo.name}: ${delta} stars this week`,
     `${repo.name}: ${delta} this week`,
   ];
-  return options.find((t) => t.length <= 48) ?? repo.name;
+  return options.find((t) => t.length <= 48) ?? brand ?? repo.name;
 }
 
 /** Alternatives page <title> sized for Google's ~60-char SERP limit (layout adds " · OSS Radar", 12 chars). */

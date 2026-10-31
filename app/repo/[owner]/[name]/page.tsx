@@ -162,7 +162,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   if (!repo) return {};
   // <title> stays short (Google cuts around 60 chars); the fuller growth phrase
   // lives in the OG/X title, where length matters less — same pattern as category hubs.
-  const title = repoPageTitle(repo);
+  const title = repoPageTitle(repo, altLabel(repo));
   const socialTitle = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
   const description = repoMetaDescription(repo);
   const url = repoPath(repo);
@@ -274,7 +274,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
     "@context": "https://schema.org",
     "@type": "ItemPage",
     ...pageNodeIds(pagePath),
-    name: repoPageTitle(repo),
+    name: repoPageTitle(repo, altLabel(repo)),
     description: repoMetaDescription(repo),
     url: `${SITE.url}${pagePath}`,
     dateModified: repoLastmod(repo, new Date(getData().generatedAt)),
