@@ -1,0 +1,12 @@
+{
+ "fullName": "xxPcy/PharmaLLM-Agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "中文医学问答与 MRI 分割工作台，覆盖大语言模型微调、评测、Agent 工具编排、异步影像分割及结果复核。",
+ "extractor": "heuristic",
+ "readmeHash": "2d9d9362b95e",
+ "version": 1,
+ "generatedAt": "2026-10-31T03:04:18.785Z"
+}
