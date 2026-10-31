@@ -1,0 +1,16 @@
+{
+ "fullName": "Xpropel/Pi-Remote",
+ "whoItsFor": null,
+ "useCases": [
+  "Live mirroring — output, tool calls, and status changes in the terminal sync to the browser in real time, with incremental catch-up after a ",
+  "Remote input — send messages to the session from the browser. While pi is busy, messages can queue or steer, and delivery is confirmed.",
+  "Remote commands — switch model and thinking level, compact manually, create / fork / clone sessions, navigate the session tree, and inspect "
+ ],
+ "installCommand": "npm install -g @earendil-works/pi-coding-agent",
+ "source": "readme",
+ "readmeSummary": "Pi-Remote attaches to a running pi session through pi's official extension API.",
+ "extractor": "heuristic",
+ "readmeHash": "f1a63634c361",
+ "version": 1,
+ "generatedAt": "2026-10-31T15:54:16.117Z"
+}

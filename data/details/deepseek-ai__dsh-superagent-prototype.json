@@ -1,0 +1,12 @@
+{
+ "fullName": "deepseek-ai/dsh-superagent-prototype",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "dsh-superagent is a proactive coding agent for one GitHub repository, packaged as a bundle for DeepSeek Harness.",
+ "extractor": "heuristic",
+ "readmeHash": "a98ec95e2159",
+ "version": 1,
+ "generatedAt": "2026-10-31T15:54:16.123Z"
+}
