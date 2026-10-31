@@ -9,18 +9,36 @@ import { categoryLabel } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
-import { breadcrumbLd, collectionPageLd, itemListLd, ogDefaults, pageAlternates } from "@/lib/seo";
+import { altLabel } from "@/lib/alternatives";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, ogDefaults, pageAlternates } from "@/lib/seo";
 
 const title = "New open-source AI & dev-tool repos, day by day";
-const description = `New open-source AI and developer-tool repos created on GitHub in the last ${NEW_DAYS} days that are gaining stars fast, grouped by launch day. Updated hourly.`;
+const staticDescription = `New open-source AI and developer-tool repos created on GitHub in the last ${NEW_DAYS} days that are gaining stars fast, grouped by launch day. Updated hourly.`;
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: pageAlternates("/new"),
-  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/new" },
-  twitter: { card: "summary_large_image", title, description },
-};
+// Like topic, category and trending hubs, the snippet names the fastest-rising new repo right now
+// (brand spelling via altLabel), falling back to the fixed description when nothing is gaining or it won't fit.
+function newDescription(): string {
+  const all = getNewRepos().flatMap((g) => g.repos);
+  const leader = [...all].sort((a, b) => b.delta7d - a.delta7d || b.stars - a.stars)[0];
+  const d = hubDescription(
+    `New open-source AI and dev-tool repos created on GitHub in the last ${NEW_DAYS} days and rising fast, by launch day.`,
+    ["Updated hourly."],
+    leader ? { ...leader, label: altLabel(leader) } : undefined,
+    158,
+  );
+  return d.includes("Leading this week") ? d : staticDescription;
+}
+
+export function generateMetadata(): Metadata {
+  const description = newDescription();
+  return {
+    title,
+    description,
+    alternates: pageAlternates("/new"),
+    openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/new" },
+    twitter: { card: "summary_large_image", title, description },
+  };
+}
 
 export default function NewPage() {
   const groups = getNewRepos();
@@ -34,7 +52,7 @@ export default function NewPage() {
     .sort((a, b) => b[1] - a[1]).slice(0, 3);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: title, description, path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
+      <JsonLd data={collectionPageLd({ name: title, description: newDescription(), path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "New repos", path: "/new" }])} />
       <PageNav crumbs={[{ name: "New repos" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Updated hourly</p>
@@ -49,7 +67,7 @@ export default function NewPage() {
           {top.map((r, i) => (
             <span key={r.fullName}>
               {i > 0 && (i === top.length - 1 ? " and " : ", ")}
-              <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link> (+{formatNumber(r.delta7d)}{r.estimated7d ? "*" : ""}, created {formatDate(r.createdAt)})
+              <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{altLabel(r)}</Link> (+{formatNumber(r.delta7d)}{r.estimated7d ? "*" : ""}, created {formatDate(r.createdAt)})
             </span>
           ))}
           .{langs.length > 0 && <> Most common languages: {langs.map(([l, n]) => `${l} (${n})`).join(", ")}.</>}
