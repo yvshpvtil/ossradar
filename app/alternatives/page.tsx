@@ -84,7 +84,7 @@ export default function AlternativesIndex() {
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Open-source alternatives to rising GitHub repos</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         {SITE.name} lists open-source alternatives for {total} of the repos it tracks. An alternative is another tracked repo in the same category that shares at
-        least two GitHub topics, at least one of them specific rather than a broad tag like llm or mcp, so it works in a similar problem space. Pages with
+        least two GitHub topics about what it does (not platform, language or framework tags), at least one of them specific rather than a broad tag like llm or mcp, so it works in a similar problem space. Pages with
         few such matches also list repos from other categories that share at least three topics about what they do (not platform, language or framework tags), two of them niche (like qwen or browser-automation); it isn&apos;t necessarily a drop-in replacement. Within each category, repos are ordered by
         stars gained in the last 7 days.
       </p>

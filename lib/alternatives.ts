@@ -121,7 +121,9 @@ function isCategoryDefining(t: string, category?: string): boolean {
 }
 
 /**
- * Same category: at least two shared topics, one of them specific and not category-defining. Another category (only used to
+ * Same category: at least two shared descriptive topics (platform, language and framework tags like linux, typescript,
+ * nodejs or react don't count, so rea and Mastra aren't alternatives just for both being TypeScript MCP repos), one of them
+ * specific and not category-defining. Another category (only used to
  * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive,
  * specific topics (not platform, language or framework tags, and not broad tags like ai-agents, llm or
  * mcp that sit on 10%+ of tracked repos), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
@@ -129,12 +131,12 @@ function isCategoryDefining(t: string, category?: string): boolean {
  */
 function isCloseMatch(shared: string[], sameCategory: boolean, category?: string): boolean {
   return sameCategory
-    ? shared.length >= 2 && shared.some((t) => isSpecificTopic(t) && !isCategoryDefining(t, category))
+    ? shared.filter(isDescriptiveTopic).length >= 2 && shared.some((t) => isDescriptiveTopic(t) && isSpecificTopic(t) && !isCategoryDefining(t, category))
     : shared.filter((t) => isDescriptiveTopic(t) && isSpecificTopic(t)).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
 }
 
 /**
- * Alternatives = other tracked repos in the same category that share at least two GitHub topics,
+ * Alternatives = other tracked repos in the same category that share at least two descriptive GitHub topics,
  * at least one of them specific; pages short of ALT_SHORT also take closer matches from other categories
  * (isCloseMatch). Two broad tags alone ("llm" + "mcp") matched a docs MCP server
  * with a trading bot and a pentest agent. Ranked by how rare the shared topics are (IDF-weighted),

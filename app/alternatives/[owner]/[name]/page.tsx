@@ -116,8 +116,8 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
       </p>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         {crossCount === 0
-          ? <>Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics with {repo.name}</>
-          : <>Below are {alts.length} other repos tracked by {SITE.name} that share GitHub topics with {repo.name}: {alts.length - crossCount} from {cat} sharing at least two, and {crossCount} from
+          ? <>Below are {alts.length} other {cat} repos tracked by {SITE.name} that share at least two GitHub topics about what they do with {repo.name} (platform, language and framework tags don&apos;t count)</>
+          : <>Below are {alts.length} other repos tracked by {SITE.name} that share GitHub topics with {repo.name}: {alts.length - crossCount} from {cat} sharing at least two about what they do, and {crossCount} from
             other categories sharing at least three topics about what they do (platform, language and framework tags don&apos;t count), two of them niche rather than broad ones like llm</>}
         , ordered by how closely their topics overlap (rarer shared topics count more), then by stars gained in the last 7 days. Topic overlap means a similar
         problem space, not a drop-in replacement, so check each project&apos;s README.
