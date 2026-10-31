@@ -1,0 +1,12 @@
+{
+ "fullName": "thedaviddias/Front-End-Checklist",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add frontendchecklist/skills",
+ "source": "readme",
+ "readmeSummary": "The essential checklist for modern web development, for humans and AI agents",
+ "extractor": "heuristic",
+ "readmeHash": "915ce649bd5e",
+ "version": 1,
+ "generatedAt": "2026-10-31T08:59:55.530Z"
+}
