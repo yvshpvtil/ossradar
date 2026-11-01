@@ -1,0 +1,12 @@
+{
+ "fullName": "armslocksmithamplify/PassFab-Unlocker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "ee4ab62ba4f2",
+ "version": 1,
+ "generatedAt": "2026-11-01T14:56:19.003Z"
+}
