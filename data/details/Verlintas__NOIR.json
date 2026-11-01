@@ -1,0 +1,12 @@
+{
+ "fullName": "Verlintas/NOIR",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask android-platform-tools jadx",
+ "source": "readme",
+ "readmeSummary": "把「这台手机到底能泄露什么」变成一份可复现的报告。",
+ "extractor": "heuristic",
+ "readmeHash": "de1b7f180f0f",
+ "version": 1,
+ "generatedAt": "2026-11-01T11:53:07.706Z"
+}
