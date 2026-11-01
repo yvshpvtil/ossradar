@@ -1,4 +1,4 @@
-import raw from "@/data/hourly.json";
+import raw from "ossradar-data/hourly.json";
 
 const hourly = raw as { hours: string[]; stars: Record<string, (number | null)[]> };
 

@@ -1,4 +1,4 @@
-import raw from "../data/blurbs.json";
+import raw from "ossradar-data/blurbs.json";
 
 /** Hand-checked or LLM-written English one-liners (data/blurbs.json), refreshed with `npm run blurbs`. */
 export type BlurbOverride = { text: string; basis: string; source: string; generatedAt: string };

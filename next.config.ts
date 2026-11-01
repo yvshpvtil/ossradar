@@ -4,6 +4,10 @@ import { LANGUAGE_TOPICS, TOPIC_ALIASES } from "./lib/topicAliases";
 const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
+  // data/ is installed as the local package "ossradar-data" (file:./data). Keeping it external means
+  // the server bundle holds one copy of each JSON file instead of one per Turbopack chunk group
+  // (repos.json alone was inlined 3x), which keeps the Cloudflare Worker under its size limit.
+  serverExternalPackages: ["ossradar-data"],
   // Singular/plural topic twins share one hub page (see lib/topicAliases.ts).
   async redirects() {
     return [
