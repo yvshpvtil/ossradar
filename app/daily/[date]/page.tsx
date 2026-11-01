@@ -110,13 +110,13 @@ const plural = (n: number, one: string, many = one + "s") => `${formatNumber(n)}
 // A short, data-driven recap so each archive day reads differently: total gain, the leader's share, the busiest categories, churn vs the previous day.
 function DayRecap({ date, s }: { date: string; s: DaySummary }) {
   if (!s.leader || s.count < 3) return null;
-  const leaderName = s.leader.fullName.split("/")[1];
+  const leaderName = s.leader.repo ? altLabel(s.leader.repo) : s.leader.fullName.split("/")[1];
   return (
     <div className="mt-4 rounded-xl bg-zinc-50 p-4 text-sm leading-relaxed text-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-300">
       <h2 className="sr-only">The day in numbers</h2>
       <p>
         The {s.count} repos below gained {formatNumber(s.total)} stars between them on {formatDate(date)}.{" "}
-        {s.leader.repo ? <Link className="font-medium text-indigo-600 hover:underline dark:text-indigo-400" href={repoPath(s.leader.repo)}>{leaderName}</Link> : <span className="font-medium">{leaderName}</span>} led with +{formatNumber(s.leader.gained)}, {s.leaderShare}% of that total.
+        {s.leader.repo ? <Link className="font-medium text-indigo-600 hover:underline dark:text-indigo-400" href={repoPath(s.leader.repo)} title={s.leader.fullName}>{leaderName}</Link> : <span className="font-medium">{leaderName}</span>} led with +{formatNumber(s.leader.gained)}, {s.leaderShare}% of that total.
         {s.categories.length > 0 && (
           <>
             {" "}The busiest {s.categories.length === 1 ? "category was" : "categories were"}{" "}

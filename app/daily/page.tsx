@@ -119,9 +119,9 @@ export default function DailyIndex() {
           <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
             Over the {summary.days} archived days, {summary.distinct} different repos made a daily top 10.{" "}
             {summary.leader.days === summary.days
-              ? <>The same repo finished first every day: <Link className="font-medium hover:underline" href={summary.leader.href}>{summary.leader.fullName}</Link>.</>
-              : <>The most frequent daily #1 was <Link className="font-medium hover:underline" href={summary.leader.href}>{summary.leader.fullName}</Link>, first on {summary.leader.days} of {summary.days} days.</>}{" "}
-            The biggest single day was {summary.best.fullName} with +{formatNumber(summary.best.gained)} stars on {formatDate(summary.best.date)}, and on an average day the #1 repo took {summary.leaderShare}% of all stars gained by that day&apos;s top 10.
+              ? <>The same repo finished first every day: <Link className="font-medium hover:underline" href={summary.leader.href} title={summary.leader.fullName}>{summary.leader.label}</Link>.</>
+              : <>The most frequent daily #1 was <Link className="font-medium hover:underline" href={summary.leader.href} title={summary.leader.fullName}>{summary.leader.label}</Link>, first on {summary.leader.days} of {summary.days} days.</>}{" "}
+            The biggest single day was {summary.best.href ? <Link className="font-medium hover:underline" href={summary.best.href} title={summary.best.fullName}>{summary.best.label}</Link> : summary.best.label} with +{formatNumber(summary.best.gained)} stars on {formatDate(summary.best.date)}, and on an average day the #1 repo took {summary.leaderShare}% of all stars gained by that day&apos;s top 10.
           </p>
           {summary.regulars.length > 0 && (
             <>
@@ -129,7 +129,7 @@ export default function DailyIndex() {
               <ol className="mt-2 space-y-1 text-sm">
                 {summary.regulars.map((r, i) => (
                   <li key={r.fullName}>
-                    {i + 1}. <Link className="font-medium hover:underline" href={r.href}>{r.fullName}</Link>{" "}
+                    {i + 1}. <Link className="font-medium hover:underline" href={r.href} title={r.fullName}>{r.label}</Link>{" "}
                     <span className="text-zinc-500">{r.days} of {summary.days} days, +{formatNumber(r.gained)} stars in total</span>
                   </li>
                 ))}
@@ -150,14 +150,14 @@ export default function DailyIndex() {
   );
 }
 
-type Tally = { fullName: string; href: string; days: number; gained: number };
+type Tally = { fullName: string; label: string; href: string; days: number; gained: number };
 
 /** Data-built summary of every archived day's top 10, so the index explains the archive, not just lists it. */
 function archiveSummary(days: string[]) {
   if (days.length < 2) return null;
   const inTop = new Map<string, Tally>();
   const firsts = new Map<string, Tally>();
-  let best: { fullName: string; gained: number; date: string } | null = null;
+  let best: { fullName: string; label: string; href: string | null; gained: number; date: string } | null = null;
   let shareSum = 0, shareDays = 0;
   for (const date of days) {
     const top = getDailyTop(date, 10);
@@ -166,18 +166,19 @@ function archiveSummary(days: string[]) {
     if (total > 0) { shareSum += top[0].gained / total; shareDays++; }
     top.forEach((e, i) => {
       const href = e.repo ? repoPath(e.repo) : `/daily/${date}`;
-      const t = inTop.get(e.fullName) ?? { fullName: e.fullName, href, days: 0, gained: 0 };
+      const label = e.repo ? altLabel(e.repo) : e.fullName;
+      const t = inTop.get(e.fullName) ?? { fullName: e.fullName, label, href, days: 0, gained: 0 };
       t.days++; t.gained += e.gained; inTop.set(e.fullName, t);
       if (i === 0) {
-        const f = firsts.get(e.fullName) ?? { fullName: e.fullName, href, days: 0, gained: 0 };
+        const f = firsts.get(e.fullName) ?? { fullName: e.fullName, label, href, days: 0, gained: 0 };
         f.days++; f.gained += e.gained; firsts.set(e.fullName, f);
       }
-      if (!best || e.gained > best.gained) best = { fullName: e.fullName, gained: e.gained, date };
+      if (!best || e.gained > best.gained) best = { fullName: e.fullName, label, href: e.repo ? href : null, gained: e.gained, date };
     });
   }
   if (!best || shareDays === 0) return null;
   const byDays = (a: Tally, b: Tally) => b.days - a.days || b.gained - a.gained;
   const leader = [...firsts.values()].sort(byDays)[0];
   const regulars = [...inTop.values()].filter((t) => t.days >= 2).sort(byDays).slice(0, 5);
-  return { days: days.length, distinct: inTop.size, leader, best: best as { fullName: string; gained: number; date: string }, leaderShare: Math.round((shareSum / shareDays) * 100), regulars };
+  return { days: days.length, distinct: inTop.size, leader, best: best as { fullName: string; label: string; href: string | null; gained: number; date: string }, leaderShare: Math.round((shareSum / shareDays) * 100), regulars };
 }
