@@ -78,7 +78,7 @@ export default function DailyIndex() {
         <ol className="mt-2 space-y-1 text-sm">
           {live.map((r, i) => (
             <li key={r.fullName}>
-              {i + 1}. <Link className="font-medium hover:underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link>{" "}
+              {i + 1}. <Link className="font-medium hover:underline" href={`/repo/${r.owner}/${r.name}`} title={r.fullName}>{altLabel(r)}</Link>{" "}
               <span className="text-emerald-700 dark:text-emerald-400">+{formatNumber(r.delta24h)}</span>
             </li>
           ))}
@@ -100,7 +100,7 @@ export default function DailyIndex() {
                       {i > 0 && ", "}
                       {i + 1}.{" "}
                       {e.repo ? (
-                        <Link className="hover:underline" href={repoPath(e.repo)}>{altLabel(e.repo)}</Link>
+                        <Link className="hover:underline" href={repoPath(e.repo)} title={e.fullName}>{altLabel(e.repo)}</Link>
                       ) : (
                         e.fullName
                       )}{" "}

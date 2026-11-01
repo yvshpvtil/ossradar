@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { getArchiveDays, getDailyTop, getDaySummary, type DaySummary } from "@/lib/daily";
+import { altLabel } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { dayLabel } from "@/lib/card-alt";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -82,10 +83,11 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
             <span className="w-6 shrink-0 text-right tabular-nums text-zinc-500">{n + 1}</span>
             <div className="min-w-0 flex-1">
               {e.repo ? (
-                <Link className={`font-medium hover:underline after:absolute after:inset-0 after:content-['']`} href={`/repo/${e.repo.owner}/${e.repo.name}`}>{e.fullName}</Link>
+                <Link className={`font-medium hover:underline after:absolute after:inset-0 after:content-['']`} href={`/repo/${e.repo.owner}/${e.repo.name}`} title={e.fullName}>{altLabel(e.repo)}</Link>
               ) : (
                 <a className={`font-medium hover:underline after:absolute after:inset-0 after:content-['']`} href={`https://github.com/${e.fullName}`}>{e.fullName}</a>
               )}
+              {e.repo && altLabel(e.repo) !== e.fullName && <span className="ml-1.5 text-xs text-zinc-500">{e.fullName}</span>}
               {e.repo && repoBlurb(e.repo) && <p className="mt-0.5 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{repoBlurb(e.repo)}</p>}
             </div>
             <div className="shrink-0 text-right">
