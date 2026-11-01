@@ -1,0 +1,12 @@
+{
+ "fullName": "CelestialStarfish/Ads-Blocker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "cbf6b7c20f68",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.292Z"
+}

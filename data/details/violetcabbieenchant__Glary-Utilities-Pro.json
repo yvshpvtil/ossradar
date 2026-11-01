@@ -1,0 +1,12 @@
+{
+ "fullName": "violetcabbieenchant/Glary-Utilities-Pro",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "d586dbc3f994",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.564Z"
+}

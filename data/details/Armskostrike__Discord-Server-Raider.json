@@ -1,0 +1,12 @@
+{
+ "fullName": "Armskostrike/Discord-Server-Raider",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "9723bc4a94df",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.296Z"
+}

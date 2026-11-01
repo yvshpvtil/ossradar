@@ -1,0 +1,12 @@
+{
+ "fullName": "trappenguinhammer/Adobe-Substance-3d",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "1d19f1ed3823",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.083Z"
+}

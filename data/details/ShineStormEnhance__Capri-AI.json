@@ -1,0 +1,12 @@
+{
+ "fullName": "ShineStormEnhance/Capri-AI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Capri — a cyberpunk AI agent for your desktop. One app for Claude Code, Codex, Antigravity &amp; any AI assistant.",
+ "extractor": "heuristic",
+ "readmeHash": "cf8a7c69d299",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.827Z"
+}

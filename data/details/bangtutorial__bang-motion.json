@@ -1,0 +1,12 @@
+{
+ "fullName": "bangtutorial/bang-motion",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An agent skill that turns your AI coding agent into a motion designer. Openers, promos, product demos, kinetic typography, and explainers…",
+ "extractor": "heuristic",
+ "readmeHash": "a70a65e9b35b",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.913Z"
+}

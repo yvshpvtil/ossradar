@@ -1,0 +1,12 @@
+{
+ "fullName": "CourtHunterKey/Discord-Quest-Completer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "3414e1a2188d",
+ "version": 1,
+ "generatedAt": "2026-11-01T07:22:45.442Z"
+}
