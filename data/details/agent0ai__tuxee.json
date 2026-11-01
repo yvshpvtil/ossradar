@@ -1,0 +1,12 @@
+{
+ "fullName": "agent0ai/tuxee",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -p 80:80 -p 443:443 agent0ai/tuxee",
+ "source": "readme",
+ "readmeSummary": "A tiny Debian Linux container with a superb web interface for files and (persistent!) terminals.",
+ "extractor": "heuristic",
+ "readmeHash": "10c3a6c78965",
+ "version": 1,
+ "generatedAt": "2026-11-01T01:30:44.408Z"
+}

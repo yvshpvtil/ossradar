@@ -1,0 +1,12 @@
+{
+ "fullName": "EntranceStarfish/VoiceStudioV2",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "100% local. No cloud. No API keys. Your voice never leaves your machine.",
+ "extractor": "heuristic",
+ "readmeHash": "988bb0820062",
+ "version": 1,
+ "generatedAt": "2026-11-01T01:30:44.602Z"
+}

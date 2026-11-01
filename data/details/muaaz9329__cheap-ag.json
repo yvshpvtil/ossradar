@@ -1,0 +1,12 @@
+{
+ "fullName": "muaaz9329/cheap-ag",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx cheap-agent",
+ "source": "readme",
+ "readmeSummary": "You know the principal engineer. Twenty years in. Sees the whole system at once. Costs a fortune per hour.",
+ "extractor": "heuristic",
+ "readmeHash": "e1bb717911f9",
+ "version": 1,
+ "generatedAt": "2026-11-01T01:30:44.339Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "DiplomatHearth/roblox-ai-place-diff",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Most AI tools for Roblox write a script, say \"done\" and leave the bugs to you.",
+ "extractor": "heuristic",
+ "readmeHash": "576c3b1e86e0",
+ "version": 1,
+ "generatedAt": "2026-11-01T01:30:44.300Z"
+}

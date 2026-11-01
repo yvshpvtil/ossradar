@@ -1,0 +1,16 @@
+{
+ "fullName": "Mayzmei/anime-series-maker",
+ "whoItsFor": null,
+ "useCases": [
+  "Series bible, not one-off prompts. Cast, art style, voices, locations and running gags live in `series.json`. Episode 30 looks like episode ",
+  "Hook first. Before writing anything, the agent pitches 3 premises with one pick, based on formulas ranked by real views (fake-out that fails",
+  "Per-second shot scripts. Each ≤15 s clip gets a shot list with action, in-character dialogue, SFX and camera for every shot, assembled into "
+ ],
+ "installCommand": "brew install ffmpeg            # Windows: winget install Gyan.FFmpeg · Linux: sudo apt install ffmpeg",
+ "source": "readme",
+ "readmeSummary": "2 character sheets + 1 line of story → a finished anime episode. Then the next one, with the same cast.",
+ "extractor": "heuristic",
+ "readmeHash": "e91dd8289aeb",
+ "version": 1,
+ "generatedAt": "2026-11-01T01:30:44.335Z"
+}
