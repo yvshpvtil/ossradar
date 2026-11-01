@@ -1,0 +1,12 @@
+{
+ "fullName": "SteersmanStronghold/Windows-Optimizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "d7b79c2e73e0",
+ "version": 1,
+ "generatedAt": "2026-11-01T10:57:04.743Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "BattalionAlchemist/SlideShow-Video-Maker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "7fb81e510a91",
+ "version": 1,
+ "generatedAt": "2026-11-01T10:57:04.627Z"
+}

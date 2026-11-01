@@ -1,0 +1,12 @@
+{
+ "fullName": "gryphonautocratmatch/StartAll-Back",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "2d5cd426c246",
+ "version": 1,
+ "generatedAt": "2026-11-01T10:57:04.573Z"
+}
