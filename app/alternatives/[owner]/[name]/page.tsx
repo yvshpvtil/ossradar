@@ -89,7 +89,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             description: alternativesMeta(repo).description,
             path,
             dateModified: alternativesLastmod(repo, new Date(getData().generatedAt)),
-            ogCard: true,
+            ogCard: "card",
             mainEntity: {
               "@type": "ItemList",
               name: `Open-source alternatives to ${repo.fullName}`,

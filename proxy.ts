@@ -26,6 +26,9 @@ const HUBS: Record<string, (slug: string) => boolean> = {
   daily: isArchiveDay,
 };
 
+/** Hub sections whose slug card moved to /opengraph-image/card (per-hub alt text via generateImageMetadata). */
+const CARD_ID_HUBS = new Set(["category", "trending", "language", "topic"]);
+
 /** Sections with a bare index page. */
 const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
@@ -123,9 +126,13 @@ export function proxy(req: NextRequest) {
   } else if (parts.length > 1 && Object.hasOwn(HUBS, section)) {
     // Bare /category, /language, /topic and /daily are index pages; only hub paths are checked:
     // the slug page, plus its Open Graph card route when requested exactly as generated.
-    const card = parts.length === 3 && parts[2] === "opengraph-image" && raw[0] === section && raw[1] === slug;
+    const withId = CARD_ID_HUBS.has(section);
+    const cardPath = parts[2] === "opengraph-image" && raw[0] === section && raw[1] === slug;
+    const card = cardPath && (parts.length === 3 || (withId && parts.length === 4 && parts[3] === "card"));
     if ((parts.length > 2 && !card) || !HUBS[section](slug)) return notFound();
     if (!card && raw[0] + "/" + raw[1] !== `${section}/${slug}`) return redirectTo(`/${section}/${slug}`);
+    // Previews cached with the old card URL follow it to /opengraph-image/card instead of breaking.
+    if (card && withId && parts.length === 3) return redirectTo(`/${section}/${slug}/opengraph-image/card`);
   }
   return NextResponse.next();
 }

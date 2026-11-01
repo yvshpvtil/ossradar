@@ -70,7 +70,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
     .slice(0, 2);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: l.title, description: landingDescription(l), path, dateModified: getData().generatedAt, ogCard: true, mainEntity: itemListLd(l.h1, repos) })} />
+      <JsonLd data={collectionPageLd({ name: l.title, description: landingDescription(l), path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(l.h1, repos) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: l.title, path }])} />
       <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">

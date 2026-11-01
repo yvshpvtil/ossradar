@@ -108,7 +108,7 @@ export function linkListLd(name: string, items: { name: string; url: string }[],
 
 /** CollectionPage wrapper for a hub/listing page: says what the page is, when its ranking was last
  *  rebuilt (the data snapshot time) and which site it belongs to, with the ranked list as mainEntity. */
-export function collectionPageLd(o: { name: string; description: string; path: string; dateModified: string; mainEntity: Record<string, unknown>; ogCard?: boolean }) {
+export function collectionPageLd(o: { name: string; description: string; path: string; dateModified: string; mainEntity: Record<string, unknown>; ogCard?: boolean | "card" }) {
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -119,7 +119,7 @@ export function collectionPageLd(o: { name: string; description: string; path: s
     dateModified: o.dateModified,
     inLanguage: "en",
     isPartOf: websiteRef,
-    ...(o.ogCard ? { primaryImageOfPage: ogCardLd(o.path) } : {}),
+    ...(o.ogCard ? { primaryImageOfPage: ogCardLd(o.path, o.ogCard === "card" ? "card" : undefined) } : {}),
     mainEntity: withoutContext(o.mainEntity),
   };
 }
@@ -171,9 +171,10 @@ export function datasetLd(o: { dateModified: string; repoCount: number; firstDay
   };
 }
 
-/** ImageObject for a page's own file-based Open Graph card (pages with an opengraph-image route). */
-export function ogCardLd(path: string) {
-  return { "@type": "ImageObject", url: abs(`${path === "/" ? "" : path}/opengraph-image`), width: 1200, height: 630 };
+/** ImageObject for a page's own file-based Open Graph card (pages with an opengraph-image route).
+ *  `id` is the generateImageMetadata id when the card route has one (e.g. "card" gives /opengraph-image/card). */
+export function ogCardLd(path: string, id?: string) {
+  return { "@type": "ImageObject", url: abs(`${path === "/" ? "" : path}/opengraph-image${id ? `/${id}` : ""}`), width: 1200, height: 630 };
 }
 
 export const websiteLd = {

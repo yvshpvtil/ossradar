@@ -1,9 +1,10 @@
 import { deltaFor } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
+import { trendingCardAlt } from "@/lib/card-alt";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
-export const alt = "OSS Radar card for this trending view: its top three GitHub repos by stars gained";
+const GENERIC_ALT = "OSS Radar card for this trending view: its top three GitHub repos by stars gained";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
@@ -11,8 +12,16 @@ export function generateStaticParams() {
   return LANDINGS.map((l) => ({ slug: l.slug }));
 }
 
+// Per-view alt text naming the view and its current top three (card URL: /opengraph-image/card).
+export async function generateImageMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
+  const l = getLanding(slug);
+  const period = slug === "github-repos-today" ? "today" : "week";
+  return [{ id: "card", alt: l ? trendingCardAlt(l.title, l.select().slice(0, 3), period) : GENERIC_ALT, size: OG_SIZE, contentType }];
+}
+
 // A card naming the view and its current top three, so shared /trending links preview what's on the page.
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Image({ params }: { params: Promise<{ slug: string }>; id: Promise<string> }) {
   const { slug } = await params;
   const l = getLanding(slug);
   const period = slug === "github-repos-today" ? "today" : "week";
