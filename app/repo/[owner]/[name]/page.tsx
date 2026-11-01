@@ -13,7 +13,7 @@ import { formatDate, formatDelta, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { breadcrumbLd, clipWidth, officialSite, textWidth, repoPageTitle, repoPath, snippetText, websiteRef, pageAlternates, pageNodeIds, ogDefaults } from "@/lib/seo";
+import { breadcrumbLd, clipWidth, officialSite, textWidth, repoPageTitle, repoPath, snippetText, websiteRef, pageAlternates, RSS_ALTERNATE, pageNodeIds, ogDefaults } from "@/lib/seo";
 import type { Repo } from "@/lib/types";
 import { getDetails } from "@/lib/details";
 import { stripWhy } from "@/lib/blurb";
@@ -169,7 +169,11 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   return {
     title,
     description,
-    alternates: pageAlternates(url),
+    // Advertise the repo's JSON twin so agents that read <link rel="alternate"> get structured numbers.
+    alternates: {
+      ...pageAlternates(url),
+      types: { ...RSS_ALTERNATE, "application/json": [{ url: `/api/v1/repo/${repo.owner}/${repo.name}`, title: `${repo.fullName} data (JSON)` }] },
+    },
     ...(isThinRepo(repo) ? { robots: { index: false, follow: true } } : {}),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: "article", title: socialTitle, description, url },
     twitter: { card: "summary_large_image", title: socialTitle, description },

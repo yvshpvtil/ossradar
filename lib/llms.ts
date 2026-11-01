@@ -121,6 +121,7 @@ ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.descr
 Use these to link straight to a tracked repo (owner and name exactly as on GitHub, e.g. ${example}):
 
 - Repo page: ${SITE.url}/repo/{owner}/{name} (stars, 24h and 7-day gains, star history, latest release, Hacker News mentions)
+- Repo data as JSON: ${SITE.url}/api/v1/repo/{owner}/{name} (stars, 24h and 7-day gains, rank today and this week, daily star history, Hacker News story, alternatives; tracked repos only, free, no key)
 - Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics, plus close matches from other categories when few; only for repos with at least 3)
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
 - By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
@@ -144,6 +145,7 @@ ${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.
 ${alternativesSection()}${dailySection(days)}## Data access
 
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
+- [JSON API: /api/v1/repo/{owner}/{name}](${SITE.url}/api/v1/repo/morluto/rea): one tracked repo's stars, 24h and 7-day gains, rank, daily star history, Hacker News story and alternatives. Same terms.
 - [RSS feed](${SITE.url}/rss.xml)
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
 - [Full text for LLMs](${SITE.url}/llms-full.txt): every tracked repo with its one-line summary and current numbers

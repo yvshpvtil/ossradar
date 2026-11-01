@@ -15,7 +15,7 @@ const FAQ: { q: string; a: string }[] = [
   { q: "How often is the data updated?", a: "Every hour. A GitHub Action pulls star counts from the GitHub API and the site is rebuilt with the new numbers." },
   { q: "Why are some numbers marked as estimates?", a: "For repos first seen less than 24 hours or 7 days ago there is no earlier snapshot to diff against, so the gain is estimated as total stars divided by days since the repo was created. Measured numbers replace estimates automatically." },
   { q: "Do sponsors affect the rankings?", a: "No. Rankings are computed from GitHub data only. Sponsor placements are clearly labeled and separate from the leaderboard." },
-  { q: "Is there an API?", a: "Yes. /api/v1/trending returns the top 100 repos by 24-hour star gain as JSON. It is free, needs no key and updates hourly." },
+  { q: "Is there an API?", a: "Yes. /api/v1/trending returns the top 100 repos by 24-hour star gain as JSON. For a single tracked repo, /api/v1/repo/{owner}/{name} returns its stars, gains, rank, daily star history and alternatives. Both are free, need no key and update hourly." },
 ];
 
 const title = "How we rank rising GitHub repos";
@@ -71,7 +71,9 @@ export default function AboutPage() {
         The current leaderboard is available as JSON (a plain data format most programming languages can read) at{" "}
         <a className="underline" href="/api/v1/trending"><code>/api/v1/trending</code></a>: the top 100 repos by stars gained in the last
         24 hours, with 7-day gains, stars, forks, language, category and topics. It updates hourly, needs no key, and is free to use with a
-        link back to {SITE.name}.
+        link back to {SITE.name}. For one tracked repo, <code>/api/v1/repo/{"{owner}/{name}"}</code> (for example{" "}
+        <code>/api/v1/repo/upstash/context7</code>) returns its stars,
+        24-hour and 7-day gains, rank today and this week, daily star history, top Hacker News story and alternatives.
       </p>
 
       <h2 id="faq" className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">FAQ</h2>
