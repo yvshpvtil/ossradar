@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getCategory } from "@/lib/categories";
-import { getRepo } from "@/lib/data";
+import { getRepo, getRepos } from "@/lib/data";
 import { getLanding } from "@/lib/landing";
-import { getLanguage } from "@/lib/languages";
-import { hasTopicPage } from "@/lib/topics";
+import { getLanguage, languageSlug } from "@/lib/languages";
+import { canonicalTopic, hasTopicPage, repoTopics } from "@/lib/topics";
 import { hasAlternativesPage } from "@/lib/alternatives";
 import retiredList from "@/data/retired.json";
 
@@ -24,6 +24,17 @@ const HUBS: Record<string, (slug: string) => boolean> = {
   language: (s) => Boolean(getLanguage(s)),
   topic: (s) => hasTopicPage(s),
   daily: isArchiveDay,
+};
+
+/**
+ * Language and topic hubs come and go with the tracked set (a hub needs 5 repos in a language or
+ * 10 sharing a topic). A slug that was a hub, or could be one again, because some tracked repo
+ * still uses that language or topic, gets a temporary redirect to the section index instead of a
+ * hard 404, so old links and crawlers land on the live list and the URL is kept for when it returns.
+ */
+const DORMANT_HUBS: Record<string, (slug: string) => boolean> = {
+  language: (s) => getRepos().some((r) => r.language && languageSlug(r.language) === s),
+  topic: (s) => getRepos().some((r) => repoTopics(r).includes(canonicalTopic(s))),
 };
 
 /** Hub sections whose slug card moved to /opengraph-image/card (per-hub alt text via generateImageMetadata). */
@@ -88,6 +99,11 @@ export function proxy(req: NextRequest) {
     url.pathname = pathname;
     return NextResponse.redirect(url, 308);
   };
+  const redirectTemp = (pathname: string) => {
+    const url = req.nextUrl.clone();
+    url.pathname = pathname;
+    return NextResponse.redirect(url, 307);
+  };
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
@@ -129,6 +145,7 @@ export function proxy(req: NextRequest) {
     const withId = CARD_ID_HUBS.has(section);
     const cardPath = parts[2] === "opengraph-image" && raw[0] === section && raw[1] === slug;
     const card = cardPath && (parts.length === 3 || (withId && parts.length === 4 && parts[3] === "card"));
+    if (parts.length === 2 && !HUBS[section](slug) && DORMANT_HUBS[section]?.(slug)) return redirectTemp(`/${section}`);
     if ((parts.length > 2 && !card) || !HUBS[section](slug)) return notFound();
     if (!card && raw[0] + "/" + raw[1] !== `${section}/${slug}`) return redirectTo(`/${section}/${slug}`);
     // Previews cached with the old card URL follow it to /opengraph-image/card instead of breaking.
