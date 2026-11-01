@@ -27,7 +27,7 @@ const HUBS: Record<string, (slug: string) => boolean> = {
 };
 
 /** Hub sections whose slug card moved to /opengraph-image/card (per-hub alt text via generateImageMetadata). */
-const CARD_ID_HUBS = new Set(["category", "trending", "language", "topic"]);
+const CARD_ID_HUBS = new Set(["category", "trending", "language", "topic", "daily"]);
 
 /** Sections with a bare index page. */
 const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily"]);

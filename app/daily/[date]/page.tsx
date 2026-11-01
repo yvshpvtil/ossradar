@@ -7,7 +7,7 @@ import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { getArchiveDays, getDailyTop, getDaySummary, type DaySummary } from "@/lib/daily";
 import { categoryLabel } from "@/lib/categories";
-import { altLabel } from "@/lib/alternatives";
+import { dayLabel } from "@/lib/card-alt";
 import { formatDate, formatNumber } from "@/lib/format";
 import { SITE } from "@/lib/site";
 
@@ -16,11 +16,6 @@ export function generateStaticParams() {
   return days.length ? days.map((date) => ({ date })) : [{ date: "none" }];
 }
 
-// A day's gainer by its project name (SGLang, Ollama; owner/name for generic or duplicate names), as hub metas do; untracked repos keep the slug.
-const dayLabel = (e: { fullName: string; repo?: { owner: string; name: string; description?: string | null } }) => {
-  const [owner, name] = e.fullName.split("/");
-  return e.repo ? altLabel(e.repo) : name ?? owner;
-};
 
 // Unique per day: name that day's top gainers (as many as fit ~158 chars) so each archive page's snippet says what's on it.
 function dailyDescription(date: string) {
@@ -66,7 +61,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
           temporalCoverage: date,
           inLanguage: "en",
           isPartOf: websiteRef,
-          primaryImageOfPage: ogCardLd(`/daily/${date}`),
+          primaryImageOfPage: ogCardLd(`/daily/${date}`, "card"),
           mainEntity: withoutContext(linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))),
         }}
       />
