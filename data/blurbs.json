@@ -155,6 +155,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:14:03.589Z"
  },
+ "RabbittuX/purrge": {
+  "text": "A macOS and Windows disk cleaner that warns of low space, has AI assess each item, and deletes only what you approve.",
+  "basis": "e4725e201610",
+  "source": "claude -p",
+  "generatedAt": "2026-11-01T02:20:37.252Z"
+ },
  "Sallyn0225/eidolon-sc": {
   "text": "AI companions of The Idolmaster Shiny Colors idols for real-time voice or text chat, deployable with Docker Compose.",
   "basis": "ded2ff889b03",
@@ -634,6 +640,12 @@
   "basis": "4506bc17d5e2",
   "source": "claude -p",
   "generatedAt": "2026-10-26T02:22:08.162Z"
+ },
+ "wanghao-SunSky/cs329z-chinese": {
+  "text": "Chinese tutorial for Stanford CS329Z on building AI agents, with 19 lessons and 4 exercises for Python developers.",
+  "basis": "8ba9a34be2ae",
+  "source": "claude -p",
+  "generatedAt": "2026-11-01T02:20:37.141Z"
  },
  "wusuaya/overtime-meal-buddy": {
   "text": "A WorkBuddy skill that uses McDonald's MCP to plan group meals, compare combos, reprice changes and split the bill.",
