@@ -1,0 +1,12 @@
+{
+ "fullName": "Balanov/uncut",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "go install github.com/Balanov/uncut/cmd/uncut@latest",
+ "source": "readme",
+ "readmeSummary": "UNCUT is a tiny coding-agent harness for shell pipelines, CI jobs, containers, and agent experiments.",
+ "extractor": "heuristic",
+ "readmeHash": "ee4028b7f572",
+ "version": 1,
+ "generatedAt": "2026-11-01T21:54:32.707Z"
+}
