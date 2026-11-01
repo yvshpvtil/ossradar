@@ -1,0 +1,16 @@
+{
+ "fullName": "islandmed/SculptForge",
+ "whoItsFor": null,
+ "useCases": [
+  "Shelves around the canvas, alphabetical palettes holding every tool, a LightBox (`,`) of thumbnails, the brush picker (`B`, type letters to ",
+  "A built-in user guide (Help > User Guide, Shift+F1) with search, also on the website; hold Ctrl over any control and press F1 to open its ch",
+  "Standard, Clay, Smooth, Move, Inflate, Crease, Flatten, Pinch, Dam Standard, Clay Buildup, Snake Hook, Trim, Layer and Nudge brushes; X/Y/Z "
+ ],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/islandmed/SculptForge/main/install/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "SculptForge is a free, open-source alternative to ZBrush: a focused sculpting app with the brushes, symmetry and navigation ZBrush artists…",
+ "extractor": "heuristic",
+ "readmeHash": "553720596e6a",
+ "version": 1,
+ "generatedAt": "2026-11-01T06:01:31.974Z"
+}
