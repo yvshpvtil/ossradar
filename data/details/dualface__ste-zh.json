@@ -1,0 +1,12 @@
+{
+ "fullName": "dualface/ste-zh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add dualface/ste-zh -g",
+ "source": "readme",
+ "readmeSummary": "语言 / Language： 简体中文 | 繁體中文",
+ "extractor": "heuristic",
+ "readmeHash": "51065bd87065",
+ "version": 1,
+ "generatedAt": "2026-11-01T14:01:27.737Z"
+}
