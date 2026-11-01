@@ -6,6 +6,7 @@ import { HubIndex } from "@/components/HubIndex";
 import { HubAlternatives } from "@/components/HubAlternatives";
 import { CATEGORIES, getCategory } from "@/lib/categories";
 import Link from "next/link";
+import { LeaderLinks } from "@/components/LeaderLinks";
 import { BackButton } from "@/components/BackNav";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
@@ -132,12 +133,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
           <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
             OSS Radar tracks {repos.length} {category.label} repos that together gained about {formatNumber(weekTotal)} stars
             in the last 7 days. Leading this week:{" "}
-            {top.map((r, i) => (
-              <span key={r.fullName}>
-                {i > 0 && (i === top.length - 1 ? " and " : ", ")}
-                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link>
-              </span>
-            ))}
+            <LeaderLinks repos={top} />
             .
           </p>
         )}

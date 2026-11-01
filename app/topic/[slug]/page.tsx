@@ -1,6 +1,7 @@
 import { altLabel } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LeaderLinks } from "@/components/LeaderLinks";
 import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
@@ -69,12 +70,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
         {top.length > 0 && (
           <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
             {repos.length} repos gained about {formatNumber(weekTotal)} stars in the last 7 days. Leading this week:{" "}
-            {top.map((r, i) => (
-              <span key={r.fullName}>
-                {i > 0 && (i === top.length - 1 ? " and " : ", ")}
-                <Link className="underline" href={`/repo/${r.owner}/${r.name}`}>{r.fullName}</Link>
-              </span>
-            ))}
+            <LeaderLinks repos={top} />
             .
           </p>
         )}
