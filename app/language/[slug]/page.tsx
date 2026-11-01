@@ -1,4 +1,4 @@
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LeaderLinks } from "@/components/LeaderLinks";
@@ -59,7 +59,7 @@ export default async function LanguagePage({ params }: PageProps<"/language/[slu
   const others = getLanguages();
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: languageMeta(lang).title, description: languageMeta(lang).description, path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${lang.name} repos`, ranked) })} />
+      <JsonLd data={collectionPageLd({ name: languageMeta(lang).title, description: languageMeta(lang).description, path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${lang.name} repos`, ranked, 50, ldRepoName) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Languages", path: "/language" }, { name: lang.name, path }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />

@@ -9,7 +9,7 @@ import { categoryLabel } from "@/lib/categories";
 import { getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, ogDefaults, pageAlternates } from "@/lib/seo";
 
 const title = "New open-source AI & dev-tool repos, day by day";
@@ -52,7 +52,7 @@ export default function NewPage() {
     .sort((a, b) => b[1] - a[1]).slice(0, 3);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: title, description: newDescription(), path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos)) })} />
+      <JsonLd data={collectionPageLd({ name: title, description: newDescription(), path: "/new", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd(title, groups.flatMap((g) => g.repos), 50, ldRepoName) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "New repos", path: "/new" }])} />
       <PageNav crumbs={[{ name: "New repos" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Updated hourly</p>

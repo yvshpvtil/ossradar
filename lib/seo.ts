@@ -69,7 +69,9 @@ export function breadcrumbLd(items: { name: string; path: string }[]) {
   };
 }
 
-export function itemListLd(name: string, repos: Repo[], limit = 50) {
+/** ItemList of repo pages. Pass `nameOf` (e.g. ldRepoName from lib/alternatives) to name items the
+ *  way people search for them; defaults to owner/name. */
+export function itemListLd(name: string, repos: Repo[], limit = 50, nameOf: (r: Repo) => string = (r) => r.fullName) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -80,7 +82,7 @@ export function itemListLd(name: string, repos: Repo[], limit = 50) {
       "@type": "ListItem",
       position: i + 1,
       url: abs(repoPath(r)),
-      name: r.fullName,
+      name: nameOf(r),
     })),
   };
 }

@@ -15,7 +15,7 @@ import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
 import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
 import { HubBreakdown } from "@/components/HubBreakdown";
@@ -114,7 +114,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
   const newCount = getNewRepos().reduce((n, g) => n + g.repos.length, 0);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: categoryMeta(category).title, description: categoryMeta(category).description, path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${category.label} repos`, ranked) })} />
+      <JsonLd data={collectionPageLd({ name: categoryMeta(category).title, description: categoryMeta(category).description, path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${category.label} repos`, ranked, 50, ldRepoName) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Categories", path: "/category" }, { name: category.label, path }])} />
       <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8">
       <HomeSidebar repos={all} newCount={newCount} active={category.slug} />

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { BackButton } from "@/components/BackNav";
 import { notFound } from "next/navigation";
 import { getArchiveDays, getDailyTop, getDaySummary, type DaySummary } from "@/lib/daily";
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { dayLabel } from "@/lib/card-alt";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -63,7 +63,7 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
           inLanguage: "en",
           isPartOf: websiteRef,
           primaryImageOfPage: ogCardLd(`/daily/${date}`, "card"),
-          mainEntity: withoutContext(linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))),
+          mainEntity: withoutContext(linkListLd(`Fastest-rising GitHub repos on ${formatDate(date)}`, top.map((e) => ({ name: e.repo ? ldRepoName(e.repo) : e.fullName, url: e.repo ? abs(repoPath(e.repo)) : `https://github.com/${e.fullName}` })))),
         }}
       />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Daily archive", path: "/daily" }, { name: formatDate(date), path: `/daily/${date}` }])} />

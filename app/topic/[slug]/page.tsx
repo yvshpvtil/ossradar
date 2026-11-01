@@ -1,4 +1,4 @@
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LeaderLinks } from "@/components/LeaderLinks";
@@ -52,7 +52,7 @@ export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) 
   const related = relatedTopics(repos, { exclude: slug });
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked) })} />
+      <JsonLd data={collectionPageLd({ name: topicMeta(slug).title, description: topicMeta(slug).description, path: `/topic/${slug}`, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(`Fastest-rising ${label} repos`, ranked, 50, ldRepoName) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Topics", path: "/topic" }, { name: `Topic: ${label}`, path: `/topic/${slug}` }])} />
       <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
         <BackButton fallbackHref="/" />

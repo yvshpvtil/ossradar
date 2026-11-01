@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { EstimateNote } from "@/components/EstBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Leaderboard } from "@/components/Leaderboard";
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { deltaFor, getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
@@ -70,7 +70,7 @@ export default async function TrendingPage({ params }: PageProps<"/trending/[slu
     .slice(0, 2);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: l.title, description: landingDescription(l), path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(l.h1, repos) })} />
+      <JsonLd data={collectionPageLd({ name: l.title, description: landingDescription(l), path, dateModified: getData().generatedAt, ogCard: "card", mainEntity: itemListLd(l.h1, repos, 50, ldRepoName) })} />
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: l.title, path }])} />
       <PageNav crumbs={[{ name: l.title }]} />
       <section className="mb-6">

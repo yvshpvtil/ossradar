@@ -271,6 +271,13 @@ export function altLabel(r: Pick<Repo, "owner" | "name"> & { description?: strin
   return generic || dupNames.has(r.name.toLowerCase()) ? `${r.owner}/${r.name}` : brandName(r);
 }
 
+/** Structured-data name for a repo: brand spelling plus owner/name when they differ
+ *  ('SGLang (sgl-project/sglang)'), else just owner/name. */
+export function ldRepoName(r: Repo): string {
+  const label = altLabel(r);
+  return label === r.fullName ? r.fullName : `${label} (${r.fullName})`;
+}
+
 const STOP = new Set("about across after agent agents also based build built code coding easy every fast from free full github have into just like local made make model models more most open over powered project repo repos runs simple source that their them then this tool tools using with without your what when where which while will".split(" "));
 /** Distinctive words (4+ letters, no filler) in a repo's GitHub description, singularized crudely. */
 function descWords(r: Repo): Set<string> {
