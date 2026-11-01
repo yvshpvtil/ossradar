@@ -1,0 +1,12 @@
+{
+ "fullName": "imagepheasantfoyer/MusicMakerUnlimited",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "cb86e87f852c",
+ "version": 1,
+ "generatedAt": "2026-11-01T10:01:47.934Z"
+}

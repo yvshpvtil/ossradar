@@ -1,0 +1,12 @@
+{
+ "fullName": "darkareaminaret/MetaTrader-5-Bot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "d69cfdedc4bb",
+ "version": 1,
+ "generatedAt": "2026-11-01T10:01:47.925Z"
+}
