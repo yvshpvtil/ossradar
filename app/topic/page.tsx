@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
+import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
@@ -74,7 +75,7 @@ export default function TopicIndex() {
             </span>
             {t.top && (
               <span className="block text-xs text-zinc-500">
-                Leading: <Link prefetch={false} className="hover:underline" href={repoPath(t.top)}>{t.top.fullName}</Link>
+                Leading: <Link prefetch={false} className="hover:underline" href={repoPath(t.top)} title={t.top.fullName}>{altLabel(t.top)}</Link> ({formatDelta(t.top.delta7d)})
               </span>
             )}
           </li>

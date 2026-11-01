@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
+import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
@@ -99,7 +100,7 @@ export default function LanguageIndex() {
                 {l.tops.map((r, i) => (
                   <span key={r.fullName}>
                     {i > 0 && ", "}
-                    <Link prefetch={false} className="hover:underline" href={repoPath(r)}>{r.fullName}</Link> ({formatDelta(r.delta7d)})
+                    <Link prefetch={false} className="hover:underline" href={repoPath(r)} title={r.fullName}>{altLabel(r)}</Link> ({formatDelta(r.delta7d)})
                   </span>
                 ))}
               </span>
