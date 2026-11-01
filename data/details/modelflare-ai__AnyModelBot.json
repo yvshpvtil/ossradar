@@ -1,0 +1,12 @@
+{
+ "fullName": "modelflare-ai/AnyModelBot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name amb -p 3600:3600 -v amb-data:/data ghcr.io/modelflare-ai/anymodel-bot",
+ "source": "readme",
+ "readmeSummary": "AnyModelBot 是一个本地优先的 AI 智能体应用，支持 Windows、macOS 和 Linux。一个机器人就是一个人设，带着自己的默认模型、工作区和记忆。你可以在应用里和它聊天，也可以在微信、飞书、Telegram、Slack、Discord 里找它。",
+ "extractor": "heuristic",
+ "readmeHash": "028671f2be02",
+ "version": 1,
+ "generatedAt": "2026-11-01T20:55:40.696Z"
+}
