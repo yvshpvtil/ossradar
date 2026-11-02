@@ -1,0 +1,12 @@
+{
+ "fullName": "Anubis-Security-Tool/anubis",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --legacy-peer-deps",
+ "source": "readme",
+ "readmeSummary": "Anubis Security Tool is an open-source, cross-platform workspace for cybersecurity research, remote access, system administration…",
+ "extractor": "heuristic",
+ "readmeHash": "0365cbecc196",
+ "version": 1,
+ "generatedAt": "2026-11-02T21:01:18.850Z"
+}
