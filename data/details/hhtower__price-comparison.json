@@ -1,0 +1,12 @@
+{
+ "fullName": "hhtower/price-comparison",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "用一句话描述需求，让 AI 帮你挑选和比较报价。",
+ "extractor": "heuristic",
+ "readmeHash": "a0e62518747c",
+ "version": 1,
+ "generatedAt": "2026-11-02T01:29:51.212Z"
+}
