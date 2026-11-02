@@ -1,0 +1,12 @@
+{
+ "fullName": "AquaTradesmanAbide/genesis-miner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "5b9e56f7d681",
+ "version": 1,
+ "generatedAt": "2026-11-02T16:20:53.304Z"
+}

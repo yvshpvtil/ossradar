@@ -1,0 +1,12 @@
+{
+ "fullName": "NiazMorshed2007/reanimate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add NiazMorshed2007/reanimate -g",
+ "source": "readme",
+ "readmeSummary": "A lot of good ideas start on someone else's site. Ask an agent to rebuild one from a link or a screenshot and it makes one pass, calls it…",
+ "extractor": "heuristic",
+ "readmeHash": "c28bc3183cc6",
+ "version": 1,
+ "generatedAt": "2026-11-02T16:20:53.410Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Holdterjetty/discord-server-cloner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "eab67efe1aae",
+ "version": 1,
+ "generatedAt": "2026-11-02T16:20:52.870Z"
+}
