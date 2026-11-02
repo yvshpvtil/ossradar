@@ -95,6 +95,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:39.518Z"
  },
+ "HeyChengC/vibe-knowledge-film": {
+  "text": "A Claude Code skill that turns a script or topic into a Douyin-style knowledge short video with storyboards and sound effects.",
+  "basis": "ed2ba4f780f0",
+  "source": "claude -p",
+  "generatedAt": "2026-11-02T02:23:31.215Z"
+ },
  "Hisn00w/ASu-skills": {
   "text": "A plugin of nine AI skills for job seekers covering resumes, job matching, applications and interview prep.",
   "basis": "cfa203bf3deb",
@@ -312,10 +318,10 @@
   "generatedAt": "2026-10-14T05:12:04.388Z"
  },
  "dengmeiluan/ticket-monitoring": {
-  "text": "Self-hosted tool that tracks airfares on five Chinese booking sites and sends DingTalk alerts when prices hit your target.",
-  "basis": "fa0dd9bfc5a9",
+  "text": "Self-hosted flight price monitor that collects fare details from multiple sites and sends DingTalk alerts when targets are met.",
+  "basis": "d6adbc740a77",
   "source": "claude -p",
-  "generatedAt": "2026-10-29T02:22:37.196Z"
+  "generatedAt": "2026-11-02T02:23:29.092Z"
  },
  "didi/helixharness": {
   "text": "A Codex and Claude Code plugin that lets teams build an AI coding harness from their own project rules and knowledge.",
@@ -346,6 +352,12 @@
   "basis": "84de5ce1f09e",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:22.579Z"
+ },
+ "dualface/ste-zh": {
+  "text": "An agent skill that makes AI agents report task results to users in clear Chinese, following ASD-STE100 principles.",
+  "basis": "8f0631d414ad",
+  "source": "claude -p",
+  "generatedAt": "2026-11-02T02:23:30.718Z"
  },
  "elliothux/open-compute": {
   "text": "A self-hosted platform that runs Cloudflare Workers-compatible code and services like KV, D1 and R2 from one Rust binary.",
@@ -586,6 +598,12 @@
   "basis": "55a37452046f",
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:09.001Z"
+ },
+ "sleepy-zone/ai-ref-library-cn": {
+  "text": "Chinese-language website for searching three AI image reference libraries (faces, poses, outfits) and copying prompts.",
+  "basis": "b92fd88084c0",
+  "source": "claude -p",
+  "generatedAt": "2026-11-02T02:23:32.568Z"
  },
  "songconmaisaix31-design/mcpet": {
   "text": "Desktop pet in a McDonald's uniform for coding sessions: lunch reminders, coupon deals, task progress and token balance.",
