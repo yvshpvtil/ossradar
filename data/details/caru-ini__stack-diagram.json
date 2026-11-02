@@ -1,0 +1,12 @@
+{
+ "fullName": "caru-ini/stack-diagram",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add caru-ini/stack-diagram",
+ "source": "readme",
+ "readmeSummary": "Describe your stack in a sentence. Get an architecture diagram with official logos.",
+ "extractor": "heuristic",
+ "readmeHash": "d48e439e49c1",
+ "version": 1,
+ "generatedAt": "2026-11-02T11:17:17.997Z"
+}
