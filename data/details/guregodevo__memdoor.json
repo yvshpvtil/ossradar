@@ -1,0 +1,12 @@
+{
+ "fullName": "guregodevo/memdoor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://memdoor.ai/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Decision model. Jev (TypeSafe) answers a typed question about a turn with a calibrated probability in under half a second.",
+ "extractor": "heuristic",
+ "readmeHash": "095235bed830",
+ "version": 1,
+ "generatedAt": "2026-11-02T04:18:10.266Z"
+}

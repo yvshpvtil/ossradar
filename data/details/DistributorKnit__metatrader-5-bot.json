@@ -1,0 +1,12 @@
+{
+ "fullName": "DistributorKnit/metatrader-5-bot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "c5bd5f3c053c",
+ "version": 1,
+ "generatedAt": "2026-11-02T16:20:53.166Z"
+}

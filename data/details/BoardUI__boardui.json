@@ -1,0 +1,12 @@
+{
+ "fullName": "BoardUI/boardui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "BoardUI is a React design system for agentic interfaces: the parts an AI product needs and the parts every dashboard needs, in one visual…",
+ "extractor": "heuristic",
+ "readmeHash": "8b36c0d20c77",
+ "version": 1,
+ "generatedAt": "2026-11-02T11:17:18.041Z"
+}

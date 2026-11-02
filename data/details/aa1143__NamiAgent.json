@@ -1,0 +1,12 @@
+{
+ "fullName": "aa1143/NamiAgent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "零基础入门 AI Agent 的基础教程 不只是教程，也是一个能在本地跑起来的 Agent，自带网页端，每一步都看得见",
+ "extractor": "heuristic",
+ "readmeHash": "e75c30faaab4",
+ "version": 1,
+ "generatedAt": "2026-11-02T09:26:42.067Z"
+}

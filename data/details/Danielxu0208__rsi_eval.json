@@ -1,0 +1,12 @@
+{
+ "fullName": "Danielxu0208/rsi_eval",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install colima docker docker-compose docker-buildx",
+ "source": "readme",
+ "readmeSummary": "A lightweight Python SDK and CLI for evaluating recursive self-improvement (RSI) methods across agent benchmarks.",
+ "extractor": "heuristic",
+ "readmeHash": "ea999614bd66",
+ "version": 1,
+ "generatedAt": "2026-11-02T19:17:09.040Z"
+}

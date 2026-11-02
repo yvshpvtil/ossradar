@@ -1,0 +1,12 @@
+{
+ "fullName": "everyinfra/everyinfra-agent-plugins",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install everyinfra     # command-line tool (or: uv tool install everyinfra)",
+ "source": "readme",
+ "readmeSummary": "One API key and one MCP endpoint for public web data: 573 data APIs across 106 platforms, 17 web search tools and CAPTCHA solving for 52…",
+ "extractor": "heuristic",
+ "readmeHash": "9a97b77e98ee",
+ "version": 1,
+ "generatedAt": "2026-11-02T15:14:24.903Z"
+}

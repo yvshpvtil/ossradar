@@ -1,0 +1,16 @@
+{
+ "fullName": "chutingyean/Agent-Cockpit",
+ "whoItsFor": null,
+ "useCases": [
+  "Evidence chains, down to a JSON field. A claim must cite a value that a recorded run actually wrote. Each run records the hash of its script",
+  "Works with any MCP agent. Agent identity comes from the MCP handshake. `cockpit init` writes the config for Claude Code, Cursor, VS Code and",
+  "One write gate. Every write from MCP, the CLI or the board passes through the same validator. Non-compliant writes are rejected with a reaso"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Agent Cockpit is a local whiteboard plus an MCP server for AI agents that do research.",
+ "extractor": "heuristic",
+ "readmeHash": "a3874f997f83",
+ "version": 1,
+ "generatedAt": "2026-11-02T01:29:51.215Z"
+}

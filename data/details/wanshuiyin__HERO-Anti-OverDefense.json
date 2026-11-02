@@ -1,0 +1,12 @@
+{
+ "fullName": "wanshuiyin/HERO-Anti-OverDefense",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "你让它写个功能,它给你造了座堡垒,然后功能一直没写完。",
+ "extractor": "heuristic",
+ "readmeHash": "42f45207396f",
+ "version": 1,
+ "generatedAt": "2026-11-02T12:12:26.307Z"
+}

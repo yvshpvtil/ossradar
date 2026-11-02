@@ -1,0 +1,12 @@
+{
+ "fullName": "sahenjp/RustXNG",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.25.0",
+ "source": "readme",
+ "readmeSummary": "A self-hosted, SSRF-hardened web search and grounding engine for local AI agents.",
+ "extractor": "heuristic",
+ "readmeHash": "4583190475dd",
+ "version": 1,
+ "generatedAt": "2026-11-01T23:51:23.116Z"
+}

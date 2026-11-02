@@ -1,0 +1,12 @@
+{
+ "fullName": "phone-harness/phone-harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Enable Claude Code, Codex, or any agent to use your real phone. The agent can scroll, tap, type, and read your phone with no jailbreak…",
+ "extractor": "heuristic",
+ "readmeHash": "193df2638acf",
+ "version": 1,
+ "generatedAt": "2026-11-02T03:09:04.617Z"
+}

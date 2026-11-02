@@ -1,0 +1,12 @@
+{
+ "fullName": "GalaxyShadeSquare/windows-optimizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "b4df2afc89a8",
+ "version": 1,
+ "generatedAt": "2026-11-02T16:20:53.037Z"
+}

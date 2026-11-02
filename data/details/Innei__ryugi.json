@@ -1,0 +1,12 @@
+{
+ "fullName": "Innei/ryugi",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx ryugi-artifacts",
+ "source": "readme",
+ "readmeSummary": "Then send Let's make a react todo list. Ryugi starts brainstorming before any code, draws the options instead of describing them, and builds…",
+ "extractor": "heuristic",
+ "readmeHash": "80f5c6cb6e1a",
+ "version": 1,
+ "generatedAt": "2026-11-02T09:26:41.951Z"
+}

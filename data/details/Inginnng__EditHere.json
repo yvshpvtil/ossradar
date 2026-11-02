@@ -1,0 +1,12 @@
+{
+ "fullName": "Inginnng/EditHere",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "「右上角那个按钮再往左一点」「这张卡片大一些」「这里颜色不对」——和 AI 一起改界面时，想法很清楚，却要花大量文字描述位置和范围，AI 还常常改错地方。",
+ "extractor": "heuristic",
+ "readmeHash": "3335f90bffd7",
+ "version": 1,
+ "generatedAt": "2026-11-02T07:46:51.760Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "enmerasoftware/ai-design-check",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @enmera/ai-design-check                    # check the project (or: ai-design-check src lang)",
+ "source": "readme",
+ "readmeSummary": "Finds and fixes what makes interfaces built with AI coding agents (Claude Code, Cursor, Codex) look generated: 76 design rules…",
+ "extractor": "heuristic",
+ "readmeHash": "862106b4ae59",
+ "version": 1,
+ "generatedAt": "2026-11-02T01:29:51.249Z"
+}

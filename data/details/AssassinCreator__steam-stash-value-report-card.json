@@ -1,0 +1,12 @@
+{
+ "fullName": "AssassinCreator/steam-stash-value-report-card",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install git+https://github.com/AssassinCreator/steam-account-value-checker.git",
+ "source": "readme",
+ "readmeSummary": "Stashcard values a Steam account and its inventories (CS2, Dota 2, TF2, Rust, Steam community items or any custom app) from your terminal…",
+ "extractor": "heuristic",
+ "readmeHash": "10f3c54abe31",
+ "version": 1,
+ "generatedAt": "2026-11-02T07:46:51.763Z"
+}

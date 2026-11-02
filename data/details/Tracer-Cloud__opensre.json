@@ -1,0 +1,12 @@
+{
+ "fullName": "Tracer-Cloud/opensre",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://install.opensre.com | bash -s -- -gh",
+ "source": "readme",
+ "readmeSummary": "The installer fetches the latest build from main without requiring sudo.",
+ "extractor": "heuristic",
+ "readmeHash": "e3db9b15e075",
+ "version": 1,
+ "generatedAt": "2026-11-02T11:17:18.048Z"
+}

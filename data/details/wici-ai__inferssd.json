@@ -1,0 +1,12 @@
+{
+ "fullName": "wici-ai/inferssd",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/wici-ai/inferssd/releases/latest/download/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Run models larger than your RAM or VRAM. InferSSD builds on llama.cpp to run large mixture-of-experts (MoE) models from SSD, using standard…",
+ "extractor": "heuristic",
+ "readmeHash": "5865d7f1440e",
+ "version": 1,
+ "generatedAt": "2026-11-02T15:14:24.924Z"
+}

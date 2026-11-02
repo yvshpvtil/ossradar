@@ -1,0 +1,12 @@
+{
+ "fullName": "storytold/craft-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install --path apps/craft-anything-cli         # the CLI, as `craft-anything-cli`",
+ "source": "readme",
+ "readmeSummary": "Both modes drive the same engine.",
+ "extractor": "heuristic",
+ "readmeHash": "54429916a3ab",
+ "version": 1,
+ "generatedAt": "2026-11-02T03:09:04.634Z"
+}
