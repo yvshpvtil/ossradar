@@ -1,0 +1,12 @@
+{
+ "fullName": "RikiyaT/lm_understand-logs",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Each experiment folder has its own README. It says which run is which tab or row in the post, and which file each number comes from.",
+ "extractor": "heuristic",
+ "readmeHash": "c606912acb60",
+ "version": 1,
+ "generatedAt": "2026-11-02T23:53:58.931Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "elvarofficial/teardown",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add elvarofficial/teardown -g -a claude-code",
+ "source": "readme",
+ "readmeSummary": "A Claude Code skill that turns any machine into a 3D simulator you can take apart.",
+ "extractor": "heuristic",
+ "readmeHash": "fe873afb62a2",
+ "version": 1,
+ "generatedAt": "2026-11-02T23:53:58.941Z"
+}
