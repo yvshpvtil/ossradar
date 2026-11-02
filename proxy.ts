@@ -1,14 +1,34 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { getCategory } from "@/lib/categories";
-import { getRepo, getRepos } from "@/lib/data";
-import { getLanding } from "@/lib/landing";
-import { getLanguage, languageSlug } from "@/lib/languages";
-import { canonicalTopic, hasTopicPage, repoTopics } from "@/lib/topics";
-import { hasAlternativesPage } from "@/lib/alternatives";
-import retiredList from "@/data/retired.json";
+import { canonicalTopic } from "@/lib/topicAliases";
+import routes from "ossradar-data/routes.json";
+
+/**
+ * Which repo, hub and alternatives pages exist, precomputed at prebuild by scripts/routes.ts from
+ * the same lib functions the pages use (getRepo, getCategory, getLanding, getLanguage, hasTopicPage,
+ * hasAlternativesPage, retired repos). Data only changes with a rebuild, so this answers exactly as
+ * calling them here would, but keeps repos.json and the data pipeline out of the proxy bundle.
+ */
+const REPOS: Record<string, string> = routes.repos;
+const ALTERNATIVES = new Set<string>(routes.alternatives);
+const CATEGORIES = new Set<string>(routes.categories);
+const LANDINGS = new Set<string>(routes.landings);
+const LANGUAGES = new Set<string>(routes.languages);
+const TOPICS = new Set<string>(routes.topics);
+const REPO_LANGUAGES = new Set<string>(routes.repoLanguages);
+const REPO_TOPICS = new Set<string>(routes.repoTopics);
 
 /** Repos seen in a daily snapshot that have since left the tracked set (written by scripts/retired.ts at prebuild). */
-const RETIRED = new Set<string>(retiredList as string[]);
+const RETIRED = new Set<string>(routes.retired);
+
+/** Tracked repo by owner/name, case-insensitive, with its canonical casing (same as getRepo). */
+function getRepo(owner: string, name: string): { owner: string; name: string; full: string } | undefined {
+  const full = `${owner}/${name}`.toLowerCase();
+  const canonical = Object.hasOwn(REPOS, full) ? REPOS[full] : undefined;
+  if (!canonical) return undefined;
+  const [o, n] = canonical.split("/");
+  return { owner: o, name: n, full };
+}
+const hasAlternativesPage = (repo: { full: string }) => ALTERNATIVES.has(repo.full);
 
 /** First day that can be archived: the day after the first snapshot (2026-10-13). */
 const FIRST_ARCHIVE_DAY = "2026-10-14";
@@ -19,10 +39,10 @@ const isArchiveDay = (d: string) =>
 
 /** Single-slug hub sections (lowercase slugs) and how to tell a real hub. */
 const HUBS: Record<string, (slug: string) => boolean> = {
-  category: (s) => Boolean(getCategory(s)),
-  trending: (s) => Boolean(getLanding(s)),
-  language: (s) => Boolean(getLanguage(s)),
-  topic: (s) => hasTopicPage(s),
+  category: (s) => CATEGORIES.has(s),
+  trending: (s) => LANDINGS.has(s),
+  language: (s) => LANGUAGES.has(s),
+  topic: (s) => TOPICS.has(s),
   daily: isArchiveDay,
 };
 
@@ -33,8 +53,8 @@ const HUBS: Record<string, (slug: string) => boolean> = {
  * hard 404, so old links and crawlers land on the live list and the URL is kept for when it returns.
  */
 const DORMANT_HUBS: Record<string, (slug: string) => boolean> = {
-  language: (s) => getRepos().some((r) => r.language && languageSlug(r.language) === s),
-  topic: (s) => getRepos().some((r) => repoTopics(r).includes(canonicalTopic(s))),
+  language: (s) => REPO_LANGUAGES.has(s),
+  topic: (s) => REPO_TOPICS.has(canonicalTopic(s)),
 };
 
 /** Hub sections whose slug card moved to /opengraph-image/card (per-hub alt text via generateImageMetadata). */

@@ -1,4 +1,4 @@
-import raw from "@/data/activity.json";
+import raw from "ossradar-data/activity.json";
 
 export type Release = { tag: string; name: string; date: string; url: string };
 const file = raw as { updatedAt: string; repos: Record<string, { checkedAt: string; release: Release | null }> };

@@ -1,4 +1,4 @@
-import raw from "@/data/repos.json";
+import raw from "ossradar-data/repos.json";
 import type { CategorySlug, Repo, RepoData } from "./types";
 
 import { categorize } from "./categories";

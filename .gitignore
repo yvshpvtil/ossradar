@@ -44,3 +44,9 @@ next-env.d.ts
 /data/subscribers.json
 /out
 /data/retired.json
+/data/routes.json
+
+# cloudflare / opennext
+/.open-next
+/.wrangler
+.dev.vars*

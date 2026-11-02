@@ -1,4 +1,4 @@
-import raw from "@/data/mentions.json";
+import raw from "ossradar-data/mentions.json";
 
 export type HnMention = {
   checkedAt: string;
