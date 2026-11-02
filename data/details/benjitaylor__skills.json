@@ -1,0 +1,12 @@
+{
+ "fullName": "benjitaylor/skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add benjitaylor/skills --skill stageshow",
+ "source": "readme",
+ "readmeSummary": "Skills I use with coding agents for design and motion work.",
+ "extractor": "heuristic",
+ "readmeHash": "2ec380c76509",
+ "version": 1,
+ "generatedAt": "2026-11-02T22:58:49.334Z"
+}
