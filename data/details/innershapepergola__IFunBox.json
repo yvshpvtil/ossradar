@@ -1,0 +1,12 @@
+{
+ "fullName": "innershapepergola/IFunBox",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "aac47b580c34",
+ "version": 1,
+ "generatedAt": "2026-11-02T04:18:10.232Z"
+}
