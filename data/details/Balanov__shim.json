@@ -1,0 +1,12 @@
+{
+ "fullName": "Balanov/shim",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "go install github.com/Balanov/shim/cmd/shim@v0.1.0",
+ "source": "readme",
+ "readmeSummary": "Model-agnostic coding agents are everywhere. Setting them up is still too hard: provider IDs, API endpoints, MCP JSON, skills directories…",
+ "extractor": "heuristic",
+ "readmeHash": "0f3bebc0d846",
+ "version": 1,
+ "generatedAt": "2026-11-03T01:27:15.835Z"
+}

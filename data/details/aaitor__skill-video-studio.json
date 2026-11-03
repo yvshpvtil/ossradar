@@ -1,0 +1,16 @@
+{
+ "fullName": "aaitor/skill-video-studio",
+ "whoItsFor": null,
+ "useCases": [
+  "Real product capture: browser interaction scripts with explicit beats and stable selectors.",
+  "Branded composition: title, browser frame, chapters, and CTA in a HyperFrames timeline.",
+  "Local mastering and QA: master/web copies, ffprobe checks, contact sheet, and thumbnail."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A local video-production workspace driven by the /devrel-video Claude Code skill.",
+ "extractor": "heuristic",
+ "readmeHash": "4b7a7a8662a0",
+ "version": 1,
+ "generatedAt": "2026-11-03T01:27:15.842Z"
+}

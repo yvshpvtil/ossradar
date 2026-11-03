@@ -1,0 +1,12 @@
+{
+ "fullName": "phone-harness/mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give any MCP agent a real iPhone or an Android emulator in the cloud.",
+ "extractor": "heuristic",
+ "readmeHash": "a3ee985a81cd",
+ "version": 1,
+ "generatedAt": "2026-11-03T01:27:15.854Z"
+}

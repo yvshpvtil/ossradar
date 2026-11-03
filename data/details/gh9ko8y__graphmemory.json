@@ -1,0 +1,12 @@
+{
+ "fullName": "gh9ko8y/graphmemory",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e .",
+ "source": "readme",
+ "readmeSummary": "双时态 AI 记忆系统 — 给 AI 代理一个会积累、会遗忘、会随时间变化的长期记忆库。",
+ "extractor": "heuristic",
+ "readmeHash": "f32627c4ff19",
+ "version": 1,
+ "generatedAt": "2026-11-03T01:27:16.077Z"
+}

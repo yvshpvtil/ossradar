@@ -1,0 +1,12 @@
+{
+ "fullName": "Tavotto/Tavotto",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install \"tavotto[worker]\"",
+ "source": "readme",
+ "readmeSummary": "AI drew your research figure. Tavotto™ makes it publication-ready. Tavotto is a free, open-source tool for finishing scientific figures: it…",
+ "extractor": "heuristic",
+ "readmeHash": "563801810364",
+ "version": 1,
+ "generatedAt": "2026-11-03T01:27:15.859Z"
+}
