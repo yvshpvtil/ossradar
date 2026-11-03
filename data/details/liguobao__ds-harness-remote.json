@@ -1,0 +1,16 @@
+{
+ "fullName": "liguobao/ds-harness-remote",
+ "whoItsFor": null,
+ "useCases": [
+  "Access your local Harness instance remotely from the web, a PC, or a mobile device: DSH first, with Codex, Cursor, and Antigravity support t",
+  "DeepSeek Harness Desktop is ready to use after installation, with its native interface and no separate desktop conversation UI.",
+  "Create workspaces, configure models, and switch conversation models with the same smooth workflow as local use."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Continue using your DeepSeek Harness instance from a phone, computer, or browser.",
+ "extractor": "heuristic",
+ "readmeHash": "868946f05283",
+ "version": 1,
+ "generatedAt": "2026-11-03T03:08:37.889Z"
+}
