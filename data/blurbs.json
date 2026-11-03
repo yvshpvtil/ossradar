@@ -209,11 +209,23 @@
   "source": "claude -p",
   "generatedAt": "2026-10-25T02:21:43.463Z"
  },
+ "aa1143/NamiAgent": {
+  "text": "A beginner tutorial for building AI agents that is also a runnable local agent with files, commands, MCP and memory.",
+  "basis": "bfb6465411fd",
+  "source": "claude -p",
+  "generatedAt": "2026-11-03T02:27:35.569Z"
+ },
  "adexbn/walk-kcal": {
   "text": "Turns walking distance into a meal calorie budget and marks which dishes at nearby restaurants, including McDonald's, fit it.",
   "basis": "48f3baa07be7",
   "source": "claude -p",
   "generatedAt": "2026-10-21T02:25:00.754Z"
+ },
+ "adongwanai/AgentGuide": {
+  "text": "An open-source guide to AI Agent engineering and research, with learning roadmaps and interview prep for job seekers.",
+  "basis": "41727fed4775",
+  "source": "claude -p",
+  "generatedAt": "2026-11-03T02:27:33.817Z"
  },
  "aimeoa/hanshuang-codex": {
   "text": "Experimental jailbreak project for GPT 6.0 and WorkBuddy V4.1 Flash, with an Electron desktop interface.",
