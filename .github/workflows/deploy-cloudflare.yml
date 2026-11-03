@@ -85,4 +85,12 @@ jobs:
         timeout-minutes: 5
         run: |
           sleep 30
-          npx tsx scripts/indexnow.ts
+          # Skip while the apex still points at a dead Vercel deploy (402); IndexNow
+          # submits https://ossradar.net/... URLs and would only teach engines those 402s.
+          code=$(curl -sI -o /dev/null -w "%{http_code}" https://ossradar.net/ || echo "000")
+          if [[ "$code" =~ ^2 ]]; then
+            npx tsx scripts/indexnow.ts
+          else
+            echo "IndexNow skipped: ossradar.net not healthy (HTTP $code)"
+            exit 0
+          fi

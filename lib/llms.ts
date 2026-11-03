@@ -148,6 +148,7 @@ ${alternativesSection()}${dailySection(days)}## Data access
 - [JSON API: /api/v1/repo/{owner}/{name}](${SITE.url}/api/v1/repo/morluto/rea): one tracked repo's stars, 24h and 7-day gains, rank, daily star history, Hacker News story and alternatives. Same terms.
 - [RSS feed](${SITE.url}/rss.xml)
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
+- [llms.txt](${SITE.url}/llms.txt): this file (also at ${SITE.url}/.well-known/llms.txt)
 - [Full text for LLMs](${SITE.url}/llms-full.txt): every tracked repo with its one-line summary and current numbers
 `;
 }

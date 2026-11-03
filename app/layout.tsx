@@ -21,7 +21,10 @@ export const metadata: Metadata = {
   description: SITE.metaDescription,
   applicationName: SITE.name,
   alternates: {
-    types: RSS_ALTERNATE,
+    types: {
+      ...RSS_ALTERNATE,
+      "text/plain": [{ url: "/llms.txt", title: "llms.txt" }],
+    },
   },
   openGraph: {
     type: "website",
