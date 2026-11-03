@@ -1,0 +1,16 @@
+{
+ "fullName": "pch/rawmakase",
+ "whoItsFor": null,
+ "useCases": [
+  "Develop: white balance and picker, one-click Auto tone and Auto white balance, exposure and tone, Shadows/Highlights, Clarity, Dehaze, point",
+  "Spot removal and masks (experimental, early): Heal and Clone spots and brushed areas with automatic sources, and brush, gradient and range m",
+  "Library: SQLite catalogs, folders, ratings, flags, color labels, filtering, and non-destructive Lightroom `.lrcat` import with folder relink"
+ ],
+ "installCommand": "brew install --cask pch/tap/rawmakase",
+ "source": "readme",
+ "readmeSummary": "/raw·muh·KAH·say/, RAW + omakase",
+ "extractor": "heuristic",
+ "readmeHash": "f81cac2a96bf",
+ "version": 1,
+ "generatedAt": "2026-11-03T10:13:21.010Z"
+}
