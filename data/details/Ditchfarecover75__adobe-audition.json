@@ -1,0 +1,12 @@
+{
+ "fullName": "Ditchfarecover75/adobe-audition",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "bac4f59ea41f",
+ "version": 1,
+ "generatedAt": "2026-11-03T11:13:53.310Z"
+}
