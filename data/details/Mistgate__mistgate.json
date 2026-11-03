@@ -1,0 +1,16 @@
+{
+ "fullName": "Mistgate/mistgate",
+ "whoItsFor": null,
+ "useCases": [
+  "Add a node from the browser with its IP and root password. The panel pins the SSH host key, checks the server, opens the ports in an active ",
+  "One link per person. Mihomo apps (kl!ck, FlClash, Clash Verge Rev) get all three protocols from it, Happ gets Hysteria2 and VLESS, and Amnez",
+  "Every 5 minutes the panel connects to every server the way an app does. A doctor on each node runs 17 host checks and offers seven fixes tha"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "You put the panel on one server and add your VPN servers to it as nodes.",
+ "extractor": "heuristic",
+ "readmeHash": "6775f3396c63",
+ "version": 1,
+ "generatedAt": "2026-11-03T18:06:17.421Z"
+}

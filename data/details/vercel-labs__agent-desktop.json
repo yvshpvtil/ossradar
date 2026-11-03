@@ -1,0 +1,12 @@
+{
+ "fullName": "vercel-labs/agent-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g agent-desktop",
+ "source": "readme",
+ "readmeSummary": "Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree.",
+ "extractor": "heuristic",
+ "readmeHash": "0025b82f2fab",
+ "version": 1,
+ "generatedAt": "2026-11-03T18:06:17.556Z"
+}
