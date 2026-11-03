@@ -1,0 +1,12 @@
+{
+ "fullName": "CircumferenceBanker/autodesk-inventor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "50b9c4e3f1e0",
+ "version": 1,
+ "generatedAt": "2026-11-03T12:04:03.175Z"
+}
