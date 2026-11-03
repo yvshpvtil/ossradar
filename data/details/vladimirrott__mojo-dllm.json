@@ -1,0 +1,12 @@
+{
+ "fullName": "vladimirrott/mojo-dllm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh    # skip if you have uv",
+ "source": "readme",
+ "readmeSummary": "mojo-dllm runs LLaDA-8B-Instruct, LLaDA-1.5, Dream-v0-Instruct-7B, Dream-Coder-v0-Instruct-7B and DiffuCoder-7B-cpGRPO from quantized GGUF…",
+ "extractor": "heuristic",
+ "readmeHash": "3b8aa78656a8",
+ "version": 1,
+ "generatedAt": "2026-11-03T16:11:53.704Z"
+}

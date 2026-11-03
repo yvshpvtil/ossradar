@@ -1,0 +1,12 @@
+{
+ "fullName": "SAOS-3624/dsh-see-now",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx dsh-see-window            # 开窗（已经开着就什么都不做）",
+ "source": "readme",
+ "readmeSummary": "一个给 DSH 用的实时视觉插件：把你的屏幕（或摄像头 / 视频文件）变成一串按变化量筛选过的画面，压进一张几帧拼成的图，交给模型。",
+ "extractor": "heuristic",
+ "readmeHash": "810a41d0a1f1",
+ "version": 1,
+ "generatedAt": "2026-11-03T16:11:53.649Z"
+}
