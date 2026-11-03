@@ -1,0 +1,12 @@
+{
+ "fullName": "KKKKhazix/khazix-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "都是在自己项目里跑通了一段时间，确实省事，才搬出来开源的。没什么花活，就是几个挺实用的东西。",
+ "extractor": "heuristic",
+ "readmeHash": "372c6f4731f3",
+ "version": 1,
+ "generatedAt": "2026-11-03T22:04:18.617Z"
+}
