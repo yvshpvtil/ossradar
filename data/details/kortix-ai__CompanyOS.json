@@ -1,0 +1,12 @@
+{
+ "fullName": "kortix-ai/CompanyOS",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://kortix.com/install | bash",
+ "source": "readme",
+ "readmeSummary": "The open-source CompanyOS: the cloud-native agent harness for companies.",
+ "extractor": "heuristic",
+ "readmeHash": "8536d6c0c6c3",
+ "version": 1,
+ "generatedAt": "2026-11-03T21:05:01.146Z"
+}
