@@ -1,0 +1,16 @@
+{
+ "fullName": "dstrml/wu",
+ "whoItsFor": null,
+ "useCases": [
+  "Native and fast. No Electron or webviews. Opens instantly and stays responsive on large views.",
+  "Lightweight. Wu's memory footprint is lower than VS Code and Zed. See benchmarks.",
+  "Coding agents included. Built-in support for Claude Code, Codex, and OpenCode."
+ ],
+ "installCommand": "curl -fsSL https://wu.dstrml.org/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Wu is a fast, native code editor written in Rust, with a clean, modern design and coding agents built in.",
+ "extractor": "heuristic",
+ "readmeHash": "734d7c32b023",
+ "version": 1,
+ "generatedAt": "2026-11-03T19:15:55.585Z"
+}
