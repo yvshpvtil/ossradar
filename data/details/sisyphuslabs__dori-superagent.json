@@ -1,0 +1,12 @@
+{
+ "fullName": "sisyphuslabs/dori-superagent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/sisyphuslabs/dori-superagent/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "A proactive multi-session coding-agent harness in about 1,600 lines of TypeScript, running on herdr and omo.",
+ "extractor": "heuristic",
+ "readmeHash": "410a13238ee1",
+ "version": 1,
+ "generatedAt": "2026-11-03T13:28:25.367Z"
+}

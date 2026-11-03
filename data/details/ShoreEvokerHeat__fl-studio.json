@@ -1,0 +1,12 @@
+{
+ "fullName": "ShoreEvokerHeat/fl-studio",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to run your terminal as Administrator to allow proper pathway and environment mapping.",
+ "extractor": "heuristic",
+ "readmeHash": "56cbbd7929c3",
+ "version": 1,
+ "generatedAt": "2026-11-03T13:28:24.747Z"
+}

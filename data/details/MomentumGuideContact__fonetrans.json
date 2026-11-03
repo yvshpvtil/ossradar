@@ -1,0 +1,12 @@
+{
+ "fullName": "MomentumGuideContact/fonetrans",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to run your terminal as Administrator to allow proper pathway and environment mapping.",
+ "extractor": "heuristic",
+ "readmeHash": "2aa53e378a1a",
+ "version": 1,
+ "generatedAt": "2026-11-03T13:28:25.018Z"
+}
