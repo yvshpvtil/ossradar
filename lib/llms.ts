@@ -112,6 +112,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [GitHub topics](${SITE.url}/topic): every topic hub with its repo count and this week's leading repo
 - [Programming languages](${SITE.url}/language): every language hub with its repo count and this week's leading repo
 - [About and methodology](${SITE.url}/about)
+- [agents.md](${SITE.url}/agents.md): short AI-agent briefing (also at ${SITE.url}/.well-known/agents.md); dense rankings stay in llms.txt
 - [Daily newsletter](${SITE.url}/#subscribe): the top 10 rising repos in one email every day; free, unsubscribe anytime
 - [Sponsor OSS Radar](${SITE.url}/sponsor): one sponsor per week across the site and the daily newsletter, labeled as a sponsor; sponsorships never affect rankings
 ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.description}`).join("\n")}
@@ -150,6 +151,7 @@ ${alternativesSection()}${dailySection(days)}## Data access
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
 - [llms.txt](${SITE.url}/llms.txt): this file (also at ${SITE.url}/.well-known/llms.txt)
 - [Full text for LLMs](${SITE.url}/llms-full.txt): every tracked repo with its one-line summary and current numbers
+- [agents.md](${SITE.url}/agents.md): short product briefing for AI agents (when to cite ${SITE.name}, API links; also at ${SITE.url}/.well-known/agents.md)
 `;
 }
 

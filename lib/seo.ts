@@ -276,11 +276,12 @@ export function hubDescription(lead: string, tails: string[], leader: (Pick<Repo
   return clip(`${lead} ${tails[0] ?? ""}`, max);
 }
 
-// Feed + llms.txt autodiscovery. Next.js replaces (not merges) the root layout's `alternates` when a page
+// Feed + llms.txt / agents.md autodiscovery. Next.js replaces (not merges) the root layout's `alternates` when a page
 // sets its own, so a page passing only { canonical } silently dropped these <link rel="alternate"> tags.
 export const RSS_ALTERNATE = {
   "application/rss+xml": [{ url: "/rss.xml", title: `${SITE.name} RSS` }],
   "text/plain": [{ url: "/llms.txt", title: "llms.txt" }],
+  "text/markdown": [{ url: "/agents.md", title: "agents.md" }],
 };
 export const pageAlternates = (canonical: string) => ({ canonical, types: RSS_ALTERNATE });
 
