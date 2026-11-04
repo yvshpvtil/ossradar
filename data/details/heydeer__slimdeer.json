@@ -1,0 +1,12 @@
+{
+ "fullName": "heydeer/slimdeer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install heydeer/tap/slimdeer",
+ "source": "readme",
+ "readmeSummary": "Smaller images. Same picture. slimdeer makes PNG and JPEG images smaller, or turns them into WebP and AVIF, with no quality slider…",
+ "extractor": "heuristic",
+ "readmeHash": "b72eec01e739",
+ "version": 1,
+ "generatedAt": "2026-11-04T03:07:54.999Z"
+}

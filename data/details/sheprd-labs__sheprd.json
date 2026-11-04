@@ -1,0 +1,12 @@
+{
+ "fullName": "sheprd-labs/sheprd",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install penso/tap/herdr-gpui",
+ "source": "readme",
+ "readmeSummary": "A native Rust/GPUI workspace for terminals and AI agents on macOS, Linux, and Windows.",
+ "extractor": "heuristic",
+ "readmeHash": "34445731322b",
+ "version": 1,
+ "generatedAt": "2026-11-04T03:07:55.005Z"
+}
