@@ -1,0 +1,12 @@
+{
+ "fullName": "govijr/terminal-mac",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/govijr/terminal-mac/releases/latest/download/get.sh | bash",
+ "source": "readme",
+ "readmeSummary": "A separate macOS desktop for computer-use agents, viewed and controlled from a terminal.",
+ "extractor": "heuristic",
+ "readmeHash": "f058071b1c34",
+ "version": 1,
+ "generatedAt": "2026-11-04T05:18:11.824Z"
+}

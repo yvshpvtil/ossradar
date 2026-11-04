@@ -1,0 +1,12 @@
+{
+ "fullName": "DominikScholz/open-bot-avatar",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pnpm add open-bot-avatar",
+ "source": "readme",
+ "readmeSummary": "A JSON spec and renderer for interactive agent avatars.",
+ "extractor": "heuristic",
+ "readmeHash": "56c7459eb418",
+ "version": 1,
+ "generatedAt": "2026-11-04T05:18:11.791Z"
+}
