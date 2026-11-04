@@ -1,0 +1,12 @@
+{
+ "fullName": "RamCocoonSever/microstation-2026",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "4b55e5e18379",
+ "version": 1,
+ "generatedAt": "2026-11-04T16:12:42.294Z"
+}
