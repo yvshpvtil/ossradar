@@ -1,0 +1,12 @@
+{
+ "fullName": "Balanov/latch",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx --yes github:Balanov/latch init my-latch-service",
+ "source": "readme",
+ "readmeSummary": "JSON/HTTPS contract between an agent and a service. One card, one POST endpoint, five operations. No SDK required.",
+ "extractor": "heuristic",
+ "readmeHash": "fc3cdf27ed78",
+ "version": 1,
+ "generatedAt": "2026-11-04T23:03:33.307Z"
+}

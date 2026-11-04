@@ -1,0 +1,12 @@
+{
+ "fullName": "JuneYaooo/rea-video",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "实拍口播、桌拍、AI 视频、3D、代码动效、混剪都能拆， 逐个镜头告诉你画面、花字、剪辑和声音是怎么做的，再告诉你怎么照着做一条。",
+ "extractor": "heuristic",
+ "readmeHash": "40a65c88959f",
+ "version": 1,
+ "generatedAt": "2026-11-04T23:03:33.324Z"
+}
