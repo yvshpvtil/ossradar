@@ -1,0 +1,12 @@
+{
+ "fullName": "sloemo01/diorama",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A playbook and code kit for building small pixel-art dioramas in Three.js.",
+ "extractor": "heuristic",
+ "readmeHash": "8dbffda87b13",
+ "version": 1,
+ "generatedAt": "2026-11-04T12:07:27.058Z"
+}

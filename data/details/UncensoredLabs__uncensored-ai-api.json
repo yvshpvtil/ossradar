@@ -1,0 +1,12 @@
+{
+ "fullName": "UncensoredLabs/uncensored-ai-api",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Access uncensored and abliterated DeepSeek and GLM text models through one OpenAI-compatible API, or use them directly in browser Chat.",
+ "extractor": "heuristic",
+ "readmeHash": "f832a29621a5",
+ "version": 1,
+ "generatedAt": "2026-11-04T12:07:27.086Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "feder-cr/Jobs_Applier_AI_Agent_AIHawk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Open-source, self-hosted alternative to OpenAI Dots, Grok Bot. Built to be undetectable by anti-bot systems.",
+ "extractor": "heuristic",
+ "readmeHash": "5eba0cb44172",
+ "version": 1,
+ "generatedAt": "2026-11-04T12:07:27.061Z"
+}

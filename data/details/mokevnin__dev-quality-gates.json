@@ -1,0 +1,12 @@
+{
+ "fullName": "mokevnin/dev-quality-gates",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An opinionated, continuously curated list of tools for enforcing software development standards.",
+ "extractor": "heuristic",
+ "readmeHash": "e38d6247f167",
+ "version": 1,
+ "generatedAt": "2026-11-04T12:07:27.323Z"
+}

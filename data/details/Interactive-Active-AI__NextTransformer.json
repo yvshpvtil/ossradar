@@ -1,0 +1,12 @@
+{
+ "fullName": "Interactive-Active-AI/NextTransformer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install --no-deps --require-hashes -r requirements/linear.txt   # linear-attention kernels",
+ "source": "readme",
+ "readmeSummary": "When the training budget is fixed, how should a language model spend its computation?",
+ "extractor": "heuristic",
+ "readmeHash": "daa8ed57fe78",
+ "version": 1,
+ "generatedAt": "2026-11-04T12:07:27.040Z"
+}
