@@ -107,6 +107,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:02.428Z"
  },
+ "Inginnng/EditHere": {
+  "text": "Visual annotation and layout-editing tool that packages images, comments, and layout changes as JSON for AI.",
+  "basis": "e0ce8b9892b2",
+  "source": "claude -p",
+  "generatedAt": "2026-11-04T02:20:47.669Z"
+ },
  "JackWang666666/my-rag": {
   "text": "A RAG knowledge-base Q&A system with one frontend and two swappable backends: Python/LangChain and Java/Spring AI.",
   "basis": "49d3e4cf50ee",
@@ -130,6 +136,12 @@
   "basis": "45750ed8a7a4",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:08.426Z"
+ },
+ "KKKKhazix/agent-autoloop": {
+  "text": "Runs command-line agents in the background to take on and finish tasks, sending you a card only when unsure.",
+  "basis": "5dbc285c2938",
+  "source": "claude -p",
+  "generatedAt": "2026-11-04T02:20:48.071Z"
  },
  "MaryCache/imozuru": {
   "text": "A Claude Code skill that researches unfamiliar fields by following citations and links until reaching original sources.",
@@ -166,6 +178,12 @@
   "basis": "e4725e201610",
   "source": "claude -p",
   "generatedAt": "2026-11-01T02:20:37.252Z"
+ },
+ "SAOS-3624/dsh-see-now": {
+  "text": "A DSH plugin that lets AI see your screen live, keeping only frames that changed and tiling several into one image.",
+  "basis": "c78939d92622",
+  "source": "claude -p",
+  "generatedAt": "2026-11-04T02:20:47.163Z"
  },
  "Sallyn0225/eidolon-sc": {
   "text": "AI companions of The Idolmaster Shiny Colors idols for real-time voice or text chat, deployable with Docker Compose.",
@@ -563,6 +581,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "peterpoal134/memory-brain": {
+  "text": "AstrBot plugins that add memory, retrieval, forgetting, emotion and an autonomous life loop without overriding persona.",
+  "basis": "7c7323adb1e8",
+  "source": "claude -p",
+  "generatedAt": "2026-11-04T02:20:58.619Z"
+ },
  "pinganbbOvO/ai-companion-kit": {
   "text": "QQ chat companion bot that remembers things and reads the room, plus an MCP server for controlling Android phones.",
   "basis": "1bbcc085f9a4",
@@ -720,10 +744,10 @@
   "generatedAt": "2026-10-28T02:23:28.707Z"
  },
  "z91772524-ai/pojia-next": {
-  "text": "Windows tool that swaps the built-in prompts of 15 AI clients for your own, with backups and one-click restore.",
-  "basis": "0602281e3175",
+  "text": "Windows tool that replaces built-in prompts in DSH, WorkBuddy and ZCode AI clients with your own and can restore them.",
+  "basis": "184b70f61ada",
   "source": "claude -p",
-  "generatedAt": "2026-10-28T02:23:31.017Z"
+  "generatedAt": "2026-11-04T02:20:46.983Z"
  },
  "zcbacxc/mcd-party-planner": {
   "text": "McDonald's MCP CLI and skill for planning group meals and party orders across stores, combos and budget.",
