@@ -1,0 +1,12 @@
+{
+ "fullName": "andrew-babo/muse4ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Let your AI agent make the pictures and the videos.",
+ "extractor": "heuristic",
+ "readmeHash": "2b5a0a300304",
+ "version": 1,
+ "generatedAt": "2026-11-04T08:30:06.683Z"
+}
