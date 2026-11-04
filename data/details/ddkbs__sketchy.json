@@ -1,0 +1,12 @@
+{
+ "fullName": "ddkbs/sketchy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Sketchy lets your AI assistant draw while it explains: clean, hand-drawn, interactive diagrams rendered right next to the answer.",
+ "extractor": "heuristic",
+ "readmeHash": "4ec2cca8dd69",
+ "version": 1,
+ "generatedAt": "2026-11-04T13:29:59.564Z"
+}
