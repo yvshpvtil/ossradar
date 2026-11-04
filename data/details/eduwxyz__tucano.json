@@ -1,0 +1,12 @@
+{
+ "fullName": "eduwxyz/tucano",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Your team of AI agents, on your computer. Your rules.",
+ "extractor": "heuristic",
+ "readmeHash": "964e7e079833",
+ "version": 1,
+ "generatedAt": "2026-11-04T01:28:04.839Z"
+}

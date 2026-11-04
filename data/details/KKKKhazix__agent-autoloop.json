@@ -1,0 +1,12 @@
+{
+ "fullName": "KKKKhazix/agent-autoloop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/KKKKhazix/agent-autoloop/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+ "extractor": "heuristic",
+ "readmeHash": "d6487398c41f",
+ "version": 1,
+ "generatedAt": "2026-11-04T01:28:04.846Z"
+}

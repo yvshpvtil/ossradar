@@ -1,0 +1,12 @@
+{
+ "fullName": "peterpoal134/memory-brain",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install faster-whisper pilk   # 可选：语音转写",
+ "source": "readme",
+ "readmeSummary": "普通机器人聊完就忘。这里做了五件事：",
+ "extractor": "heuristic",
+ "readmeHash": "04b9e1d91166",
+ "version": 1,
+ "generatedAt": "2026-11-04T01:28:05.077Z"
+}

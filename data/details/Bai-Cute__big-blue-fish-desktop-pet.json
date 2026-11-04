@@ -1,0 +1,12 @@
+{
+ "fullName": "Bai-Cute/big-blue-fish-desktop-pet",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "蓝色大肥鱼是一款住在电脑桌面上的 AI 桌宠软件，支持 Windows 与 Linux 双平台。她是一位蓝发的小鲸鱼娘，形象来自对 DeepSeek 的二创虚拟形象“蓝色大肥鱼”。",
+ "extractor": "heuristic",
+ "readmeHash": "ee06a0bcc63d",
+ "version": 1,
+ "generatedAt": "2026-11-04T01:28:04.863Z"
+}
