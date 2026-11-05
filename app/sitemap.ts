@@ -27,6 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/compare`, lastModified, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, lastModified: STATIC_LASTMOD.submit, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE.url}/about`, lastModified: STATIC_LASTMOD.about, changeFrequency: "monthly", priority: 0.4 },
+    // Agent/chatbot discovery files: currently only advertised via <link rel="alternate">; listing them
+    // in the sitemap helps search and AI crawlers that start from sitemap.xml find llms.txt / agents.md.
+    { url: `${SITE.url}/llms.txt`, lastModified, changeFrequency: "hourly", priority: 0.7 },
+    { url: `${SITE.url}/llms-full.txt`, lastModified, changeFrequency: "hourly", priority: 0.6 },
+    { url: `${SITE.url}/agents.md`, lastModified, changeFrequency: "hourly", priority: 0.6 },
     ...CATEGORIES.map((c) => ({
       url: `${SITE.url}/category/${c.slug}`,
       lastModified,
