@@ -6,8 +6,11 @@ export function languageSlug(lang: string): string {
   return lang.toLowerCase().replace(/\+\+/g, "pp").replace(/#/g, "sharp").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+/** Hubs need at least this many tracked repos (raised from 5 so thin C/C++/Java/Kotlin pages retire). */
+export const LANGUAGE_MIN = 8;
+
 /** Languages with at least `min` tracked repos, most repos first. Only these get a hub page. */
-export function getLanguages(min = 5): { slug: string; name: string; count: number }[] {
+export function getLanguages(min = LANGUAGE_MIN): { slug: string; name: string; count: number }[] {
   const counts = new Map<string, number>();
   for (const r of getRepos()) if (r.language) counts.set(r.language, (counts.get(r.language) ?? 0) + 1);
   return [...counts.entries()]

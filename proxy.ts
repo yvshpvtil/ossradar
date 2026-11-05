@@ -47,7 +47,7 @@ const HUBS: Record<string, (slug: string) => boolean> = {
 };
 
 /**
- * Language and topic hubs come and go with the tracked set (a hub needs 5 repos in a language or
+ * Language and topic hubs come and go with the tracked set (a hub needs 8 repos in a language or
  * 10 sharing a topic). A slug that was a hub, or could be one again, because some tracked repo
  * still uses that language or topic, gets a temporary redirect to the section index instead of a
  * hard 404, so old links and crawlers land on the live list and the URL is kept for when it returns.

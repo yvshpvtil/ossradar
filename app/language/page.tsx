@@ -6,7 +6,7 @@ import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { getLanguages, getReposByLanguage } from "@/lib/languages";
+import { LANGUAGE_MIN, getLanguages, getReposByLanguage } from "@/lib/languages";
 import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -14,9 +14,6 @@ import { SITE } from "@/lib/site";
 // footer (top 8) and repo-page language chips, and bare /language 404'd.
 const title = "Programming languages with rising GitHub repos";
 const socialTitle = "Browse fast-rising open-source repos by programming language";
-/** Matches getLanguages() default: hubs need at least this many tracked repos. */
-const LANGUAGE_MIN = 5;
-
 function rows() {
   return getLanguages().map((l) => {
     const repos = getReposByLanguage(l.name);
