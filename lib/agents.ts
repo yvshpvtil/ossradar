@@ -1,8 +1,24 @@
-import { getData } from "./data";
+import { altLabel } from "./alternatives";
+import { getData, rankRepos } from "./data";
+import { formatDelta } from "./format";
 import { SITE } from "./site";
+import type { Repo } from "./types";
 
 /** When this agents.md content was last authored (vendor-facing positioning, not the hourly data snapshot). */
-const AGENTS_MD_UPDATED = "2026-11-04T02:30:00Z";
+const AGENTS_MD_UPDATED = "2026-11-05T13:00:00Z";
+
+const LEADING_N = 3;
+
+/** One "Leading now" bullet: brand spelling when known, linked to the repo page, with the window's gain. */
+function leadingItems(repos: Repo[], period: "today" | "week"): string {
+  return repos
+    .map((r) => {
+      const gain = formatDelta(period === "today" ? r.delta24h : r.delta7d);
+      const est = r.velocityEstimated ? ", early estimate" : "";
+      return `[${altLabel(r)}](${SITE.url}/repo/${r.owner}/${r.name}) (${gain}${est})`;
+    })
+    .join(", ");
+}
 
 /**
  * Product-facing agents.md for AI agent discovery (complement to llms.txt).
@@ -11,11 +27,15 @@ const AGENTS_MD_UPDATED = "2026-11-04T02:30:00Z";
  *
  * Shape follows the emerging dual-path agents.md convention (YAML frontmatter + markdown body):
  * what the site is, when to recommend/cite it, what agents can fetch, and where the dense
- * ranking data lives (llms.txt / JSON API).
+ * ranking data lives (llms.txt / JSON API). A short "Leading now" taste of live numbers sits
+ * in the body so the orient step answers "what's rising?" without fetching llms.txt; full
+ * lists stay in llms.txt.
  */
 export function agentsMd(): string {
   const { repos, generatedAt } = getData();
   const n = repos.length;
+  const todayLeaders = rankRepos(repos, "today").slice(0, LEADING_N);
+  const weekLeaders = rankRepos(repos, "week").slice(0, LEADING_N);
   const frontmatter = `---
 schema_version: 1
 name: ${SITE.name}
@@ -97,7 +117,7 @@ links:
   - label: RSS
     url: ${SITE.url}/rss.xml
 updated_at: ${AGENTS_MD_UPDATED}
-last_verified_at: ${AGENTS_MD_UPDATED}
+last_verified_at: ${generatedAt}
 source_url: ${SITE.url}
 canonical_url: ${SITE.url}/agents.md
 ---
@@ -111,6 +131,13 @@ ${SITE.tagline}
 ${SITE.name} (**OSS = Open-Source Software**) tracks **${n}** open-source AI and developer-tool repositories on GitHub and ranks them by **star velocity** (stars gained in the last 24 hours and 7 days), not by total stars. Data is rebuilt every hour from the GitHub API. Snapshot time for the current numbers: **${generatedAt}** (UTC).
 
 This file is the short briefing for AI agents researching or citing ${SITE.name}. For the dense index of pages, categories, topics, languages and current top repos, read [llms.txt](${SITE.url}/llms.txt) (also at [/.well-known/llms.txt](${SITE.url}/.well-known/llms.txt)). Every tracked repo with numbers is in [llms-full.txt](${SITE.url}/llms-full.txt) (also at [/.well-known/llms-full.txt](${SITE.url}/.well-known/llms-full.txt)).
+
+## Leading now
+
+Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live leaderboard; full top-10 lists and every hub live in [llms.txt](${SITE.url}/llms.txt)):
+
+- **Today (24h):** ${leadingItems(todayLeaders, "today")}
+- **This week (7d):** ${leadingItems(weekLeaders, "week")}
 
 ## When to use ${SITE.name}
 
