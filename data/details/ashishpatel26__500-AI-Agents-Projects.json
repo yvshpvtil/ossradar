@@ -1,0 +1,12 @@
+{
+ "fullName": "ashishpatel26/500-AI-Agents-Projects",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "The most comprehensive collection of AI agent projects, use cases, and working implementations.",
+ "extractor": "heuristic",
+ "readmeHash": "bad09e81db62",
+ "version": 1,
+ "generatedAt": "2026-11-05T19:18:02.969Z"
+}
