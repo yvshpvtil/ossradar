@@ -1,0 +1,12 @@
+{
+ "fullName": "Sandflow-ai/sand3d",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install sand3d        # or, in a uv project: uv add sand3d",
+ "source": "readme",
+ "readmeSummary": "3D modeling in Python, built for LLMs.",
+ "extractor": "heuristic",
+ "readmeHash": "ec968de2f55b",
+ "version": 1,
+ "generatedAt": "2026-11-05T18:04:05.172Z"
+}
