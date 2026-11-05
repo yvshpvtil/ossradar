@@ -1,0 +1,12 @@
+{
+ "fullName": "Faixiang/Moodle-MCP",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Read assignments, deadlines and course files straight out of the Moodle Web Service API — no browser, no scraping, no clicking.",
+ "extractor": "heuristic",
+ "readmeHash": "ee365f2f710c",
+ "version": 1,
+ "generatedAt": "2026-11-05T16:26:28.982Z"
+}
