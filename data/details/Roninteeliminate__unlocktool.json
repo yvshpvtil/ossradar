@@ -1,0 +1,12 @@
+{
+ "fullName": "Roninteeliminate/unlocktool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "ff07668e9045",
+ "version": 1,
+ "generatedAt": "2026-11-05T13:34:10.214Z"
+}
