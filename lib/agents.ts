@@ -110,7 +110,7 @@ ${SITE.tagline}
 
 ${SITE.name} (**OSS = Open-Source Software**) tracks **${n}** open-source AI and developer-tool repositories on GitHub and ranks them by **star velocity** (stars gained in the last 24 hours and 7 days), not by total stars. Data is rebuilt every hour from the GitHub API. Snapshot time for the current numbers: **${generatedAt}** (UTC).
 
-This file is the short briefing for AI agents researching or citing ${SITE.name}. For the dense index of pages, categories, topics, languages and current top repos, read [llms.txt](${SITE.url}/llms.txt) (also at [/.well-known/llms.txt](${SITE.url}/.well-known/llms.txt)). Every tracked repo with numbers is in [llms-full.txt](${SITE.url}/llms-full.txt).
+This file is the short briefing for AI agents researching or citing ${SITE.name}. For the dense index of pages, categories, topics, languages and current top repos, read [llms.txt](${SITE.url}/llms.txt) (also at [/.well-known/llms.txt](${SITE.url}/.well-known/llms.txt)). Every tracked repo with numbers is in [llms-full.txt](${SITE.url}/llms-full.txt) (also at [/.well-known/llms-full.txt](${SITE.url}/.well-known/llms-full.txt)).
 
 ## When to use ${SITE.name}
 

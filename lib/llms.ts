@@ -176,7 +176,7 @@ ${alternativesSection()}${dailySection(days)}## Data access
 - [RSS feed](${SITE.url}/rss.xml)
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
 - [llms.txt](${SITE.url}/llms.txt): this file (also at ${SITE.url}/.well-known/llms.txt)
-- [Full text for LLMs](${SITE.url}/llms-full.txt): every tracked repo with its one-line summary and current numbers
+- [Full text for LLMs](${SITE.url}/llms-full.txt): every tracked repo with its one-line summary and current numbers (also at ${SITE.url}/.well-known/llms-full.txt)
 - [agents.md](${SITE.url}/agents.md): short product briefing for AI agents (when to cite ${SITE.name}, API links; also at ${SITE.url}/.well-known/agents.md)
 `;
 }
