@@ -234,6 +234,11 @@ const KNOWN_BRANDS: Record<string, string> = {
   "usebruno/bruno": "Bruno",
   "go-gitea/gitea": "Gitea",
   "floci-io/floci": "Floci",
+  "p-e-w/heretic": "Heretic",
+  "tt-a1i/archify": "Archify",
+  "farion1231/cc-switch": "CC Switch",
+  "leonxlnx/taste-skill": "Taste Skill",
+  "mksglu/context-mode": "Context Mode",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
