@@ -14,11 +14,12 @@ export const websiteRef = { "@type": "WebSite", "@id": WEBSITE_ID, name: SITE.na
 export const repoPath = (r: Pick<Repo, "owner" | "name">) => `/repo/${r.owner}/${r.name}`;
 
 /** <title> for a repo page. The layout template appends " · OSS Radar" (12 chars);
- *  keep the rendered title around Google's ~60-char SERP limit. Prefer owner/name;
- *  drop the owner when the full form would overflow. When the project goes by a
- *  brand spelled differently from its slug (SGLang for sgl-project/sglang, OpenAI
- *  Agents SDK for openai/openai-agents-python), lead with that brand, which is
- *  what people search for, and keep the slug beside it when it fits. */
+ *  keep the rendered title around Google's ~60-char SERP limit. When the project
+ *  goes by a brand spelled differently from its slug (SGLang for sgl-project/sglang,
+ *  HyperFrames for heygen-com/hyperframes), lead with that brand — keep
+ *  brand+(fullName) when it fits ≤48, otherwise the short brand-only form, and
+ *  only fall back to owner/name when no brand-based option fits. Without a brand,
+ *  prefer owner/name and drop the owner when the full form would overflow. */
 export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">, label?: string): string {
   const delta = formatDelta(repo.delta7d);
   const brand = label && !label.includes("/") && label !== repo.name ? label : null;
@@ -27,10 +28,11 @@ export function repoPageTitle(repo: Pick<Repo, "fullName" | "name" | "delta7d">,
       ? [
           `${brand} (${repo.fullName}): ${delta} stars this week`,
           `${brand} (${repo.fullName}): ${delta} this week`,
+          `${brand}: ${delta} stars this week`,
+          `${brand}: ${delta} this week`,
         ]
       : []),
     `${repo.fullName}: ${delta} stars this week`,
-    ...(brand ? [`${brand}: ${delta} stars this week`, `${brand}: ${delta} this week`] : []),
     `${repo.name}: ${delta} stars this week`,
     `${repo.name}: ${delta} this week`,
   ];
