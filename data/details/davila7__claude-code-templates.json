@@ -1,0 +1,12 @@
+{
+ "fullName": "davila7/claude-code-templates",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx claude-code-templates@latest --agent development-team/frontend-developer --command testing/generate-tests --mcp integration/github-integration --yes",
+ "source": "readme",
+ "readmeSummary": "Ready-to-use configurations for Anthropic's Claude Code. An open catalog of about 1,900 components (skills, agents, slash commands, MCP…",
+ "extractor": "heuristic",
+ "readmeHash": "72394137c879",
+ "version": 1,
+ "generatedAt": "2026-11-05T20:11:41.337Z"
+}
