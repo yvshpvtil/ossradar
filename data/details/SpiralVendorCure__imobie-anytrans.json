@@ -1,0 +1,12 @@
+{
+ "fullName": "SpiralVendorCure/imobie-anytrans",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "b79ef88ddb0e",
+ "version": 1,
+ "generatedAt": "2026-11-05T15:18:25.995Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "feder-cr/Jobs_Applier_AI_Agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://raw.githubusercontent.com/feder-cr/Jobs_Applier_AI_Agent/main/run.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Your resume in. From 10 million postings, the jobs that fit. Select them, press one key, and watch a real browser apply.",
+ "extractor": "heuristic",
+ "readmeHash": "b2ffb516be99",
+ "version": 1,
+ "generatedAt": "2026-11-05T15:18:26.081Z"
+}

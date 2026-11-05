@@ -1,0 +1,12 @@
+{
+ "fullName": "Obsidiandruoversee/discord-quest-completer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "bd3de2c00bd0",
+ "version": 1,
+ "generatedAt": "2026-11-05T15:18:25.965Z"
+}
