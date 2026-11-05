@@ -1,0 +1,16 @@
+{
+ "fullName": "coollabsio/orbit",
+ "whoItsFor": null,
+ "useCases": [
+  "Tasks: projects with custom workflows, list, board and timeline views, sub-issues, labels, saved views, trash, and GitHub sync.",
+  "Docs: page tree with live collaborative editing, version history, search, and Notion import.",
+  "Chat: channels, direct messages, threads, files, and search."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A self-hosted workspace for teams: tasks, docs, chat, and mail in one app on your own server.",
+ "extractor": "heuristic",
+ "readmeHash": "c3f4d5f13dd1",
+ "version": 1,
+ "generatedAt": "2026-11-05T04:14:54.683Z"
+}
