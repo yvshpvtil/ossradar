@@ -229,6 +229,11 @@ const KNOWN_BRANDS: Record<string, string> = {
   "comet-ml/opik": "Opik",
   "openai/openai-agents-python": "OpenAI Agents SDK",
   "thedotmack/claude-mem": "Claude-Mem",
+  "heygen-com/hyperframes": "HyperFrames",
+  "paperclipai/paperclip": "Paperclip",
+  "usebruno/bruno": "Bruno",
+  "go-gitea/gitea": "Gitea",
+  "floci-io/floci": "Floci",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
