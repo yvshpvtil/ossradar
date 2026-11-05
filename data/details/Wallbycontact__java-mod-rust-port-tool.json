@@ -1,0 +1,12 @@
+{
+ "fullName": "Wallbycontact/java-mod-rust-port-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Smelt turns a Fabric or NeoForge mod into a mod for Minecraft on Rust: Horizon, the open-source rewrite of Minecraft: Java Edition 26.3.",
+ "extractor": "heuristic",
+ "readmeHash": "64cb18396433",
+ "version": 1,
+ "generatedAt": "2026-11-05T12:13:08.763Z"
+}
