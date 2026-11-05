@@ -239,6 +239,12 @@ const KNOWN_BRANDS: Record<string, string> = {
   "farion1231/cc-switch": "CC Switch",
   "leonxlnx/taste-skill": "Taste Skill",
   "mksglu/context-mode": "Context Mode",
+  "zackriya-solutions/meetily": "Meetily",
+  "juliusbrussee/caveman": "Caveman",
+  "t8y2/dbx": "DBX",
+  "herdrdev/herdr": "Herdr",
+  "gathin23/cleanyourtv": "CleanYourTV",
+  "google/elephant-goldfish-model": "Elephant-Goldfish Model",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
