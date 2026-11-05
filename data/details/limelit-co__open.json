@@ -1,0 +1,12 @@
+{
+ "fullName": "limelit-co/open",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "go install github.com/limelit-co/open/cmd/limelit@latest",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/b5894a6e-bb40-426d-b493-2cedc7e41e90",
+ "extractor": "heuristic",
+ "readmeHash": "fb4681f5045f",
+ "version": 1,
+ "generatedAt": "2026-11-05T01:30:06.369Z"
+}

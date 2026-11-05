@@ -1,0 +1,12 @@
+{
+ "fullName": "wendersoon/radar-cnpj-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y radar-cnpj-mcp baixar --ufs SP,MG",
+ "source": "readme",
+ "readmeSummary": "Encontre empresas por atividade e região na base pública de CNPJ da Receita Federal, direto do seu agente de IA ou do terminal.",
+ "extractor": "heuristic",
+ "readmeHash": "9ef4177c73dd",
+ "version": 1,
+ "generatedAt": "2026-11-05T01:30:06.352Z"
+}

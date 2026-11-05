@@ -1,0 +1,12 @@
+{
+ "fullName": "vAPI-Network/vapi-network",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g vapi-network",
+ "source": "readme",
+ "readmeSummary": "vAPI Network builds payment and trust infrastructure for AI agents on Base, with x402 API payments in USDC.",
+ "extractor": "heuristic",
+ "readmeHash": "6df8350da3a0",
+ "version": 1,
+ "generatedAt": "2026-11-05T01:30:06.337Z"
+}
