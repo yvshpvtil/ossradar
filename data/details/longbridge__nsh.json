@@ -1,0 +1,16 @@
+{
+ "fullName": "longbridge/nsh",
+ "whoItsFor": null,
+ "useCases": [
+  "Write apps in Rust, TSX, or both, and render with each platform's own UI, sharing the same reactive engine, flexbox and grid layout, system ",
+  "Give your app its own look: NSH provides the primitives, Tailwind classes, a theme and an unstyled UI foundation (`nsh/base`: navigation, sa",
+  "Embed in existing native apps alongside components such as maps and web views, or package as standalone apps and static websites."
+ ],
+ "installCommand": "curl -fsSL https://nsh.dev/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Build once, native everywhere. Native Shell is a native UI framework for iOS, Android, macOS, Windows, Linux and the web, built in Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "6191b2fe9fbe",
+ "version": 1,
+ "generatedAt": "2026-11-05T08:32:42.278Z"
+}
