@@ -1,0 +1,16 @@
+{
+ "fullName": "a2ui-project/a2ui",
+ "whoItsFor": null,
+ "useCases": [
+  "Dynamic Data Collection: An agent generates a bespoke form (date pickers, sliders, inputs) based on the specific context of a conversation (",
+  "Remote Sub-Agents: An orchestrator agent delegates a task to a remote specialized agent (e.g., a travel booking agent) which returns a UI pa",
+  "Adaptive Workflows: Enterprise agents that generate approval dashboards or data visualizations on the fly based on the user's query."
+ ],
+ "installCommand": "npx create-ag-ui-app@latest",
+ "source": "readme",
+ "readmeSummary": "A2UI is an open-source generative UI framework, complete with a format optimized for representing updatable agent-generated UIs…",
+ "extractor": "heuristic",
+ "readmeHash": "db6b50eb4c4e",
+ "version": 1,
+ "generatedAt": "2026-11-05T23:04:07.679Z"
+}
