@@ -5,7 +5,7 @@ import { getData, getReposByCategory, rankRepos } from "./data";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
 import { NEW_DAYS, getNewRepos } from "./newRepos";
-import { getLanguages } from "./languages";
+import { getLanguages, getReposByLanguage } from "./languages";
 import { getRecentHn } from "./mentions";
 import { snippetText } from "./seo";
 import { SITE } from "./site";
@@ -85,6 +85,19 @@ function categoryLines(): string {
   }).join("\n");
 }
 
+/** Language hub rows with the same numbers /language shows: repo count, combined 7-day gain and this week's leading repo. */
+function languageLines(): string {
+  return getLanguages().map((l) => {
+    const repos = getReposByLanguage(l.name);
+    const base = `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.count} repos`;
+    if (!repos.length) return base;
+    const week = repos.reduce((n, r) => n + r.delta7d, 0);
+    const lead = rankRepos(repos, "week")[0];
+    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
+    return `${base}, ${formatDelta(week)} stars combined in 7d${leadText}`;
+  }).join("\n");
+}
+
 function header(): string {
   const d = getData();
   const top = rankRepos(d.repos, "today")[0];
@@ -141,7 +154,7 @@ ${getTopics().map((t) => `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug})
 
 ## Languages
 
-${getLanguages().map((l) => `- [${l.name}](${SITE.url}/language/${l.slug}): ${l.count} repos`).join("\n")}
+${languageLines()}
 
 ${alternativesSection()}${dailySection(days)}## Data access
 
