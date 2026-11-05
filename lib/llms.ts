@@ -9,7 +9,7 @@ import { getLanguages, getReposByLanguage } from "./languages";
 import { getRecentHn } from "./mentions";
 import { snippetText } from "./seo";
 import { SITE } from "./site";
-import { TOPIC_MIN, getTopics, topicLabel } from "./topics";
+import { TOPIC_MIN, getReposByTopic, getTopics, topicLabel } from "./topics";
 import type { Repo } from "./types";
 import { dropTemplateWhy } from "./whyNotes";
 
@@ -85,6 +85,19 @@ function categoryLines(): string {
   }).join("\n");
 }
 
+/** Topic hub rows with the same numbers /topic shows: repo count, combined 7-day gain and this week's leading repo. */
+function topicLines(): string {
+  return getTopics().map((t) => {
+    const repos = getReposByTopic(t.slug);
+    const base = `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug}): ${t.count} repos`;
+    if (!repos.length) return base;
+    const week = repos.reduce((n, r) => n + r.delta7d, 0);
+    const lead = rankRepos(repos, "week")[0];
+    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
+    return `${base}, ${formatDelta(week)} stars combined in 7d${leadText}`;
+  }).join("\n");
+}
+
 /** Language hub rows with the same numbers /language shows: repo count, combined 7-day gain and this week's leading repo. */
 function languageLines(): string {
   return getLanguages().map((l) => {
@@ -150,7 +163,7 @@ ${categoryLines()}
 
 GitHub topics used by at least ${TOPIC_MIN} tracked repos, most used first (singular and plural spellings share one page):
 
-${getTopics().map((t) => `- [${topicLabel(t.slug)}](${SITE.url}/topic/${t.slug}): ${t.count} repos`).join("\n")}
+${topicLines()}
 
 ## Languages
 
