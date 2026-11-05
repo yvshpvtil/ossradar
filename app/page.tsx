@@ -1,4 +1,4 @@
-import { ldRepoName } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
@@ -17,15 +17,36 @@ import { TrendingGrid } from "@/components/TrendingGrid";
 import { HomeSidebar } from "@/components/HomeSidebar";
 import { getNewRepos } from "@/lib/newRepos";
 import { getArchiveDays } from "@/lib/daily";
-import { formatDate } from "@/lib/format";
+import { formatDate, formatNumber } from "@/lib/format";
 import { getTopics, topicLabel } from "@/lib/topics";
 
 const HOME_TITLE = `Trending AI & dev-tool GitHub repos today · ${SITE.name}`;
 
-export const metadata: Metadata = {
-  title: { absolute: HOME_TITLE },
-  alternates: pageAlternates("/"),
-};
+/** Homepage search snippet: brand-page lead plus today's #1 by 24h stars (≤158). Falls back to SITE.metaDescription. */
+function homeDescription(max = 158): string {
+  const lead =
+    "The fastest-rising open-source AI and dev-tool repos on GitHub, by stars gained today and this week.";
+  const leader = rankRepos(getData().repos, "today")[0];
+  const variants: string[] = [];
+  if (leader && leader.delta24h > 0) {
+    const gain = `${leader.estimated24h ? "about " : ""}+${formatNumber(leader.delta24h)} stars`;
+    const withLeader = `${lead} Leading today: ${altLabel(leader)} (${gain}).`;
+    variants.push(`${withLeader} Updated hourly.`, withLeader);
+  }
+  for (const v of variants) {
+    const t = v.replace(/\s+/g, " ").trim();
+    if (t.length <= max) return t;
+  }
+  return SITE.metaDescription;
+}
+
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: HOME_TITLE },
+    description: homeDescription(),
+    alternates: pageAlternates("/"),
+  };
+}
 
 export default function Home() {
   const data = getData();
@@ -40,7 +61,7 @@ export default function Home() {
   const popularTopics = getTopics().slice(0, 16);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: SITE.metaDescription, path: "/", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"), 50, ldRepoName) })} />
+      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: homeDescription(), path: "/", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"), 50, ldRepoName) })} />
       <section className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
         <p className="mt-2 max-w-2xl text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">
