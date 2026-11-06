@@ -19,7 +19,7 @@ const llmsBlurb = (r: Repo) => snippetText(dropTemplateWhy(r.oneLiner)) || dropT
 
 /** One repo row. `withCategory` names the category where the section heading doesn't (mixed top-10 lists). */
 const line = (r: Repo, withCategory = false) =>
-  `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (${withCategory ? `${categoryLabel(r.category)}; ` : ""}${formatNumber(r.stars)} stars, ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7d${r.velocityEstimated ? ", early estimate" : ""})`;
+  `- [${altLabel(r)}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (${withCategory ? `${categoryLabel(r.category)}; ` : ""}${formatNumber(r.stars)} stars, ${formatDelta(r.delta24h)} in 24h, ${formatDelta(r.delta7d)} in 7d${r.velocityEstimated ? ", early estimate" : ""})`;
 
 const DAILY_MAX = 14;
 
@@ -230,7 +230,7 @@ All Hacker News mentions: [Hacker News](${SITE.url}/hacker-news)
 ${rows
   .map(
     ({ r, top }) =>
-      `- [${r.fullName}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (HN story "${top.title.replace(/"/g, "'")}" on ${top.date.slice(0, 10)}: ${formatNumber(top.points)} points, ${formatNumber(top.comments)} comments, https://news.ycombinator.com/item?id=${top.id}; ${formatNumber(r.stars)} stars, ${formatDelta(r.delta7d)} in 7d)`,
+      `- [${altLabel(r)}](${SITE.url}/repo/${r.owner}/${r.name}): ${llmsBlurb(r)} (HN story "${top.title.replace(/"/g, "'")}" on ${top.date.slice(0, 10)}: ${formatNumber(top.points)} points, ${formatNumber(top.comments)} comments, https://news.ycombinator.com/item?id=${top.id}; ${formatNumber(r.stars)} stars, ${formatDelta(r.delta7d)} in 7d)`,
   )
   .join("\n")}
 `;
