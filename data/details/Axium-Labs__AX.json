@@ -1,0 +1,12 @@
+{
+ "fullName": "Axium-Labs/AX",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/Axium-Labs/AX/main/scripts/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "A fast, lightweight AI agent for the terminal, built in Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "8b314cc43958",
+ "version": 1,
+ "generatedAt": "2026-11-06T10:21:40.171Z"
+}

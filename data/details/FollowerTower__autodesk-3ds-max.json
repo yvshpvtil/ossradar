@@ -1,0 +1,12 @@
+{
+ "fullName": "FollowerTower/autodesk-3ds-max",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "f7fd9b1c9c60",
+ "version": 1,
+ "generatedAt": "2026-11-06T10:21:39.606Z"
+}

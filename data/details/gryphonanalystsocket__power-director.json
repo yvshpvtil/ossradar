@@ -1,0 +1,12 @@
+{
+ "fullName": "gryphonanalystsocket/power-director",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "927fd0e1d86a",
+ "version": 1,
+ "generatedAt": "2026-11-06T10:21:39.905Z"
+}

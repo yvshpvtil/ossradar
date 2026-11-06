@@ -1,0 +1,12 @@
+{
+ "fullName": "Glen-Web-App/best-agent-memory-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @tryglen/cli@latest install",
+ "source": "readme",
+ "readmeSummary": "The best agent memory MCP servers, ranked: long-term memory for Claude Code, Codex, Cursor and any MCP client.",
+ "extractor": "heuristic",
+ "readmeHash": "f4c2b2d482c3",
+ "version": 1,
+ "generatedAt": "2026-11-06T10:21:40.166Z"
+}
