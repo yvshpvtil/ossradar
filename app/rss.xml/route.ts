@@ -1,4 +1,5 @@
 import type { Repo } from "@/lib/types";
+import { altLabel } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta, formatNumber } from "@/lib/format";
@@ -33,7 +34,7 @@ export function GET() {
       const link = `${SITE.url}/repo/${r.owner}/${r.name}`;
       const est = r.estimated24h ? " (est.)" : "";
       return `    <item>
-      <title>${esc(`${r.fullName}: ${formatDelta(r.delta24h)} stars/24h${est}`)}</title>
+      <title>${esc(`${altLabel(r)}: ${formatDelta(r.delta24h)} stars/24h${est}`)}</title>
       <link>${esc(link)}</link>
       <guid isPermaLink="false">${esc(`${r.fullName}@${data.snapshotDate}`)}</guid>
       <pubDate>${pubDate}</pubDate>
