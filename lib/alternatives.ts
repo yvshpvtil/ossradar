@@ -263,6 +263,10 @@ const KNOWN_BRANDS: Record<string, string> = {
   "getpaseo/paseo": "Paseo",
   "kgoedecke/doop": "Doop",
   "yjid/kensaku": "Kensaku",
+  "longbridge/nsh": "Native Shell",
+  "balanov/uncut": "UNCUT",
+  "wheresryan22/anatomy": "Anatomy",
+  "haydenschmitty/floorplan": "Floorplan",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
