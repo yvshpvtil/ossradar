@@ -34,7 +34,7 @@ export default async function Image({ params }: { params: Promise<{ owner: strin
   return ogCard({
     eyebrow: `${categoryLabel(repo.category)} alternatives`,
     title: `${alts.length} open-source alternatives to ${altLabel(repo)}`,
-    subtitle: alts.slice(0, 3).map((a) => a.repo.fullName).join(" · "),
+    subtitle: alts.slice(0, 3).map((a) => altLabel(a.repo)).join(" · "),
     stat: alts.some((a) => !a.sameCategory) ? "Shared GitHub topics, ranked weekly" : "Same category, shared GitHub topics, ranked weekly",
   });
 }

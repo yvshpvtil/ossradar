@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { EstBadge } from "@/components/EstBadge";
-import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos, getCategoryNeighbors, getRepo, hasAlternativesPage } from "@/lib/alternatives";
+import { altLabel, alternativesPath, brandName, getAlternatives, getAlternativesRepos, getCategoryNeighbors, getRepo, hasAlternativesPage, ldRepoName } from "@/lib/alternatives";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { stripWhy } from "@/lib/why";
@@ -24,7 +24,7 @@ function alternativesMeta(repo: Repo) {
   const alts = getAlternatives(repo);
   return {
     title: alternativesPageTitle(altLabel(repo), alts.length),
-    description: alternativesDescription(repo, alts.map((a) => a.repo.fullName)),
+    description: alternativesDescription(repo, alts.map((a) => altLabel(a.repo))),
   };
 }
 
@@ -35,17 +35,18 @@ function alternativesMeta(repo: Repo) {
  */
 function alternativesDescription(repo: Repo, names: string[], max = 155): string {
   const cat = categoryLabel(repo.category);
+  const subject = altLabel(repo);
   const mixed = getAlternatives(repo).some((a) => !a.sameCategory);
   const tails = [`${mixed ? "Tracked" : cat} repos sharing its GitHub topics, ranked by stars gained this week.`, "Ranked by stars gained this week.", ""];
   for (let k = Math.min(3, names.length); k >= 1; k--) {
     const rest = names.length - k;
-    const lead = `Open-source alternatives to ${repo.fullName}: ${names.slice(0, k).join(", ")}${rest > 0 ? ` and ${rest} more` : ""}.`;
+    const lead = `Open-source alternatives to ${subject}: ${names.slice(0, k).join(", ")}${rest > 0 ? ` and ${rest} more` : ""}.`;
     for (const t of tails) {
       const v = `${lead} ${t}`.trim();
       if (v.length <= max) return v;
     }
   }
-  return clip(`Open-source alternatives to ${repo.fullName}, ranked by stars gained this week.`, max);
+  return clip(`Open-source alternatives to ${subject}, ranked by stars gained this week.`, max);
 }
 
 export async function generateMetadata({ params }: PageProps<"/alternatives/[owner]/[name]">): Promise<Metadata> {
@@ -92,12 +93,12 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
             ogCard: "card",
             mainEntity: {
               "@type": "ItemList",
-              name: `Open-source alternatives to ${repo.fullName}`,
+              name: `Open-source alternatives to ${altLabel(repo)}`,
               numberOfItems: alts.length,
-              itemListElement: alts.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: abs(repoPath(a.repo)), name: a.repo.fullName })),
+              itemListElement: alts.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: abs(repoPath(a.repo)), name: ldRepoName(a.repo) })),
             },
           }),
-          about: { "@type": "SoftwareSourceCode", name: repo.fullName, url: abs(repoPath(repo)), codeRepository: repo.url },
+          about: { "@type": "SoftwareSourceCode", name: brandName(repo), url: abs(repoPath(repo)), codeRepository: repo.url },
         }}
       />
       <JsonLd
@@ -123,29 +124,33 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
         problem space, not a drop-in replacement, so check each project&apos;s README.
       </p>
       <ol className="mt-6 space-y-3">
-        {alts.map((a, i) => (
-          <li key={a.repo.fullName} className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
-            <div className="flex items-start justify-between gap-3">
-              <h2 className="min-w-0 break-words font-semibold">
-                {i + 1}. <Link className="hover:underline" href={repoPath(a.repo)}>{a.repo.fullName}</Link>
-              </h2>
-              <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
-                {formatDelta(a.repo.delta7d)}/wk{a.repo.estimated7d && <EstBadge />}
-              </span>
-            </div>
-            {stripWhy(a.repo.oneLiner) && <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(a.repo.oneLiner)}</p>}
-            <p className="mt-2 text-xs text-zinc-500">
-              {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""}
-              {!a.sameCategory && <>{" · "}<Link className="underline" href={`/category/${a.repo.category}`}>{categoryLabel(a.repo.category)}</Link></>} · shared topics: {topicChips(a.sharedTopics)}
-              {hasAlternativesPage(a.repo) && (
-                <>
-                  {" · "}
-                  <Link className="underline" href={alternativesPath(a.repo)}>{altLabel(a.repo)} alternatives</Link>
-                </>
-              )}
-            </p>
-          </li>
-        ))}
+        {alts.map((a, i) => {
+          const label = altLabel(a.repo);
+          return (
+            <li key={a.repo.fullName} className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
+              <div className="flex items-start justify-between gap-3">
+                <h2 className="min-w-0 break-words font-semibold">
+                  {i + 1}. <Link className="hover:underline" href={repoPath(a.repo)} title={a.repo.fullName}>{label}</Link>
+                  {label !== a.repo.fullName && <span className="ml-1.5 text-xs font-normal text-zinc-500">{a.repo.fullName}</span>}
+                </h2>
+                <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
+                  {formatDelta(a.repo.delta7d)}/wk{a.repo.estimated7d && <EstBadge />}
+                </span>
+              </div>
+              {stripWhy(a.repo.oneLiner) && <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(a.repo.oneLiner)}</p>}
+              <p className="mt-2 text-xs text-zinc-500">
+                {formatNumber(a.repo.stars)} stars{a.repo.language ? ` · ${a.repo.language}` : ""}
+                {!a.sameCategory && <>{" · "}<Link className="underline" href={`/category/${a.repo.category}`}>{categoryLabel(a.repo.category)}</Link></>} · shared topics: {topicChips(a.sharedTopics)}
+                {hasAlternativesPage(a.repo) && (
+                  <>
+                    {" · "}
+                    <Link className="underline" href={alternativesPath(a.repo)}>{label} alternatives</Link>
+                  </>
+                )}
+              </p>
+            </li>
+          );
+        })}
       </ol>
       {neighbors.length > 0 && (
         <section className="mt-10">
@@ -157,7 +162,7 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
           <ul className="mt-4 space-y-2 text-sm">
             {neighbors.map((r) => (
               <li key={r.fullName}>
-                <Link className="font-medium hover:underline" href={repoPath(r)}>{r.fullName}</Link>{" "}
+                <Link className="font-medium hover:underline" href={repoPath(r)} title={r.fullName}>{altLabel(r)}</Link>{" "}
                 <span className="font-mono text-emerald-700 dark:text-emerald-400">{formatDelta(r.delta7d)}/wk</span>
                 {stripWhy(r.oneLiner) && <span className="text-zinc-600 dark:text-zinc-400">: {stripWhy(r.oneLiner)}</span>}
               </li>
