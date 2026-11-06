@@ -1,0 +1,12 @@
+{
+ "fullName": "TropicalCount/cubase",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Automated standalone configuration package deployed for offline environment infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "45880575267f",
+ "version": 1,
+ "generatedAt": "2026-11-06T12:05:49.569Z"
+}

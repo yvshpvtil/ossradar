@@ -1,0 +1,12 @@
+{
+ "fullName": "kyy-logs/code-review-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y skills add kyy-logs/code-review-skill --agent codex --skill code-review --yes",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "fe533d9c3b1b",
+ "version": 1,
+ "generatedAt": "2026-11-06T12:05:49.662Z"
+}

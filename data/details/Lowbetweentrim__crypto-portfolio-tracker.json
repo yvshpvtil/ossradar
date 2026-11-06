@@ -1,0 +1,12 @@
+{
+ "fullName": "Lowbetweentrim/crypto-portfolio-tracker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A self-hosted, open-source cryptocurrency portfolio tracker. Track your real-time balances, calculate PnL (Profit and Loss)…",
+ "extractor": "heuristic",
+ "readmeHash": "4e3c997cfb79",
+ "version": 1,
+ "generatedAt": "2026-11-06T12:05:49.567Z"
+}
