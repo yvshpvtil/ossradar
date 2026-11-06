@@ -1,0 +1,12 @@
+{
+ "fullName": "jacke-pp/open-yoki",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "一台服务器就能跑的 AI 直播主播。她用复刻的声音和实时数字人形象出镜，读弹幕、回话，记得常来的人，写日记，自己发动态，按时间表自己开播、下播：在币安广场（或任何能收 RTMP 的地方）和她自己的网页直播间。",
+ "extractor": "heuristic",
+ "readmeHash": "47b9d2477951",
+ "version": 1,
+ "generatedAt": "2026-11-06T05:18:30.885Z"
+}
