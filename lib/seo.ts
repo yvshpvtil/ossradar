@@ -146,8 +146,9 @@ export function staticPageLd(o: { type?: "WebPage" | "AboutPage"; name: string; 
 }
 
 /**
- * Dataset node for the free hourly data (JSON API + RSS), so dataset search and AI crawlers can
- * find and cite it. Only facts the site already states: what's measured, update cadence, formats, terms.
+ * Dataset node for the free hourly data (JSON API, RSS, llms.txt / llms-full.txt, agents.md), so
+ * dataset search and AI crawlers can find and cite it. Only facts the site already states: what's
+ * measured, update cadence, formats, terms.
  */
 export function datasetLd(o: { dateModified: string; repoCount: number; firstDay?: string }) {
   return {
@@ -155,7 +156,7 @@ export function datasetLd(o: { dateModified: string; repoCount: number; firstDay
     "@type": "Dataset",
     "@id": `${SITE.url}/about#dataset`,
     name: `${SITE.name} GitHub star velocity data`,
-    description: `Hourly-updated star velocity for ${o.repoCount} fast-rising open-source AI and developer-tool GitHub repositories: stars gained in the last 24 hours and 7 days, total stars, forks, primary language, category and GitHub topics, computed by diffing hourly and daily star-count snapshots from the GitHub API. The JSON API returns the top 100 repos by 24-hour star gain. Free to use with a link back to ${SITE.url}.`,
+    description: `Hourly-updated star velocity for ${o.repoCount} fast-rising open-source AI and developer-tool GitHub repositories: stars gained in the last 24 hours and 7 days, total stars, forks, primary language, category and GitHub topics, computed by diffing hourly and daily star-count snapshots from the GitHub API. Available as a JSON API (top 100 by 24-hour gain), RSS, and agent-oriented text indexes (llms.txt, llms-full.txt, agents.md). Free to use with a link back to ${SITE.url}.`,
     url: abs("/about#api"),
     keywords: ["GitHub", "open source", "star velocity", "trending repositories", "AI", "developer tools", "LLM", "MCP"],
     isAccessibleForFree: true,
@@ -171,6 +172,9 @@ export function datasetLd(o: { dateModified: string; repoCount: number; firstDay
     distribution: [
       { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: abs("/api/v1/trending"), name: "Top 100 repos by 24-hour star gain (JSON)" },
       { "@type": "DataDownload", encodingFormat: "application/rss+xml", contentUrl: abs("/rss.xml"), name: "Fastest-rising repos today (RSS)" },
+      { "@type": "DataDownload", encodingFormat: "text/plain", contentUrl: abs("/llms.txt"), name: "Curated rankings and key pages for LLMs (llms.txt)" },
+      { "@type": "DataDownload", encodingFormat: "text/plain", contentUrl: abs("/llms-full.txt"), name: "Every tracked repo with star velocity for LLMs (llms-full.txt)" },
+      { "@type": "DataDownload", encodingFormat: "text/markdown", contentUrl: abs("/agents.md"), name: "AI-agent briefing (agents.md)" },
     ],
   };
 }
