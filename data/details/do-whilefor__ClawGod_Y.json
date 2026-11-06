@@ -1,0 +1,12 @@
+{
+ "fullName": "do-whilefor/ClawGod_Y",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/do-whilefor/Clawgod_Y/main/install.sh | bash -s -- latest",
+ "source": "readme",
+ "readmeSummary": "Overview · Usage · Usage Limits and Security · License and Related Files",
+ "extractor": "heuristic",
+ "readmeHash": "127de1dbca57",
+ "version": 1,
+ "generatedAt": "2026-11-06T16:06:21.510Z"
+}

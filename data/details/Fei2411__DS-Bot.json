@@ -1,0 +1,12 @@
+{
+ "fullName": "Fei2411/DS-Bot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @deepseek-ai/dsh@0.2.2-rc.1 plugin --profile web add ds-bot",
+ "source": "readme",
+ "readmeSummary": "Download DS Bot for Windows 10/11 (64-bit) A community project, not an official DeepSeek product.",
+ "extractor": "heuristic",
+ "readmeHash": "225b87407253",
+ "version": 1,
+ "generatedAt": "2026-11-06T16:06:21.514Z"
+}
