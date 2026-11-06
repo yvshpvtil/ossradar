@@ -24,11 +24,12 @@ const line = (r: Repo, withCategory = false) =>
 const DAILY_MAX = 14;
 
 /**
- * One line per recent archived day (newest first): the day's top 3 gainers and the list's combined gain, so a crawler or
- * assistant asked "what was trending on GitHub on <date>" finds the dated archive page instead of only a URL pattern.
+ * One line per recent archived day (newest first): the day's top 3 gainers (altLabel brand spelling for tracked repos)
+ * and the list's combined gain, so a crawler or assistant asked "what was trending on GitHub on <date>" finds the dated
+ * archive page instead of only a URL pattern.
  */
 function dailySection(days: string[]): string {
-  const name = (e: DailyEntry) => (e.repo ? `[${e.fullName}](${SITE.url}/repo/${e.repo.owner}/${e.repo.name})` : e.fullName);
+  const name = (e: DailyEntry) => (e.repo ? `[${altLabel(e.repo)}](${SITE.url}/repo/${e.repo.owner}/${e.repo.name})` : e.fullName);
   const rows = days.slice(0, DAILY_MAX).flatMap((date) => {
     const top = getDailyTop(date);
     if (!top.length) return [];
