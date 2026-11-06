@@ -245,6 +245,14 @@ const KNOWN_BRANDS: Record<string, string> = {
   "herdrdev/herdr": "Herdr",
   "gathin23/cleanyourtv": "CleanYourTV",
   "google/elephant-goldfish-model": "Elephant-Goldfish Model",
+  "l0ng-ai/openidea": "OpenIDEA",
+  "hypit-ai/hypit": "Hypit",
+  "xerj-org/xerj": "XERJ",
+  "morluto/rea": "REA",
+  "rtk-ai/rtk": "RTK",
+  "koala73/worldmonitor": "World Monitor",
+  "headroomlabs-ai/headroom": "Headroom",
+  "openfilm/openfilm": "OpenFilm",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
