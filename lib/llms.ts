@@ -52,7 +52,8 @@ const ALT_LIST_MAX = 20;
 
 /**
  * The alternatives pages for the most-starred tracked repos (the names people ask about: "open-source alternatives to
- * dify"), each with its first three alternatives, so an assistant can answer from llms.txt and link the full page.
+ * dify"), each with its first three alternatives (altLabel brand spelling), so an assistant can answer from llms.txt
+ * and link the full page.
  */
 function alternativesSection(): string {
   const all = getAlternativesRepos();
@@ -61,7 +62,7 @@ function alternativesSection(): string {
     .slice(0, ALT_LIST_MAX)
     .map((r) => {
       const alts = getAlternatives(r);
-      const names = alts.slice(0, 3).map((a) => a.repo.fullName).join(", ");
+      const names = alts.slice(0, 3).map((a) => altLabel(a.repo)).join(", ");
       return `- [${altLabel(r)} alternatives](${SITE.url}${alternativesPath(r)}): lists ${alts.length} tracked alternatives to ${r.fullName}, including ${names}`;
     });
   if (!rows.length) return "";
