@@ -7,7 +7,7 @@ import { getData, getRepos } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { getRecentHn } from "@/lib/mentions";
 import { repoBlurb, stripWhy } from "@/lib/blurb";
-import { altLabel } from "@/lib/alternatives";
+import { altLabel, ldRepoName } from "@/lib/alternatives";
 
 const DAYS = 30;
 
@@ -59,7 +59,7 @@ export default function HackerNewsPage() {
   const lead = items[0];
   const showHn = items.filter(({ top }) => /^show hn/i.test(top.title)).length;
   const mostDiscussed = [...items].sort((a, b) => b.top.comments - a.top.comments)[0];
-  const rows = items.map(({ fullName, r }) => ({ name: fullName, url: abs(repoPath(r)) }));
+  const rows = items.map(({ r }) => ({ name: ldRepoName(r), url: abs(repoPath(r)) }));
   return (
     <div className="max-w-3xl">
       <JsonLd data={collectionPageLd({ name: TITLE, description: hnSnippet(list.length), path: "/hacker-news", dateModified: data.generatedAt, ogCard: true, mainEntity: linkListLd(TITLE, rows) })} />
@@ -86,6 +86,7 @@ export default function HackerNewsPage() {
       <ol className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
         {items.map(({ fullName, r, top }, i) => {
           const blurb = repoBlurb(r) ?? stripWhy(r.oneLiner);
+          const label = altLabel(r);
           return (
             <li key={fullName} className="flex gap-4 p-4">
               <span className="w-6 shrink-0 text-right tabular-nums text-zinc-500">{i + 1}</span>
@@ -95,7 +96,8 @@ export default function HackerNewsPage() {
                   {formatNumber(top.points)} points · {formatNumber(top.comments)} comments · {formatDate(top.date)}
                 </p>
                 <p className="mt-1 text-sm">
-                  <Link href={`/repo/${r.owner}/${r.name}`} className="text-indigo-700 underline underline-offset-2 dark:text-indigo-400">{fullName}</Link>
+                  <Link href={`/repo/${r.owner}/${r.name}`} className="text-indigo-700 underline underline-offset-2 dark:text-indigo-400" title={fullName}>{label}</Link>
+                  {label !== fullName && <span className="ml-1.5 text-xs text-zinc-500">{fullName}</span>}
                   <span className="text-zinc-500"> · {formatNumber(r.stars)} stars · +{formatNumber(r.delta7d)}{r.estimated7d ? "*" : ""} this week</span>
                 </p>
                 {blurb && <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{blurb}</p>}
