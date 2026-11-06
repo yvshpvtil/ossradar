@@ -1,0 +1,12 @@
+{
+ "fullName": "OpenByteInc/QuantDinger",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "QuantDinger is an open-source AI Trading OS for independent traders, Python strategy authors, and small teams.",
+ "extractor": "heuristic",
+ "readmeHash": "df828df2b60b",
+ "version": 1,
+ "generatedAt": "2026-11-06T19:15:17.767Z"
+}

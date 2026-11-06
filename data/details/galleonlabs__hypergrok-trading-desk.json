@@ -1,0 +1,12 @@
+{
+ "fullName": "galleonlabs/hypergrok-trading-desk",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --save-exact --ignore-scripts hypergrok-trading-desk@1.7.1",
+ "source": "readme",
+ "readmeSummary": "HyperGrok gives your AI agents a shared process for Hyperliquid research, risk, execution and review.",
+ "extractor": "heuristic",
+ "readmeHash": "c00f8e346d36",
+ "version": 1,
+ "generatedAt": "2026-11-06T19:15:17.755Z"
+}
