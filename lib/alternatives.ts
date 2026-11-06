@@ -253,6 +253,16 @@ const KNOWN_BRANDS: Record<string, string> = {
   "koala73/worldmonitor": "World Monitor",
   "headroomlabs-ai/headroom": "Headroom",
   "openfilm/openfilm": "OpenFilm",
+  "amosblomqvist/learnharness": "LearnHarness",
+  "aientech/dossier": "Dossier",
+  "lexmount/moli": "Moli",
+  "elie222/rakazo": "Rakazo",
+  "phone-harness/phone-harness": "Phone Harness",
+  "every-app/open-seo": "OpenSEO",
+  "ruvnet/ruflo": "Ruflo",
+  "getpaseo/paseo": "Paseo",
+  "kgoedecke/doop": "Doop",
+  "yjid/kensaku": "Kensaku",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
