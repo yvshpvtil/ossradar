@@ -149,6 +149,12 @@
   "source": "claude -p",
   "generatedAt": "2026-11-05T02:25:16.936Z"
  },
+ "Lanqiao-Luca/ai-java-workflow": {
+  "text": "AI-assisted Java/Spring Boot development workflow for requirements, implementation, testing, review and delivery.",
+  "basis": "6583c047451a",
+  "source": "claude -p",
+  "generatedAt": "2026-11-06T02:20:34.944Z"
+ },
  "Lanqiao-Luca/ai-video-marker": {
   "text": "AI video creation workflow with storyboard methods, assets, templates, and runnable Python pixel-animation examples.",
   "basis": "02c03176a40b",
@@ -252,10 +258,10 @@
   "generatedAt": "2026-10-21T02:25:00.754Z"
  },
  "adongwanai/AgentGuide": {
-  "text": "An open-source guide to AI Agent engineering and research, with learning roadmaps and interview prep for job seekers.",
-  "basis": "41727fed4775",
+  "text": "An open-source guide to AI agent development, RAG, MCP and agentic RL, plus LLM interview questions for job seekers.",
+  "basis": "8f6a82a5010f",
   "source": "claude -p",
-  "generatedAt": "2026-11-03T02:27:33.817Z"
+  "generatedAt": "2026-11-06T02:20:33.276Z"
  },
  "aimeoa/hanshuang-codex": {
   "text": "Experimental jailbreak project for GPT 6.0 and WorkBuddy V4.1 Flash, with an Electron desktop interface.",
