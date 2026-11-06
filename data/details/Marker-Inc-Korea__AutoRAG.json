@@ -1,0 +1,12 @@
+{
+ "fullName": "Marker-Inc-Korea/AutoRAG",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @autorag/librarian",
+ "source": "readme",
+ "readmeSummary": "Now your agent can find anything in your computer.",
+ "extractor": "heuristic",
+ "readmeHash": "65088c34d913",
+ "version": 1,
+ "generatedAt": "2026-11-06T13:29:07.695Z"
+}
