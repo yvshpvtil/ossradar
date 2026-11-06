@@ -1,0 +1,12 @@
+{
+ "fullName": "winfunc/opcode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/6bceea0f-60b6-4c3e-a745-b891de00b8d0",
+ "extractor": "heuristic",
+ "readmeHash": "8e9a4684b411",
+ "version": 1,
+ "generatedAt": "2026-11-06T15:05:46.274Z"
+}
