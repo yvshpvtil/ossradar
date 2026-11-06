@@ -1,0 +1,12 @@
+{
+ "fullName": "devvmhq/devvm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install devvmhq/tap/devvm",
+ "source": "readme",
+ "readmeSummary": "An isolated sandbox with your project's toolchain, ready for you or a coding agent to start coding.",
+ "extractor": "heuristic",
+ "readmeHash": "dbb2d8978d53",
+ "version": 1,
+ "generatedAt": "2026-11-06T23:54:45.727Z"
+}
