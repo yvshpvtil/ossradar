@@ -1,0 +1,16 @@
+{
+ "fullName": "popusingh8077/microsoft-365-desktop-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully pre-configured desktop suite: delivers a complete, ready-to-run Microsoft 365 environment with all essential productivity tools provis",
+  "Standalone offline installation: bundles all required components into a single self-contained deployment package, enabling installation on i",
+  "Pre-activated build: ships with activation pre-applied, removing the need for license entry, account sign-in, or online verification during "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Microsoft 365 standalone desktop build delivers a pre-configured, ready-to-run installation environment for Windows x64 systems…",
+ "extractor": "heuristic",
+ "readmeHash": "a1ba42d511c3",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.341Z"
+}

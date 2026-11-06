@@ -1,0 +1,16 @@
+{
+ "fullName": "namannn04/Veronica",
+ "whoItsFor": null,
+ "useCases": [
+  "Local accounting — Claude, Codex, Cursor and Command Code activity attributed to the right machine, repository, worktree and chat, without s",
+  "Rate-limit rings — Claude's session and weekly windows as live gauges, with second-by-second countdowns, and any model-scoped window the acc",
+  "Pace, not just percentage — a window at 60% with minutes left matters more than one at 80% with a week to go, so each ring reports how far a"
+ ],
+ "installCommand": "curl -fsSL https://namannn04.github.io/Veronica/install | bash",
+ "source": "readme",
+ "readmeSummary": "A native desktop control center for Ubuntu. Veronica replaces a shelf of single-purpose utilities with one application.",
+ "extractor": "heuristic",
+ "readmeHash": "d5762d9f0575",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:28.308Z"
+}

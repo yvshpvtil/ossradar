@@ -1,0 +1,16 @@
+{
+ "fullName": "demircihakan2016-maker/filmora-15-desktop-editor",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Standalone Installer: Delivers a full, self-contained desktop setup that requires no additional downloads, dependency resolution, o",
+  "Pre-Activated Build: Ships as a pre-configured installation, eliminating post-install activation overhead. The build is ready to launch and ",
+  "Professional Desktop Editing Suite: Provides a comprehensive non-linear editing environment with multi-track timeline support, frame-accurat"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Filmora 15 is a standalone desktop installer for Windows x64 that delivers a complete professional editing environment in a single…",
+ "extractor": "heuristic",
+ "readmeHash": "093ecf00d78f",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.475Z"
+}

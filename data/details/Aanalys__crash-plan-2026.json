@@ -1,0 +1,16 @@
+{
+ "fullName": "Aanalys/crash-plan-2026",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-configured standalone payload: the complete Crash Plan 2026 feature set ships in a single self-contained package, with all components pr",
+  "Zero-dependency deployment model: all runtime libraries, service components, and supporting binaries are bundled directly into the distribut",
+  "Full offline operation: the build is designed for air-gapped and isolated environments, with no network callbacks, telemetry endpoints, or l"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Crash-Plan 2026 delivers a complete standalone desktop configuration with all features pre-enabled and ready to run…",
+ "extractor": "heuristic",
+ "readmeHash": "1b958f074c7b",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.574Z"
+}

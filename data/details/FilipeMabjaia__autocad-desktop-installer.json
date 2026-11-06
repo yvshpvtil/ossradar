@@ -1,0 +1,16 @@
+{
+ "fullName": "FilipeMabjaia/autocad-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Standalone Installer: Ships as a single self-contained setup package with all required runtime components bundled in, eliminating t",
+  "Pre-Activated Build: The installation includes a fully pre-activated license state, so the application is ready for immediate professional u",
+  "Offline Deployment Ready: The entire package can be transferred to and installed on air-gapped or network-restricted workstations, making it"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This repository delivers a complete standalone desktop deployment of Autocad, packaged as a fully assembled installer for professional use…",
+ "extractor": "heuristic",
+ "readmeHash": "1468fe74288e",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.892Z"
+}

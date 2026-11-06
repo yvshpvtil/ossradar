@@ -1,0 +1,16 @@
+{
+ "fullName": "achref-ldy/display-fusion-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Multi-Monitor Management: Centralized control plane for configuring, profiling, and orchestrating all connected displays from a sing",
+  "Pre-Activated Full Feature Set: All premium capabilities are unlocked at install time, including advanced window management, display profile",
+  "Complete Standalone Deployment: Self-contained installer bundles every runtime dependency and component required for operation, enabling ful"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Display Fusion 2026 is a complete standalone desktop deployment package that delivers the full feature set in a ready-to-run installation…",
+ "extractor": "heuristic",
+ "readmeHash": "db59800349fa",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.455Z"
+}

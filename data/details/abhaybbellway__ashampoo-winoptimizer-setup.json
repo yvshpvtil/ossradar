@@ -1,0 +1,16 @@
+{
+ "fullName": "abhaybbellway/ashampoo-winoptimizer-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone deployment package with all optimization modules enabled by default; no post-install license activation or configur",
+  "Complete offline-ready installer bundle containing the full application payload and dependency set, allowing deployment on isolated or air-g",
+  "Integrated system tuning suite covering registry cleanup, startup management, service optimization, and scheduled maintenance tasks within a"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Ashampoo WinOptimizer 2026 standalone build delivers a complete, pre-activated desktop optimization suite for Windows x64 environments…",
+ "extractor": "heuristic",
+ "readmeHash": "0bb02a1a3bb3",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:28.148Z"
+}

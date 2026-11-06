@@ -1,0 +1,16 @@
+{
+ "fullName": "htdtw123/autodesk-cfd-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone deployment package: Bundles the full Autodesk CFD 2023 application stack into a single self-contained installer, elimina",
+  "Pre-activated toolchain: All application modules and simulation utilities are delivered in a ready-to-run state, allowing immediate executio",
+  "Full toolset inclusion: Ships with the complete complement of native CFD components, including meshing utilities, solver engines, and post-p"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Autodesk CFD standalone desktop build delivers a complete, pre-activated computational fluid dynamics environment for Windows x64…",
+ "extractor": "heuristic",
+ "readmeHash": "e769b5a3a274",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.860Z"
+}

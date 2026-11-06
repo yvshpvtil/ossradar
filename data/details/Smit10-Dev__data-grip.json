@@ -1,0 +1,16 @@
+{
+ "fullName": "Smit10-Dev/data-grip",
+ "whoItsFor": null,
+ "useCases": [
+  "Self-Contained Deployment: Delivers a complete standalone setup with every component bundled locally, eliminating external runtime dependenc",
+  "Full Feature Activation: All capabilities ship pre-enabled and ready for use out of the box, requiring no post-install configuration, licens",
+  "Pre-Configured Environment: Ships with a validated baseline configuration, ensuring consistent behavior across deployments without manual tu"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "data-grip delivers a fully activated standalone desktop deployment with all features enabled out of the box…",
+ "extractor": "heuristic",
+ "readmeHash": "207748fb446a",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.655Z"
+}

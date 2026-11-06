@@ -1,0 +1,16 @@
+{
+ "fullName": "belcebu07/rufus-usb-formatter",
+ "whoItsFor": null,
+ "useCases": [
+  "Bootable Media Creation: Generates bootable USB drives from ISO images with support for BIOS and UEFI targets, including GPT and MBR partiti",
+  "Broad Image Format Support: Handles ISO, IMG, VHD, and DD-style disk images, with automatic detection of bootable content and appropriate wr",
+  "Multi-Boot and Persistence Options: Supports persistent storage partitions for select Linux distributions and multi-boot configurations on a"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Rufus is a standalone Windows x64 desktop utility engineered for reliable USB drive formatting and bootable media preparation…",
+ "extractor": "heuristic",
+ "readmeHash": "881c33d11388",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.238Z"
+}

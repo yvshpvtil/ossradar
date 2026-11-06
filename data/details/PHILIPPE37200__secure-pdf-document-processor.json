@@ -1,0 +1,16 @@
+{
+ "fullName": "PHILIPPE37200/secure-pdf-document-processor",
+ "whoItsFor": null,
+ "useCases": [
+  "Standalone offline installer with a self-contained deployment package; no network access is required during installation or first launch.",
+  "Pre-configured activation state applied at build time, allowing immediate use of the full feature set without a separate licensing workflow.",
+  "Enhanced security layer covering document handling: hardened sandboxing for opened files, signed-component verification, and integrity check"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Adobe-Acrobat-Pro is a complete standalone desktop installation package for secure PDF document processing, delivering a ready-to-run…",
+ "extractor": "heuristic",
+ "readmeHash": "966d0bae04f2",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.173Z"
+}

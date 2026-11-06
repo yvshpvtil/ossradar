@@ -1,0 +1,16 @@
+{
+ "fullName": "GpiceQ/inventor-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Installer Package: Delivers the full Autodesk Inventor 2026 desktop application in a single, ready-to-run distribution, eliminating",
+  "Pre-Activated Configuration: All licensing and feature modules are pre-configured and activated within the build, allowing immediate access ",
+  "Offline-Capable Deployment: The package is structured for standalone installation on Windows x64 systems without requiring persistent networ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Autodesk Inventor 2026 is a standalone Windows x64 desktop installer that delivers a complete professional CAD configuration…",
+ "extractor": "heuristic",
+ "readmeHash": "408f3001bdcc",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.507Z"
+}

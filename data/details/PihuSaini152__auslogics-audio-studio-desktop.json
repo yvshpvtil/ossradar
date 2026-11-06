@@ -1,0 +1,16 @@
+{
+ "fullName": "PihuSaini152/auslogics-audio-studio-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated desktop edition with licensing already applied at build time, requiring no post-install activation steps.",
+  "Standalone installer package that bundles all required runtime components for a self-contained deployment.",
+  "Native Windows x64 desktop build optimized for local, offline installation environments."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone desktop edition of Auslogics Audio Studio 2026 delivers a complete, pre-activated installation package for Windows x64…",
+ "extractor": "heuristic",
+ "readmeHash": "6182cec309a6",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:28.139Z"
+}

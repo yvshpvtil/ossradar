@@ -1,0 +1,16 @@
+{
+ "fullName": "mattabate/life-distributable",
+ "whoItsFor": null,
+ "useCases": [
+  "A team, not a chat window. Each agent is a long-running Claude Code session with a standing role. It keeps full memory and keeps working whi",
+  "You stay in control of the whole team. New roles come from asking the chief of staff, never a form. Name the sections your team and goals ar",
+  "Talk to it. Tap Option on the Mac, or the Mic button, and speak; your words land in the box you're in. Speech is turned into text on the Mac"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A small company of AI agents you keep in view, on iPhone, Mac and web.",
+ "extractor": "heuristic",
+ "readmeHash": "86f3a2d08384",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:28.344Z"
+}

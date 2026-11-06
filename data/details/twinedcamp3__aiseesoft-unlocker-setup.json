@@ -1,0 +1,16 @@
+{
+ "fullName": "twinedcamp3/aiseesoft-unlocker-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully pre-activated build — no license prompts, no activation loops, no trial timers.",
+  "Complete standalone installer: everything needed ships in one package, nothing to fetch at runtime.",
+  "Runs on Windows x64 desktop as-is; no dependency hunting or manual configuration."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A pre-activated standalone build of Aiseesoft Unlocker 2026, packaged as a complete desktop installer with every feature enabled out…",
+ "extractor": "heuristic",
+ "readmeHash": "be879ce9d0a7",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.947Z"
+}

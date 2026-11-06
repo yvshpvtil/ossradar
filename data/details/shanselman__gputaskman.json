@@ -1,0 +1,12 @@
+{
+ "fullName": "shanselman/gputaskman",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An htop for what's inside your GPU, not just how full it is.",
+ "extractor": "heuristic",
+ "readmeHash": "cd93ca8272bc",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:28.361Z"
+}

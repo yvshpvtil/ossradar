@@ -1,0 +1,16 @@
+{
+ "fullName": "tiwamjlk82-hash/daemon-pro-desktop-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Full Feature Activation: All product capabilities are enabled out of the box, with no separate license provisioning, account registration, o",
+  "Standalone Architecture: Operates as a self-contained desktop application with all required runtime dependencies bundled. No external packag",
+  "Local-First Operation: Core functionality executes entirely on the local machine. Primary workflows do not depend on remote services, networ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Daemon-pro delivers a complete standalone desktop deployment with full feature activation enabled out of the box…",
+ "extractor": "heuristic",
+ "readmeHash": "1917d2e5e1b6",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.664Z"
+}

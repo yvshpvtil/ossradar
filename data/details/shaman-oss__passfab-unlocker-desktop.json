@@ -1,0 +1,16 @@
+{
+ "fullName": "shaman-oss/passfab-unlocker-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Offline password recovery engine: Recovers or bypasses credentials on local files and volumes without requiring network connectivity or exte",
+  "Broad format coverage: Supports recovery workflows for common document, archive, and disk-encryption containers through a unified interface.",
+  "Full feature activation: All recovery modules, algorithms, and recovery modes are unlocked in the standalone build; no in-app purchase or li"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Passfab Unlocker is a standalone Windows x64 desktop application engineered for offline password recovery, distributed as a pre-activated…",
+ "extractor": "heuristic",
+ "readmeHash": "fb64d79a8fae",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.144Z"
+}

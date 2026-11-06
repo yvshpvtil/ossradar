@@ -1,0 +1,16 @@
+{
+ "fullName": "yosisalwa/archicad-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Bundled Standalone Installation: Archicad ships as a complete, self-contained desktop package with all required runtime dependencies include",
+  "Pre-Activated Configuration: The installation is delivered in a pre-activated state, removing the need for manual license entry or post-inst",
+  "Offline-Ready Deployment: Designed for environments without persistent network access, the installer completes entirely from local resources"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Archicad 2026 is delivered as a complete standalone desktop build targeting Windows x64, packaging the full architectural design environment…",
+ "extractor": "heuristic",
+ "readmeHash": "0c55e2f81813",
+ "version": 1,
+ "generatedAt": "2026-11-06T08:28:27.905Z"
+}
