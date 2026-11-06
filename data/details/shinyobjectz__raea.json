@@ -1,0 +1,16 @@
+{
+ "fullName": "shinyobjectz/raea",
+ "whoItsFor": null,
+ "useCases": [
+  "Video and motion graphics. Layout, text, Tailwind, SVG and animation, composited on the GPU and encoded in hardware where the machine has it",
+  "Games. Input, physics, sound and 3D, played live with `raea play`, and exported as a program of their own (`raea export-game`).",
+  "3D. Scenes in TypeScript drawn by Bevy 0.20: cameras, lights, materials, glTF models, Gaussian splats, and Bevy plugins compiled into the en"
+ ],
+ "installCommand": "curl -fsSL https://raea.io/install | sh",
+ "source": "readme",
+ "readmeSummary": "The installer puts the raea command under /.raea, links it into /.local/bin, and adds raea's agent skills to /.claude/skills, so Claude Code…",
+ "extractor": "heuristic",
+ "readmeHash": "3c56cc84dd6a",
+ "version": 1,
+ "generatedAt": "2026-11-06T01:32:22.183Z"
+}

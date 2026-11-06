@@ -1,0 +1,12 @@
+{
+ "fullName": "Lanqiao-Luca/ai-java-workflow",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "目的：说明本框架的用途、组装关系、调用入口与可采用的真实执行路径。",
+ "extractor": "heuristic",
+ "readmeHash": "30769b643805",
+ "version": 1,
+ "generatedAt": "2026-11-06T01:32:22.275Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "divagr18/QwenPU",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Model: Hugging Face Part of Qwenputer, the computer compiled into Qwen3.5's weights.",
+ "extractor": "heuristic",
+ "readmeHash": "4f2af7b32ba8",
+ "version": 1,
+ "generatedAt": "2026-11-06T01:32:22.520Z"
+}

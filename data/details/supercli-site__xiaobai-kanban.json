@@ -1,0 +1,12 @@
+{
+ "fullName": "supercli-site/xiaobai-kanban",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install glab gh",
+ "source": "readme",
+ "readmeSummary": "对你的 Agent 说：",
+ "extractor": "heuristic",
+ "readmeHash": "0cc70854da0e",
+ "version": 1,
+ "generatedAt": "2026-11-06T01:32:22.416Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "mankidev/codixel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Codixel is a Claude Code skill for making pixel art with AI: game sprites, characters, animations and effects like fire, smoke and beams.",
+ "extractor": "heuristic",
+ "readmeHash": "a3e414ac365e",
+ "version": 1,
+ "generatedAt": "2026-11-06T01:32:22.230Z"
+}
