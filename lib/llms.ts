@@ -73,6 +73,10 @@ ${rows.join("\n")}
 `;
 }
 
+/** Anchor text for a hub's weekly leader: brand spelling when known (matches agents.md / hub metas). */
+const weekLeaderText = (lead: Repo | undefined) =>
+  lead ? `; this week's leader: [${altLabel(lead)}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
+
 /** Category hub rows with the same numbers /category shows: repo count, combined 7-day gain and this week's leading repo. */
 function categoryLines(): string {
   return CATEGORIES.map((c) => {
@@ -81,8 +85,7 @@ function categoryLines(): string {
     if (!repos.length) return base;
     const week = repos.reduce((n, r) => n + r.delta7d, 0);
     const lead = rankRepos(repos, "week")[0];
-    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
-    return `${base} (${repos.length} repos, ${formatDelta(week)} stars combined in 7d${leadText})`;
+    return `${base} (${repos.length} repos, ${formatDelta(week)} stars combined in 7d${weekLeaderText(lead)})`;
   }).join("\n");
 }
 
@@ -94,8 +97,7 @@ function topicLines(): string {
     if (!repos.length) return base;
     const week = repos.reduce((n, r) => n + r.delta7d, 0);
     const lead = rankRepos(repos, "week")[0];
-    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
-    return `${base}, ${formatDelta(week)} stars combined in 7d${leadText}`;
+    return `${base}, ${formatDelta(week)} stars combined in 7d${weekLeaderText(lead)}`;
   }).join("\n");
 }
 
@@ -107,8 +109,7 @@ function languageLines(): string {
     if (!repos.length) return base;
     const week = repos.reduce((n, r) => n + r.delta7d, 0);
     const lead = rankRepos(repos, "week")[0];
-    const leadText = lead ? `; this week's leader: [${lead.fullName}](${SITE.url}/repo/${lead.owner}/${lead.name}), ${formatDelta(lead.delta7d)}` : "";
-    return `${base}, ${formatDelta(week)} stars combined in 7d${leadText}`;
+    return `${base}, ${formatDelta(week)} stars combined in 7d${weekLeaderText(lead)}`;
   }).join("\n");
 }
 
