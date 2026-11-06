@@ -2,6 +2,7 @@ import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos } fro
 import { CATEGORIES, categoryLabel } from "./categories";
 import { type DailyEntry, getArchiveDays, getDailyTop } from "./daily";
 import { getData, getReposByCategory, rankRepos } from "./data";
+import { pickRepoOfTheDay } from "./leader";
 import { formatDelta, formatNumber } from "./format";
 import { LANDINGS } from "./landing";
 import { NEW_DAYS, getNewRepos } from "./newRepos";
@@ -128,6 +129,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 ## Key pages
 
 - [Leaderboard](${SITE.url}/): all tracked repos ranked by stars gained today or this week
+- [Repo of the day](${SITE.url}/): homepage spotlight — the top measured 24h gainer (falls back to estimated when few measured rows exist); also listed under Leading now in [agents.md](${SITE.url}/agents.md)
 - [New repos](${SITE.url}/new): tracked repos created on GitHub in the last ${NEW_DAYS} days, grouped by launch day
 - [Daily archive](${SITE.url}/daily): one page per UTC day with that day's top gainers
 - [Hacker News mentions](${SITE.url}/hacker-news): tracked repos discussed on Hacker News
@@ -185,8 +187,17 @@ export function llmsTxt(): string {
   const repos = getData().repos;
   const top = rankRepos(repos, "today").slice(0, 10);
   const week = rankRepos(repos, "week").slice(0, 10);
-  return `${header()}
-## Top 10 by stars gained in the last 24 hours
+  const spotlight = pickRepoOfTheDay(repos);
+  const spotlightBlock = spotlight
+    ? `## Repo of the day
+
+The homepage spotlight (same picker as [${SITE.url}/](${SITE.url}/)): the top 24h gainer, preferring measured gains when at least 10 measured repos exist.
+
+${line(spotlight, true)}
+
+`
+    : "";
+  return `${header()}${spotlightBlock}## Top 10 by stars gained in the last 24 hours
 
 ${top.map((r) => line(r, true)).join("\n")}
 

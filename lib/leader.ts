@@ -1,6 +1,13 @@
 import type { Repo } from "./types";
 import { stripWhy } from "./why";
 
+/** Homepage "Repo of the day": top 24h gainer, preferring measured (non-estimated) numbers when enough exist. */
+export function pickRepoOfTheDay(repos: Repo[]): Repo | undefined {
+  const measured = repos.filter((r) => !r.estimated24h);
+  const pool = measured.length >= 10 ? measured : repos;
+  return [...pool].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars)[0];
+}
+
 /** Slim repo shape sent to the client-side leaderboard. */
 export type LeaderRepo = Pick<
   Repo,

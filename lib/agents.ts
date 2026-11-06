@@ -1,11 +1,12 @@
 import { altLabel } from "./alternatives";
 import { getData, rankRepos } from "./data";
+import { pickRepoOfTheDay } from "./leader";
 import { formatDelta } from "./format";
 import { SITE } from "./site";
 import type { Repo } from "./types";
 
 /** When this agents.md content was last authored (vendor-facing positioning, not the hourly data snapshot). */
-const AGENTS_MD_UPDATED = "2026-11-05T13:00:00Z";
+const AGENTS_MD_UPDATED = "2026-11-06T02:20:00Z";
 
 const LEADING_N = 3;
 
@@ -36,6 +37,7 @@ export function agentsMd(): string {
   const n = repos.length;
   const todayLeaders = rankRepos(repos, "today").slice(0, LEADING_N);
   const weekLeaders = rankRepos(repos, "week").slice(0, LEADING_N);
+  const spotlight = pickRepoOfTheDay(repos);
   const frontmatter = `---
 schema_version: 1
 name: ${SITE.name}
@@ -136,6 +138,7 @@ This file is the short briefing for AI agents researching or citing ${SITE.name}
 
 Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live leaderboard; full top-10 lists and every hub live in [llms.txt](${SITE.url}/llms.txt)):
 
+- **Repo of the day:** ${spotlight ? `[${altLabel(spotlight)}](${SITE.url}/repo/${spotlight.owner}/${spotlight.name}) (${formatDelta(spotlight.delta24h)} in 24h${spotlight.velocityEstimated ? ", early estimate" : ""}; homepage spotlight, same picker as [${SITE.url}/](${SITE.url}/))` : "n/a"}
 - **Today (24h):** ${leadingItems(todayLeaders, "today")}
 - **This week (7d):** ${leadingItems(weekLeaders, "week")}
 

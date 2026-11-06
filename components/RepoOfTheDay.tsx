@@ -2,16 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { categoryLabel } from "@/lib/categories";
 import { formatDelta, formatNumber } from "@/lib/format";
+import { pickRepoOfTheDay } from "@/lib/leader";
 import type { Repo } from "@/lib/types";
 import { stripWhy } from "@/lib/why";
 import { WatchButton } from "./WatchButton";
 
-/** Pick the top 24h gainer, preferring measured (non-estimated) numbers when any exist. */
-export function pickRepoOfTheDay(repos: Repo[]): Repo | undefined {
-  const measured = repos.filter((r) => !r.estimated24h);
-  const pool = measured.length >= 10 ? measured : repos;
-  return [...pool].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars)[0];
-}
+export { pickRepoOfTheDay };
 
 function whyRising(r: Repo, now: number): string {
   const ageDays = Math.max(1, Math.round((now - Date.parse(r.createdAt)) / 86_400_000));
