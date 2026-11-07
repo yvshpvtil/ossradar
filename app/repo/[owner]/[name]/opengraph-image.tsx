@@ -31,9 +31,13 @@ export default async function Image({ params }: { params: Promise<{ owner: strin
   const { owner, name } = await params;
   const repo = getRepo(owner, name);
   if (!repo) return ogCard({ eyebrow: "Repo", title: `${owner}/${name}` });
+  // Card title matches the brand rule used by <title>/og:title (REA, not morluto/rea); unbranded
+  // and generic/duplicate names keep owner/name so the card stays unambiguous.
+  const label = altLabel(repo);
+  const title = label.includes("/") || label === repo.name ? repo.fullName : label;
   return ogCard({
     eyebrow: categoryLabel(repo.category),
-    title: repo.fullName,
+    title,
     subtitle: repo.oneLiner,
     stat: `${formatNumber(repo.stars)} stars · ${formatDelta(repo.delta7d)} this week${repo.estimated7d ? " (est.)" : ""}`,
   });

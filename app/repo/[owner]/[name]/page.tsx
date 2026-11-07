@@ -163,7 +163,11 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
   // <title> stays short (Google cuts around 60 chars); the fuller growth phrase
   // lives in the OG/X title, where length matters less — same pattern as category hubs.
   const title = repoPageTitle(repo, altLabel(repo));
-  const socialTitle = `${repo.fullName}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
+  // OG/X title uses the project's brand spelling when it differs from the slug (same rule as
+  // repoPageTitle), so link previews name REA / HyperFrames the way the <title> and card alt do.
+  const label = altLabel(repo);
+  const socialWho = label.includes("/") || label === repo.name ? repo.fullName : label;
+  const socialTitle = `${socialWho}: GitHub stars growth (${formatDelta(repo.delta7d)} this week)`;
   const description = repoMetaDescription(repo);
   const url = repoPath(repo);
   return {
