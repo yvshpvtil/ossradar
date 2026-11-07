@@ -267,6 +267,11 @@ const KNOWN_BRANDS: Record<string, string> = {
   "balanov/uncut": "UNCUT",
   "wheresryan22/anatomy": "Anatomy",
   "haydenschmitty/floorplan": "Floorplan",
+  "guregodevo/memdoor": "Memdoor",
+  "shaongitbd/doory": "Doory",
+  "divagr18/qwenputer": "Qwenputer",
+  "pullboard-dev/pullboard": "Pullboard",
+  "academa-labs/manimgx": "ManimGX",
 };
 
 /** Org suffixes dropped before comparing an owner to its repo name (Graphify-Labs/graphify). */
