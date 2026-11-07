@@ -494,15 +494,17 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
 
         <nav aria-label="Leaderboard rank navigation" className="mt-10 grid grid-cols-2 gap-3 border-t border-zinc-200 pt-6 text-sm dark:border-zinc-800">
           {prev ? (
-            <Link href={repoPath(prev)} className="min-w-0 rounded-lg border border-zinc-200 p-3 hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+            <Link href={repoPath(prev)} title={prev.fullName} className="min-w-0 rounded-lg border border-zinc-200 p-3 hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
               <span className="block text-xs text-zinc-500">← #{todayRank - 1} today</span>
-              <span className="block truncate font-medium">{prev.fullName}</span>
+              <span className="block truncate font-medium">{altLabel(prev)}</span>
+              {altLabel(prev) !== prev.fullName && <span className="block truncate text-xs text-zinc-500">{prev.fullName}</span>}
             </Link>
           ) : <span />}
           {next ? (
-            <Link href={repoPath(next)} className="min-w-0 rounded-lg border border-zinc-200 p-3 text-right hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+            <Link href={repoPath(next)} title={next.fullName} className="min-w-0 rounded-lg border border-zinc-200 p-3 text-right hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
               <span className="block text-xs text-zinc-500">#{todayRank + 1} today →</span>
-              <span className="block truncate font-medium">{next.fullName}</span>
+              <span className="block truncate font-medium">{altLabel(next)}</span>
+              {altLabel(next) !== next.fullName && <span className="block truncate text-xs text-zinc-500">{next.fullName}</span>}
             </Link>
           ) : <span />}
         </nav>
