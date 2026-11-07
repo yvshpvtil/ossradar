@@ -1,0 +1,12 @@
+{
+ "fullName": "anomalyco/browse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://opencode.ai/browse/install | bash",
+ "source": "readme",
+ "readmeSummary": "Let your AI agents use your real browser: your tabs, your logins, your extensions.",
+ "extractor": "heuristic",
+ "readmeHash": "26a6da3dc9af",
+ "version": 1,
+ "generatedAt": "2026-11-07T22:55:09.568Z"
+}
