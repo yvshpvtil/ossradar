@@ -1,0 +1,12 @@
+{
+ "fullName": "sksarvesh007/antiglaude",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install antiglaude",
+ "source": "readme",
+ "readmeSummary": "A high-performance local protocol gateway and inference server. Antiglaude translates Anthropic Messages and OpenAI Chat Completions…",
+ "extractor": "heuristic",
+ "readmeHash": "39af4d95a01a",
+ "version": 1,
+ "generatedAt": "2026-11-07T01:23:29.264Z"
+}

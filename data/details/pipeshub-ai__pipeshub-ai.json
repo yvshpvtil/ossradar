@@ -1,0 +1,16 @@
+{
+ "fullName": "pipeshub-ai/pipeshub-ai",
+ "whoItsFor": null,
+ "useCases": [
+  "Explainable Answers: PipesHub delivers grounded answers with precise block citations to the original documents.",
+  "Permission-Aware Search: Enforces source-level access controls so users only see what they're authorized to.",
+  "Bring Your Own Model, Fully Self-Hostable: Any LLM provider, deployed in your VPC — data never leaves your infrastructure."
+ ],
+ "installCommand": "curl -fsSL https://get.pipeshub.com/install | bash",
+ "source": "readme",
+ "readmeSummary": "Translations: Français · Deutsch · 简体中文 · 日本語 · Русский · עברית · 한국어 · Español · Português · Türkçe · Tiếng Việt · Italiano · Čeština",
+ "extractor": "heuristic",
+ "readmeHash": "f0b83427b1ab",
+ "version": 1,
+ "generatedAt": "2026-11-07T01:23:28.891Z"
+}

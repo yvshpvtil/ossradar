@@ -1,0 +1,12 @@
+{
+ "fullName": "RustingStudio/RustingStrata",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A pure-Rust inference engine for the Qwen3.5/3.6 hybrid model family (qwen35moe, qwen35) in GGUF; Qwen3-Next (qwen3next), Qwen3.8-Flash-Next…",
+ "extractor": "heuristic",
+ "readmeHash": "96b875ad61b8",
+ "version": 1,
+ "generatedAt": "2026-11-07T01:23:28.849Z"
+}

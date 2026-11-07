@@ -1,0 +1,12 @@
+{
+ "fullName": "liangjianshu/multimodal-image-retrieval",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e '.[hybrid]'",
+ "source": "readme",
+ "readmeSummary": "项目主页 / HTML 展示 · 真实检索演示 · 学习路线 · 实验报告 · English",
+ "extractor": "heuristic",
+ "readmeHash": "d98d8f7d3aee",
+ "version": 1,
+ "generatedAt": "2026-11-07T01:23:28.901Z"
+}
