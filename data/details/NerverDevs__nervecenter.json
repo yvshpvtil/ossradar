@@ -1,0 +1,12 @@
+{
+ "fullName": "NerverDevs/nervecenter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "你在某个 new-api 或 sub2api 面板上的一个账号，在这里叫一个“渠道”。接进来以后，余额、Key、调用记录和分组倍率由 NerveCenter 定时同步。",
+ "extractor": "heuristic",
+ "readmeHash": "9da51fe89e94",
+ "version": 1,
+ "generatedAt": "2026-11-07T07:23:13.379Z"
+}

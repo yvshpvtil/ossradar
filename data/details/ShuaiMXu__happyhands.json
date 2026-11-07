@@ -1,0 +1,12 @@
+{
+ "fullName": "ShuaiMXu/happyhands",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "HappyHands brings UI diagnosis, agent-assisted repairs and before/after review into one local workbench.",
+ "extractor": "heuristic",
+ "readmeHash": "2d60742c6e18",
+ "version": 1,
+ "generatedAt": "2026-11-07T07:23:13.343Z"
+}
