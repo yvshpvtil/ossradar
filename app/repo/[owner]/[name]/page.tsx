@@ -509,7 +509,7 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
           ) : <span />}
         </nav>
         <p className="mt-2 text-center text-xs text-zinc-500">
-          {repo.fullName} is #{todayRank} of {todayList.length} on today&apos;s <Link className="underline" href="/#leaderboard">leaderboard</Link>.
+          {altLabel(repo)} is #{todayRank} of {todayList.length} on today&apos;s <Link className="underline" href="/#leaderboard">leaderboard</Link>.
         </p>
       </div>
       <aside className="space-y-4">
