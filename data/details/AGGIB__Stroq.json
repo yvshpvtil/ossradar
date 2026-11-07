@@ -1,0 +1,12 @@
+{
+ "fullName": "AGGIB/Stroq",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @stroq/cli",
+ "source": "readme",
+ "readmeSummary": "Stroq reads your own Claude Code and Codex sessions and shows how many commands came from text your agent read…",
+ "extractor": "heuristic",
+ "readmeHash": "105ed4cd91d4",
+ "version": 1,
+ "generatedAt": "2026-11-07T19:05:30.131Z"
+}
