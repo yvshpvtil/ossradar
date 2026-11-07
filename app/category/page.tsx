@@ -35,7 +35,7 @@ function summary(rs: ReturnType<typeof rows>): string | null {
   const lead = byWeek[0];
   const top = lead.tops[0];
   let s = `${lead.label} repos gained the most stars together this week (${formatDelta(lead.week)}, ${pct(lead.week, total)}% of all stars gained by tracked repos), ${pct(lead.week, total) > pct(lead.count, repoTotal) ? "though they're only" : "and they make up"} ${pct(lead.count, repoTotal)}% of the ${repoTotal} tracked repos.`;
-  if (top && lead.week > 0) s += ` ${top.fullName} alone accounts for ${pct(top.delta7d, lead.week)}% of that.`;
+  if (top && lead.week > 0) s += ` ${altLabel(top)} alone accounts for ${pct(top.delta7d, lead.week)}% of that.`;
   if (byWeek[1]) s += ` ${byWeek[1].label} is second with ${formatDelta(byWeek[1].week)}.`;
   const avgLead = byAvg[0];
   if (avgLead.slug !== lead.slug) s += ` Per repo, ${avgLead.label} leads: its ${avgLead.count} repos averaged ${formatDelta(avgLead.avg)} stars each.`;
