@@ -1,0 +1,16 @@
+{
+ "fullName": "Banan1cee/whale_girl",
+ "whoItsFor": null,
+ "useCases": [
+  "One entry point — the launcher (WPF + .NET 10) is the only GUI; there is no browser console, and `8787` only serves the HTTP API.",
+  "WeChat group replies — she answers @-mentions and her name, keeps the thread going while it lives, and goes quiet when the topic dies. She f",
+  "Human-like pacing — one reply is split into 2–3 short bubbles with no trailing tildes or full stops; if someone sends a bare `？`, she answer"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A companion bot that actually talks: automatic replies in WeChat groups, Bilibili/Weibo trending topics, and live web lookups.",
+ "extractor": "heuristic",
+ "readmeHash": "dea1c6dbf120",
+ "version": 1,
+ "generatedAt": "2026-11-07T03:07:27.684Z"
+}
