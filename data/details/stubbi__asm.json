@@ -1,0 +1,12 @@
+{
+ "fullName": "stubbi/asm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -qfsS -m120 https://asm.build/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Asm is a package registry and command-line tool for assembly projects. Create and test projects, inspect packages, and download exact…",
+ "extractor": "heuristic",
+ "readmeHash": "2b96805571de",
+ "version": 1,
+ "generatedAt": "2026-11-07T14:04:09.815Z"
+}
