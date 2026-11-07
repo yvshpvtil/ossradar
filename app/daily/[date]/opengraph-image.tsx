@@ -1,6 +1,6 @@
 import { getArchiveDays, getDailyTop } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
-import { dailyCardAlt } from "@/lib/card-alt";
+import { dailyCardAlt, dayLabel } from "@/lib/card-alt";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
 const GENERIC_ALT = "OSS Radar daily top 25 fastest-rising GitHub repos for this date";
@@ -27,7 +27,7 @@ export default async function Image({ params }: { params: Promise<{ date: string
   return ogCard({
     eyebrow: "Daily archive",
     title: ok ? `Top rising repos on ${formatDate(date)}` : "Daily archive of rising GitHub repos",
-    subtitle: top.length ? top.map((e) => `${e.fullName.split("/")[1]} +${formatNumber(e.gained)}`).join(" · ") : undefined,
+    subtitle: top.length ? top.map((e) => `${dayLabel(e)} +${formatNumber(e.gained)}`).join(" · ") : undefined,
     stat: top.length ? "Stars gained during this UTC day" : undefined,
   });
 }
