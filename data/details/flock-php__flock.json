@@ -1,0 +1,16 @@
+{
+ "fullName": "flock-php/flock",
+ "whoItsFor": null,
+ "useCases": [
+  ".test domains with real HTTPS. Park a folder, or link one project, and every app gets its own `.test` domain, subdomains included. HTTPS wor",
+  "A PHP version per project. PHP 8.1 to 8.5 run side by side, and each project picks its own. Node.js too, from `.nvmrc`. See PHP and Node.js.",
+  "Databases in one click. PostgreSQL, MySQL, MariaDB, MongoDB, Valkey, Meilisearch and RustFS (plus Typesense on macOS and Linux, and Redis on"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Flock is a free, open-source local development environment for PHP and Laravel on macOS, Windows and Linux.",
+ "extractor": "heuristic",
+ "readmeHash": "a2d811f15aaa",
+ "version": 1,
+ "generatedAt": "2026-11-07T14:58:38.443Z"
+}
