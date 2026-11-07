@@ -383,6 +383,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.736Z"
  },
+ "didilili/mianstack": {
+  "text": "An open-source programmer interview question bank covering Java, Python, databases, algorithms, LLMs, AI Agents and RAG.",
+  "basis": "5bbac13e5f8b",
+  "source": "claude -p",
+  "generatedAt": "2026-11-07T02:22:24.268Z"
+ },
  "djkcyl/farwing": {
   "text": "Remote desktop and streaming tool written in Rust for work, gaming, and sharing a desktop with others.",
   "basis": "1a3384269c30",
@@ -539,6 +545,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.735Z"
  },
+ "liangjianshu/multimodal-image-retrieval": {
+  "text": "A hands-on project for learning multimodal image retrieval with Qwen LoRA fine-tuning and EmbeddingGemma 2 contrastive learning.",
+  "basis": "a7910aed4248",
+  "source": "claude -p",
+  "generatedAt": "2026-11-07T02:22:24.417Z"
+ },
  "linguo2625469/workbuddy2api-panel": {
   "text": "Multi-account gateway that serves Tencent WorkBuddy accounts as an OpenAI-compatible API, with a web admin panel.",
   "basis": "ac22cf43d9d5",
@@ -676,6 +688,12 @@
   "basis": "40963c4cea08",
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:54.787Z"
+ },
+ "sqfcyily/deva": {
+  "text": "Cross-platform desktop AI agent client where you create roles, tasks, skills, and MCP services through chat, with all data stored locally.",
+  "basis": "93636c5e48f6",
+  "source": "claude -p",
+  "generatedAt": "2026-11-07T02:22:35.046Z"
  },
  "stockedge/manga-generator": {
   "text": "A manga-making tool for Codex that turns novels or other text into scripts, generated images, lettered pages and a PDF.",
