@@ -29,6 +29,31 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title, description, ...twitterImage },
 };
 
+function FaqAnswer({ q, a }: { q: string; a: string }) {
+  if (q === "Is there an API?") {
+    return (
+      <>
+        Yes.{" "}
+        <a className="underline" href="/api/v1/trending">
+          <code>/api/v1/trending</code>
+        </a>{" "}
+        returns the top 100 repos by 24-hour star gain as JSON. For a single tracked repo,{" "}
+        <code>/api/v1/repo/{"{owner}/{name}"}</code> returns its stars, gains, rank, daily star history and
+        alternatives (for example{" "}
+        <Link className="underline" href="/api/v1/repo/upstash/context7">
+          <code>/api/v1/repo/upstash/context7</code>
+        </Link>
+        ). Both are free, need no key and update hourly. See the{" "}
+        <a className="underline" href="#api">
+          Free data API
+        </a>{" "}
+        section above for agent indexes too.
+      </>
+    );
+  }
+  return <>{a}</>;
+}
+
 export default function AboutPage() {
   return (
     <div className="max-w-3xl space-y-6 text-zinc-700 dark:text-zinc-300">
@@ -63,6 +88,43 @@ export default function AboutPage() {
         <li>The site is rebuilt as static pages, so it&apos;s fast and cheap to run.</li>
       </ol>
 
+      <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Where to browse</h2>
+      <p>
+        Start on the{" "}
+        <Link className="underline" href="/">
+          live leaderboard
+        </Link>
+        , then dig into the{" "}
+        <Link className="underline" href="/daily">
+          daily archive
+        </Link>
+        ,{" "}
+        <Link className="underline" href="/new">
+          new repos
+        </Link>
+        , or repos trending on{" "}
+        <Link className="underline" href="/hacker-news">
+          Hacker News
+        </Link>
+        . Compare projects side by side on{" "}
+        <Link className="underline" href="/compare">
+          /compare
+        </Link>
+        , browse{" "}
+        <Link className="underline" href="/alternatives">
+          open-source alternatives
+        </Link>
+        , or jump from the{" "}
+        <Link className="underline" href="/topic">
+          topic
+        </Link>{" "}
+        and{" "}
+        <Link className="underline" href="/language">
+          language
+        </Link>{" "}
+        indexes. Category hubs are linked in How it works above.
+      </p>
+
       <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">About the estimates</h2>
       <EstimateNote />
 
@@ -72,8 +134,34 @@ export default function AboutPage() {
         <a className="underline" href="/api/v1/trending"><code>/api/v1/trending</code></a>: the top 100 repos by stars gained in the last
         24 hours, with 7-day gains, stars, forks, language, category and topics. It updates hourly, needs no key, and is free to use with a
         link back to {SITE.name}. For one tracked repo, <code>/api/v1/repo/{"{owner}/{name}"}</code> (for example{" "}
-        <code>/api/v1/repo/upstash/context7</code>) returns its stars,
+        <Link className="underline" href="/api/v1/repo/upstash/context7">
+          <code>/api/v1/repo/upstash/context7</code>
+        </Link>
+        , which tracks{" "}
+        <Link className="underline" href="/repo/upstash/context7">
+          Context7
+        </Link>
+        ) returns its stars,
         24-hour and 7-day gains, rank today and this week, daily star history, top Hacker News story and alternatives.
+      </p>
+      <p>
+        For AI assistants, the same hourly data is also indexed as plain text:{" "}
+        <a className="underline" href="/llms.txt">
+          <code>/llms.txt</code>
+        </a>{" "}
+        (curated rankings and key pages; also at{" "}
+        <a className="underline" href="/.well-known/llms.txt">
+          <code>/.well-known/llms.txt</code>
+        </a>
+        ) and{" "}
+        <a className="underline" href="/agents.md">
+          <code>/agents.md</code>
+        </a>{" "}
+        (short agent briefing; also at{" "}
+        <a className="underline" href="/.well-known/agents.md">
+          <code>/.well-known/agents.md</code>
+        </a>
+        ).
       </p>
 
       <h2 id="faq" className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">FAQ</h2>
@@ -81,7 +169,9 @@ export default function AboutPage() {
         {FAQ.map((f) => (
           <div key={f.q}>
             <dt className="font-medium text-zinc-900 dark:text-zinc-100">{f.q}</dt>
-            <dd className="mt-0.5">{f.a}</dd>
+            <dd className="mt-0.5">
+              <FaqAnswer q={f.q} a={f.a} />
+            </dd>
           </div>
         ))}
       </dl>
