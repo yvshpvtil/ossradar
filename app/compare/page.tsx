@@ -117,7 +117,8 @@ export default function ComparePage() {
   });
   const popular = popularComparisons(6);
   const popularItems = popular.map(({ a, b }) => {
-    const name = `${a.fullName} vs ${b.fullName}`;
+    // Brand spelling for ItemList + "Popular comparisons" anchors (same as meta / head-to-heads).
+    const name = `${altLabel(a)} vs ${altLabel(b)}`;
     const path = `/compare?r=${encodeURIComponent(`${a.fullName},${b.fullName}`)}`;
     return { name, url: abs(path), path };
   });
