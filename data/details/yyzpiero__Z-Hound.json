@@ -1,0 +1,12 @@
+{
+ "fullName": "yyzpiero/Z-Hound",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e '.[dashboard]'",
+ "source": "readme",
+ "readmeSummary": "Z-Hound 是面向威胁情报分析人员的资产拓线与证据研判工作台，同时集成 Z-Hunter 报告采集模块，提供两条工作流：",
+ "extractor": "heuristic",
+ "readmeHash": "39c35b291f8a",
+ "version": 1,
+ "generatedAt": "2026-11-07T09:05:54.222Z"
+}
