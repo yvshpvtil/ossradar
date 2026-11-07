@@ -1,3 +1,4 @@
+import { altLabel } from "@/lib/alternatives";
 import { deltaFor } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
@@ -29,7 +30,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   return ogCard({
     eyebrow: "Trending",
     title: l?.title ?? "Trending GitHub repos",
-    subtitle: top.length ? top.map((r) => `${r.name} +${formatNumber(deltaFor(r, period))}`).join(" · ") : undefined,
+    subtitle: top.length ? top.map((r) => `${altLabel(r)} +${formatNumber(deltaFor(r, period))}`).join(" · ") : undefined,
     stat: l ? `${l.select().length} repos ranked by stars gained ${period === "today" ? "in 24 hours" : "in 7 days"}` : undefined,
   });
 }

@@ -1,3 +1,4 @@
+import { altLabel } from "@/lib/alternatives";
 import { formatNumber } from "@/lib/format";
 import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
 import { ogCard, OG_SIZE } from "@/lib/og";
@@ -13,7 +14,7 @@ export default function Image() {
   return ogCard({
     eyebrow: "New repos",
     title: `New open-source AI and dev-tool repos from the last ${NEW_DAYS} days`,
-    subtitle: top.length ? top.map((r) => `${r.name} +${formatNumber(r.delta7d)}`).join(" · ") : undefined,
+    subtitle: top.length ? top.map((r) => `${altLabel(r)} +${formatNumber(r.delta7d)}`).join(" · ") : undefined,
     stat: repos.length ? `${repos.length} new repos tracked` : undefined,
   });
 }

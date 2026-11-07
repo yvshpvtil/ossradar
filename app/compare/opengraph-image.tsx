@@ -1,3 +1,4 @@
+import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { getReposByCategory, rankRepos } from "@/lib/data";
 import { ogCard, OG_SIZE } from "@/lib/og";
@@ -12,7 +13,7 @@ export default function Image() {
   for (const cat of CATEGORIES) {
     if (pairs.length >= 2) break;
     const top = rankRepos(getReposByCategory(cat.slug), "week");
-    if (top.length >= 2) pairs.push(`${top[0].name} vs ${top[1].name}`);
+    if (top.length >= 2) pairs.push(`${altLabel(top[0])} vs ${altLabel(top[1])}`);
   }
   return ogCard({
     eyebrow: "Compare",

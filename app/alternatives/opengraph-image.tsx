@@ -1,4 +1,4 @@
-import { getAlternativesRepos } from "@/lib/alternatives";
+import { altLabel, getAlternativesRepos } from "@/lib/alternatives";
 import { ogCard, OG_SIZE } from "@/lib/og";
 
 export const alt = "Directory of open-source alternatives to the fastest-rising GitHub repos on OSS Radar";
@@ -12,7 +12,7 @@ export default function Image() {
   return ogCard({
     eyebrow: "Alternatives",
     title: "Open-source alternatives to the fastest-rising GitHub repos",
-    subtitle: top.length ? `Alternatives to ${top.map((r) => r.name).join(" · ")}` : undefined,
+    subtitle: top.length ? `Alternatives to ${top.map((r) => altLabel(r)).join(" · ")}` : undefined,
     stat: repos.length ? `${repos.length} repos with alternatives` : undefined,
   });
 }
