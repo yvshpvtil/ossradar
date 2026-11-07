@@ -1,0 +1,16 @@
+{
+ "fullName": "jaime681/html5-game-build-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-target packaging: Emits platform-specific bundles for browsers, game portals, social platforms, mobile wrappers, and Web3 environments",
+  "Asset pipeline: Processes HTML, CSS, JavaScript, and static assets in one pass, applying per-type handling. Asset references are rewritten t",
+  "Optimization stages: Minification, dead-code elimination, and asset compression run as discrete, configurable stages. Stages can be enabled "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "scripts is a command-line build tool for HTML5 game projects, covering development, optimization, and packaging across web browsers, game…",
+ "extractor": "heuristic",
+ "readmeHash": "262315ca87e7",
+ "version": 1,
+ "generatedAt": "2026-11-07T15:56:26.084Z"
+}

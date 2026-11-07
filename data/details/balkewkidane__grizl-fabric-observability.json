@@ -1,0 +1,16 @@
+{
+ "fullName": "balkewkidane/grizl-fabric-observability",
+ "whoItsFor": null,
+ "useCases": [
+  "`RawLogs`-first KQL views. Logical functions (`HttpRequests()`, `ApplicationErrors()`, `FrontendTelemetry()`, `Deployments()`, `ForwarderHea",
+  "Eventhouse-native anomaly signals. Each signal wraps `series_decompose_anomalies()` over a fixed time bin, returning `(timestamp, key, value",
+  "Single-trigger union. `GrizlRecentAnomalySignals()` unions the above into one Activator/Reflex-ready projection with a uniform `signalName` "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "grizl-fabric-observability is a sanitized Microsoft Fabric observability package that turns structured application telemetry…",
+ "extractor": "heuristic",
+ "readmeHash": "98ae3bcb0156",
+ "version": 1,
+ "generatedAt": "2026-11-07T15:56:26.095Z"
+}
