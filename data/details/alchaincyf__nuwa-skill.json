@@ -1,0 +1,12 @@
+{
+ "fullName": "alchaincyf/nuwa-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add alchaincyf/nuwa-skill",
+ "source": "readme",
+ "readmeSummary": "女娲帮你蒸馏任何人的思维方式，让乔布斯、马斯克、芒格、费曼都给你打工。",
+ "extractor": "heuristic",
+ "readmeHash": "1469504d8a96",
+ "version": 1,
+ "generatedAt": "2026-11-07T19:58:34.443Z"
+}
