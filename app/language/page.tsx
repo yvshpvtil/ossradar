@@ -40,9 +40,43 @@ function summary(rs: ReturnType<typeof rows>): string | null {
   return s;
 }
 
-export function generateMetadata(): Metadata {
+const staticDescription = () =>
+  `All ${getLanguages().length} programming-language hubs on ${SITE.name}: each ranks the tracked open-source AI and developer-tool repos written mainly in that language by stars gained.`;
+
+// Like /category and /topic indexes, the snippet names what's hottest right now
+// (leading language by 7-day stars + its top repo via altLabel), falling back to the fixed description.
+function indexDescription(max = 158): string {
+  const named = rows().filter((l) => l.count > 0 && l.week > 0);
+  const byWeek = [...named].sort((a, b) => b.week - a.week);
+  const lead = byWeek[0];
+  const fallback = staticDescription();
+  if (!lead) return fallback;
+  const top = lead.tops[0];
+  const leadBit = top
+    ? `${lead.name} (${formatDelta(lead.week)}; led by ${altLabel(top)})`
+    : `${lead.name} (${formatDelta(lead.week)})`;
+  const second = byWeek[1];
   const n = getLanguages().length;
-  const description = `All ${n} programming-language hubs on ${SITE.name}: each ranks the tracked open-source AI and developer-tool repos written mainly in that language by stars gained.`;
+  const variants: string[] = [];
+  if (second) {
+    const secondBit = `${second.name} second (${formatDelta(second.week)})`;
+    variants.push(
+      `All ${n} language hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}. Updated hourly.`,
+      `All ${n} language hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}.`,
+    );
+  }
+  variants.push(
+    `All ${n} language hubs on ${SITE.name}. Hottest this week: ${leadBit}. Updated hourly.`,
+    `All ${n} language hubs on ${SITE.name}. Hottest this week: ${leadBit}.`,
+  );
+  for (const v of variants) {
+    if (v.length <= max) return v;
+  }
+  return fallback.length <= max ? fallback : fallback.slice(0, max);
+}
+
+export function generateMetadata(): Metadata {
+  const description = indexDescription();
   return {
     title,
     description,
@@ -64,6 +98,7 @@ export default function LanguageIndex() {
           "@type": "CollectionPage",
           ...pageNodeIds("/language"),
           name: title,
+          description: indexDescription(),
           url: abs("/language"),
           primaryImageOfPage: ogCardLd("/language"),
           dateModified: getData().generatedAt,

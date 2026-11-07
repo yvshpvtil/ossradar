@@ -22,9 +22,42 @@ function rows() {
   });
 }
 
-export function generateMetadata(): Metadata {
+const staticDescription = () =>
+  `All ${getTopics().length} GitHub topic hubs on ${SITE.name}, from AI agents and MCP to self-hosted tools: each ranks the tracked repos tagged with that topic by stars gained.`;
+
+// Like /category and /alternatives indexes, the snippet names what's hottest right now
+// (leading topic by 7-day stars + its top repo via altLabel), falling back to the fixed description.
+function indexDescription(max = 158): string {
+  const named = rows().filter((t) => t.count > 0 && t.week > 0);
+  const byWeek = [...named].sort((a, b) => b.week - a.week);
+  const lead = byWeek[0];
+  const fallback = staticDescription();
+  if (!lead) return fallback;
+  const leadBit = lead.top
+    ? `${lead.label} (${formatDelta(lead.week)}; led by ${altLabel(lead.top)})`
+    : `${lead.label} (${formatDelta(lead.week)})`;
+  const second = byWeek[1];
   const n = getTopics().length;
-  const description = `All ${n} GitHub topic hubs on ${SITE.name}, from AI agents and MCP to self-hosted tools: each ranks the tracked repos tagged with that topic by stars gained.`;
+  const variants: string[] = [];
+  if (second) {
+    const secondBit = `${second.label} second (${formatDelta(second.week)})`;
+    variants.push(
+      `All ${n} topic hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}. Updated hourly.`,
+      `All ${n} topic hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}.`,
+    );
+  }
+  variants.push(
+    `All ${n} topic hubs on ${SITE.name}. Hottest this week: ${leadBit}. Updated hourly.`,
+    `All ${n} topic hubs on ${SITE.name}. Hottest this week: ${leadBit}.`,
+  );
+  for (const v of variants) {
+    if (v.length <= max) return v;
+  }
+  return fallback.length <= max ? fallback : fallback.slice(0, max);
+}
+
+export function generateMetadata(): Metadata {
+  const description = indexDescription();
   return {
     title,
     description,
@@ -45,8 +78,9 @@ export default function TopicIndex() {
           "@type": "CollectionPage",
           ...pageNodeIds("/topic"),
           name: title,
+          description: indexDescription(),
           url: abs("/topic"),
-            primaryImageOfPage: ogCardLd("/topic"),
+          primaryImageOfPage: ogCardLd("/topic"),
           dateModified: getData().generatedAt,
           inLanguage: "en",
           isPartOf: websiteRef,
