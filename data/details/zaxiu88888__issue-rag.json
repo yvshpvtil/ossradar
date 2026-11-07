@@ -1,0 +1,12 @@
+{
+ "fullName": "zaxiu88888/issue-rag",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e \".[models,dev]\"",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文全文",
+ "extractor": "heuristic",
+ "readmeHash": "a870a5489f08",
+ "version": 1,
+ "generatedAt": "2026-11-07T13:13:49.286Z"
+}

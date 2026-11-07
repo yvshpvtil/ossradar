@@ -1,0 +1,16 @@
+{
+ "fullName": "shanselman/sandbox-mcp",
+ "whoItsFor": null,
+ "useCases": [
+  "Clean-machine smoke tests: does the exe even start without the VC++ runtime / .NET runtime / WebView2 you forgot to bundle? `sbx run` tells ",
+  "Test installers and uninstallers: `sbx install-test setup.msi` installs on a clean machine, uninstalls, and reports every file, registry key",
+  "Drive the UI with UI Automation, not pixels: read the control tree (`Button \"Save\" #SaveButton {invoke}`), set text, click, toggle, select, "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Not your desktop. Not a container pretending to be Windows. A real, disposable Windows 11 machine: boot it, deploy your app…",
+ "extractor": "heuristic",
+ "readmeHash": "27cb493a1936",
+ "version": 1,
+ "generatedAt": "2026-11-07T13:13:49.407Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "yucezerey/turkish-anti-ai-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add yucezerey/turkish-anti-ai-skill",
+ "source": "readme",
+ "readmeSummary": "Türkçe metni okurun ilk okumada anlayacağı hâle getirir. An open-source Agent Skill & Turkish Humanizer that removes AI writing patterns…",
+ "extractor": "heuristic",
+ "readmeHash": "5e809e059ec2",
+ "version": 1,
+ "generatedAt": "2026-11-07T13:13:49.310Z"
+}
