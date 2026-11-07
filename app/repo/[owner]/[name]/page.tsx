@@ -187,21 +187,27 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
 function RepoCards({ repos }: { repos: Repo[] }) {
   return (
     <ul className="grid gap-3 sm:grid-cols-2">
-      {repos.map((s) => (
-        <li key={s.fullName} className="relative cursor-pointer rounded-lg border border-zinc-200 p-3 transition-colors hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
-          <div className="flex items-start justify-between gap-2">
-            <Link href={repoPath(s)} className="min-w-0 break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']">
-              {s.fullName}
-            </Link>
-            <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
-              {formatDelta(s.delta7d)}
-              {s.estimated7d && <EstBadge />}
-              <span className="sr-only"> stars this week</span>
-            </span>
-          </div>
-          {stripWhy(s.oneLiner) && <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(s.oneLiner)}</p>}
-        </li>
-      ))}
+      {repos.map((s) => {
+        const label = altLabel(s);
+        return (
+          <li key={s.fullName} className="relative cursor-pointer rounded-lg border border-zinc-200 p-3 transition-colors hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-indigo-700 dark:hover:bg-zinc-900/60">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <Link href={repoPath(s)} className="break-words font-medium hover:underline after:absolute after:inset-0 after:content-['']" title={s.fullName}>
+                  {label}
+                </Link>
+                {label !== s.fullName && <span className="ml-1.5 text-xs text-zinc-500">{s.fullName}</span>}
+              </div>
+              <span className="shrink-0 font-mono text-sm text-emerald-700 dark:text-emerald-400">
+                {formatDelta(s.delta7d)}
+                {s.estimated7d && <EstBadge />}
+                <span className="sr-only"> stars this week</span>
+              </span>
+            </div>
+            {stripWhy(s.oneLiner) && <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{stripWhy(s.oneLiner)}</p>}
+          </li>
+        );
+      })}
     </ul>
   );
 }
