@@ -45,8 +45,40 @@ function summary(rs: ReturnType<typeof rows>): string | null {
   return s;
 }
 
+const staticDescription = `All ${CATEGORIES.length} category hubs on ${SITE.name}, from AI agents and MCP servers to local LLMs and DevOps, each ranking its tracked GitHub repos by stars gained.`;
+
+// Like /alternatives and /compare indexes, the snippet names what's hottest right now (leading
+// category by 7-day stars + its top repo via altLabel), falling back to the fixed description.
+function indexDescription(max = 158): string {
+  const named = rows().filter((c) => c.slug !== "other" && c.count > 0 && c.week > 0);
+  const byWeek = [...named].sort((a, b) => b.week - a.week);
+  const lead = byWeek[0];
+  if (!lead) return staticDescription;
+  const top = lead.tops[0];
+  const leadBit = top
+    ? `${lead.label} (${formatDelta(lead.week)}; led by ${altLabel(top)})`
+    : `${lead.label} (${formatDelta(lead.week)})`;
+  const second = byWeek[1];
+  const variants: string[] = [];
+  if (second) {
+    const secondBit = `${second.label} second (${formatDelta(second.week)})`;
+    variants.push(
+      `All ${CATEGORIES.length} category hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}. Updated hourly.`,
+      `All ${CATEGORIES.length} category hubs on ${SITE.name}. Hottest this week: ${leadBit}; ${secondBit}.`,
+    );
+  }
+  variants.push(
+    `All ${CATEGORIES.length} category hubs on ${SITE.name}. Hottest this week: ${leadBit}. Updated hourly.`,
+    `All ${CATEGORIES.length} category hubs on ${SITE.name}. Hottest this week: ${leadBit}.`,
+  );
+  for (const v of variants) {
+    if (v.length <= max) return v;
+  }
+  return staticDescription.length <= max ? staticDescription : staticDescription.slice(0, max);
+}
+
 export function generateMetadata(): Metadata {
-  const description = `All ${CATEGORIES.length} category hubs on ${SITE.name}, from AI agents and MCP servers to local LLMs and DevOps, each ranking its tracked GitHub repos by stars gained.`;
+  const description = indexDescription();
   return {
     title,
     description,
@@ -68,6 +100,7 @@ export default function CategoryIndex() {
           "@type": "CollectionPage",
           ...pageNodeIds("/category"),
           name: title,
+          description: indexDescription(),
           url: abs("/category"),
           primaryImageOfPage: ogCardLd("/category"),
           dateModified: getData().generatedAt,
