@@ -1,0 +1,12 @@
+{
+ "fullName": "Perceptionnehandcuff/archicad",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "2ae3e3339f98",
+ "version": 1,
+ "generatedAt": "2026-11-08T13:13:53.402Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "PsycheGradeSpeak/chief-architect-premier",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "db3f1f248615",
+ "version": 1,
+ "generatedAt": "2026-11-08T13:13:53.381Z"
+}
