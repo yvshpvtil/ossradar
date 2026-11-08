@@ -1,0 +1,12 @@
+{
+ "fullName": "techjarves/Mobile-Harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Chat with coding agents, edit projects, execute real Linux commands, and preview live web servers — all directly on your phone.",
+ "extractor": "heuristic",
+ "readmeHash": "128f5f28928b",
+ "version": 1,
+ "generatedAt": "2026-11-08T20:00:11.099Z"
+}
