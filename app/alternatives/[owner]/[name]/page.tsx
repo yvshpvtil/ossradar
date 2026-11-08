@@ -106,11 +106,11 @@ export default async function AlternativesPage({ params }: PageProps<"/alternati
           { name: "Home", path: "/" },
           { name: "Categories", path: "/category" },
           { name: cat, path: `/category/${repo.category}` },
-          { name: repo.fullName, path: repoPath(repo) },
+          { name: altLabel(repo), path: repoPath(repo) },
           { name: "Alternatives", path },
         ])}
       />
-      <PageNav fallbackHref={repoPath(repo)} crumbs={[{ name: "Categories", href: "/category" }, { name: cat, href: `/category/${repo.category}` }, { name: repo.fullName, href: repoPath(repo) }, { name: "Alternatives" }]} />
+      <PageNav fallbackHref={repoPath(repo)} crumbs={[{ name: "Categories", href: "/category" }, { name: cat, href: `/category/${repo.category}` }, { name: altLabel(repo), href: repoPath(repo) }, { name: "Alternatives" }]} />
       <h1 className="text-3xl font-bold tracking-tight">{altLabel(repo)} alternatives</h1>
       <p className="mt-3 text-zinc-600 dark:text-zinc-400">
         <Link className="underline" href={repoPath(repo)}>{repo.fullName}</Link> ({formatNumber(repo.stars)} stars, {formatDelta(repo.delta7d)} this week){stripWhy(repo.oneLiner) ? `: ${stripWhy(repo.oneLiner)}` : "."}
