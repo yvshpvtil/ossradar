@@ -178,6 +178,7 @@ ${alternativesSection()}${dailySection(days)}## Data access
 
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
 - [JSON API: /api/v1/repo/{owner}/{name}](${SITE.url}/api/v1/repo/morluto/rea): one tracked repo's stars, 24h and 7-day gains, rank, daily star history, Hacker News story and alternatives. Same terms.
+- [OpenAPI spec](${SITE.url}/api/v1/openapi.json): OpenAPI 3.1 description of both JSON endpoints, for agent tools and custom GPT actions
 - [RSS feed](${SITE.url}/rss.xml)
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
 - [llms.txt](${SITE.url}/llms.txt): this file (also at ${SITE.url}/.well-known/llms.txt)

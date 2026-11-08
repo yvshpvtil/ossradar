@@ -77,6 +77,10 @@ actions:
     url: ${SITE.url}/api/v1/repo/{owner}/{name}
     description: Stars, 24h/7d gains, ranks, daily star history, top Hacker News story and alternatives for one tracked repo.
     confidence: vendor_authored
+  - label: Read the API's OpenAPI spec
+    url: ${SITE.url}/api/v1/openapi.json
+    description: OpenAPI 3.1 description of both JSON endpoints, ready to load as an agent tool or GPT action.
+    confidence: vendor_authored
   - label: Open the live leaderboard
     url: ${SITE.url}/
     description: Human-readable homepage ranked by stars gained today.
@@ -99,6 +103,9 @@ resources:
   - type: other
     url: ${SITE.url}/api/v1/trending
     label: Trending JSON API
+  - type: other
+    url: ${SITE.url}/api/v1/openapi.json
+    label: OpenAPI spec
   - type: other
     url: ${SITE.url}/sitemap.xml
     label: Sitemap

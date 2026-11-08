@@ -142,7 +142,12 @@ export default function AboutPage() {
           Context7
         </Link>
         ) returns its stars,
-        24-hour and 7-day gains, rank today and this week, daily star history, top Hacker News story and alternatives.
+        24-hour and 7-day gains, rank today and this week, daily star history, top Hacker News story and alternatives. Both endpoints
+        are described in an{" "}
+        <a className="underline" href="/api/v1/openapi.json">
+          OpenAPI spec
+        </a>{" "}
+        (a standard API description that agent tools and custom GPT actions can load directly).
       </p>
       <p>
         For AI assistants, the same hourly data is also indexed as plain text:{" "}
