@@ -1,0 +1,12 @@
+{
+ "fullName": "sarpstar/cinecode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Kendi bilgisayarında, Claude Code (masaüstü uygulaması, VS Code eklentisi, terminal) ya da Cursor içinde çalışır.",
+ "extractor": "heuristic",
+ "readmeHash": "15cd41a5cfb9",
+ "version": 1,
+ "generatedAt": "2026-11-08T03:08:15.433Z"
+}
