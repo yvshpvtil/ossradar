@@ -1,0 +1,12 @@
+{
+ "fullName": "Polishlyaspigot/axie-infinity-bot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "334b1868b51d",
+ "version": 1,
+ "generatedAt": "2026-11-08T11:57:09.516Z"
+}

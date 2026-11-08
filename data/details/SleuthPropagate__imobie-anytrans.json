@@ -1,0 +1,12 @@
+{
+ "fullName": "SleuthPropagate/imobie-anytrans",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "7a6c73315372",
+ "version": 1,
+ "generatedAt": "2026-11-08T11:57:09.526Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "PerfumerExcite/ashampoo-winoptimizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "3a4fdce7bdd6",
+ "version": 1,
+ "generatedAt": "2026-11-08T11:57:09.720Z"
+}

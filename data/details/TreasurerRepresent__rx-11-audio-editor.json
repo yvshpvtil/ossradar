@@ -1,0 +1,12 @@
+{
+ "fullName": "TreasurerRepresent/rx-11-audio-editor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "872b4dd1d416",
+ "version": 1,
+ "generatedAt": "2026-11-08T11:57:09.636Z"
+}
