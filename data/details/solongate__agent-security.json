@@ -1,0 +1,12 @@
+{
+ "fullName": "solongate/agent-security",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SolonGate Agent Security is SolonGate's open source, local first security gateway for AI coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "d78473c0bf3d",
+ "version": 1,
+ "generatedAt": "2026-11-08T06:05:26.419Z"
+}

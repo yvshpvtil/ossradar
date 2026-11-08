@@ -1,0 +1,12 @@
+{
+ "fullName": "ngophatneknha/ai-engineering-hub",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121",
+ "source": "readme",
+ "readmeSummary": "Không gian tổng hợp tài liệu, giáo trình thực hành và mã nguồn được thu thập, đúc kết trong quá trình tự học và nghiên cứu về AI…",
+ "extractor": "heuristic",
+ "readmeHash": "35bc75fd01cb",
+ "version": 1,
+ "generatedAt": "2026-11-08T06:05:26.373Z"
+}
