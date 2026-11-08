@@ -128,7 +128,11 @@ export function GET() {
       },
     },
   };
-  return Response.json(spec, {
-    headers: { "Access-Control-Allow-Origin": "*", "Cache-Control": "public, max-age=600, s-maxage=600" },
+  return new Response(JSON.stringify(spec), {
+    headers: {
+      "Content-Type": "application/openapi+json; charset=utf-8",
+      "Access-Control-Allow-Origin": "*",
+      "Cache-Control": "public, max-age=600, s-maxage=600",
+    },
   });
 }
