@@ -1,0 +1,12 @@
+{
+ "fullName": "ShapeMareAmplify/honkai-star-rail-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "90ad34c63743",
+ "version": 1,
+ "generatedAt": "2026-11-08T21:55:27.918Z"
+}

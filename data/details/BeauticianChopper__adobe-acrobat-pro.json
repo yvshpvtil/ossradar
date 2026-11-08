@@ -1,0 +1,12 @@
+{
+ "fullName": "BeauticianChopper/adobe-acrobat-pro",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "0ae381f262c8",
+ "version": 1,
+ "generatedAt": "2026-11-08T21:55:27.891Z"
+}

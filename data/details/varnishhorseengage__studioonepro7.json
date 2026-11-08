@@ -1,0 +1,12 @@
+{
+ "fullName": "varnishhorseengage/studioonepro7",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "68a6f7a61c4f",
+ "version": 1,
+ "generatedAt": "2026-11-08T21:55:27.899Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "eveningpuffinravine/marvel-rivals-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "dfb7ff226393",
+ "version": 1,
+ "generatedAt": "2026-11-08T21:55:28.069Z"
+}
