@@ -182,10 +182,12 @@ function yamlDq(s: string): string {
   return `"${s.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n")}"`;
 }
 
-export const markdownResponse = (body: string) =>
+// canonicalPath: set on the /.well-known/ twin so crawlers fold the duplicate into /agents.md.
+export const markdownResponse = (body: string, canonicalPath?: string) =>
   new Response(body, {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=600, s-maxage=3600",
+      ...(canonicalPath ? { Link: `<${SITE.url}${canonicalPath}>; rel="canonical"` } : {}),
     },
   });

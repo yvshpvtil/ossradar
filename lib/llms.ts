@@ -260,5 +260,13 @@ export function llmsFullTxt(): string {
   return parts.join("\n");
 }
 
-export const textResponse = (body: string) =>
-  new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=600, s-maxage=3600" } });
+// canonicalPath: set on /.well-known/ twins so crawlers fold the duplicate into the root file
+// (HTTP Link rel=canonical is the only canonical signal a plain-text file can carry).
+export const textResponse = (body: string, canonicalPath?: string) =>
+  new Response(body, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=600, s-maxage=3600",
+      ...(canonicalPath ? { Link: `<${SITE.url}${canonicalPath}>; rel="canonical"` } : {}),
+    },
+  });
