@@ -1,0 +1,12 @@
+{
+ "fullName": "synchopate/llama-modchip",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Quickstart · Supported Models · Supported Chips & Platforms · Leaderboard · Preprint PDF (paper/) · Architecture · FAQ",
+ "extractor": "heuristic",
+ "readmeHash": "b4ac5aae7702",
+ "version": 1,
+ "generatedAt": "2026-11-08T14:57:39.056Z"
+}
