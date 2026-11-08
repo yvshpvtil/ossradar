@@ -14,6 +14,7 @@ import { LANDINGS } from "../lib/landing";
 import { getLanguages, languageSlug } from "../lib/languages";
 import { getTopics, repoTopics } from "../lib/topics";
 import { hasAlternativesPage } from "../lib/alternatives";
+import { getArchiveDays } from "../lib/daily";
 
 const root = join(__dirname, "..", "data");
 const repos = getRepos();
@@ -29,9 +30,11 @@ const table = {
   /** language slugs / canonical topics still used by some tracked repo (dormant hubs redirect, not 404) */
   repoLanguages: [...new Set(repos.flatMap((r) => (r.language ? [languageSlug(r.language)] : [])))],
   repoTopics: [...new Set(repos.flatMap((r) => repoTopics(r)))],
+  /** archived /daily/[date] pages (completed UTC days with both snapshots), same list the page uses */
+  dailyDays: getArchiveDays(),
   retired: JSON.parse(readFileSync(join(root, "retired.json"), "utf8")) as string[],
 };
 writeFileSync(join(root, "routes.json"), JSON.stringify(table) + "\n");
 // Keep the node_modules mirror (scripts/data-pkg.mjs) in sync without a second pass.
 copyFileSync(join(root, "routes.json"), join(__dirname, "..", "node_modules", "ossradar-data", "routes.json"));
-console.log(`routes: ${repos.length} repos, ${table.alternatives.length} alternatives pages, ${table.topics.length} topics, ${table.retired.length} retired`);
+console.log(`routes: ${repos.length} repos, ${table.alternatives.length} alternatives pages, ${table.topics.length} topics, ${table.retired.length} retired, ${table.dailyDays.length} daily days`);

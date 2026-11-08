@@ -30,12 +30,13 @@ function getRepo(owner: string, name: string): { owner: string; name: string; fu
 }
 const hasAlternativesPage = (repo: { full: string }) => ALTERNATIVES.has(repo.full);
 
-/** First day that can be archived: the day after the first snapshot (2026-10-13). */
-const FIRST_ARCHIVE_DAY = "2026-10-14";
-
-/** Completed UTC archive days: FIRST_ARCHIVE_DAY up to yesterday (snapshot files aren't readable here). */
-const isArchiveDay = (d: string) =>
-  /^\d{4}-\d{2}-\d{2}$/.test(d) && !Number.isNaN(Date.parse(d)) && d >= FIRST_ARCHIVE_DAY && d < new Date().toISOString().slice(0, 10);
+/**
+ * Archived /daily/[date] pages, from the same getArchiveDays() the page uses. A date-range guess
+ * (before today's UTC date) let the just-finished day through for the hours before its closing
+ * snapshot existed, so it rendered "Page not found" with a 200 (soft 404) instead of a real 404.
+ */
+const DAILY_DAYS = new Set<string>(routes.dailyDays ?? []);
+const isArchiveDay = (d: string) => DAILY_DAYS.has(d);
 
 /** Single-slug hub sections (lowercase slugs) and how to tell a real hub. */
 const HUBS: Record<string, (slug: string) => boolean> = {
