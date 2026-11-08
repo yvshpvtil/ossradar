@@ -50,6 +50,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Owner avatars (repo of the day, leaderboard rows, repo headers) load straight from GitHub's
             avatar CDN; opening that connection early saves the DNS/TLS round trips on the first image. */}
         <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+        {/* RFC 8631: machine-readable description (OpenAPI 3.1) and human docs for the free JSON API,
+            so agents and API crawlers landing on any page can discover /api/v1 without guessing. */}
+        <link rel="service-desc" type="application/openapi+json" href="/api/v1/openapi.json" />
+        <link rel="service-doc" type="text/html" href="/about#api" />
       </head>
       <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
         <NavTracker />
