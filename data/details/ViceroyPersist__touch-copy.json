@@ -1,0 +1,12 @@
+{
+ "fullName": "ViceroyPersist/touch-copy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "ef3be20e903e",
+ "version": 1,
+ "generatedAt": "2026-11-08T19:03:55.405Z"
+}
