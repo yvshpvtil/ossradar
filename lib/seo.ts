@@ -200,8 +200,10 @@ export const websiteLd = {
     name: SITE.name,
     url: SITE.url,
     email: SITE.sponsorEmail,
-    // app/apple-icon.png (180x180): Google wants a crawlable square logo of at least 112x112.
-    logo: { "@type": "ImageObject", url: abs("/apple-icon.png"), width: 180, height: 180 },
+    // public/icon-512.png (512x512, also the manifest icon): Google wants a crawlable square logo of
+    // at least 112x112, and a larger source keeps it sharp wherever it is shown.
+    logo: { "@type": "ImageObject", url: abs("/icon-512.png"), width: 512, height: 512 },
+    founder: { "@type": "Person", name: SITE.owner, url: SITE.github },
   },
 };
 
