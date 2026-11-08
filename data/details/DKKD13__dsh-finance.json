@@ -1,0 +1,12 @@
+{
+ "fullName": "DKKD13/dsh-finance",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install deepseek-harness-finance-plugin@preview",
+ "source": "readme",
+ "readmeSummary": "DSH Finance 把市场、研究 Skills、资料、观点和模拟基金放进同一个 DeepSeek Harness 工作台。选一个研究任务，带着材料进入对话；读结论时，随时回到原文，继续追问。",
+ "extractor": "heuristic",
+ "readmeHash": "77cbe929173f",
+ "version": 1,
+ "generatedAt": "2026-11-08T04:12:18.234Z"
+}
