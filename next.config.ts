@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       { source: "/:path*", has: [{ type: "host", value: "www.ossradar.net" }], destination: "https://ossradar.net/:path*", permanent: true },
       // Feed readers and crawlers probe common feed paths; the one feed lives at /rss.xml.
       ...["/feed", "/feed.xml", "/rss"].map((source) => ({ source, destination: "/rss.xml", permanent: true })),
+      // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
+      // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
+      ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
       // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
