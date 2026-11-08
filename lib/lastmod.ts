@@ -34,7 +34,7 @@ export function alternativesLastmod(r: Repo, cap: Date): string {
  * aren't available at build time. Bump the date when you edit that page's copy.
  */
 export const STATIC_LASTMOD = {
-  about: "2026-10-24",
+  about: "2026-11-08",
   submit: "2026-10-25",
   sponsor: "2026-10-24",
 } as const;
