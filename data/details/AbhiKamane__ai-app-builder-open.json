@@ -1,0 +1,12 @@
+{
+ "fullName": "AbhiKamane/ai-app-builder-open",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source AI app builder that turns a single prompt into a complete full-stack Next.js application — hosted, connected…",
+ "extractor": "heuristic",
+ "readmeHash": "46d9c96cf3a3",
+ "version": 1,
+ "generatedAt": "2026-11-08T05:10:00.961Z"
+}
