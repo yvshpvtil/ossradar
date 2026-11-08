@@ -5,12 +5,13 @@ import { NotFoundRepoHint } from "@/components/NotFoundRepoHint";
 import { CATEGORIES } from "@/lib/categories";
 import { LANDINGS } from "@/lib/landing";
 
-// Override the root layout's robots (index, follow) so it doesn't conflict with
-// Next.js's automatic <meta name="robots" content="noindex"/> on 404 responses.
+// Clear the root layout's robots (index, follow) so the only robots tag on 404
+// responses is Next.js's automatic <meta name="robots" content="noindex"/>
+// (links are still followed by default; a second "noindex, follow" was redundant).
 export const metadata: Metadata = {
   title: "Page not found",
   description: "That page isn't on OSS Radar. The repo may have dropped out of today's tracked set, or the URL may be wrong.",
-  robots: { index: false, follow: true },
+  robots: null,
 };
 
 const chip =
