@@ -1,0 +1,12 @@
+{
+ "fullName": "phuryn/mini-harness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "An agent harness built for teaching: about 1,400 lines of Python and two dependencies, small enough to read in one sitting.",
+ "extractor": "heuristic",
+ "readmeHash": "e741b3bfc0c2",
+ "version": 1,
+ "generatedAt": "2026-11-08T01:29:09.377Z"
+}

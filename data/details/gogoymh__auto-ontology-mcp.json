@@ -1,0 +1,12 @@
+{
+ "fullName": "gogoymh/auto-ontology-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --rm --name aomcp-pg -e POSTGRES_PASSWORD=pw -p 55432:5432 postgres:17",
+ "source": "readme",
+ "readmeSummary": "Auto Ontology runs its own LLMs (NVIDIA NIM) behind a Next.js, FastAPI and Postgres stack.",
+ "extractor": "heuristic",
+ "readmeHash": "2c2602d6b0e9",
+ "version": 1,
+ "generatedAt": "2026-11-08T01:29:09.374Z"
+}
