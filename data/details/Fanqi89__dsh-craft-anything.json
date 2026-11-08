@@ -1,0 +1,12 @@
+{
+ "fullName": "Fanqi89/dsh-craft-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "把 Craft Anything（ArtCraft 的开源「看清任意软件怎么工作，再让 AI 帮你重做一个」引擎）接进 DeepSeek Harness (DSH)： 本地 craft-anything-cli 的 MCP 工具以 mcpcraft 出现在 DSH…",
+ "extractor": "heuristic",
+ "readmeHash": "e579fbe76529",
+ "version": 1,
+ "generatedAt": "2026-11-08T09:08:21.208Z"
+}

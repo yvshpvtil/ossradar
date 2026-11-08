@@ -1,0 +1,16 @@
+{
+ "fullName": "nace-ai/kapitsa",
+ "whoItsFor": null,
+ "useCases": [
+  "351 tok/s on Qwen3.6 35B-A3B (M5 Max), the fastest decode in 33 of 38 model and Mac pairs. KFlash, tree speculative decoding: one verify pas",
+  "A 180B model on a 48 GB Mac, at 61 tok/s (M5 Pro). Its routed experts stream from the SSD, as many as the budget holds.",
+  "A 16K follow-up after a restart starts in 0.16 s instead of 17 s. Conversations stay on the SSD (`--disk-cache`)."
+ ],
+ "installCommand": "brew install nace-ai/tap/kapitsa",
+ "source": "readme",
+ "readmeSummary": "Kapitsa is an inference engine for Apple silicon that runs Qwen, Nemotron and Recursive's Flint models locally, built for coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "47510b3e387c",
+ "version": 1,
+ "generatedAt": "2026-11-08T09:08:21.217Z"
+}

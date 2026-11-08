@@ -1,0 +1,16 @@
+{
+ "fullName": "TwiN/gatus",
+ "whoItsFor": null,
+ "useCases": [
+  "Highly flexible health check conditions: While checking the response status may be enough for some use cases, Gatus goes much further and al",
+  "Ability to use Gatus for user acceptance tests: Thanks to the point above, you can leverage this application to create automated user accept",
+  "Very easy to configure: Not only is the configuration designed to be as readable as possible, it's also extremely easy to add a new service "
+ ],
+ "installCommand": "docker run -p 8080:8080 --name gatus ghcr.io/twin/gatus:stable",
+ "source": "readme",
+ "readmeSummary": "Gatus is a developer-oriented health dashboard that gives you the ability to monitor your services using HTTP, ICMP, TCP, and even DNS…",
+ "extractor": "heuristic",
+ "readmeHash": "0a1ab44930b1",
+ "version": 1,
+ "generatedAt": "2026-11-08T09:08:21.336Z"
+}

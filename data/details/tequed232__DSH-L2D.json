@@ -1,0 +1,12 @@
+{
+ "fullName": "tequed232/DSH-L2D",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "面向 DeepSeek Harness 的 Live2D 桌宠、具身行为运行时与 Agent 控制桥",
+ "extractor": "heuristic",
+ "readmeHash": "206147135e1f",
+ "version": 1,
+ "generatedAt": "2026-11-08T09:08:21.211Z"
+}
