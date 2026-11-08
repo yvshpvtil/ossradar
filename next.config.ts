@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
       // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
       // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
       ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
+      // SEO crawlers and audit tools probe WordPress/Yoast-style sitemap index paths before reading
+      // robots.txt; the single sitemap lives at /sitemap.xml.
+      ...["/sitemap_index.xml", "/sitemap-index.xml"].map((source) => ({ source, destination: "/sitemap.xml", permanent: true })),
+      // Older PWA tooling and favicon crawlers probe /manifest.json; the manifest is /manifest.webmanifest.
+      { source: "/manifest.json", destination: "/manifest.webmanifest", permanent: true },
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
       // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
