@@ -1,0 +1,12 @@
+{
+ "fullName": "RunanywhereAI/trnrt",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run --rm --privileged --network host --ipc=host \\",
+ "source": "readme",
+ "readmeSummary": "TrnRT is an open inference engine for large language models on AWS Trainium.",
+ "extractor": "heuristic",
+ "readmeHash": "e11d694a3484",
+ "version": 1,
+ "generatedAt": "2026-11-09T19:17:07.481Z"
+}

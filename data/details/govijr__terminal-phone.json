@@ -1,0 +1,12 @@
+{
+ "fullName": "govijr/terminal-phone",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/govijr/terminal-phone/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "An interactive iPhone in your terminal, shared with your AI agents.",
+ "extractor": "heuristic",
+ "readmeHash": "46c8ed875dd2",
+ "version": 1,
+ "generatedAt": "2026-11-09T19:17:07.593Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "FaceAttorney/rust-external-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "14463199ad65",
+ "version": 1,
+ "generatedAt": "2026-11-09T19:17:06.766Z"
+}
