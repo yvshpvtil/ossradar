@@ -1,0 +1,12 @@
+{
+ "fullName": "kyy-logs/code-review-gate-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y skills add kyy-logs/code-review-gate-skill --agent codex --skill code-review-gate --yes",
+ "source": "readme",
+ "readmeSummary": "English | 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "8bc1f9c03805",
+ "version": 1,
+ "generatedAt": "2026-11-09T13:35:14.399Z"
+}
