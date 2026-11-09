@@ -187,6 +187,12 @@ export function proxy(req: NextRequest) {
     if (!CATEGORIES.has(hub)) return notFound();
     if (`/${raw.join("/")}` !== `/category/${hub}.md`) return redirectTo(`/category/${hub}.md`);
     return NextResponse.rewrite(new URL(`/md/category/${hub}`, req.url));
+  } else if (section === "language" && parts.length === 2 && /\.md$/i.test(raw[1])) {
+    // Markdown twin for chatbots and agents: /language/{slug}.md (lowercase path enforced).
+    const hub = slug.slice(0, -3);
+    if (!LANGUAGES.has(hub)) return notFound();
+    if (`/${raw.join("/")}` !== `/language/${hub}.md`) return redirectTo(`/language/${hub}.md`);
+    return NextResponse.rewrite(new URL(`/md/language/${hub}`, req.url));
   } else if (section === "daily" && parts.length === 2 && /\.md$/i.test(raw[1])) {
     // Markdown twin for chatbots and agents: /daily/{YYYY-MM-DD}.md (lowercase path enforced).
     const day = slug.slice(0, -3);

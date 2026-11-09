@@ -161,6 +161,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Category hub as Markdown: ${SITE.url}/category/{slug}.md, e.g. ${SITE.url}/category/mcp.md (that category's tracked repos ranked by 7-day star gain; slugs listed under Categories below)
 - Alternatives page as Markdown: ${SITE.url}/alternatives/{owner}/{name}.md (open-source alternatives to that repo: tracked repos sharing its GitHub topics, with shared topics and 7-day gains; only repos with an alternatives page, listed at ${SITE.url}/alternatives)
 - By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
+- Language hub as Markdown: ${SITE.url}/language/{language}.md, e.g. ${SITE.url}/language/python.md (that language's tracked repos ranked by 7-day star gain)
 - By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name}${dailyPattern}
 

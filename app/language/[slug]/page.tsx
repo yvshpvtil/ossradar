@@ -16,7 +16,7 @@ import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
 import { HubBreakdown } from "@/components/HubBreakdown";
 import { RelatedTopics } from "@/components/RelatedTopics";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps<"/language/[slug]">
   return {
     title,
     description,
-    alternates: pageAlternates(`/language/${slug}`),
+    alternates: { ...pageAlternates(`/language/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/language/${slug}.md`, title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/language/${slug}` },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };
