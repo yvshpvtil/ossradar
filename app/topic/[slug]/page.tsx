@@ -12,7 +12,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 import { hubLeaderProps } from "@/lib/leader";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { getReposByTopic, getTopics, hasTopicPage, relatedTopics, topicLabel, topicVariants } from "@/lib/topics";
 import { HubBreakdown } from "@/components/HubBreakdown";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): 
   const { slug } = await params;
   if (!hasTopicPage(slug)) return {};
   const { title, socialTitle, description } = topicMeta(slug);
-  return { title, description, alternates: pageAlternates(`/topic/${slug}`), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/topic/${slug}` }, twitter: { ...twitterDefaults, title: socialTitle, description } };
+  return { title, description, alternates: { ...pageAlternates(`/topic/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/topic/${slug}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/topic/${slug}` }, twitter: { ...twitterDefaults, title: socialTitle, description } };
 }
 
 export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) {

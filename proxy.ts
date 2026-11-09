@@ -193,6 +193,13 @@ export function proxy(req: NextRequest) {
     if (!LANGUAGES.has(hub)) return notFound();
     if (`/${raw.join("/")}` !== `/language/${hub}.md`) return redirectTo(`/language/${hub}.md`);
     return NextResponse.rewrite(new URL(`/md/language/${hub}`, req.url));
+  } else if (section === "topic" && parts.length === 2 && /\.md$/i.test(raw[1])) {
+    // Markdown twin for chatbots and agents: /topic/{slug}.md (lowercase path enforced; a
+    // singular/plural alias of a hub 308s to the hub's own .md).
+    const hub = canonicalTopic(slug.slice(0, -3));
+    if (!TOPICS.has(hub)) return notFound();
+    if (`/${raw.join("/")}` !== `/topic/${hub}.md`) return redirectTo(`/topic/${hub}.md`);
+    return NextResponse.rewrite(new URL(`/md/topic/${hub}`, req.url));
   } else if (section === "daily" && parts.length === 2 && /\.md$/i.test(raw[1])) {
     // Markdown twin for chatbots and agents: /daily/{YYYY-MM-DD}.md (lowercase path enforced).
     const day = slug.slice(0, -3);

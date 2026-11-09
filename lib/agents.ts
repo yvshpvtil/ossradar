@@ -174,6 +174,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 7. **Trending views:** \`${SITE.url}/trending/{slug}.md\` (the top 50 of each trending view as Markdown: \`ai-repos-this-week\`, \`github-repos-today\`, \`new-ai-repos\`; HTML without the .md).
 8. **Alternatives:** \`${SITE.url}/alternatives/{owner}/{name}.md\` (open-source alternatives to one repo, ranked by shared GitHub topics, as Markdown; repos with a page are listed at \`${SITE.url}/alternatives\`; HTML without the .md).
 9. **One language:** \`${SITE.url}/language/{slug}.md\` (tracked repos written mainly in that language, ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/language\`).
+10. **One GitHub topic:** \`${SITE.url}/topic/{slug}.md\` (tracked repos tagged with that topic, ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/topic\`).
 
 ## Methodology
 
