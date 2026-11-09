@@ -1,0 +1,12 @@
+{
+ "fullName": "ruvnet/RuView",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @ruvnet/ruview@0.9.1 doctor",
+ "source": "readme",
+ "readmeSummary": "Turn ordinary WiFi into a spatial intelligence / sensing system. Detect people, measure breathing and heart rate, track movement…",
+ "extractor": "heuristic",
+ "readmeHash": "ec1ea289b342",
+ "version": 1,
+ "generatedAt": "2026-11-09T04:19:52.362Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "google/three-live",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx three-live-cli render scene.js --view=quad --grid --annotations -o contact_sheet.png",
+ "source": "readme",
+ "readmeSummary": "AI-First Native 3D, CAD & Spatial Computing: On-device JIT compiler turning live, AI-generated Three.js into native Android (Google Filament…",
+ "extractor": "heuristic",
+ "readmeHash": "ca6c8b2e3b24",
+ "version": 1,
+ "generatedAt": "2026-11-09T04:19:52.364Z"
+}
