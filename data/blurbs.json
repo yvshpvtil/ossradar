@@ -281,6 +281,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-21T02:25:16.432Z"
  },
+ "alchaincyf/nuwa-skill": {
+  "text": "An agent skill that distills a person's mental models, decision heuristics and speaking style into a reusable skill.",
+  "basis": "207afa28b71d",
+  "source": "claude -p",
+  "generatedAt": "2026-11-09T02:20:38.759Z"
+ },
  "anhao/ai-pose-gallery-zh": {
   "text": "Chinese-translated gallery of AI art pose, outfit and portrait references with a studio for generating AI characters.",
   "basis": "a9789c2c2d40",
@@ -347,6 +353,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-21T02:25:07.662Z"
  },
+ "cutetailbud/ff-ruyijs": {
+  "text": "A headless browser that runs website JavaScript from Python on the real Firefox engine, for AI agents doing web automation.",
+  "basis": "67bf6cfea6d5",
+  "source": "claude -p",
+  "generatedAt": "2026-11-09T02:20:39.596Z"
+ },
  "cv-cat/catbus": {
   "text": "A CLI with unified commands and JSON output for Xiaohongshu, Douyin, TikTok, Bilibili, Weibo, Taobao, X and more.",
   "basis": "560bbcba2de7",
@@ -412,6 +424,12 @@
   "basis": "8f0631d414ad",
   "source": "claude -p",
   "generatedAt": "2026-11-02T02:23:30.718Z"
+ },
+ "duyunzhoudyz/dyz-med-paper-skills": {
+  "text": "32 Agent Skills for Claude Code and Codex helping Chinese doctors write medical papers, search PubMed and revise.",
+  "basis": "5227bbe9c34a",
+  "source": "claude -p",
+  "generatedAt": "2026-11-09T02:20:39.311Z"
  },
  "elliothux/open-compute": {
   "text": "A self-hosted platform that runs Cloudflare Workers-compatible code and services like KV, D1 and R2 from one Rust binary.",
@@ -520,6 +538,12 @@
   "basis": "36fdde61d2a6",
   "source": "claude -p, edited by hand",
   "generatedAt": "2026-10-21T02:24:59.934Z"
+ },
+ "konlu/story-studio": {
+  "text": "AI agent skill for making short videos, from topic and script to voiceover, images and an editable JianYing draft.",
+  "basis": "c0efd68e9c57",
+  "source": "claude -p",
+  "generatedAt": "2026-11-09T02:20:37.611Z"
  },
  "kuafuai/andee": {
   "text": "An on-device AI agent for Android and Mac that uses any app through the screen, with memory kept on the device.",
