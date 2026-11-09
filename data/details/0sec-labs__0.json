@@ -1,0 +1,12 @@
+{
+ "fullName": "0sec-labs/0",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/0sec-labs/0/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "0 opens the local browser console without an account. 0 web remains a compatibility alias.",
+ "extractor": "heuristic",
+ "readmeHash": "b2af5092cb61",
+ "version": 1,
+ "generatedAt": "2026-11-09T07:50:13.545Z"
+}

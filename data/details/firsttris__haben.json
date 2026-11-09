@@ -1,0 +1,12 @@
+{
+ "fullName": "firsttris/haben",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Die Buchhaltungssoftware für Freiberufler, Selbstständige, Kleinunternehmer und kleine GmbHs, die du selbst betreibst.",
+ "extractor": "heuristic",
+ "readmeHash": "483a19b07301",
+ "version": 1,
+ "generatedAt": "2026-11-09T07:50:13.503Z"
+}
