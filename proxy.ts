@@ -168,6 +168,12 @@ export function proxy(req: NextRequest) {
   } else if (parts.length === 1 && raw[0] !== section && INDEXES.has(section)) {
     // Wrong-cased index page, e.g. /Category.
     return redirectTo(`/${section}`);
+  } else if (section === "daily" && parts.length === 2 && /\.md$/i.test(raw[1])) {
+    // Markdown twin for chatbots and agents: /daily/{YYYY-MM-DD}.md (lowercase path enforced).
+    const day = slug.slice(0, -3);
+    if (!isArchiveDay(day)) return notFound();
+    if (`/${raw.join("/")}` !== `/daily/${day}.md`) return redirectTo(`/daily/${day}.md`);
+    return NextResponse.rewrite(new URL(`/md/daily/${day}`, req.url));
   } else if (parts.length > 1 && Object.hasOwn(HUBS, section)) {
     // Bare /category, /language, /topic and /daily are index pages; only hub paths are checked:
     // the slug page, plus its Open Graph card route when requested exactly as generated.

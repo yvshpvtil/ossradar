@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, pageNodeIds, twitterDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, pageNodeIds, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps<"/daily/[date]">): 
   if (!getArchiveDays().includes(date)) return {};
   const title = `Fastest-rising GitHub repos on ${formatDate(date)}`;
   const description = dailyDescription(date);
-  return { title, description, alternates: pageAlternates(`/daily/${date}`), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: `/daily/${date}` }, twitter: { ...twitterDefaults, title, description } };
+  return { title, description, alternates: { ...pageAlternates(`/daily/${date}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/daily/${date}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: `/daily/${date}` }, twitter: { ...twitterDefaults, title, description } };
 }
 
 export default async function DailyPage({ params }: PageProps<"/daily/[date]">) {
