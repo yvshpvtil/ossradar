@@ -16,6 +16,7 @@ const baseRepo = {
   fullName: { ...str, description: "owner/name on GitHub" },
   url: { ...str, format: "uri", description: "GitHub repository URL" },
   ossradarUrl: { ...str, format: "uri", description: "This repo's page on OSS Radar (cite this)" },
+  markdownUrl: { ...str, format: "uri", description: "The same repo page as clean Markdown (stars, gains, rank, star history, alternatives), handy for LLM context" },
   description: nstr,
   language: nstr,
   category: str,

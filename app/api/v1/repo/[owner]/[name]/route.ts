@@ -33,6 +33,7 @@ export async function GET(_req: Request, ctx: RouteContext<"/api/v1/repo/[owner]
         fullName: r.fullName,
         url: r.url,
         ossradarUrl: `${SITE.url}/repo/${r.owner}/${r.name}`,
+        markdownUrl: `${SITE.url}/repo/${r.owner}/${r.name}.md`,
         summary: dropTemplateWhy(r.oneLiner) || r.description,
         description: r.description,
         homepage: r.homepage,

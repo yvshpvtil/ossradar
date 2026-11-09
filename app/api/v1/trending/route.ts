@@ -14,6 +14,7 @@ export function GET() {
     fullName: r.fullName,
     url: r.url,
     ossradarUrl: `${SITE.url}/repo/${r.owner}/${r.name}`,
+    markdownUrl: `${SITE.url}/repo/${r.owner}/${r.name}.md`,
     description: r.description,
     language: r.language,
     category: categoryLabel(r.category),
