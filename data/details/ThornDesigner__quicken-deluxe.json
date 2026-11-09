@@ -1,0 +1,12 @@
+{
+ "fullName": "ThornDesigner/quicken-deluxe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "9218231be21e",
+ "version": 1,
+ "generatedAt": "2026-11-09T05:31:38.981Z"
+}

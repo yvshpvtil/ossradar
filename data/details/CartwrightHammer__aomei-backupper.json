@@ -1,0 +1,12 @@
+{
+ "fullName": "CartwrightHammer/aomei-backupper",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "c78d7d3a83e3",
+ "version": 1,
+ "generatedAt": "2026-11-09T05:31:38.995Z"
+}

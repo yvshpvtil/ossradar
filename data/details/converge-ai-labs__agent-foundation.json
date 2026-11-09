@@ -1,0 +1,12 @@
+{
+ "fullName": "converge-ai-labs/agent-foundation",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Build, run, and manage AI agents at scale on your own infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "404364435418",
+ "version": 1,
+ "generatedAt": "2026-11-09T05:31:38.978Z"
+}
