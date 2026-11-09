@@ -1,0 +1,16 @@
+{
+ "fullName": "angelonyn/chimera-desktop-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete utility suite, pre-configured: Every included tool ships with working defaults, so the environment is operational immediately after",
+  "Single-package deployment: All components are bundled into one installer, eliminating dependency resolution, package manager requirements, o",
+  "Offline-ready operation: Once installed, the build runs fully locally without requiring network access to fetch, verify, or activate compone"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Chimera is a self-contained desktop installer that bundles all required utilities into a single pre-configured package, eliminating external…",
+ "extractor": "heuristic",
+ "readmeHash": "e15bc290c024",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:16.054Z"
+}

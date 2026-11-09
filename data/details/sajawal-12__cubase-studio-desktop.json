@@ -1,0 +1,16 @@
+{
+ "fullName": "sajawal-12/cubase-studio-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Plugin Suite: All stock and bundled plugins are pre-installed and authorized within a single local package, eliminating the need for",
+  "Complete Feature Set Enabled: Every module, instrument, and effect included in the build is available on first launch, including advanced mi",
+  "Standalone Offline Operation: The setup runs entirely from local resources; no network connectivity is required during installation or runti"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Cubase Studio 2026 standalone desktop package delivers a complete production environment with all bundled plugins, instruments…",
+ "extractor": "heuristic",
+ "readmeHash": "7ec9afe0c860",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.840Z"
+}

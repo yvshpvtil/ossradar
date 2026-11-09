@@ -1,0 +1,16 @@
+{
+ "fullName": "2024dc04123-PAVANP/exitlag-performance-tweaks",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone installer package delivered as a single self-contained build, eliminating the need for dependency resolution or ext",
+  "Optimized performance tweaks applied at the system level to reduce background overhead and improve desktop responsiveness on Windows x64 env",
+  "Deterministic installation flow with automated configuration steps, ensuring consistent setup results across target machines without manual "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone desktop installer packages a complete, pre-configured local build engineered to reduce latency and stabilize connections…",
+ "extractor": "heuristic",
+ "readmeHash": "4df691f65c60",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:16.252Z"
+}

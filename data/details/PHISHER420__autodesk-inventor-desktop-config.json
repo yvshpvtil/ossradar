@@ -1,0 +1,16 @@
+{
+ "fullName": "PHISHER420/autodesk-inventor-desktop-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Feature Set Pre-Activated: All professional-grade modeling, simulation, and documentation tools are enabled out of the box, elimina",
+  "Ready-to-Run Professional Configuration: The installer delivers a fully configured environment with default preferences, templates, and libr",
+  "Offline Standalone Deployment: The package operates independently of network connectivity, making it suitable for air-gapped workstations an"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Autodesk Inventor 2026 delivers a complete professional-grade desktop configuration for Windows x64, packaged as a ready-to-run installer…",
+ "extractor": "heuristic",
+ "readmeHash": "13fdb6fccd9e",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.879Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Paulinho182/hitfilm-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully activated feature set: all modules, effects, and export profiles are enabled out of the box with no runtime restrictions or license pr",
+  "Complete offline installer: self-contained package that provisions the full application stack locally without requiring network access durin",
+  "Professional desktop pipeline: native Windows x64 build optimized for editing, compositing, and rendering workflows on workstation-class har"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Hitfilm standalone installer delivers a complete, pre-activated desktop build with the full feature set enabled for professional use.",
+ "extractor": "heuristic",
+ "readmeHash": "8234aab0f1f8",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.430Z"
+}

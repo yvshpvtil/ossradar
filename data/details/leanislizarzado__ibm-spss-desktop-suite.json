@@ -1,0 +1,16 @@
+{
+ "fullName": "leanislizarzado/ibm-spss-desktop-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated deployment model: The installer ships with all licensing already provisioned, eliminating the need for post-install activation",
+  "Complete feature surface enabled: Every statistical module and analysis tool in the suite is unlocked at install time, including advanced re",
+  "Standalone offline operation: The build is fully self-contained and requires no network connectivity during installation or runtime. All dep"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone distribution packages IBM SPSS Statistics 2026 as a self-contained Windows x64 desktop deployment, bundling the full…",
+ "extractor": "heuristic",
+ "readmeHash": "0c8758a95935",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.646Z"
+}

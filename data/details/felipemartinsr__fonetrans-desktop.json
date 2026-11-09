@@ -1,0 +1,16 @@
+{
+ "fullName": "felipemartinsr/fonetrans-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Feature Set Unlocked: The installer delivers the full application with no restricted modules, gated options, or partial functionali",
+  "Unified Standalone Installer: A single self-contained package bundles all required dependencies, runtime components, and application binarie",
+  "Offline-Capable Deployment: The installer does not require network access during setup or first launch. All assets needed for a complete ins"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Fonetrans is a self-contained desktop application distributed as a complete standalone installer for Windows x64 environments, delivering…",
+ "extractor": "heuristic",
+ "readmeHash": "f2c410e29900",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:16.118Z"
+}

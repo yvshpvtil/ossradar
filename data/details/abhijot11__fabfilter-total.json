@@ -1,0 +1,16 @@
+{
+ "fullName": "abhijot11/fabfilter-total",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated build: all product modules are enabled out of the box; no license key entry, activation server call, or account sign-in is req",
+  "Single-package deployment: the installer bundles every component and bundled resource, so setup completes from one local package with no sec",
+  "Offline-capable: installation and first launch function without an internet connection; network access is not required to reach a working st"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "fabfilter-total is a standalone desktop installer package for Fabfilter Total 2026 that bundles all features in an activated state…",
+ "extractor": "heuristic",
+ "readmeHash": "2be4621ed24c",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.391Z"
+}

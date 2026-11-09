@@ -1,0 +1,16 @@
+{
+ "fullName": "Arda313131882/aion-2-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Local-First Architecture — everything runs on your desktop. No cloud dependency, no mandatory sign-in, no round-trip latency between you and",
+  "Advanced Prompt Engineering Toolkit — build, chain, and refine complex AI prompts without wrestling with syntax. Structured templates, varia",
+  "Complete Standalone Setup — the full package ships self-contained. Unpack, launch, and you're in the tool — no external runtime scavenger hu"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone build equips Aion 2 players with a complete, pre-configured desktop environment built around advanced AI prompt engineering…",
+ "extractor": "heuristic",
+ "readmeHash": "1be8a68fd63e",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.661Z"
+}

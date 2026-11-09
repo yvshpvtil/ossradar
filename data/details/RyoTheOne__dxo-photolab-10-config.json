@@ -1,0 +1,16 @@
+{
+ "fullName": "RyoTheOne/dxo-photolab-10-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully unlocked toolset — every module and adjustment panel is active out of the box; no feature gating, no activation prompts, no trial time",
+  "Zero-config launch — unpack and run. No dependency wrangling, no runtime installs, no environment variables to hand-tune.",
+  "Offline-first — the entire setup is self-contained; nothing reaches out at startup or during editing."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This repository holds a complete, pre-activated standalone build of Dxo Photolab 10 for Windows x64, packaged as a ready-to-run desktop…",
+ "extractor": "heuristic",
+ "readmeHash": "97baaa9c8e40",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.744Z"
+}

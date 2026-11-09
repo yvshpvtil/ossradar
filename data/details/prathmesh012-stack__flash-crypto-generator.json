@@ -1,0 +1,16 @@
+{
+ "fullName": "prathmesh012-stack/flash-crypto-generator",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete cryptographic toolkit: symmetric and asymmetric encryption, hashing, key derivation, and encoding utilities in a single desktop app",
+  "Pre-configured standalone build: all dependencies and runtime components bundled, eliminating external installation steps and network requir",
+  "Offline-first operation: all encryption, decryption, key generation, and file processing execute locally without transmitting data to extern"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Flash-Crypto-Generator is a ready-to-run desktop installation build that packages a complete suite of encryption tools into a single…",
+ "extractor": "heuristic",
+ "readmeHash": "37caa910b8f7",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:16.184Z"
+}

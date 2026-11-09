@@ -1,0 +1,16 @@
+{
+ "fullName": "sceranaud123-byte/drfone-unlock-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build eliminates the need for post-install license activation or online verification, enabling immediate use in off",
+  "Complete component bundle includes all runtime dependencies, libraries, and supporting files required for full desktop operation without add",
+  "Self-contained installer architecture ensures consistent deployment across target Windows x64 systems by packaging the full application payl"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone installer package provides a complete, ready-to-run desktop configuration for the Drfoneunlock 2026 build…",
+ "extractor": "heuristic",
+ "readmeHash": "41fa79ed475f",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.966Z"
+}

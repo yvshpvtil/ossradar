@@ -1,0 +1,12 @@
+{
+ "fullName": "Elegantic/designcenter-nx-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Designcenter-NX is a standalone desktop installer package delivering the complete feature set in a pre-activated local build…",
+ "extractor": "heuristic",
+ "readmeHash": "5a61c5c008e7",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.985Z"
+}

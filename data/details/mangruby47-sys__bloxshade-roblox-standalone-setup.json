@@ -1,0 +1,16 @@
+{
+ "fullName": "mangruby47-sys/bloxshade-roblox-standalone-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Standalone desktop build — ships as a complete, pre-activated Windows x64 package. No dependency hunting, no version roulette. Unpack, launc",
+  "Pre-activated out of the box — all features are unlocked from the first run. No keys, no sign-in gates, no trial timers ticking down behind ",
+  "Shade pipeline tuned for Roblox — visual enhancement layers built specifically around Roblox's rendering path, so the upgrade lands where it"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "BloxShade for Roblox delivers a complete standalone desktop build for 2026, pre-activated and ready to run straight out of the box.",
+ "extractor": "heuristic",
+ "readmeHash": "d5dfd781ea88",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.740Z"
+}

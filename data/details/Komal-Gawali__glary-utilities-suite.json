@@ -1,0 +1,16 @@
+{
+ "fullName": "Komal-Gawali/glary-utilities-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated toolset: all bundled utilities are enabled at install time, with license state applied locally so no post-install activation s",
+  "Complete module coverage: includes the full set of maintenance, cleanup, optimization, and repair tools shipped with the suite, installed as",
+  "Offline-capable installer: performs no network calls during setup; all payloads are contained in the distribution archive."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This package provides a complete standalone installer for the Glary Utilities Pro desktop suite…",
+ "extractor": "heuristic",
+ "readmeHash": "4d892a33f9c3",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.484Z"
+}

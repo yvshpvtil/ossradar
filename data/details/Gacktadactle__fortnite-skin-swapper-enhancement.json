@@ -1,0 +1,16 @@
+{
+ "fullName": "Gacktadactle/fortnite-skin-swapper-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated and ready to run — no keygen, no patching, no license juggling. Launch the desktop build and the swapper is live from the firs",
+  "Standalone architecture — everything ships in one self-contained package. No external dependencies, no background services, no runtime downl",
+  "Full skin library access — browse and swap across the complete cosmetic catalog, including outfits, back bling, pickaxes, gliders, wraps, an"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Fortnite-Skin-Swapper is the complete standalone desktop setup for 2026, delivered pre-activated and ready to run the moment it lands…",
+ "extractor": "heuristic",
+ "readmeHash": "7fea5efc8f41",
+ "version": 1,
+ "generatedAt": "2026-11-09T22:04:15.480Z"
+}
