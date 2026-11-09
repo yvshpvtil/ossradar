@@ -1,0 +1,16 @@
+{
+ "fullName": "vishnu05-codes/ozone-12-advanced",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Standalone Build: Delivers a complete, ready-to-run installation package that eliminates the need for separate activation step",
+  "Enhanced Utility Configurations: Ships with a curated set of professional-grade utility presets and configuration profiles tailored for desk",
+  "Full Working Installer: Provides a self-contained installation routine that handles component registration, dependency resolution, and envir"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ozone 12 Advanced is a full-featured standalone installer package built for professional desktop deployments, delivering enhanced utility…",
+ "extractor": "heuristic",
+ "readmeHash": "2402c19b5895",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.512Z"
+}

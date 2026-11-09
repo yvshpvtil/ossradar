@@ -1,0 +1,16 @@
+{
+ "fullName": "sghnnnn01212-cmyk/data-grip-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Data Workspace: Consolidates connection management, schema browsing, query editing, and result inspection into a single standalone d",
+  "Connection Profiles and Session Persistence: Stores connection parameters, credentials, and per-project settings locally, allowing sessions ",
+  "SQL Editor with Syntax Awareness: Provides syntax highlighting, bracket matching, contextual autocompletion, and multi-statement execution a"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Data-Grip is a standalone desktop utility for Windows x64 that provides a complete, pre-activated installation for efficient data management…",
+ "extractor": "heuristic",
+ "readmeHash": "b84f7276b58f",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.289Z"
+}

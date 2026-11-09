@@ -1,0 +1,16 @@
+{
+ "fullName": "shahnawaz0786/payday-3-enhancement-toolkit",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully unlocked from the drop — every trainer option is live the moment the build finishes installing. No activation step, no key entry, no o",
+  "Desktop-native execution — built for Windows x64 as a standalone package. Double-click the installer, follow the prompts, and the tool lands",
+  "Offline-ready by design — the entire package is self-contained. Once installed, it runs without a network connection, which means your sessi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The payday-3-trainer-tool desktop installation build ships fully activated and ready to play the moment setup finishes — no extra…",
+ "extractor": "heuristic",
+ "readmeHash": "b01123c1dfda",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.098Z"
+}

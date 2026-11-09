@@ -1,0 +1,16 @@
+{
+ "fullName": "SnehalSukale27/power-director",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone installer — ships as a single, self-contained package with all required runtime components pre-bundled, eliminating exte",
+  "Ready-to-run configuration — installation finalizes into a launch-ready state; no post-install scripting, environment variable editing, or m",
+  "Offline-capable deployment — the full payload is embedded in the installer, allowing installation on air-gapped or restricted-network workst"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Power Director is a complete standalone desktop installer for Windows x64 that ships as a fully working, pre-configured build ready to run…",
+ "extractor": "heuristic",
+ "readmeHash": "e74e28a0a86c",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.791Z"
+}

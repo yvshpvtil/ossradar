@@ -1,0 +1,16 @@
+{
+ "fullName": "sajiddevoloper-bd/studioonepro7-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Full Build: Ships as a complete standalone installer with all product modules unlocked and ready to run immediately after setu",
+  "Offline-Capable Deployment: The installer packages all required components locally, allowing installation and operation in air-gapped or res",
+  "Windows x64 Native Support: Built and optimized specifically for 64-bit Windows desktop environments, with full compatibility across current"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Studioonepro7 2026 is a complete standalone desktop package for Windows x64, distributed as a ready-to-run installer with all features…",
+ "extractor": "heuristic",
+ "readmeHash": "c0c3ae039f7b",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.610Z"
+}

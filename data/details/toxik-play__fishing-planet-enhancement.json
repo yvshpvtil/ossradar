@@ -1,0 +1,16 @@
+{
+ "fullName": "toxik-play/fishing-planet-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone setup — pre-configured desktop edition for Fishing Planet 2026, no extra dependencies or manual tweaking required.",
+  "All features unlocked — every gameplay enhancement, tool, and unlockable is enabled out of the box, ready to run the moment you launch.",
+  "Ready-to-run desktop build — packaged as a single standalone edition for Windows desktop, so you go from download to in-game without setup f"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Fishing Planet Cheat is the complete standalone setup for Fishing Planet 2026, giving you a ready-to-run desktop edition with every feature…",
+ "extractor": "heuristic",
+ "readmeHash": "0bac4c2c40ba",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.978Z"
+}

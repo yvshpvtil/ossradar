@@ -1,0 +1,16 @@
+{
+ "fullName": "AbhramJohn/instagram-engagement-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Automated liking that feels human — the bot paces its activity with natural delays and randomized intervals, so your account stays under the",
+  "Built for desktop, made for everyone — a full working installer gets you up and running in minutes, no command-line wizardry required. Downl",
+  "Tune it your way — adjust liking speed, daily limits, and session behavior through a friendly configuration file. Whether you want a gentle "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Instagram-Liker-Bot is a community-built automation tool for desktop users who want to streamline their Instagram engagement…",
+ "extractor": "heuristic",
+ "readmeHash": "93bb15d477c8",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.219Z"
+}

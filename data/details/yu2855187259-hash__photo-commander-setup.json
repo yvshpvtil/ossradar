@@ -1,0 +1,16 @@
+{
+ "fullName": "yu2855187259-hash/photo-commander-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Zero-dependency binary: drop it in, run it, done — no package manager, no build step.",
+  "Every module ships unlocked by default; there is no stripped-down tier to upgrade past.",
+  "Single config surface: one plain-text file drives the whole tool, version it or trash it."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A complete, self-contained photo-commander setup: every feature is unlocked out of the box, no activation, no tinkering.",
+ "extractor": "heuristic",
+ "readmeHash": "b41b37cc9b96",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.870Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "rdeepak-wq121/quicken-deluxe-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Full Feature Activation: All product capabilities are enabled out of the box in this build—no license entry, activation wizard, or post-inst",
+  "Unified Standalone Installer: A single self-contained package bundles the complete application payload and its dependencies, eliminating the",
+  "Ready-to-Run Desktop Deployment: The installer finalizes all configuration during setup, so the application launches directly into a working"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "quicken-deluxe is a standalone desktop installer package that deploys a fully activated build of the application, with all features enabled…",
+ "extractor": "heuristic",
+ "readmeHash": "2551535e9739",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.595Z"
+}

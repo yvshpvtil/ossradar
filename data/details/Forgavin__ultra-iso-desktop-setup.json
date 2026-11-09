@@ -1,0 +1,16 @@
+{
+ "fullName": "Forgavin/ultra-iso-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Pre-Activated Feature Set: All premium functionality is unlocked and available immediately upon launch, with no post-install regist",
+  "Fully Standalone Deployment: The package includes every dependency and runtime component needed to operate independently, removing any requi",
+  "Optical Image Authoring and Editing: Create, modify, and repackage ISO images with full support for bootable media, file injection and extra"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ultra-Iso delivers a complete standalone desktop imaging suite with all features pre-activated for immediate deployment on Windows x64…",
+ "extractor": "heuristic",
+ "readmeHash": "1b104c81ed01",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.612Z"
+}

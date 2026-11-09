@@ -1,0 +1,16 @@
+{
+ "fullName": "tianjanahary05-source/reason-14-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Standalone Build — Ships as a fully configured, self-contained installation package that requires no additional license activa",
+  "Complete Installer Bundle — Delivers the full desktop application payload as a single installer artifact, eliminating the need for supplemen",
+  "Windows x64 Desktop Targeting — Optimized exclusively for 64-bit Windows desktop systems, with the installer structured around native x64 bi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "reason-14 is a standalone installer package that packages a complete, pre-configured desktop deployment for Windows x64 environments…",
+ "extractor": "heuristic",
+ "readmeHash": "314c347ac186",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:02.258Z"
+}

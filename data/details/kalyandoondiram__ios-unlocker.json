@@ -1,0 +1,16 @@
+{
+ "fullName": "kalyandoondiram/ios-unlocker",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone deployment: The desktop build ships in a fully configured state, eliminating post-install activation steps and allo",
+  "Complete local runtime: All required dependencies are bundled within the package, so no external package managers or network fetches are nee",
+  "Windows x64 desktop target: The installer is compiled and validated specifically for 64-bit Windows desktop systems, with native integration"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The ios-unlocker desktop package delivers a complete, pre-activated standalone build of Ios Unlocker 2026…",
+ "extractor": "heuristic",
+ "readmeHash": "b80e950a6ba8",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.707Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Thormass007/substance-3d-alt-access",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete installer pipeline — delivers the full desktop edition in a single ready-to-run package, with every dependency resolved during buil",
+  "Secure asset deployment — digital content is staged through a verified delivery chain with integrity checks at each transfer stage, ensuring",
+  "No activation step — the desktop edition launches directly after installation; no key entry, license server contact, or post-install provisi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The adobe-substance-3d installer package delivers a complete, ready-to-run desktop edition with a secure digital asset deployment pipeline…",
+ "extractor": "heuristic",
+ "readmeHash": "b86f8c066077",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:02.085Z"
+}

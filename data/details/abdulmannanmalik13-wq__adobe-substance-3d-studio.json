@@ -1,0 +1,16 @@
+{
+ "fullName": "abdulmannanmalik13-wq/adobe-substance-3d-studio",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Standalone Build: Delivers a fully configured installation of Adobe-Substance-3d with licensing and activation already applied",
+  "Secure Digital Asset Deployment Pipeline: Implements a verified, integrity-checked pipeline for distributing and synchronizing digital asset",
+  "Ready-to-Run Desktop Experience: Provides a complete, self-contained desktop application package that runs immediately after installation, w"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Adobe-Substance-3d is a ready-to-run desktop creative studio application that combines a full working installer with a secure digital asset…",
+ "extractor": "heuristic",
+ "readmeHash": "3c708df42123",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.900Z"
+}

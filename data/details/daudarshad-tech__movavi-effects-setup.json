@@ -1,0 +1,16 @@
+{
+ "fullName": "daudarshad-tech/movavi-effects-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully unlocked build — no activation prompts, no trial timers, no feature gates.",
+  "Standalone installer — everything bundled, nothing fetched at runtime.",
+  "One-pass deployment — run it once, done. No post-install tinkering."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A complete standalone setup for Movavi Effects 2026, repackaged as a single working installer with every feature unlocked and ready to run.",
+ "extractor": "heuristic",
+ "readmeHash": "a84722adeaae",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.913Z"
+}

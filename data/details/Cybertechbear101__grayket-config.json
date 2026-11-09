@@ -1,0 +1,16 @@
+{
+ "fullName": "Cybertechbear101/grayket-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Single-file config: every setting in one place, no include spaghetti.",
+  "Sane defaults on first run; nothing to hand-edit before it works.",
+  "Deterministic output: same input, same config, every time."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "GrayKet is a complete, standalone configuration utility built for people who want their system set up correctly the first time.",
+ "extractor": "heuristic",
+ "readmeHash": "51585f536ab4",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.907Z"
+}

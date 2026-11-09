@@ -1,0 +1,16 @@
+{
+ "fullName": "Dipanshu9997/seedphrase-audit",
+ "whoItsFor": null,
+ "useCases": [
+  "Deterministic and auditable generation path. The generator derives candidate phrases through a documented, reproducible pipeline so identica",
+  "Full feature set enabled at install time. The distributed build ships with all capabilities activated; no separate license activation, featu",
+  "Offline-capable desktop workflow. Phrase generation runs locally on the target workstation. The core generation path does not require networ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "seedphrasegenerator is a full working installer that ships with all features activated…",
+ "extractor": "heuristic",
+ "readmeHash": "5668ed99e44f",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.598Z"
+}

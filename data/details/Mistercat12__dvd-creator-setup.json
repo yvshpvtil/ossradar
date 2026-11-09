@@ -1,0 +1,16 @@
+{
+ "fullName": "Mistercat12/dvd-creator-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Standalone Deployment Package — Delivers a complete, self-contained installation bundle for Windows x64 desktops, eliminating runtime depend",
+  "Pre-Activated Feature Set — All application modules are enabled by default upon installation, removing the need for post-deployment license ",
+  "Offline Installation Support — Engineered for air-gapped and restricted-network environments; the installer requires no active internet conn"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Dvd Creator is a standalone desktop utility for Windows x64 that provides a complete…",
+ "extractor": "heuristic",
+ "readmeHash": "84b16c394f3b",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.204Z"
+}

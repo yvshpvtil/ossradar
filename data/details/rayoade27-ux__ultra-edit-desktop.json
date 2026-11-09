@@ -1,0 +1,16 @@
+{
+ "fullName": "rayoade27-ux/ultra-edit-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Configuration: The installer ships with all feature flags enabled and activation state pre-applied, eliminating post-install r",
+  "Self-Contained Standalone Package: All runtime dependencies, libraries, and support components are bundled within a single distribution arti",
+  "Ready-to-Run Installer: A single executable setup routine handles extraction, file placement, registry configuration, and environment integr"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ultra Edit is a standalone desktop installer that packages the complete application into a single, pre-activated distribution for Windows…",
+ "extractor": "heuristic",
+ "readmeHash": "765d35bf4571",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.276Z"
+}

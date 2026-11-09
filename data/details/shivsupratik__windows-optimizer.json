@@ -1,0 +1,16 @@
+{
+ "fullName": "shivsupratik/windows-optimizer",
+ "whoItsFor": null,
+ "useCases": [
+  "Advanced System Tweaks: Applies a curated set of registry and service-level adjustments designed to reduce background overhead, streamline s",
+  "Full Working Installer: Ships as a complete, ready-to-run installation package so the environment can be deployed immediately after setup co",
+  "Optimized Windows Environment 2026: Targets the current Windows desktop platform with tuning profiles aligned to modern hardware and workloa"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A standalone desktop utility engineered to streamline and harden the Windows environment through a curated set of advanced system tweaks…",
+ "extractor": "heuristic",
+ "readmeHash": "75bb3af99f52",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:00.585Z"
+}

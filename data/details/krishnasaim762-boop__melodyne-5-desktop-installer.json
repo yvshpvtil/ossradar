@@ -1,0 +1,16 @@
+{
+ "fullName": "krishnasaim762-boop/melodyne-5-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Build: All application modules are unlocked and available immediately after installation, with no separate activation or licen",
+  "Standalone Installer: A self-contained desktop package that installs and runs independently, requiring no companion services, background dae",
+  "Complete Feature Set: The build ships with the full professional utility toolchain enabled, including all advanced processing, analysis, and"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Melodyne 5 is a full-featured standalone desktop installer that ships with all functionality pre-activated…",
+ "extractor": "heuristic",
+ "readmeHash": "ca935e4e7bf1",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.957Z"
+}

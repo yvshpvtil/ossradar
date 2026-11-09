@@ -1,0 +1,16 @@
+{
+ "fullName": "karthik105karthik/ifunbox-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build — all components are unlocked and ready to run immediately after setup, with no additional activation steps r",
+  "Complete offline installer — bundles the entire application payload so installation proceeds without network access or external dependency r",
+  "Windows x64 desktop target — tuned specifically for 64-bit Windows environments, with binaries and runtime components matched to that platfo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ifunbox is a standalone desktop application that packages the complete 2026 build into a single pre-activated installer…",
+ "extractor": "heuristic",
+ "readmeHash": "d530eb242467",
+ "version": 1,
+ "generatedAt": "2026-11-09T20:12:01.380Z"
+}
