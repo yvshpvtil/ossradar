@@ -1,0 +1,12 @@
+{
+ "fullName": "helloHub1212/dsh-windows-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Windows desktop automation for DeepSeek Harness — lets the DSH agent see your screen and drive your PC.",
+ "extractor": "heuristic",
+ "readmeHash": "94ce519d0024",
+ "version": 1,
+ "generatedAt": "2026-11-09T03:07:40.464Z"
+}

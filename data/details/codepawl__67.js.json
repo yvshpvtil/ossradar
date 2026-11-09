@@ -1,0 +1,12 @@
+{
+ "fullName": "codepawl/67.js",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install 67js@npm:@codepawlhq/67js",
+ "source": "readme",
+ "readmeSummary": "67js is a WebGL2 renderer with addons for terrain, vegetation, characters, liquid, vehicles and media export.",
+ "extractor": "heuristic",
+ "readmeHash": "395307dbf3d6",
+ "version": 1,
+ "generatedAt": "2026-11-09T03:07:40.466Z"
+}
