@@ -164,6 +164,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Language hub as Markdown: ${SITE.url}/language/{language}.md, e.g. ${SITE.url}/language/python.md (that language's tracked repos ranked by 7-day star gain)
 - By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)
 - Topic hub as Markdown: ${SITE.url}/topic/{topic}.md, e.g. ${SITE.url}/topic/mcp.md (tracked repos with that GitHub topic ranked by 7-day star gain)
+- Hacker News list as Markdown: ${SITE.url}/hacker-news.md (tracked repos posted to Hacker News in the last 30 days, ranked by story points, with comments, post date and star growth)
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name}${dailyPattern}
 
 ## Categories
