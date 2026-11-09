@@ -24,6 +24,13 @@ const nextConfig: NextConfig = {
       ...["/sitemap_index.xml", "/sitemap-index.xml"].map((source) => ({ source, destination: "/sitemap.xml", permanent: true })),
       // Older PWA tooling and favicon crawlers probe /manifest.json; the manifest is /manifest.webmanifest.
       { source: "/manifest.json", destination: "/manifest.webmanifest", permanent: true },
+      // URL-trimming visitors and crawlers hit the bare parents of our routes, which 404ed: plural hub
+      // names, /repo (repo pages live at /repo/owner/name; the leaderboard is the index of them) and the
+      // API roots (agents probing /api/v1 want the OpenAPI spec; people at /api want the docs).
+      ...(["category", "topic", "language"] as const).map((hub) => ({ source: `/${hub === "category" ? "categories" : `${hub}s`}`, destination: `/${hub}`, permanent: true })),
+      { source: "/repo", destination: "/", permanent: true },
+      { source: "/api/v1", destination: "/api/v1/openapi.json", permanent: true },
+      { source: "/api", destination: "/about#api", permanent: true },
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
       // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
