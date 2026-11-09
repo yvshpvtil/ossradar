@@ -176,7 +176,7 @@ export async function generateMetadata({ params }: PageProps<"/repo/[owner]/[nam
     // Advertise the repo's JSON twin so agents that read <link rel="alternate"> get structured numbers.
     alternates: {
       ...pageAlternates(url),
-      types: { ...RSS_ALTERNATE, "application/json": [{ url: `/api/v1/repo/${repo.owner}/${repo.name}`, title: `${repo.fullName} data (JSON)` }] },
+      types: { ...RSS_ALTERNATE, "application/json": [{ url: `/api/v1/repo/${repo.owner}/${repo.name}`, title: `${repo.fullName} data (JSON)` }], "text/markdown": [{ url: `/repo/${repo.owner}/${repo.name}.md`, title: `${repo.fullName} (Markdown)` }] },
     },
     ...(isThinRepo(repo) ? { robots: { index: false, follow: true } } : {}),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: "article", title: socialTitle, description, url },

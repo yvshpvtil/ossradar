@@ -131,6 +131,14 @@ export function proxy(req: NextRequest) {
 
   if (section === "repo") {
     if (parts.length < 3) return notFound();
+    // Markdown twin for chatbots and agents: /repo/{owner}/{name}.md (canonical casing enforced).
+    if (parts.length === 3 && raw[0] === "repo" && /\.md$/i.test(parts[2])) {
+      const md = getRepo(parts[1], parts[2].slice(0, -3));
+      if (!md) return notFound();
+      const want = `/repo/${md.owner}/${md.name}.md`;
+      if (`/${raw.join("/")}` !== want) return redirectTo(want);
+      return NextResponse.rewrite(new URL(`/md/repo/${md.owner}/${md.name}`, req.url));
+    }
     const repo = getRepo(parts[1], parts[2]);
     if (!repo) return parts.length === 3 && RETIRED.has(`${parts[1]}/${parts[2]}`.toLowerCase()) ? gone(`${parts[1]}/${parts[2]}`) : notFound();
     const canonical = `/repo/${repo.owner}/${repo.name}`;
