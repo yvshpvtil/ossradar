@@ -1,0 +1,12 @@
+{
+ "fullName": "TyphoonFlame/slideshow-video-maker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "54c5b09f6624",
+ "version": 1,
+ "generatedAt": "2026-11-09T11:16:34.484Z"
+}
