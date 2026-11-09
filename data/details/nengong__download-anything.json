@@ -1,0 +1,12 @@
+{
+ "fullName": "nengong/download-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install -e '.[dev]'",
+ "source": "readme",
+ "readmeSummary": "视频、图片、播客、文章、论文、电子书、网盘文件或安装包：把链接、标识符或 App 分享口令交给它，就能下载内容并整理配套资料。",
+ "extractor": "heuristic",
+ "readmeHash": "d8b0caf32783",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:02:58.866Z"
+}
