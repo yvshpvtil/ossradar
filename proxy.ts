@@ -147,6 +147,13 @@ export function proxy(req: NextRequest) {
     // The card moved to /opengraph-image/card (per-repo alt text via generateImageMetadata);
     // previews cached with the old card URL follow it instead of breaking.
     if (parts.length === 4 && parts[3] === "opengraph-image") return redirectTo(`${canonical}/opengraph-image/card`);
+  } else if (section === "alternatives" && parts.length === 3 && /\.md$/i.test(parts[2])) {
+    // Markdown twin for chatbots and agents: /alternatives/{owner}/{name}.md (canonical casing enforced).
+    const md = getRepo(parts[1], parts[2].slice(0, -3));
+    if (!md || !hasAlternativesPage(md)) return notFound();
+    const want = `/alternatives/${md.owner}/${md.name}.md`;
+    if (`/${raw.join("/")}` !== want) return redirectTo(want);
+    return NextResponse.rewrite(new URL(`/md/alternatives/${md.owner}/${md.name}`, req.url));
   } else if (section === "alternatives" && parts.length > 1) {
     // Bare /alternatives is the index page; only owner/name paths are checked.
     // Owner/name, plus that page's Open Graph card route.

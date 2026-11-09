@@ -172,6 +172,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 5. **One day:** \`${SITE.url}/daily/{YYYY-MM-DD}.md\` (that UTC day's top 25 gainers as Markdown; HTML at \`${SITE.url}/daily/{YYYY-MM-DD}\`).
 6. **One category:** \`${SITE.url}/category/{slug}.md\` (that category's tracked repos ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/category\`).
 7. **Trending views:** \`${SITE.url}/trending/{slug}.md\` (the top 50 of each trending view as Markdown: \`ai-repos-this-week\`, \`github-repos-today\`, \`new-ai-repos\`; HTML without the .md).
+8. **Alternatives:** \`${SITE.url}/alternatives/{owner}/{name}.md\` (open-source alternatives to one repo, ranked by shared GitHub topics, as Markdown; repos with a page are listed at \`${SITE.url}/alternatives\`; HTML without the .md).
 
 ## Methodology
 
