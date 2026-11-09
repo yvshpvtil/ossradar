@@ -1,0 +1,16 @@
+{
+ "fullName": "xebhjb-blip/claude-desktop-toolkit-full",
+ "whoItsFor": null,
+ "useCases": [
+  "Everything ships in the installer. No staged downloads, no second trip to a package manager, no \"activation\" step afterward. Launch it and t",
+  "Pre-activated out of the box. The build arrives unlocked and ready to run. Skip the license dance and get straight to the prompt work.",
+  "Fully local, offline-capable. Every component is bundled. Once installed, the toolset runs without a network connection — no remote calls re"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This is the complete pre-activated desktop edition of Claude AI local tools, packaged so the installer carries everything you need in one…",
+ "extractor": "heuristic",
+ "readmeHash": "1f5f597fb5f4",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.389Z"
+}

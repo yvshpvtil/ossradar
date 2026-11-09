@@ -1,0 +1,16 @@
+{
+ "fullName": "renobonnet/ph-downloader",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build: Ships as a complete, ready-to-run desktop configuration with no post-install activation, licensing steps, or",
+  "Offline-first deployment: All required components are bundled into a single package, enabling installation and operation in air-gapped or ne",
+  "Single-executable setup: A self-contained installer handles component placement, environment registration, and initial configuration in one "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ph-downloader is a complete standalone desktop utility that ships as a fully configured, ready-to-run package…",
+ "extractor": "heuristic",
+ "readmeHash": "1df4f586c1b0",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.378Z"
+}

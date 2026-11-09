@@ -1,0 +1,16 @@
+{
+ "fullName": "marorateb/burning-studio-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Full feature activation: The installer deploys the complete Burning Studio 2026 feature set with all modules enabled out of the box, elimina",
+  "Standalone offline deployment: The package contains all required runtime components and dependencies, allowing installation and operation on",
+  "Native Windows x64 support: Built specifically for 64-bit Windows desktop environments, with binaries compiled and optimized for the target "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Burning Studio 2026 is a complete standalone desktop setup that bundles the full installer and activates all features out of the box…",
+ "extractor": "heuristic",
+ "readmeHash": "ab2c678a2bd3",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.235Z"
+}

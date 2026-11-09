@@ -1,0 +1,16 @@
+{
+ "fullName": "robertsjunior/fonetrans-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Device-to-Device Transfer Engine: Moves contacts, call logs, messages, photos, videos, music, and documents between iOS and Android devices ",
+  "Selective Migration: Granular content selection allows per-category and per-item transfer, so migrations can be scoped to specific datasets ",
+  "Backup and Restore: Creates complete or incremental local backups of device content and restores them to the same or a replacement device, p"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "FoneTrans is a professional desktop utility for Windows x64 that provides a complete, ready-to-run standalone configuration for local…",
+ "extractor": "heuristic",
+ "readmeHash": "b19e025df173",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.385Z"
+}

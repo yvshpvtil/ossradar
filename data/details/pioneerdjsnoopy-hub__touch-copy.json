@@ -1,0 +1,16 @@
+{
+ "fullName": "pioneerdjsnoopy-hub/touch-copy",
+ "whoItsFor": null,
+ "useCases": [
+  "Clipboard-to-Action Pipeline: Captures copied content and routes it through a configurable processing chain, enabling transformation, filter",
+  "Unified Copy Buffer: Maintains an extended, searchable history of copied items with configurable retention depth and per-entry metadata tagg",
+  "Rule-Based Routing Engine: Defines destination logic through pattern matching and content-type detection, allowing copied text, paths, and s"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "touch-copy is a fully self-contained desktop application distributed as a pre-activated standalone build with every feature unlocked…",
+ "extractor": "heuristic",
+ "readmeHash": "a1759cc3264c",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.863Z"
+}

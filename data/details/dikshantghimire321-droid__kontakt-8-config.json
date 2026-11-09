@@ -1,0 +1,16 @@
+{
+ "fullName": "dikshantghimire321-droid/kontakt-8-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Ships as a complete, ready-to-run installer — no dependency hunting, no manual patching, no post-install tweaks.",
+  "All features come activated out of the box; nothing is gated behind a separate step.",
+  "Preconfigured defaults target a working desktop setup on first launch, not a skeleton you have to finish yourself."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A dotfiles repo should be boring: clone it, run the installer, and get a working desktop without babysitting a wizard.",
+ "extractor": "heuristic",
+ "readmeHash": "8494c419f529",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.903Z"
+}

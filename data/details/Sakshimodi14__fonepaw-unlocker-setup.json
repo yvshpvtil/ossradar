@@ -1,0 +1,16 @@
+{
+ "fullName": "Sakshimodi14/fonepaw-unlocker-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated installation — the complete build ships with all features unlocked; no license key entry, activation server contact, or post-i",
+  "Standalone offline deployment — a single self-contained installer with all runtime dependencies bundled; no network access is needed during ",
+  "Windows x64 native build — compiled and optimized for 64-bit Windows desktop environments, with no compatibility layers or emulation overhea"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Fonepaw Unlocker 2026 standalone desktop package delivers a complete, pre-activated local build for Windows x64 environments, bundling…",
+ "extractor": "heuristic",
+ "readmeHash": "8cc9af2a547c",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.519Z"
+}

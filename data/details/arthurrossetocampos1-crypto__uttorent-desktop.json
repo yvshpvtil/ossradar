@@ -1,0 +1,16 @@
+{
+ "fullName": "arthurrossetocampos1-crypto/uttorent-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Torrent Session Management: Handles multiple concurrent torrent sessions within a single desktop process, with per-session queue iso",
+  "Magnet and Metadata Resolution: Accepts magnet identifiers and resolves swarm metadata through an integrated peer-discovery layer, with supp",
+  "Selective Content Retrieval: Supports priority-based file selection within multi-file torrents, allowing individual files to be marked for d"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Uttorent is a standalone desktop installer that delivers a complete torrent management environment for Windows x64 systems.",
+ "extractor": "heuristic",
+ "readmeHash": "bda5ce1dd8f8",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.614Z"
+}

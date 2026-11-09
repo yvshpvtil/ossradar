@@ -1,0 +1,16 @@
+{
+ "fullName": "marcoscarrillo26/audio-workbench-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-Track Editing Environment: Supports an unlimited number of audio tracks with non-destructive editing, enabling complex session assembl",
+  "Spectral Frequency Display: Renders audio in a high-resolution spectral view for precise visual analysis and targeted repair of frequency-sp",
+  "Diagnostic Restoration Suite: Includes dedicated modules for noise reduction, click and pop removal, clipping repair, and adaptive hum elimi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Advanced Audio Workbench 2023 standalone setup delivers a complete, pre-activated desktop edition engineered for professional audio…",
+ "extractor": "heuristic",
+ "readmeHash": "e7433193946a",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.093Z"
+}

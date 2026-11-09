@@ -1,0 +1,16 @@
+{
+ "fullName": "DiddalaMadhavi/tenorshare-key-recovery-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Product Key Recovery Engine: Scans local storage locations, registry hives, and application configuration files to locate and reconstruct lo",
+  "Offline-First Operation: Runs entirely on the local desktop without requiring network connectivity during recovery, key management, or expor",
+  "Pre-Activated Build: Delivered as a self-contained installer that requires no separate activation step. Component integrity is verified at i"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Tenorshare 4uKey is a standalone Windows desktop application designed for the recovery and management of lost or inaccessible product keys.",
+ "extractor": "heuristic",
+ "readmeHash": "5be8a64d243e",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.716Z"
+}

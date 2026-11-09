@@ -1,0 +1,16 @@
+{
+ "fullName": "nabilaolivia2104-commits/adobe-indesign-deployment-pipeline",
+ "whoItsFor": null,
+ "useCases": [
+  "Hardened Deployment Pipeline: Assets are staged, validated, and distributed through a security-first pipeline that enforces integrity checks",
+  "Enhanced Security Protocols: Built-in cryptographic verification, signed manifest validation, and tamper detection guard the installation pa",
+  "Ready-to-Run Desktop Build: Ships as a self-contained installation bundle with all runtime dependencies resolved, enabling offline deploymen"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Adobe-InDesign is a secure digital asset deployment pipeline that implements enhanced security protocols to protect assets throughout…",
+ "extractor": "heuristic",
+ "readmeHash": "66e2db35c81c",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.025Z"
+}

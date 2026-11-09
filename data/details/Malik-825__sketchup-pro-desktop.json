@@ -1,0 +1,16 @@
+{
+ "fullName": "Malik-825/sketchup-pro-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone desktop installation with the full feature set pre-activated at deployment time; no separate license entry or online act",
+  "Fully local operation: the application runs entirely on the workstation, with no dependency on a remote licensing service or background acco",
+  "Ready-to-run configuration that preserves standard desktop workflows, including native file handling, project save/load, and the complete mo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Sketchup Pro 2026 is a complete standalone desktop installation that delivers the full feature set in a ready-to-run package…",
+ "extractor": "heuristic",
+ "readmeHash": "13cb7413ac25",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.414Z"
+}

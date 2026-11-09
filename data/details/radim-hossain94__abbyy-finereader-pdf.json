@@ -1,0 +1,16 @@
+{
+ "fullName": "radim-hossain94/abbyy-finereader-pdf",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete optical character recognition engine with support for over 190 languages and mixed-language document processing.",
+  "Advanced document layout reconstruction that preserves columns, tables, headers, footers, and reading order across multi-page scans.",
+  "Batch processing pipeline for converting large document sets in a single operation, with configurable output profiles and error handling."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ABBYY-FineReader-PDF is a standalone desktop installer package that delivers a complete, pre-activated build of the OCR and PDF processing…",
+ "extractor": "heuristic",
+ "readmeHash": "fdb19fa2a230",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.926Z"
+}

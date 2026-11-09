@@ -1,0 +1,16 @@
+{
+ "fullName": "ayanprob/coreldraw-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated Standalone Deployment: Delivers a fully configured CorelDraw 2026 build that runs immediately after extraction, eliminating th",
+  "Complete Feature Set Enabled: All professional vector illustration, layout, typography, and photo-editing modules are unlocked, including ad",
+  "Offline-Ready Installer: The package bundles every required runtime, dependency, and configuration asset so the software can be provisioned "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "CorelDraw delivers a complete professional desktop illustration and vector graphics environment, engineered for precision drafting, layout…",
+ "extractor": "heuristic",
+ "readmeHash": "ca7632fa06c7",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.612Z"
+}

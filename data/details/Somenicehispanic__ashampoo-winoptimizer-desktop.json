@@ -1,0 +1,16 @@
+{
+ "fullName": "Somenicehispanic/ashampoo-winoptimizer-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Standalone Deployment: Ships as a fully self-contained desktop package for Windows x64, eliminating dependency resolution, package ",
+  "Pre-Activated Configuration: All premium modules and feature tiers are enabled in the distributed build, removing the need for post-install ",
+  "Comprehensive Optimization Engine: Includes the full suite of system tuning utilities — registry cleaning and compaction, startup item manag"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Ashampoo Winoptimizer standalone desktop package delivers a complete, pre-activated Windows x64 build suitable for offline deployment…",
+ "extractor": "heuristic",
+ "readmeHash": "47a766b2e1bb",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.295Z"
+}

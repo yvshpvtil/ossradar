@@ -1,0 +1,16 @@
+{
+ "fullName": "SK-Dev666/rust-external-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Full standalone package — every tool and dependency ships in one bundle. No fetching extra runtimes or chasing missing libraries mid-setup. ",
+  "Ready to run out of the box — the complete configuration is baked in. No post-install tinkering, no manual wiring, no config files to edit b",
+  "External architecture — the tool operates outside the game process, keeping the footprint light and the workflow clean."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Rust External 2026 ships as a complete standalone installer built for Windows x64 desktop…",
+ "extractor": "heuristic",
+ "readmeHash": "641abb1fd1a0",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.369Z"
+}

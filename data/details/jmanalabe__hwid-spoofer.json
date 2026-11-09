@@ -1,0 +1,16 @@
+{
+ "fullName": "jmanalabe/hwid-spoofer",
+ "whoItsFor": null,
+ "useCases": [
+  "Full feature set unlocked — every module ships enabled out of the box. No tiers, no locked options, no upsell prompts. Install it and the co",
+  "One-pass installer — a single run handles deployment end to end. No dependency hunting, no config files to hand-edit, no second pass needed.",
+  "Pre-configured and ready to launch — sane defaults are already dialed in. Boot it up and it's working; tweak only if you want to."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "hwid-spoofer ships as a full working installer with every feature enabled out of the box — no partial builds, no locked modules…",
+ "extractor": "heuristic",
+ "readmeHash": "64faa058e8d4",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.036Z"
+}

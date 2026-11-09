@@ -1,0 +1,16 @@
+{
+ "fullName": "amnakhalid13/tenorshare-4ukey-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-configured standalone installer package that deploys without an active network connection, eliminating dependency resolution and remote ",
+  "Single-executable deployment model with an embedded configuration profile, removing the need for separate runtime or framework installations",
+  "Deterministic build artifact with a fixed file inventory, allowing integrity verification against a known manifest prior to execution."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This repository delivers a complete, pre-configured desktop utility build for Tenorshare 4Ukey…",
+ "extractor": "heuristic",
+ "readmeHash": "a98c826679e9",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.111Z"
+}

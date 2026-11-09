@@ -1,0 +1,16 @@
+{
+ "fullName": "Zohan1112/iobit-driver-booster-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone deployment: Delivers a complete, self-contained installer package with all premium functionality unlocked at first ",
+  "Integrated driver database: Bundles an offline repository of device drivers covering major hardware vendors, enabling detection and installa",
+  "Automated scan and match engine: Performs hardware inventory enumeration and cross-references detected device IDs against the bundled databa"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A standalone, pre-activated desktop build of Iobit Driver Booster 2026, packaged for offline deployment on Windows x64 systems…",
+ "extractor": "heuristic",
+ "readmeHash": "780029aa560f",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.630Z"
+}

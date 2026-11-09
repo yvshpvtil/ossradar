@@ -1,0 +1,16 @@
+{
+ "fullName": "thiagoaureliomartins-programador/chief-architect-premier",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Standalone Build: Ships in a fully activated state with all modules unlocked, eliminating the need for license entry, runtime ",
+  "Complete Feature Set Enabled: Every modeling, drafting, and visualization capability is available out of the box — no tiered restrictions, t",
+  "Fully Offline Operation: The installer and application run entirely without an internet connection; no telemetry loops, background activatio"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Chief Architect Premier 2026 is a pre-activated standalone desktop edition for Windows x64 that packages the complete application…",
+ "extractor": "heuristic",
+ "readmeHash": "34d33f5f7254",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:06.173Z"
+}

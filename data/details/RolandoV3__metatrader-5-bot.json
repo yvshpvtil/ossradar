@@ -1,0 +1,16 @@
+{
+ "fullName": "RolandoV3/metatrader-5-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully activated on day one. Every module, panel, and automation routine is enabled by default in this standalone desktop build, so you can g",
+  "One installer, complete package. The distribution bundles the entire feature set into a single build for Windows x64 desktops — no partial i",
+  "Everything local and offline-ready. Runs entirely on your machine with no mandatory cloud dependency, which keeps your configurations privat"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This bot is built for traders who want a fully working MetaTrader 5 setup without the usual hassle—everything comes pre-activated and ready…",
+ "extractor": "heuristic",
+ "readmeHash": "ba6b88e3bead",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.083Z"
+}

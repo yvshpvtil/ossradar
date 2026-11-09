@@ -1,0 +1,16 @@
+{
+ "fullName": "youssefjeries3-creator/marvel-rivals-enhancement-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Full Feature Unlock, Zero Grind: Every hero, skin, and progression track is enabled out of the gate. No paywalls, no unlock timers, no artif",
+  "One-Shot Installer, No Dependency Hunting: The package ships as a self-contained installer. No runtime chasing, no library hunting, no versi",
+  "Pre-Configured for Instant Play: Sensitivity curves, graphics presets, and input bindings are already dialed in for competitive play. Boot i"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The marvel-rivals-trainer-tool is a standalone desktop build with every feature unlocked out of the box, no configuration grind required.",
+ "extractor": "heuristic",
+ "readmeHash": "420d40839945",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.668Z"
+}

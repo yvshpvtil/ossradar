@@ -1,0 +1,16 @@
+{
+ "fullName": "janitoff0/ninjatrader-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated and ready to go — every feature ships unlocked from the first launch, so there's no license hunting, no activation dance, and ",
+  "Standalone desktop build — a complete, self-contained package that runs on its own. No dependency chains, no background services to babysit,",
+  "All features pre-configured — the full feature set is wired up and waiting out of the box. Strategy modules, automation hooks, and quality-o"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This bot is built for traders who want a solid, no-nonsense companion for NinjaTrader—one that just works, right out of the box.",
+ "extractor": "heuristic",
+ "readmeHash": "f3420237751c",
+ "version": 1,
+ "generatedAt": "2026-11-09T21:11:05.347Z"
+}
