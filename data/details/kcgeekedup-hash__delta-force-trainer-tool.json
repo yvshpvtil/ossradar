@@ -1,0 +1,16 @@
+{
+ "fullName": "kcgeekedup-hash/delta-force-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete drop-in toolset — every module, preset, and config ships in one package, so there's no hunting down dependencies or patching pieces",
+  "Instant loadout profiles — save and swap full configurations between matches; your tuning sticks the moment the match starts.",
+  "Live overlay controls — adjust active modules on the fly without alt-tabbing out of the action."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Delta Force players know the difference between a stock setup and a loadout that actually performs.",
+ "extractor": "heuristic",
+ "readmeHash": "81af4e25d4ec",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.373Z"
+}

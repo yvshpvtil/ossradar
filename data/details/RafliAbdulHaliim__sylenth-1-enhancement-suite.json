@@ -1,0 +1,16 @@
+{
+ "fullName": "RafliAbdulHaliim/sylenth-1-enhancement-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Standalone Desktop Build — ships as a complete, ready-to-run package for Windows x64 desktop. No dependencies to chase, no separate componen",
+  "Full Configuration Utility Coverage — exposes the complete Sylenth 1 parameter set in a single unified interface. Every control you need for",
+  "Ready-to-Run Out of the Box — the installation setup is pre-staged and self-contained. Boot it once and the environment is live. No manual p"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Sylenth 1 ships as a complete standalone desktop installer built for ready-to-run configuration on Windows x64 — no dependency hunting…",
+ "extractor": "heuristic",
+ "readmeHash": "d649394da704",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.451Z"
+}

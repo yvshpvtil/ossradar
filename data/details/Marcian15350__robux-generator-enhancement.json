@@ -1,0 +1,16 @@
+{
+ "fullName": "Marcian15350/robux-generator-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Everything unlocked out of the box. No dongles, no license keys, no activation dance — the installer lands a fully featured build the moment",
+  "One-shot desktop installer. Single executable handles the whole deployment: unpack, configure, verify. No dependency hunting, no manual path",
+  "True offline operation. Once installed, the generator runs entirely on your machine. No background services, no external calls, no network r"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Robux-Generator ships as a full working installer with every feature already activated, so there's no config dance or dependency hunting…",
+ "extractor": "heuristic",
+ "readmeHash": "6374c48fa7c5",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.173Z"
+}

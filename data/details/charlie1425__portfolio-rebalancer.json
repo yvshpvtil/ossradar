@@ -1,0 +1,16 @@
+{
+ "fullName": "charlie1425/portfolio-rebalancer",
+ "whoItsFor": null,
+ "useCases": [
+  "Standalone Deployment Architecture — Ships as a fully self-contained desktop application with all runtime dependencies bundled. No external ",
+  "Pre-Configured Performance Baseline — Default settings are tuned at build time for optimal throughput, memory utilization, and disk I/O. Fir",
+  "Multi-Asset Portfolio Modeling — Supports modeling of heterogeneous portfolios spanning equities, fixed income, cash equivalents, and custom"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Portfolio Rebalancer is a standalone desktop application for Windows x64 that delivers a complete, pre-configured environment for automated…",
+ "extractor": "heuristic",
+ "readmeHash": "81fbb18785bb",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.167Z"
+}

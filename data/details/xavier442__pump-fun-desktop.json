@@ -1,0 +1,16 @@
+{
+ "fullName": "xavier442/pump-fun-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Configuration: All feature modules ship enabled and licensed at build time, eliminating post-install activation steps or exter",
+  "Standalone Runtime: Self-contained deployment with bundled dependencies; no system-level framework prerequisites or shared library resolutio",
+  "Windows x64 Native Build: Compiled and optimized for 64-bit Windows desktop environments, with support for current Windows release channels."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The pump-fun desktop utility delivers a complete, self-contained configuration for Pump Fun 2026…",
+ "extractor": "heuristic",
+ "readmeHash": "15fe842210ce",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.169Z"
+}

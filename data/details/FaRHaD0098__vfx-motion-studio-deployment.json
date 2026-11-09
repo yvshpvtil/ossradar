@@ -1,0 +1,16 @@
+{
+ "fullName": "FaRHaD0098/vfx-motion-studio-deployment",
+ "whoItsFor": null,
+ "useCases": [
+  "Deterministic asset deployment pipeline: content-addressed packaging, integrity verification, and atomic rollback of VFX asset bundles acros",
+  "Pre-configured desktop installation build for VFX Motion Studio 2026, supporting silent and attended installation modes with reproducible de",
+  "Secure local asset staging: encrypted bundle transport, checksum validation on ingest, and least-privilege cache directories for project med"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This desktop build delivers a secure, pre-packaged digital asset deployment pipeline for VFX Motion Studio 2026, targeting Windows x64…",
+ "extractor": "heuristic",
+ "readmeHash": "5a7c48d90f10",
+ "version": 1,
+ "generatedAt": "2026-11-09T23:56:34.163Z"
+}
