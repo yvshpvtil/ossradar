@@ -1,0 +1,12 @@
+{
+ "fullName": "TIGER-AI-Lab/WebsiteBench",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install websitebench",
+ "source": "readme",
+ "readmeSummary": "Quickstart · Tasks · Run in the cloud · Docs · PyPI · Citation",
+ "extractor": "heuristic",
+ "readmeHash": "d8828817d1d1",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.750Z"
+}

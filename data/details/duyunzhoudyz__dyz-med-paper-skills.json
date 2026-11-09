@@ -1,0 +1,12 @@
+{
+ "fullName": "duyunzhoudyz/dyz-med-paper-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DYZ MedPaper 是一套围绕中国医生与医学研究生科研场景设计的 AI 论文工作流。从科室现有病例和毕业课题出发，用中文梳理研究问题、讨论统计结果，衔接中英文文献与稿件写作，再把导师意见和审稿要求落实到具体修改，帮你把手头材料推进成能讨论、能修改的论文稿。",
+ "extractor": "heuristic",
+ "readmeHash": "cb9490096335",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.733Z"
+}

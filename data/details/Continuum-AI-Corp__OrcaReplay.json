@@ -1,0 +1,12 @@
+{
+ "fullName": "Continuum-AI-Corp/OrcaReplay",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g orcareplay             # the package is orcareplay; the command it installs is orca",
+ "source": "readme",
+ "readmeSummary": "Record any coding agent. Reproduce the run byte-for-byte with no model called.",
+ "extractor": "heuristic",
+ "readmeHash": "decadaf49d87",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.803Z"
+}

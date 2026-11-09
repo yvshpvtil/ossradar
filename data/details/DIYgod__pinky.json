@@ -1,0 +1,12 @@
+{
+ "fullName": "DIYgod/pinky",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Pinky lets any agent (Claude Code, Claude Desktop, Codex, Cursor or a script) operate a real iPhone or Android phone over MCP, while you…",
+ "extractor": "heuristic",
+ "readmeHash": "a772f07ce79e",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.498Z"
+}

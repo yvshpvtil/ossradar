@@ -1,0 +1,12 @@
+{
+ "fullName": "dhruvthakur11/youtube-ai-video-editing-system",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This system treats a video as a visual conversation between script and screen: an Eyeline teleprompter follows your voice as you record…",
+ "extractor": "heuristic",
+ "readmeHash": "fb00b680362f",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.414Z"
+}

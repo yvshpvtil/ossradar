@@ -1,0 +1,12 @@
+{
+ "fullName": "bnlqn/overlook",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "One page that tells you whether your homelab is fine.",
+ "extractor": "heuristic",
+ "readmeHash": "ff06a40e9fde",
+ "version": 1,
+ "generatedAt": "2026-11-09T01:32:31.696Z"
+}
