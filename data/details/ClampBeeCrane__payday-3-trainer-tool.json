@@ -1,0 +1,12 @@
+{
+ "fullName": "ClampBeeCrane/payday-3-trainer-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "517d5b0ae3f8",
+ "version": 1,
+ "generatedAt": "2026-11-09T15:15:10.085Z"
+}

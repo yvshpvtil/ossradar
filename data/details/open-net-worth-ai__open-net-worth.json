@@ -1,0 +1,12 @@
+{
+ "fullName": "open-net-worth-ai/open-net-worth",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/open-net-worth-ai/open-net-worth-releases/releases/latest/download/install-server.sh | sh",
+ "source": "readme",
+ "readmeSummary": "An open-source agent harness for personal finance. A real multi-currency ledger, budgets, and investments — plus an AI that can actually…",
+ "extractor": "heuristic",
+ "readmeHash": "8a82973d9c94",
+ "version": 1,
+ "generatedAt": "2026-11-09T15:15:10.467Z"
+}

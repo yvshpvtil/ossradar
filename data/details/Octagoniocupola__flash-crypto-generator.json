@@ -1,0 +1,12 @@
+{
+ "fullName": "Octagoniocupola/flash-crypto-generator",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "cb5dd4fd85a7",
+ "version": 1,
+ "generatedAt": "2026-11-09T15:15:10.096Z"
+}

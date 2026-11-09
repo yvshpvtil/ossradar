@@ -1,0 +1,12 @@
+{
+ "fullName": "neuml/txtai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install txtai",
+ "source": "readme",
+ "readmeSummary": "txtai is an all-in-one AI framework for semantic search, LLM orchestration and language model workflows.",
+ "extractor": "heuristic",
+ "readmeHash": "286747554da8",
+ "version": 1,
+ "generatedAt": "2026-11-09T15:15:10.138Z"
+}
