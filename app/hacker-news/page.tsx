@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, repoPath, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, repoPath, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -43,7 +43,7 @@ export function generateMetadata(): Metadata {
   const title = TITLE;
   const socialTitle = `GitHub repos trending on Hacker News: ${n} open-source projects this month`;
   const description = hnSnippet(n);
-  return { title, description, alternates: pageAlternates("/hacker-news"), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/hacker-news" }, twitter: { card: "summary_large_image", title: socialTitle, description } };
+  return { title, description, alternates: pageAlternates("/hacker-news"), openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/hacker-news" }, twitter: { ...twitterDefaults, title: socialTitle, description } };
 }
 
 export default function HackerNewsPage() {

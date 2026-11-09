@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -36,7 +36,7 @@ export function generateMetadata(): Metadata {
     description: d,
     alternates: pageAlternates("/daily"),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description: d, url: "/daily" },
-    twitter: { card: "summary_large_image", title: socialTitle, description: d },
+    twitter: { ...twitterDefaults, title: socialTitle, description: d },
   };
 }
 

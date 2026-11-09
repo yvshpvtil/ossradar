@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { EngagementTracker } from "@/components/EngagementTracker";
 import { JsonLd } from "@/components/JsonLd";
-import { RSS_ALTERNATE, websiteLd } from "@/lib/seo";
+import { RSS_ALTERNATE, websiteLd, twitterDefaults } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SponsorSlot } from "@/components/SponsorSlot";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
-  twitter: { card: "summary_large_image", title: `${SITE.name}: fastest-rising open-source AI & dev tools`, description: `${SITE.ossExplainer} ${SITE.tagline}` },
+  twitter: { ...twitterDefaults, title: `${SITE.name}: fastest-rising open-source AI & dev tools`, description: `${SITE.ossExplainer} ${SITE.tagline}` },
 };
 
 export const viewport: Viewport = {

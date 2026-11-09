@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { getRepos } from "@/lib/data";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description,
   alternates: pageAlternates("/submit"),
   openGraph: { ...ogDefaults, title, description, url: "/submit" },
-  twitter: { card: "summary_large_image", title, description, ...twitterImage },
+  twitter: { ...twitterDefaults, title, description, ...twitterImage },
 };
 
 export default function SubmitPage() {

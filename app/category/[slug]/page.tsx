@@ -14,7 +14,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, twitterDefaults } from "@/lib/seo";
 import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
     description,
     alternates: pageAlternates(`/category/${slug}`),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/category/${slug}` },
-    twitter: { card: "summary_large_image", title: socialTitle, description },
+    twitter: { ...twitterDefaults, title: socialTitle, description },
   };
 }
 

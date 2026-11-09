@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, datasetLd, staticPageLd, ogDefaults, twitterImage, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, datasetLd, staticPageLd, ogDefaults, twitterImage, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description,
   alternates: pageAlternates("/about"),
   openGraph: { ...ogDefaults, title, description, url: "/about" },
-  twitter: { card: "summary_large_image", title, description, ...twitterImage },
+  twitter: { ...twitterDefaults, title, description, ...twitterImage },
 };
 
 function FaqAnswer({ q, a }: { q: string; a: string }) {

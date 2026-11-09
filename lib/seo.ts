@@ -203,7 +203,7 @@ export const websiteLd = {
     // public/icon-512.png (512x512, also the manifest icon): Google wants a crawlable square logo of
     // at least 112x112, and a larger source keeps it sharp wherever it is shown.
     logo: { "@type": "ImageObject", url: abs("/icon-512.png"), width: 512, height: 512 },
-    founder: { "@type": "Person", name: SITE.owner, url: SITE.github },
+    founder: { "@type": "Person", name: SITE.owner, url: SITE.github, sameAs: [SITE.github, SITE.x] },
   },
 };
 
@@ -262,6 +262,9 @@ export const SITE_OG_IMAGE = {
 export const ogDefaults = { siteName: SITE.name, locale: "en_US", type: "website" as const, images: [SITE_OG_IMAGE] };
 // Full image object (not just the URL) so twitter:image:alt, width, height and type are emitted too.
 export const twitterImage = { images: [SITE_OG_IMAGE] };
+// Spread into every page's `twitter` metadata (Next replaces the whole object per page, so the layout
+// default alone would be lost): large card plus twitter:creator attribution to the owner's X account.
+export const twitterDefaults = { card: "summary_large_image" as const, creator: SITE.xHandle };
 
 /**
  * Hub meta descriptions: a fixed lead sentence plus the hub's current weekly leader, so the

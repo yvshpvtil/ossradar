@@ -6,7 +6,7 @@ import { PageNav } from "@/components/PageNav";
 import { altLabel, alternativesPath, getAlternatives, getAlternativesRepos } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every alternatives page, grouped by category. Before this, each
@@ -44,7 +44,7 @@ export function generateMetadata(): Metadata {
     description,
     alternates: pageAlternates("/alternatives"),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/alternatives" },
-    twitter: { card: "summary_large_image", title: socialTitle, description },
+    twitter: { ...twitterDefaults, title: socialTitle, description },
   };
 }
 

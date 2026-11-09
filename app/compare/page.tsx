@@ -1,5 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
-import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates } from "@/lib/seo";
+import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -39,7 +39,7 @@ export function generateMetadata(): Metadata {
     description: d,
     alternates: pageAlternates("/compare"),
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description: d, url: "/compare" },
-    twitter: { card: "summary_large_image", title, description: d },
+    twitter: { ...twitterDefaults, title, description: d },
   };
 }
 

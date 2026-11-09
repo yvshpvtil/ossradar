@@ -10,6 +10,9 @@ export const SITE = {
     "The fastest-rising open-source AI and dev-tool repos on GitHub, ranked by stars gained in 24 hours and 7 days. Updated hourly, with a one-line take on each.",
   owner: "Yash Patil",
   github: "https://github.com/yvshpvtil",
+  /** Owner's X account (renamed from @yvshpvtil on 2026-10-29; same account id). */
+  x: "https://x.com/Yashpatil",
+  xHandle: "@Yashpatil",
   sponsorPaymentUrl: "https://pages.razorpay.com/ossradar-sponsorship",
   sponsorEmail: "hello@ossradar.net",
 };
