@@ -14,7 +14,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { CategoryChips } from "@/components/CategoryChips";
 import { getNewRepos } from "@/lib/newRepos";
 import { formatNumber } from "@/lib/format";
-import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, clip, collectionPageLd, hubDescription, itemListLd, pageAlternates, ogDefaults, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { altLabel, ldRepoName } from "@/lib/alternatives";
 import { hubLeaderProps } from "@/lib/leader";
 import { relatedTopics } from "@/lib/topics";
@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   return {
     title,
     description,
-    alternates: pageAlternates(`/category/${slug}`),
+    alternates: { ...pageAlternates(`/category/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/category/${slug}.md`, title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/category/${slug}` },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };

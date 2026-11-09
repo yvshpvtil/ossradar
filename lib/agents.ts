@@ -170,6 +170,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 3. **Bulk:** [${SITE.url}/llms-full.txt](${SITE.url}/llms-full.txt) or [${SITE.url}/api/v1/trending](${SITE.url}/api/v1/trending) (JSON, free, no key; please link back).
 4. **One repo:** \`${SITE.url}/api/v1/repo/{owner}/{name}\`, the Markdown twin \`${SITE.url}/repo/{owner}/{name}.md\`, and the HTML page \`${SITE.url}/repo/{owner}/{name}\`.
 5. **One day:** \`${SITE.url}/daily/{YYYY-MM-DD}.md\` (that UTC day's top 25 gainers as Markdown; HTML at \`${SITE.url}/daily/{YYYY-MM-DD}\`).
+6. **One category:** \`${SITE.url}/category/{slug}.md\` (that category's tracked repos ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/category\`).
 
 ## Methodology
 
