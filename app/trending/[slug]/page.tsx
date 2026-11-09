@@ -11,7 +11,7 @@ import { deltaFor, getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { LANDINGS, getLanding } from "@/lib/landing";
 import { hubLeaderProps } from "@/lib/leader";
-import { breadcrumbLd, collectionPageLd, itemListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, itemListLd, ogDefaults, pageAlternates, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 
 export function generateStaticParams() {
   return LANDINGS.map((l) => ({ slug: l.slug }));
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps<"/trending/[slug]">
   return {
     title: l.title,
     description,
-    alternates: pageAlternates(url),
+    alternates: { ...pageAlternates(url), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `${url}.md`, title: `${l.title} (Markdown)` }] } },
     // Images come from ./opengraph-image (a per-view card), so the generic site image is left out here.
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: l.title, description, url },
     twitter: { ...twitterDefaults, title: l.title, description },

@@ -168,6 +168,12 @@ export function proxy(req: NextRequest) {
   } else if (parts.length === 1 && raw[0] !== section && INDEXES.has(section)) {
     // Wrong-cased index page, e.g. /Category.
     return redirectTo(`/${section}`);
+  } else if (section === "trending" && parts.length === 2 && /\.md$/i.test(raw[1])) {
+    // Markdown twin for chatbots and agents: /trending/{slug}.md (lowercase path enforced).
+    const view = slug.slice(0, -3);
+    if (!LANDINGS.has(view)) return notFound();
+    if (`/${raw.join("/")}` !== `/trending/${view}.md`) return redirectTo(`/trending/${view}.md`);
+    return NextResponse.rewrite(new URL(`/md/trending/${view}`, req.url));
   } else if (section === "category" && parts.length === 2 && /\.md$/i.test(raw[1])) {
     // Markdown twin for chatbots and agents: /category/{slug}.md (lowercase path enforced).
     const hub = slug.slice(0, -3);

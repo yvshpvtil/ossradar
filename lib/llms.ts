@@ -157,6 +157,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Repo data as JSON: ${SITE.url}/api/v1/repo/{owner}/{name} (stars, 24h and 7-day gains, rank today and this week, daily star history, Hacker News story, alternatives; tracked repos only, free, no key)
 - Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics, plus close matches from other categories when few; only for repos with at least 3)
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
+- Trending view as Markdown: ${SITE.url}/trending/{slug}.md, e.g. ${SITE.url}/trending/ai-repos-this-week.md (the top 50 of that view; ${LANDINGS.map((l) => l.slug).join(", ")})
 - Category hub as Markdown: ${SITE.url}/category/{slug}.md, e.g. ${SITE.url}/category/mcp.md (that category's tracked repos ranked by 7-day star gain; slugs listed under Categories below)
 - By language: ${SITE.url}/language/{language}, e.g. ${SITE.url}/language/python (only the languages listed below have a page)
 - By GitHub topic: ${SITE.url}/topic/{topic}, e.g. ${SITE.url}/topic/mcp (only the topics listed below have a page)
