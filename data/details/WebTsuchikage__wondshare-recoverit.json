@@ -1,0 +1,12 @@
+{
+ "fullName": "WebTsuchikage/wondshare-recoverit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "1243e852786d",
+ "version": 1,
+ "generatedAt": "2026-11-09T18:10:11.661Z"
+}

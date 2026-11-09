@@ -1,0 +1,12 @@
+{
+ "fullName": "Pluviobyte/social-analysis-kit",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "X、抖音、小红书、YouTube、公众号、任意网页，一个链接取回原文。抖音还能抓完整评论区。 取原文、查重、记账交给脚本；整理、对照你的工作流提取「能改进 SOP 的部分」交给 Agent。 新建一个 Bot，发一句话，它会读这个仓库、问你几个问题，然后把自己装好。",
+ "extractor": "heuristic",
+ "readmeHash": "5a12f54b06b7",
+ "version": 1,
+ "generatedAt": "2026-11-09T18:10:12.297Z"
+}
