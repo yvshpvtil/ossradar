@@ -1,0 +1,12 @@
+{
+ "fullName": "janestreet/agent_skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A collection of skills for AI agents and chatbots. Each skill is a directory containing a SKILL.md file with instructions for the agent.",
+ "extractor": "heuristic",
+ "readmeHash": "5605190786f6",
+ "version": 1,
+ "generatedAt": "2026-11-09T09:32:18.882Z"
+}
