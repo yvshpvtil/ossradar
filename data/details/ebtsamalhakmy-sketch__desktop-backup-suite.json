@@ -1,0 +1,16 @@
+{
+ "fullName": "ebtsamalhakmy-sketch/desktop-backup-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Backup Suite: Provides full system, disk, partition, and file-level backup capabilities within a single standalone package, enablin",
+  "Pre-Activated Installation: All premium features are unlocked at install time, eliminating the need for license entry, online activation, or",
+  "Full Working Installer: Ships as a self-contained setup executable that deploys all components, services, and drivers required for immediate"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AOMEI Backupper 2026 is a complete standalone desktop backup and recovery suite delivered as a single self-contained installer…",
+ "extractor": "heuristic",
+ "readmeHash": "2dc5b334d71d",
+ "version": 1,
+ "generatedAt": "2026-11-10T20:11:53.896Z"
+}
