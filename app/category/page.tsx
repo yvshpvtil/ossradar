@@ -108,6 +108,7 @@ export default function CategoryIndex() {
           isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
+            name: "OSS Radar category hubs",
             numberOfItems: rs.length,
             itemListElement: rs.map((c, i) => ({ "@type": "ListItem", position: i + 1, url: abs(`/category/${c.slug}`), name: `${c.label} repos` })),
           },

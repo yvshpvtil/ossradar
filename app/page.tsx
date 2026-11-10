@@ -20,7 +20,9 @@ import { getArchiveDays } from "@/lib/daily";
 import { formatDate, formatNumber } from "@/lib/format";
 import { getTopics, topicLabel } from "@/lib/topics";
 
-const HOME_TITLE = `Trending AI & dev-tool GitHub repos today · ${SITE.name}`;
+/** Page name without the site suffix: CollectionPage JSON-LD names never carry " · OSS Radar" (same as every hub). */
+const HOME_NAME = "Trending AI & dev-tool GitHub repos today";
+const HOME_TITLE = `${HOME_NAME} · ${SITE.name}`;
 
 /** Homepage search snippet: brand-page lead plus today's #1 by 24h stars (≤158). Falls back to SITE.metaDescription. */
 function homeDescription(max = 158): string {
@@ -61,7 +63,7 @@ export default function Home() {
   const popularTopics = getTopics().slice(0, 16);
   return (
     <>
-      <JsonLd data={collectionPageLd({ name: HOME_TITLE, description: homeDescription(), path: "/", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"), 50, ldRepoName) })} />
+      <JsonLd data={collectionPageLd({ name: HOME_NAME, description: homeDescription(), path: "/", dateModified: data.generatedAt, ogCard: true, mainEntity: itemListLd("Fastest-rising open-source AI & dev-tool repos today", rankRepos(data.repos, "today"), 50, ldRepoName) })} />
       <section className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">Rising open-source AI &amp; dev tools</h1>
         <p className="mt-2 max-w-2xl text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">

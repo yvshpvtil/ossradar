@@ -106,6 +106,7 @@ export default function LanguageIndex() {
           isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
+            name: "OSS Radar programming language hubs",
             numberOfItems: rs.length,
             itemListElement: rs.map((l, i) => ({ "@type": "ListItem", position: i + 1, url: abs(`/language/${l.slug}`), name: `${l.name} repos` })),
           },

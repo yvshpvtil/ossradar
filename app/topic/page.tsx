@@ -86,6 +86,7 @@ export default function TopicIndex() {
           isPartOf: websiteRef,
           mainEntity: {
             "@type": "ItemList",
+            name: "OSS Radar GitHub topic hubs",
             numberOfItems: rs.length,
             itemListElement: rs.map((t, i) => ({ "@type": "ListItem", position: i + 1, url: abs(`/topic/${t.slug}`), name: `${t.label} repos` })),
           },
