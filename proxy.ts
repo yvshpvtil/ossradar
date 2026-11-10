@@ -67,6 +67,9 @@ const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily
 /** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
 const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
+/** Internal route folders under app/md (one per .md twin type). */
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news"]);
+
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 /** Body of the 410 answer for a repo that has left the tracked set. */
@@ -128,6 +131,15 @@ export function proxy(req: NextRequest) {
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
+
+  // The internal /md/... route handlers behind the .md twins (proxy rewrites and the /hacker-news.md
+  // rewrite in next.config.ts) also answered 200 when hit directly, a duplicate URL for every twin.
+  // Rewrites don't re-enter the proxy, so only direct hits land here: 308 them to the public .md URL
+  // (which validates the slug and casing itself); a bare /md is a 404.
+  if (section === "md") {
+    if (parts.length < 2 || !MD_TWINS.has(raw[1])) return notFound();
+    return redirectTo(`/${raw.slice(1).map(encodeURIComponent).join("/")}.md`);
+  }
 
   if (section === "repo") {
     if (parts.length < 3) return notFound();
@@ -222,5 +234,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
+  matcher: ["/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
 };
