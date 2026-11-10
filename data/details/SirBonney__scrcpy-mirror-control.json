@@ -1,0 +1,16 @@
+{
+ "fullName": "SirBonney/scrcpy-mirror-control",
+ "whoItsFor": null,
+ "useCases": [
+  "Instant Screen Mirroring — Your Android display appears on your desktop the moment the connection is live. No menus to dig through, no setti",
+  "Full Keyboard and Mouse Control — Navigate apps, type messages, and swipe through screens using the peripherals you already have in front of",
+  "Low-Latency, High-Fidelity Video — Frames land on your monitor with barely a whisper of delay, so scrolling feels smooth and taps register w"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A complete, self-contained setup that turns your desktop into a live window into any Android device—mirroring the screen, routing input…",
+ "extractor": "heuristic",
+ "readmeHash": "180e50a57fc5",
+ "version": 1,
+ "generatedAt": "2026-11-10T15:10:24.849Z"
+}

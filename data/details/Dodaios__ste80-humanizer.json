@@ -1,0 +1,12 @@
+{
+ "fullName": "Dodaios/ste80-humanizer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Dodaios/ste80-humanizer",
+ "source": "readme",
+ "readmeSummary": "Before: > Great question! Kubernetes liveness probes are a powerful mechanism that enables the kubelet to determine whether a container…",
+ "extractor": "heuristic",
+ "readmeHash": "22c00e058df2",
+ "version": 1,
+ "generatedAt": "2026-11-10T15:10:24.985Z"
+}

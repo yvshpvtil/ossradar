@@ -1,0 +1,12 @@
+{
+ "fullName": "HolyArrs/HolyArrs",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d \\",
+ "source": "readme",
+ "readmeSummary": "Open http://your-server:6262 and make the owner account. A short setup walks you through folders, a downloader and a Source.",
+ "extractor": "heuristic",
+ "readmeHash": "c0b705357118",
+ "version": 1,
+ "generatedAt": "2026-11-10T15:10:24.947Z"
+}

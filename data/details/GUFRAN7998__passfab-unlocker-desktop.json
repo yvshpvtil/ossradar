@@ -1,0 +1,16 @@
+{
+ "fullName": "GUFRAN7998/passfab-unlocker-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated offline build. The installer ships with all unlock and recovery modules enabled, removing the need for a separate license acti",
+  "Broad recovery workflow coverage. Supports password recovery across local account credentials, archive files, and document containers throug",
+  "Local-only processing. All recovery operations execute on the host machine; no network calls or cloud services are required, keeping sensiti"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "passfab-unlocker is a standalone desktop application for offline password recovery…",
+ "extractor": "heuristic",
+ "readmeHash": "7ade78d6834f",
+ "version": 1,
+ "generatedAt": "2026-11-10T15:10:24.889Z"
+}
