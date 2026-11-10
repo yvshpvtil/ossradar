@@ -1,0 +1,16 @@
+{
+ "fullName": "Sanidhya0510/dvd-creator-game-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Everything Unlocked, Nothing Paywalled — Every tool, template, burn engine, and menu module ships active out of the box. No trial timers, no",
+  "Full Disc Authoring Pipeline — Import, trim, chapter, and master in one pass. Build DVD-Video structures with working menus, subtitles, and ",
+  "Pre-Activated Desktop Build — The 2026 installer lands fully licensed and ready on first launch. Skip the registration dance and get straigh"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DVD Creator 2026 ships as a complete desktop installation build with every feature unlocked from the first launch — no activation hoops…",
+ "extractor": "heuristic",
+ "readmeHash": "a84d0f4ab12b",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.572Z"
+}

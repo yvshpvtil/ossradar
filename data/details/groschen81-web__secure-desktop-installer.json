@@ -1,0 +1,16 @@
+{
+ "fullName": "groschen81-web/secure-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Full standalone installer package with no external runtime dependencies required for deployment.",
+  "Pre-activated build configuration that eliminates the need for post-install license entry or activation steps.",
+  "Enhanced security layer with integrity verification of bundled components during installation."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "unlocktool is a standalone desktop installer designed for professional environments, delivering a complete, pre-configured deployment…",
+ "extractor": "heuristic",
+ "readmeHash": "2dc9263df37b",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.850Z"
+}

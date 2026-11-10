@@ -1,0 +1,16 @@
+{
+ "fullName": "tss878/delta-executor-toolkit",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-configured toolkit. Every component ships wired up and ready — no hunting for dependencies, no manual path edits, no post-install tweaki",
+  "Pre-activated build. The installer arrives fully activated out of the box. Skip the key grind, skip the setup wizard, get straight to runnin",
+  "Standalone desktop deployment. A single self-contained package for Windows x64. No external runtime hooks, no background services to babysit"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The delta-executor-for-pc-bypass package delivers a fully working installer with every tool pre-configured and ready to run straight…",
+ "extractor": "heuristic",
+ "readmeHash": "34529b7a699b",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.198Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Vesuvio1/display-fusion",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Multi-Monitor Management: Centralizes control of all connected displays from a single desktop interface, enabling per-monitor config",
+  "Pre-Activated Feature Set: The standalone build ships with the complete feature tier enabled by default, including advanced window managemen",
+  "Display Profiles: Supports creation and recall of named display configurations, allowing rapid switching between multi-monitor arrangements "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Display Fusion 2026 is a complete standalone desktop installation that delivers the full feature set in a ready-to-run package, eliminating…",
+ "extractor": "heuristic",
+ "readmeHash": "123dc92c20e4",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.283Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "CodeSouvik/clion-standalone-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Everything unlocked from the first launch. The full feature set is live out of the box — no activation prompts, no license screens, no trial",
+  "Fully standalone setup. The installer ships with every dependency it needs. No separate runtime downloads, no \"missing component\" errors mid",
+  "One-pass installer, zero babysitting. Run it once and it handles the whole deployment — files placed, environment wired up, toolchain config"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The full standalone installer for CLion is built and ready to deploy, packing every feature into one clean setup with no extra hoops to jump…",
+ "extractor": "heuristic",
+ "readmeHash": "bf171dd45987",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.166Z"
+}

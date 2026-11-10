@@ -1,0 +1,16 @@
+{
+ "fullName": "farhatullah0006-art/rx-11-audio-editor-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Ships complete and standalone — no dependency chasing, no external runtime, no \"just install these twelve things first.\"",
+  "One installer, one pass, one working editor. If setup needs a troubleshooting guide to survive, that's a packaging failure, not a user probl",
+  "Tuned for professional audio work out of the box: sensible defaults for editing, mixing, and export instead of a blank slate you spend an af"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A dotfiles repo should be boring, reproducible, and free of surprises. This one targets the rx-11-audio-editor setup and keeps every config…",
+ "extractor": "heuristic",
+ "readmeHash": "130574feaea7",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.517Z"
+}

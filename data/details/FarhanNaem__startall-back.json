@@ -1,0 +1,16 @@
+{
+ "fullName": "FarhanNaem/startall-back",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-configured utility baseline: Ships with a complete, validated configuration profile so the software is operational immediately after ins",
+  "Self-contained standalone deployment: Bundles all required runtime dependencies and supporting components into a single installer package, e",
+  "Offline-capable installation workflow: Executes entirely without network connectivity, making it suitable for air-gapped systems, restricted"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Startall Back 2026 is a standalone desktop utility for configuring professional Windows work environments, distributed as a complete…",
+ "extractor": "heuristic",
+ "readmeHash": "d4247142d822",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.744Z"
+}

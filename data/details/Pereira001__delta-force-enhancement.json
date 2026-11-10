@@ -1,0 +1,16 @@
+{
+ "fullName": "Pereira001/delta-force-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "Instant deployment, zero friction. The installer arrives pre-activated — no key hunting, no post-install tinkering. Launch and it's live.",
+  "Full feature set unlocked out of the box. Every toggle and module ships enabled by default, so you're not digging through menus to get the c",
+  "Built for Windows x64 desktops. Native integration with the desktop stack means clean startup behavior and predictable resource usage under "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Delta-Force-Cheat delivers a full working installer for a professional desktop software utility configuration…",
+ "extractor": "heuristic",
+ "readmeHash": "75d42086989b",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.154Z"
+}

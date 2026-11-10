@@ -1,0 +1,16 @@
+{
+ "fullName": "Luk177Master/easy-worship-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build: The complete desktop installation ships with all features unlocked and activated, requiring no separate lice",
+  "Ready-to-run deployment: The package is delivered as a self-contained installation suitable for offline or air-gapped environments, eliminat",
+  "Presentation-ready worship toolset: Provides the core desktop capabilities expected of a worship presentation application, including media h"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Easy-Worship 2026 is a complete standalone desktop application for Windows x64 that provides a ready-to-run worship presentation environment…",
+ "extractor": "heuristic",
+ "readmeHash": "4e165c514cfe",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.452Z"
+}

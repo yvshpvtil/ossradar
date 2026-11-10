@@ -1,0 +1,16 @@
+{
+ "fullName": "21041979/rufus-usb-formatter",
+ "whoItsFor": null,
+ "useCases": [
+  "Bootable Media Creation: Generates bootable USB drives from ISO images with support for BIOS and UEFI targets, including GPT and MBR partiti",
+  "Format Flexibility: Supports FAT32, NTFS, exFAT, UDF, and ext2/ext3 file systems, with cluster size selection and quick-format options.",
+  "ISO Integrity Verification: Validates image checksums and detects corrupted or incomplete ISO files prior to write operations."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Rufus is a standalone Windows x64 desktop utility engineered for fast, dependable USB drive formatting and bootable media creation.",
+ "extractor": "heuristic",
+ "readmeHash": "13a54c885df2",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.570Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "manjushree-iyer/soundpad-audio-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "A Signal Chain That Feels Like a Rack — Route, stack, and reorder processors as if you were patching hardware. Each module slots into a visi",
+  "Sculpt First, Decide Later — Shape tone with real-time visual feedback that responds as you drag. Curves, meters, and spectrums stay on scre",
+  "Sessions That Remember Your Moves — Save entire processing chains as reusable presets and recall them across projects. Your favorite vocal c"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Soundpad turns a straightforward installer into a visual, hands-on audio workspace, walking you through setup while advanced processing…",
+ "extractor": "heuristic",
+ "readmeHash": "33c819c5df45",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:04:11.756Z"
+}
