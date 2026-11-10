@@ -67,6 +67,12 @@ const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily
 /** Index pages with their own Open Graph card (app/{section}/opengraph-image.tsx). */
 const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
+/**
+ * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
+ * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
+ */
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "sponsor", "submit", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json"]);
+
 /** Internal route folders under app/md (one per .md twin type). */
 const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new"]);
 
@@ -128,6 +134,9 @@ export function proxy(req: NextRequest) {
     url.pathname = pathname;
     return NextResponse.redirect(url, 307);
   };
+
+  // Wrong-cased top-level page or file (only reaches the proxy via the uppercase matcher entry).
+  if (raw[0] !== section && TOP_LEVEL.has(section)) return redirectTo(`/${[section, ...raw.slice(1)].map(encodeURIComponent).join("/")}`);
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
@@ -234,5 +243,7 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*"],
+  // The last entry catches any path whose first segment has an uppercase letter (/Category/mcp,
+  // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
+  matcher: ["/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
 };
