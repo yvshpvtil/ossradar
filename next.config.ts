@@ -4,6 +4,9 @@ import { LANGUAGE_TOPICS, TOPIC_ALIASES } from "./lib/topicAliases";
 const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
+  // Drop the "X-Powered-By: Next.js" header from every response: it carries no value for visitors or
+  // crawlers and needlessly fingerprints the stack.
+  poweredByHeader: false,
   // data/ is installed as the local package "ossradar-data" (file:./data). Keeping it external means
   // the server bundle holds one copy of each JSON file instead of one per Turbopack chunk group
   // (repos.json alone was inlined 3x), which keeps the Cloudflare Worker under its size limit.
