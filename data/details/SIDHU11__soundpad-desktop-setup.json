@@ -1,0 +1,16 @@
+{
+ "fullName": "SIDHU11/soundpad-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Real-time Audio Routing Engine: Routes local microphone input and system playback streams to selectable output devices with sub-frame latenc",
+  "Multi-Device Output Matrix: Independently maps playback channels to physical and virtual audio endpoints, supporting simultaneous monitoring",
+  "Global Hotkey Binding System: Assigns keyboard, mouse, and macro-pad inputs to sound triggers, playlist transport controls, and routing pres"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SoundPad is a standalone desktop application for Windows x64 that provides a complete, pre-activated audio routing and soundboard…",
+ "extractor": "heuristic",
+ "readmeHash": "cc0b6462e900",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.649Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "agrim18072011-lgtm/ads-blocker",
+ "whoItsFor": null,
+ "useCases": [
+  "Hosts-based ad and tracker blocking. The installer deploys a curated blocklist to the system hosts file, redirecting known advertising and t",
+  "Complete standalone installer. All blocking rules, configuration files, and the uninstall routine are packaged in a single installer. Setup ",
+  "Desktop-wide coverage. Blocking applies at the operating system resolver level, so it takes effect across installed browsers and any applica"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ads-Blocker is a standalone desktop application that blocks advertising traffic at the system level, distributed as a complete…",
+ "extractor": "heuristic",
+ "readmeHash": "ff22323e979f",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.901Z"
+}

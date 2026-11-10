@@ -1,0 +1,16 @@
+{
+ "fullName": "pakistanwala65-debug/whale-tracker",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully operational installer package delivered as a self-contained desktop build with all features enabled at deployment time — no post-insta",
+  "Complete feature set is unlocked by default: every module, integration, and capability shipped with the software is active immediately after",
+  "Pre-activated provisioning model: license validation and entitlement checks are resolved during packaging, so the installed application laun"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Whale Tracker is a standalone desktop installer that delivers a fully configured local build with all features enabled, intended for testing…",
+ "extractor": "heuristic",
+ "readmeHash": "de4139b68d3a",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.668Z"
+}

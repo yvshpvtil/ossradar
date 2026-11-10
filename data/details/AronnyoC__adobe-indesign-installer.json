@@ -1,0 +1,16 @@
+{
+ "fullName": "AronnyoC/adobe-indesign-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Full Installer: Ships as a complete, ready-to-run desktop distribution with all core modules resolved at build time. No post-i",
+  "Robust Security Protocols: The installer enforces signed payload verification and integrity checksums across every packed component before e",
+  "Offline-First Operation: All runtime dependencies, layout engines, and typographic resources are bundled locally. The application performs n"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This desktop build delivers a complete, ready-to-run Adobe InDesign environment for Windows x64…",
+ "extractor": "heuristic",
+ "readmeHash": "a9578f24bd51",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.870Z"
+}

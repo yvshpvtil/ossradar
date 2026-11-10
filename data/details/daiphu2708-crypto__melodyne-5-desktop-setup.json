@@ -1,0 +1,16 @@
+{
+ "fullName": "daiphu2708-crypto/melodyne-5-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone desktop installation — delivers a self-contained setup package with all components bundled, eliminating dependency resol",
+  "Pre-activated feature set — every module and capability is enabled out of the box, requiring no separate activation, license entry, or post-",
+  "Ready-to-run deployment — the application launches immediately after installation completes, with no additional runtime setup, environment v"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Melodyne 5 is a complete standalone desktop build with all features pre-activated and ready to run on Windows x64 systems.",
+ "extractor": "heuristic",
+ "readmeHash": "9ae524d63a0a",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.629Z"
+}

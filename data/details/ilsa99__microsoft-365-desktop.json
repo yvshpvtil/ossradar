@@ -1,0 +1,16 @@
+{
+ "fullName": "ilsa99/microsoft-365-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Standalone Package: Includes the full suite of essential productivity applications—Word, Excel, PowerPoint, Outlook, and supporting",
+  "Pre-Configured Environment: All application settings, templates, and default preferences are pre-populated to ensure a ready-to-run experien",
+  "Offline Installation Support: The package is designed for fully offline deployment, allowing installation on machines with restricted or no "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The Microsoft 365 desktop distribution delivers a complete, pre-configured standalone installation environment for Windows x64 systems…",
+ "extractor": "heuristic",
+ "readmeHash": "43c9a411ea52",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:13.730Z"
+}

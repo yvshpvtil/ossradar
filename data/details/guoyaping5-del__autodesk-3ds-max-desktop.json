@@ -1,0 +1,16 @@
+{
+ "fullName": "guoyaping5-del/autodesk-3ds-max-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Full 3ds Max 2026 feature set included in a single pre-activated build, with no license activation, subscription sign-in, or network check r",
+  "Complete modeling toolchain: editable poly and spline workflows, modifier stack, subdivision surface modeling, and parametric primitive crea",
+  "Integrated rendering engines covering the production renderer and real-time viewport rendering, with material, lighting, and camera systems "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Autodesk 3ds Max 2026 is a complete, pre-activated desktop installer for Windows x64, delivering the full modeling, animation, rendering…",
+ "extractor": "heuristic",
+ "readmeHash": "ed6be902ae6e",
+ "version": 1,
+ "generatedAt": "2026-11-10T06:12:14.043Z"
+}
