@@ -3,11 +3,14 @@ import type { CategorySlug, Repo, RepoData } from "./types";
 
 import { categorize } from "./categories";
 import { getBlurbOverride } from "./blurbOverrides";
-import { isOffTopic } from "./blocklist";
+import { isOffTopic, starFarmNames } from "./blocklist";
 import { cleanOneLiner } from "./oneliner";
 import { cleanHomepage } from "./homepage";
 
 const rawData = raw as RepoData;
+/** Bot-starred lure waves (see starFarmNames); dropped like off-topic repos. */
+const starFarm = starFarmNames(rawData.repos);
+const isDropped = (r: RepoData["repos"][number]) => isOffTopic(r) || starFarm.has(r.fullName.toLowerCase());
 
 /**
  * GitHub descriptions are plain text, but some authors write Markdown or ASCII punctuation in them
@@ -26,14 +29,14 @@ export function tidyDescription<T extends string | null | undefined>(text: T): T
 const data: RepoData = {
   ...rawData,
   repos: rawData.repos
-    .filter((r) => !isOffTopic(r))
+    .filter((r) => !isDropped(r))
     .map((r) => ({ ...r, description: tidyDescription(r.description), oneLiner: tidyDescription(r.oneLiner) }))
     .map((r) => ({ ...r, category: categorize({ topics: r.topics, description: r.description, name: r.name, summary: getBlurbOverride(r.fullName) ?? r.oneLiner }) }))
     .map((r) => ({ ...r, oneLiner: cleanOneLiner(r), homepage: cleanHomepage(r.homepage) })),
 };
 
 /** Lowercased names of collected repos the filters drop; snapshot-based views (daily archive) skip these too. */
-const excluded = new Set(rawData.repos.filter((r) => isOffTopic(r)).map((r) => r.fullName.toLowerCase()));
+const excluded = new Set(rawData.repos.filter((r) => isDropped(r)).map((r) => r.fullName.toLowerCase()));
 
 export function isExcludedName(fullName: string): boolean {
   const full = fullName.toLowerCase();

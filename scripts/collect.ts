@@ -18,7 +18,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { categorize } from "../lib/categories";
-import { isOffTopic } from "../lib/blocklist";
+import { isOffTopic, starFarmNames } from "../lib/blocklist";
 import type { HistoryPoint, Repo, RepoData, Snapshot } from "../lib/types";
 import { summarize, summarizerId } from "./summarize";
 import { getBlurbOverride } from "../lib/blurbOverrides";
@@ -334,7 +334,11 @@ async function main() {
     return { item, v };
   });
   candidates.sort((a, b) => b.v.delta7d - a.v.delta7d || b.item.stargazers_count - a.item.stargazers_count);
+  const starFarm = starFarmNames(
+    candidates.map(({ item }) => ({ fullName: item.full_name, createdAt: item.created_at, forks: item.forks_count, stars: item.stargazers_count })),
+  );
   const selected = candidates
+    .filter(({ item }) => !starFarm.has(item.full_name.toLowerCase()))
     .filter(({ item }) =>
       !isOffTopic({
         fullName: item.full_name,
