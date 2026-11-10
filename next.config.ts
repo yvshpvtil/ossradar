@@ -18,7 +18,12 @@ const nextConfig: NextConfig = {
       // crawlers still fetched duplicates). Send every www URL to the same path on the apex.
       { source: "/:path*", has: [{ type: "host", value: "www.ossradar.net" }], destination: "https://ossradar.net/:path*", permanent: true },
       // Feed readers and crawlers probe common feed paths; the one feed lives at /rss.xml.
-      ...["/feed", "/feed.xml", "/rss"].map((source) => ({ source, destination: "/rss.xml", permanent: true })),
+      // /atom.xml (Jekyll/Hexo convention) and /index.xml (Hugo convention) are probed the same way.
+      ...["/feed", "/feed.xml", "/rss", "/atom.xml", "/index.xml"].map((source) => ({ source, destination: "/rss.xml", permanent: true })),
+      // Static-site habits and link checkers request the homepage as a file or as /home, which 404ed.
+      ...["/index.html", "/index.htm", "/home"].map((source) => ({ source, destination: "/", permanent: true })),
+      // Bare /sitemap (no extension) is a common guess by audit tools and people.
+      { source: "/sitemap", destination: "/sitemap.xml", permanent: true },
       // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
       // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
       ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
