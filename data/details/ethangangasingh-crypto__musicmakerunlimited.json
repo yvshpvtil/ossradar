@@ -1,0 +1,16 @@
+{
+ "fullName": "ethangangasingh-crypto/musicmakerunlimited",
+ "whoItsFor": null,
+ "useCases": [
+  "Full Feature Unlock: The 2026 installer ships with every module, instrument pack, and effect chain enabled by default—no trial limitations, ",
+  "Complete Instrument & Sample Library: All bundled sound sets, loops, and virtual instruments are present and pre-authorized within the insta",
+  "Offline-Ready Operation: The desktop build is designed for standalone use in offline environments; no account sign-in or online activation s"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Musicmakerunlimited is a standalone desktop application for Windows x64 that delivers a complete, ready-to-run music production environment…",
+ "extractor": "heuristic",
+ "readmeHash": "315de60041bc",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.662Z"
+}

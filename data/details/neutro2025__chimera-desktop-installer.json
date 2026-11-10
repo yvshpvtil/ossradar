@@ -1,0 +1,16 @@
+{
+ "fullName": "neutro2025/chimera-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Installation Pipeline: Delivers a complete desktop deployment in a single pass, bundling all runtime utilities and configuration ass",
+  "Pre-Configured Utility Suite: Ships with every supporting tool and dependency pre-set and wired together, eliminating post-install assembly ",
+  "Offline-Ready Deployment: The entire package is self-contained, allowing installation and operation on machines without external network acc"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Chimera is a full working desktop installer that bundles all required utilities and configurations into a single, deployment-ready package…",
+ "extractor": "heuristic",
+ "readmeHash": "f018cbf20c1a",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.241Z"
+}

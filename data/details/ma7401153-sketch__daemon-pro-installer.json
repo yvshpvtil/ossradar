@@ -1,0 +1,16 @@
+{
+ "fullName": "ma7401153-sketch/daemon-pro-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Single-run installer: DAEMON-Pro bundles all required components into one desktop installer; no separate dependency resolution or secondary ",
+  "Feature-complete build: Every module listed in the project manifest is included and enabled at install time; no tier gating or optional add-",
+  "Local execution model: All processing runs on the local machine. No runtime network calls are made by the core tool, and no external service"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DAEMON-Pro is a full-featured installer package designed to deploy a complete, ready-to-run environment on a desktop system.",
+ "extractor": "heuristic",
+ "readmeHash": "bf0888c09a67",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.027Z"
+}

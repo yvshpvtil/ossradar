@@ -1,0 +1,16 @@
+{
+ "fullName": "hembramneeraj3-create/aida-64-extreme",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-Activated Full Build: Complete standalone installation package with all licensing and activation layers applied at build time, requiring",
+  "Unified Hardware Diagnostics Engine: Integrated sensor monitoring, benchmarking, and stress-testing modules delivered in a single coherent r",
+  "Offline-Ready Deployment: Fully self-contained installer that resolves all dependencies locally, enabling installation on air-gapped or netw"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Aida 64 Extreme 2026 is a complete standalone desktop configuration package that bundles the full feature set into a single pre-activated…",
+ "extractor": "heuristic",
+ "readmeHash": "1ead2fd3e239",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.354Z"
+}

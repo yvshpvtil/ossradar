@@ -1,0 +1,16 @@
+{
+ "fullName": "woo20080623-cell/cinebench-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated Full Feature Set: All Cinebench 2026 benchmarking modules are enabled and unlocked at first launch, eliminating the need for l",
+  "Standalone Offline Architecture: The complete application package ships as a self-contained desktop installation with all required runtime d",
+  "Native Windows x64 Build: Compiled and optimized for 64-bit Windows desktop platforms, with direct hardware access for accurate multi-core a"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Cinebench 2026 is distributed as a complete standalone desktop build for Windows x64, packaging the full benchmark suite into a single…",
+ "extractor": "heuristic",
+ "readmeHash": "b6396ac182c3",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.910Z"
+}

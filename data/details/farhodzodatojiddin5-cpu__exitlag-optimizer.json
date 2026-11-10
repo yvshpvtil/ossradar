@@ -1,0 +1,16 @@
+{
+ "fullName": "farhodzodatojiddin5-cpu/exitlag-optimizer",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build: the installer ships with licensing already provisioned, removing the need for activation steps during or aft",
+  "Self-contained deployment package: all runtime dependencies and configuration assets are bundled, so installation completes without addition",
+  "Optimized system performance layer: applies targeted tuning to process scheduling, memory allocation, and network stack parameters to reduce"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone desktop package delivers a complete, pre-activated installation of ExitLag for Windows x64 environments, bundling the full…",
+ "extractor": "heuristic",
+ "readmeHash": "7a76ac1d9cde",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.302Z"
+}

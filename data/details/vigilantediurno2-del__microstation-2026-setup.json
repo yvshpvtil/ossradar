@@ -1,0 +1,16 @@
+{
+ "fullName": "vigilantediurno2-del/microstation-2026-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete out-of-the-box configuration: The installer deploys a fully working desktop utility configuration with all required components reso",
+  "Deterministic installer pipeline: A single, repeatable deployment path stages, validates, and registers all application components in a fixe",
+  "Pre-resolved dependency graph: All runtime libraries, configuration assets, and supporting packages are bundled and pinned to verified versi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Microstation 2026 is a standalone desktop installer that delivers a complete, pre-configured utility environment for Windows x64 systems…",
+ "extractor": "heuristic",
+ "readmeHash": "5ab7e4c31fc4",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.011Z"
+}

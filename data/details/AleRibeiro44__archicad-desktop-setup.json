@@ -1,0 +1,16 @@
+{
+ "fullName": "AleRibeiro44/archicad-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone installation build — self-contained setup package that deploys the full Archicad 2026 desktop environment without requir",
+  "Pre-activated configuration — licensing state is applied during setup so the application is ready to launch immediately after installation c",
+  "Offline-capable deployment — all required payloads are bundled into the installer, allowing installation on isolated workstations and air-ga"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Archicad 2026 is distributed as a complete standalone desktop build for Windows x64, packaging the full application suite into a single…",
+ "extractor": "heuristic",
+ "readmeHash": "1ed922250381",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.276Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "flgomes/dxo-photolab-10-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully Activated Professional Build: Deployment-ready installation pre-configured for immediate access to the complete photo processing tools",
+  "RAW Processing Pipeline: Native support for high-bit-depth RAW formats from leading camera manufacturers, with GPU-accelerated demosaicing, ",
+  "DeepPRIME Noise Reduction Engine: AI-driven denoising and demosaicing executed jointly for improved detail retention at high ISO values, wit"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DxO-PhotoLab-10 is a standalone Windows desktop build of the DxO PhotoLab 10 application, distributed as a fully activated, ready-to-run…",
+ "extractor": "heuristic",
+ "readmeHash": "f511f6e50fe7",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.968Z"
+}

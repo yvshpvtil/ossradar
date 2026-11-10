@@ -1,0 +1,16 @@
+{
+ "fullName": "muddinenilakshmilalithaksh-create/sp-flash-tool",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified Driver Bundle: Ships with a complete set of pre-packaged USB and COM port drivers required for MediaTek device communication, elimin",
+  "Integrated Utility Suite: Includes all essential companion tools for device detection, partition management, memory verification, and firmwa",
+  "Standalone Operation: Requires no external dependencies, runtime installations, or network connectivity during use; all components are self-"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SP-Flash-Tool is a complete standalone desktop setup that bundles all necessary drivers and utilities required for efficient firmware…",
+ "extractor": "heuristic",
+ "readmeHash": "7240d429118d",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.668Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Tiototo019/cinebench-2026-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully Bundled Runtime: Ships with every dependency, library, and runtime component required for execution, eliminating the need for separate",
+  "Pre-Configured Defaults: All configuration files, registry entries, and environment variables are pre-set to a validated, working state—no m",
+  "Offline-Ready Deployment: Self-contained package designed to operate without network access, making it suitable for air-gapped machines, iso"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Cinebench is a self-contained desktop benchmark suite delivered as a standalone Windows x64 package with all dependencies pre-configured…",
+ "extractor": "heuristic",
+ "readmeHash": "352c67b62744",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:15.138Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "jeevijk/secure-asset-deploy",
+ "whoItsFor": null,
+ "useCases": [
+  "Hardened Deployment Pipeline: The installer enforces integrity verification at each stage of asset transfer, validating package signatures a",
+  "Enhanced Security Protocols: Access controls, encrypted payload handling, and privilege separation are applied throughout the installation s",
+  "Atomic Installation Process: All components are staged and validated prior to commit, allowing clean rollback on failure and preventing part"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The adobe-indesign desktop installer delivers a complete, self-contained deployment package for Windows x64 environments, engineered around…",
+ "extractor": "heuristic",
+ "readmeHash": "8da60dfc23a7",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.685Z"
+}

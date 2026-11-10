@@ -1,0 +1,16 @@
+{
+ "fullName": "mubeen278/metatrader-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone deployment with all components included and ready to run without additional configuration.",
+  "Single-package distribution containing the complete application stack, dependencies, and runtime prerequisites for offline installation.",
+  "Native Windows x64 desktop build optimized for local execution with no external service dependencies."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "MetaTrader 2026 is a self-contained desktop trading terminal distributed as a single standalone build for Windows x64, packaging the full…",
+ "extractor": "heuristic",
+ "readmeHash": "63f45d1b396e",
+ "version": 1,
+ "generatedAt": "2026-11-10T12:06:14.707Z"
+}
