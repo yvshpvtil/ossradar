@@ -44,10 +44,10 @@ const nextConfig: NextConfig = {
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
     ];
   },
-  // Markdown twins of /hacker-news and /new for chatbots and agents (app/md/hacker-news and app/md/new). The other
+  // Markdown twins of /hacker-news, /new and the homepage (/index.md) for chatbots and agents (app/md/hacker-news, app/md/new, app/md/home). The other
   // .md twins live under proxy.ts's matcher; neither page has a dynamic segment, so plain rewrites do it.
   async rewrites() {
-    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }], afterFiles: [], fallback: [] };
+    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }, { source: "/index.md", destination: "/md/home" }], afterFiles: [], fallback: [] };
   },
   partialPrefetching: true,
   // Tailwind CSS is served as one cacheable stylesheet instead of experimental.inlineCss: inlining put

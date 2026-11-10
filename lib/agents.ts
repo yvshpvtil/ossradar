@@ -177,7 +177,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 10. **One GitHub topic:** \`${SITE.url}/topic/{slug}.md\` (tracked repos tagged with that topic, ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/topic\`).
 11. **Hacker News:** \`${SITE.url}/hacker-news.md\` (tracked repos posted to Hacker News in the last 30 days, ranked by story points, as Markdown; HTML at \`${SITE.url}/hacker-news\`).
 12. **New repos by launch day:** \`${SITE.url}/new.md\` (tracked repos created on GitHub in the last 14 days, grouped by creation day, as Markdown; HTML at \`${SITE.url}/new\`).
-13. **Content negotiation:** send \`Accept: text/markdown\` to any repo, alternatives, daily, category, trending, language or topic page URL, or to /new or /hacker-news (no .md), and you get its Markdown twin at the same URL.
+13. **Content negotiation:** send \`Accept: text/markdown\` to the homepage (twin at \`${SITE.url}/index.md\`: today's top 25 and this week's top 10), any repo, alternatives, daily, category, trending, language or topic page URL, or to /new or /hacker-news (no .md), and you get its Markdown twin at the same URL.
 
 ## Methodology
 

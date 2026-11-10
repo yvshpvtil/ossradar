@@ -71,10 +71,10 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "sponsor", "submit", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json"]);
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "sponsor", "submit", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
-const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new"]);
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home"]);
 
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
@@ -170,6 +170,8 @@ export function proxy(req: NextRequest) {
 
   // /new and /hacker-news have .md twins too (plain next.config rewrites); negotiate them here.
   if (raw.length === 1 && (raw[0] === "new" || raw[0] === "hacker-news")) return negotiate(`/md/${raw[0]}`);
+  // The homepage leaderboard's twin is /index.md (next.config rewrite to /md/home).
+  if (raw.length === 0) return negotiate("/md/home");
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
@@ -180,6 +182,7 @@ export function proxy(req: NextRequest) {
   // (which validates the slug and casing itself); a bare /md is a 404.
   if (section === "md") {
     if (parts.length < 2 || !MD_TWINS.has(raw[1])) return notFound();
+    if (raw[1] === "home") return parts.length === 2 ? redirectTo("/index.md") : notFound();
     return redirectTo(`/${raw.slice(1).map(encodeURIComponent).join("/")}.md`);
   }
 
@@ -281,5 +284,5 @@ export function proxy(req: NextRequest) {
 export const config = {
   // The last entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
+  matcher: ["/", "/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
 };

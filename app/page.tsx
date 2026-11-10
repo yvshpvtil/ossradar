@@ -8,7 +8,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { JsonLd } from "@/components/JsonLd";
 import { getData, rankRepos } from "@/lib/data";
 import { LANDINGS } from "@/lib/landing";
-import { collectionPageLd, itemListLd, pageAlternates } from "@/lib/seo";
+import { RSS_ALTERNATE, collectionPageLd, itemListLd } from "@/lib/seo";
 import { leaderMeta, toLeaderRepos } from "@/lib/leader";
 import { SITE } from "@/lib/site";
 import { RepoOfTheDay, pickRepoOfTheDay } from "@/components/RepoOfTheDay";
@@ -46,7 +46,7 @@ export function generateMetadata(): Metadata {
   return {
     title: { absolute: HOME_TITLE },
     description: homeDescription(),
-    alternates: pageAlternates("/"),
+    alternates: { canonical: "/", types: { ...RSS_ALTERNATE, "text/markdown": [...RSS_ALTERNATE["text/markdown"], { url: "/index.md", title: `${HOME_NAME} (Markdown)` }] } },
   };
 }
 
