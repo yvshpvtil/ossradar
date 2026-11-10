@@ -168,6 +168,9 @@ export function proxy(req: NextRequest) {
   // Wrong-cased top-level page or file (only reaches the proxy via the uppercase matcher entry).
   if (raw[0] !== section && TOP_LEVEL.has(section)) return redirectTo(`/${[section, ...raw.slice(1)].map(encodeURIComponent).join("/")}`);
 
+  // /new and /hacker-news have .md twins too (plain next.config rewrites); negotiate them here.
+  if (raw.length === 1 && (raw[0] === "new" || raw[0] === "hacker-news")) return negotiate(`/md/${raw[0]}`);
+
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
 
@@ -278,5 +281,5 @@ export function proxy(req: NextRequest) {
 export const config = {
   // The last entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
+  matcher: ["/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
 };
