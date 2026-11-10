@@ -1,0 +1,12 @@
+{
+ "fullName": "OmniJev/Flide",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install flide torchvision",
+ "source": "readme",
+ "readmeSummary": "Flide is fast inference infrastructure for Jev-style decision models. With exact state forking it is up to 9.5 times faster than vLLM…",
+ "extractor": "heuristic",
+ "readmeHash": "f71255019d67",
+ "version": 1,
+ "generatedAt": "2026-11-10T05:13:03.742Z"
+}
