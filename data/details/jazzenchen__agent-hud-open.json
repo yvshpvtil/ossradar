@@ -1,0 +1,12 @@
+{
+ "fullName": "jazzenchen/agent-hud-open",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask jazzenchen/tap/agent-hud",
+ "source": "readme",
+ "readmeSummary": "Your agents work on your Mac. Agent HUD brings their progress to you. Check where they are at a glance, pick up a conversation…",
+ "extractor": "heuristic",
+ "readmeHash": "3cbf977c1f31",
+ "version": 1,
+ "generatedAt": "2026-11-10T09:11:14.166Z"
+}
