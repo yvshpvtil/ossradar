@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { PageNav } from "@/components/PageNav";
 import { WatchlistView } from "@/components/WatchlistView";
 import { getData } from "@/lib/data";
-import { toLeaderRepo } from "@/lib/leader";
 
 export const metadata: Metadata = {
   title: "Your watchlist",
@@ -21,7 +20,7 @@ export default function WatchlistPage() {
       <p className="mt-2 mb-6 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
         Tap ☆ on any repo to watch it. Your list lives in this browser only: no account, nothing sent to us.
       </p>
-      <WatchlistView repos={data.repos.map(toLeaderRepo)} showMovement={Boolean(data.rankBaseDate)} />
+      <WatchlistView showMovement={Boolean(data.rankBaseDate)} />
     </>
   );
 }

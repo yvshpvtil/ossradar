@@ -1,26 +1,48 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { formatDelta, formatNumber } from "@/lib/format";
 import type { LeaderRepo } from "@/lib/leader";
 import { useWatchlist } from "@/lib/watch";
 import { EstBadge } from "./EstBadge";
 import { WatchButton } from "./WatchButton";
 
-export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; showMovement: boolean }) {
+/**
+ * The watchlist lives in localStorage, so the server can't know which repos to render. The page used to ship
+ * every tracked repo (~290 KB of RSC JSON) as props; now it fetches the shared, CDN-cached /leaderboard.json
+ * (same file the homepage loads, so often already in the browser cache) only when the list is non-empty.
+ */
+export function WatchlistView({ showMovement }: { showMovement: boolean }) {
   const { list } = useWatchlist();
-  const rank = useMemo(() => {
-    const m = new Map<string, number>();
-    [...repos].sort((a, b) => b.delta24h - a.delta24h || b.stars - a.stars).forEach((r, i) => m.set(r.fullName, i + 1));
-    return m;
-  }, [repos]);
-  const byName = useMemo(() => new Map(repos.map((r) => [r.fullName, r])), [repos]);
+  const [repos, setRepos] = useState<LeaderRepo[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  const want = list.length > 0;
+  useEffect(() => {
+    if (!want || repos) return;
+    let live = true;
+    fetch("/leaderboard.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((d: { repos: LeaderRepo[] }) => live && setRepos(d.repos))
+      .catch(() => live && setFailed(true));
+    return () => {
+      live = false;
+    };
+  }, [want, repos]);
+  const byName = useMemo(() => new Map((repos ?? []).map((r) => [r.fullName, r])), [repos]);
 
   if (list.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700">
         Nothing here yet. Head to the <Link href="/" className="text-indigo-700 underline underline-offset-2 dark:text-indigo-400">leaderboard</Link> and tap ☆ next to repos you want to follow.
+      </div>
+    );
+  }
+
+  if (!repos) {
+    return (
+      <div className="rounded-lg border border-zinc-200 p-8 text-center text-sm text-zinc-500 dark:border-zinc-800" aria-live="polite">
+        {failed ? "Couldn't load the latest numbers. Refresh to try again." : `Loading ${list.length} watched repo${list.length === 1 ? "" : "s"}…`}
       </div>
     );
   }
@@ -38,7 +60,7 @@ export function WatchlistView({ repos, showMovement }: { repos: LeaderRepo[]; sh
             </li>
           );
         }
-        const cur = rank.get(name);
+        const cur = r.rank24;
         const move = showMovement && r.prevRank != null && cur != null ? r.prevRank - cur : null;
         return (
           <li key={name} className="px-4 py-3">
