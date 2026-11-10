@@ -1,0 +1,16 @@
+{
+ "fullName": "hayfa1234/honkai-star-rail-enhancement-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully Pre-Activated Build — No key entry, no login loop, no license checks. Launch the executable and you're in. The activation layer is bak",
+  "True Standalone Deployment — The entire package ships self-contained. No external dependencies, no runtime fetchers, no background service p",
+  "2026 Build Target — Compiled against the current game version so offsets, signatures, and module hooks line up out of the box. No manual ver"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This pre-activated desktop build of Honkai Star Rail 2026 ships complete and standalone, so you go from download to gameplay without patch…",
+ "extractor": "heuristic",
+ "readmeHash": "7a0f5fe35a65",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.790Z"
+}

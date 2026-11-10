@@ -1,0 +1,16 @@
+{
+ "fullName": "App-MonicaWEB/auslogics-audio-studio-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated desktop build: The installer ships in a fully activated state, so the application is ready to launch immediately after setup w",
+  "Standalone offline deployment: All required runtime components are bundled into a single package, allowing installation on machines without ",
+  "Windows x64 desktop target: The build is compiled and validated specifically for 64-bit Windows desktop environments, with native support fo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This standalone desktop package delivers a complete, pre-activated installation of Auslogics Audio Studio 2026 for Windows x64 environments…",
+ "extractor": "heuristic",
+ "readmeHash": "e6c00da06b19",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.737Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Leno27-Adr/autodesk-revit-2026-standalone",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Feature Set Enabled — All modeling, documentation, and analysis capabilities are available on first launch, with no restricted modu",
+  "Standalone Offline Deployment — The setup package operates independently and requires no online activation, account sign-in, or external lic",
+  "Native Windows x64 Architecture — Built specifically for 64-bit Windows desktop environments, with optimized memory handling for large proje"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Autodesk Revit 2026 delivers a complete standalone desktop deployment package with all features fully activated and ready for immediate…",
+ "extractor": "heuristic",
+ "readmeHash": "d4641b3b9260",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.953Z"
+}

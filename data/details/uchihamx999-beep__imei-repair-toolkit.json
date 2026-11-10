@@ -1,0 +1,16 @@
+{
+ "fullName": "uchihamx999-beep/imei-repair-toolkit",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated standalone build requiring no external activation servers or online license validation during operation.",
+  "Self-contained installer package bundling all runtime dependencies, drivers, and diagnostic libraries for a single-pass deployment.",
+  "Offline-first architecture: full repair workflows execute without an active internet connection once installation completes."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "imei-repair is a standalone desktop installer package for Windows x64 that delivers a complete, pre-activated IMEI repair environment…",
+ "extractor": "heuristic",
+ "readmeHash": "0adc5b011755",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.990Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "shayannazar84-hero/honkai-star-rail-companion-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Everything unlocked out of the box. The 2026 build ships with all features pre-activated — no grind through menus, no manual toggles, no pos",
+  "Fully standalone. No external dependencies, no helper services, no background launchers. One self-contained package that runs on its own fro",
+  "Built for the 2026 game version. Tuned specifically for the current HSR release cycle, so the tooling matches the live client instead of lag"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The honkai-star-rail-trainer-tool delivers a complete standalone setup of Honkai Star Rail 2026 with every feature pre-activated and ready…",
+ "extractor": "heuristic",
+ "readmeHash": "6f1f678d2d80",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.920Z"
+}

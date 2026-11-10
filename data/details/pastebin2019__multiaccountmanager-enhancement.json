@@ -1,0 +1,16 @@
+{
+ "fullName": "pastebin2019/multiaccountmanager-enhancement",
+ "whoItsFor": null,
+ "useCases": [
+  "True multi-instance isolation — each account runs in its own sandboxed environment with independent memory, config, and cache, so sessions n",
+  "Pre-activated, zero-config launch — every premium capability ships unlocked in the standalone desktop build. No keygen, no patching, no post",
+  "Instant profile switching — hot-swap between saved accounts mid-session without restarting the client. Bind profiles to hotkeys and cycle th"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Multiaccountmanager 2026 ships as a complete standalone desktop build with every feature pre-activated and zero configuration overhead…",
+ "extractor": "heuristic",
+ "readmeHash": "8397c40e0249",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.696Z"
+}

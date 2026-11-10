@@ -1,0 +1,16 @@
+{
+ "fullName": "braazo/systemcare-pro",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Feature Set Pre-Activated: All application modules, premium utilities, and advanced configuration options are unlocked and operatio",
+  "Self-Contained Standalone Deployment: The package ships with every runtime dependency, library, and resource bundled internally. Installatio",
+  "Automated Configuration Pipeline: Setup routines detect host environment parameters and apply predefined configuration profiles automaticall"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Systemcare Pro is a standalone desktop build distributed as a pre-activated package with all features enabled at install time, eliminating…",
+ "extractor": "heuristic",
+ "readmeHash": "d613962eb6cf",
+ "version": 1,
+ "generatedAt": "2026-11-10T21:59:58.672Z"
+}
