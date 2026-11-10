@@ -1,0 +1,12 @@
+{
+ "fullName": "Zleap-AI/SAG-Wiki",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @zleap-ai/sag",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/e9c5499d-6057-4add-ac7e-f57eae381a2f",
+ "extractor": "heuristic",
+ "readmeHash": "8395bab234b2",
+ "version": 1,
+ "generatedAt": "2026-11-10T19:18:17.193Z"
+}
