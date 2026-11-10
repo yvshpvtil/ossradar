@@ -176,6 +176,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 9. **One language:** \`${SITE.url}/language/{slug}.md\` (tracked repos written mainly in that language, ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/language\`).
 10. **One GitHub topic:** \`${SITE.url}/topic/{slug}.md\` (tracked repos tagged with that topic, ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/topic\`).
 11. **Hacker News:** \`${SITE.url}/hacker-news.md\` (tracked repos posted to Hacker News in the last 30 days, ranked by story points, as Markdown; HTML at \`${SITE.url}/hacker-news\`).
+12. **New repos by launch day:** \`${SITE.url}/new.md\` (tracked repos created on GitHub in the last 14 days, grouped by creation day, as Markdown; HTML at \`${SITE.url}/new\`).
 
 ## Methodology
 

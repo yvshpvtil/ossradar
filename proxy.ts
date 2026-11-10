@@ -68,7 +68,7 @@ const INDEXES = new Set(["alternatives", "category", "language", "topic", "daily
 const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "daily"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
-const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news"]);
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new"]);
 
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 

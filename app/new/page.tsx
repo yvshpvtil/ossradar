@@ -10,7 +10,7 @@ import { getData } from "@/lib/data";
 import { formatDate, formatNumber } from "@/lib/format";
 import { NEW_DAYS, getNewRepos } from "@/lib/newRepos";
 import { altLabel, ldRepoName } from "@/lib/alternatives";
-import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, collectionPageLd, hubDescription, itemListLd, ogDefaults, pageAlternates, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 
 const title = "New open-source AI & dev-tool repos, day by day";
 const staticDescription = `New open-source AI and developer-tool repos created on GitHub in the last ${NEW_DAYS} days that are gaining stars fast, grouped by launch day. Updated hourly.`;
@@ -34,7 +34,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    alternates: pageAlternates("/new"),
+    alternates: { ...pageAlternates("/new"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/new.md", title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/new" },
     twitter: { ...twitterDefaults, title, description },
   };
