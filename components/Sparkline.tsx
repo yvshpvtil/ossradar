@@ -1,3 +1,4 @@
+import { areaPath, linePath, svgNum } from "@/lib/svgPath";
 import type { HistoryPoint } from "@/lib/types";
 
 /** Inline SVG star-history sparkline. Renders a flat dashed line when there is <2 points. */
@@ -30,15 +31,15 @@ export function Sparkline({
   const range = max - min || 1;
   const step = (width - pad * 2) / (values.length - 1);
   const coords = values.map((v, i) => [pad + i * step, height - pad - ((v - min) / range) * (height - pad * 2)] as const);
-  const line = coords.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
-  const area = `${line} L${coords[coords.length - 1][0].toFixed(1)},${height} L${coords[0][0].toFixed(1)},${height} Z`;
+  const line = linePath(coords);
+  const area = areaPath(line, coords, height);
   const [lx, ly] = coords[coords.length - 1];
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className={className} role="img" aria-label={title ?? "Star history"}>
       <title>{title ?? "Star history"}</title>
       <path d={area} fill="currentColor" fillOpacity={0.12} />
       <path d={line} fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinejoin="round" strokeLinecap="round" />
-      <circle cx={lx} cy={ly} r={2} fill="currentColor" />
+      <circle cx={svgNum(lx)} cy={svgNum(ly)} r={2} fill="currentColor" />
     </svg>
   );
 }
