@@ -1,0 +1,12 @@
+{
+ "fullName": "samir-sarwar/samir-vllm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The series follows what happens between a prompt and a generated token, from loading model weights to running each part of the transformer…",
+ "extractor": "heuristic",
+ "readmeHash": "9fc52f723874",
+ "version": 1,
+ "generatedAt": "2026-11-10T07:33:06.562Z"
+}

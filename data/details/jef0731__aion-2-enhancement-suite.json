@@ -1,0 +1,16 @@
+{
+ "fullName": "jef0731/aion-2-enhancement-suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Pre-activated and ready to run — no license checks, no activation loops, no \"try before you buy\" nag screens. Launch it and everything is un",
+  "Full feature set enabled out of the box: all premium modules, advanced prompt tooling, and quality-of-life options are live with zero config",
+  "Standalone desktop build for Windows x64 — self-contained, no external runtime dependencies, no background services to babysit. Install once"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "AION-2-Cheat is the complete standalone setup for Aion 2, your AI prompt engineering tool, delivered as a ready-to-run desktop installation…",
+ "extractor": "heuristic",
+ "readmeHash": "118f72974a3e",
+ "version": 1,
+ "generatedAt": "2026-11-10T07:33:06.503Z"
+}

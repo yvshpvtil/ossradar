@@ -1,0 +1,12 @@
+{
+ "fullName": "expo/exact",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it…",
+ "extractor": "heuristic",
+ "readmeHash": "862b1a1521c6",
+ "version": 1,
+ "generatedAt": "2026-11-10T07:33:06.600Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "johnampire818-dev/samfw-tool-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully pre-activated build: all feature modules are unlocked and enabled at first launch, with no additional activation steps, license keys, ",
+  "Standalone offline installer: ships as a single self-contained package with all runtime dependencies bundled, so the tool deploys and runs w",
+  "Native Windows x64 desktop application: compiled for 64-bit Windows, with a familiar windowed interface and standard local file-system integ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "samfw-tool delivers a complete standalone desktop configuration with all features pre-activated and ready to run immediately…",
+ "extractor": "heuristic",
+ "readmeHash": "7edf00f5d528",
+ "version": 1,
+ "generatedAt": "2026-11-10T07:33:06.630Z"
+}
