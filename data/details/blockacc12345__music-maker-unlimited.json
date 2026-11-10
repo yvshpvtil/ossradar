@@ -1,0 +1,16 @@
+{
+ "fullName": "blockacc12345/music-maker-unlimited",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete Feature Set Unlocked: The desktop build ships with every module, instrument pack, and effect enabled by default, removing the need ",
+  "Full Installer Package: A single self-contained installer provisions all runtime dependencies, sample libraries, and plugin binaries, ensuri",
+  "Native Desktop Execution: Engineered for Windows x64 desktop environments, the application runs locally with direct access to system audio d"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "MusicMakerUnlimited is a standalone desktop application distributed as a complete, fully unlocked installer that requires no additional…",
+ "extractor": "heuristic",
+ "readmeHash": "51ea03eb2cb1",
+ "version": 1,
+ "generatedAt": "2026-11-10T13:28:14.492Z"
+}

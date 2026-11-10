@@ -1,0 +1,12 @@
+{
+ "fullName": "21stware/bowel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask 21stware/tap/bowel",
+ "source": "readme",
+ "readmeSummary": "The desktop interface is built in Go and rendered directly via the GPU, with no WebView.",
+ "extractor": "heuristic",
+ "readmeHash": "ab29e4be5fb1",
+ "version": 1,
+ "generatedAt": "2026-11-10T13:28:14.504Z"
+}

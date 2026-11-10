@@ -1,0 +1,16 @@
+{
+ "fullName": "vnaurudo/php-storm-desktop-setup",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete standalone desktop installation with a fully populated configuration set, requiring no external activation or license verification.",
+  "All IDE capabilities are unlocked at the binary level, including advanced code analysis, refactoring, and database tooling.",
+  "Preconfigured environment with bundled runtime dependencies and default project templates for immediate use."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "PhpStorm 2026 is a complete standalone desktop installation that delivers the full IDE feature set in a ready-to-run package…",
+ "extractor": "heuristic",
+ "readmeHash": "14123b04dffe",
+ "version": 1,
+ "generatedAt": "2026-11-10T13:28:14.601Z"
+}
