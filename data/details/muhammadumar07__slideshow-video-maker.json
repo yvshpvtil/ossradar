@@ -1,0 +1,16 @@
+{
+ "fullName": "muhammadumar07/slideshow-video-maker",
+ "whoItsFor": null,
+ "useCases": [
+  "Storyboard Canvas — drop images, clips, and captions onto a single visual timeline; every slide is a card you can drag, reorder, and trim un",
+  "Motion Presets That Feel Handmade — pans, zooms, parallax drifts, and gentle crossfades apply to any slide in one click, with per-slide easi",
+  "Auto-Pacing Engine — reads image weight and caption length to suggest slide durations, then lets you stretch or squeeze the whole timeline w"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Turn a folder of stills into a moving sequence with a desktop tool built for the visual workflow, where every timeline strip, transition…",
+ "extractor": "heuristic",
+ "readmeHash": "965b60bed283",
+ "version": 1,
+ "generatedAt": "2026-11-10T11:09:16.829Z"
+}
