@@ -1,4 +1,10 @@
 {
+ "0xCoach/TaoSheng": {
+  "text": "Android app that records all day, transcribes speech, identifies speakers, and uses AI to turn it into to-dos and memories.",
+  "basis": "466459de43c0",
+  "source": "claude -p",
+  "generatedAt": "2026-11-10T02:19:10.528Z"
+ },
  "3241288994/AImanager": {
   "text": "Gives ChatGPT access to project files, coordinates Codex, Claude Code and API models, and manages AI account quotas.",
   "basis": "e914ff457f8b",
