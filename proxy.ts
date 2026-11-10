@@ -78,6 +78,30 @@ const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "langu
 
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
+/**
+ * Content negotiation for agents: a request whose Accept header prefers text/markdown over
+ * text/html (e.g. "text/markdown, text/html;q=0.9") gets the page's .md twin at the same URL.
+ * Browsers and search crawlers never ask for text/markdown, so they keep getting HTML.
+ */
+function acceptQ(accept: string, type: string): number {
+  let best = -1;
+  for (const part of accept.split(",")) {
+    const [media, ...params] = part.trim().toLowerCase().split(";").map((x) => x.trim());
+    if (media !== type) continue;
+    const q = params.find((x) => x.startsWith("q="));
+    const v = q ? Number(q.slice(2)) : 1;
+    if (Number.isFinite(v) && v > best) best = v;
+  }
+  return best;
+}
+function prefersMarkdown(req: NextRequest): boolean {
+  const accept = req.headers.get("accept") ?? "";
+  const md = acceptQ(accept, "text/markdown");
+  if (md <= 0) return false;
+  const html = acceptQ(accept, "text/html");
+  return md > html || (md === html && accept.toLowerCase().indexOf("text/markdown") < accept.toLowerCase().indexOf("text/html"));
+}
+
 /** Body of the 410 answer for a repo that has left the tracked set. */
 function gonePage(fullName: string): string {
   const name = escapeHtml(fullName);
@@ -129,6 +153,12 @@ export function proxy(req: NextRequest) {
     url.pathname = pathname;
     return NextResponse.redirect(url, 308);
   };
+  // Serve the internal .md route at the HTML page's own URL when the client asked for Markdown.
+  const negotiate = (mdPath: string) => {
+    const res = prefersMarkdown(req) ? NextResponse.rewrite(new URL(mdPath, req.url)) : NextResponse.next();
+    res.headers.set("vary", "Accept");
+    return res;
+  };
   const redirectTemp = (pathname: string) => {
     const url = req.nextUrl.clone();
     url.pathname = pathname;
@@ -164,6 +194,7 @@ export function proxy(req: NextRequest) {
     if (!repo) return parts.length === 3 && RETIRED.has(`${parts[1]}/${parts[2]}`.toLowerCase()) ? gone(`${parts[1]}/${parts[2]}`) : notFound();
     const canonical = `/repo/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);
+    if (parts.length === 3) return negotiate(`/md/repo/${repo.owner}/${repo.name}`);
     if (parts.length > 3 && raw[0] !== "repo") return notFound();
     // The card moved to /opengraph-image/card (per-repo alt text via generateImageMetadata);
     // previews cached with the old card URL follow it instead of breaking.
@@ -190,6 +221,7 @@ export function proxy(req: NextRequest) {
     // The card moved to /opengraph-image/card (per-page alt text via generateImageMetadata);
     // previews cached with the old card URL follow it instead of breaking.
     if (parts.length === 4) return redirectTo(`${canonical}/opengraph-image/card`);
+    if (parts.length === 3) return negotiate(`/md/alternatives/${repo.owner}/${repo.name}`);
   } else if (section === "trending" && parts.length === 1) {
     // Bare /trending has no page of its own; the homepage is the trending leaderboard.
     return redirectTo("/");
@@ -238,6 +270,7 @@ export function proxy(req: NextRequest) {
     if (!card && raw[0] + "/" + raw[1] !== `${section}/${slug}`) return redirectTo(`/${section}/${slug}`);
     // Previews cached with the old card URL follow it to /opengraph-image/card instead of breaking.
     if (card && withId && parts.length === 3) return redirectTo(`/${section}/${slug}/opengraph-image/card`);
+    if (!card) return negotiate(`/md/${section}/${slug}`);
   }
   return NextResponse.next();
 }
