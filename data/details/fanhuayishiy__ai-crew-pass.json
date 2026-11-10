@@ -1,0 +1,12 @@
+{
+ "fullName": "fanhuayishiy/ai-crew-pass",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --no-package-lock",
+ "source": "readme",
+ "readmeSummary": "简体中文 · English",
+ "extractor": "heuristic",
+ "readmeHash": "af80c6da8b4a",
+ "version": 1,
+ "generatedAt": "2026-11-10T04:10:11.002Z"
+}
