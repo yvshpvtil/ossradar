@@ -1,0 +1,12 @@
+{
+ "fullName": "libracoder/kiri",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Kiri is a lightweight replacement for Docker Desktop and OrbStack, written in Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "b9fbee67eeb1",
+ "version": 1,
+ "generatedAt": "2026-11-10T10:14:00.507Z"
+}
