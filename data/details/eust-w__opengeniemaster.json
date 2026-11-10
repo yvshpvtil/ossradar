@@ -1,0 +1,12 @@
+{
+ "fullName": "eust-w/opengeniemaster",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e .",
+ "source": "readme",
+ "readmeSummary": "OpenGenieMaster 是面向持续多机器人作业的开源具身持续 Harness，是对智元 AGIBOT 于 2026-10-27 发布的具身 Agent 框架 GenieMaster 的独立开源复刻。",
+ "extractor": "heuristic",
+ "readmeHash": "25e11b2a5670",
+ "version": 1,
+ "generatedAt": "2026-11-10T01:26:04.570Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "happymathew/keyshot-pro-desktop-installer",
+ "whoItsFor": null,
+ "useCases": [
+  "Complete feature set, fully unlocked: All modules, tools, and premium capabilities are enabled out of the box with no license gating, activa",
+  "Single-pass standalone installer: The package bundles all required runtime components, libraries, and dependencies into one deployment artif",
+  "Offline-capable deployment: The installer is self-contained and performs no external dependency resolution at runtime, making it suitable fo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Keyshot Pro is a standalone desktop installer package that delivers a complete, fully unlocked feature set for immediate deployment…",
+ "extractor": "heuristic",
+ "readmeHash": "0d4533986239",
+ "version": 1,
+ "generatedAt": "2026-11-10T01:26:04.257Z"
+}

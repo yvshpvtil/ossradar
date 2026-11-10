@@ -1,0 +1,16 @@
+{
+ "fullName": "Eriazeri/on1-photo-raw-max-config",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully standalone build — no prior install, no license servers, no background services.",
+  "Advanced image processing pipeline unlocked out of the box: raw develop, layers, masking, and effects at full capability.",
+  "Pre-activated feature set — every tool and module enabled on first launch, no sign-in prompts, no trial timers."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A standalone, pre-activated build of On1 Photo Raw Max 2026 with the full image-processing toolset enabled out of the box.",
+ "extractor": "heuristic",
+ "readmeHash": "42802a4b6d4f",
+ "version": 1,
+ "generatedAt": "2026-11-10T01:26:04.429Z"
+}

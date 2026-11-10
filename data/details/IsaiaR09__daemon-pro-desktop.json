@@ -1,0 +1,16 @@
+{
+ "fullName": "IsaiaR09/daemon-pro-desktop",
+ "whoItsFor": null,
+ "useCases": [
+  "Full Feature Activation: All modules and capabilities are enabled out of the box, eliminating the need for separate license configuration or",
+  "Standalone Deployment: The package is self-contained and does not depend on external services, shared runtimes, or auxiliary installers to o",
+  "Ready-to-Run Configuration: Default settings are pre-tuned for immediate execution, allowing the application to launch and operate without a"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Daemon-Pro delivers a complete standalone desktop deployment with all features fully activated…",
+ "extractor": "heuristic",
+ "readmeHash": "74adc7c46ea3",
+ "version": 1,
+ "generatedAt": "2026-11-10T01:26:04.229Z"
+}

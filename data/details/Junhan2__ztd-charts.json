@@ -1,0 +1,12 @@
+{
+ "fullName": "Junhan2/ztd-charts",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i ztd-charts",
+ "source": "readme",
+ "readmeSummary": "Each chart has a page with a live demo, its props and copyable code in the gallery.",
+ "extractor": "heuristic",
+ "readmeHash": "dd6d673e2ccd",
+ "version": 1,
+ "generatedAt": "2026-11-10T01:26:04.421Z"
+}
