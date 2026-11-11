@@ -1,0 +1,12 @@
+{
+ "fullName": "FeatherHunter/dsh-prompt",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @deepseek-ai/dsh",
+ "source": "readme",
+ "readmeSummary": "将所有重复的Prompt变成模板。 点击一下即可注入到对话框中。",
+ "extractor": "heuristic",
+ "readmeHash": "a78c3204c87c",
+ "version": 1,
+ "generatedAt": "2026-11-11T07:36:20.023Z"
+}
