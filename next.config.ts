@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
       ...["/index.html", "/index.htm", "/home"].map((source) => ({ source, destination: "/", permanent: true })),
       // Bare /sitemap (no extension) is a common guess by audit tools and people.
       { source: "/sitemap", destination: "/sitemap.xml", permanent: true },
+      // Visitors (often from social posts) and crawlers guess obvious paths for the newsletter, its archive,
+      // the leaderboard and the FAQ, which 404ed. Send each to where that thing actually lives.
+      ...["/newsletter", "/subscribe", "/signup"].map((source) => ({ source, destination: "/#subscribe", permanent: true })),
+      ...["/archive", "/archives"].map((source) => ({ source, destination: "/daily", permanent: true })),
+      ...["/leaderboard", "/search"].map((source) => ({ source, destination: "/", permanent: true })),
+      { source: "/faq", destination: "/about#faq", permanent: true },
       // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
       // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
       ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
