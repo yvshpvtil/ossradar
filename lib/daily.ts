@@ -4,7 +4,34 @@ import { getData, getRepos, isExcludedName } from "./data";
 import type { Repo } from "./types";
 
 const DIR = path.join(process.cwd(), "data", "snapshots");
-const snap = (d: string) => JSON.parse(readFileSync(path.join(DIR, `${d}.json`), "utf8")) as Record<string, number>;
+
+/** Repos GitHub transferred or renamed (scripts/renames.ts): lowercased old owner/name -> current owner/name. */
+const MOVED: Record<string, string> = (() => {
+  try {
+    const moved = JSON.parse(readFileSync(path.join(process.cwd(), "data", "renames.json"), "utf8")).moved as Record<string, string>;
+    return Object.fromEntries(Object.entries(moved ?? {}).map(([o, n]) => [o.toLowerCase(), n]));
+  } catch {
+    return {};
+  }
+})();
+
+/**
+ * One day's snapshot with moved repos listed under their current name, so archive pages link the live
+ * page (not a 308), a move between two days doesn't hide that day's gain, and appearances follow the repo.
+ * A count recorded under the new name wins over one carried from the old name.
+ */
+const snap = (d: string): Record<string, number> => {
+  const raw = JSON.parse(readFileSync(path.join(DIR, `${d}.json`), "utf8")) as Record<string, number>;
+  const out: Record<string, number> = {};
+  const carried: [string, number][] = [];
+  for (const [n, stars] of Object.entries(raw)) {
+    const to = MOVED[n.toLowerCase()];
+    if (to) carried.push([to, stars]);
+    else out[n] = stars;
+  }
+  for (const [n, stars] of carried) if (out[n] === undefined) out[n] = stars;
+  return out;
+};
 const prevDay = (d: string) => new Date(Date.parse(d + "T00:00:00Z") - 86_400_000).toISOString().slice(0, 10);
 
 export type DailyEntry = { fullName: string; gained: number; stars: number; repo?: Repo };
