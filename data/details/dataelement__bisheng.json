@@ -1,0 +1,12 @@
+{
+ "fullName": "dataelement/bisheng",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "BISHENG是一款 开源的企业级一站式 Agent 平台，专注办公效率与企业 AI 应用落地，已有大量行业头部组织及世界 500 强企业在使用。",
+ "extractor": "heuristic",
+ "readmeHash": "d27873205472",
+ "version": 1,
+ "generatedAt": "2026-11-11T04:16:43.828Z"
+}
