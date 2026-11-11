@@ -10,6 +10,8 @@
  * 3. Computes 24h / 7d star deltas from prior snapshots. When there is no usable prior snapshot
  *    it falls back to a stars/age-in-days estimate and flags the value as estimated.
  * 4. Writes data/repos.json, which the Next.js site reads at build time.
+ * Repos moved on GitHub (data/renames.json) keep the snapshots, hourly points and first-seen date
+ * recorded under their old name.
  *
  * Auth: GITHUB_TOKEN env var, falling back to `gh auth token`.
  */
@@ -30,6 +32,7 @@ const SNAPSHOT_DIR = path.join(DATA_DIR, "snapshots");
 const SUMMARY_CACHE = path.join(DATA_DIR, "summaries.json");
 const HOURLY_FILE = path.join(DATA_DIR, "hourly.json");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
+const RENAMES_FILE = path.join(DATA_DIR, "renames.json");
 const HOURLY_KEEP = 48;
 const HOUR_MS = 3_600_000;
 const RANK_DAYS_KEEP = 8;
@@ -279,6 +282,68 @@ function buildHistory(fullName: string, stars: number, today: string, prior: Loa
   return points;
 }
 
+
+// ---------- GitHub moves ----------
+
+/**
+ * Repos transferred or renamed on GitHub (data/renames.json, kept by scripts/renames.ts) keep their
+ * star history: snapshots, hourly points and first-seen dates recorded under the old full_name are
+ * carried over to the new one, so a moved repo's chart, measured gains and "first seen" don't restart
+ * at the move. Returns current full_name (as GitHub spells it now) -> old lowercased full_names.
+ */
+function loadMoves(current: Iterable<string>): Map<string, string[]> {
+  const moved = readJson<{ moved?: Record<string, string> }>(RENAMES_FILE, {}).moved ?? {};
+  const exact = new Map<string, string>();
+  for (const n of current) exact.set(n.toLowerCase(), n);
+  const out = new Map<string, string[]>();
+  for (const [old, now] of Object.entries(moved)) {
+    const name = exact.get(now.toLowerCase());
+    if (!name || name.toLowerCase() === old.toLowerCase()) continue;
+    out.set(name, [...(out.get(name) ?? []), old.toLowerCase()]);
+  }
+  return out;
+}
+
+/** Value stored under any of the old names (case-insensitive) in a name-keyed record. */
+function aliasKey<T>(rec: Record<string, T>, olds: string[]): string | undefined {
+  return Object.keys(rec).find((k) => olds.includes(k.toLowerCase()));
+}
+
+function carrySnapshots(prior: LoadedSnapshot[], moves: Map<string, string[]>): number {
+  let n = 0;
+  for (const s of prior) {
+    for (const [name, olds] of moves) {
+      if (s.stars[name] !== undefined) continue;
+      const k = aliasKey(s.stars, olds);
+      if (k) {
+        s.stars[name] = s.stars[k];
+        n++;
+      }
+    }
+  }
+  return n;
+}
+
+function carryHourly(hourly: Hourly, moves: Map<string, string[]>): void {
+  for (const [name, olds] of moves) {
+    const k = aliasKey(hourly.stars, olds);
+    if (!k || k === name) continue;
+    const series = (hourly.stars[name] ??= []);
+    hourly.stars[k].forEach((v, i) => {
+      if (series[i] == null) series[i] = v;
+    });
+    for (let i = 0; i < series.length; i++) series[i] ??= null;
+  }
+}
+
+function carryFirstSeen(state: State, moves: Map<string, string[]>): void {
+  for (const [name, olds] of moves) {
+    for (const [k, d] of Object.entries(state.firstSeen)) {
+      if (k !== name && olds.includes(k.toLowerCase()) && (!state.firstSeen[name] || d < state.firstSeen[name])) state.firstSeen[name] = d;
+    }
+  }
+}
+
 // ---------- main ----------
 
 interface SummaryCacheEntry {
@@ -327,7 +392,9 @@ async function main() {
   }
 
   const prior = loadSnapshots(today);
-  console.log(`Found ${found.size} unique repos; ${prior.length} prior snapshot(s).`);
+  const moves = loadMoves(found.keys());
+  const carried = carrySnapshots(prior, moves);
+  console.log(`Found ${found.size} unique repos; ${prior.length} prior snapshot(s); ${moves.size} moved repo(s), ${carried} snapshot point(s) carried from old names.`);
 
   const candidates = [...found.values()].map((item) => {
     const v = computeVelocity(item.full_name, item.stargazers_count, item.created_at, today, now, prior);
@@ -356,6 +423,7 @@ async function main() {
   // Hourly series: append (or replace) the column for the current hour, trim to the last 48h.
   const hourKey = `${now.toISOString().slice(0, 13)}:00:00Z`;
   const hourly = readJson<Hourly>(HOURLY_FILE, { hours: [], stars: {} });
+  carryHourly(hourly, moves);
   const hourlyLookup = (name: string, target: number, tol: number): number | null => {
     const series = hourly.stars[name];
     if (!series) return null;
@@ -371,6 +439,7 @@ async function main() {
     return best;
   };
   const state = readJson<State>(STATE_FILE, { firstSeen: {}, ranks: {} });
+  carryFirstSeen(state, moves);
 
   const summaryCache = readJson<Record<string, SummaryCacheEntry>>(SUMMARY_CACHE, {});
   const repos: Repo[] = [];
