@@ -1,0 +1,12 @@
+{
+ "fullName": "zilliztech/claude-context",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @zilliz/claude-context-mcp@latest",
+ "source": "readme",
+ "readmeSummary": "Claude Context is an MCP plugin that adds semantic code search to Claude Code and other AI coding agents…",
+ "extractor": "heuristic",
+ "readmeHash": "c36671501a74",
+ "version": 1,
+ "generatedAt": "2026-11-11T09:15:59.505Z"
+}

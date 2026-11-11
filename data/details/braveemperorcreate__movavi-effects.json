@@ -1,0 +1,12 @@
+{
+ "fullName": "braveemperorcreate/movavi-effects",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Note: Make sure to open your terminal as Administrator so the system can properly map all required pathways and setup your environment. ---",
+ "extractor": "heuristic",
+ "readmeHash": "e05c68f00569",
+ "version": 1,
+ "generatedAt": "2026-11-11T09:15:59.298Z"
+}
