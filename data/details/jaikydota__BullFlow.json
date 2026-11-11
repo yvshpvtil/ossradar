@@ -1,0 +1,12 @@
+{
+ "fullName": "jaikydota/BullFlow",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "推量牛是一套企业级 RAG 解决方案：先把企业的公司 / 品牌 / 产品 / 客户 / 案例、文档、图片、音视频沉淀为专属知识库，再由 AI Agent 基于这些资产创作文章、图文、图片、视频，最后一键分发到国内外 17…",
+ "extractor": "heuristic",
+ "readmeHash": "0559009d39f3",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.486Z"
+}

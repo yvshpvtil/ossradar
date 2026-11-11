@@ -1,0 +1,12 @@
+{
+ "fullName": "y5ez3g/facadecode",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The multi-agent orchestrator for VS Code.",
+ "extractor": "heuristic",
+ "readmeHash": "6d4b16b625b8",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.544Z"
+}

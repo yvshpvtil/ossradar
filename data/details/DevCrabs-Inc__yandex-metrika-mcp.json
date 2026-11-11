@@ -1,0 +1,12 @@
+{
+ "fullName": "DevCrabs-Inc/yandex-metrika-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y @dev-crabs/yandex-metrika-mcp setup --client claude-desktop   # or claude-code, cursor, vscode, windsurf, codex",
+ "source": "readme",
+ "readmeSummary": "Read-only MCP server for Yandex Metrika (Yandex Metrica, Яндекс Метрика).",
+ "extractor": "heuristic",
+ "readmeHash": "5f387dd93d70",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.690Z"
+}

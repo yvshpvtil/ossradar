@@ -1,0 +1,12 @@
+{
+ "fullName": "windmill-labs/windmill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Windmill is fully open-sourced (AGPLv3) and Windmill Labs offers dedicated instances and commercial support and licenses.",
+ "extractor": "heuristic",
+ "readmeHash": "e6124b555d35",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.557Z"
+}

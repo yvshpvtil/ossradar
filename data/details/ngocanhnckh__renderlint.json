@@ -1,0 +1,12 @@
+{
+ "fullName": "ngocanhnckh/renderlint",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y @ngocanhnckh/renderlint init   # one-time setup: installs it, adds config, build gate, agent instructions, Claude Code hook",
+ "source": "readme",
+ "readmeSummary": "Text spilling out of cards, gray-on-gray captions, chart labels on top of each other, a layout that only breaks at 1024px, a dropdown arrow…",
+ "extractor": "heuristic",
+ "readmeHash": "95a3e26daea6",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.301Z"
+}

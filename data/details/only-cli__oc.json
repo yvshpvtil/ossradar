@@ -1,0 +1,12 @@
+{
+ "fullName": "only-cli/oc",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @only-cli/oc",
+ "source": "readme",
+ "readmeSummary": "Turns websites into a command line interface for AI agents. oc open fetches a page and hands back a compact, numbered view instead of raw…",
+ "extractor": "heuristic",
+ "readmeHash": "e6ef47ba04d6",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.321Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "ZSeven-W/dsh-android",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pnpm add @zseven-w/dsh-android",
+ "source": "readme",
+ "readmeSummary": "DSH Android gives the agent a real Android device inside the conversation — and gives you the pixels.",
+ "extractor": "heuristic",
+ "readmeHash": "ea27450a4b4e",
+ "version": 1,
+ "generatedAt": "2026-11-11T01:27:21.581Z"
+}
