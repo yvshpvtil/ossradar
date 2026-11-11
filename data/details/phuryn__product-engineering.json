@@ -1,0 +1,12 @@
+{
+ "fullName": "phuryn/product-engineering",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add phuryn/product-engineering          # pick skills and agents interactively",
+ "source": "readme",
+ "readmeSummary": "44 agent skills from shipping three live products: decide what to build, build it with Claude Code or Codex, have a second model review it…",
+ "extractor": "heuristic",
+ "readmeHash": "28f7da10b9aa",
+ "version": 1,
+ "generatedAt": "2026-11-11T12:17:55.958Z"
+}
