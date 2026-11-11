@@ -48,6 +48,11 @@ const nextConfig: NextConfig = {
       ...["/archive", "/archives"].map((source) => ({ source, destination: "/daily", permanent: true })),
       ...["/leaderboard", "/search"].map((source) => ({ source, destination: "/", permanent: true })),
       { source: "/faq", destination: "/about#faq", permanent: true },
+      // Would-be sponsors guess the usual "advertise with us" paths (/sponsors, /advertise, /pricing...),
+      // which 404ed and lost the visitor most likely to buy a slot. The one sales page is /sponsor.
+      ...["/sponsors", "/sponsorship", "/sponsorships", "/advertise", "/advertising", "/ads", "/pricing"].map((source) => ({ source, destination: "/sponsor", permanent: true })),
+      // "/repos" and "/projects" mean the list of tracked repos, which is the homepage leaderboard.
+      ...["/repos", "/projects"].map((source) => ({ source, destination: "/", permanent: true })),
       // Stable "latest" links for the daily archive (newsletter footers, social posts, agents) that always
       // land on the newest completed day. Temporary (307) because the target moves every day.
       ...((day) => day ? [
