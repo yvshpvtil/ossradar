@@ -1,0 +1,12 @@
+{
+ "fullName": "Juneo-Lab/decision-forge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Compile organizational policy into verifiable decision training data.",
+ "extractor": "heuristic",
+ "readmeHash": "fcde11becaa0",
+ "version": 1,
+ "generatedAt": "2026-11-11T15:13:30.047Z"
+}

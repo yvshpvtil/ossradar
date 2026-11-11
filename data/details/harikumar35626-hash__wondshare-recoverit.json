@@ -1,0 +1,16 @@
+{
+ "fullName": "harikumar35626-hash/wondshare-recoverit",
+ "whoItsFor": null,
+ "useCases": [
+  "Comprehensive Recovery Engine: Restores deleted, formatted, or lost files across the full range of storage media, including internal and ext",
+  "Broad File System Coverage: Supports recovery from NTFS, FAT16, FAT32, exFAT, HFS+, APFS, ext2/ext3/ext4, and ReFS volumes. The parser layer",
+  "Multi-Format File Reconstruction: Recognizes and recovers over 1,000 distinct file signatures spanning documents, spreadsheets, presentation"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The wondshare-recoverit desktop package delivers a fully functional installer that deploys complete data recovery capabilities directly…",
+ "extractor": "heuristic",
+ "readmeHash": "a1c0f1e78559",
+ "version": 1,
+ "generatedAt": "2026-11-11T15:13:30.036Z"
+}
