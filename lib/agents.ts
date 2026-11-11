@@ -169,7 +169,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 2. **Browse:** [${SITE.url}/llms.txt](${SITE.url}/llms.txt) for key pages + top rankings.
 3. **Bulk:** [${SITE.url}/llms-full.txt](${SITE.url}/llms-full.txt) or [${SITE.url}/api/v1/trending](${SITE.url}/api/v1/trending) (JSON, free, no key; please link back).
 4. **One repo:** \`${SITE.url}/api/v1/repo/{owner}/{name}\`, the Markdown twin \`${SITE.url}/repo/{owner}/{name}.md\`, and the HTML page \`${SITE.url}/repo/{owner}/{name}\`.
-5. **One day:** \`${SITE.url}/daily/{YYYY-MM-DD}.md\` (that UTC day's top 25 gainers as Markdown; HTML at \`${SITE.url}/daily/{YYYY-MM-DD}\`).
+5. **One day:** \`${SITE.url}/daily/{YYYY-MM-DD}.md\` (that UTC day's top 25 gainers as Markdown; HTML at \`${SITE.url}/daily/{YYYY-MM-DD}\`; \`${SITE.url}/daily/latest.md\` redirects to the newest completed day).
 6. **One category:** \`${SITE.url}/category/{slug}.md\` (that category's tracked repos ranked by 7-day star gain, as Markdown; slugs and HTML hubs at \`${SITE.url}/category\`).
 7. **Trending views:** \`${SITE.url}/trending/{slug}.md\` (the top 50 of each trending view as Markdown: \`ai-repos-this-week\`, \`github-repos-today\`, \`new-ai-repos\`; HTML without the .md).
 8. **Alternatives:** \`${SITE.url}/alternatives/{owner}/{name}.md\` (open-source alternatives to one repo, ranked by shared GitHub topics, as Markdown; repos with a page are listed at \`${SITE.url}/alternatives\`; HTML without the .md).

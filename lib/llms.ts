@@ -121,7 +121,7 @@ function header(): string {
   const example = top ? `${SITE.url}/repo/${top.owner}/${top.name}` : `${SITE.url}/repo/{owner}/{name}`;
   const days = getArchiveDays();
   const dailyPattern = days.length
-    ? `\n- Daily archive: ${SITE.url}/daily/{YYYY-MM-DD} (one completed UTC day's top gainers; ${days.length} days from ${days[days.length - 1]} to ${days[0]}, e.g. ${SITE.url}/daily/${days[0]}; append .md for the same list as Markdown, e.g. ${SITE.url}/daily/${days[0]}.md)`
+    ? `\n- Daily archive: ${SITE.url}/daily/{YYYY-MM-DD} (one completed UTC day's top gainers; ${days.length} days from ${days[days.length - 1]} to ${days[0]}, e.g. ${SITE.url}/daily/${days[0]}; append .md for the same list as Markdown, e.g. ${SITE.url}/daily/${days[0]}.md; ${SITE.url}/daily/latest and ${SITE.url}/daily/latest.md always redirect to the newest day)`
     : "";
   return `# ${SITE.name}
 

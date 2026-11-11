@@ -1,5 +1,23 @@
 import type { NextConfig } from "next";
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
 import { LANGUAGE_TOPICS, TOPIC_ALIASES } from "./lib/topicAliases";
+
+/**
+ * Newest completed archive day, same rule as getArchiveDays() in lib/daily.ts (a snapshot before
+ * today's with the previous day's snapshot present). Read at build; the hourly rebuild keeps it fresh.
+ */
+function latestArchiveDay(): string | null {
+  try {
+    const dir = path.join(process.cwd(), "data", "snapshots");
+    const today = (JSON.parse(readFileSync(path.join(process.cwd(), "data", "repos.json"), "utf8")) as { snapshotDate?: string }).snapshotDate ?? "9999-12-31";
+    const have = new Set(readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).map((f) => f.slice(0, 10)));
+    const prev = (d: string) => new Date(Date.parse(d + "T00:00:00Z") - 86_400_000).toISOString().slice(0, 10);
+    return [...have].filter((d) => d < today && have.has(prev(d))).sort().pop() ?? null;
+  } catch {
+    return null;
+  }
+}
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -30,6 +48,14 @@ const nextConfig: NextConfig = {
       ...["/archive", "/archives"].map((source) => ({ source, destination: "/daily", permanent: true })),
       ...["/leaderboard", "/search"].map((source) => ({ source, destination: "/", permanent: true })),
       { source: "/faq", destination: "/about#faq", permanent: true },
+      // Stable "latest" links for the daily archive (newsletter footers, social posts, agents) that always
+      // land on the newest completed day. Temporary (307) because the target moves every day.
+      ...((day) => day ? [
+        ...["/daily/latest", "/latest"].map((source) => ({ source, destination: `/daily/${day}`, permanent: false })),
+        { source: "/daily/latest.md", destination: `/daily/${day}.md`, permanent: false },
+      ] : [])(latestArchiveDay()),
+      // /today guesses mean today's leaderboard, which is the homepage.
+      { source: "/today", destination: "/", permanent: true },
       // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
       // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
       ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
