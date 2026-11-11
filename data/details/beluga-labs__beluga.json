@@ -1,0 +1,16 @@
+{
+ "fullName": "beluga-labs/beluga",
+ "whoItsFor": null,
+ "useCases": [
+  "Work on everything at once: every task gets its own worktree, branch and agent, and they all run side by side.",
+  "See every agent work: steps, sub-agents and screenshots arrive live, and you can steer mid-run.",
+  "Answers you can see: live tables, charts, diagrams and task cards right in the conversation."
+ ],
+ "installCommand": "curl -fsSL https://github.com/beluga-labs/beluga/releases/latest/download/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Describe a task and Beluga makes a fresh worktree for it: its own folder, branch and agent, named for the task.",
+ "extractor": "heuristic",
+ "readmeHash": "d495b59a40f1",
+ "version": 1,
+ "generatedAt": "2026-11-11T19:21:17.470Z"
+}
