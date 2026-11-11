@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, twitterImage, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { RazorpayButton } from "@/components/RazorpayButton";
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: pageAlternates("/sponsor"),
-  openGraph: { ...ogDefaults, title, description, url: "/sponsor" },
-  twitter: { ...twitterDefaults, title, description, ...twitterImage },
+  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/sponsor" },
+  twitter: { ...twitterDefaults, title, description },
 };
 
 export default function SponsorPage() {
