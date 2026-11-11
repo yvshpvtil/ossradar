@@ -57,6 +57,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACTIVITY_LIMIT: "150"
 
+      - name: GitHub transfers and renames (old repo URLs 308 to the new ones)
+        run: npx tsx scripts/renames.ts
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RENAMES_LIMIT: "60"
+
       - name: Commit data if changed
         run: |
           git config user.name "github-actions[bot]"

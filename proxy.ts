@@ -20,6 +20,17 @@ const REPO_TOPICS = new Set<string>(routes.repoTopics);
 /** Repos seen in a daily snapshot that have since left the tracked set (written by scripts/retired.ts at prebuild). */
 const RETIRED = new Set<string>(routes.retired);
 
+/**
+ * Once-tracked repos that GitHub transferred or renamed and that are tracked again under the new
+ * owner/name (scripts/renames.ts -> routes.ts): lowercased old owner/name -> canonical new one.
+ * Their old URLs 308 to the new pages instead of answering 410, like GitHub's own redirect.
+ */
+const MOVED: Record<string, string> = (routes as { moved?: Record<string, string> }).moved ?? {};
+const movedTo = (owner: string, name: string) => {
+  const key = `${owner}/${name}`.toLowerCase();
+  return Object.hasOwn(MOVED, key) ? MOVED[key] : undefined;
+};
+
 /** Tracked repo by owner/name, case-insensitive, with its canonical casing (same as getRepo). */
 function getRepo(owner: string, name: string): { owner: string; name: string; full: string } | undefined {
   const full = `${owner}/${name}`.toLowerCase();
@@ -191,12 +202,16 @@ export function proxy(req: NextRequest) {
     // Markdown twin for chatbots and agents: /repo/{owner}/{name}.md (canonical casing enforced).
     if (parts.length === 3 && raw[0] === "repo" && /\.md$/i.test(parts[2])) {
       const md = getRepo(parts[1], parts[2].slice(0, -3));
+      const mdMoved = md ? undefined : movedTo(parts[1], parts[2].slice(0, -3));
+      if (mdMoved) return redirectTo(`/repo/${mdMoved}.md`);
       if (!md) return notFound();
       const want = `/repo/${md.owner}/${md.name}.md`;
       if (`/${raw.join("/")}` !== want) return redirectTo(want);
       return NextResponse.rewrite(new URL(`/md/repo/${md.owner}/${md.name}`, req.url));
     }
     const repo = getRepo(parts[1], parts[2]);
+    const moved = repo || parts.length !== 3 ? undefined : movedTo(parts[1], parts[2]);
+    if (moved) return redirectTo(`/repo/${moved}`);
     if (!repo) return parts.length === 3 && RETIRED.has(`${parts[1]}/${parts[2]}`.toLowerCase()) ? gone(`${parts[1]}/${parts[2]}`) : notFound();
     const canonical = `/repo/${repo.owner}/${repo.name}`;
     if (parts.length === 3 && `/${raw.join("/")}` !== canonical) return redirectTo(canonical);
@@ -208,6 +223,8 @@ export function proxy(req: NextRequest) {
   } else if (section === "alternatives" && parts.length === 3 && /\.md$/i.test(parts[2])) {
     // Markdown twin for chatbots and agents: /alternatives/{owner}/{name}.md (canonical casing enforced).
     const md = getRepo(parts[1], parts[2].slice(0, -3));
+    const mdMoved = md ? undefined : movedTo(parts[1], parts[2].slice(0, -3));
+    if (mdMoved) return redirectTo(ALTERNATIVES.has(mdMoved.toLowerCase()) ? `/alternatives/${mdMoved}.md` : `/repo/${mdMoved}.md`);
     if (!md || !hasAlternativesPage(md)) return notFound();
     const want = `/alternatives/${md.owner}/${md.name}.md`;
     if (`/${raw.join("/")}` !== want) return redirectTo(want);
@@ -218,6 +235,8 @@ export function proxy(req: NextRequest) {
     const isCard = parts[3] === "opengraph-image" && raw[0] === "alternatives";
     const ok = parts.length === 3 || (isCard && (parts.length === 4 || (parts.length === 5 && parts[4] === "card")));
     const repo = ok ? getRepo(parts[1], parts[2]) : undefined;
+    const moved = repo || parts.length !== 3 ? undefined : movedTo(parts[1], parts[2]);
+    if (moved) return redirectTo(ALTERNATIVES.has(moved.toLowerCase()) ? `/alternatives/${moved}` : `/repo/${moved}`);
     // A tracked repo whose alternatives page was retired (too few close matches) sends visitors and
     // old links to its repo page, which still lists related repos, instead of a dead end.
     if (repo && parts.length === 3 && !hasAlternativesPage(repo)) return redirectTo(`/repo/${repo.owner}/${repo.name}`);
