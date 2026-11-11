@@ -50,6 +50,8 @@ const nextConfig: NextConfig = {
       { source: "/faq", destination: "/about#faq", permanent: true },
       // /contact and /contact-us 404ed; the contact email lives in the about page's "Who's behind it" section.
       ...["/contact", "/contact-us"].map((source) => ({ source, destination: "/about#contact", permanent: true })),
+      // RFC 9116 allows security.txt at the root as a legacy location; the file lives under /.well-known.
+      { source: "/security.txt", destination: "/.well-known/security.txt", permanent: true },
       // Would-be sponsors guess the usual "advertise with us" paths (/sponsors, /advertise, /pricing...),
       // which 404ed and lost the visitor most likely to buy a slot. The one sales page is /sponsor.
       ...["/sponsors", "/sponsorship", "/sponsorships", "/advertise", "/advertising", "/ads", "/pricing"].map((source) => ({ source, destination: "/sponsor", permanent: true })),
