@@ -80,6 +80,19 @@ function isLanguageTopic(t: string): boolean {
 /** True for a shared topic that says what a repo does, not where it runs, what it's written in or built with. */
 const isDescriptiveTopic = (t: string) => !PLATFORM_TOPICS.has(t) && !STACK_TOPICS.has(t) && !isLanguageTopic(t);
 
+/**
+ * Field and model-vendor tags: they say a repo is "AI" or works with a given model provider, not what it
+ * does. They still add to a match's score, but one can't be the specific topic that makes two repos
+ * alternatives: Paperless-ngx (document manager) and RocketRide (pipeline engine) only shared
+ * ai + machine-learning; a DeepSeek CLI and Dify only shared deepseek + llm; OpenHands and a SaaS
+ * starter only shared chatgpt + llm. Several shared vendor tags together (openai + anthropic + gemini)
+ * do mark peers, multi-provider chat apps or gateways, so MULTI_VENDOR_MIN of them still count.
+ */
+const FIELD_TOPICS = new Set(["ai", "artificial-intelligence", "machine-learning", "deep-learning", "generative-ai", "genai", "llm", "llms", "large-language-models", "ai-tools", "agentic-ai", "ai-agents", "agent", "agents", "openai", "anthropic", "claude", "chatgpt", "gpt", "gemini", "deepseek"]);
+const MULTI_VENDOR_MIN = 3;
+/** A broad overlap of field tags (agent + ai + generative-ai + llm + openai: Dify and LangChain) still marks peers when their summed topicWeight reaches this. */
+const RICH_OVERLAP = 8;
+
 let nicheCache: ((t: string) => boolean) | null = null;
 function isNicheTopic(t: string): boolean {
   if (!nicheCache) {
@@ -123,16 +136,18 @@ function isCategoryDefining(t: string, category?: string): boolean {
 /**
  * Same category: at least two shared descriptive topics (platform, language and framework tags like linux, typescript,
  * nodejs or react don't count, so rea and Mastra aren't alternatives just for both being TypeScript MCP repos), one of them
- * specific and not category-defining. Another category (only used to
+ * specific, not category-defining and not a field/vendor tag (FIELD_TOPICS; or MULTI_VENDOR_MIN shared vendor tags). Another category (only used to
  * fill pages with fewer than ALT_SHORT same-category matches): at least three shared descriptive,
  * specific topics (not platform, language or framework tags, and not broad tags like ai-agents, llm or
- * mcp that sit on 10%+ of tracked repos), two of them niche, since the category heuristic can split close peers (ollama sits in Local LLMs while
+ * mcp that sit on 10%+ of tracked repos), two of them niche and not field/vendor tags, since the category heuristic can split close peers (ollama sits in Local LLMs while
  * vllm, sglang and unsloth, which share its model-family tags, sit in LLM tooling).
  */
 function isCloseMatch(shared: string[], sameCategory: boolean, category?: string): boolean {
+  const specific = shared.filter((t) => isDescriptiveTopic(t) && isSpecificTopic(t));
+  const anchored = specific.some((t) => !FIELD_TOPICS.has(t) && !isCategoryDefining(t, category)) || specific.filter((t) => FIELD_TOPICS.has(t)).length >= MULTI_VENDOR_MIN || shared.filter(isDescriptiveTopic).reduce((s, t) => s + topicWeight(t), 0) >= RICH_OVERLAP;
   return sameCategory
-    ? shared.filter(isDescriptiveTopic).length >= 2 && shared.some((t) => isDescriptiveTopic(t) && isSpecificTopic(t) && !isCategoryDefining(t, category))
-    : shared.filter((t) => isDescriptiveTopic(t) && isSpecificTopic(t)).length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t)).length >= 2;
+    ? shared.filter(isDescriptiveTopic).length >= 2 && anchored
+    : specific.length >= 3 && shared.filter((t) => isDescriptiveTopic(t) && isNicheTopic(t) && !FIELD_TOPICS.has(t)).length >= 2;
 }
 
 /**
