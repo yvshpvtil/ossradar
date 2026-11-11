@@ -1,0 +1,12 @@
+{
+ "fullName": "alexeyw/lot-map",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A mod for Claude Code: a live map of the work, in a pane beside the chat.",
+ "extractor": "heuristic",
+ "readmeHash": "ec077aff1764",
+ "version": 1,
+ "generatedAt": "2026-11-11T23:09:37.733Z"
+}
