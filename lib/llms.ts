@@ -168,7 +168,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - New repos as Markdown: ${SITE.url}/new.md (tracked repos created on GitHub in the last 14 days, grouped by launch day, with stars, 7-day gain, category and language)
 - Homepage leaderboard as Markdown: ${SITE.url}/index.md (today's top 25 and this week's top 10 by stars gained, with links to every Markdown view)
 - Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new or /hacker-news, with the header Accept: text/markdown to get its Markdown twin at the same URL
-- README badge (SVG): ${SITE.url}/badge/{owner}/{name}${dailyPattern}
+- README badge (SVG): ${SITE.url}/badge/{owner}/{name} (shows "Trending #N" for today's top 100, else "Tracked"; embed guide: ${SITE.url}/badge)${dailyPattern}
 
 ## Categories
 

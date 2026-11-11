@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/language`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/compare`, lastModified, changeFrequency: "daily", priority: 0.5 },
     { url: `${SITE.url}/submit`, lastModified: STATIC_LASTMOD.submit, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${SITE.url}/badge`, lastModified: STATIC_LASTMOD.badge, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE.url}/about`, lastModified: STATIC_LASTMOD.about, changeFrequency: "monthly", priority: 0.4 },
     // Agent/chatbot discovery files: also advertised via <link rel="alternate"> and Dataset JSON-LD.
     // Listing root + /.well-known twins in the sitemap helps crawlers that start from sitemap.xml

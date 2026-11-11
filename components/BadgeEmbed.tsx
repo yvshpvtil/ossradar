@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export function BadgeEmbed({ owner, name, siteUrl, width }: { owner: string; name: string; siteUrl: string; width: number }) {
@@ -20,7 +21,7 @@ export function BadgeEmbed({ owner, name, siteUrl, width }: { owner: string; nam
   return (
     <section className="mt-6 rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
       <h2 className="mb-1 text-sm font-semibold">Maintainer? Add the badge to your README</h2>
-      <p className="mb-3 text-xs text-zinc-500">Shows your live OSS Radar rank and links back here. Updates hourly.</p>
+      <p className="mb-3 text-xs text-zinc-500">Shows your live OSS Radar rank and links back here. Updates hourly. <Link href="/badge" className="underline">How the badge works</Link>.</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`/badge/${owner}/${name}`} alt="OSS Radar badge preview" width={width} height={20} loading="lazy" decoding="async" className="mb-3 h-5" />
       {[
