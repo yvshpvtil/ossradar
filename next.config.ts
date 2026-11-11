@@ -48,6 +48,8 @@ const nextConfig: NextConfig = {
       ...["/archive", "/archives"].map((source) => ({ source, destination: "/daily", permanent: true })),
       ...["/leaderboard", "/search"].map((source) => ({ source, destination: "/", permanent: true })),
       { source: "/faq", destination: "/about#faq", permanent: true },
+      // /contact and /contact-us 404ed; the contact email lives in the about page's "Who's behind it" section.
+      ...["/contact", "/contact-us"].map((source) => ({ source, destination: "/about#contact", permanent: true })),
       // Would-be sponsors guess the usual "advertise with us" paths (/sponsors, /advertise, /pricing...),
       // which 404ed and lost the visitor most likely to buy a slot. The one sales page is /sponsor.
       ...["/sponsors", "/sponsorship", "/sponsorships", "/advertise", "/advertising", "/ads", "/pricing"].map((source) => ({ source, destination: "/sponsor", permanent: true })),

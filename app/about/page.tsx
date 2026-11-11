@@ -187,10 +187,15 @@ export default function AboutPage() {
           mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
         }}
       />
-      <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Who&apos;s behind it</h2>
+      <h2 id="contact" className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Who&apos;s behind it</h2>
       <p>
         Built by <a className="underline" href={SITE.github}>{SITE.owner}</a>. Want your product in front of this
         audience? See <Link className="underline" href="/sponsor">sponsorship</Link>.
+      </p>
+      <p>
+        Contact: <a className="underline" href={`mailto:${SITE.sponsorEmail}`}>{SITE.sponsorEmail}</a> for corrections,
+        removal requests, data questions or partnerships. To suggest a repo, use the{" "}
+        <Link className="underline" href="/submit">submit form</Link>.
       </p>
 
       <NewsletterForm />
