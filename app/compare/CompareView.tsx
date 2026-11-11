@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export type CompareRow = {
   fullName: string; owner: string; name: string; description: string; ownerAvatar: string;
@@ -11,8 +11,9 @@ export type CompareRow = {
   language: string | null; category: string; created: string; pushed: string; release: string; hn: string;
 };
 
-// Rows travel to the client as positional tuples (no repeated keys, avatar
-// URLs shortened to the numeric GitHub user id) to keep the page's payload small.
+// Rows travel as positional tuples (no repeated keys, avatar URLs shortened to the numeric
+// GitHub user id). They used to be embedded in the page (~150 KB of RSC JSON for 450 repos);
+// now the CDN-cached /compare-data.json is fetched only once a repo is picked (?r=) or the search box is used.
 export type PackedRow = [string, string, string, number, number, number, number, 0 | 1, string | null, string, string, string, string, string];
 const AVATAR = "https://avatars.githubusercontent.com/u/";
 function unpackRow(p: PackedRow): CompareRow {
@@ -36,9 +37,24 @@ const METRICS: { label: string; hint?: string; get: (r: CompareRow) => string; n
   { label: "Hacker News", get: (r) => r.hn },
 ];
 
-export function CompareView({ packed }: { packed: PackedRow[] }) {
-  const rows = useMemo(() => packed.map(unpackRow), [packed]);
+export function CompareView() {
   const params = useSearchParams();
+  const [packed, setPacked] = useState<PackedRow[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [wanted, setWanted] = useState(false);
+  const want = wanted || Boolean(params.get("r"));
+  useEffect(() => {
+    if (!want || packed) return;
+    let live = true;
+    fetch("/compare-data.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((d: { rows: PackedRow[] }) => live && setPacked(d.rows))
+      .catch(() => live && setFailed(true));
+    return () => {
+      live = false;
+    };
+  }, [want, packed]);
+  const rows = useMemo(() => (packed ?? []).map(unpackRow), [packed]);
   const router = useRouter();
   const pathname = usePathname();
   const byName = useMemo(() => new Map(rows.map((r) => [r.fullName.toLowerCase(), r])), [rows]);
@@ -55,7 +71,7 @@ export function CompareView({ packed }: { packed: PackedRow[] }) {
       {picked.length < 3 && (
         <div className="relative max-w-md">
           <label htmlFor="cmp-q" className="sr-only">Add a repo</label>
-          <input id="cmp-q" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Add a repo, e.g. ollama"
+          <input id="cmp-q" value={q} onFocus={() => setWanted(true)} onChange={(e) => { setWanted(true); setQ(e.target.value); }} placeholder="Add a repo, e.g. ollama"
             className="h-10 w-full rounded-md border border-zinc-300 bg-white px-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 dark:border-zinc-700 dark:bg-zinc-900" />
           {matches.length > 0 && (
             <ul className="absolute z-10 mt-1 w-full overflow-hidden rounded-md border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
@@ -70,7 +86,9 @@ export function CompareView({ packed }: { packed: PackedRow[] }) {
           )}
         </div>
       )}
-      {picked.length === 0 ? (
+      {want && !packed ? (
+        <p className="mt-4 text-sm text-zinc-500" aria-live="polite">{failed ? "Couldn't load repo data. Refresh to try again." : "Loading repo data…"}</p>
+      ) : picked.length === 0 ? (
         <p className="mt-4 text-sm text-zinc-500">Search above to add a repo. You can also use the “Compare” button on any repo page.</p>
       ) : (
         <div className="mt-6 overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">

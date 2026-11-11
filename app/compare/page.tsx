@@ -1,4 +1,3 @@
-import { repoBlurb } from "@/lib/blurb";
 import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
@@ -6,11 +5,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { CATEGORIES, categoryLabel } from "@/lib/categories";
+import { CATEGORIES } from "@/lib/categories";
 import { ago, getLatestRelease } from "@/lib/activity";
-import { getHnMentions } from "@/lib/mentions";
 import { altLabel } from "@/lib/alternatives";
-import { CompareView, type CompareRow, type PackedRow } from "./CompareView";
+import { CompareView } from "./CompareView";
 import type { Repo } from "@/lib/types";
 
 const title = "Compare GitHub repos side by side";
@@ -87,12 +85,6 @@ function headToHead(a: Repo, b: Repo, now: number): string[] {
   return out;
 }
 
-// Client functions can't be called from a server component, so packing lives here.
-function packRow(r: CompareRow): PackedRow {
-  const m = r.ownerAvatar.match(/^https:\/\/avatars\.githubusercontent\.com\/u\/(\d+)\?v=4$/);
-  return [r.fullName, r.description, m ? m[1] : r.ownerAvatar, r.stars, r.forks, r.delta24h, r.delta7d, r.est ? 1 : 0, r.language, r.category, r.created, r.pushed, r.release, r.hn];
-}
-
 const GUIDE: { term: string; text: string }[] = [
   { term: "Stars", text: "GitHub's bookmark button. A high total means many developers noticed the project at some point; it says little about whether it is still maintained." },
   { term: "Stars gained (24 hours, 7 days)", text: "Momentum. OSS Radar ranks repos by these gains, so a young project gaining fast can outrank an older one with far more total stars." },
@@ -104,17 +96,6 @@ const GUIDE: { term: string; text: string }[] = [
 export default function ComparePage() {
   const data = getData();
   const now = Date.parse(data.generatedAt);
-  const rows: CompareRow[] = data.repos.map((r) => {
-    const rel = getLatestRelease(r.fullName);
-    const hn = getHnMentions(r.fullName);
-    return {
-      fullName: r.fullName, owner: r.owner, name: r.name, description: repoBlurb(r) ?? "", ownerAvatar: r.ownerAvatar,
-      stars: r.stars, forks: r.forks, delta24h: r.delta24h, delta7d: r.delta7d, est: r.velocityEstimated,
-      language: r.language, category: categoryLabel(r.category), created: ago(r.createdAt, now), pushed: ago(r.pushedAt, now),
-      release: rel ? `${rel.tag} (${ago(rel.date, now)})` : rel === null ? "None" : "—",
-      hn: hn ? (hn.count ? `${hn.count} stories, ${hn.points.toLocaleString("en-US")} points` : "None") : "—",
-    };
-  });
   const popular = popularComparisons(6);
   const popularItems = popular.map(({ a, b }) => {
     // Brand spelling for ItemList + "Popular comparisons" anchors (same as meta / head-to-heads).
@@ -147,7 +128,7 @@ export default function ComparePage() {
         </div>
       )}
       <Suspense fallback={<p className="mt-6 text-sm text-zinc-500">Loading…</p>}>
-        <CompareView packed={rows.map(packRow)} />
+        <CompareView />
       </Suspense>
       {popular.length > 0 && (
         <section className="mt-12">

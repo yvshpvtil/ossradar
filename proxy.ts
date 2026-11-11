@@ -82,7 +82,7 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "sponsor", "submit", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json"]);
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "sponsor", "submit", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
 const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home"]);
