@@ -11,6 +11,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-22T02:23:50.366Z"
  },
+ "3641397194-wq/gpt6-Astra": {
+  "text": "Desktop tool that installs jailbreak configs into 15 AI model apps with backup and uninstall, plus a paid API relay.",
+  "basis": "71330ed9e6c2",
+  "source": "claude -p",
+  "generatedAt": "2026-11-11T02:17:50.048Z"
+ },
  "78/xiaozhi-esp32": {
   "text": "Voice chatbot for ESP32 boards that uses large models like Qwen and DeepSeek and controls devices through MCP.",
   "basis": "2e956c27b994",
@@ -245,6 +251,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-29T02:22:39.219Z"
  },
+ "YT-Proteus-bot/MineAgent": {
+  "text": "A local browser canvas for building AI agent flows with nodes and code that compiles them into runnable Python projects.",
+  "basis": "410c65262359",
+  "source": "claude -p",
+  "generatedAt": "2026-11-11T02:17:45.757Z"
+ },
  "YoyoLin008/mcreplay": {
   "text": "Captures the structure of McDonald's China MCP responses, reports changes between them, and replays them locally over MCP.",
   "basis": "992795a41f52",
@@ -454,6 +466,12 @@
   "basis": "676edb9fbef8",
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:24:58.007Z"
+ },
+ "fanhuayishiy/ai-crew-pass": {
+  "text": "A web page lets you pick, flip and download 3D badges for nine AI chatbots as transparent PNGs, in Chinese or English.",
+  "basis": "dd511c0c7578",
+  "source": "claude -p",
+  "generatedAt": "2026-11-11T02:17:45.981Z"
  },
  "flizzywine/dsh-tavern": {
   "text": "A SillyTavern-compatible text roleplay game agent built on DeepSeek Harness that plays imported character cards.",
