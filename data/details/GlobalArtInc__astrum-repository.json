@@ -1,0 +1,12 @@
+{
+ "fullName": "GlobalArtInc/astrum-repository",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Astrum Repository is GlobalArt's artifact repository manager. It hosts, proxies and groups Alpine, Ansible Galaxy, APT, Bazel, Cargo, Chef…",
+ "extractor": "heuristic",
+ "readmeHash": "2d2e16c42574",
+ "version": 1,
+ "generatedAt": "2026-11-12T05:21:46.706Z"
+}
