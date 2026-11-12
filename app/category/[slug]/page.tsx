@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: PageProps<"/category/[slug]">
   return {
     title,
     description,
-    alternates: { ...pageAlternates(`/category/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/category/${slug}.md`, title: `${title} (Markdown)` }] } },
+    alternates: { ...pageAlternates(`/category/${slug}`), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: `/category/${slug}/rss.xml`, title: `${title} (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]], "text/markdown": [{ url: `/category/${slug}.md`, title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/category/${slug}` },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };

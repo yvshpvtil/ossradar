@@ -284,6 +284,11 @@ export function proxy(req: NextRequest) {
     if (!isArchiveDay(day)) return notFound();
     if (`/${raw.join("/")}` !== `/daily/${day}.md`) return redirectTo(`/daily/${day}.md`);
     return NextResponse.rewrite(new URL(`/md/daily/${day}`, req.url));
+  } else if (section === "category" && parts.length === 3 && parts[2] === "rss.xml") {
+    // Per-category RSS feed: /category/{slug}/rss.xml (lowercase path enforced).
+    if (!CATEGORIES.has(slug)) return notFound();
+    if (`/${raw.join("/")}` !== `/category/${slug}/rss.xml`) return redirectTo(`/category/${slug}/rss.xml`);
+    return NextResponse.next();
   } else if (parts.length > 1 && Object.hasOwn(HUBS, section)) {
     // Bare /category, /language, /topic and /daily are index pages; only hub paths are checked:
     // the slug page, plus its Open Graph card route when requested exactly as generated.
