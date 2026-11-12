@@ -8,15 +8,18 @@ import { badgeSpec } from "@/lib/badge";
 import { SITE } from "@/lib/site";
 import { BadgeLookup } from "./BadgeLookup";
 
-const title = "OSS Radar README badge for your GitHub repo";
+// <title> gets the " · OSS Radar" suffix from the root template, so the page title stays brand-free;
+// social cards and JSON-LD have no suffix, so they carry the brand in the name.
+const title = "README badge for your GitHub repo";
+const socialTitle = `${SITE.name} README badge for your GitHub repo`;
 const description = `Add a live ${SITE.name} badge to your README. It shows your repo's trending rank by daily star growth, updates hourly and links to its star history page.`;
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: pageAlternates("/badge"),
-  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, images: ogDefaults.images, title, description, url: "/badge" },
-  twitter: { ...twitterDefaults, title, description },
+  openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, images: ogDefaults.images, title: socialTitle, description, url: "/badge" },
+  twitter: { ...twitterDefaults, title: socialTitle, description },
 };
 
 export default function BadgePage() {
@@ -27,7 +30,7 @@ export default function BadgePage() {
   return (
     <div className="max-w-2xl">
       <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "README badge", path: "/badge" }])} />
-      <JsonLd data={staticPageLd({ name: title, description, path: "/badge" })} />
+      <JsonLd data={staticPageLd({ name: socialTitle, description, path: "/badge" })} />
       <PageNav crumbs={[{ name: "README badge" }]} fallbackHref={"/"} />
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">For maintainers</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">README badge</h1>
