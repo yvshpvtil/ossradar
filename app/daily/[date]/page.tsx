@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps<"/daily/[date]">): 
   if (!getArchiveDays().includes(date)) return {};
   const title = `Fastest-rising GitHub repos on ${formatDate(date)}`;
   const description = dailyDescription(date);
-  return { title, description, alternates: { ...pageAlternates(`/daily/${date}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/daily/${date}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: `/daily/${date}` }, twitter: { ...twitterDefaults, title, description } };
+  return { title, description, alternates: { ...pageAlternates(`/daily/${date}`), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: "/daily/rss.xml", title: `${SITE.name} daily top 10 (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]], "text/markdown": [{ url: `/daily/${date}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: `/daily/${date}` }, twitter: { ...twitterDefaults, title, description } };
 }
 
 export default async function DailyPage({ params }: PageProps<"/daily/[date]">) {

@@ -284,6 +284,10 @@ export function proxy(req: NextRequest) {
     if (!isArchiveDay(day)) return notFound();
     if (`/${raw.join("/")}` !== `/daily/${day}.md`) return redirectTo(`/daily/${day}.md`);
     return NextResponse.rewrite(new URL(`/md/daily/${day}`, req.url));
+  } else if (section === "daily" && parts.length === 2 && slug === "rss.xml") {
+    // Daily digest feed: /daily/rss.xml (lowercase path enforced).
+    if (`/${raw.join("/")}` !== "/daily/rss.xml") return redirectTo("/daily/rss.xml");
+    return NextResponse.next();
   } else if (section === "category" && parts.length === 3 && parts[2] === "rss.xml") {
     // Per-category RSS feed: /category/{slug}/rss.xml (lowercase path enforced).
     if (!CATEGORIES.has(slug)) return notFound();

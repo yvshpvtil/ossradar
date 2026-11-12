@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, RSS_ALTERNATE, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
@@ -34,7 +34,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description: d,
-    alternates: pageAlternates("/daily"),
+    alternates: { ...pageAlternates("/daily"), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: "/daily/rss.xml", title: `${SITE.name} daily top 10 (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description: d, url: "/daily" },
     twitter: { ...twitterDefaults, title: socialTitle, description: d },
   };
