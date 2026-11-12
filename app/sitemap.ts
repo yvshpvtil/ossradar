@@ -29,14 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/badge`, lastModified: STATIC_LASTMOD.badge, changeFrequency: "monthly", priority: 0.3 },
     { url: `${SITE.url}/about`, lastModified: STATIC_LASTMOD.about, changeFrequency: "monthly", priority: 0.4 },
     // Agent/chatbot discovery files: also advertised via <link rel="alternate"> and Dataset JSON-LD.
-    // Listing root + /.well-known twins in the sitemap helps crawlers that start from sitemap.xml
-    // (and agents that only probe /.well-known/) find llms.txt / llms-full.txt / agents.md.
+    // Only the canonical root copies are listed: the /.well-known/ twins send Link rel=canonical back
+    // to these, and sitemaps should hold canonical URLs only (non-canonical entries show up as
+    // "Alternate page with proper canonical tag" in Search Console). Agents probing /.well-known/ still get them.
     { url: `${SITE.url}/llms.txt`, lastModified, changeFrequency: "hourly", priority: 0.7 },
     { url: `${SITE.url}/llms-full.txt`, lastModified, changeFrequency: "hourly", priority: 0.6 },
     { url: `${SITE.url}/agents.md`, lastModified, changeFrequency: "hourly", priority: 0.6 },
-    { url: `${SITE.url}/.well-known/llms.txt`, lastModified, changeFrequency: "hourly", priority: 0.5 },
-    { url: `${SITE.url}/.well-known/llms-full.txt`, lastModified, changeFrequency: "hourly", priority: 0.5 },
-    { url: `${SITE.url}/.well-known/agents.md`, lastModified, changeFrequency: "hourly", priority: 0.5 },
     ...CATEGORIES.map((c) => ({
       url: `${SITE.url}/category/${c.slug}`,
       lastModified,
