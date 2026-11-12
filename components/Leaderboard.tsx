@@ -112,6 +112,13 @@ export function Leaderboard({
         if (fullUrl) pendingScroll.current = v.scroll ?? 0;
         else requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, v.scroll ?? 0)));
       } catch {}
+    } else {
+      // Deep link from the address-bar search (OpenSearch), /search?q= or a shared link: /?q=mcp pre-fills the search box.
+      const q = new URLSearchParams(location.search).get("q")?.trim().slice(0, 100);
+      if (q) {
+        loadAll();
+        setQuery(q);
+      }
     }
     restored.current = true;
   }, [loadAll, fullUrl]);
