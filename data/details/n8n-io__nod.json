@@ -1,0 +1,12 @@
+{
+ "fullName": "n8n-io/nod",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Nod is free and open source. You bring your own model provider, which bills you directly.",
+ "extractor": "heuristic",
+ "readmeHash": "8d7091a471b0",
+ "version": 1,
+ "generatedAt": "2026-11-12T01:34:21.962Z"
+}

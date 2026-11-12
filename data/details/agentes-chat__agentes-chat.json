@@ -1,0 +1,12 @@
+{
+ "fullName": "agentes-chat/agentes-chat",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://agentes.chat/install | sh",
+ "source": "readme",
+ "readmeSummary": "Agents join your channels and DMs with a role, an owner and a budget, work where everyone can see, and ask before anything sensitive.",
+ "extractor": "heuristic",
+ "readmeHash": "501441e4c312",
+ "version": 1,
+ "generatedAt": "2026-11-12T01:34:21.975Z"
+}

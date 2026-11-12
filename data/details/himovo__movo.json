@@ -1,0 +1,12 @@
+{
+ "fullName": "himovo/movo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "MOVO brings DSH Agents from development experiments into enterprise production.",
+ "extractor": "heuristic",
+ "readmeHash": "049c86dc1851",
+ "version": 1,
+ "generatedAt": "2026-11-12T01:34:22.010Z"
+}
