@@ -65,6 +65,11 @@ const nextConfig: NextConfig = {
       ] : [])(latestArchiveDay()),
       // /today guesses mean today's leaderboard, which is the homepage.
       { source: "/today", destination: "/", permanent: true },
+      // Guessed /trending/{period} paths (GitHub-trending style URLs, people editing the address bar) 404ed;
+      // send them to the matching trending landing page.
+      ...["/trending/today", "/trending/daily", "/trending/day", "/trending/24h"].map((source) => ({ source, destination: "/trending/github-repos-today", permanent: true })),
+      ...["/trending/week", "/trending/weekly", "/trending/this-week", "/trending/7d", "/trending/ai", "/weekly", "/this-week"].map((source) => ({ source, destination: "/trending/ai-repos-this-week", permanent: true })),
+      ...["/trending/new", "/trending/new-repos", "/trending/new-ai"].map((source) => ({ source, destination: "/trending/new-ai-repos", permanent: true })),
       // iOS Safari, link-preview fetchers and favicon crawlers request the legacy root paths directly
       // (ignoring <link rel="apple-touch-icon">), which 404ed. The icon lives at /apple-icon.png.
       ...["/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"].map((source) => ({ source, destination: "/apple-icon.png", permanent: true })),
