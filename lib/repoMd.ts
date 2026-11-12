@@ -4,6 +4,7 @@ import { getData, getRepos, rankRepos } from "@/lib/data";
 import { getDetails } from "@/lib/details";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { getHnMentions } from "@/lib/mentions";
+import { isThinRepo } from "@/lib/thin";
 import { SITE } from "@/lib/site";
 import type { Repo } from "@/lib/types";
 import { dropTemplateWhy } from "@/lib/whyNotes";
@@ -65,6 +66,15 @@ export function repoMarkdown(r: Repo): string {
     lines.push("", "## Alternatives", "");
     for (const a of alts) lines.push(`- [${altLabel(a.repo)}](${SITE.url}/repo/${a.repo.owner}/${a.repo.name}): ${formatDelta(a.repo.delta7d)} stars this week`);
     lines.push("", `More: ${SITE.url}${alternativesPath(r)}`);
+  }
+  // Same "More from {owner}" list as the HTML page: the owner's other tracked, indexable repos.
+  const listed = new Set([r.fullName, ...alts.map((a) => a.repo.fullName)]);
+  const fromOwner = rankRepos(all, "week")
+    .filter((x) => x.owner.toLowerCase() === r.owner.toLowerCase() && !listed.has(x.fullName) && !isThinRepo(x))
+    .slice(0, 6);
+  if (fromOwner.length) {
+    lines.push("", `## More from ${r.owner} on ${SITE.name}`, "");
+    for (const x of fromOwner) lines.push(`- [${altLabel(x)}](${SITE.url}/repo/${x.owner}/${x.name}): ${formatDelta(x.delta7d)} stars this week`);
   }
   lines.push(
     "",
