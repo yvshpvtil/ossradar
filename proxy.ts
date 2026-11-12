@@ -87,6 +87,12 @@ const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", 
 /** Internal route folders under app/md (one per .md twin type). */
 const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home"]);
 
+/** First segments that are real routes or sections, never a GitHub owner in the /{owner}/{name} shortcut. */
+const RESERVED = new Set([...Object.keys(HUBS), ...INDEXES, ...TOP_LEVEL, "repo", "md", "api", "badge", "trending"]);
+const isRepoShortcut = (raw: string[]) =>
+  (raw.length === 2 && !/^[._]/.test(raw[0]) && !RESERVED.has(raw[0].toLowerCase())) ||
+  (raw.length === 3 && raw[0].toLowerCase() === "github.com");
+
 const escapeHtml = (t: string) => t.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 /**
@@ -305,12 +311,22 @@ export function proxy(req: NextRequest) {
     // Previews cached with the old card URL follow it to /opengraph-image/card instead of breaking.
     if (card && withId && parts.length === 3) return redirectTo(`/${section}/${slug}/opengraph-image/card`);
     if (!card) return negotiate(`/md/${section}/${slug}`);
+  } else if (isRepoShortcut(raw)) {
+    // GitHub-style shortcut: swapping github.com for ossradar.net in a repo URL (/{owner}/{name},
+    // also /github.com/{owner}/{name} and a trailing .git) 308s to that repo's page when it is
+    // tracked or moved. Anything else falls through to the normal route (or its 404).
+    const [owner, rawName] = raw.length === 3 ? raw.slice(1) : raw;
+    const name = rawName.replace(/\.git$/i, "");
+    const repo = getRepo(owner, name);
+    const target = repo ? `${repo.owner}/${repo.name}` : movedTo(owner, name);
+    if (target) return redirectTo(`/repo/${target}`);
   }
   return NextResponse.next();
 }
 
 export const config = {
-  // The last entry catches any path whose first segment has an uppercase letter (/Category/mcp,
+  // The two-segment entry (first segment not starting with . or _) and the github.com entry feed
+  // the /{owner}/{name} repo shortcut. The uppercase entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/", "/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*"],
+  matcher: ["/", "/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
 };
