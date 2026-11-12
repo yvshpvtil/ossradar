@@ -1,0 +1,12 @@
+{
+ "fullName": "KenKaiii/Roamies",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @kenkaiiii/gg-ai @kenkaiiii/gg-agent",
+ "source": "readme",
+ "readmeSummary": "Roamies is a little AI buddy that lives on your desktop. It stays by your cursor, talks back in its own voice, keeps track of what you said…",
+ "extractor": "heuristic",
+ "readmeHash": "17c542a137dd",
+ "version": 1,
+ "generatedAt": "2026-11-12T09:21:01.313Z"
+}
