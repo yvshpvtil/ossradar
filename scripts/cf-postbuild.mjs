@@ -26,7 +26,7 @@ if (!existsSync(handler)) throw new Error("run `opennextjs-cloudflare build` fir
 const manifest = JSON.parse(readFileSync(join(root, ".next", "prerender-manifest.json"), "utf8"));
 const CARD_PAGE = /^\/(repo\/[^/]+\/[^/]+|alternatives\/[^/]+\/[^/]+|(category|topic|language|trending|daily)\/[^/]+)$/;
 const cards = Object.keys(manifest.routes)
-  .filter((p) => CARD_PAGE.test(p) && !p.endsWith("/opengraph-image"))
+  .filter((p) => CARD_PAGE.test(p) && !p.endsWith("/opengraph-image") && !p.endsWith(".xml")) // feeds like /daily/rss.xml have no card
   .map((p) => `${p}/opengraph-image/card`);
 
 const port = 3100 + Math.floor(Math.random() * 800);
