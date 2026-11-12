@@ -162,16 +162,22 @@
   "generatedAt": "2026-11-05T02:25:16.936Z"
  },
  "Lanqiao-Luca/ai-java-workflow": {
-  "text": "AI-assisted Java/Spring Boot development workflow for requirements, implementation, testing, review and delivery.",
-  "basis": "6583c047451a",
-  "source": "claude -p",
-  "generatedAt": "2026-11-06T02:20:34.944Z"
+  "text": "AI-assisted Java/Spring Boot development workflow from requirements to code, tests and review, with a sample project.",
+  "basis": "687a59f1045f",
+  "source": "manual",
+  "generatedAt": "2026-11-12T02:21:10.398Z"
  },
  "Lanqiao-Luca/ai-video-marker": {
-  "text": "AI video creation workflow with storyboard methods, assets, templates, and runnable Python pixel-animation examples.",
-  "basis": "02c03176a40b",
-  "source": "claude -p",
-  "generatedAt": "2026-11-05T02:25:16.805Z"
+  "text": "AI video creation workflow covering storyboards, assets, editing and export, with runnable Python pixel-animation examples.",
+  "basis": "dc50e40e41e5",
+  "source": "manual",
+  "generatedAt": "2026-11-12T02:21:10.398Z"
+ },
+ "Lee-xeo/Claude-Cage": {
+  "text": "Lightweight virtual machine for using Claude with isolated network and fingerprint settings, multi-account support and remote control.",
+  "basis": "6a721e0e6260",
+  "source": "manual",
+  "generatedAt": "2026-11-12T02:21:10.398Z"
  },
  "MaryCache/imozuru": {
   "text": "A Claude Code skill that researches unfamiliar fields by following citations and links until reaching original sources.",
@@ -190,6 +196,12 @@
   "basis": "7578ca56755d",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:55.805Z"
+ },
+ "NerverDevs/nervecenter": {
+  "text": "Dashboard for managing new-api / sub2api relay accounts: balances, API keys, usage, rate multipliers and model price comparison.",
+  "basis": "cb052b214cf2",
+  "source": "manual",
+  "generatedAt": "2026-11-12T02:21:10.398Z"
  },
  "NirDiamant/RAG_Techniques": {
   "text": "A collection of notebook tutorials covering advanced Retrieval-Augmented Generation (RAG) techniques, from basic to advanced.",
@@ -244,6 +256,12 @@
   "basis": "12bbd0972389",
   "source": "claude -p",
   "generatedAt": "2026-10-26T02:21:55.985Z"
+ },
+ "XiaoyeCodes/code-animation-prompts": {
+  "text": "341 code-animation style prompts with reference stills and an offline picker, packaged as a Claude Code / Codex skill.",
+  "basis": "fbb305aeaa8e",
+  "source": "manual",
+  "generatedAt": "2026-11-12T02:21:10.398Z"
  },
  "YOURSJEYO/claude-switcher": {
   "text": "Manages local setups for multiple Claude accounts and blocks the app from launching if proxy or IP-leak checks fail.",
