@@ -235,6 +235,12 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
   const compareWith = similar[0] ?? getSimilarRepos(repo)[0];
   const shown = new Set([repo.fullName, ...related.map((r) => r.fullName)]);
   const risingInCat = rankRepos(getReposByCategory(repo.category), "week").filter((r) => !shown.has(r.fullName)).slice(0, 6);
+  // Other tracked repos from the same GitHub owner (a real "more from this maintainer" link GitHub
+  // visitors expect), skipping ones already shown above and thin (noindex) pages.
+  const inCat = new Set(risingInCat.map((r) => r.fullName));
+  const fromOwner = rankRepos(getRepos(), "week")
+    .filter((r) => r.owner.toLowerCase() === repo.owner.toLowerCase() && !shown.has(r.fullName) && !inCat.has(r.fullName) && !isThinRepo(r))
+    .slice(0, 6);
   const todayList = rankRepos(getRepos(), "today");
   const todayIdx = todayList.findIndex((r) => r.fullName === repo.fullName);
   const todayRank = todayIdx + 1;
@@ -482,6 +488,13 @@ export default async function RepoPage({ params }: PageProps<"/repo/[owner]/[nam
               </li>
             ))}
           </ul>
+        )}
+
+        {fromOwner.length > 0 && (
+          <section className="mt-10">
+            <h2 className="mb-3 text-xl font-semibold tracking-tight">More from {repo.owner} on {SITE.name}</h2>
+            <RepoCards repos={fromOwner} />
+          </section>
         )}
 
         {risingInCat.length > 0 && (
