@@ -1,0 +1,12 @@
+{
+ "fullName": "canivel/dynolab",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Dyno Lab is a free, open-source Mac app for running AI models and investigating how they behave.",
+ "extractor": "heuristic",
+ "readmeHash": "0a260765919f",
+ "version": 1,
+ "generatedAt": "2026-11-12T20:04:30.019Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "serveroshq/panel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ServerOS runs the Linux servers you already own from one place. Connect a VPS from any provider with one command, then deploy apps, sites…",
+ "extractor": "heuristic",
+ "readmeHash": "7f8ae8a02a9c",
+ "version": 1,
+ "generatedAt": "2026-11-12T20:04:29.758Z"
+}

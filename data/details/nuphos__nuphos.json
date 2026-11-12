@@ -1,0 +1,16 @@
+{
+ "fullName": "nuphos/nuphos",
+ "whoItsFor": null,
+ "useCases": [
+  "Bots that keep working. Give a Bot a name and a face and chat with it one-on-one. On a cloud computer or a server you keep running, its turn",
+  "Use the subscription you already pay for. Claude Code and Codex each run behind an ACP adapter and sign in with your own Claude or ChatGPT a",
+  "Run it where you want. A runtime can be a cloud computer Nuphos manages, a remote machine you own, or your laptop. Move a conversation betwe"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The open source Grok Bot alternative for teams.",
+ "extractor": "heuristic",
+ "readmeHash": "d70041fdea2f",
+ "version": 1,
+ "generatedAt": "2026-11-12T20:04:29.792Z"
+}

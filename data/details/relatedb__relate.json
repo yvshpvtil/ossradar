@@ -1,0 +1,12 @@
+{
+ "fullName": "relatedb/relate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -sSfL https://relatedb.ai/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "A graph database in a single binary — query it in Cypher, embed it anywhere, deploy nothing.",
+ "extractor": "heuristic",
+ "readmeHash": "1a884874fdbd",
+ "version": 1,
+ "generatedAt": "2026-11-12T20:04:30.009Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Nimbleway/webrouter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"webrouter[all]\"",
+ "source": "readme",
+ "readmeSummary": "WebRouter connects agents to search, extract, live data, answer, research and browsers through one typed interface, across many providers.",
+ "extractor": "heuristic",
+ "readmeHash": "cc7c201b1b11",
+ "version": 1,
+ "generatedAt": "2026-11-12T20:04:29.815Z"
+}
