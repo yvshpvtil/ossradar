@@ -1,0 +1,16 @@
+{
+ "fullName": "lucialuka/OpenAssembler",
+ "whoItsFor": null,
+ "useCases": [
+  "Compile standalone kernels or discover supported kernels in a repository.",
+  "Generate full-tile FP16/BF16 GEMMs with FP32 output. Manual policy choices include tile64 copy-address reuse and pointer placement, and opti",
+  "Generate cooperative FP32 softmax and population LayerNorm with row/column tails. Five exact A100 contracts automatically select held-out-va"
+ ],
+ "installCommand": "brew install openassembler",
+ "source": "readme",
+ "readmeSummary": "A native NVIDIA SASS/cubin compiler for SM80/A100, built through black-box reverse engineering and validated kernel optimizations.",
+ "extractor": "heuristic",
+ "readmeHash": "e740cb5e156a",
+ "version": 1,
+ "generatedAt": "2026-11-12T04:15:59.635Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Future-Proof-DS/interactive-ai-ml-tools",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Free, interactive tools for learning MLOps, ML system design and agentic analytics. Open one in your browser and start clicking.",
+ "extractor": "heuristic",
+ "readmeHash": "26542827725c",
+ "version": 1,
+ "generatedAt": "2026-11-12T04:15:59.662Z"
+}
