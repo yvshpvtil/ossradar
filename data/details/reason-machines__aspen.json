@@ -1,0 +1,12 @@
+{
+ "fullName": "reason-machines/aspen",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install --locked --path crates/aspen-cli",
+ "source": "readme",
+ "readmeSummary": "Aspen is a Git server you run yourself, built for repositories that hundreds of agents…",
+ "extractor": "heuristic",
+ "readmeHash": "d89f299ffad9",
+ "version": 1,
+ "generatedAt": "2026-11-12T00:03:39.549Z"
+}

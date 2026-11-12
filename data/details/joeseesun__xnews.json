@@ -1,0 +1,12 @@
+{
+ "fullName": "joeseesun/xnews",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "海外创始人长帖 / X Articles / 爆款 AI 视频 → 完整、自然的中文改写（含原媒体），附原文链接。",
+ "extractor": "heuristic",
+ "readmeHash": "ddfa87143a14",
+ "version": 1,
+ "generatedAt": "2026-11-12T00:03:39.533Z"
+}

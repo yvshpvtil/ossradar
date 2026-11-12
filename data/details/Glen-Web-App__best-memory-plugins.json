@@ -1,0 +1,12 @@
+{
+ "fullName": "Glen-Web-App/best-memory-plugins",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @tryglen/cli@latest install",
+ "source": "readme",
+ "readmeSummary": "The best memory plugins for AI coding agents, ranked: persistent memory for Claude Code, Codex, Cursor, OpenCode, Cline and more.",
+ "extractor": "heuristic",
+ "readmeHash": "8b0cdb881086",
+ "version": 1,
+ "generatedAt": "2026-11-12T00:03:39.600Z"
+}

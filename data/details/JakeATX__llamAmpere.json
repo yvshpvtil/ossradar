@@ -1,0 +1,12 @@
+{
+ "fullName": "JakeATX/llamAmpere",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "llamAmpere is a fast version of llama.cpp (the open-source program that runs AI language models on your own computer), tuned for NVIDIA RTX…",
+ "extractor": "heuristic",
+ "readmeHash": "0c1aab01426b",
+ "version": 1,
+ "generatedAt": "2026-11-12T00:03:39.530Z"
+}
