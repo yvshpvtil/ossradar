@@ -1,0 +1,16 @@
+{
+ "fullName": "precygtrucqui1981/blender-ai-copilot-lab",
+ "whoItsFor": null,
+ "useCases": [
+  "Break briefs into assignments—a manager agent defines tasks and acceptance criteria before anything moves.",
+  "Build with worker agents that execute each assignment through 27 supervised scene tools.",
+  "Review every result—reviewer agents approve work or return specific findings."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An AI lab for Blender where manager–worker–reviewer agent teams run multi-step scene briefs as supervised experiments—a live task board…",
+ "extractor": "heuristic",
+ "readmeHash": "070a226de41e",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.596Z"
+}

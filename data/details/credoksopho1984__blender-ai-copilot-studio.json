@@ -1,0 +1,16 @@
+{
+ "fullName": "credoksopho1984/blender-ai-copilot-studio",
+ "whoItsFor": null,
+ "useCases": [
+  "Inspect the scene before every change—the copilot reads objects, structure and materials before it acts.",
+  "Build complete layouts from a brief—27 supervised scene tools create primitives, lights, cameras, materials, parenting and transforms in ord",
+  "Run multi-agent team chains—a manager splits the brief into assignments, workers execute, reviewers approve or return findings, and the task"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An AI copilot and MCP server for Blender that turns plain-language briefs into scene operations—inside a visual chat studio with multi-agent…",
+ "extractor": "heuristic",
+ "readmeHash": "9efe246a386d",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.856Z"
+}

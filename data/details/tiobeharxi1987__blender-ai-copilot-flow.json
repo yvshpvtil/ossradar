@@ -1,0 +1,16 @@
+{
+ "fullName": "tiobeharxi1987/blender-ai-copilot-flow",
+ "whoItsFor": null,
+ "useCases": [
+  "Approve every operation—each tool call is proposed before it runs.",
+  "Cancel safely—Stop halts the workflow after the current step, mid-plan.",
+  "Undo by name—mutations leave named undo steps you can pick from Blender's own controls."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A controlled AI workflow for Blender: every copilot edit is a supervised tool call—proposed, approved, executed in sequence, cancellable…",
+ "extractor": "heuristic",
+ "readmeHash": "da20d446bfc7",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.807Z"
+}

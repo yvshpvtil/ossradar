@@ -1,0 +1,12 @@
+{
+ "fullName": "StashDock/StashDock",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A useful webpage may be in your bookmarks, a project file in a folder, and a prompt in an earlier chat.",
+ "extractor": "heuristic",
+ "readmeHash": "68fde965906e",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:15.538Z"
+}

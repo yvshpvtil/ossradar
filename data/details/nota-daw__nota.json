@@ -1,0 +1,16 @@
+{
+ "fullName": "nota-daw/nota",
+ "whoItsFor": null,
+ "useCases": [
+  "Three views — Arrangement timeline, Session clip grid, and a Modular signal-graph editor with CV modulation (LFO / envelope follower / MIDI→",
+  "Tracks & mixer — audio, MIDI, group (nestable), return and master tracks; sends; MIDI routing between tracks; peak/RMS and true-peak meters.",
+  "MIDI — piano roll with quantize and velocity; play from a MIDI keyboard, the computer keyboard, a gamepad (macOS) or your phone; drag in `.m"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A quick digest — see FEATURES.md for the full, categorised list.",
+ "extractor": "heuristic",
+ "readmeHash": "73c317529221",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.458Z"
+}

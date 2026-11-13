@@ -1,0 +1,16 @@
+{
+ "fullName": "ForeactLabs/OpenExecutive",
+ "whoItsFor": null,
+ "useCases": [
+  "Chief Strategy Officer — competitive analysis, M&A, market positioning, OKRs",
+  "Chief Financial Officer — financial modeling, fundraising, unit economics, cash flow",
+  "Chief HR/People Officer — hiring, compensation, performance, culture"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "Open Executive is designed to transform leadership and management. Highly configurable, it can be deployed at any management level.",
+ "extractor": "heuristic",
+ "readmeHash": "882f9740706c",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:15.117Z"
+}

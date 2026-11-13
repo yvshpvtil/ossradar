@@ -1,0 +1,12 @@
+{
+ "fullName": "alexyc9381/court-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add alexyc9381/court-skill",
+ "source": "readme",
+ "readmeSummary": "When Claude agrees with everything you say, put your idea on trial in front of a jury of 12 Claudes. One Claude Code skill.",
+ "extractor": "heuristic",
+ "readmeHash": "e1f4de4d5368",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:15.110Z"
+}

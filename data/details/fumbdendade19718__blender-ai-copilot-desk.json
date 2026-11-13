@@ -1,0 +1,16 @@
+{
+ "fullName": "fumbdendade19718/blender-ai-copilot-desk",
+ "whoItsFor": null,
+ "useCases": [
+  "Chat beside the scene—the full conversation in a companion Studio window.",
+  "See your real scene objects—names and structure straight from the open file.",
+  "Get viewport snapshots after steps—visual proof, not prose promises."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A visual AI desk for Blender—chat, scene objects, viewport snapshots, approvals and a live task board in one companion window…",
+ "extractor": "heuristic",
+ "readmeHash": "24d88fef45c4",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.648Z"
+}

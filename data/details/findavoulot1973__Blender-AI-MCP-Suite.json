@@ -1,0 +1,16 @@
+{
+ "fullName": "findavoulot1973/Blender-AI-MCP-Suite",
+ "whoItsFor": null,
+ "useCases": [
+  "Inspect the scene before acting — objects, transforms, materials and modifiers give the assistant real context.",
+  "Build and edit through conversation — primitives, lights, cameras, parenting, duplication and materials arrive as approved steps.",
+  "Verify results visually — viewport screenshots let vision-capable models check their own work."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "[download-url]: https://github.com/findavoulot1973/Blender-AI-MCP-Suite/releases",
+ "extractor": "heuristic",
+ "readmeHash": "c7f5312237d6",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.905Z"
+}

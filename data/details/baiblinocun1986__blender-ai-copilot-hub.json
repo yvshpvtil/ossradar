@@ -1,0 +1,16 @@
+{
+ "fullName": "baiblinocun1986/blender-ai-copilot-hub",
+ "whoItsFor": null,
+ "useCases": [
+  "Connect every provider you use—OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama and custom endpoints in one panel.",
+  "Switch between saved connection profiles without re-entering keys—work and personal accounts live side by side.",
+  "Load live model catalogs and pick models with tool-calling support, or enter a model ID manually."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A multi-provider AI copilot hub for Blender—bring OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama and custom…",
+ "extractor": "heuristic",
+ "readmeHash": "9c05a9589962",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.645Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "racdeufindurch198812/Blender-AI-MCP-Studio",
+ "whoItsFor": null,
+ "useCases": [
+  "Inspect the scene before acting — objects, transforms, materials and modifiers give the assistant real context.",
+  "Build and edit through conversation — primitives, lights, cameras, parenting, duplication and materials arrive as approved steps.",
+  "Run one assistant or a full team — manager, workers and reviewers with individual instructions and models."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Blender AI MCP Studio is an AI assistant and built-in Model Context Protocol (MCP) server for Blender that turns plain-language briefs…",
+ "extractor": "heuristic",
+ "readmeHash": "0a6cdf50fac6",
+ "version": 1,
+ "generatedAt": "2026-11-13T22:45:14.860Z"
+}
