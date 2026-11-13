@@ -1,0 +1,12 @@
+{
+ "fullName": "rivet-dev/open-orange",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pnpm add -g open-orange",
+ "source": "readme",
+ "readmeSummary": "You need a Worker project with a wrangler.jsonc, wrangler.json, or wrangler.toml (or use examples/hello-durable-object)…",
+ "extractor": "heuristic",
+ "readmeHash": "10d123757d89",
+ "version": 1,
+ "generatedAt": "2026-11-13T08:08:54.625Z"
+}
