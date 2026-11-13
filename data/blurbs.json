@@ -65,6 +65,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:15.900Z"
  },
+ "DandanLLab/SnowCatQQ": {
+  "text": "A community-maintained third-party QQ client merging NapCat and SnowLuma, with full source and bot tooling.",
+  "basis": "f7c2129c0688",
+  "source": "manual",
+  "generatedAt": "2026-11-13T02:20:13.511Z"
+ },
  "Ebony-Vinyl/EAC-design-world": {
   "text": "A local video and design plugin for DeepSeek Harness with multi-track editing, templates, preview and file export.",
   "basis": "5d8ef08a72e9",
@@ -162,16 +168,16 @@
   "generatedAt": "2026-11-05T02:25:16.936Z"
  },
  "Lanqiao-Luca/ai-java-workflow": {
-  "text": "AI-assisted Java/Spring Boot development workflow from requirements to code, tests and review, with a sample project.",
-  "basis": "687a59f1045f",
+  "text": "A guide to AI-assisted Java and Spring Boot development, from requirements and tests to review and delivery.",
+  "basis": "6583c047451a",
   "source": "manual",
-  "generatedAt": "2026-11-12T02:21:10.398Z"
+  "generatedAt": "2026-11-13T02:20:13.228Z"
  },
  "Lanqiao-Luca/ai-video-marker": {
-  "text": "AI video creation workflow covering storyboards, assets, editing and export, with runnable Python pixel-animation examples.",
-  "basis": "dc50e40e41e5",
+  "text": "An AI video creation workflow with storyboards, assets, music, templates and runnable Python pixel-animation examples.",
+  "basis": "02c03176a40b",
   "source": "manual",
-  "generatedAt": "2026-11-12T02:21:10.398Z"
+  "generatedAt": "2026-11-13T02:20:13.401Z"
  },
  "Lee-xeo/Claude-Cage": {
   "text": "Lightweight virtual machine for using Claude with isolated network and fingerprint settings, multi-account support and remote control.",
