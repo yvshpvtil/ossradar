@@ -37,7 +37,17 @@ function alternativesDescription(repo: Repo, names: string[], max = 155): string
   const cat = categoryLabel(repo.category);
   const subject = altLabel(repo);
   const mixed = getAlternatives(repo).some((a) => !a.sameCategory);
-  const tails = [`${mixed ? "Tracked" : cat} repos sharing its GitHub topics, ranked by stars gained this week.`, "Ranked by stars gained this week.", ""];
+  const kind = mixed || repo.category === "other" ? "Tracked" : cat;
+  // Longest first; the middle tails keep the category keyword and freshness signal when the
+  // full tail doesn't fit next to long names (most pages used to fall back to the bare tail).
+  const tails = [
+    `${kind} repos sharing its GitHub topics, ranked by stars gained this week.`,
+    `${kind} repos ranked by stars gained this week, updated hourly.`,
+    `${kind} repos ranked by stars gained this week.`,
+    "Ranked by stars gained this week, updated hourly.",
+    "Ranked by stars gained this week.",
+    "",
+  ];
   for (let k = Math.min(3, names.length); k >= 1; k--) {
     const rest = names.length - k;
     const lead = `Open-source alternatives to ${subject}: ${names.slice(0, k).join(", ")}${rest > 0 ? ` and ${rest} more` : ""}.`;
