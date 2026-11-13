@@ -1,0 +1,12 @@
+{
+ "fullName": "arberpilafi8-blip/ai--manus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Manus is an autonomous AI agent designed to run code and control a browser on your behalf.",
+ "extractor": "heuristic",
+ "readmeHash": "66ba5de9af15",
+ "version": 1,
+ "generatedAt": "2026-11-13T16:34:15.784Z"
+}
