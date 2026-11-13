@@ -1,0 +1,12 @@
+{
+ "fullName": "vercel-labs/ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @ui-sdk/react @ui-sdk/core",
+ "source": "readme",
+ "readmeSummary": "A library of behaviors for agents to build the next generation of user interfaces.",
+ "extractor": "heuristic",
+ "readmeHash": "e5836b6de094",
+ "version": 1,
+ "generatedAt": "2026-11-13T01:13:29.883Z"
+}

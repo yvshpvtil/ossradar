@@ -1,0 +1,12 @@
+{
+ "fullName": "oss-invisible/playwright_mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Then install it in your assistant.",
+ "extractor": "heuristic",
+ "readmeHash": "ed16d6cb3029",
+ "version": 1,
+ "generatedAt": "2026-11-13T01:13:30.180Z"
+}

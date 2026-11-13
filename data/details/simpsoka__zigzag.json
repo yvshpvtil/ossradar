@@ -1,0 +1,12 @@
+{
+ "fullName": "simpsoka/zigzag",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ZigZag is a visual embroidery editor built in Rust for performance, with built-in MCP (Model Context Protocol) support so AI agents can…",
+ "extractor": "heuristic",
+ "readmeHash": "0ae5e7c5483e",
+ "version": 1,
+ "generatedAt": "2026-11-13T01:13:29.961Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "hyperionaidev/smolmaxxing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Run the biggest language model you can on the smallest hardware you own.",
+ "extractor": "heuristic",
+ "readmeHash": "ce8f6f3e625e",
+ "version": 1,
+ "generatedAt": "2026-11-13T01:13:29.889Z"
+}

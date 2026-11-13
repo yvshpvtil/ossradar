@@ -1,0 +1,12 @@
+{
+ "fullName": "dansugc/reverse-engineer-marketing",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx reverse-engineer-marketing demo",
+ "source": "readme",
+ "readmeSummary": "Paid ads · organic social · SEO & AI search · founders · funnel · positioning history, with the evidence for every claim.",
+ "extractor": "heuristic",
+ "readmeHash": "f3d779f0a090",
+ "version": 1,
+ "generatedAt": "2026-11-13T01:13:29.904Z"
+}
