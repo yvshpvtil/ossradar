@@ -1,0 +1,16 @@
+{
+ "fullName": "bytesbay/pi-gpui",
+ "whoItsFor": null,
+ "useCases": [
+  "Projects and their pi sessions in a sidebar. Every open session runs its own pi, so switching never stops work.",
+  "Slash commands: pi's extension commands, prompt templates and skills, plus `/compact`, `/tree`, `/fork`, `/clone`, `/model`, `/new`, `/name`",
+  "Side panels like Zed's docks: projects on the left; the project's files (colored by git status) and its git changes in a floating panel on t"
+ ],
+ "installCommand": "brew install --cask bytesbay/tap/pi-gpui",
+ "source": "readme",
+ "readmeSummary": "A native GUI for the pi coding agent, written in Rust with GPUI, the UI framework behind Zed. No Electron, no webview.",
+ "extractor": "heuristic",
+ "readmeHash": "78a690f80fc6",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.251Z"
+}

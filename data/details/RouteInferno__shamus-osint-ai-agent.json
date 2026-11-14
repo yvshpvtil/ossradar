@@ -1,0 +1,12 @@
+{
+ "fullName": "RouteInferno/shamus-osint-ai-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Sometimes you do not need a window — you need an answer, in the terminal, next to the rest of your tools.",
+ "extractor": "heuristic",
+ "readmeHash": "42232818effc",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.054Z"
+}

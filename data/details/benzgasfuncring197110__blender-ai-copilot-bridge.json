@@ -1,0 +1,16 @@
+{
+ "fullName": "benzgasfuncring197110/blender-ai-copilot-bridge",
+ "whoItsFor": null,
+ "useCases": [
+  "Expose 27 supervised scene tools to any compatible MCP client.",
+  "Authenticate every request—a generated Bearer token, kept in the client's secret store or environment.",
+  "Launch OpenCode preconfigured—the bundled Portable launcher sets the Blender connection up for you."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An MCP bridge for Blender that exposes 27 supervised scene tools to OpenCode and any compatible client—authenticated Streamable HTTP…",
+ "extractor": "heuristic",
+ "readmeHash": "b58953fe147d",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.078Z"
+}

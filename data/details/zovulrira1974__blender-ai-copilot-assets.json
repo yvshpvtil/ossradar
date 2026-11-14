@@ -1,0 +1,16 @@
+{
+ "fullName": "zovulrira1974/blender-ai-copilot-assets",
+ "whoItsFor": null,
+ "useCases": [
+  "Search three libraries mid-conversation—Poly Haven, Sketchfab and Poly Pizza.",
+  "Confirm before importing—nothing lands in the scene without your approval.",
+  "Respect the licenses—asset terms are surfaced with the results so usage stays clean."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An asset-savvy AI copilot for Blender—search Poly Haven, Sketchfab and Poly Pizza mid-conversation, check what fits…",
+ "extractor": "heuristic",
+ "readmeHash": "6d64966e6b65",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.027Z"
+}

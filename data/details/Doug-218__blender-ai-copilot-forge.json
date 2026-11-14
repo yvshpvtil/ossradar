@@ -1,0 +1,16 @@
+{
+ "fullName": "Doug-218/blender-ai-copilot-forge",
+ "whoItsFor": null,
+ "useCases": [
+  "Forge complete layouts—primitives, cameras, lights and rows of duplicates from one brief.",
+  "Assign materials as build steps—matte, glossy or textured, named and applied in sequence.",
+  "Set parenting explicitly—hierarchies the copilot states before it applies them."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A scene-forging AI copilot for Blender—describe the layout and watch primitives, cameras, lights…",
+ "extractor": "heuristic",
+ "readmeHash": "7120a814326f",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.044Z"
+}

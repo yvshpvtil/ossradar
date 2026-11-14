@@ -1,0 +1,12 @@
+{
+ "fullName": "Protocol-zero-0/compound-memory",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "每次开新对话都要重新自我介绍?让 AI 自动记住你。",
+ "extractor": "heuristic",
+ "readmeHash": "4853adf5ded0",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.485Z"
+}

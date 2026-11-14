@@ -1,0 +1,16 @@
+{
+ "fullName": "kaelorlabs/smitline",
+ "whoItsFor": null,
+ "useCases": [
+  "Calls anyone. Restaurants, offices, plumbers, friends, using your own number through your SignalWire or Twilio account.",
+  "Joins meetings. Zoom, Microsoft Teams and Google Meet, as a participant that listens and answers when it's spoken to.",
+  "Your agent stays in charge. It briefs Smitline with what it already knows, follows the call as it happens, passes on facts and decisions, an"
+ ],
+ "installCommand": "docker run -d --name smitline --restart unless-stopped --network host -v smitline:/data -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/kaelorlabs/smitline",
+ "source": "readme",
+ "readmeSummary": "Smitline makes the call, talks with whoever answers in a natural voice, and sends the result back to your chat: what happened, the details…",
+ "extractor": "heuristic",
+ "readmeHash": "68b22a32e4f9",
+ "version": 1,
+ "generatedAt": "2026-11-14T11:37:30.296Z"
+}
