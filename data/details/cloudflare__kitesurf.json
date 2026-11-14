@@ -1,0 +1,12 @@
+{
+ "fullName": "cloudflare/kitesurf",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --global pnpm@9.15.4",
+ "source": "readme",
+ "readmeSummary": "Kitesurf is an experimental browser engine that runs on Cloudflare Workers.",
+ "extractor": "heuristic",
+ "readmeHash": "5ef71edbc5d9",
+ "version": 1,
+ "generatedAt": "2026-11-14T03:25:09.764Z"
+}

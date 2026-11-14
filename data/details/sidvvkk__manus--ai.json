@@ -1,0 +1,12 @@
+{
+ "fullName": "sidvvkk/manus--ai",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Manus is an autonomous AI agent designed to run code and control a browser on your behalf.",
+ "extractor": "heuristic",
+ "readmeHash": "66ba5de9af15",
+ "version": 1,
+ "generatedAt": "2026-11-14T03:25:10.138Z"
+}

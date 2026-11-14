@@ -1,0 +1,12 @@
+{
+ "fullName": "looplj/reveric",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Reveric（幻界）是一个本地优先、以智能体为核心的桌面创作工作台，覆盖长篇小说、剧本改编与短剧/漫剧制片。 整部作品保存在你的设备上，同时也是智能体的工作区：写章节、改剧本、铺分镜、调机位、剪成片，说一句话，它就在作品里动手完成。",
+ "extractor": "heuristic",
+ "readmeHash": "c5d8468118b7",
+ "version": 1,
+ "generatedAt": "2026-11-14T03:25:11.089Z"
+}

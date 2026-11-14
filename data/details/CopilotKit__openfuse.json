@@ -1,0 +1,12 @@
+{
+ "fullName": "CopilotKit/openfuse",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx copilotkit@latest login",
+ "source": "readme",
+ "readmeSummary": "A personal agent with a browser, terminal, files, and work that keeps going. Compatible with any agent harness.",
+ "extractor": "heuristic",
+ "readmeHash": "92952c7d9ebe",
+ "version": 1,
+ "generatedAt": "2026-11-14T03:25:10.774Z"
+}
