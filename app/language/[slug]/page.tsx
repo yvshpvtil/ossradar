@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps<"/language/[slug]">
   return {
     title,
     description,
-    alternates: { ...pageAlternates(`/language/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/language/${slug}.md`, title: `${title} (Markdown)` }] } },
+    alternates: { ...pageAlternates(`/language/${slug}`), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: `/language/${slug}/rss.xml`, title: `${title} (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]], "text/markdown": [{ url: `/language/${slug}.md`, title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/language/${slug}` },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };

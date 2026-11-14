@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps<"/topic/[slug]">): 
   const { slug } = await params;
   if (!hasTopicPage(slug)) return {};
   const { title, socialTitle, description } = topicMeta(slug);
-  return { title, description, alternates: { ...pageAlternates(`/topic/${slug}`), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: `/topic/${slug}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/topic/${slug}` }, twitter: { ...twitterDefaults, title: socialTitle, description } };
+  return { title, description, alternates: { ...pageAlternates(`/topic/${slug}`), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: `/topic/${slug}/rss.xml`, title: `${title} (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]], "text/markdown": [{ url: `/topic/${slug}.md`, title: `${title} (Markdown)` }] } }, openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: `/topic/${slug}` }, twitter: { ...twitterDefaults, title: socialTitle, description } };
 }
 
 export default async function TopicPage({ params }: PageProps<"/topic/[slug]">) {
