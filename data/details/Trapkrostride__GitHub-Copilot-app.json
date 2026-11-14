@@ -1,0 +1,12 @@
+{
+ "fullName": "Trapkrostride/GitHub-Copilot-app",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub…",
+ "extractor": "heuristic",
+ "readmeHash": "ef82cf6db0cd",
+ "version": 1,
+ "generatedAt": "2026-11-14T22:34:01.864Z"
+}
