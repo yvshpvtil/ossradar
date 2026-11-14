@@ -6,6 +6,10 @@ on:
     # scheduled jobs 15-60+ min late), with a backup at 15:15 UTC = 20:45 IST. The script sends at
     # most one broadcast per UTC data date and skips if today's broadcast already exists or the
     # data isn't from today (UTC).
+    # Early runs at 11:00 and 12:00 UTC build the issue and schedule it in Kit for 13:30 UTC, so
+    # GitHub's delayed/dropped schedules (7h late on Nov 13 2026) don't delay the send.
+    - cron: "0 11 * * *"
+    - cron: "0 12 * * *"
     - cron: "30 13 * * *"
     - cron: "15 15 * * *"
   workflow_dispatch:

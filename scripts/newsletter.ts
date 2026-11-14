@@ -261,6 +261,16 @@ export async function buildBlurbs(list: Repo[]): Promise<Map<string, string>> {
   return out;
 }
 
+// Early runs (11:00/12:00 UTC crons) schedule the broadcast for 13:30 UTC so a late or skipped
+// GitHub schedule can't push the send hours late (Nov 13 2026: both crons fired ~7h late).
+// SEND_AT_UTC=HH:MM overrides the target; runs after the target send in 2 minutes.
+function sendAt(): Date {
+  const [h, m] = (process.env.SEND_AT_UTC || "13:30").split(":").map(Number);
+  const target = new Date(); target.setUTCHours(h, m, 0, 0);
+  const soon = new Date(Date.now() + 2 * 60_000);
+  return target > soon ? target : soon;
+}
+
 async function main() {
   if (repos.length === 0) { console.log("No growing repos; skipping."); return; }
   const blurbs = await buildBlurbs(repos);
@@ -289,7 +299,7 @@ async function main() {
     body: JSON.stringify({
       subject, content: html, preview_text: previewText,
       description: `Daily digest ${date}`, public: false,
-      send_at: new Date(Date.now() + 2 * 60_000).toISOString(),
+      send_at: sendAt().toISOString(),
       published_at: new Date().toISOString(),
       // No subscriber_filter: Kit then sends to all subscribers (the API only accepts segment/tag filters).
     }),
