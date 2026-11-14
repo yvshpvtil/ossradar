@@ -341,6 +341,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:17.209Z"
  },
+ "babygoton/WorkDaddy": {
+  "text": "A desktop add-on for WorkBuddy and CodeBuddy with multi-account switching, session migration and automated tasks.",
+  "basis": "a76f554c5dba",
+  "source": "manual",
+  "generatedAt": "2026-11-14T02:19:46.393Z"
+ },
  "bbylw/rea-cn": {
   "text": "An MCP server that lets AI agents reverse-engineer binaries, applications and runtime behavior, citing evidence.",
   "basis": "d92d4f4b3923",
@@ -868,6 +874,12 @@
   "basis": "70ced82ffc1a",
   "source": "claude -p",
   "generatedAt": "2026-10-25T02:21:46.924Z"
+ },
+ "zgsfsec/Full-Chain-Sentinel-System": {
+  "text": "An AI agent for authorized penetration testing of web, mini-program and mobile apps, run from a web console.",
+  "basis": "6cbd0b7b3967",
+  "source": "manual",
+  "generatedAt": "2026-11-14T02:19:46.356Z"
  },
  "zhu1090093659/dsh-web": {
   "text": "Plugin ecosystem for the DeepSeek Harness web UI, shared through a Creative Workshop.",
