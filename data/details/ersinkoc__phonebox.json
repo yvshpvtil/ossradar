@@ -1,0 +1,12 @@
+{
+ "fullName": "ersinkoc/phonebox",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/ersinkoc/phonebox/main/setup.sh | bash",
+ "source": "readme",
+ "readmeSummary": "PhoneBox has two parts: a small Android app that runs full screen on the phone, and an agent on the computer (Windows…",
+ "extractor": "heuristic",
+ "readmeHash": "74afa54f504e",
+ "version": 1,
+ "generatedAt": "2026-11-15T22:58:14.896Z"
+}

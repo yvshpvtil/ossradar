@@ -1,0 +1,12 @@
+{
+ "fullName": "beiwocaishijia/gezhi-sheets",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx playwright install chromium --only-shell",
+ "source": "readme",
+ "readmeSummary": "从一句话，到一张好表。",
+ "extractor": "heuristic",
+ "readmeHash": "fbb66c5690f6",
+ "version": 1,
+ "generatedAt": "2026-11-15T22:58:14.844Z"
+}
