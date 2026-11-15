@@ -1,0 +1,12 @@
+{
+ "fullName": "secfoo-com/secfoo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install secfoo                   # isolated install, Python 3.10+",
+ "source": "readme",
+ "readmeSummary": "That is the whole first run. No config file: secfoo picks the agent you already have on PATH (Claude Code, Codex, Gemini CLI, Copilot…",
+ "extractor": "heuristic",
+ "readmeHash": "2b6a09165367",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.589Z"
+}

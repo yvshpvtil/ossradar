@@ -1,0 +1,12 @@
+{
+ "fullName": "huawei-csl/MACaQ",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "High-quality GGUF for local inference. Model-agnostic quantization beyond text.",
+ "extractor": "heuristic",
+ "readmeHash": "fc5c169b25ce",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.191Z"
+}

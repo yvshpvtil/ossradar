@@ -1,0 +1,12 @@
+{
+ "fullName": "kagent-dev/kagent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "kagent is a Kubernetes native framework for building AI agents. Kubernetes is the most popular orchestration platform for running workloads…",
+ "extractor": "heuristic",
+ "readmeHash": "e1f158ff5343",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.471Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Canner/WrenAI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install wrenai",
+ "source": "readme",
+ "readmeSummary": "Your agents generate governed SQL, deploy dashboards, and keep business definitions in Git, across 22+ data sources.",
+ "extractor": "heuristic",
+ "readmeHash": "3f159500deef",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.510Z"
+}

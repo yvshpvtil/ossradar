@@ -1,0 +1,12 @@
+{
+ "fullName": "Continuum-AI-Corp/Orca-AI-Incident-Archive",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Coverage runs from 2025-01 to 2026-11-08 — 417 records of AI agent security events arranged month by month…",
+ "extractor": "heuristic",
+ "readmeHash": "d89dcfe05f34",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.184Z"
+}

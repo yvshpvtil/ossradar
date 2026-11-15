@@ -1,0 +1,12 @@
+{
+ "fullName": "andy-wells-73/microsoft-outlook-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This repository packages a standalone offline Windows x64 distribution intended for the Microsoft Outlook workflow.",
+ "extractor": "heuristic",
+ "readmeHash": "1b7d32bd72ca",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.175Z"
+}

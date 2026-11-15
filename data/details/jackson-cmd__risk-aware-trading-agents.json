@@ -1,0 +1,12 @@
+{
+ "fullName": "jackson-cmd/risk-aware-trading-agents",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install \"risk-aware-trading-agents[dashboard,mcp]\"   # Python 3.10+",
+ "source": "readme",
+ "readmeSummary": "Most news backtests join headlines to prices by calendar date, so a headline published after the close is traded at that close.",
+ "extractor": "heuristic",
+ "readmeHash": "31373c4cb2be",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.705Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "paimonsoror/telltaledns",
+ "whoItsFor": null,
+ "useCases": [
+  "Every answer explained. The query log ties each query to a named device, times every stage, and says why it was answered that way. Names com",
+  "Your rules, per device. Blocklists, groups for each network or VLAN, schedules, safe search, blocked services, rewrites, and quick rules. Be",
+  "Encrypted both ways. DoT, DoH, and DoQ for your devices and to your upstreams, DNSSEC validation, and full recursion when you'd rather not f"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "See every question. Answer on your terms.",
+ "extractor": "heuristic",
+ "readmeHash": "56b96b0edf2a",
+ "version": 1,
+ "generatedAt": "2026-11-15T11:08:03.182Z"
+}
