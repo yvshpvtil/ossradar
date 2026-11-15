@@ -659,6 +659,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-18T02:21:27.623Z"
  },
+ "looplj/reveric": {
+  "text": "A local-first, agent-driven desktop workspace for writing novels, adapting scripts and producing short dramas and comics.",
+  "basis": "41c7def61c6f",
+  "source": "claude -p",
+  "generatedAt": "2026-11-15T02:19:27.116Z"
+ },
  "lvzuojing/mcd-wrapped": {
   "text": "A toolkit built on the McDonald's MCP that probes its tools and generates personal yearly and public data reports.",
   "basis": "e1e9eb387342",
