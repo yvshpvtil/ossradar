@@ -34,7 +34,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description: d,
-    alternates: { ...pageAlternates("/daily"), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: "/daily/rss.xml", title: `${SITE.name} daily top 10 (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]] } },
+    alternates: { ...pageAlternates("/daily"), types: { ...RSS_ALTERNATE, "application/rss+xml": [{ url: "/daily/rss.xml", title: `${SITE.name} daily top 10 (RSS)` }, ...RSS_ALTERNATE["application/rss+xml"]], "text/markdown": [{ url: "/daily.md", title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description: d, url: "/daily" },
     twitter: { ...twitterDefaults, title: socialTitle, description: d },
   };

@@ -121,7 +121,7 @@ function header(): string {
   const example = top ? `${SITE.url}/repo/${top.owner}/${top.name}` : `${SITE.url}/repo/{owner}/{name}`;
   const days = getArchiveDays();
   const dailyPattern = days.length
-    ? `\n- Daily archive: ${SITE.url}/daily/{YYYY-MM-DD} (one completed UTC day's top gainers; ${days.length} days from ${days[days.length - 1]} to ${days[0]}, e.g. ${SITE.url}/daily/${days[0]}; append .md for the same list as Markdown, e.g. ${SITE.url}/daily/${days[0]}.md; ${SITE.url}/daily/latest and ${SITE.url}/daily/latest.md always redirect to the newest day)`
+    ? `\n- Daily archive: ${SITE.url}/daily/{YYYY-MM-DD} (one completed UTC day's top gainers; ${days.length} days from ${days[days.length - 1]} to ${days[0]}, e.g. ${SITE.url}/daily/${days[0]}; append .md for the same list as Markdown, e.g. ${SITE.url}/daily/${days[0]}.md; ${SITE.url}/daily/latest and ${SITE.url}/daily/latest.md always redirect to the newest day; ${SITE.url}/daily.md lists every archived day's top 3 and the repos with the most days at #1)`
     : "";
   return `# ${SITE.name}
 
@@ -168,7 +168,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Hacker News list as Markdown: ${SITE.url}/hacker-news.md (tracked repos posted to Hacker News in the last 30 days, ranked by story points, with comments, post date and star growth)
 - New repos as Markdown: ${SITE.url}/new.md (tracked repos created on GitHub in the last 14 days, grouped by launch day, with stars, 7-day gain, category and language)
 - Homepage leaderboard as Markdown: ${SITE.url}/index.md (today's top 25 and this week's top 10 by stars gained, with links to every Markdown view)
-- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new or /hacker-news, with the header Accept: text/markdown to get its Markdown twin at the same URL
+- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new, /hacker-news or /daily, with the header Accept: text/markdown to get its Markdown twin at the same URL
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name} (shows "Trending #N" for today's top 100, else "Tracked"; embed guide: ${SITE.url}/badge)${dailyPattern}
 
 ## Categories
