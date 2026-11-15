@@ -1,0 +1,12 @@
+{
+ "fullName": "StormBrawlerSack/legwork-osint-ai-investigator",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Every investigation starts the same way: twenty tabs, a notepad, and a question that keeps growing arms. The tabs win, the question loses.",
+ "extractor": "heuristic",
+ "readmeHash": "36478c6fcc14",
+ "version": 1,
+ "generatedAt": "2026-11-15T17:51:03.551Z"
+}

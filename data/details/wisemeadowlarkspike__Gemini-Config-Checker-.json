@@ -1,0 +1,12 @@
+{
+ "fullName": "wisemeadowlarkspike/Gemini-Config-Checker-",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Find proxy configs that actually get you into Google AI Studio and Gemini, by testing each one the way a person would: in a signed-in…",
+ "extractor": "heuristic",
+ "readmeHash": "846e83cebb20",
+ "version": 1,
+ "generatedAt": "2026-11-15T17:51:03.363Z"
+}

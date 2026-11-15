@@ -1,0 +1,12 @@
+{
+ "fullName": "yanstd888/9routerx",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g 9routerx",
+ "source": "readme",
+ "readmeSummary": "High-performance local AI gateway and OpenAI/Anthropic-compatible LLM router compiled into a single Go binary.",
+ "extractor": "heuristic",
+ "readmeHash": "638b1e8b71b7",
+ "version": 1,
+ "generatedAt": "2026-11-15T17:51:03.523Z"
+}
