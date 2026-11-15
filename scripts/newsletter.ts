@@ -261,8 +261,10 @@ export async function buildBlurbs(list: Repo[]): Promise<Map<string, string>> {
   return out;
 }
 
-// Early runs (11:00/12:00 UTC crons) schedule the broadcast for 13:30 UTC so a late or skipped
-// GitHub schedule can't push the send hours late (Nov 13 2026: both crons fired ~7h late).
+// Early runs (after each hourly collect, plus 11:00/12:00 UTC crons) schedule the broadcast for
+// 13:30 UTC so a late or skipped GitHub schedule can't push the send hours late (Nov 13 2026: both
+// crons fired ~7h late; Nov 14: all four newsletter crons fired 4.5-6h late). Later early runs refresh
+// the scheduled broadcast with fresher data.
 // SEND_AT_UTC=HH:MM overrides the target; runs after the target send in 2 minutes.
 function sendAt(): Date {
   const [h, m] = (process.env.SEND_AT_UTC || "13:30").split(":").map(Number);
@@ -291,8 +293,27 @@ async function main() {
 
   const existing = await kit("/broadcasts?per_page=50");
   // Dedupe: one broadcast per data date, matched on description "Daily digest <date>" (older issues also had it in the subject). Test sends must not put a date in subject/description.
-  if (existing.broadcasts?.some((b: { subject?: string; description?: string }) => b.subject?.includes(date) || b.description?.includes(date))) {
-    console.log(`Broadcast for ${date} already exists; skipping.`); return;
+  type B = { id: number; subject?: string; description?: string; send_at?: string | null };
+  const mine = (existing.broadcasts as B[] | undefined)?.find((b) => b.subject?.includes(date) || b.description?.includes(date));
+  if (mine) {
+    // Still scheduled well in the future: refresh it with the latest data, keeping its send time.
+    const sendMs = mine.send_at ? Date.parse(mine.send_at) : 0;
+    if (sendMs > Date.now() + 15 * 60_000) {
+      try {
+        await kit(`/broadcasts/${mine.id}`, {
+          method: "PUT",
+          body: JSON.stringify({ subject, content: html, preview_text: previewText, description: `Daily digest ${date}`, public: false, send_at: mine.send_at }),
+        });
+        console.log(`Refreshed scheduled Kit broadcast ${mine.id} for ${date} (send_at ${mine.send_at}) with the latest data.`);
+      } catch (e) { console.log(`Could not refresh broadcast ${mine.id}: ${(e as Error).message}`); }
+    } else console.log(`Broadcast for ${date} already exists; skipping.`);
+    return;
+  }
+  // Runs chained to the hourly collect fire all day; past the late cutoff leave the late send to the cron backups.
+  const [ch, cm] = (process.env.LATEST_NEW_SEND_UTC || "").split(":").map(Number);
+  if (process.env.LATEST_NEW_SEND_UTC) {
+    const cutoff = new Date(); cutoff.setUTCHours(ch, cm, 0, 0);
+    if (Date.now() > cutoff.getTime()) { console.log(`Past ${process.env.LATEST_NEW_SEND_UTC} UTC on a chained run; leaving the send to the scheduled backups.`); return; }
   }
   const res = await kit("/broadcasts", {
     method: "POST",

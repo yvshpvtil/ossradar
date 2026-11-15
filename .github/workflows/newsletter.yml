@@ -12,6 +12,13 @@ on:
     - cron: "0 12 * * *"
     - cron: "30 13 * * *"
     - cron: "15 15 * * *"
+  # Also run after every hourly data collect: workflow_run triggers fire within minutes, unlike
+  # GitHub's cron schedules (Nov 14 2026: every newsletter cron fired 4.5-6h late, send went at
+  # 16:54 UTC). Before the target these schedule (or refresh) the 13:30 UTC Kit broadcast.
+  workflow_run:
+    workflows: ["Hourly data collection"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -27,8 +34,12 @@ jobs:
   send:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Latest main, so a run chained to the hourly collect sees its data commit.
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref || 'main' }}
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -41,6 +52,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Scheduled runs send; manual runs default to dry run.
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+          # Chained runs don't start a brand-new send after 15:00 UTC; the cron backups cover that.
+          LATEST_NEW_SEND_UTC: ${{ github.event_name == 'workflow_run' && '15:00' || '' }}
       - uses: actions/upload-artifact@v4
         with:
           name: newsletter
