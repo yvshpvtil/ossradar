@@ -1,0 +1,12 @@
+{
+ "fullName": "sherwinvishesh/OpenGSO",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --save-dev opengso",
+ "source": "readme",
+ "readmeSummary": "Make your website readable by AI agents: score it, write a markdown twin of every page, and serve the twin at the same URL whenever an agent…",
+ "extractor": "heuristic",
+ "readmeHash": "87025a5e962b",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.668Z"
+}

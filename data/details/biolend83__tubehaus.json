@@ -1,0 +1,12 @@
+{
+ "fullName": "biolend83/tubehaus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @flisk-sh/flisk   # Flisk 1.4.26 or later",
+ "source": "readme",
+ "readmeSummary": "On the TV, the phone, the PC and the iPad. Run it on your own server, or just install the app.",
+ "extractor": "heuristic",
+ "readmeHash": "05e8565d78e3",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.900Z"
+}

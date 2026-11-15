@@ -1,0 +1,12 @@
+{
+ "fullName": "gabrielbuzziv/emissor-nfse-nacional",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Emissor de NFS-e que fala direto com a API do Sistema Nacional NFS-e, sem intermediários e sem custo por nota.",
+ "extractor": "heuristic",
+ "readmeHash": "a29a94bcf2f2",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.702Z"
+}

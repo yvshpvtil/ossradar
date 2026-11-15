@@ -1,0 +1,12 @@
+{
+ "fullName": "Outpostkrewhirl86/Capri-AI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A local-first desktop agent with a cyberpunk soul. Capri sits on your machine, understands your intent, and executes: files, apps, browser…",
+ "extractor": "heuristic",
+ "readmeHash": "b6799afdd263",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.653Z"
+}

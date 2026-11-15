@@ -1,0 +1,12 @@
+{
+ "fullName": "molly554/whiteboard-ai-tutor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "An open-source AI tutor that teaches on a whiteboard — and a benchmark of which LLM does it best.",
+ "extractor": "heuristic",
+ "readmeHash": "639ea61496f7",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.924Z"
+}

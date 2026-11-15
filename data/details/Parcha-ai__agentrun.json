@@ -1,0 +1,12 @@
+{
+ "fullName": "Parcha-ai/agentrun",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @parcha/agentrun",
+ "source": "readme",
+ "readmeSummary": "AgentRun is an open-source platform that supercharges your agents. It adds self-improvement…",
+ "extractor": "heuristic",
+ "readmeHash": "5843f717f31d",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.834Z"
+}

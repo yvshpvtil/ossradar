@@ -1,0 +1,12 @@
+{
+ "fullName": "fendouai/ViralForge",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "ViralForge is an agent-native studio for viral short videos. Paste a link or a local file and get a Viral DNA report that deconstructs…",
+ "extractor": "heuristic",
+ "readmeHash": "3bf5384e6684",
+ "version": 1,
+ "generatedAt": "2026-11-15T02:49:04.873Z"
+}
