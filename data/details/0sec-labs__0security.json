@@ -1,0 +1,12 @@
+{
+ "fullName": "0sec-labs/0security",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/0sec-labs/0security/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Any supported provider works: set its key instead (Anthropic, OpenRouter, DeepSeek and more, see Models)…",
+ "extractor": "heuristic",
+ "readmeHash": "4ae59655b2a9",
+ "version": 1,
+ "generatedAt": "2026-11-16T11:37:32.042Z"
+}

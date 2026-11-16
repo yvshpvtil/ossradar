@@ -1,0 +1,12 @@
+{
+ "fullName": "awslabs/uaef",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv pip install ./packages/uaef-0.2.0-py3-none-any.whl",
+ "source": "readme",
+ "readmeSummary": "A framework-agnostic evaluation system for AI agents. Plug it into any agentic platform to measure agent quality across 36 built-in metrics…",
+ "extractor": "heuristic",
+ "readmeHash": "ed039737d7cf",
+ "version": 1,
+ "generatedAt": "2026-11-16T11:37:32.050Z"
+}

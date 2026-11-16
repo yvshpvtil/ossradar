@@ -1,0 +1,12 @@
+{
+ "fullName": "arla6ka/design.how",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills@latest add https://design.how",
+ "source": "readme",
+ "readmeSummary": "Skills, design systems and visuals for coding agents, from design.how.",
+ "extractor": "heuristic",
+ "readmeHash": "5c396ca3c810",
+ "version": 1,
+ "generatedAt": "2026-11-16T11:37:32.056Z"
+}

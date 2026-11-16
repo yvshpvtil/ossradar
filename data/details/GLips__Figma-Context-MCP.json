@@ -1,0 +1,12 @@
+{
+ "fullName": "GLips/Figma-Context-MCP",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give Cursor and other AI-powered coding tools access to your Figma files with this Model Context Protocol server.",
+ "extractor": "heuristic",
+ "readmeHash": "a4dc59b864f9",
+ "version": 1,
+ "generatedAt": "2026-11-16T11:37:32.087Z"
+}

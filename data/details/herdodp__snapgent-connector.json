@@ -1,0 +1,12 @@
+{
+ "fullName": "herdodp/snapgent-connector",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "snapgentV3 is a browser extension plus a local bridge that connects a normal AI chat to VS Code.",
+ "extractor": "heuristic",
+ "readmeHash": "d99172190d79",
+ "version": 1,
+ "generatedAt": "2026-11-16T11:37:32.309Z"
+}

@@ -1,5 +1,6 @@
 {
  "checked": {
+  "0sec-labs/0": "2026-11-16",
   "aa1143/namigpt": "2026-11-11",
   "acgboss/ai--manus": "2026-11-13",
   "acgboss/manus--ai": "2026-11-13",
@@ -31,6 +32,7 @@
   "arcmira/mcp": "2026-11-11",
   "astralbursarprovide/fabfilter-total": "2026-11-11",
   "atomicbot-ai/atomic-chat": "2026-11-14",
+  "awslabs/unified-kg-rag-on-aws": "2026-11-16",
   "axillios1/ai--manus": "2026-11-13",
   "axillios1/manus--ai": "2026-11-13",
   "axium-labs/axcrew": "2026-11-11",
@@ -348,6 +350,7 @@
   "zseven-w/rish-app": "2026-11-11"
  },
  "moved": {
+  "0sec-labs/0": "0sec-labs/0security",
   "bherbruck/solidcraft": "tangency-labs/solidcraft",
   "codepawl/67.js": "codepawl/crucible",
   "copilotkit/openmuse": "CopilotKit/openfuse",
