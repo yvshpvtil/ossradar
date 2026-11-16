@@ -82,10 +82,10 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
-const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home"]);
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about"]);
 
 /** First segments that are real routes or sections, never a GitHub owner in the /{owner}/{name} shortcut. */
 const RESERVED = new Set([...Object.keys(HUBS), ...INDEXES, ...TOP_LEVEL, "repo", "md", "api", "badge", "trending"]);
@@ -191,6 +191,8 @@ export function proxy(req: NextRequest) {
   if (raw.length === 0) return negotiate("/md/home");
   // The daily archive index's twin is /daily.md (next.config rewrite to /md/daily).
   if (raw.length === 1 && raw[0] === "daily") return negotiate("/md/daily");
+  // The about/methodology page's twin is /about.md (next.config rewrite to /md/about).
+  if (raw.length === 1 && raw[0] === "about") return negotiate("/md/about");
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();
@@ -342,5 +344,5 @@ export const config = {
   // The two-segment entry (first segment not starting with . or _) and the github.com entry feed
   // the /{owner}/{name} repo shortcut. The uppercase entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/", "/new", "/hacker-news", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
+  matcher: ["/", "/new", "/hacker-news", "/about", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
 };

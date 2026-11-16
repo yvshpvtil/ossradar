@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, datasetLd, staticPageLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, datasetLd, staticPageLd, ogDefaults, pageAlternates, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import Link from "next/link";
 import { EstimateNote } from "@/components/EstBadge";
@@ -8,15 +8,9 @@ import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { getData } from "@/lib/data";
 import { getArchiveDays } from "@/lib/daily";
+import { ABOUT_FAQ } from "@/lib/aboutMd";
 
-const FAQ: { q: string; a: string }[] = [
-  { q: "What is OSS Radar?", a: `${SITE.name} (OSS = Open-Source Software) is a free, hourly-updated ranking of the fastest-rising open-source AI and developer-tool repositories on GitHub.` },
-  { q: "How are repos ranked?", a: "By star velocity: stars gained in the last 24 hours (Today) or the last 7 days (This week), not by total stars. Ties are broken by total stars." },
-  { q: "How often is the data updated?", a: "Every hour. A GitHub Action pulls star counts from the GitHub API and the site is rebuilt with the new numbers." },
-  { q: "Why are some numbers marked as estimates?", a: "For repos first seen less than 24 hours or 7 days ago there is no earlier snapshot to diff against, so the gain is estimated as total stars divided by days since the repo was created. Measured numbers replace estimates automatically." },
-  { q: "Do sponsors affect the rankings?", a: "No. Rankings are computed from GitHub data only. Sponsor placements are clearly labeled and separate from the leaderboard." },
-  { q: "Is there an API?", a: "Yes. /api/v1/trending returns the top 100 repos by 24-hour star gain as JSON. For a single tracked repo, /api/v1/repo/{owner}/{name} returns its stars, gains, rank, daily star history and alternatives. Both are free, need no key and update hourly." },
-];
+const FAQ = ABOUT_FAQ;
 
 const title = "How we rank rising GitHub repos";
 const description = `How ${SITE.name} ranks the fastest-rising open-source AI and dev-tool repos on GitHub by star velocity (stars gained in 24 hours and 7 days), updated hourly.`;
@@ -24,7 +18,7 @@ const description = `How ${SITE.name} ranks the fastest-rising open-source AI an
 export const metadata: Metadata = {
   title,
   description,
-  alternates: pageAlternates("/about"),
+  alternates: { ...pageAlternates("/about"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/about.md", title: `${title} (Markdown)` }] } },
   openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/about" },
   twitter: { ...twitterDefaults, title, description },
 };
