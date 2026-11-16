@@ -1,0 +1,12 @@
+{
+ "fullName": "nexu-io/html-video",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx playwright install chromium",
+ "source": "readme",
+ "readmeSummary": "Every template below is a real, animated single-file HTML video — these are live renders, not mockups.",
+ "extractor": "heuristic",
+ "readmeHash": "820de9b1ce8d",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.525Z"
+}

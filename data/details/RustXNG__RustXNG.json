@@ -1,0 +1,12 @@
+{
+ "fullName": "RustXNG/RustXNG",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.31.2 --locked",
+ "source": "readme",
+ "readmeSummary": "RustXNG is a self-hosted metasearch engine written in Rust, based on SearXNG.",
+ "extractor": "heuristic",
+ "readmeHash": "12652e74a685",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.469Z"
+}

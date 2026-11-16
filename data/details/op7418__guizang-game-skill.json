@@ -1,0 +1,12 @@
+{
+ "fullName": "op7418/guizang-game-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "让 AI 从零做出一个能在浏览器里玩的 3D 动作游戏",
+ "extractor": "heuristic",
+ "readmeHash": "e12c1a432573",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.246Z"
+}

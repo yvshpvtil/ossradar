@@ -1,0 +1,12 @@
+{
+ "fullName": "leostera/git-twig",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install leostera/git-twig/git-twig",
+ "source": "readme",
+ "readmeSummary": "With twig, your agents can create cheap lightweight worktrees and use up to 97% less space on disk.",
+ "extractor": "heuristic",
+ "readmeHash": "63ab18bf6f4a",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.263Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "leandrodaf/3d-new-era-ai",
+ "whoItsFor": null,
+ "useCases": [
+  "Plans from anything. Draw walls, arcs and sloping walls, or drop in a scanned plan at real scale and let `background` find the walls. Opens ",
+  "Joinery a workshop can build. Parametric cabinets, wardrobes, slatted panels, countertops with exact sink and cooktop cutouts, plaster coves",
+  "Checked against the people who live there. An ergonomics review (circulation, beds and bathrooms per person, the kitchen triangle, wheelchai"
+ ],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/leandrodaf/3d-new-era-ai/main/scripts/install-macos.sh | bash",
+ "source": "readme",
+ "readmeSummary": "English · Português (Brasil) · Website · Try it in the browser",
+ "extractor": "heuristic",
+ "readmeHash": "c3f030fada11",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.498Z"
+}

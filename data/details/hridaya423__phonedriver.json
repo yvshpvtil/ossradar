@@ -1,0 +1,12 @@
+{
+ "fullName": "hridaya423/phonedriver",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install hridaya423/tap/phonedriver",
+ "source": "readme",
+ "readmeSummary": "phonedriver lets Claude Code, Codex, Cursor or any MCP client use an Android phone or an iPhone.",
+ "extractor": "heuristic",
+ "readmeHash": "6509624bd864",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.709Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "pugarte7/spanish-top-tech-companies",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Un servidor MCP que da a tu agente de IA los salarios reales de las empresas tech en España y sus ofertas abiertas, y aplica por ti.",
+ "extractor": "heuristic",
+ "readmeHash": "00a509e1e4ea",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.251Z"
+}

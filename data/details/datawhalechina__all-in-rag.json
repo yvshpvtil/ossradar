@@ -1,0 +1,12 @@
+{
+ "fullName": "datawhalechina/all-in-rag",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "本项目是一个面向大模型应用开发者的RAG（检索增强生成）技术全栈教程，旨在通过体系化的学习路径和动手实践项目，帮助开发者掌握基于大语言模型的RAG应用开发技能，构建生产级的智能问答和知识检索系统。",
+ "extractor": "heuristic",
+ "readmeHash": "bb1300d8cba4",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.707Z"
+}

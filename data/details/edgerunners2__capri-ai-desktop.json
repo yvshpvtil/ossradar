@@ -1,0 +1,12 @@
+{
+ "fullName": "edgerunners2/capri-ai-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Capri AI Desktop turns your Windows 10/11 screen into an interactive cyberpunk workspace.",
+ "extractor": "heuristic",
+ "readmeHash": "6471c7595bc4",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.267Z"
+}

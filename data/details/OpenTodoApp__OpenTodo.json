@@ -1,0 +1,12 @@
+{
+ "fullName": "OpenTodoApp/OpenTodo",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d -p 8080:8080 -v opentodo-data:/data ghcr.io/opentodoapp/opentodo:stable",
+ "source": "readme",
+ "readmeSummary": "New: OpenTodo for iPhone and iPad is in the App Store. It's the first release, a first step: it connects to your OpenTodo server and adds…",
+ "extractor": "heuristic",
+ "readmeHash": "7a7ec9c181c1",
+ "version": 1,
+ "generatedAt": "2026-11-16T22:16:45.541Z"
+}
