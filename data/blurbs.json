@@ -353,6 +353,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:40.366Z"
  },
+ "beiwocaishijia/gezhi-sheets": {
+  "text": "A local AI spreadsheet assistant that extracts, sorts and calculates table data using GLM, Kimi, Doubao, DeepSeek or Qwen.",
+  "basis": "ed1905f46c09",
+  "source": "claude -p",
+  "generatedAt": "2026-11-16T02:18:05.637Z"
+ },
  "bojieli/ai-infra-book": {
   "text": "Open-source book that derives LLM inference and training system design from hardware limits, with calculation tools.",
   "basis": "0afee4d74953",
