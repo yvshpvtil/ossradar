@@ -1,0 +1,12 @@
+{
+ "fullName": "thesysdev/opendashboards",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Connect your databases and tools, ask a question in plain words, and get a live, interactive dashboard that pulls from all of them.",
+ "extractor": "heuristic",
+ "readmeHash": "5e3402021fc7",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.564Z"
+}

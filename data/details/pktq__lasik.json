@@ -1,0 +1,12 @@
+{
+ "fullName": "pktq/lasik",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g lasik-agents     # or run any command with npx lasik-agents",
+ "source": "readme",
+ "readmeSummary": "LASIK reads a protected build, proves which parts are protection (opaque predicates, encrypted strings, decoy code, tamper checks, binary…",
+ "extractor": "heuristic",
+ "readmeHash": "af54b7a066a2",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.999Z"
+}

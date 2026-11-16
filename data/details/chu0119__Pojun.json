@@ -1,0 +1,12 @@
+{
+ "fullName": "chu0119/Pojun",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/chu0119/Pojun/releases/latest/download/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "AI 自主渗透测试平台 · 从一句话目标到可交付漏洞报告",
+ "extractor": "heuristic",
+ "readmeHash": "d79bdac81a64",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.613Z"
+}

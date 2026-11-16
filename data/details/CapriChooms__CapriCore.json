@@ -1,0 +1,12 @@
+{
+ "fullName": "CapriChooms/CapriCore",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Windows AI desktop companion powered by OpenClaw: bundled local LLMs, Hugging Face GGUF models or OpenAI-compatible APIs, with shared…",
+ "extractor": "heuristic",
+ "readmeHash": "2792ab0c4e71",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.851Z"
+}

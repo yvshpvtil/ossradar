@@ -1,0 +1,12 @@
+{
+ "fullName": "Barty-Bart/motion-graphics",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Barty-Bart/motion-graphics",
+ "source": "readme",
+ "readmeSummary": "Free video-editing skills for Claude Code. Each skill does one job.",
+ "extractor": "heuristic",
+ "readmeHash": "4c081ad7bc6c",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.541Z"
+}

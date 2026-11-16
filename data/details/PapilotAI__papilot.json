@@ -1,0 +1,12 @@
+{
+ "fullName": "PapilotAI/papilot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A new paradigm for responsible writing and typesetting with AI.",
+ "extractor": "heuristic",
+ "readmeHash": "cec90f107127",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.818Z"
+}

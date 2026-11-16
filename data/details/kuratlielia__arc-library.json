@@ -1,0 +1,12 @@
+{
+ "fullName": "kuratlielia/arc-library",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx shadcn@latest add @uiarc/button @uiarc/dialog",
+ "source": "readme",
+ "readmeSummary": "Arc is a library of React components and blocks with motion built in. Every item is plain source you own…",
+ "extractor": "heuristic",
+ "readmeHash": "571fdf140e58",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.600Z"
+}

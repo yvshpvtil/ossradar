@@ -1,0 +1,12 @@
+{
+ "fullName": "erkamyaman/unslopovich",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx unslopovich",
+ "source": "readme",
+ "readmeSummary": "Works in Claude Code, Codex, Cursor, OpenCode, Gemini CLI, and GitHub Copilot (install options). Mobile apps, web apps, and websites.",
+ "extractor": "heuristic",
+ "readmeHash": "2ff148fc57c2",
+ "version": 1,
+ "generatedAt": "2026-11-16T02:51:27.846Z"
+}
