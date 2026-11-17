@@ -1,0 +1,12 @@
+{
+ "fullName": "Tthanh2k6/turbo-browser-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx -y turbo-browser-mcp --doctor",
+ "source": "readme",
+ "readmeSummary": "Fewer calls means fewer model turns and less page text replayed in the conversation. The numbers, and their limits, are under Benchmarks.",
+ "extractor": "heuristic",
+ "readmeHash": "c69accabea11",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.975Z"
+}

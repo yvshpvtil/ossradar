@@ -1,0 +1,12 @@
+{
+ "fullName": "AI4XE/Parallax",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Parallax is a lightweight workflow plugin for hands-off AI coding, on top of your agent harness.",
+ "extractor": "heuristic",
+ "readmeHash": "502e764ca94a",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.955Z"
+}

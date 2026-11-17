@@ -1,0 +1,12 @@
+{
+ "fullName": "datalab-to/marker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install marker-pdf",
+ "source": "readme",
+ "readmeSummary": "Marker converts documents to markdown, JSON, chunks, and HTML quickly and accurately.",
+ "extractor": "heuristic",
+ "readmeHash": "36672de3e825",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.518Z"
+}

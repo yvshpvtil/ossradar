@@ -1,0 +1,12 @@
+{
+ "fullName": "bookleme/bookleme",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "模型已经足够聪明，真正稀缺的是人类实际的工作经验。",
+ "extractor": "heuristic",
+ "readmeHash": "ca9b9db76c10",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.510Z"
+}

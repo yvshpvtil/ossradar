@@ -1,0 +1,12 @@
+{
+ "fullName": "spacesky-cell/TwinFix",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "TwinFix 是一个面向线上故障的 AI Agent。它从告警、错误日志、Issue 或手动提交接入，自动完成分诊（triage）、诊断、复现、修复、验证与报告，最终把一个已经在真实运行环境中验证过的修复交给人工评审和合并。",
+ "extractor": "heuristic",
+ "readmeHash": "c826de4e341f",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.734Z"
+}

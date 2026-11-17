@@ -1,0 +1,12 @@
+{
+ "fullName": "OpenSenseNova/SenseNova-RoboRSI",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Connect your model, skills, and robot tools through a shared runtime, customize prompts and context, and evaluate policies in environments…",
+ "extractor": "heuristic",
+ "readmeHash": "d27c4fe3bb1d",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.784Z"
+}

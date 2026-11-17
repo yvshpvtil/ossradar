@@ -1,0 +1,12 @@
+{
+ "fullName": "sybil-solutions/inference-optimisation-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "It works under a memory cap, and every result has to survive a full-context stability check.",
+ "extractor": "heuristic",
+ "readmeHash": "0eb574d2297d",
+ "version": 1,
+ "generatedAt": "2026-11-17T04:37:40.500Z"
+}
