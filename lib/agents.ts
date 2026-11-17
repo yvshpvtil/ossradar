@@ -81,6 +81,10 @@ actions:
     url: ${SITE.url}/api/v1/openapi.json
     description: OpenAPI 3.1 description of both JSON endpoints, ready to load as an agent tool or GPT action.
     confidence: vendor_authored
+  - label: Discover the API (RFC 9727 API catalog)
+    url: ${SITE.url}/.well-known/api-catalog
+    description: Linkset listing the JSON API with its OpenAPI spec, docs and this briefing.
+    confidence: vendor_authored
   - label: Open the live leaderboard
     url: ${SITE.url}/
     description: Human-readable homepage ranked by stars gained today.

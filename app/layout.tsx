@@ -54,6 +54,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             so agents and API crawlers landing on any page can discover /api/v1 without guessing. */}
         <link rel="service-desc" type="application/openapi+json" href="/api/v1/openapi.json" />
         <link rel="service-doc" type="text/html" href="/about#api" />
+        {/* RFC 9727: the API catalog (Linkset) that lists /api/v1 with its spec and docs. */}
+        <link rel="api-catalog" type="application/linkset+json" href="/.well-known/api-catalog" />
         {/* OpenSearch: browsers can add OSS Radar as an address-bar search (/?q=term). */}
         <link rel="search" type="application/opensearchdescription+xml" title="OSS Radar" href="/opensearch.xml" />
       </head>

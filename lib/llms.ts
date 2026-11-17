@@ -189,7 +189,7 @@ ${alternativesSection()}${dailySection(days)}## Data access
 
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
 - [JSON API: /api/v1/repo/{owner}/{name}](${SITE.url}/api/v1/repo/morluto/rea): one tracked repo's stars, 24h and 7-day gains, rank, daily star history, Hacker News story and alternatives. Same terms.
-- [OpenAPI spec](${SITE.url}/api/v1/openapi.json): OpenAPI 3.1 description of both JSON endpoints, for agent tools and custom GPT actions
+- [OpenAPI spec](${SITE.url}/api/v1/openapi.json): OpenAPI 3.1 description of both JSON endpoints, for agent tools and custom GPT actions (also linked from the RFC 9727 API catalog at ${SITE.url}/.well-known/api-catalog)
 - [RSS feed](${SITE.url}/rss.xml): today's top 50; per-category, per-language and per-topic feeds at ${SITE.url}/category/{slug}/rss.xml, ${SITE.url}/language/{language}/rss.xml and ${SITE.url}/topic/{topic}/rss.xml (e.g. ${SITE.url}/category/mcp/rss.xml, ${SITE.url}/language/python/rss.xml, ${SITE.url}/topic/mcp/rss.xml; only hubs listed below); one entry per day with that day's top 10 at ${SITE.url}/daily/rss.xml
 - [Sitemap](${SITE.url}/sitemap.xml): every repo, category, topic, language and alternatives page
 - [llms.txt](${SITE.url}/llms.txt): this file (also at ${SITE.url}/.well-known/llms.txt)

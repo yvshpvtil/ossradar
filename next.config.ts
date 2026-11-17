@@ -84,6 +84,8 @@ const nextConfig: NextConfig = {
       ...(["category", "topic", "language"] as const).map((hub) => ({ source: `/${hub === "category" ? "categories" : `${hub}s`}`, destination: `/${hub}`, permanent: true })),
       { source: "/repo", destination: "/", permanent: true },
       { source: "/api/v1", destination: "/api/v1/openapi.json", permanent: true },
+      // Common OpenAPI probe paths (API crawlers, agent frameworks, GPT action builders) -> the real spec.
+      ...["/openapi.json", "/.well-known/openapi.json", "/swagger.json", "/api/openapi.json", "/api/v1/swagger.json"].map((source) => ({ source, destination: "/api/v1/openapi.json", permanent: true })),
       { source: "/api", destination: "/about#api", permanent: true },
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
       // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
