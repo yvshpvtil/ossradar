@@ -1,0 +1,16 @@
+{
+ "fullName": "rinste/turbo-mlx",
+ "whoItsFor": null,
+ "useCases": [
+  "Create images from a description: photos, posters, graphic design, text inside the picture.",
+  "Edit a picture by saying what to change (\"make it winter\"): the rest stays as it was.",
+  "Make short videos with sound, from a description or starting from a picture."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Download the latest version: for Macs with Apple silicon (M1 or later) and macOS 15 or later.",
+ "extractor": "heuristic",
+ "readmeHash": "cf22d258ba7c",
+ "version": 1,
+ "generatedAt": "2026-11-17T14:36:18.744Z"
+}

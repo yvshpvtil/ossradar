@@ -1,0 +1,12 @@
+{
+ "fullName": "EricJujianZou/rederive",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add EricJujianZou/rederive",
+ "source": "readme",
+ "readmeSummary": "rederive is a skill for coding agents that teaches you a codebase by making you design it yourself from first principles.",
+ "extractor": "heuristic",
+ "readmeHash": "e05b0c547edc",
+ "version": 1,
+ "generatedAt": "2026-11-17T14:36:18.443Z"
+}

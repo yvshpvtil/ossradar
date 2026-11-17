@@ -1,0 +1,12 @@
+{
+ "fullName": "Orderchodrag/smelt-minecraft-mods-to-rust-converter",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Smelt turns a Fabric or NeoForge mod into a mod for Minecraft on Rust: Horizon, the open-source rewrite of Minecraft: Java Edition 26.3.",
+ "extractor": "heuristic",
+ "readmeHash": "116874bf25d3",
+ "version": 1,
+ "generatedAt": "2026-11-17T14:36:18.008Z"
+}

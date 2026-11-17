@@ -1,0 +1,12 @@
+{
+ "fullName": "erkamyaman/rust-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install rust-anything   # from crates.io",
+ "source": "readme",
+ "readmeSummary": "Measured on 4 cores; every number has a benchmark in demo/ that first checks the results are identical.",
+ "extractor": "heuristic",
+ "readmeHash": "b7e191b16fd6",
+ "version": 1,
+ "generatedAt": "2026-11-17T14:36:18.044Z"
+}

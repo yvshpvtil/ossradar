@@ -1,0 +1,12 @@
+{
+ "fullName": "lijiaqi-AI-Product-Manager/dsh-agent-compare",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install --prefix .runtime-checks/host-sdk --ignore-scripts --no-audit --no-fund @deepseek-ai/dsh@latest",
+ "source": "readme",
+ "readmeSummary": "中文 · English · 日本語 · 한국어 · Español · Português (Brasil) · Français · Deutsch",
+ "extractor": "heuristic",
+ "readmeHash": "fafe1ded8211",
+ "version": 1,
+ "generatedAt": "2026-11-17T14:36:18.337Z"
+}
