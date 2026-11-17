@@ -1,0 +1,12 @@
+{
+ "fullName": "tdawalton1-alt/microsoft-powerpoint",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This guide documents a standardized approach to configuring Microsoft PowerPoint on Windows, covering the design, organizational, and export…",
+ "extractor": "heuristic",
+ "readmeHash": "5d310132d510",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.274Z"
+}

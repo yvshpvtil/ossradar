@@ -1,0 +1,16 @@
+{
+ "fullName": "jc4603/telegram-channel-forwarder",
+ "whoItsFor": null,
+ "useCases": [
+  "Automatic Content Rewriting: Every incoming post can be rewritten on the fly to match your channel's tone and style. Summarize long reads, p",
+  "Multi-Language Translation: Reaching a wider audience is easy — translate posts into the languages your community speaks, automatically, bef",
+  "Link & Mention Sanitization: Keep your channel clean and on-brand. The bot strips external links, competitor mentions, stray hashtags, and p"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Telegram Channel Forwarder is a community-driven desktop tool built for channel admins and content curators who want their posts moving…",
+ "extractor": "heuristic",
+ "readmeHash": "b4a1f2ac85ee",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:53.882Z"
+}

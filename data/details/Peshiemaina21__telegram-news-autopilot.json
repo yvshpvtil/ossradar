@@ -1,0 +1,16 @@
+{
+ "fullName": "Peshiemaina21/telegram-news-autopilot",
+ "whoItsFor": null,
+ "useCases": [
+  "Collect from anywhere — pull stories from RSS feeds, sites, and other sources on a schedule, then let the bot decide what's worth keeping. N",
+  "with a safety net — draft posts get rewritten in your own voice, then run through, language and grammar blockers, and corruption checks befo",
+  "that actually works — similar stories from different outlets get grouped and collapsed, so your feed stays fresh instead of repeating the sa"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Telegram Autopilot is a portable Windows autopilot built for and with Telegram, made to run straight from a folder without a fuss.",
+ "extractor": "heuristic",
+ "readmeHash": "8fdd9d8cb00f",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:53.922Z"
+}

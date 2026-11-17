@@ -1,0 +1,12 @@
+{
+ "fullName": "workingprototype/Fuobe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Real covers from the galleries. Every clip and still below was rendered locally on ComfyUI.",
+ "extractor": "heuristic",
+ "readmeHash": "1b26f37855d8",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.512Z"
+}

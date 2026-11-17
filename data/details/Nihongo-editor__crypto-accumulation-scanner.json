@@ -1,0 +1,12 @@
+{
+ "fullName": "Nihongo-editor/crypto-accumulation-scanner",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Crypto Accumulation Scanner is a community-built tool that quietly watches market for coiling in long, flat bases before a breakout, then…",
+ "extractor": "heuristic",
+ "readmeHash": "83e73c84b40c",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.182Z"
+}

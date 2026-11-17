@@ -1,0 +1,16 @@
+{
+ "fullName": "bhukyabalu12/repdix-telegram-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-database support: Works with MySQL, PostgreSQL, and SQLite out of the box. Define your connections once in a YAML config and switch be",
+  "Local LLM power: Runs against LM Studio or Ollama, keeping your data and prompts on your own infrastructure. Full Tool Calling support means",
+  "Safety first: Every generated statement passes through a validator that permits only read-only SELECT queries. Anything suspicious gets reje"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Repdix is a versatile Telegram bot that turns everyday questions into real database insights — just ask in plain language, and it translates…",
+ "extractor": "heuristic",
+ "readmeHash": "6abcf6d9ccf2",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.166Z"
+}

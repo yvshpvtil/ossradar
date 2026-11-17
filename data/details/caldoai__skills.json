@@ -1,0 +1,12 @@
+{
+ "fullName": "caldoai/skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add caldoai/skills",
+ "source": "readme",
+ "readmeSummary": "Then install a skill with the command in its row of the table below.",
+ "extractor": "heuristic",
+ "readmeHash": "f03c38348715",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.411Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "chronospopup-byte/smartgrow-ai",
+ "whoItsFor": null,
+ "useCases": [
+  "Live plant condition monitoring — watch your plant's environment in near real time, so you catch problems before they turn into sad, droopy ",
+  "Soil moisture tracking — know exactly when your plant is thirsty (and when it's been overwatered by an overenthusiastic plant parent).",
+  "Temperature and humidity readings — keep an eye on the conditions your plant actually lives in, not just what the weather app says."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SmartGrow AI is a community-minded plant companion that blends sensor-driven monitoring with a friendly Telegram chatbot…",
+ "extractor": "heuristic",
+ "readmeHash": "148de6d9f0d4",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.023Z"
+}

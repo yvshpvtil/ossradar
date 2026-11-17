@@ -1,0 +1,16 @@
+{
+ "fullName": "Wilfriedbkt/interview-copilot-edtech-app",
+ "whoItsFor": null,
+ "useCases": [
+  "Context-aware answer guidance: Instead of canned responses, it generates structured talking points, hints, and answer frameworks tailored to",
+  "Discreet desktop overlay: A lightweight floating companion stays quietly on screen during mock or real sessions, keeping suggestions within ",
+  "Browser-ready flexibility: Practice anywhere with a cloud-hosted mode, or keep everything local — the same experience adapts to how you want"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Interview Copilot is an EdTech application built to close the distance between learning and landing the job you actually want.",
+ "extractor": "heuristic",
+ "readmeHash": "17384d8ca1fd",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.153Z"
+}

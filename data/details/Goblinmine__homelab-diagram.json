@@ -1,0 +1,12 @@
+{
+ "fullName": "Goblinmine/homelab-diagram",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The script behind the network diagram of my homelab that I posted on r/homelab.",
+ "extractor": "heuristic",
+ "readmeHash": "30768e75e142",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:53.864Z"
+}

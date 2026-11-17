@@ -1,0 +1,12 @@
+{
+ "fullName": "Realmeshowroom/jet-reports-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Jet Reports Skill turns a plain-language request into a - Jet Reports workbook, so you the report and the skill handles the formula…",
+ "extractor": "heuristic",
+ "readmeHash": "8acc52a01831",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.408Z"
+}

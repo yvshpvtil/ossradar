@@ -1,0 +1,16 @@
+{
+ "fullName": "mmclucknorrismm/cmangos-helm",
+ "whoItsFor": null,
+ "useCases": [
+  "One chart, three expansions., The Burning Crusade, and Wrath the Lich King each get their own `mangosd`, `realmd`, and matching database — p",
+  "Client data, handled. Point the chart at your game client and it runs the extractors for you — dbc, maps, vmaps, and mmaps — writing them in",
+  "Resumable extraction. The client-data Job leaves a breadcrumb after every finished step. Restart it and it picks up where it stopped. Flip o"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "CMaNGOS Helm is the missing piece between your server binaries and the cluster you already run — a chart that stands up realmd, mangosd…",
+ "extractor": "heuristic",
+ "readmeHash": "3eca0c65c9ab",
+ "version": 1,
+ "generatedAt": "2026-11-17T23:00:54.532Z"
+}
