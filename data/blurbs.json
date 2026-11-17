@@ -84,10 +84,10 @@
   "generatedAt": "2026-10-23T02:20:46.583Z"
  },
  "Folkbench/folkbench": {
-  "text": "Desktop app that switches Claude Code, Codex and other tools between AI API relays, showing their uptime and latency.",
-  "basis": "a71b2c52fbbc",
+  "text": "Live LLM relay rankings and model integrity probes, with a Tauri/Rust switcher for Claude Code, Codex and Gemini CLI.",
+  "basis": "2d543c632f67",
   "source": "claude -p",
-  "generatedAt": "2026-10-14T05:13:55.176Z"
+  "generatedAt": "2026-11-17T02:23:57.310Z"
  },
  "HD838A/remote-mic-app": {
   "text": "A macOS app that turns the Xiaomi Bluetooth Remote 2 or 2 Pro into a wireless microphone for voice input on a Mac.",
@@ -395,6 +395,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.289Z"
  },
+ "chu0119/Pojun": {
+  "text": "A multi-agent AI penetration testing platform that goes from a one-line target to a deliverable vulnerability report.",
+  "basis": "2538c47f8397",
+  "source": "claude -p",
+  "generatedAt": "2026-11-17T02:23:57.282Z"
+ },
  "cookiy-ai/sell-sessions-skill": {
   "text": "Local tool that lets you pick Claude Code and Codex sessions, scrub secrets and PII, and upload them for sale.",
   "basis": "6ec9042cc9b2",
@@ -424,6 +430,12 @@
   "basis": "beaefd6866a9",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:13:13.000Z"
+ },
+ "datawhalechina/all-in-rag": {
+  "text": "A full-stack tutorial on retrieval-augmented generation (RAG) for building LLM-based Q&A and knowledge retrieval apps.",
+  "basis": "0be35b4e8f0e",
+  "source": "claude -p",
+  "generatedAt": "2026-11-17T02:23:57.288Z"
  },
  "datawhalechina/hello-agents": {
   "text": "A Chinese-language tutorial on the principles and practice of building AI agents from scratch.",
