@@ -84,10 +84,10 @@
   "generatedAt": "2026-10-23T02:20:46.583Z"
  },
  "Folkbench/folkbench": {
-  "text": "Live LLM relay rankings and model integrity probes, with a Tauri/Rust switcher for Claude Code, Codex and Gemini CLI.",
-  "basis": "2d543c632f67",
-  "source": "claude -p",
-  "generatedAt": "2026-11-17T02:23:57.310Z"
+  "text": "Rankings and reviews of AI API relay services, plus Folkbench Switch for routing Claude Code, Codex and Gemini CLI through them.",
+  "basis": "476a000f9712",
+  "source": "manual",
+  "generatedAt": "2026-11-18T02:26:58.777Z"
  },
  "HD838A/remote-mic-app": {
   "text": "A macOS app that turns the Xiaomi Bluetooth Remote 2 or 2 Pro into a wireless microphone for voice input on a Mac.",
@@ -227,6 +227,12 @@
   "source": "claude -p",
   "generatedAt": "2026-11-01T02:20:37.252Z"
  },
+ "Renly1994/xiaotang-daozai": {
+  "text": "A Rust-built Windows desktop info island showing lyrics, verification codes, calendar reminders, to-dos and AI usage quotas.",
+  "basis": "3d39bfb00549",
+  "source": "manual",
+  "generatedAt": "2026-11-18T02:26:58.777Z"
+ },
  "SAOS-3624/dsh-see-now": {
   "text": "A DSH plugin that lets AI see your screen live, keeping only frames that changed and tiling several into one image.",
   "basis": "c78939d92622",
@@ -365,6 +371,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:20.682Z"
  },
+ "bookleme/bookleme": {
+  "text": "A Python tool that compiles a book (PDF, EPUB, DOCX and more) into an installable Agent Skill and checks it for fidelity to the text.",
+  "basis": "3a8d9364bece",
+  "source": "manual",
+  "generatedAt": "2026-11-18T02:26:58.776Z"
+ },
  "calmsprite2001/mcd-mailu": {
   "text": "A skill using McDonald's official MCP that reads your past orders and turns them into a shareable story card.",
   "basis": "ad652aeb505b",
@@ -442,6 +454,12 @@
   "basis": "dc30c9ec113f",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:04.388Z"
+ },
+ "datawhalechina/self-llm": {
+  "text": "Chinese-language tutorials for setting up, deploying and fine-tuning (full or LoRA) open-source LLMs and multimodal models on Linux.",
+  "basis": "14b6c140bed7",
+  "source": "manual",
+  "generatedAt": "2026-11-18T02:26:58.775Z"
  },
  "dengmeiluan/ticket-monitoring": {
   "text": "Self-hosted flight price monitor that collects fare details from multiple sites and sends DingTalk alerts when targets are met.",
@@ -875,6 +893,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-29T02:22:37.057Z"
  },
+ "ysunyang4/Nexus": {
+  "text": "A local control plane and browser extension that lets web AI assistants like ChatGPT and DeepSeek work with your local files over MCP.",
+  "basis": "c9fa02d3c6dc",
+  "source": "manual",
+  "generatedAt": "2026-11-18T02:26:58.776Z"
+ },
  "yzlin286-wq/Deepscient": {
   "text": "A research workbench on the DeepSeek Harness runtime that guides science work through 12 stages with evidence chains.",
   "basis": "1e54cf01a0c6",
@@ -900,10 +924,10 @@
   "generatedAt": "2026-10-25T02:21:46.924Z"
  },
  "zgsfsec/Full-Chain-Sentinel-System": {
-  "text": "An AI agent for authorized penetration testing of web, mini-program and mobile apps, run from a web console.",
-  "basis": "6cbd0b7b3967",
+  "text": "An AI agent for authorized security testing across web, Android and iOS apps, with batch recon, incident response and vuln monitoring.",
+  "basis": "609aee371a80",
   "source": "manual",
-  "generatedAt": "2026-11-14T02:19:46.356Z"
+  "generatedAt": "2026-11-18T02:26:58.777Z"
  },
  "zhu1090093659/dsh-web": {
   "text": "Plugin ecosystem for the DeepSeek Harness web UI, shared through a Creative Workshop.",
