@@ -1,0 +1,16 @@
+{
+ "fullName": "replit/datacat",
+ "whoItsFor": null,
+ "useCases": [
+  "Metrics explorer, formulas, dashboards and host maps",
+  "Searchable logs with facets, live tail and trace correlation",
+  "APM service catalog, trace explorer and waterfall"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Self-hosted observability: metrics, logs, distributed traces, dashboards, infrastructure and alerts in one place.",
+ "extractor": "heuristic",
+ "readmeHash": "e6ed6bcce24d",
+ "version": 1,
+ "generatedAt": "2026-11-18T22:05:54.932Z"
+}

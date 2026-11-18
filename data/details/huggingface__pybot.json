@@ -1,0 +1,12 @@
+{
+ "fullName": "huggingface/pybot",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "LLMs drive today’s chatbots and agents, but chatbots long predate them.",
+ "extractor": "heuristic",
+ "readmeHash": "bfe8bc11e19f",
+ "version": 1,
+ "generatedAt": "2026-11-18T22:05:54.938Z"
+}
