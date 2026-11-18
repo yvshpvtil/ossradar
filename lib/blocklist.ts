@@ -62,6 +62,8 @@ const FARM_MIN_CLUSTER = 5;
 /** Max star spread inside a wave (bots star every repo in a batch the same number of times). */
 const FARM_STAR_SPREAD = 10;
 const FARM_MIN_STARS = 200;
+/** A clone wave: this many different owners publishing the same repo name on the same day. */
+const CLONE_MIN_OWNERS = 3;
 
 /**
  * Bot-starred lure campaigns: dozens of throwaway repos created the same day, each with 0-1 forks
@@ -78,6 +80,20 @@ export function starFarmNames(repos: { fullName: string; createdAt?: string | nu
     byDay.set(day, [...(byDay.get(day) ?? []), { name: r.fullName.toLowerCase(), stars: r.stars }]);
   }
   const out = new Set<string>();
+  // Clone waves: the same repo name pushed by several throwaway accounts on the same day (Nov 14 2026:
+  // 7x "GitHub-Copilot-app" and 9x "ai--manus2.0", identical READMEs, ~370-384 bot stars and bot forks
+  // too, so the forks/spread checks below miss them). Real projects never get 200+ stars under three
+  // different owners on the day they are created; each copy is also a duplicate page for search engines.
+  const byName = new Map<string, { name: string; owner: string }[]>();
+  for (const r of repos) {
+    const [owner, name] = r.fullName.toLowerCase().split("/");
+    if (!r.createdAt || !name || r.stars < FARM_MIN_STARS) continue;
+    const key = `${r.createdAt.slice(0, 10)}|${name}`;
+    byName.set(key, [...(byName.get(key) ?? []), { name: r.fullName.toLowerCase(), owner }]);
+  }
+  for (const list of byName.values()) {
+    if (new Set(list.map((x) => x.owner)).size >= CLONE_MIN_OWNERS) for (const x of list) out.add(x.name);
+  }
   for (const list of byDay.values()) {
     list.sort((a, b) => a.stars - b.stars);
     for (let i = 0, j = 0; j < list.length; j++) {
