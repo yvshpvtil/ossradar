@@ -1,0 +1,16 @@
+{
+ "fullName": "ysunyang4/webagent",
+ "whoItsFor": null,
+ "useCases": [
+  "Local tool bridge: forwards model-proposed MCP calls to a locally configured Nexus endpoint.",
+  "User-controlled execution: provides settings for execution and tool-result feedback. Check the active settings before use.",
+  "Floating panel: manage workspace, connection options and common tool actions from the chat page."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "WebAgent connects compatible web AI chat pages to local MCP tools through Nexus.",
+ "extractor": "heuristic",
+ "readmeHash": "cad09f62f242",
+ "version": 1,
+ "generatedAt": "2026-11-18T14:12:23.996Z"
+}
