@@ -1,0 +1,12 @@
+{
+ "fullName": "interfere-inc/landmines",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "bun add -d oxlint @interfere/landmines",
+ "source": "readme",
+ "readmeSummary": "Oxlint rules that keep AI-written code honest.",
+ "extractor": "heuristic",
+ "readmeHash": "dc668dea8d3b",
+ "version": 1,
+ "generatedAt": "2026-11-18T04:33:25.737Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Continuum-AI-Corp/OrcaPromptVault",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g orcareplay",
+ "source": "readme",
+ "readmeSummary": "A versioned, verifiable archive of system prompts, developer instructions, tool schemas and agent harnesses powering today's AI products.",
+ "extractor": "heuristic",
+ "readmeHash": "d19932e3e4b4",
+ "version": 1,
+ "generatedAt": "2026-11-18T04:33:25.775Z"
+}

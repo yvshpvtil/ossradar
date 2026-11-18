@@ -1,0 +1,12 @@
+{
+ "fullName": "starlinghq/starling",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e '.[dev]'",
+ "source": "readme",
+ "readmeSummary": "Local AI in .NET, with no Python sidecar and no API key.",
+ "extractor": "heuristic",
+ "readmeHash": "9b438fd10226",
+ "version": 1,
+ "generatedAt": "2026-11-18T04:33:25.770Z"
+}

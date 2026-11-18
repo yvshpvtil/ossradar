@@ -1,0 +1,12 @@
+{
+ "fullName": "dograh-hq/dograh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The open-source, self-hostable alternative to Vapi & Retell — build production voice agents with a visual workflow builder…",
+ "extractor": "heuristic",
+ "readmeHash": "79cd831ebbb4",
+ "version": 1,
+ "generatedAt": "2026-11-18T04:33:25.732Z"
+}

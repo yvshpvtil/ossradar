@@ -1,0 +1,12 @@
+{
+ "fullName": "LCY-666lll/CI_Failure_Intelligence",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "从一次 CI 失败，找到可追溯的诊断线索。",
+ "extractor": "heuristic",
+ "readmeHash": "1ece64ae566f",
+ "version": 1,
+ "generatedAt": "2026-11-18T04:33:25.975Z"
+}
