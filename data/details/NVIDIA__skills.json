@@ -1,0 +1,12 @@
+{
+ "fullName": "NVIDIA/skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add nvidia/skills --skill nvidia-skill-finder --yes",
+ "source": "readme",
+ "readmeSummary": "Official, NVIDIA-verified Agent Skills for Claude Code, Codex, and other coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "2d6001fdc205",
+ "version": 1,
+ "generatedAt": "2026-11-19T03:39:39.820Z"
+}

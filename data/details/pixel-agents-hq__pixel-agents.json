@@ -1,0 +1,16 @@
+{
+ "fullName": "pixel-agents-hq/pixel-agents",
+ "whoItsFor": null,
+ "useCases": [
+  "One agent, one character — every agent terminal gets its own animated character",
+  "Live activity tracking — characters animate based on what the agent is actually doing (writing, reading, running commands). Sub-agents and t",
+  "Notifications — speech bubbles, plus optional chimes, when an agent needs input or permission or finishes its turn"
+ ],
+ "installCommand": "npx pixel-agents",
+ "source": "readme",
+ "readmeSummary": "Pixel Agents turns the AI coding agents running in your terminals into animated pixel-art characters working in a tiny office.",
+ "extractor": "heuristic",
+ "readmeHash": "1fc7c8f663f8",
+ "version": 1,
+ "generatedAt": "2026-11-19T03:39:39.831Z"
+}
