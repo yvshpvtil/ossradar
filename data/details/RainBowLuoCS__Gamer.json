@@ -1,0 +1,12 @@
+{
+ "fullName": "RainBowLuoCS/Gamer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "We introduce Gamer, a generalist agent framework built for long-horizon tasks in complex interactive environments.",
+ "extractor": "heuristic",
+ "readmeHash": "d618073287e0",
+ "version": 1,
+ "generatedAt": "2026-11-19T13:25:14.987Z"
+}

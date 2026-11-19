@@ -1,0 +1,16 @@
+{
+ "fullName": "nickvasilescu/orgo-teammates",
+ "whoItsFor": null,
+ "useCases": [
+  "Give every Bot a role. Set its instructions, appearance, thinking effort, skills, and memories. Make one your primary point of contact.",
+  "Put it to work on a computer. Bots browse websites, run shell commands, and use a full Linux desktop through Orgo. Watch live, take control,",
+  "Connect your apps. Google sign-in and app connections run through Composio. Read actions run automatically; Composio write actions pause for"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Give a Bot a job, connect the apps it needs, and follow its work in chat.",
+ "extractor": "heuristic",
+ "readmeHash": "be57317f6275",
+ "version": 1,
+ "generatedAt": "2026-11-19T13:25:15.084Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "jackson-cmd/zeus-options-terminal",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pipx install zeus-options-terminal",
+ "source": "readme",
+ "readmeSummary": "Everything an options trader keeps ten browser tabs open for, in one terminal.",
+ "extractor": "heuristic",
+ "readmeHash": "3fdc57628913",
+ "version": 1,
+ "generatedAt": "2026-11-19T13:25:15.080Z"
+}
