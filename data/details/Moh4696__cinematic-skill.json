@@ -1,0 +1,12 @@
+{
+ "fullName": "Moh4696/cinematic-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Moh4696/cinematic-skill",
+ "source": "readme",
+ "readmeSummary": "Ask your agent for \"a 90 second documentary about the Wright brothers\" and it writes the script, records a voice, finds public-domain photos…",
+ "extractor": "heuristic",
+ "readmeHash": "a5e839499cc1",
+ "version": 1,
+ "generatedAt": "2026-11-19T22:16:55.333Z"
+}

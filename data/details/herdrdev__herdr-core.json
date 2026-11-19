@@ -1,0 +1,12 @@
+{
+ "fullName": "herdrdev/herdr-core",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://releases.herdr.dev/core/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "hc runs programs and coding agents in terminals that stay alive after you leave.",
+ "extractor": "heuristic",
+ "readmeHash": "f6942aa51fed",
+ "version": 1,
+ "generatedAt": "2026-11-19T22:16:55.698Z"
+}

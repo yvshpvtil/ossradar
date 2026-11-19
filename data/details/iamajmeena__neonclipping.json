@@ -1,0 +1,16 @@
+{
+ "fullName": "iamajmeena/neonclipping",
+ "whoItsFor": null,
+ "useCases": [
+  "One-click Make clips, live progress, clips appear one by one with preview and MP4 download.",
+  "Min / Max clip length (e.g. 30–80 s). Clips end on a sentence.",
+  "Facecam position presets (top-left, top-right, bottom-left, bottom-right, bottom-centre, none) for the usual streamer layouts, remembered be"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Paste a link. Get captioned 9:16 clips in about two minutes. Free, local, open-source.",
+ "extractor": "heuristic",
+ "readmeHash": "219c16737c8c",
+ "version": 1,
+ "generatedAt": "2026-11-19T22:16:55.381Z"
+}

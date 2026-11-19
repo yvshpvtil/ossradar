@@ -1,0 +1,12 @@
+{
+ "fullName": "vaibhav-space/my-ai-coding-workflow",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "For Claude Code. Needs bash. Tested on Linux.",
+ "extractor": "heuristic",
+ "readmeHash": "a88f94234e23",
+ "version": 1,
+ "generatedAt": "2026-11-19T22:16:55.386Z"
+}

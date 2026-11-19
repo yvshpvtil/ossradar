@@ -1,0 +1,16 @@
+{
+ "fullName": "ai-timon/timon",
+ "whoItsFor": null,
+ "useCases": [
+  "Memory that reaches the agent: a rule learned once is injected into the next mission",
+  "Missions that survive: every turn and tool call is kept, a dead mission is resumed",
+  "Quota fallbacks: when one subscription runs dry, the work moves to the next backend"
+ ],
+ "installCommand": "curl -fsSL https://timon-ai.com/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "You tell Timon what you need, in plain words. The orchestrator splits the job into tasks and hands each one to the right agent: one codes…",
+ "extractor": "heuristic",
+ "readmeHash": "13c4b442a8fd",
+ "version": 1,
+ "generatedAt": "2026-11-19T22:16:55.780Z"
+}
