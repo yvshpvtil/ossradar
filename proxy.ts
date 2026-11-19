@@ -82,7 +82,7 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
 const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about"]);
@@ -193,6 +193,8 @@ export function proxy(req: NextRequest) {
   if (raw.length === 1 && raw[0] === "daily") return negotiate("/md/daily");
   // The about/methodology page's twin is /about.md (next.config rewrite to /md/about).
   if (raw.length === 1 && raw[0] === "about") return negotiate("/md/about");
+  // The hub directories' twins are /category.md, /language.md and /topic.md (next.config rewrites to /md/{section}).
+  if (raw.length === 1 && (raw[0] === "category" || raw[0] === "language" || raw[0] === "topic")) return negotiate(`/md/${raw[0]}`);
 
   // An index page's own card, e.g. /topic/opengraph-image (not a hub slug), when requested exactly as generated.
   if (raw.length === 2 && raw[0] === section && raw[1] === "opengraph-image" && INDEX_CARDS.has(section)) return NextResponse.next();

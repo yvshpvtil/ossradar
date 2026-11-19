@@ -6,7 +6,7 @@ import { altLabel } from "@/lib/alternatives";
 import { CATEGORIES } from "@/lib/categories";
 import { getData, getReposByCategory, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
-import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, RSS_ALTERNATE, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every category hub. Before this, bare /category 404'd and category hubs
@@ -82,7 +82,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    alternates: pageAlternates("/category"),
+    alternates: { ...pageAlternates("/category"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/category.md", title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/category" },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };

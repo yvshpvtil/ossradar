@@ -7,7 +7,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { getData, rankRepos } from "@/lib/data";
 import { formatDelta } from "@/lib/format";
 import { LANGUAGE_MIN, getLanguages, getReposByLanguage } from "@/lib/languages";
-import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
+import { abs, breadcrumbLd, ogDefaults, repoPath, websiteRef, pageAlternates, RSS_ALTERNATE, ogCardLd, pageNodeIds, twitterDefaults } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 // Directory of every language hub. Before this, language hubs were linked only from the
@@ -80,7 +80,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    alternates: pageAlternates("/language"),
+    alternates: { ...pageAlternates("/language"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/language.md", title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title: socialTitle, description, url: "/language" },
     twitter: { ...twitterDefaults, title: socialTitle, description },
   };
