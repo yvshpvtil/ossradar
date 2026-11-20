@@ -59,6 +59,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-20T11:05:50.736Z"
  },
+ "CzzzzzzJ/mdldm-maitian": {
+  "text": "Mac workstation for creators that schedules posts to Bilibili, Douyin, Xiaohongshu, YouTube and X and tracks their stats.",
+  "basis": "e4a0515b5d6d",
+  "source": "manual translation",
+  "generatedAt": "2026-11-20T02:23:54.000Z"
+ },
  "DSH-APP/DSHA": {
   "text": "Android app that runs the DeepSeek Harness agent on phones in a bundled Ubuntu environment, without root or Termux.",
   "basis": "2a1475664536",
