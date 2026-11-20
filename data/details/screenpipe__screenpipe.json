@@ -1,0 +1,12 @@
+{
+ "fullName": "screenpipe/screenpipe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx screenpipe record",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/70fe94eb-6d2a-47ca-b7c3-c8ead13a5b7f",
+ "extractor": "heuristic",
+ "readmeHash": "fb93ec353c1a",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.508Z"
+}

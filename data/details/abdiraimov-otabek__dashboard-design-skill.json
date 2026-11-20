@@ -1,0 +1,12 @@
+{
+ "fullName": "abdiraimov-otabek/dashboard-design-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A Claude Code skill that designs clean, honest dashboards. Build, redesign and critique data screens on the web or in SwiftUI…",
+ "extractor": "heuristic",
+ "readmeHash": "fcfd59325742",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.209Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "vercel-labs/screen-relay",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g screen-relay",
+ "source": "readme",
+ "readmeSummary": "Desktop streaming and control for humans and AI agents: watch a desktop in a browser, and click, type, and take screenshots from the shell.",
+ "extractor": "heuristic",
+ "readmeHash": "eb57030639ea",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.433Z"
+}

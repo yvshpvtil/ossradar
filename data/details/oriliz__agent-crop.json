@@ -1,0 +1,12 @@
+{
+ "fullName": "oriliz/agent-crop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g agent-crop-dsh   # 可选：让 crop 进 PATH",
+ "source": "readme",
+ "readmeSummary": "Agent Crop 是给 AI 的一根马鞭：催它交活，逼它复盘，让它自己越用越顺。",
+ "extractor": "heuristic",
+ "readmeHash": "24eb04583658",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.230Z"
+}

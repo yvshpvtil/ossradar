@@ -1,0 +1,12 @@
+{
+ "fullName": "misakano7545/workbuddy2api-panel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "WorkBuddy2API 是一个自托管的 OpenAI 兼容反向代理网关，将腾讯 CodeBuddy（copilot.tencent.com）账号包装为统一服务。",
+ "extractor": "heuristic",
+ "readmeHash": "18e4fd0ab3d2",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.453Z"
+}

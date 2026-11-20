@@ -1,0 +1,12 @@
+{
+ "fullName": "wangrongding/tv-fresh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "本仓库同时是一个可安装的 agent 技能（含 SKILL.md + 分任务 reference + 一键脚本）， 你的 AI 助手装上后即可按流程安全地改造小米电视：",
+ "extractor": "heuristic",
+ "readmeHash": "302e99279828",
+ "version": 1,
+ "generatedAt": "2026-11-20T03:29:46.496Z"
+}
