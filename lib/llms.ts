@@ -158,6 +158,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Repo data as JSON: ${SITE.url}/api/v1/repo/{owner}/{name} (stars, 24h and 7-day gains, rank today and this week, daily star history, Hacker News story, alternatives; tracked repos only, free, no key)
 - Alternatives: ${SITE.url}/alternatives/{owner}/{name} (tracked repos in the same category sharing its GitHub topics, plus close matches from other categories when few; only for repos with at least 3)
 - Compare: ${SITE.url}/compare?r={owner}/{name},{owner}/{name} (up to 3 tracked repos)
+- Comparison as Markdown: ${SITE.url}/compare.md?r={owner}/{name},{owner}/{name} (the same side-by-side table server-rendered for agents: what each repo is, stars, 24h and 7-day gains, weekly rank, forks, language, age, last push, latest release, Hacker News, plus a plain-English head-to-head; without ?r= it lists this week's head-to-heads)
 - Trending view as Markdown: ${SITE.url}/trending/{slug}.md, e.g. ${SITE.url}/trending/ai-repos-this-week.md (the top 50 of that view; ${LANDINGS.map((l) => l.slug).join(", ")})
 - Category hub as Markdown: ${SITE.url}/category/{slug}.md, e.g. ${SITE.url}/category/mcp.md (that category's tracked repos ranked by 7-day star gain; slugs listed under Categories below)
 - Hub directories as Markdown: ${SITE.url}/category.md, ${SITE.url}/language.md and ${SITE.url}/topic.md (every category, language or topic hub ranked by combined 7-day star gain, with repo counts, top 3 risers and links to each hub's .md)
@@ -169,7 +170,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Hacker News list as Markdown: ${SITE.url}/hacker-news.md (tracked repos posted to Hacker News in the last 30 days, ranked by story points, with comments, post date and star growth)
 - New repos as Markdown: ${SITE.url}/new.md (tracked repos created on GitHub in the last 14 days, grouped by launch day, with stars, 7-day gain, category and language)
 - Homepage leaderboard as Markdown: ${SITE.url}/index.md (today's top 25 and this week's top 10 by stars gained, with links to every Markdown view)
-- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new, /hacker-news, /daily, /about, /category, /language or /topic, with the header Accept: text/markdown to get its Markdown twin at the same URL
+- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new, /hacker-news, /daily, /about, /category, /language, /topic or /compare?r=..., with the header Accept: text/markdown to get its Markdown twin at the same URL
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name} (shows "Trending #N" for today's top 100, else "Tracked"; embed guide: ${SITE.url}/badge)${dailyPattern}
 
 ## Categories

@@ -1,15 +1,13 @@
-import { abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { RSS_ALTERNATE, abs, breadcrumbLd, collectionPageLd, linkListLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { getData, getReposByCategory, rankRepos } from "@/lib/data";
-import { CATEGORIES } from "@/lib/categories";
-import { ago, getLatestRelease } from "@/lib/activity";
+import { getData } from "@/lib/data";
+import { headToHead, popularComparisons } from "@/lib/compareMd";
 import { altLabel } from "@/lib/alternatives";
 import { CompareView } from "./CompareView";
-import type { Repo } from "@/lib/types";
 
 const title = "Compare GitHub repos side by side";
 const description = "Compare up to 3 rising open-source AI and developer-tool repos: stars, growth, forks, language, releases, recent activity and Hacker News discussion.";
@@ -35,54 +33,10 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description: d,
-    alternates: pageAlternates("/compare"),
+    alternates: { ...pageAlternates("/compare"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/compare.md", title: `${title} (Markdown)` }] } },
     openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description: d, url: "/compare" },
     twitter: { ...twitterDefaults, title, description: d },
   };
-}
-
-/** Top-2-by-7d pairs across categories (one pair each), for starter links + ItemList. */
-function popularComparisons(limit = 6): { a: Repo; b: Repo; category: string; slug: string }[] {
-  const pairs: { a: Repo; b: Repo; category: string; slug: string }[] = [];
-  for (const cat of CATEGORIES) {
-    if (pairs.length >= limit) break;
-    const top = rankRepos(getReposByCategory(cat.slug), "week");
-    if (top.length < 2) continue;
-    pairs.push({ a: top[0], b: top[1], category: cat.label, slug: cat.slug });
-  }
-  return pairs;
-}
-
-const fmt = (v: number) => v.toLocaleString("en-US");
-const compact = (v: number) => (v >= 10_000 ? `${(v / 1000).toFixed(v >= 100_000 ? 0 : 1).replace(/\.0$/, "")}k` : fmt(v));
-
-/** Plain-English, data-backed summary of one head-to-head, rendered on the server so crawlers and AI assistants can read it. */
-function headToHead(a: Repo, b: Repo, now: number): string[] {
-  const out: string[] = [];
-  const n = (r: Repo) => altLabel(r);
-  const poss = (r: Repo) => (n(r).endsWith("s") ? `${n(r)}'` : `${n(r)}'s`);
-  const [lead, trail] = a.delta7d >= b.delta7d ? [a, b] : [b, a];
-  const ratio = trail.delta7d > 0 ? lead.delta7d / trail.delta7d : null;
-  const est = a.velocityEstimated || b.velocityEstimated ? " (partly estimated)" : "";
-  out.push(
-    `${n(lead)} gained ${fmt(lead.delta7d)} stars in the last 7 days against ${fmt(trail.delta7d)} for ${n(trail)}${est}` +
-      (ratio === null ? "." : ratio >= 1.5 ? `, about ${ratio.toFixed(1)} times as many.` : ", a close race."),
-  );
-  const [big, small] = a.stars >= b.stars ? [a, b] : [b, a];
-  out.push(`In total, ${n(big)} has ${compact(big.stars)} stars and ${compact(big.forks)} forks; ${n(small)} has ${compact(small.stars)} stars and ${compact(small.forks)} forks.`);
-  const lang = (r: Repo) => r.language ?? "an unlisted language";
-  out.push(
-    a.language && a.language === b.language
-      ? `Both are written mainly in ${a.language}. ${n(a)} was created ${ago(a.createdAt, now)} and ${n(b)} ${ago(b.createdAt, now)}.`
-      : `${n(a)} is written mainly in ${lang(a)} and was created ${ago(a.createdAt, now)}; ${n(b)} is mainly ${lang(b)}, created ${ago(b.createdAt, now)}.`,
-  );
-  const rel = (r: Repo) => {
-    const x = getLatestRelease(r.fullName);
-    return x ? `${poss(r)} latest release is ${x.tag} (${ago(x.date, now)})` : x === null ? `${n(r)} has no tagged release yet` : null;
-  };
-  const rels = [rel(a), rel(b)].filter(Boolean);
-  if (rels.length) out.push(`${rels.join("; ")}.`);
-  return out;
 }
 
 const GUIDE: { term: string; text: string }[] = [
