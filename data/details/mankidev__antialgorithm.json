@@ -1,0 +1,12 @@
+{
+ "fullName": "mankidev/antialgorithm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add mankidev/antialgorithm",
+ "source": "readme",
+ "readmeSummary": "Agent skill for creative work: names, story, game ideas, posters, UI. It makes the model name its first, most average pick, then move away…",
+ "extractor": "heuristic",
+ "readmeHash": "dc693aa55b78",
+ "version": 1,
+ "generatedAt": "2026-11-20T21:16:17.317Z"
+}

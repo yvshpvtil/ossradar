@@ -1,0 +1,12 @@
+{
+ "fullName": "artemnovitckii/claude-animation-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install ffmpeg node        # if you don't have them",
+ "source": "readme",
+ "readmeSummary": "Skills for Claude Code that make animations for reels, with no footage needed.",
+ "extractor": "heuristic",
+ "readmeHash": "5996fcb7de7e",
+ "version": 1,
+ "generatedAt": "2026-11-20T21:16:17.302Z"
+}

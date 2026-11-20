@@ -1,0 +1,12 @@
+{
+ "fullName": "govijr/fix-storage",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/govijr/fix-storage/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "See what is filling your disk on macOS or Linux, find the culprit, and clear what is safe to clear, from the terminal.",
+ "extractor": "heuristic",
+ "readmeHash": "de4e249c85c0",
+ "version": 1,
+ "generatedAt": "2026-11-20T21:16:17.316Z"
+}

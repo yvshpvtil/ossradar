@@ -1,0 +1,12 @@
+{
+ "fullName": "INK-Q/agy-fast",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/INK-Q/agy-fast/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Latency and Tool-Call Accelerator Plugin for Google Antigravity",
+ "extractor": "heuristic",
+ "readmeHash": "3f6cb4b546f9",
+ "version": 1,
+ "generatedAt": "2026-11-20T21:16:17.308Z"
+}
