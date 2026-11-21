@@ -1,0 +1,12 @@
+{
+ "fullName": "jackulau/coding.sh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx coding.sh                               # try it: finds your agents, asks once, imports past sessions",
+ "source": "readme",
+ "readmeSummary": "Run npx coding.sh again to open the viewer on your sessions.",
+ "extractor": "heuristic",
+ "readmeHash": "a0f884bc15d5",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.643Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "marketzy/codex-cli-repo-workbench",
+ "whoItsFor": null,
+ "useCases": [
+  "Repository-scoped operation. All commands resolve paths relative to the repository root; no implicit global state or user-wide configuration",
+  "Deterministic command surface. Subcommands are fixed at build time; unknown subcommands and flags fail fast with a nonzero exit status rathe",
+  "Explicit output modes. Machine-readable output (for scripted use) and human-readable output are separate modes; the default is human-readabl"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Codex Cli Repo Workbench is a command-line utility for inspecting and operating on local Git repositories through a single, scriptable…",
+ "extractor": "heuristic",
+ "readmeHash": "d7c236ca936f",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:33.960Z"
+}

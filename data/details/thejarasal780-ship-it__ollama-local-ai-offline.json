@@ -1,0 +1,16 @@
+{
+ "fullName": "thejarasal780-ship-it/ollama-local-ai-offline",
+ "whoItsFor": null,
+ "useCases": [
+  "Fully offline inference: Runs entirely on local hardware with no network dependency, ensuring data never leaves the machine during model exe",
+  "Local model management: Supports pulling, listing, inspecting, and removing models through a unified local registry, with model files stored",
+  "Multi-model serving: Allows multiple models to be loaded and served concurrently, with per-request model selection and configurable resource"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Ollama Local AI Offline is a desktop application that provides a fully self-contained runtime for executing large language models on local…",
+ "extractor": "heuristic",
+ "readmeHash": "3b82699f9c67",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.212Z"
+}

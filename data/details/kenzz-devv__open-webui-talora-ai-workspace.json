@@ -1,0 +1,16 @@
+{
+ "fullName": "kenzz-devv/open-webui-talora-ai-workspace",
+ "whoItsFor": null,
+ "useCases": [
+  "Unified AI Workspace: Open Webui Talora Ai Workspace brings conversations, models, and tools together in one polished, distraction-free inte",
+  "Multi-Model Flexibility: Switch between AI models on the fly, compare responses, and pick the right engine for every task without leaving yo",
+  "Persistent, Organized Conversations: Keep every chat tidy and retrievable with structured history, searchable threads, and effortless sessio"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Open Webui Talora Ai Workspace is a refined, model-agnostic environment built for teams that expect their AI tooling to feel as considered…",
+ "extractor": "heuristic",
+ "readmeHash": "8a630eb12429",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.335Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "zadazddq/lm-studio-private-ai",
+ "whoItsFor": null,
+ "useCases": [
+  "Broad model format support: Loads GGUF and compatible quantized model files, including instruction-tuned and chat-tuned variants, with confi",
+  "Hardware acceleration: Supports GPU offloading with configurable layer allocation, CPU fallback, and memory-mapped model loading to balance ",
+  "OpenAI-compatible local server: Exposes a local HTTP endpoint implementing the chat completions and completions interfaces, enabling existin"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "LM Studio is a desktop application for running local large language models with complete data privacy.",
+ "extractor": "heuristic",
+ "readmeHash": "1fe5abe8e45a",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.185Z"
+}

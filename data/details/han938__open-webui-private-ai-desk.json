@@ -1,0 +1,16 @@
+{
+ "fullName": "han938/open-webui-private-ai-desk",
+ "whoItsFor": null,
+ "useCases": [
+  "Private by design: Run your entire AI workspace locally, keeping conversations, documents, and model interactions on your own infrastructure",
+  "Multi-model flexibility: Connect to a wide range of local and compatible model backends, and switch between them from a single, unified inte",
+  "Polished chat experience: Enjoy a refined, responsive chat UI with conversation history, threaded context, and smooth streaming responses."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Open Webui Private Ai Desk is a self-contained AI workspace built for teams and individuals who want the power of modern language models…",
+ "extractor": "heuristic",
+ "readmeHash": "b00bf4dce151",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:33.940Z"
+}

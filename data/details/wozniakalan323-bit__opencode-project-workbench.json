@@ -1,0 +1,16 @@
+{
+ "fullName": "wozniakalan323-bit/opencode-project-workbench",
+ "whoItsFor": null,
+ "useCases": [
+  "Project-scoped workspaces. Opens a workspace rooted at a specified project directory and resolves all relative paths against that root. No g",
+  "Deterministic command execution. Runs shell commands with a fixed, documented environment derived from the project configuration and the inv",
+  "Flag-driven configuration. Behavior is controlled entirely through command-line flags and an optional project-local configuration file. Flag"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "opencode-project-workbench is a command-line tool for managing the lifecycle of OpenCode project workspaces, covering creation…",
+ "extractor": "heuristic",
+ "readmeHash": "de2af940b252",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:33.951Z"
+}

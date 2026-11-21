@@ -1,0 +1,16 @@
+{
+ "fullName": "zavi2997-droid/claude-code-agent-workspace",
+ "whoItsFor": null,
+ "useCases": [
+  "Per-project workspace isolation. Each workspace is a self-contained directory containing configuration, task definitions, and run artifacts.",
+  "Declarative task definitions. Tasks are described in plain-text configuration files rather than imperative scripts. The tool parses these de",
+  "Deterministic execution order. Tasks declare dependencies explicitly; the tool computes a topological ordering and refuses to run when cycle"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "claude-code-agent-workspace is a command-line tool for provisioning and managing isolated workspaces for Claude Code agents, including…",
+ "extractor": "heuristic",
+ "readmeHash": "1c6d3d141085",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:33.911Z"
+}

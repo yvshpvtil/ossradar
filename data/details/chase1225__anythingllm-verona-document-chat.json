@@ -1,0 +1,16 @@
+{
+ "fullName": "chase1225/anythingllm-verona-document-chat",
+ "whoItsFor": null,
+ "useCases": [
+  "Local-first document Q&A workspace: A desktop application that lets you load a document collection and interrogate it through a conversation",
+  "Workspace isolation: Each workspace maintains its own document set, vector index, and conversation history, so unrelated projects remain sep",
+  "Document ingestion pipeline: Supports bulk import of source files, automatic text extraction, chunking, and embedding generation, with per-d"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Anythingllm Verona Document Chat is a desktop application for interacting with local document collections through a conversational…",
+ "extractor": "heuristic",
+ "readmeHash": "d62a14e64bb7",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.400Z"
+}

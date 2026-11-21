@@ -1,0 +1,12 @@
+{
+ "fullName": "trustgraph-ai/trustgraph",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx @trustgraph/config",
+ "source": "readme",
+ "readmeSummary": "Playground | Self-Host | Docs | YouTube | Discord | Website",
+ "extractor": "heuristic",
+ "readmeHash": "ab6b5531884a",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.411Z"
+}

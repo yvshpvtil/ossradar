@@ -1,0 +1,16 @@
+{
+ "fullName": "senickimoro-art/pinokio-olvara-ai-workspace",
+ "whoItsFor": null,
+ "useCases": [
+  "Local-first AI workspace orchestration — Pinokio Olvara Ai Workspace coordinates models, runtimes, and tooling on the local machine, keeping",
+  "Unified workspace model — Projects, sessions, and asset directories are organized under a consistent workspace structure, allowing reproduci",
+  "Runtime and environment management — Detects and manages the required runtimes and environments for supported workloads, isolating dependenc"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Pinokio Olvara Ai Workspace is a desktop application designed to provide a unified, local environment for orchestrating AI models, tools…",
+ "extractor": "heuristic",
+ "readmeHash": "f5e961769544",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.157Z"
+}

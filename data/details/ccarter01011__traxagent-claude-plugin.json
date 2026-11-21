@@ -1,0 +1,16 @@
+{
+ "fullName": "ccarter01011/traxagent-claude-plugin",
+ "whoItsFor": null,
+ "useCases": [
+  "Get a ranked savings plan. \"What cost cuts do you recommend across our AI spend?\" TraxAgent groups every fix it found by kind, puts the no-r",
+  "Ask about spend in plain English. \"What did we spend on AI last week, by team?\" \"Which API key is using the most Opus?\" \"Why did spend jump ",
+  "Ship the fixes. \"What's the biggest cost fix, and can you ship it here?\" Claude pulls the fix's steps from TraxAgent, makes the change in yo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Who spent your AI budget last month, and on what? Ask Claude, ChatGPT, Claude Code, Cursor, Gemini or VS Code…",
+ "extractor": "heuristic",
+ "readmeHash": "9c588c5ab87e",
+ "version": 1,
+ "generatedAt": "2026-11-21T02:27:34.457Z"
+}
