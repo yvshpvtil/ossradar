@@ -1,0 +1,16 @@
+{
+ "fullName": "w01fb0ss/PiBot",
+ "whoItsFor": null,
+ "useCases": [
+  "Bots and roles. Create Bots with a name, a role (developer, researcher, writer, translator, …), their own model, skills, permissions and mem",
+  "Direct and group chats. A group has a coordinator that plans, hands steps to members and collects the results; you confirm the plan before i",
+  "Working folders and changes. Bots work inside folders you choose. Every change is listed, reviewable and, on macOS, restorable from automati"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source, local-first AI agent team for your desktop. Named AI Bots work on your own computer: chat with one or put several in a group…",
+ "extractor": "heuristic",
+ "readmeHash": "757e82c46f31",
+ "version": 1,
+ "generatedAt": "2026-11-21T18:07:34.078Z"
+}

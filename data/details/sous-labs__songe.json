@@ -1,0 +1,12 @@
+{
+ "fullName": "sous-labs/songe",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install songe        # or: pipx install songe",
+ "source": "readme",
+ "readmeSummary": "Use your local model as usual through opencode, pi or any OpenAI-compatible tool.",
+ "extractor": "heuristic",
+ "readmeHash": "91741a121442",
+ "version": 1,
+ "generatedAt": "2026-11-21T18:07:34.116Z"
+}

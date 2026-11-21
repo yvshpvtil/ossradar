@@ -1,0 +1,12 @@
+{
+ "fullName": "jackson-cmd/claude-multi-desktop",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install jackson-cmd/tap/claude-multi-desktop",
+ "source": "readme",
+ "readmeSummary": "Run multiple Claude Desktop accounts at the same time on one Mac. Each window has its own sign-in, and all of them share one Claude Code…",
+ "extractor": "heuristic",
+ "readmeHash": "a1d0bbe12c54",
+ "version": 1,
+ "generatedAt": "2026-11-21T18:07:34.125Z"
+}
