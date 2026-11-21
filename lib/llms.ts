@@ -145,7 +145,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [About and methodology](${SITE.url}/about): how repos are ranked, estimates, categories, sponsorship policy and contact (as Markdown: ${SITE.url}/about.md)
 - [agents.md](${SITE.url}/agents.md): short AI-agent briefing (also at ${SITE.url}/.well-known/agents.md); dense rankings stay in llms.txt
 - [Daily newsletter](${SITE.url}/#subscribe): the top 10 rising repos in one email every day; free, unsubscribe anytime
-- [Sponsor OSS Radar](${SITE.url}/sponsor): one sponsor per week across the site and the daily newsletter, labeled as a sponsor; sponsorships never affect rankings
+- [Sponsor OSS Radar](${SITE.url}/sponsor): one sponsor per week across the site and the daily newsletter, labeled as a sponsor; sponsorships never affect rankings (price, slots left and how to book as Markdown: ${SITE.url}/sponsor.md)
 ${LANDINGS.map((l) => `- [${l.title}](${SITE.url}/trending/${l.slug}): ${l.description}`).join("\n")}
 
 ## URL patterns
@@ -170,7 +170,7 @@ Use these to link straight to a tracked repo (owner and name exactly as on GitHu
 - Hacker News list as Markdown: ${SITE.url}/hacker-news.md (tracked repos posted to Hacker News in the last 30 days, ranked by story points, with comments, post date and star growth)
 - New repos as Markdown: ${SITE.url}/new.md (tracked repos created on GitHub in the last 14 days, grouped by launch day, with stars, 7-day gain, category and language)
 - Homepage leaderboard as Markdown: ${SITE.url}/index.md (today's top 25 and this week's top 10 by stars gained, with links to every Markdown view)
-- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new, /hacker-news, /daily, /about, /category, /language, /topic or /compare?r=..., with the header Accept: text/markdown to get its Markdown twin at the same URL
+- Markdown by content negotiation: request the homepage, any repo, alternatives, daily, category, trending, language or topic page URL, or /new, /hacker-news, /daily, /about, /sponsor, /category, /language, /topic or /compare?r=..., with the header Accept: text/markdown to get its Markdown twin at the same URL
 - README badge (SVG): ${SITE.url}/badge/{owner}/{name} (shows "Trending #N" for today's top 100, else "Tracked"; embed guide: ${SITE.url}/badge)${dailyPattern}
 
 ## Categories

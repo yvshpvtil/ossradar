@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { RazorpayButton } from "@/components/RazorpayButton";
@@ -17,7 +17,7 @@ const description = `Reach developers who track rising open-source AI and dev-to
 export const metadata: Metadata = {
   title,
   description,
-  alternates: pageAlternates("/sponsor"),
+  alternates: { ...pageAlternates("/sponsor"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/sponsor.md", title: `${title} (Markdown)` }] } },
   openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/sponsor" },
   twitter: { ...twitterDefaults, title, description },
 };
