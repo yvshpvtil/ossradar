@@ -1,0 +1,12 @@
+{
+ "fullName": "XinaTian/MROffice",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "MR Office is a workspace for notes, AI and real files. This repository publishes the source code of its editors: the same editors MR Office…",
+ "extractor": "heuristic",
+ "readmeHash": "05d87789ce8a",
+ "version": 1,
+ "generatedAt": "2026-11-21T23:28:49.226Z"
+}
