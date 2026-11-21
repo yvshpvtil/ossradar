@@ -869,6 +869,12 @@
   "source": "claude -p",
   "generatedAt": "2026-11-01T02:20:37.141Z"
  },
+ "wangrongding/tv-fresh": {
+  "text": "Agent skill for Xiaomi TVs that removes ads, cleans up preinstalled apps and swaps the launcher, reversibly and without root.",
+  "basis": "4caad121dac0",
+  "source": "manual translation",
+  "generatedAt": "2026-11-21T02:41:53.450Z"
+ },
  "wusuaya/overtime-meal-buddy": {
   "text": "A WorkBuddy skill that uses McDonald's MCP to plan group meals, compare combos, reprice changes and split the bill.",
   "basis": "7fc6a24dcecb",
