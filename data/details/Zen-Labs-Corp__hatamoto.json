@@ -1,0 +1,16 @@
+{
+ "fullName": "Zen-Labs-Corp/hatamoto",
+ "whoItsFor": null,
+ "useCases": [
+  "A fast, server-rendered site with a good default theme, a blog and pages.",
+  "A proper blog editor and a visual page editor. Admin guide",
+  "WordPress import that keeps every old URL working, with a URL audit. Move your site"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The server prints a setup address in its log (docker compose logs hatamoto). Open it to create your account and site.",
+ "extractor": "heuristic",
+ "readmeHash": "328e08e82bd0",
+ "version": 1,
+ "generatedAt": "2026-11-21T11:18:46.148Z"
+}

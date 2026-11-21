@@ -1,0 +1,12 @@
+{
+ "fullName": "logitcai/tinybrain",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -e \".[data]\"          # 要 Python 3.11+、PyTorch 2.5+（用 PyTorch 自带的 Muon 要 2.9+）；装完就有 tinybrain 命令",
+ "source": "readme",
+ "readmeSummary": "从一个字开始，自己做一个中文大模型。",
+ "extractor": "heuristic",
+ "readmeHash": "25ffd03680f9",
+ "version": 1,
+ "generatedAt": "2026-11-21T11:18:46.254Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "pshenok/server-survival",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Server Survival is an interactive 3D simulation game where you play as a Cloud Architect.",
+ "extractor": "heuristic",
+ "readmeHash": "1a2c4bb04930",
+ "version": 1,
+ "generatedAt": "2026-11-21T11:18:46.186Z"
+}
