@@ -1,0 +1,12 @@
+{
+ "fullName": "google-deepmind/robotics-antigravity-plugin",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add google-deepmind/robotics-antigravity-plugin",
+ "source": "readme",
+ "readmeSummary": "The Robotics plugin brings frontier spatial reasoning, multimodal perception, and code generation directly into the real-time robot loop.",
+ "extractor": "heuristic",
+ "readmeHash": "e50a615c2958",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.627Z"
+}

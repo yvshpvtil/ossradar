@@ -1,0 +1,12 @@
+{
+ "fullName": "ThreatDefence/agentic-attack-detections",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r tools/requirements.txt",
+ "source": "readme",
+ "readmeSummary": "Detection rules, hunting queries and indicators for agentic attack frameworks (ARTEX and its AntiFox fork, Cairn, PentAGI, HexStrike…",
+ "extractor": "heuristic",
+ "readmeHash": "709a417ad8fa",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.290Z"
+}

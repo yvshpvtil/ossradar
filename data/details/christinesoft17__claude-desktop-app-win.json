@@ -1,0 +1,16 @@
+{
+ "fullName": "christinesoft17/claude-desktop-app-win",
+ "whoItsFor": null,
+ "useCases": [
+  "Conversational Chat Interface: A dialogue-based workspace where you type prompts and receive structured answers. It is the core of the app a",
+  "Document Analysis: Attach reports, notes, or reference files and ask the assistant to summarize, compare, or extract information. This is us",
+  "Task Automation: Break repetitive work into a prompt sequence so the assistant drafts, formats, and revises content for you. It fits well in"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Claude Desktop App is Anthropic's AI assistant application for Windows, built around conversational interaction, document analysis, and task…",
+ "extractor": "heuristic",
+ "readmeHash": "af83cad6c621",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.294Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Leonxlnx/cook",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add Leonxlnx/cook",
+ "source": "readme",
+ "readmeSummary": "Give your agent a target, a bar and time, then let it cook.",
+ "extractor": "heuristic",
+ "readmeHash": "5564a26000b6",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.285Z"
+}

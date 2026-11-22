@@ -1,0 +1,12 @@
+{
+ "fullName": "ZWD11/house-plan-designer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install numpy pillow opencv-python pymupdf ezdxf pypdf   # 后三个给 CAD 图纸和导出文件检查用",
+ "source": "readme",
+ "readmeSummary": "一张户型图（或一份 CAD 图纸），一句话，Agent 就把它还原成可 2D / 3D 直接设计的装修设计器网页。",
+ "extractor": "heuristic",
+ "readmeHash": "9d3d3e009dcc",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.754Z"
+}

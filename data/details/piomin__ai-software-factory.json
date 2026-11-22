@@ -1,0 +1,12 @@
+{
+ "fullName": "piomin/ai-software-factory",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A self-hosted \"software factory\" that turns GitHub issues and comments into pull requests.",
+ "extractor": "heuristic",
+ "readmeHash": "8888cc9d3539",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.563Z"
+}

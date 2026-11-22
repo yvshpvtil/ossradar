@@ -1,0 +1,12 @@
+{
+ "fullName": "manuelgscom/inside-llm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "See inside any GGUF: where two quantizations part ways, token by token, and what each sampler cuts. Live, in your browser.",
+ "extractor": "heuristic",
+ "readmeHash": "90288dccdec9",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.775Z"
+}

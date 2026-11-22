@@ -1,0 +1,16 @@
+{
+ "fullName": "hackclub/orchard",
+ "whoItsFor": null,
+ "useCases": [
+  "Deploy from anywhere. Deploy from GitHub, GitLab, Gitea or another Git host, from a container image, or from a folder on your computer (with",
+  "HTTPS and domains. Every web port can get an HTTPS URL (self-signed on a LAN install), and you can add your own domains or use a wildcard ce",
+  "Tailscale. Put an app on your tailnet instead of the public internet."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Turn a Linux server into a private hosting platform.",
+ "extractor": "heuristic",
+ "readmeHash": "89784ace21e9",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.846Z"
+}

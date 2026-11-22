@@ -1,0 +1,12 @@
+{
+ "fullName": "arxhr007/lxask",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "For fish, add lxask --shell-init fish | source to /.config/fish/config.fish instead.",
+ "extractor": "heuristic",
+ "readmeHash": "2cdc892aa82c",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.533Z"
+}

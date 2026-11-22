@@ -1,0 +1,12 @@
+{
+ "fullName": "EL4CTEO/fast-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g @el4cteo/fast-anything      # or: cargo install fast-anything",
+ "source": "readme",
+ "readmeSummary": "Rewriting a whole app in Rust costs months, minute-long compiles and gigabytes of target/.",
+ "extractor": "heuristic",
+ "readmeHash": "3b91608038d3",
+ "version": 1,
+ "generatedAt": "2026-11-22T07:02:30.297Z"
+}
