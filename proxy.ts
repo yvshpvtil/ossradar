@@ -82,7 +82,7 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
+const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "alternatives.md", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
 const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about", "compare", "sponsor"]);
@@ -197,6 +197,8 @@ export function proxy(req: NextRequest) {
   if (raw.length === 1 && raw[0] === "sponsor") return negotiate("/md/sponsor");
   // The hub directories' twins are /category.md, /language.md and /topic.md (next.config rewrites to /md/{section}).
   if (raw.length === 1 && (raw[0] === "category" || raw[0] === "language" || raw[0] === "topic")) return negotiate(`/md/${raw[0]}`);
+  // The alternatives directory's twin is /alternatives.md (next.config rewrite to /md/alternatives).
+  if (raw.length === 1 && raw[0] === "alternatives") return negotiate("/md/alternatives");
 
   // /compare's twin is /compare.md (next.config rewrite to /md/compare); keep ?r= so the comparison survives.
   if (raw.length === 1 && raw[0] === "compare") {

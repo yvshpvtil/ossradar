@@ -92,10 +92,10 @@ const nextConfig: NextConfig = {
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
     ];
   },
-  // Markdown twins of /hacker-news, /new, the daily archive index (/daily.md), the category/language/topic directories (/category.md, /language.md, /topic.md), the about/methodology page (/about.md), the sponsor page (/sponsor.md) and the homepage (/index.md) for chatbots and agents (app/md/hacker-news, app/md/new, app/md/home). The other
+  // Markdown twins of /hacker-news, /new, the daily archive index (/daily.md), the category/language/topic/alternatives directories (/category.md, /language.md, /topic.md, /alternatives.md), the about/methodology page (/about.md), the sponsor page (/sponsor.md) and the homepage (/index.md) for chatbots and agents (app/md/hacker-news, app/md/new, app/md/home). The other
   // .md twins live under proxy.ts's matcher; neither page has a dynamic segment, so plain rewrites do it.
   async rewrites() {
-    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }, { source: "/index.md", destination: "/md/home" }, { source: "/daily.md", destination: "/md/daily" }, { source: "/about.md", destination: "/md/about" }, { source: "/category.md", destination: "/md/category" }, { source: "/language.md", destination: "/md/language" }, { source: "/topic.md", destination: "/md/topic" }, { source: "/compare.md", destination: "/md/compare" }, { source: "/sponsor.md", destination: "/md/sponsor" }], afterFiles: [], fallback: [] };
+    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }, { source: "/index.md", destination: "/md/home" }, { source: "/daily.md", destination: "/md/daily" }, { source: "/about.md", destination: "/md/about" }, { source: "/category.md", destination: "/md/category" }, { source: "/language.md", destination: "/md/language" }, { source: "/topic.md", destination: "/md/topic" }, { source: "/compare.md", destination: "/md/compare" }, { source: "/sponsor.md", destination: "/md/sponsor" }, { source: "/alternatives.md", destination: "/md/alternatives" }], afterFiles: [], fallback: [] };
   },
   partialPrefetching: true,
   // Tailwind CSS is served as one cacheable stylesheet instead of experimental.inlineCss: inlining put
