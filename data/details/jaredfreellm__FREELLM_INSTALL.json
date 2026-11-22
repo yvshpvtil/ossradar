@@ -1,0 +1,16 @@
+{
+ "fullName": "jaredfreellm/FREELLM_INSTALL",
+ "whoItsFor": null,
+ "useCases": [
+  "Drop-in OpenAI compatibility. Chat completions, embeddings, streaming, tool calling, and structured outputs work with the official OpenAI SD",
+  "Smart routing. Models are ranked by live speed, capability, and reliability scores. Choose a routing strategy (fastest, smartest, balanced) ",
+  "Automatic failover. On a rate limit (429) or server error (5xx), the router puts that key on cooldown and retries the next model in your cha"
+ ],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "One OpenAI-compatible endpoint for all your free LLM tiers.",
+ "extractor": "heuristic",
+ "readmeHash": "eff0872c2113",
+ "version": 1,
+ "generatedAt": "2026-11-22T21:55:43.891Z"
+}

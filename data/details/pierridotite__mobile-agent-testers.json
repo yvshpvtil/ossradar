@@ -1,0 +1,16 @@
+{
+ "fullName": "pierridotite/mobile-agent-testers",
+ "whoItsFor": null,
+ "useCases": [
+  "Explore like new users (the default). Each persona tries to reach its goal and reports what gets in the way, with numbered screenshots.",
+  "Run one feature end to end. Your own brief sends every agent through a whole mechanic: a booking in several steps, an editor with undo, a sy",
+  "Reproduce a bug report on every phone: give an issue or the steps, and each agent answers yes, no or unclear, with screenshots (briefs/repro"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "20 AI testers on 20 different phones, in parallel, on GitHub's free runners.",
+ "extractor": "heuristic",
+ "readmeHash": "522eb134bdca",
+ "version": 1,
+ "generatedAt": "2026-11-22T21:55:43.927Z"
+}

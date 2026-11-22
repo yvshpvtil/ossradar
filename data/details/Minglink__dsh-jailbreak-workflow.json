@@ -1,0 +1,12 @@
+{
+ "fullName": "Minglink/dsh-jailbreak-workflow",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "画布 → 计划提示词 → 模型执行",
+ "extractor": "heuristic",
+ "readmeHash": "795ea9913b92",
+ "version": 1,
+ "generatedAt": "2026-11-22T21:55:43.963Z"
+}
