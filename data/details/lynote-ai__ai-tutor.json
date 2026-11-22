@@ -1,0 +1,12 @@
+{
+ "fullName": "lynote-ai/ai-tutor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Turn notes, slides, and links into a chapter path that only teaches a sentence it can quote.",
+ "extractor": "heuristic",
+ "readmeHash": "60de89177fc6",
+ "version": 1,
+ "generatedAt": "2026-11-22T15:29:04.974Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "talsiach/take-one",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add talsiach/take-one -g -a claude-code",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/f2e005dc-b6b0-4023-b3d7-9bd958643022",
+ "extractor": "heuristic",
+ "readmeHash": "ed2d38cda914",
+ "version": 1,
+ "generatedAt": "2026-11-22T15:29:04.981Z"
+}

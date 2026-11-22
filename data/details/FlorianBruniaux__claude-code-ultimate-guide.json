@@ -1,0 +1,12 @@
+{
+ "fullName": "FlorianBruniaux/claude-code-ultimate-guide",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "Learn Claude Code, build reliable agents, and scale their use safely. The website is the primary reading and discovery interface.",
+ "extractor": "heuristic",
+ "readmeHash": "1ba678077eec",
+ "version": 1,
+ "generatedAt": "2026-11-22T15:29:04.995Z"
+}

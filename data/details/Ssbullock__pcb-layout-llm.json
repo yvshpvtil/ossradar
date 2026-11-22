@@ -1,0 +1,12 @@
+{
+ "fullName": "Ssbullock/pcb-layout-llm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-weight 32B LoRA adapter (Qwen/Qwen2.5-Coder-32B-Instruct fine-tuned with Stage-1 QLoRA SFT + Stage-2 Online GRPO on 245 curated…",
+ "extractor": "heuristic",
+ "readmeHash": "c91b49d59772",
+ "version": 1,
+ "generatedAt": "2026-11-22T15:29:05.248Z"
+}
