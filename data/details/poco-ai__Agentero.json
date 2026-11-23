@@ -1,0 +1,12 @@
+{
+ "fullName": "poco-ai/Agentero",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask agentero",
+ "source": "readme",
+ "readmeSummary": "如果本项目对你有帮助，请在右上角给个 star 吧！",
+ "extractor": "heuristic",
+ "readmeHash": "e22f56126389",
+ "version": 1,
+ "generatedAt": "2026-11-23T02:55:55.049Z"
+}

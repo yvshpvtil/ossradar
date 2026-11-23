@@ -1,0 +1,12 @@
+{
+ "fullName": "yibie/claude-best-practices-zh",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install                     # playwright-core / turndown / jsdom",
+ "source": "readme",
+ "readmeSummary": "站点： 站点提供首页、概念索引、译文索引、全部文章中英文全文、知识图谱与思维导图，支持 自动/浅色/深色 三种主题；每篇文章有右侧目录、原文/GitHub 链接、上一篇下一篇，以及「本文涉及的概念」跳转。",
+ "extractor": "heuristic",
+ "readmeHash": "f294fd6c6ba4",
+ "version": 1,
+ "generatedAt": "2026-11-23T02:55:55.023Z"
+}
