@@ -1,0 +1,16 @@
+{
+ "fullName": "maomada/KubeAtlas",
+ "whoItsFor": null,
+ "useCases": [
+  "Investigate issues with workload health, logs, events, and a timeline of resource changes. Cluster checks · Upgrade impact checks",
+  "Explore applications and their resource dependencies, inspect live traffic when a source is available, and review Helm releases and Argo CD ",
+  "Review capacity and cost with scheduling requests, node capacity, and cost allocation. If the cluster has a compatible Prometheus and the Hu"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "English · 简体中文",
+ "extractor": "heuristic",
+ "readmeHash": "cc391704f44c",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.826Z"
+}

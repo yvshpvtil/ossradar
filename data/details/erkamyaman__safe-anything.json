@@ -1,0 +1,12 @@
+{
+ "fullName": "erkamyaman/safe-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install safe-anything    # or: npx safe-anything .",
+ "source": "readme",
+ "readmeSummary": "That's it. No config, no account, no upload. It exits with 1 when something high or critical is found, so it works as a pre-commit or CI…",
+ "extractor": "heuristic",
+ "readmeHash": "5fb8f7cc3b14",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.496Z"
+}

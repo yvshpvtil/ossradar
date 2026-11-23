@@ -1,0 +1,12 @@
+{
+ "fullName": "HeyChengC/wallstreet-explainer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install -r requirements.txt",
+ "source": "readme",
+ "readmeSummary": "让 AI 做华尔街风格的财经解读短片：真实的新闻和画面，金色大数字，深蓝织物底，镜头一直在走。",
+ "extractor": "heuristic",
+ "readmeHash": "1af7ea2f21f8",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.731Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "AhmadHassan-BTed/Jantt",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install @jantt/react @jantt/core",
+ "source": "readme",
+ "readmeSummary": "Simple enough to organize your semester, wedding, or team meeting in 60 seconds.",
+ "extractor": "heuristic",
+ "readmeHash": "f7b75243560b",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.536Z"
+}

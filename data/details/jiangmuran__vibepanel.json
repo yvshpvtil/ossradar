@@ -1,0 +1,12 @@
+{
+ "fullName": "jiangmuran/vibepanel",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/jiangmuran/vibepanel/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "A self-hosted web workbench for running parallel coding-agent sessions across projects.",
+ "extractor": "heuristic",
+ "readmeHash": "672aed3af9a2",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.970Z"
+}

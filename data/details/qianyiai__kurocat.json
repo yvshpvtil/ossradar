@@ -1,0 +1,12 @@
+{
+ "fullName": "qianyiai/kurocat",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "轻量级 Windows（Win11/10 & Win7 SP1）/ macOS（10.15+ Apple Silicon & Intel）/ Linux（银河麒麟 KylinOS / Ubuntu / UOS） 透明置顶桌面打字猫咪伴侣（开箱自带 6 款手绘猫咪皮肤 +…",
+ "extractor": "heuristic",
+ "readmeHash": "016789aedf33",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.609Z"
+}

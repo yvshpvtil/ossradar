@@ -1,0 +1,12 @@
+{
+ "fullName": "erkamyaman/unslop-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx unslop-anything",
+ "source": "readme",
+ "readmeSummary": "Works in Claude Code, Codex, Cursor, OpenCode, Gemini CLI, and GitHub Copilot (install options). Mobile apps, web apps, and websites.",
+ "extractor": "heuristic",
+ "readmeHash": "a0c5fbe07928",
+ "version": 1,
+ "generatedAt": "2026-11-23T13:02:58.785Z"
+}
