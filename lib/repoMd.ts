@@ -5,6 +5,8 @@ import { getDetails } from "@/lib/details";
 import { formatDelta, formatNumber } from "@/lib/format";
 import { getHnMentions } from "@/lib/mentions";
 import { isThinRepo } from "@/lib/thin";
+import { badgeSpec } from "@/lib/badge";
+import { badgeSnippets } from "@/lib/badgeMd";
 import { SITE } from "@/lib/site";
 import type { Repo } from "@/lib/types";
 import { dropTemplateWhy } from "@/lib/whyNotes";
@@ -81,7 +83,7 @@ export function repoMarkdown(r: Repo): string {
     "## More",
     "",
     `- JSON: ${SITE.url}/api/v1/repo/${r.owner}/${r.name}`,
-    `- README badge: ${SITE.url}/badge/${r.owner}/${r.name}`,
+    `- README badge (shows "${badgeSpec(r).message}" right now; guide: ${SITE.url}/badge.md): \`${badgeSnippets(r.owner, r.name).markdown}\``,
     `- Full leaderboard: ${SITE.url}/ (also ${SITE.url}/llms.txt)`,
     "",
     `Free to cite with a link back to ${page}.`,

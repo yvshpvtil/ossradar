@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, repoPath, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, repoPath, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { getRepos, rankRepos } from "@/lib/data";
@@ -17,7 +17,7 @@ const description = `Add a live ${SITE.name} badge to your README. It shows your
 export const metadata: Metadata = {
   title,
   description,
-  alternates: pageAlternates("/badge"),
+  alternates: { ...pageAlternates("/badge"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/badge.md", title: `${title} (Markdown)` }] } },
   openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, images: ogDefaults.images, title: socialTitle, description, url: "/badge" },
   twitter: { ...twitterDefaults, title: socialTitle, description },
 };
