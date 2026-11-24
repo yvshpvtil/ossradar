@@ -1,0 +1,12 @@
+{
+ "fullName": "therandomsecurityguy/signet",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx vitest run tests/unit/skill-lifecycle.test.ts -t \"shows a happy-path trust story for a markdown skill publication\" --reporter=verbose",
+ "source": "readme",
+ "readmeSummary": "The seal of approval for agents and skills.",
+ "extractor": "heuristic",
+ "readmeHash": "ad4ab08167c4",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.934Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "felipebasurto/unslop-ui",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add felipebasurto/unslop-ui -g",
+ "source": "readme",
+ "readmeSummary": "Agents decorate everything they build: a tiny uppercase label over every heading, 01 // before each feature…",
+ "extractor": "heuristic",
+ "readmeHash": "7d5d57266e0b",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.965Z"
+}

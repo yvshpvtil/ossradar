@@ -1,0 +1,12 @@
+{
+ "fullName": "youssofal/MTPLX",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install youssofal/mtplx/mtplx",
+ "source": "readme",
+ "readmeSummary": "MTPLX is a native Mac app and a command line that runs local language models on Apple Silicon with the model's own multi-token prediction…",
+ "extractor": "heuristic",
+ "readmeHash": "795208acc91a",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:12.234Z"
+}

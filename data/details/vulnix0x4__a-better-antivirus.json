@@ -1,0 +1,12 @@
+{
+ "fullName": "vulnix0x4/a-better-antivirus",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/vulnix0x4/a-better-antivirus/main/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "It's not an antivirus. It's a better one.",
+ "extractor": "heuristic",
+ "readmeHash": "9e658fe50c18",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.915Z"
+}

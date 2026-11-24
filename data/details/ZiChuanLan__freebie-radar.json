@@ -1,0 +1,12 @@
+{
+ "fullName": "ZiChuanLan/freebie-radar",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run -d --name radar --restart unless-stopped \\",
+ "source": "readme",
+ "readmeSummary": "资源雷达（Resource Radar / repo: freebie-radar） 是一款轻量、开箱即用的多兴趣社区信息聚合与精准推送工作台。",
+ "extractor": "heuristic",
+ "readmeHash": "ef91db83eead",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.617Z"
+}

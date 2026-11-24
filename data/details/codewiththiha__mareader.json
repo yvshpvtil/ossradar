@@ -1,0 +1,12 @@
+{
+ "fullName": "codewiththiha/mareader",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Playback continues after switching to Library.",
+ "extractor": "heuristic",
+ "readmeHash": "cdc4248c0339",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.605Z"
+}

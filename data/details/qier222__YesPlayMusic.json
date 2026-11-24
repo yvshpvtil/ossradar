@@ -1,0 +1,12 @@
+{
+ "fullName": "qier222/YesPlayMusic",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "高颜值的桌面音乐播放器，音乐源由插件提供",
+ "extractor": "heuristic",
+ "readmeHash": "145903635e32",
+ "version": 1,
+ "generatedAt": "2026-11-24T01:02:11.860Z"
+}
