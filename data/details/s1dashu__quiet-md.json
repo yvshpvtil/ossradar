@@ -1,0 +1,12 @@
+{
+ "fullName": "s1dashu/quiet-md",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Your notes are just files. No account, no cloud, and nothing goes over the network by default, apart from the optional update check…",
+ "extractor": "heuristic",
+ "readmeHash": "c6898348b8d8",
+ "version": 1,
+ "generatedAt": "2026-11-24T21:23:03.202Z"
+}

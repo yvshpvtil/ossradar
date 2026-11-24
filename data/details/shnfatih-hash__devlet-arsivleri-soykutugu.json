@@ -1,0 +1,12 @@
+{
+ "fullName": "shnfatih-hash/devlet-arsivleri-soykutugu",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install Pillow",
+ "source": "readme",
+ "readmeSummary": "Her eşleşme aynı kesinlikte değildir; bu beceri her bulguyu üç kanıt seviyesinden biriyle işaretler: - [KESİN KANIT]: e-Devlet kütüğü, Esas…",
+ "extractor": "heuristic",
+ "readmeHash": "bbe1595bc2be",
+ "version": 1,
+ "generatedAt": "2026-11-24T21:23:03.261Z"
+}

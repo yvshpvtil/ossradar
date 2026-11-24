@@ -1,0 +1,12 @@
+{
+ "fullName": "brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Paper Language Model Exploration and Survival Behavior Under Offline Replay of Organoid Neural Signals",
+ "extractor": "heuristic",
+ "readmeHash": "86fbcf8cec61",
+ "version": 1,
+ "generatedAt": "2026-11-24T21:23:03.144Z"
+}

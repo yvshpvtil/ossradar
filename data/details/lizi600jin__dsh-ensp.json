@@ -1,0 +1,12 @@
+{
+ "fullName": "lizi600jin/dsh-ensp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g dsh-ensp",
+ "source": "readme",
+ "readmeSummary": "面向华为 eNSP 的自动化工具。生成拓扑、启动设备、按顺序下发配置，并在每条命令后核对结果。",
+ "extractor": "heuristic",
+ "readmeHash": "4e7cd8b555a9",
+ "version": 1,
+ "generatedAt": "2026-11-24T21:23:03.485Z"
+}
