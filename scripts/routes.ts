@@ -44,6 +44,12 @@ const table = {
   dailyDays: getArchiveDays(),
   moved,
   retired: JSON.parse(readFileSync(join(root, "retired.json"), "utf8")) as string[],
+  /**
+   * Build time (whole seconds, HTTP-date precision). Every page's HTML and .md twin only changes
+   * with a rebuild (data updates and code pushes both redeploy), so proxy.ts sends this as
+   * Last-Modified and answers If-Modified-Since with 304 Not Modified before rendering.
+   */
+  builtAt: new Date(Math.floor(Date.now() / 1000) * 1000).toISOString(),
 };
 writeFileSync(join(root, "routes.json"), JSON.stringify(table) + "\n");
 // Keep the node_modules mirror (scripts/data-pkg.mjs) in sync without a second pass.

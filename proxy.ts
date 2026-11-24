@@ -143,7 +143,7 @@ function gonePage(fullName: string): string {
  * slugs here, before rendering, so crawlers get a real 404. Also 308 wrong-cased URLs
  * (section folder, hub slug, repo owner/name) to the canonical lowercase path.
  */
-export function proxy(req: NextRequest) {
+function route(req: NextRequest) {
   const raw = req.nextUrl.pathname.split("/").filter(Boolean).map(decodeURIComponent);
   const notFound = () => NextResponse.rewrite(new URL("/__not-found", req.url), { status: 404 });
   // A repo seen in an earlier snapshot that has since dropped out of the tracked set answers
@@ -353,6 +353,37 @@ export function proxy(req: NextRequest) {
     if (target) return redirectTo(`/repo/${target}`);
   }
   return NextResponse.next();
+}
+
+/**
+ * Conditional GET for crawlers. Pages only change when the site is rebuilt (hourly data updates
+ * and code pushes both redeploy), so the build time is an exact Last-Modified for every page this
+ * proxy lets through. Googlebot, Bingbot and feed readers send If-Modified-Since on recrawls; a
+ * 304 Not Modified tells them nothing changed (Google spends crawl budget on new URLs instead)
+ * and skips rendering the page in the Worker, which saves CPU time (Cloudflare 1102 limit).
+ * Redirects, 404s and 410s pass through untouched: only plain 200 pass-throughs and rewrites
+ * (Markdown twins) get the header.
+ */
+const BUILT_AT = Date.parse((routes as { builtAt?: string }).builtAt ?? "");
+const LAST_MODIFIED = Number.isFinite(BUILT_AT) ? new Date(BUILT_AT).toUTCString() : null;
+
+export function proxy(req: NextRequest) {
+  const res = route(req);
+  if (!LAST_MODIFIED || (req.method !== "GET" && req.method !== "HEAD") || res.status !== 200) return res;
+  // Documents only: client-side navigations fetch RSC payloads from the same URLs.
+  if (req.headers.has("rsc") || req.headers.has("next-router-prefetch")) return res;
+  if (!res.headers.has("x-middleware-next") && !res.headers.has("x-middleware-rewrite")) return res;
+  const since = Date.parse(req.headers.get("if-modified-since") ?? "");
+  // If-None-Match takes precedence over If-Modified-Since (RFC 9110 13.2.2); we send no ETag, so
+  // a request carrying one is answered in full.
+  if (!req.headers.has("if-none-match") && Number.isFinite(since) && since >= BUILT_AT) {
+    const headers: Record<string, string> = { "last-modified": LAST_MODIFIED };
+    const vary = res.headers.get("vary");
+    if (vary) headers.vary = vary;
+    return new NextResponse(null, { status: 304, headers });
+  }
+  res.headers.set("last-modified", LAST_MODIFIED);
+  return res;
 }
 
 export const config = {
