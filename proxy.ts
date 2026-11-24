@@ -370,8 +370,9 @@ const LAST_MODIFIED = Number.isFinite(BUILT_AT) ? new Date(BUILT_AT).toUTCString
 export function proxy(req: NextRequest) {
   const res = route(req);
   if (!LAST_MODIFIED || (req.method !== "GET" && req.method !== "HEAD") || res.status !== 200) return res;
-  // Documents only: client-side navigations fetch RSC payloads from the same URLs.
-  if (req.headers.has("rsc") || req.headers.has("next-router-prefetch")) return res;
+  // Documents only: client-side navigations fetch RSC payloads from the same URLs (Next strips the
+  // rsc header before the proxy sees it, but keeps the ?_rsc cache-busting param).
+  if (req.nextUrl.searchParams.has("_rsc") || req.headers.has("rsc") || req.headers.has("next-router-prefetch")) return res;
   if (!res.headers.has("x-middleware-next") && !res.headers.has("x-middleware-rewrite")) return res;
   const since = Date.parse(req.headers.get("if-modified-since") ?? "");
   // If-None-Match takes precedence over If-Modified-Since (RFC 9110 13.2.2); we send no ETag, so
