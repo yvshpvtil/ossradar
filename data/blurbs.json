@@ -125,6 +125,12 @@
   "source": "claude -p",
   "generatedAt": "2026-11-02T02:23:31.215Z"
  },
+ "HeyChengC/wallstreet-explainer": {
+  "text": "An AI skill for making Wall Street-style finance and tech explainer videos, with tools for footage, screenshots, voice-over and rendering.",
+  "basis": "fae5ec00ffb5",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
+ },
  "Hisn00w/ASu-skills": {
   "text": "A plugin of nine AI skills for job seekers covering resumes, job matching, applications and interview prep.",
   "basis": "cfa203bf3deb",
@@ -298,6 +304,12 @@
   "basis": "992795a41f52",
   "source": "claude -p",
   "generatedAt": "2026-10-25T02:21:43.463Z"
+ },
+ "ZiChuanLan/freebie-radar": {
+  "text": "A self-hosted radar that collects freebies, deals and news from 100+ sources, filters fake offers with AI and pushes them to Telegram.",
+  "basis": "49927952b073",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
  },
  "aa1143/NamiAgent": {
   "text": "A beginner tutorial for building AI agents that is also a runnable local agent with files, commands, MCP and memory.",
@@ -767,6 +779,12 @@
   "source": "manual translation",
   "generatedAt": "2026-10-25T20:58:57.867Z"
  },
+ "qianyiai/kurocat": {
+  "text": "A free desktop typing-cat pet and OBS overlay, a Bongo Cat alternative built with Tauri v2 and Rust for Windows, macOS, Linux and Android.",
+  "basis": "61ff1107b2e8",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
+ },
  "qqqqqq-stu/mcparallel": {
   "text": "AI ordering skill on McDonald's official MCP that picks random meals, runs personality quizzes, and compares prices.",
   "basis": "66cecadd8a14",
@@ -828,10 +846,10 @@
   "generatedAt": "2026-10-15T02:24:54.787Z"
  },
  "sqfcyily/deva": {
-  "text": "Cross-platform desktop AI agent client where you create roles, tasks, skills, and MCP services through chat, with all data stored locally.",
-  "basis": "93636c5e48f6",
-  "source": "claude -p",
-  "generatedAt": "2026-11-07T02:22:35.046Z"
+  "text": "A local desktop AI agent app where a single chat drives a team of AI agents, with no complex setup.",
+  "basis": "0169f6707da8",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
  },
  "stockedge/manga-generator": {
   "text": "A manga-making tool for Codex that turns novels or other text into scripts, generated images, lettered pages and a PDF.",
@@ -917,6 +935,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-29T02:22:37.057Z"
  },
+ "yibie/claude-best-practices-zh": {
+  "text": "Chinese translations of Claude's official best-practice articles, plus a 100-concept wiki, knowledge graph and mind map.",
+  "basis": "6fad0b3c6254",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
+ },
  "ysunyang4/Nexus": {
   "text": "A local control plane and browser extension that lets web AI assistants like ChatGPT and DeepSeek work with your local files over MCP.",
   "basis": "c9fa02d3c6dc",
@@ -952,6 +976,12 @@
   "basis": "609aee371a80",
   "source": "manual",
   "generatedAt": "2026-11-18T02:26:58.777Z"
+ },
+ "zhanghao123vip/ai-manju-skills": {
+  "text": "21 genre templates that turn a one-line story idea into an AI comic-drama plan, scripts, storyboards and video prompts.",
+  "basis": "f145746f6e38",
+  "source": "manual translation",
+  "generatedAt": "2026-11-24T02:26:51.000Z"
  },
  "zhu1090093659/dsh-web": {
   "text": "Plugin ecosystem for the DeepSeek Harness web UI, shared through a Creative Workshop.",
