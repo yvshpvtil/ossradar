@@ -1,0 +1,16 @@
+{
+ "fullName": "shirudo-dev/shirudo",
+ "whoItsFor": null,
+ "useCases": [
+  "Runtime security and observability. Observe process executions, network activity, and privilege changes with the included `kernel-obs` packa",
+  "Live mitigations. Use BPF upatches to block vulnerable paths at kernel hooks or Java upatches to guard application code.",
+  "System hardening. Use BPF upatches to enforce policies for containers, Kubernetes Pods, and LLM agents."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "shirudo is a BPF-based security platform for Linux. After boot-time initialization, it restricts BPF program loads from userspace to signed…",
+ "extractor": "heuristic",
+ "readmeHash": "9ab03b8895d6",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:08.473Z"
+}

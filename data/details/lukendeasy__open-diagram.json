@@ -1,0 +1,12 @@
+{
+ "fullName": "lukendeasy/open-diagram",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install open-diagram",
+ "source": "readme",
+ "readmeSummary": "Python building blocks for dense architecture diagrams that check their own layout.",
+ "extractor": "heuristic",
+ "readmeHash": "0f2f8aa1f614",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:07.964Z"
+}

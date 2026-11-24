@@ -1,0 +1,12 @@
+{
+ "fullName": "zou172866/Antigravity-agy-dart",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/zou172866/Antigravity-agy-dart/v1.7.1/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "Google Antigravity plugin — Save tokens · Improve KV-cache hits · Keep cache warm automatically · Protect context quota · Rescue crashed…",
+ "extractor": "heuristic",
+ "readmeHash": "643e07320100",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:08.233Z"
+}

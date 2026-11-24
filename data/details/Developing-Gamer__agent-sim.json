@@ -1,0 +1,12 @@
+{
+ "fullName": "Developing-Gamer/agent-sim",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/Developing-Gamer/agent-sim/main/install.sh | bash",
+ "source": "readme",
+ "readmeSummary": "iOS simulators for AI agents, on ordinary Linux machines. No Mac, no GPU.",
+ "extractor": "heuristic",
+ "readmeHash": "89c4e3d08dad",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:07.958Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "KIvanow/sessionly",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install sessionly",
+ "source": "readme",
+ "readmeSummary": "https://github.com/user-attachments/assets/2ff085fc-7731-4bae-9d10-5ec33f0f5eea",
+ "extractor": "heuristic",
+ "readmeHash": "db89a38aafea",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:08.027Z"
+}

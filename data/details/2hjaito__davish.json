@@ -1,0 +1,16 @@
+{
+ "fullName": "2hjaito/davish",
+ "whoItsFor": null,
+ "useCases": [
+  "Terminal: tabs, GPU rendering, color schemes, an optional powerline prompt",
+  "Saved commands: your frequent commands, typed into Terminal in one click",
+  "Command log: every command Davish ran, exported as a script that runs the changes again over ssh"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A desktop for your Linux servers. Terminal, files, services, Docker, logs, cron, nginx, ports, a browser, disk, login security, SSH keys…",
+ "extractor": "heuristic",
+ "readmeHash": "1dd2bf0d2db7",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:07.972Z"
+}

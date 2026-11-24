@@ -1,0 +1,12 @@
+{
+ "fullName": "earayu/Mingle",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/earayu/Mingle/releases/latest/download/install.sh | sh    # macOS, Linux",
+ "source": "readme",
+ "readmeSummary": "Bring your agent companion into the chat apps you already use. Runs on your machine, no server.",
+ "extractor": "heuristic",
+ "readmeHash": "8d29b9ee145c",
+ "version": 1,
+ "generatedAt": "2026-11-24T11:06:08.221Z"
+}
