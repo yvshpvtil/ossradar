@@ -1,0 +1,12 @@
+{
+ "fullName": "open-agent-infra/RSInfer",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Rethinking Inference Infrastructure When AI Agents Become the System Engineers",
+ "extractor": "heuristic",
+ "readmeHash": "1880d638534f",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.268Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "mbzuai-oryx/LoopedWSP",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "We asked Claude Opus 5.5 to find the shortest path through hard 30×30 mazes from Maze-Hard…",
+ "extractor": "heuristic",
+ "readmeHash": "85ba26bdcab1",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.216Z"
+}

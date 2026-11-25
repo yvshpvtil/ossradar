@@ -1,0 +1,16 @@
+{
+ "fullName": "hatchet-dev/brickie",
+ "whoItsFor": null,
+ "useCases": [
+  "Hatchet-guaranteed safe retries: Hatchet's durable execution guarantees mean no wasted compute on retries of succesful sandbox operations.",
+  "Immutable and forkable snapshots: Every call that changes files in your sandbox workspace are saved and stored in object storage. They are i",
+  "Fast starts: A warm pool of pods maintained by the provider means small cold start times for new sandbox pods."
+ ],
+ "installCommand": "pnpm add @hatchet-dev/sandbox @hatchet-dev/typescript-sdk",
+ "source": "readme",
+ "readmeSummary": "Brickie lets you run durable sandboxes in your own cloud / k8s cluster.",
+ "extractor": "heuristic",
+ "readmeHash": "c03431987753",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.386Z"
+}

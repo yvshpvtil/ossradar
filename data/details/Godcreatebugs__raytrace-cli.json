@@ -1,0 +1,12 @@
+{
+ "fullName": "Godcreatebugs/raytrace-cli",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g @raytrace-cli/cli",
+ "source": "readme",
+ "readmeSummary": "A coding agent doesn't just suggest edits. It runs commands, installs packages, reads and writes files, and opens network connections…",
+ "extractor": "heuristic",
+ "readmeHash": "17b1f707353f",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.510Z"
+}

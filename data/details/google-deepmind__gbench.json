@@ -1,0 +1,16 @@
+{
+ "fullName": "google-deepmind/gbench",
+ "whoItsFor": null,
+ "useCases": [
+  "OpenAI API compatibility: measure any OpenAI-compatible `/v1` endpoint with `--remote-endpoint /v1` (validated on vLLM and Ollama; on Cloud ",
+  "Three capability tiers:",
+  "Model discovery and GPU sizing: model properties read from the HuggingFace `config.json` (parameter count, MoE topology, vision/audio tokens"
+ ],
+ "installCommand": "pip install gbench               # base package: laptops and remote endpoints such as Ollama",
+ "source": "readme",
+ "readmeSummary": "gBench is an open-source benchmarking and evaluation suite for open large language models (LLMs) and vision-language models (VLMs).",
+ "extractor": "heuristic",
+ "readmeHash": "5b99d4b5425d",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.193Z"
+}

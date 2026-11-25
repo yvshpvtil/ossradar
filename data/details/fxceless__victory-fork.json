@@ -1,0 +1,12 @@
+{
+ "fullName": "fxceless/victory-fork",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A work-in-progress fork of VIctory, a compatibility layer that runs an Xbox Series title natively on Windows from files the user supplies.",
+ "extractor": "heuristic",
+ "readmeHash": "e1c5f57f0db9",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:10.956Z"
+}

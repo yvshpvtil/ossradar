@@ -1,0 +1,12 @@
+{
+ "fullName": "w1ccc/sap-data-mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "一句话，读懂你的 S/4HANA。",
+ "extractor": "heuristic",
+ "readmeHash": "ec2403b8ace8",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.428Z"
+}

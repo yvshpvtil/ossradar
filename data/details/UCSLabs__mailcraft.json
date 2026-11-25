@@ -1,0 +1,12 @@
+{
+ "fullName": "UCSLabs/mailcraft",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "An open-source mail, calendar, contacts and tasks program, written from scratch in Rust.",
+ "extractor": "heuristic",
+ "readmeHash": "f6afc37707c6",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:11.435Z"
+}

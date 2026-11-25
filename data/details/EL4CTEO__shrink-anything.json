@@ -1,0 +1,12 @@
+{
+ "fullName": "EL4CTEO/shrink-anything",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g @el4cteo/shrink-anything      # or: cargo install shrink-anything",
+ "source": "readme",
+ "readmeSummary": "Coding agents write code faster than anyone deletes it. Functions nothing calls, files nothing imports, packages nothing uses, images…",
+ "extractor": "heuristic",
+ "readmeHash": "00feb949388f",
+ "version": 1,
+ "generatedAt": "2026-11-25T04:59:10.939Z"
+}
