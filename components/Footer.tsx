@@ -72,6 +72,7 @@ export function Footer() {
           <Link href="/topic" className="hover:underline">Topics</Link> ·{" "}
           <Link href="/language" className="hover:underline">Languages</Link> ·{" "}
           <Link href="/submit" className="hover:underline">Submit a repo</Link> ·{" "}
+          <Link href="/developers" className="hover:underline">API</Link> ·{" "}
           <Link href="/about" className="hover:underline">About</Link> ·{" "}
           <Link href="/sponsor" className="hover:underline">Sponsor</Link> ·{" "}
           <a href="/rss.xml" className="hover:underline">RSS</a>

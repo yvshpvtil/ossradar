@@ -86,7 +86,8 @@ const nextConfig: NextConfig = {
       { source: "/api/v1", destination: "/api/v1/openapi.json", permanent: true },
       // Common OpenAPI probe paths (API crawlers, agent frameworks, GPT action builders) -> the real spec.
       ...["/openapi.json", "/.well-known/openapi.json", "/swagger.json", "/api/openapi.json", "/api/v1/swagger.json"].map((source) => ({ source, destination: "/api/v1/openapi.json", permanent: true })),
-      { source: "/api", destination: "/about#api", permanent: true },
+      // API docs: /api and the usual docs guesses (/docs, /api-docs, /api/docs, /developer) -> the developer page.
+      ...["/api", "/docs", "/api-docs", "/api/docs", "/developer", "/api-reference"].map((source) => ({ source, destination: "/developers", permanent: true })),
       ...Object.entries(TOPIC_ALIASES).map(([alias, slug]) => ({ source: `/topic/${alias}`, destination: `/topic/${slug}`, permanent: true })),
       // Language-name topics (python, golang...) have no topic hub of their own; the language hub is the page for them.
       ...Object.entries(LANGUAGE_TOPICS).map(([tag, lang]) => ({ source: `/topic/${tag}`, destination: `/language/${lang}`, permanent: true })),
@@ -95,7 +96,7 @@ const nextConfig: NextConfig = {
   // Markdown twins of /hacker-news, /new, the daily archive index (/daily.md), the category/language/topic/alternatives directories (/category.md, /language.md, /topic.md, /alternatives.md), the about/methodology page (/about.md), the sponsor page (/sponsor.md), the README badge guide (/badge.md) and the homepage (/index.md) for chatbots and agents (app/md/hacker-news, app/md/new, app/md/home). The other
   // .md twins live under proxy.ts's matcher; neither page has a dynamic segment, so plain rewrites do it.
   async rewrites() {
-    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }, { source: "/index.md", destination: "/md/home" }, { source: "/daily.md", destination: "/md/daily" }, { source: "/about.md", destination: "/md/about" }, { source: "/category.md", destination: "/md/category" }, { source: "/language.md", destination: "/md/language" }, { source: "/topic.md", destination: "/md/topic" }, { source: "/compare.md", destination: "/md/compare" }, { source: "/sponsor.md", destination: "/md/sponsor" }, { source: "/badge.md", destination: "/md/badge" }, { source: "/alternatives.md", destination: "/md/alternatives" }], afterFiles: [], fallback: [] };
+    return { beforeFiles: [{ source: "/hacker-news.md", destination: "/md/hacker-news" }, { source: "/new.md", destination: "/md/new" }, { source: "/index.md", destination: "/md/home" }, { source: "/daily.md", destination: "/md/daily" }, { source: "/about.md", destination: "/md/about" }, { source: "/category.md", destination: "/md/category" }, { source: "/language.md", destination: "/md/language" }, { source: "/topic.md", destination: "/md/topic" }, { source: "/compare.md", destination: "/md/compare" }, { source: "/sponsor.md", destination: "/md/sponsor" }, { source: "/developers.md", destination: "/md/developers" }, { source: "/badge.md", destination: "/md/badge" }, { source: "/alternatives.md", destination: "/md/alternatives" }], afterFiles: [], fallback: [] };
   },
   partialPrefetching: true,
   // Tailwind CSS is served as one cacheable stylesheet instead of experimental.inlineCss: inlining put

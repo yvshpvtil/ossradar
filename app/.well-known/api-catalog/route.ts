@@ -19,7 +19,10 @@ function linkset() {
       {
         anchor: api,
         "service-desc": [{ href: `${api}/openapi.json`, type: "application/openapi+json" }],
-        "service-doc": [{ href: `${SITE.url}/about#api`, type: "text/html" }],
+        "service-doc": [
+          { href: `${SITE.url}/developers`, type: "text/html" },
+          { href: `${SITE.url}/developers.md`, type: "text/markdown" },
+        ],
         describedby: [
           { href: `${SITE.url}/agents.md`, type: "text/markdown" },
           { href: `${SITE.url}/llms.txt`, type: "text/plain" },

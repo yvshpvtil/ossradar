@@ -160,7 +160,7 @@ export function datasetLd(o: { dateModified: string; repoCount: number; firstDay
     url: abs("/about#api"),
     keywords: ["GitHub", "open source", "star velocity", "trending repositories", "AI", "developer tools", "LLM", "MCP"],
     isAccessibleForFree: true,
-    usageInfo: abs("/about#api"),
+    usageInfo: abs("/developers#terms"),
     creator: { "@id": ORGANIZATION_ID },
     publisher: { "@id": ORGANIZATION_ID },
     isPartOf: websiteRef,

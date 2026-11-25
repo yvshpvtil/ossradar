@@ -141,7 +141,12 @@ export default function AboutPage() {
         <a className="underline" href="/api/v1/openapi.json">
           OpenAPI spec
         </a>{" "}
-        (a standard API description that agent tools and custom GPT actions can load directly).
+        (a standard API description that agent tools and custom GPT actions can load directly). Field reference, code
+        examples and terms are on the{" "}
+        <Link className="underline" href="/developers">
+          API docs page
+        </Link>
+        .
       </p>
       <p>
         For AI assistants, the same hourly data is also indexed as plain text:{" "}

@@ -45,9 +45,9 @@ export function GET() {
       summary: "Fastest-rising open-source AI and developer-tool repos on GitHub, ranked by star velocity.",
       description: `Free, read-only JSON from ${SITE.url}. No key, CORS open, updated hourly. Please link back to ${SITE.url} when you use the data. Data as of ${getData().generatedAt}.`,
       contact: { name: SITE.name, url: `${SITE.url}/about`, email: "hello@ossradar.net" },
-      license: { name: "Free to use with a link back to ossradar.net", url: `${SITE.url}/about#api` },
+      license: { name: "Free to use with a link back to ossradar.net", url: `${SITE.url}/developers#terms` },
     },
-    externalDocs: { description: "llms.txt: key pages, URL patterns and current rankings", url: `${SITE.url}/llms.txt` },
+    externalDocs: { description: "API docs: endpoints, fields, code examples and terms (Markdown: /developers.md)", url: `${SITE.url}/developers` },
     servers: [{ url: SITE.url }],
     paths: {
       "/api/v1/trending": {

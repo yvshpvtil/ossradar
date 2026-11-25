@@ -189,6 +189,7 @@ ${languageLines()}
 
 ${alternativesSection()}${dailySection(days)}## Data access
 
+- [API docs](${SITE.url}/developers): free JSON API for trending GitHub repos (GitHub has no trending API): endpoints, every field, curl/Python/JavaScript examples, terms (as Markdown: ${SITE.url}/developers.md)
 - [JSON API: /api/v1/trending](${SITE.url}/api/v1/trending): top 100 repos by 24h star gain with 7-day gains, stars, forks, language, category, topics. Free, no key, updated hourly; please link back to ${SITE.url}.
 - [JSON API: /api/v1/repo/{owner}/{name}](${SITE.url}/api/v1/repo/morluto/rea): one tracked repo's stars, 24h and 7-day gains, rank, daily star history, Hacker News story and alternatives. Same terms.
 - [OpenAPI spec](${SITE.url}/api/v1/openapi.json): OpenAPI 3.1 description of both JSON endpoints, for agent tools and custom GPT actions (also linked from the RFC 9727 API catalog at ${SITE.url}/.well-known/api-catalog)

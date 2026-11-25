@@ -38,6 +38,7 @@ export const STATIC_LASTMOD = {
   submit: "2026-10-25",
   sponsor: "2026-10-24",
   badge: "2026-11-12",
+  developers: "2026-11-25",
 } as const;
 
 /** /sponsor also shows the live snapshot count, which grows once a day, so it moves daily (day precision). */
