@@ -209,6 +209,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:42.420Z"
  },
+ "Minglink/dsh-jailbreak-workflow": {
+  "text": "A visual workflow plugin for DeepSeek Harness that turns a canvas into plan prompts for LLM red-teaming and safety research.",
+  "basis": "a8f8cf178f30",
+  "source": "manual translation",
+  "generatedAt": "2026-11-25T02:24:31.000Z"
+ },
  "MiniMax-AI/MiniMax-H3": {
   "text": "Agent skills for MiniMax H3, including a prompt-writing guide and eight style-specific video generation skills.",
   "basis": "7578ca56755d",
