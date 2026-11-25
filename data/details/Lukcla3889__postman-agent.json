@@ -1,0 +1,16 @@
+{
+ "fullName": "Lukcla3889/postman-agent",
+ "whoItsFor": null,
+ "useCases": [
+  "Local Request Relay , routes Postman web requests through your machine so localhost, intranet, and VPN-only endpoints respond normally.",
+  "CORS Bypass , sends requests outside the browser sandbox so cross-origin APIs stop failing with preflight errors.",
+  "Tray-Resident Service , runs quietly in the notification area and starts with Windows so the web app connects on first load."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Postman Agent is a background helper application that lets the Postman web interface send real HTTP requests from your Windows machine.",
+ "extractor": "heuristic",
+ "readmeHash": "e0af1cdcbf58",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.743Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "Lumidarin/agy-capsule",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "在 Antigravity 输入框底栏显示上下文占用、多模型配额、缓存状态和生成速度，悬停胶囊即可查看面板详情，点击胶囊即可固定面板。",
+ "extractor": "heuristic",
+ "readmeHash": "8b82b03431a9",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.704Z"
+}

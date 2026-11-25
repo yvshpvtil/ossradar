@@ -1,0 +1,12 @@
+{
+ "fullName": "Belobug/VIctory-Belobug-AMD",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This is a fork of VIctory by Marvisak and its contributors. It follows upstream main up to 8e79c80 (2026-11-24)…",
+ "extractor": "heuristic",
+ "readmeHash": "b3e5f7f4a632",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.419Z"
+}

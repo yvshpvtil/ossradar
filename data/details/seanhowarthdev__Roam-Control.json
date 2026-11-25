@@ -1,0 +1,16 @@
+{
+ "fullName": "seanhowarthdev/Roam-Control",
+ "whoItsFor": null,
+ "useCases": [
+  "Search for places, enter coordinates or select a position on the map.",
+  "Start and update a fixed reported location.",
+  "Simulate Apple Maps Walking, Driving and Cycling routes."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Roam Control is an iPhone app for location-based development, quality assurance and responsible personal testing on a device you own…",
+ "extractor": "heuristic",
+ "readmeHash": "ee51f9709c3a",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.397Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "opensetlabs/openset-llm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run --rm -p 127.0.0.1:8080:8080 -v openset-llm-models:/data/models openset-llm   # no authentication: this machine only",
+ "source": "readme",
+ "readmeSummary": "An LLM is not a sealed box. It is a stack of parts you can rewrite: matmul kernels, decoding, attention, caches.",
+ "extractor": "heuristic",
+ "readmeHash": "b5c78d09cf00",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.623Z"
+}

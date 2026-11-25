@@ -1,0 +1,12 @@
+{
+ "fullName": "danielwh2/sprite-stacking",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add danielwh2/sprite-stacking",
+ "source": "readme",
+ "readmeSummary": "An agent skill that turns four pixel art views into fake-3D sprites you can spin. By Daniel White.",
+ "extractor": "heuristic",
+ "readmeHash": "f816bb2948e5",
+ "version": 1,
+ "generatedAt": "2026-11-25T15:46:38.404Z"
+}
