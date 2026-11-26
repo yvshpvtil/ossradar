@@ -1,0 +1,12 @@
+{
+ "fullName": "CISOfy/lynis",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "[Documentation]: https://cisofy.com/documentation/lynis/",
+ "extractor": "heuristic",
+ "readmeHash": "15a8f474a16e",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.570Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "datadog-labs/ephyra",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install ephyra-cli",
+ "source": "readme",
+ "readmeSummary": "Ephyra is a new property-based testing library we are developing at Datadog Systems Research, designed from scratch for agentic…",
+ "extractor": "heuristic",
+ "readmeHash": "09dbd7282375",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.303Z"
+}

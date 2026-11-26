@@ -1,0 +1,12 @@
+{
+ "fullName": "alesha-pro/llm.asm",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Three complete LLM projects written in 100% pure x86-64 NASM assembly. Zero C, zero C++, zero Rust, zero libc, zero libm, zero runtime…",
+ "extractor": "heuristic",
+ "readmeHash": "928fa7562af5",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.316Z"
+}

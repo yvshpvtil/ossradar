@@ -1,0 +1,12 @@
+{
+ "fullName": "Lucas-blip-png/dkb-pc-recomp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "DKB Recomp is a static recompilation of Donkey Kong Bananza (Nintendo Switch 2, 2025) into a native Windows x86-64 application with a Vulkan…",
+ "extractor": "heuristic",
+ "readmeHash": "560df50b49dc",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.313Z"
+}

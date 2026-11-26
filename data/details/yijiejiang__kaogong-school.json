@@ -1,0 +1,12 @@
+{
+ "fullName": "yijiejiang/kaogong-school",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "自己做的一个考公学习系统。资料、知识、技能、出卷、改卷、学情都放在一个对话框里，数据默认存在本机。",
+ "extractor": "heuristic",
+ "readmeHash": "eb9b4305fc86",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.569Z"
+}

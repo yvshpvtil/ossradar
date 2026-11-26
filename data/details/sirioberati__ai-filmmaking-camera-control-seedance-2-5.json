@@ -1,0 +1,12 @@
+{
+ "fullName": "sirioberati/ai-filmmaking-camera-control-seedance-2-5",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Direct the camera of an AI film made with Seedance 2.5, with a 3D camera you wrote in code.",
+ "extractor": "heuristic",
+ "readmeHash": "9fe384ecdfe5",
+ "version": 1,
+ "generatedAt": "2026-11-26T00:31:39.308Z"
+}
