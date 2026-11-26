@@ -5,6 +5,9 @@
  */
 export const BLOCKED_REPOS = new Set<string>([
   "eternity4719/howtolivebetter", // Chinese life-advice guide
+  // Nov 26 2026: no source code, no releases, a 2-day-old single-repo account, 20 stuffed agent-* topics and a
+  // "Status: Working / Windows 10|11" badge row pointing at a github.io download page for Postman's proprietary agent.
+  "lukcla3889/postman-agent",
 ]);
 
 export const BLOCKED_OWNERS = new Set<string>([]);
@@ -45,9 +48,10 @@ const PIRACY_RE = /(^|[^a-z0-9])(keygens?|warez|kmspico|cracked|crack (download|
  * Installer lures: fake "standalone setup" repos for paid apps and games (Revit, Microsoft 365,
  * game trainers and cheats) that ship a download link instead of code, a common malware vector.
  * Matched on name + description wording no real dev tool uses, plus SEO-bait topic slugs
- * (melodyne-download, exitlag-2026-bypass, dxo-photolab-coupon). "Cheat sheet" stays.
+ * (melodyne-download, exitlag-2026-bypass, dxo-photolab-coupon). "Cheat sheet" stays. Nov 26 2026: name-stuffed
+ * "Koboldcpp ... Suite Ja [2026] — Standalone Windows 10/11 (x64) Release & Config" repos (win64.zip "Free Download").
  */
-const LURE_RE = /(^|[^a-z0-9])(pre[- ]?activated|fully activated|(all|every) features? (activated|enabled|active|unlocked)|full working installer|full installer|(complete |full )?standalone (desktop )?(setup|installer|edition|build|config)|trainer (tool|setup)|standalone (\w+ )?trainer|cheats?(?! ?sheets?)|robux generator|executor for pc|ready to play)([^a-z0-9]|$)/i;
+const LURE_RE = /(^|[^a-z0-9])(pre[- ]?activated|fully activated|(all|every) features? (activated|enabled|active|unlocked)|full working installer|full installer|(complete |full )?standalone (desktop )?(setup|installer|edition|build|config)|trainer (tool|setup)|standalone (\w+ )?trainer|standalone windows( \d+(\/\d+)?)?( \(x64\))? (release|setup|installer|build|edition)|free download for (windows|pc|mac)|cheats?(?! ?sheets?)|robux generator|executor for pc|ready to play)([^a-z0-9]|$)/i;
 const LURE_TOPIC_RE = /(^|-)(download|crack|cracked|keygen|activator|bypass|coupon|discount-code|patched|free-20\d\d)(-|$)|-install-windows|install-setup/i;
 
 export function isPiracy(input: { owner: string; name: string; description: string; topics: string[] }): boolean {
