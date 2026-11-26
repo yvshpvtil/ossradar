@@ -1,0 +1,12 @@
+{
+ "fullName": "AI-FanGe/A-MicroRobot-that-can-Rollerskate",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh                      # 安装 uv",
+ "source": "readme",
+ "readmeSummary": "一个约 30 cm 高、会走路、会滑板、会做广播体操的开源桌面人形机器人",
+ "extractor": "heuristic",
+ "readmeHash": "b753fa2334fb",
+ "version": 1,
+ "generatedAt": "2026-11-26T09:41:30.195Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "mir-ashiq/canvix",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install            # or: bun install",
+ "source": "readme",
+ "readmeSummary": "Free & open-source graphic design tool — a community-built Canva alternative.",
+ "extractor": "heuristic",
+ "readmeHash": "10aa9850860f",
+ "version": 1,
+ "generatedAt": "2026-11-26T09:41:30.202Z"
+}
