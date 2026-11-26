@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, twitterDefaults } from "@/lib/seo";
+import { breadcrumbLd, staticPageLd, ogDefaults, pageAlternates, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { PageNav } from "@/components/PageNav";
 import { JsonLd } from "@/components/JsonLd";
 import { getRepos } from "@/lib/data";
@@ -13,7 +13,7 @@ const description = `Suggest an open-source AI, LLM, agent or MCP repo for ${SIT
 export const metadata: Metadata = {
   title,
   description,
-  alternates: pageAlternates("/submit"),
+  alternates: { ...pageAlternates("/submit"), types: { ...RSS_ALTERNATE, "text/markdown": [{ url: "/submit.md", title: `${title} (Markdown)` }] } },
   openGraph: { siteName: ogDefaults.siteName, locale: ogDefaults.locale, type: ogDefaults.type, title, description, url: "/submit" },
   twitter: { ...twitterDefaults, title, description },
 };

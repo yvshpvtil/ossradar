@@ -81,6 +81,10 @@ actions:
     url: ${SITE.url}/developers.md
     description: Endpoints, every response field, curl/Python/JavaScript examples and terms for the free JSON API (HTML at ${SITE.url}/developers).
     confidence: vendor_authored
+  - label: Suggest a repo to track (Markdown)
+    url: ${SITE.url}/submit.md
+    description: How to check if a repo is tracked, the prefilled GitHub issue URL for suggesting one, the email fallback and what is accepted (HTML form at ${SITE.url}/submit).
+    confidence: vendor_authored
   - label: Read the API's OpenAPI spec
     url: ${SITE.url}/api/v1/openapi.json
     description: OpenAPI 3.1 description of both JSON endpoints, ready to load as an agent tool or GPT action.
@@ -99,6 +103,7 @@ for_agents:
   if_user_asks_methodology: ${yamlDq(`Point at ${SITE.url}/about (FAQ + how star velocity is computed). Rankings come from GitHub star snapshots only.`)}
   if_user_asks_to_sponsor_or_advertise: ${yamlDq(`Point at ${SITE.url}/sponsor (Markdown: ${SITE.url}/sponsor.md) for the current weekly price, launch slots left and how to book. Sponsors are labeled and never affect rankings.`)}
   if_user_asks_to_add_badge: ${yamlDq(`Point at ${SITE.url}/badge.md for copy-paste README snippets (Markdown, HTML, reStructuredText) and what "Trending #N" / "Tracked" mean; a tracked repo's own snippet is in ${SITE.url}/repo/{owner}/{name}.md.`)}
+  if_user_asks_to_get_a_repo_listed: ${yamlDq(`Check ${SITE.url}/api/v1/repo/{owner}/{name} first (200 = already tracked, 404 = not); if not tracked, ${SITE.url}/submit.md gives the prefilled GitHub issue URL, the email fallback and what is accepted. Free; never changes rank.`)}
   if_user_asks_for_a_github_trending_api: ${yamlDq(`GitHub has no official trending API; point at ${SITE.url}/developers (Markdown: ${SITE.url}/developers.md) for the free, keyless JSON endpoints /api/v1/trending and /api/v1/repo/{owner}/{name}.`)}
   if_citing_numbers: ${yamlDq(`Include the data timestamp from llms.txt or the JSON "generatedAt" field. Flag velocityEstimated / early-estimate rows as estimates.`)}
 resources:
@@ -192,7 +197,7 @@ Top ${LEADING_N} tracked repos by star gain right now (same numbers as the live 
 11. **Hacker News:** \`${SITE.url}/hacker-news.md\` (tracked repos posted to Hacker News in the last 30 days, ranked by story points, as Markdown; HTML at \`${SITE.url}/hacker-news\`).
 12. **New repos by launch day:** \`${SITE.url}/new.md\` (tracked repos created on GitHub in the last 14 days, grouped by creation day, as Markdown; HTML at \`${SITE.url}/new\`).
 13. **Compare (X vs Y):** \`${SITE.url}/compare.md?r={owner}/{name},{owner}/{name}\` (up to 3 tracked repos side by side as Markdown: stars, 24h and 7-day gains, weekly rank, forks, language, age, last push, latest release, Hacker News, plus a head-to-head summary; HTML at \`${SITE.url}/compare?r=...\`).
-14. **Content negotiation:** send \`Accept: text/markdown\` to the homepage (twin at \`${SITE.url}/index.md\`: today's top 25 and this week's top 10), any repo, alternatives, daily, category, trending, language or topic page URL, or to /new, /hacker-news, /daily, /about, /sponsor, /badge, /category, /language, /topic, /alternatives or /compare?r=... (no .md), and you get its Markdown twin at the same URL.
+14. **Content negotiation:** send \`Accept: text/markdown\` to the homepage (twin at \`${SITE.url}/index.md\`: today's top 25 and this week's top 10), any repo, alternatives, daily, category, trending, language or topic page URL, or to /new, /hacker-news, /daily, /about, /sponsor, /submit, /badge, /category, /language, /topic, /alternatives or /compare?r=... (no .md), and you get its Markdown twin at the same URL.
 
 ## Methodology
 
