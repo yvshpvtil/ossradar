@@ -41,6 +41,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-15T02:25:16.612Z"
  },
+ "Belobug/VIctory-Belobug-AMD": {
+  "text": "A fork of the VIctory compatibility layer tuned for speed on AMD RDNA 3 GPUs; it includes no game files.",
+  "basis": "1554e5aefb1a",
+  "source": "manual translation",
+  "generatedAt": "2026-11-26T02:21:12.220Z"
+ },
  "Caho1/open-claude-ui": {
   "text": "High-fidelity recreation of the Claude desktop app UI: 30 React components plus a reverse-engineering handbook.",
   "basis": "d9f1c4918cb4",
@@ -436,6 +442,12 @@
   "basis": "c3e6eb958c37",
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:50.289Z"
+ },
+ "chanke17/KuroCat": {
+  "text": "A free, lightweight native desktop cat pet and OBS overlay, a Bongo Cat alternative for macOS, Windows, Linux and UOS.",
+  "basis": "87ca43660721",
+  "source": "manual translation",
+  "generatedAt": "2026-11-26T02:21:12.220Z"
  },
  "chu0119/Pojun": {
   "text": "A multi-agent AI penetration testing platform that goes from a one-line target to a deliverable vulnerability report.",
