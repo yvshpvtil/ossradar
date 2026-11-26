@@ -1,0 +1,12 @@
+{
+ "fullName": "qianyiai/KuroCat",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask qianyiai/tap/kurocat",
+ "source": "readme",
+ "readmeSummary": "macOS Homebrew 一键安装（推荐，自动清理隔离属性、免手动 xattr）：",
+ "extractor": "heuristic",
+ "readmeHash": "dd7c90c5a9bb",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:04.978Z"
+}

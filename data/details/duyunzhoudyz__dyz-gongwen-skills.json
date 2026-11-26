@@ -1,0 +1,12 @@
+{
+ "fullName": "duyunzhoudyz/dyz-gongwen-skills",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add duyunzhoudyz/dyz-gongwen-skills",
+ "source": "readme",
+ "readmeSummary": "简体中文 · English",
+ "extractor": "heuristic",
+ "readmeHash": "077053146e03",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:05.410Z"
+}

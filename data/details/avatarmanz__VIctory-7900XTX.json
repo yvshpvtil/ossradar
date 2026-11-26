@@ -1,0 +1,12 @@
+{
+ "fullName": "avatarmanz/VIctory-7900XTX",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A fork of VIctory, a compatibility layer that runs an Xbox Series title natively on Windows from files the user supplies.",
+ "extractor": "heuristic",
+ "readmeHash": "f8ea5dcdf679",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:04.948Z"
+}

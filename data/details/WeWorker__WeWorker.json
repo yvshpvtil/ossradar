@@ -1,0 +1,12 @@
+{
+ "fullName": "WeWorker/WeWorker",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "The open-source desktop AI agent that takes real actions on websites",
+ "extractor": "heuristic",
+ "readmeHash": "0cb4157693c0",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:05.198Z"
+}

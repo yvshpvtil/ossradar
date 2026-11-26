@@ -1,0 +1,12 @@
+{
+ "fullName": "yzsind/mydb",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker pull ninedata/mydb:latest",
+ "source": "readme",
+ "readmeSummary": "A high-performance MySQL-compatible database for HTAP and AI agents",
+ "extractor": "heuristic",
+ "readmeHash": "0d4e0288c4a8",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:05.178Z"
+}

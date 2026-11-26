@@ -1,0 +1,12 @@
+{
+ "fullName": "thiagodmont/greeg",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install thiagodmont/greeg/greeg",
+ "source": "readme",
+ "readmeSummary": "Code search built for coding agents. Your agent searches with rg and grep and gets a wall of matches.",
+ "extractor": "heuristic",
+ "readmeHash": "8a713eec4011",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:05.253Z"
+}

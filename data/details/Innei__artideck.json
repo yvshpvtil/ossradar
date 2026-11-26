@@ -1,0 +1,12 @@
+{
+ "fullName": "Innei/artideck",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx artideck install",
+ "source": "readme",
+ "readmeSummary": "Ask an agent for a settings page and you get three paragraphs describing three layouts.",
+ "extractor": "heuristic",
+ "readmeHash": "fc448bc3e9b6",
+ "version": 1,
+ "generatedAt": "2026-11-26T19:45:05.162Z"
+}
