@@ -1,0 +1,16 @@
+{
+ "fullName": "cc4w/adobe-firefly-image-generator",
+ "whoItsFor": null,
+ "useCases": [
+  "Style controls that stay on-brand. Dial in lighting, composition, color palette, and artistic treatment so every result matches your creativ",
+  "Variation and refinement workflow. Generate a set of distinct concepts, then iterate on the one you love with focused adjustments until it i",
+  "Built for real creative work. Export production-ready images sized for social, web, and print, with consistent quality across every generati"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Adobe Firefly Image Generator turns text prompts into striking, production-ready visuals in seconds.",
+ "extractor": "heuristic",
+ "readmeHash": "4fe1fd1126ca",
+ "version": 1,
+ "generatedAt": "2026-11-27T12:39:38.196Z"
+}

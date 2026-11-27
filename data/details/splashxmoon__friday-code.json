@@ -1,0 +1,12 @@
+{
+ "fullName": "splashxmoon/friday-code",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask friday",
+ "source": "readme",
+ "readmeSummary": "Think of it as a group chat and a task board for your AI coding agents.",
+ "extractor": "heuristic",
+ "readmeHash": "36cfac4e6911",
+ "version": 1,
+ "generatedAt": "2026-11-27T12:39:37.916Z"
+}

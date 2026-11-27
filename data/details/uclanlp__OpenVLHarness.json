@@ -1,0 +1,12 @@
+{
+ "fullName": "uclanlp/OpenVLHarness",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "For example, an agent can locate objects, estimate depth, and compute their spatial relationship; or crop an unfamiliar object…",
+ "extractor": "heuristic",
+ "readmeHash": "71b1c8623890",
+ "version": 1,
+ "generatedAt": "2026-11-27T12:39:37.920Z"
+}

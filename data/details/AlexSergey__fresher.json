@@ -1,0 +1,12 @@
+{
+ "fullName": "AlexSergey/fresher",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install",
+ "source": "readme",
+ "readmeSummary": "I'm a developer on a Mac with 500 GB, and the disk kept filling up by itself: gigabytes vanished…",
+ "extractor": "heuristic",
+ "readmeHash": "a9d86e9eff2f",
+ "version": 1,
+ "generatedAt": "2026-11-27T12:39:37.921Z"
+}
