@@ -1,0 +1,12 @@
+{
+ "fullName": "sresarehumantoo/ARTEX-CC",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask sresarehumantoo/tap/artex-cc",
+ "source": "readme",
+ "readmeSummary": "Use your Claude subscription to run pentests. No API key needed.",
+ "extractor": "heuristic",
+ "readmeHash": "7683eb7b4e4c",
+ "version": 1,
+ "generatedAt": "2026-11-27T22:05:53.552Z"
+}

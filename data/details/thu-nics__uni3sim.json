@@ -1,0 +1,16 @@
+{
+ "fullName": "thu-nics/uni3sim",
+ "whoItsFor": null,
+ "useCases": [
+  "Framework-aware serving. Model batching, scheduling, and parallel execution through vLLM and SGLang paths.",
+  "Shared host-device timeline. Follow compute, memory transfers, and communication together to find bottlenecks.",
+  "Hardware exploration. Compare accelerator and memory-system designs using hardware specifications and independent microbenchmarks."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Uni³Sim predicts LLM inference latency and throughput by combining framework execution models with analytical models of compute, memory…",
+ "extractor": "heuristic",
+ "readmeHash": "771aa3efc8b9",
+ "version": 1,
+ "generatedAt": "2026-11-27T22:05:53.757Z"
+}

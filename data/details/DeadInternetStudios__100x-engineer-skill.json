@@ -1,0 +1,12 @@
+{
+ "fullName": "DeadInternetStudios/100x-engineer-skill",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm install -g github:DeadInternetStudios/100x-engineer-skill",
+ "source": "readme",
+ "readmeSummary": "100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-ready code.I use it to ship over 1,000 PRs…",
+ "extractor": "heuristic",
+ "readmeHash": "f3a7523d339f",
+ "version": 1,
+ "generatedAt": "2026-11-27T22:05:53.573Z"
+}
