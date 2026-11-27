@@ -32,6 +32,8 @@ const snap = (d: string): Record<string, number> => {
   for (const [n, stars] of carried) if (out[n] === undefined) out[n] = stars;
   return out;
 };
+/** A snapshot with moved repos under their current name (shared with lib/monthly.ts). */
+export const readSnapshot = (d: string) => snap(d);
 const prevDay = (d: string) => new Date(Date.parse(d + "T00:00:00Z") - 86_400_000).toISOString().slice(0, 10);
 
 export type DailyEntry = { fullName: string; gained: number; stars: number; repo?: Repo };

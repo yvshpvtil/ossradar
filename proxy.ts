@@ -82,10 +82,10 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "alternatives.md", "badge.md", "submit.md", "developers.md", "developers", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
+const TOP_LEVEL = new Set(["monthly", "monthly.md", "about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "alternatives.md", "badge.md", "submit.md", "developers.md", "developers", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
-const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about", "compare", "sponsor", "badge", "developers", "submit"]);
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about", "compare", "sponsor", "badge", "developers", "submit", "monthly"]);
 
 /** First segments that are real routes or sections, never a GitHub owner in the /{owner}/{name} shortcut. */
 const RESERVED = new Set([...Object.keys(HUBS), ...INDEXES, ...TOP_LEVEL, "repo", "md", "api", "badge", "trending"]);
@@ -191,6 +191,18 @@ function route(req: NextRequest) {
   if (raw.length === 0) return negotiate("/md/home");
   // The daily archive index's twin is /daily.md (next.config rewrite to /md/daily).
   if (raw.length === 1 && raw[0] === "daily") return negotiate("/md/daily");
+  // Monthly roundups: /monthly.md and /monthly/{YYYY-MM}.md are next.config rewrites; negotiate the HTML URLs here.
+  if (raw.length === 1 && raw[0] === "monthly") return negotiate("/md/monthly");
+  if (raw.length === 2 && raw[0] === "monthly" && /^\d{4}-\d{2}$/.test(raw[1])) {
+    // Same months as getMonthWindows(): any month with an archived day. Others 404 here (the page alone would soft-404 with a 200).
+    if (![...DAILY_DAYS].some((d) => d.startsWith(raw[1]))) return notFound();
+    return negotiate(`/md/monthly/${raw[1]}`);
+  }
+  if (raw[0] === "monthly" && raw.length >= 2) {
+    // Only /monthly/{known YYYY-MM}.md passes through (to the next.config rewrite); anything else under /monthly 404s.
+    const m = raw.length === 2 ? /^(\d{4}-\d{2})\.md$/.exec(raw[1]) : null;
+    if (!m || ![...DAILY_DAYS].some((d) => d.startsWith(m[1]))) return notFound();
+  }
   // The about/methodology page's twin is /about.md (next.config rewrite to /md/about).
   if (raw.length === 1 && raw[0] === "about") return negotiate("/md/about");
   // The sponsor page's twin is /sponsor.md (next.config rewrite to /md/sponsor).
@@ -395,5 +407,5 @@ export const config = {
   // The two-segment entry (first segment not starting with . or _) and the github.com entry feed
   // the /{owner}/{name} repo shortcut. The uppercase entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/", "/new", "/hacker-news", "/about", "/compare", "/sponsor", "/badge", "/developers", "/submit", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
+  matcher: ["/", "/new", "/hacker-news", "/about", "/compare", "/sponsor", "/badge", "/developers", "/submit", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/monthly", "/monthly/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
 };

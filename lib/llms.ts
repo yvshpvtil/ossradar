@@ -135,6 +135,7 @@ Data as of ${d.generatedAt} (UTC). Star gains come from diffing hourly and daily
 - [Repo of the day](${SITE.url}/): homepage spotlight — the top measured 24h gainer (falls back to estimated when few measured rows exist); also listed under Leading now in [agents.md](${SITE.url}/agents.md)
 - [New repos](${SITE.url}/new): tracked repos created on GitHub in the last ${NEW_DAYS} days, grouped by launch day
 - [Daily archive](${SITE.url}/daily): one page per UTC day with that day's top gainers
+- [Monthly roundups](${SITE.url}/monthly): the top 25 repos by GitHub stars gained in each calendar month, e.g. ${SITE.url}/monthly/{YYYY-MM} (as Markdown: append .md, e.g. ${SITE.url}/monthly/{YYYY-MM}.md; all months: ${SITE.url}/monthly.md)
 - [Hacker News mentions](${SITE.url}/hacker-news): tracked repos discussed on Hacker News
 - [Compare repos](${SITE.url}/compare): side-by-side stars, growth, forks, releases and Hacker News discussion for up to 3 tracked repos
 - [Submit a repo](${SITE.url}/submit): suggest an open-source AI or developer-tool repo to track (free, reviewed by hand; as Markdown with the prefilled GitHub issue URL and how to check if a repo is already tracked: ${SITE.url}/submit.md)

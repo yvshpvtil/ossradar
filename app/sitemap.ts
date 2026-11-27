@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { LANDINGS } from "@/lib/landing";
 import { getLanguages } from "@/lib/languages";
 import { getArchiveDays } from "@/lib/daily";
+import { getMonthWindows } from "@/lib/monthly";
 import { getTopics } from "@/lib/topics";
 import { alternativesPath, getAlternativesRepos } from "@/lib/alternatives";
 import { STATIC_LASTMOD, alternativesLastmod, repoLastmod, sponsorLastmod } from "@/lib/lastmod";
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/sponsor`, lastModified: sponsorLastmod(lastModified), changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/daily`, lastModified, changeFrequency: "daily", priority: 0.7 },
     ...getArchiveDays().map((d) => ({ url: `${SITE.url}/daily/${d}`, lastModified: new Date(`${d}T23:59:59Z`), changeFrequency: "yearly" as const, priority: 0.5 })),
+    { url: `${SITE.url}/monthly`, lastModified, changeFrequency: "daily", priority: 0.6 },
+    ...getMonthWindows().map((w) => ({ url: `${SITE.url}/monthly/${w.month}`, lastModified: w.complete ? new Date(`${w.to}T23:59:59Z`) : lastModified, changeFrequency: (w.complete ? "yearly" : "daily") as "yearly" | "daily", priority: 0.6 })),
     { url: `${SITE.url}/hacker-news`, lastModified, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE.url}/alternatives`, lastModified, changeFrequency: "daily", priority: 0.6 },
     { url: `${SITE.url}/topic`, lastModified, changeFrequency: "daily", priority: 0.6 },

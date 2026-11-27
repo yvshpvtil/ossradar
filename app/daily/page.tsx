@@ -71,7 +71,7 @@ export default function DailyIndex() {
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive</p>
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Daily archive of rising GitHub repos</h1>
       <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-        The repos that gained the most GitHub stars on each day, measured from our daily snapshots (a saved star count for every tracked repo, once per UTC day).
+        The repos that gained the most GitHub stars on each day, measured from our daily snapshots (a saved star count for every tracked repo, once per UTC day). Whole months: <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/monthly">top repos by month</Link>.
       </p>
       <section className="mt-6 rounded-xl border border-zinc-200 p-5 dark:border-zinc-800">
         <h2 className="text-sm font-semibold">Today so far (live)</h2>
