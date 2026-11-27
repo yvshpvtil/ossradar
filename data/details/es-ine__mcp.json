@@ -1,0 +1,12 @@
+{
+ "fullName": "es-ine/mcp",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Official statistics of Spain, straight from the source, for any AI assistant.",
+ "extractor": "heuristic",
+ "readmeHash": "09da67918edc",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.063Z"
+}

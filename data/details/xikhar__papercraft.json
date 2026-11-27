@@ -1,0 +1,12 @@
+{
+ "fullName": "xikhar/papercraft",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add xikhar/papercraft",
+ "source": "readme",
+ "readmeSummary": "An agent skill for building games, interactive scenes, web pages, animations and videos in one handcrafted pop-up papercraft style…",
+ "extractor": "heuristic",
+ "readmeHash": "dc7ad2291c32",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.015Z"
+}

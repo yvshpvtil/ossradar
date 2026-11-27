@@ -1,0 +1,12 @@
+{
+ "fullName": "zhouxiaoka/autoclip",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npx skills add zhouxiaoka/autoclip",
+ "source": "readme",
+ "readmeSummary": "The open-source OpusClip alternative — local-first AI clipping for podcasts, interviews, and gaming streams with smart reframing, captions…",
+ "extractor": "heuristic",
+ "readmeHash": "b4261252ee4b",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.255Z"
+}

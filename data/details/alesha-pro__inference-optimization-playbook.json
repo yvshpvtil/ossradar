@@ -1,0 +1,12 @@
+{
+ "fullName": "alesha-pro/inference-optimization-playbook",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "My field notebook for tuning LLM inference on consumer GPUs. The ledger covers 138 tested hypotheses across 7 model cases, with the verdict…",
+ "extractor": "heuristic",
+ "readmeHash": "348f006c7483",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.457Z"
+}

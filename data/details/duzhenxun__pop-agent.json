@@ -1,0 +1,12 @@
+{
+ "fullName": "duzhenxun/pop-agent",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://raw.githubusercontent.com/duzhenxun/pop-agent/main/scripts/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "What it is: a front end that lays an agent's process open — thinking blocks, tool calls, changed files…",
+ "extractor": "heuristic",
+ "readmeHash": "457dc071033a",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.253Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Microck/openvector",
+ "whoItsFor": null,
+ "useCases": [
+  "automatic tracing, manual palettes, segmentation editing, and background removal.",
+  "svg, pdf, eps, ai, dxf, and emf export, plus rasterized png, jpeg, bmp, and tiff output.",
+  "batch conversion, saved advanced profiles, and recent basic settings."
+ ],
+ "installCommand": "npm install openvector",
+ "source": "readme",
+ "readmeSummary": "openvector turns png, jpeg, bmp, gif, and tiff images into editable vectors.",
+ "extractor": "heuristic",
+ "readmeHash": "e50139e43ae8",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.038Z"
+}

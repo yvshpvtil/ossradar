@@ -1,0 +1,12 @@
+{
+ "fullName": "iffiX/neutrino",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "curl -fsSL https://github.com/iffiX/neutrino/releases/latest/download/install.sh | sh",
+ "source": "readme",
+ "readmeSummary": "一键部署 AI 应用，走到哪用到哪",
+ "extractor": "heuristic",
+ "readmeHash": "bc75a860ca34",
+ "version": 1,
+ "generatedAt": "2026-11-27T02:58:27.293Z"
+}
