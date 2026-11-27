@@ -252,10 +252,10 @@
   "generatedAt": "2026-11-01T02:20:37.252Z"
  },
  "Renly1994/xiaotang-daozai": {
-  "text": "A Rust-built Windows desktop info island showing lyrics, verification codes, calendar reminders, to-dos and AI usage quotas.",
-  "basis": "3d39bfb00549",
-  "source": "manual",
-  "generatedAt": "2026-11-18T02:26:58.777Z"
+  "text": "A lightweight Windows 'dynamic island' desktop widget in Rust showing weather, system stats, Bluetooth battery, lyrics, calendar and AI quotas, with plugins.",
+  "basis": "78db1e188b63",
+  "source": "manual translation",
+  "generatedAt": "2026-11-27T02:22:57.094Z"
  },
  "SAOS-3624/dsh-see-now": {
   "text": "A DSH plugin that lets AI see your screen live, keeping only frames that changed and tiling several into one image.",
