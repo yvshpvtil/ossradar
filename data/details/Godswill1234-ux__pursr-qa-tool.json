@@ -1,0 +1,12 @@
+{
+ "fullName": "Godswill1234-ux/pursr-qa-tool",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Pursr QA Tool turns scattered browser checks into one continuous visual workflow: capture a page, sweep it across viewports…",
+ "extractor": "heuristic",
+ "readmeHash": "d20f5229b8cb",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.495Z"
+}

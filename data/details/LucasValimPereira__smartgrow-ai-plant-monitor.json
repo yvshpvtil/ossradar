@@ -1,0 +1,16 @@
+{
+ "fullName": "LucasValimPereira/smartgrow-ai-plant-monitor",
+ "whoItsFor": null,
+ "useCases": [
+  "On-device preprocessing: The ESP32 firmware filters, timestamps, and batches samples before transmission, reducing backend load and preservi",
+  "Flask backend service: A lightweight REST API receives telemetry, validates payload schemas, and exposes query endpoints for current and his",
+  "Persistent time-series storage: SQLite with SQLAlchemy ORM stores every reading with indexed timestamps, enabling efficient retrieval of rol"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "SmartGrow AI Plant Monitor is a desktop application that combines AI-driven analytics with telemetry to deliver continuous, real-time…",
+ "extractor": "heuristic",
+ "readmeHash": "5e6f336ed530",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.500Z"
+}

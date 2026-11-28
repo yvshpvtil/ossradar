@@ -1,0 +1,12 @@
+{
+ "fullName": "floprey2/microsoft-powerpoint-guide",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "This guide documents a practical approach to standardizing Microsoft PowerPoint on Windows, covering design consistency, file organization…",
+ "extractor": "heuristic",
+ "readmeHash": "3b037369b722",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.684Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "khalilur14103026/crypto-accumulation-scanner",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-factor scoring — base quality, OBV, 200 EMA positioning, volatility squeeze, relative strength vs BTC, funding rates and open interest",
+  "Catalyst awareness — news feeds, sector momentum and event flags are checked alongside the chart, so you know *why* a coin might move, not j",
+  "Telegram alerts on a schedule — a ranked shortlist lands in your chat every 4 hours, automatically, with Windows Task Scheduler support for "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Crypto Accumulation Scanner is a community-built bot that quietly watches the market for coins coiling in long…",
+ "extractor": "heuristic",
+ "readmeHash": "66a18814a7b1",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.913Z"
+}

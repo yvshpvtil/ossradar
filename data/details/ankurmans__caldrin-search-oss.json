@@ -1,0 +1,12 @@
+{
+ "fullName": "ankurmans/caldrin-search-oss",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "See where you rank in Google, and what AI answers say about you. On your own Cloudflare account, with your own keys.",
+ "extractor": "heuristic",
+ "readmeHash": "736101f61b77",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.094Z"
+}

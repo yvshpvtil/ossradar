@@ -1,0 +1,12 @@
+{
+ "fullName": "beautifulrem/tower",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g @earendil-works/pi-coding-agent",
+ "source": "readme",
+ "readmeSummary": "Run several agents at once, each in its own sandbox. Tower checks their work itself, in a clean checkout, before you ever see a green light.",
+ "extractor": "heuristic",
+ "readmeHash": "7bddcd4c58e1",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.269Z"
+}

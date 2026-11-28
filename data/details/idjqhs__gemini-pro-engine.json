@@ -1,0 +1,16 @@
+{
+ "fullName": "idjqhs/gemini-pro-engine",
+ "whoItsFor": null,
+ "useCases": [
+  "Dynamic semantic tokenization: Segmentation adapts to input domain at runtime instead of relying on a fixed vocabulary split. Exposed via `e",
+  "Multimodal orchestration: Text, image, and audio inputs are normalized into a shared request envelope. A single call accepts heterogeneous p",
+  "Pluggable API integration: Transport adapters implement a narrow interface (`send`, `cancel`, `health`), letting you swap HTTP clients or in"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Gemini Pro Engine is an advanced large language model and multimodal orchestration engine with real-time context processing, dynamic…",
+ "extractor": "heuristic",
+ "readmeHash": "95f8c2f5b483",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.749Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "Birubhai1964/interview-copilot",
+ "whoItsFor": null,
+ "useCases": [
+  "Context-Aware Coaching: Generates structured talking points and model answers on the spot, teaching you *how* to respond with confidence rat",
+  "Discreet Desktop Overlay: A lightweight floating companion that stays quietly at your side, keeping guidance within reach without breaking y",
+  "Browser-Based Practice: Spin up the web experience for on-the-go rehearsal sessions — no desktop install needed."
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Interview Copilot is an EdTech application built to close the distance between learning and landing your dream job.",
+ "extractor": "heuristic",
+ "readmeHash": "2e604c5c524f",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.869Z"
+}

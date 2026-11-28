@@ -1,0 +1,16 @@
+{
+ "fullName": "mansuraahmaf-rgb/telegram-tech-news-autopilot",
+ "whoItsFor": null,
+ "useCases": [
+  "Multi-source news harvesting — pull tech stories from RSS feeds, news APIs, and custom endpoints, all funneled into one tidy intake queue. A",
+  "AI rewriting with a fact-checking conscience — every draft passes through a rewriting stage, then a factual QA layer that cross-references c",
+  "Smart deduplication — near-duplicate stories get caught and collapsed, so your subscribers never see the same headline dressed up three diff"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Meet Telegram Tech News Autopilot, a portable Windows companion built to keep your channels running while you focus on everything else.",
+ "extractor": "heuristic",
+ "readmeHash": "27da68989d19",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.337Z"
+}

@@ -1,0 +1,16 @@
+{
+ "fullName": "kimriverogacu15-png/cmangos-helm-charts",
+ "whoItsFor": null,
+ "useCases": [
+  "Open-source, top to bottom: Every layer here is openly available to study and reshape — the chart, the images, and the core beneath them. Ti",
+  "Your client, your data: The chart doesn't ship game data; it pulls `dbc`, `maps`, `vmaps`, and `mmaps` straight from the client folder you p",
+  "Resumable extraction: The client-data Job checkpoints every finished step on the data volume. Interrupt it, restart it, flip a step on later"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "These Helm charts carry Azeroth into your cluster, spinning up realms for Classic, The Burning Crusade…",
+ "extractor": "heuristic",
+ "readmeHash": "428e360d1a4e",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.904Z"
+}

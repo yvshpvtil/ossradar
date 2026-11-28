@@ -1,0 +1,16 @@
+{
+ "fullName": "alemarrulli-svg/jet-reports-skill",
+ "whoItsFor": null,
+ "useCases": [
+  "Ready-to-run workbook output — The skill emits a `.xlsx` file that opens cleanly in Excel and evaluates against a licensed Jet add-in withou",
+  "Pre-build validation pass — Before any file is written, the generator checks for unbalanced formulas, undefined names, missing company filte",
+  "Report options with lookups and tooltips — Company selection, reporting periods, row limits, and other parameters are surfaced as first-clas"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Jet Reports Skill transforms a concise YAML report specification into a fully formed, ready-to-run Excel workbook, eliminating the manual…",
+ "extractor": "heuristic",
+ "readmeHash": "3089afb4532f",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.750Z"
+}

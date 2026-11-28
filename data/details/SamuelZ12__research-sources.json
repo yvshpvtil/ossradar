@@ -1,0 +1,12 @@
+{
+ "fullName": "SamuelZ12/research-sources",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "uv tool install git+https://github.com/SamuelZ12/research-sources",
+ "source": "readme",
+ "readmeSummary": "rsrc is a command-line tool that lets an AI agent read sites that web search covers poorly: X, Reddit, Hacker News, YouTube and three more.",
+ "extractor": "heuristic",
+ "readmeHash": "07df18b45d3f",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.270Z"
+}

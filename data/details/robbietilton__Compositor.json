@@ -1,0 +1,12 @@
+{
+ "fullName": "robbietilton/Compositor",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "brew install --cask robbietilton-compositor",
+ "source": "readme",
+ "readmeSummary": "Adobe Photoshop costs too much and tools like GIMP don’t feel familiar enough for me to stay in flow. That’s why I built Compositor.",
+ "extractor": "heuristic",
+ "readmeHash": "f182bb3b8f94",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.318Z"
+}

@@ -1,0 +1,12 @@
+{
+ "fullName": "clipy-recorder/clipy",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "npm i -g @clipy/cli",
+ "source": "readme",
+ "readmeSummary": "No account and no login. YouTube captions and Loom transcripts are fetched on your machine, and a video file is transcribed on your machine.",
+ "extractor": "heuristic",
+ "readmeHash": "9228629f3481",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.080Z"
+}

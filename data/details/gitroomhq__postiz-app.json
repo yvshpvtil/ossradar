@@ -1,0 +1,12 @@
+{
+ "fullName": "gitroomhq/postiz-app",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Use Postiz Cloud for a fully managed experience, or deploy the open-source edition on your own infrastructure.",
+ "extractor": "heuristic",
+ "readmeHash": "5e20fea3ce82",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.223Z"
+}

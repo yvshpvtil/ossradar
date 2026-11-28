@@ -1,0 +1,16 @@
+{
+ "fullName": "mancingr21-creator/telegram-channel-forwarder-ai",
+ "whoItsFor": null,
+ "useCases": [
+  "AI Content Rewriter: Built-in Gemini-powered rewriting reshapes every incoming post to match your channel's voice — rephrase, condense long ",
+  "Clean-Up Pass: Strips stray usernames, outside links, hashtags, and promotional footers so only polished content reaches your audience.",
+  "Approval Bot: An interactive inline-keyboard bot lets you review, tweak, or skip rewritten posts before they publish — full control, guesswo"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Telegram Channel Forwarder AI is a community-minded companion for anyone who curates and reshapes Telegram channels on Windows…",
+ "extractor": "heuristic",
+ "readmeHash": "026abfa5296a",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.316Z"
+}

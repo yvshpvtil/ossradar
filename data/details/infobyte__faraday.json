@@ -1,0 +1,12 @@
+{
+ "fullName": "infobyte/faraday",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "docker run \\",
+ "source": "readme",
+ "readmeSummary": "Security has two difficult tasks: designing smart ways of getting new information, and keeping track of findings to improve remediation…",
+ "extractor": "heuristic",
+ "readmeHash": "9c73f9c518c4",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.288Z"
+}

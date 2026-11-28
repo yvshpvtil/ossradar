@@ -1,0 +1,16 @@
+{
+ "fullName": "Niruthiya04/echomind-voice-assistant",
+ "whoItsFor": null,
+ "useCases": [
+  "Local semantic search — every finalized segment is embedded and written to a SQLite-backed memory store with timestamps, so any past utteran",
+  "Grounded retrieval chat — ask questions in plain language and receive answers assembled from retrieved transcript context rather than model ",
+  "Explicit model provisioning — no silent background fetches. Every model is pulled deliberately from the in-app local model setup panel, givi"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "EchoMind Voice Assistant is a local-first desktop application that captures spoken input, transcribes it in real time, and turns finalized…",
+ "extractor": "heuristic",
+ "readmeHash": "617a4d0e6021",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.711Z"
+}

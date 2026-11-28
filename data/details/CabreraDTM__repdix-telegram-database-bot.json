@@ -1,0 +1,16 @@
+{
+ "fullName": "CabreraDTM/repdix-telegram-database-bot",
+ "whoItsFor": null,
+ "useCases": [
+  "Ask in plain language, get real answers — Type a question the way you'd say it out loud, and Repdix turns it into a working SQL query, runs ",
+  "One bot, many databases — MySQL, PostgreSQL, and SQLite all live happily side by side. Switch between them with a quick command and keep you",
+  "Your own local brainpower — Powered by local models through LM Studio or Ollama, so your data never has to leave your machine to get an answ"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Repdix is a community-driven Telegram bot that turns plain-language questions into real answers from your MySQL, PostgreSQL, or SQLite…",
+ "extractor": "heuristic",
+ "readmeHash": "e89e0ce5be1e",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.567Z"
+}

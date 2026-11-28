@@ -1,0 +1,12 @@
+{
+ "fullName": "sol1560/Captae",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "cargo install tauri-cli --version \"^2\" --locked   # 只需一次",
+ "source": "readme",
+ "readmeSummary": "简体中文 | English",
+ "extractor": "heuristic",
+ "readmeHash": "c3d0ef3895d5",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:12.288Z"
+}

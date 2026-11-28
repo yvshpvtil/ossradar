@@ -1,0 +1,12 @@
+{
+ "fullName": "modelsphere/modelsphere",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "ModelSphere is an open-source LLM inference platform designed to make production-grade model serving simple, efficient, and continuously…",
+ "extractor": "heuristic",
+ "readmeHash": "a6a0a044245d",
+ "version": 1,
+ "generatedAt": "2026-11-28T13:12:13.115Z"
+}
