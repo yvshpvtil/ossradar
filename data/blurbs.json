@@ -23,6 +23,12 @@
   "source": "claude -p",
   "generatedAt": "2026-10-14T05:12:05.489Z"
  },
+ "7wdn/7paws": {
+  "text": "A 3D desktop pet cat for Windows and macOS that reacts to global keyboard and mouse input, purrs when petted, sleeps when idle, and can be customized from a photo or by AI via built-in MCP.",
+  "basis": "a0cb088dfdca",
+  "source": "manual translation",
+  "generatedAt": "2026-11-28T02:26:26.757Z"
+ },
  "Adkid-Zephyr/anti-defensive-writing-Skill": {
   "text": "Skill and prompt pack in Chinese and English that helps AI tools rewrite academic papers to avoid defensive writing.",
   "basis": "4fe2965a58f1",
