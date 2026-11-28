@@ -38,15 +38,17 @@ export const getMonthWindow = (month: string) => getMonthWindows().find((w) => w
 
 const cache = new Map<string, MonthEntry[]>();
 
+/** A span of archived days: gains run from the baseline snapshot (the day before `from`) to `to`. */
+export type PeriodWindow = { from: string; to: string; baseline: string; days: string[] };
+
 /**
- * Top repos by stars gained over one month's window. A repo missing from the baseline counts from 0
- * if it was created on GitHub inside the window (all its stars are new), otherwise from the first
- * snapshot in the month that has it (a conservative undercount).
+ * Top repos by stars gained over one window (a month here, an ISO week in lib/weekly.ts). A repo
+ * missing from the baseline counts from 0 if it was created on GitHub inside the window (all its
+ * stars are new), otherwise from the first snapshot in the window that has it (a conservative undercount).
+ * `newThisMonth` means "created inside the window".
  */
-export function getMonthTop(month: string, limit = 25): MonthEntry[] {
-  const w = getMonthWindow(month);
-  if (!w) return [];
-  if (!cache.has(month)) {
+export function getPeriodTop(key: string, w: PeriodWindow, limit = 25): MonthEntry[] {
+  if (!cache.has(key)) {
     const base = readSnapshot(w.baseline), end = readSnapshot(w.to);
     const snaps = w.days.map((d) => readSnapshot(d));
     const byName = new Map(getRepos().map((r) => [r.fullName, r]));
@@ -66,16 +68,24 @@ export function getMonthTop(month: string, limit = 25): MonthEntry[] {
       const gained = stars - from;
       if (gained > 0) rows.push({ fullName, stars, gained, repo, newThisMonth, daysInTop: daysInTop.get(fullName) ?? 0, daysAtOne: daysAtOne.get(fullName) ?? 0 });
     }
-    cache.set(month, rows.sort((a, b) => b.gained - a.gained));
+    cache.set(key, rows.sort((a, b) => b.gained - a.gained));
   }
-  return cache.get(month)!.slice(0, limit);
+  return cache.get(key)!.slice(0, limit);
+}
+
+/** Top repos by stars gained over one calendar month's window. */
+export function getMonthTop(month: string, limit = 25): MonthEntry[] {
+  const w = getMonthWindow(month);
+  return w ? getPeriodTop(`m:${month}`, w, limit) : [];
+}
+
+/** Headline numbers for a window's top list: total gained, how many were created in it, and the repo with the most days at #1. */
+export function periodSummary(top: MonthEntry[], all: MonthEntry[]) {
+  const total = top.reduce((s, e) => s + e.gained, 0);
+  const created = top.filter((e) => e.newThisMonth).length;
+  const mostAtOne = [...all].filter((e) => e.daysAtOne > 0).sort((a, b) => b.daysAtOne - a.daysAtOne || b.gained - a.gained)[0];
+  return { total, created, mostAtOne };
 }
 
 /** Headline numbers for a month: total gained by its top list, new repos in it, and the repo with the most days at #1. */
-export function monthSummary(month: string) {
-  const top = getMonthTop(month);
-  const total = top.reduce((s, e) => s + e.gained, 0);
-  const created = top.filter((e) => e.newThisMonth).length;
-  const mostAtOne = [...getMonthTop(month, 1000)].filter((e) => e.daysAtOne > 0).sort((a, b) => b.daysAtOne - a.daysAtOne || b.gained - a.gained)[0];
-  return { total, created, mostAtOne };
-}
+export const monthSummary = (month: string) => periodSummary(getMonthTop(month), getMonthTop(month, 1000));

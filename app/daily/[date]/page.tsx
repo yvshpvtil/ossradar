@@ -1,4 +1,6 @@
 import { repoBlurb } from "@/lib/blurb";
+import { isoWeekKey, weekMonday } from "@/lib/isoweek";
+import { monthLabel } from "@/lib/monthly";
 import { abs, breadcrumbLd, linkListLd, ogCardLd, ogDefaults, repoPath, withoutContext, websiteRef, pageAlternates, pageNodeIds, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -97,6 +99,9 @@ export default async function DailyPage({ params }: PageProps<"/daily/[date]">) 
           </li>
         ))}
       </ol>
+      <p className="mt-4 text-sm text-zinc-500">
+        This day is part of the <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/weekly/${isoWeekKey(date)}`}>week of {formatDate(weekMonday(date))}</Link> and <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/monthly/${date.slice(0, 7)}`}>{monthLabel(date.slice(0, 7))}</Link> roundups.
+      </p>
       <div className="mt-6 flex justify-between text-sm">
         {older ? <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${older}`}>← {formatDate(older)}</Link> : <span />}
         {newer ? <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${newer}`}>{formatDate(newer)} →</Link> : <span />}

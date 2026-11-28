@@ -1,4 +1,5 @@
 import { repoBlurb } from "@/lib/blurb";
+import { isoWeekKey, weekMonday } from "@/lib/isoweek";
 import { abs, breadcrumbLd, linkListLd, ogDefaults, repoPath, withoutContext, websiteRef, pageNodeIds, RSS_ALTERNATE, twitterDefaults } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -113,7 +114,7 @@ export default async function MonthlyPage({ params }: { params: Promise<{ month:
         ))}
       </ol>
       <p className="mt-4 text-sm text-zinc-500">
-        Day by day: <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${w.to}`}>{formatDate(w.to)}</Link>, <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${w.from}`}>{formatDate(w.from)}</Link> and every day in the <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/daily">daily archive</Link>. Right now: <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/">today&apos;s leaderboard</Link>.
+        Day by day: <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${w.to}`}>{formatDate(w.to)}</Link>, <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/daily/${w.from}`}>{formatDate(w.from)}</Link> and every day in the <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/daily">daily archive</Link>. Week by week: {[...new Set(w.days.map(isoWeekKey))].map((k, n) => <span key={k}>{n ? ", " : ""}<Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/weekly/${k}`}>{formatDate(weekMonday(w.days.find((d) => isoWeekKey(d) === k)!)).slice(0, -6)}</Link></span>)}. Right now: <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href="/">today&apos;s leaderboard</Link>.
       </p>
       <div className="mt-6 flex justify-between text-sm">
         {older ? <Link className="text-indigo-600 hover:underline dark:text-indigo-400" href={`/monthly/${older}`}>← {monthLabel(older)}</Link> : <span />}

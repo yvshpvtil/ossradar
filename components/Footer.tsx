@@ -65,6 +65,7 @@ export function Footer() {
           Built by <a href={SITE.github} className="hover:underline">{SITE.owner}</a> ·{" "}
           <Link href="/new" className="hover:underline">New repos</Link> ·{" "}
           <Link href="/daily" className="hover:underline">Daily archive</Link> ·{" "}
+          <Link href="/weekly" className="hover:underline">Weekly</Link> ·{" "}
           <Link href="/monthly" className="hover:underline">Monthly</Link> ·{" "}
           <Link href="/hacker-news" className="hover:underline">On Hacker News</Link> ·{" "}
           <Link href="/compare" className="hover:underline">Compare repos</Link> ·{" "}

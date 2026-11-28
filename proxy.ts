@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { isoWeekKey } from "@/lib/isoweek";
 import { canonicalTopic } from "@/lib/topicAliases";
 import routes from "ossradar-data/routes.json";
 
@@ -48,6 +49,8 @@ const hasAlternativesPage = (repo: { full: string }) => ALTERNATIVES.has(repo.fu
  */
 const DAILY_DAYS = new Set<string>(routes.dailyDays ?? []);
 const isArchiveDay = (d: string) => DAILY_DAYS.has(d);
+/** ISO weeks with at least one archived day (same as lib/weekly.ts getWeekWindows). */
+const WEEKS = new Set([...DAILY_DAYS].map(isoWeekKey));
 
 /** Single-slug hub sections (lowercase slugs) and how to tell a real hub. */
 const HUBS: Record<string, (slug: string) => boolean> = {
@@ -82,10 +85,10 @@ const INDEX_CARDS = new Set(["alternatives", "category", "language", "topic", "d
  * Top-level pages and files outside the hub sections above. The matcher is case-sensitive, so a
  * mistyped or wrong-cased link (/About, /Hacker-News, /LLMS.txt) used to 404; it now 308s here.
  */
-const TOP_LEVEL = new Set(["monthly", "monthly.md", "about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "alternatives.md", "badge.md", "submit.md", "developers.md", "developers", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
+const TOP_LEVEL = new Set(["weekly", "weekly.md", "monthly", "monthly.md", "about", "compare", "hacker-news", "hacker-news.md", "new", "new.md", "index.md", "daily.md", "about.md", "category.md", "language.md", "topic.md", "compare.md", "sponsor.md", "alternatives.md", "badge.md", "submit.md", "developers.md", "developers", "sponsor", "submit", "badge", "watchlist", "llms.txt", "llms-full.txt", "agents.md", "rss.xml", "sitemap.xml", "robots.txt", "leaderboard.json", "compare-data.json", "opensearch.xml"]);
 
 /** Internal route folders under app/md (one per .md twin type). */
-const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about", "compare", "sponsor", "badge", "developers", "submit", "monthly"]);
+const MD_TWINS = new Set(["repo", "alternatives", "category", "trending", "language", "topic", "daily", "hacker-news", "new", "home", "about", "compare", "sponsor", "badge", "developers", "submit", "monthly", "weekly"]);
 
 /** First segments that are real routes or sections, never a GitHub owner in the /{owner}/{name} shortcut. */
 const RESERVED = new Set([...Object.keys(HUBS), ...INDEXES, ...TOP_LEVEL, "repo", "md", "api", "badge", "trending"]);
@@ -202,6 +205,16 @@ function route(req: NextRequest) {
     // Only /monthly/{known YYYY-MM}.md passes through (to the next.config rewrite); anything else under /monthly 404s.
     const m = raw.length === 2 ? /^(\d{4}-\d{2})\.md$/.exec(raw[1]) : null;
     if (!m || ![...DAILY_DAYS].some((d) => d.startsWith(m[1]))) return notFound();
+  }
+  // Weekly roundups: /weekly.md and /weekly/{YYYY-Www}.md are next.config rewrites; negotiate the HTML URLs here.
+  if (raw.length === 1 && raw[0] === "weekly") return negotiate("/md/weekly");
+  if (raw[0] === "weekly" && raw.length >= 2) {
+    // Same weeks as getWeekWindows(): any ISO week with an archived day. Others 404 here (the page alone would soft-404 with a 200).
+    const m = raw.length === 2 ? /^(\d{4})-([wW])(\d{2})(\.md)?$/.exec(raw[1]) : null;
+    const key = m ? `${m[1]}-W${m[3]}` : "";
+    if (!m || !WEEKS.has(key)) return notFound();
+    if (m[2] === "w") return redirectTo(`/weekly/${key}${m[4] ?? ""}`); // lowercase w -> canonical uppercase
+    if (!m[4]) return negotiate(`/md/weekly/${key}`);
   }
   // The about/methodology page's twin is /about.md (next.config rewrite to /md/about).
   if (raw.length === 1 && raw[0] === "about") return negotiate("/md/about");
@@ -407,5 +420,5 @@ export const config = {
   // The two-segment entry (first segment not starting with . or _) and the github.com entry feed
   // the /{owner}/{name} repo shortcut. The uppercase entry catches any path whose first segment has an uppercase letter (/Category/mcp,
   // /About), so wrong-cased section folders and top-level pages 308 to lowercase instead of 404ing.
-  matcher: ["/", "/new", "/hacker-news", "/about", "/compare", "/sponsor", "/badge", "/developers", "/submit", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/monthly", "/monthly/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
+  matcher: ["/", "/new", "/hacker-news", "/about", "/compare", "/sponsor", "/badge", "/developers", "/submit", "/md/:path*", "/repo/:path*", "/alternatives/:path*", "/category/:path*", "/trending/:path*", "/language/:path*", "/topic/:path*", "/daily/:path*", "/monthly", "/monthly/:path*", "/weekly", "/weekly/:path*", "/:first([^/]*[A-Z][^/]*)/:rest*", "/:owner([^/._][^/]*)/:name", "/github.com/:owner/:name"],
 };
