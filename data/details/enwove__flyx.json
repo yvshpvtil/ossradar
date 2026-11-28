@@ -1,0 +1,16 @@
+{
+ "fullName": "enwove/flyx",
+ "whoItsFor": null,
+ "useCases": [
+  "Up to 6× faster generation — Built-in speculative decoding (MTP, DFlash2, DSpark, and prompt lookup): 565.5 tok/s on Qwen3.8-27B and 438.9 t",
+  "Up to 1M native context on a consumer PC — Runs Inkling-2-Mini at 1M context on 16 GB VRAM + 32 GB RAM.",
+  "Tuned per GPU, zero manual flags — Ships measured kernel tuning tables for 16 NVIDIA GPUs and automatically sizes context length, K/V precis"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "FLYX is a zero-dependency local LLM engine that fits in a single 57 MB Windows .exe — fast speculative decoding, native long context, tuned…",
+ "extractor": "heuristic",
+ "readmeHash": "0794f233d061",
+ "version": 1,
+ "generatedAt": "2026-11-28T04:01:18.146Z"
+}

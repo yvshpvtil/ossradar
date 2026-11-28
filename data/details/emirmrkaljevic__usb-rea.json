@@ -1,0 +1,12 @@
+{
+ "fullName": "emirmrkaljevic/usb-rea",
+ "whoItsFor": null,
+ "useCases": [],
+ "installCommand": "pip install usb-rea",
+ "source": "readme",
+ "readmeSummary": "usb-rea reads a USB capture (pcap or pcapng, from usbmon or USBPcap) and does the step after Wireshark: it infers the command and protocol…",
+ "extractor": "heuristic",
+ "readmeHash": "11d788eaa3ac",
+ "version": 1,
+ "generatedAt": "2026-11-28T04:01:18.120Z"
+}

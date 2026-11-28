@@ -1,0 +1,16 @@
+{
+ "fullName": "tariqm067/cherry-studio-llm",
+ "whoItsFor": null,
+ "useCases": [
+  "Precompiled Windows x64 portable environment with CUDA 12.6, Triton, and SageAttention-2 wheels",
+  "Native FP8, GGUF (Q4_K_M / Q5_K_M / Q8_0), and EXL2 quantized weight loader with VRAM offloading",
+  "Zero-dependency embedded Python 3.12 runtime and automatic model checkpoint downloader"
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "Cherry Studio LLM (v2.8.6) is a pre-configured 64-bit Windows 10/11 distribution bundling CherryLLM-Studio.exe, runtime libraries…",
+ "extractor": "heuristic",
+ "readmeHash": "299dfc1d9f75",
+ "version": 1,
+ "generatedAt": "2026-11-28T04:01:17.907Z"
+}

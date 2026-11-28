@@ -1,0 +1,16 @@
+{
+ "fullName": "flint63-code/gitdesk-windows",
+ "whoItsFor": null,
+ "useCases": [
+  "Visual Git Commit Graph — Explore repository history through an interactive commit graph that makes branches, merges, and development timeli",
+  "Branch Management — Create, rename, switch, merge, delete, and compare Git branches using an intuitive graphical interface.",
+  "Complete Git Workflow — Clone, fetch, pull, push, commit, merge, rebase, reset, revert, and cherry-pick changes without memorizing terminal "
+ ],
+ "installCommand": null,
+ "source": "readme",
+ "readmeSummary": "A modern graphical Git client for Windows developers.",
+ "extractor": "heuristic",
+ "readmeHash": "b30c6fb35b0f",
+ "version": 1,
+ "generatedAt": "2026-11-28T04:01:17.902Z"
+}
